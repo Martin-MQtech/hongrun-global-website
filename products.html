@@ -43,7 +43,7 @@ tailwind.config = {
 }
 </script>
 </head>
-<body class="font-sans text-slate-800 bg-brand-light antialiased">
+<body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -63,7 +63,7 @@ tailwind.config = {
 <section class="relative pt-20 overflow-hidden bg-slate-900">
   <div class="relative h-[380px] lg:h-[440px]">
     <!-- Background: sharp banner image, NO fog overlay -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/en_b1.jpg')"></div>
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/products/intl/product-core.jpg')"></div>
     <!-- Very subtle dark gradient ONLY at bottom for readability -->
     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
     <!-- Content -->
@@ -83,7 +83,7 @@ tailwind.config = {
 <!-- Sticky Section Nav -->
 <div class="sticky top-20 z-40 bg-white border-b border-slate-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex overflow-x-auto gap-2 py-3 no-scrollbar">
+    <div class="flex overflow-x-auto gap-2 py-3 no-scrollbar justify-center">
       <a href="#section-hy" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HY Series Compressors</a>
       <a href="#section-hvs" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HVS Suction Systems</a>
       <a href="#section-cleanair" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Medical Clean Air Source</a>
@@ -91,6 +91,63 @@ tailwind.config = {
     </div>
   </div>
 </div>
+
+<!-- 4 Family Cards: centered grid, name on top + HD image below, whole card clickable -->
+<section class="py-6 bg-brand-light border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1: HY Series Compressors -->
+      <a href="products-hy.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Oil-Free Compressors</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY Series Compressors</h3>
+          <p class="text-slate-500 text-xs">1–10 chairs &middot; ≤60 dB &middot; Class 0</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HYT-500.jpg" alt="HY Series Oil-Free Compressors" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
+      <!-- Card 2: HVS Suction Systems -->
+      <a href="products-hvs.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Electric Suction</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS Suction Systems</h3>
+          <p class="text-slate-500 text-xs">1–50 chairs &middot; -70 kPa &middot; HEPA</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS Suction Systems" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
+      <!-- Card 3: Medical Clean Air Source -->
+      <a href="products-cleanair.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Clean Air Source</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">Medical Clean Air Source</h3>
+          <p class="text-slate-500 text-xs">Dew point ≤ -40&deg;C &middot; 0.01&mu;m</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HVTG-900.jpg" alt="Medical Clean Air Source" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
+      <!-- Card 4: Hospital & Scroll Systems -->
+      <a href="products-hospital.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Hospital Medical Systems</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">Hospital &amp; Scroll Systems</h3>
+          <p class="text-slate-500 text-xs">Class II &middot; Central gas &middot; Scroll</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HBG-1200.jpg" alt="Hospital and Scroll Systems" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
+    </div>
+    <div class="text-center mt-14">
+      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Product Families</div>
+      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Four Systems. One Standard of Purity.</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto">Choose a family to explore the full product line — every system engineered around zero-oil purity and clinical safety.</p>
+    </div>
+  </div>
+</section>
 
 <!-- SECTION 1: HY Series Dental Oil-Free Compressors -->
 <section id="section-hy" class="py-20 bg-white">
@@ -113,7 +170,7 @@ tailwind.config = {
       <!-- HYT-200 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-64 bg-white flex items-center justify-center p-6">
-          <img data-zoom data-hd="assets/images/products/intl/HYT-200.jpg" src="assets/images/products/intl/HYT-200.jpg" alt="HYT-200 Oil-Free Compressor" class="max-h-52 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HYT-200.jpg" src="assets/images/products/intl/HYT-200.jpg" alt="HYT-200 Oil-Free Compressor" class="max-h-52 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-6 flex-1 flex flex-col">
           <div class="flex items-center justify-between mb-3">
@@ -135,7 +192,7 @@ tailwind.config = {
       <!-- HYT-400 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-64 bg-white flex items-center justify-center p-6">
-          <img data-zoom data-hd="assets/images/products/intl/HYT-400.jpg" src="assets/images/products/intl/HYT-400.jpg" alt="HYT-400 Oil-Free Compressor" class="max-h-52 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HYT-400.jpg" src="assets/images/products/intl/HYT-400.jpg" alt="HYT-400 Oil-Free Compressor" class="max-h-52 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-6 flex-1 flex flex-col">
           <div class="flex items-center justify-between mb-3">
@@ -157,7 +214,7 @@ tailwind.config = {
       <!-- HYT-500 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-64 bg-white flex items-center justify-center p-6">
-          <img data-zoom data-hd="assets/images/products/intl/HYT-500.jpg" src="assets/images/products/intl/HYT-500.jpg" alt="HYT-500 Oil-Free Compressor" class="max-h-52 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HYT-500.jpg" src="assets/images/products/intl/HYT-500.jpg" alt="HYT-500 Oil-Free Compressor" class="max-h-52 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-6 flex-1 flex flex-col">
           <div class="flex items-center justify-between mb-3">
@@ -201,7 +258,7 @@ tailwind.config = {
       <!-- HVS-1 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-56 bg-white flex items-center justify-center p-4">
-          <img data-zoom data-hd="assets/images/products/intl/HVS-1-2.jpg" src="assets/images/products/intl/HVS-1-2.jpg" alt="HVS-1" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HVS-1-2.jpg" src="assets/images/products/intl/HVS-1-2.jpg" alt="HVS-1" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-1</h3>
@@ -212,7 +269,7 @@ tailwind.config = {
       <!-- HVS-2 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-56 bg-white flex items-center justify-center p-4">
-          <img data-zoom data-hd="assets/images/products/intl/HVS-1-2.jpg" src="assets/images/products/intl/HVS-1-2.jpg" alt="HVS-2" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HVS-1-2.jpg" src="assets/images/products/intl/HVS-1-2.jpg" alt="HVS-2" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-2</h3>
@@ -223,7 +280,7 @@ tailwind.config = {
       <!-- HVS-3 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-56 bg-white flex items-center justify-center p-4">
-          <img data-zoom data-hd="assets/images/products/intl/HVS-3.jpg" src="assets/images/products/intl/HVS-3.jpg" alt="HVS-3" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HVS-3.jpg" src="assets/images/products/intl/HVS-3.jpg" alt="HVS-3" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-3</h3>
@@ -234,7 +291,7 @@ tailwind.config = {
       <!-- HVS-5&7 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-56 bg-white flex items-center justify-center p-4">
-          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-5&7" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-5&7" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-5 &amp; 7</h3>
@@ -245,7 +302,7 @@ tailwind.config = {
       <!-- HVS-15&20 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-56 bg-white flex items-center justify-center p-4">
-          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-15&20" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-15&20" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-15 &amp; 20</h3>
@@ -256,7 +313,7 @@ tailwind.config = {
       <!-- HVS-25&30 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-56 bg-white flex items-center justify-center p-4">
-          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-25&30" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-25&30" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-25 &amp; 30</h3>
@@ -267,7 +324,7 @@ tailwind.config = {
       <!-- HVS-35&40 -->
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
         <div class="h-56 bg-white flex items-center justify-center p-4">
-          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-35&40" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
+          <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-35&40" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-35 &amp; 40</h3>
@@ -305,23 +362,23 @@ tailwind.config = {
     </div>
 <div class="grid md:grid-cols-5 gap-6">
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HYG-301.jpg" src="assets/images/products/hd/HYG-301.jpg" alt="HYG-301" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HYG-301.jpg" src="assets/images/products/hd/HYG-301.jpg" alt="HYG-301" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-301</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dew −40°C</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HYG-302.jpg" src="assets/images/products/hd/HYG-302.jpg" alt="HYG-302" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HYG-302.jpg" src="assets/images/products/hd/HYG-302.jpg" alt="HYG-302" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-302</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dual-head</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/intl/HVTG-900.jpg" src="assets/images/products/intl/HVTG-900.jpg" alt="HVTG-900" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/intl/HVTG-900.jpg" src="assets/images/products/intl/HVTG-900.jpg" alt="HVTG-900" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-900</h3><p class="text-xs text-slate-500 mb-3">900 L/min · Hospital</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HVTG-1200.jpg" src="assets/images/products/hd/HVTG-1200.jpg" alt="HVTG-1200" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HVTG-1200.jpg" src="assets/images/products/hd/HVTG-1200.jpg" alt="HVTG-1200" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · Hospital</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HVTG-1600.jpg" src="assets/images/products/hd/HVTG-1600.jpg" alt="HVTG-1600" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HVTG-1600.jpg" src="assets/images/products/hd/HVTG-1600.jpg" alt="HVTG-1600" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1600</h3><p class="text-xs text-slate-500 mb-3">1600 L/min · Central Gas</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
     </div>
@@ -349,34 +406,34 @@ tailwind.config = {
     </div>
 <div class="grid md:grid-cols-3 gap-6 mb-12">
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/intl/HBG-400.jpg" src="assets/images/products/intl/HBG-400.jpg" alt="HBG-400" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/intl/HBG-400.jpg" src="assets/images/products/intl/HBG-400.jpg" alt="HBG-400" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HBG-800.jpg" src="assets/images/products/hd/HBG-800.jpg" alt="HBG-800" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HBG-800.jpg" src="assets/images/products/hd/HBG-800.jpg" alt="HBG-800" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-800</h3><p class="text-xs text-slate-500 mb-3">800 L/min · 4.4 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/intl/HBG-1200.jpg" src="assets/images/products/intl/HBG-1200.jpg" alt="HBG-1200" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div>
+        <div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/intl/HBG-1200.jpg" src="assets/images/products/intl/HBG-1200.jpg" alt="HBG-1200" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div>
         <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · 6.6 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
       </div>
     </div>
     <!-- HW Scroll Systems -->
     <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HW Silent Scroll Systems (Hospital Central)</h3>
     <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-600.jpg" src="assets/images/products/hd/HW-600.jpg" alt="HW-600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-600</h3><p class="text-xs text-slate-500">600 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-800.jpg" src="assets/images/products/hd/HW-800.jpg" alt="HW-800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-800</h3><p class="text-xs text-slate-500">800 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-1200.jpg" src="assets/images/products/hd/HW-1200.jpg" alt="HW-1200" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1200</h3><p class="text-xs text-slate-500">1200 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-1800.jpg" src="assets/images/products/hd/HW-1800.jpg" alt="HW-1800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1800</h3><p class="text-xs text-slate-500">1800 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-2400.jpg" src="assets/images/products/hd/HW-2400.jpg" alt="HW-2400" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-2400</h3><p class="text-xs text-slate-500">2400 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-3600.jpg" src="assets/images/products/hd/HW-3600.jpg" alt="HW-3600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-3600</h3><p class="text-xs text-slate-500">3600 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-600.jpg" src="assets/images/products/hd/HW-600.jpg" alt="HW-600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-600</h3><p class="text-xs text-slate-500">600 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-800.jpg" src="assets/images/products/hd/HW-800.jpg" alt="HW-800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-800</h3><p class="text-xs text-slate-500">800 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-1200.jpg" src="assets/images/products/hd/HW-1200.jpg" alt="HW-1200" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1200</h3><p class="text-xs text-slate-500">1200 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-1800.jpg" src="assets/images/products/hd/HW-1800.jpg" alt="HW-1800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1800</h3><p class="text-xs text-slate-500">1800 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-2400.jpg" src="assets/images/products/hd/HW-2400.jpg" alt="HW-2400" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-2400</h3><p class="text-xs text-slate-500">2400 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img data-zoom data-hd="assets/images/products/hd/HW-3600.jpg" src="assets/images/products/hd/HW-3600.jpg" alt="HW-3600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-3600</h3><p class="text-xs text-slate-500">3600 L/min</p></div></div>
     </div>
     <!-- HWG Tank Scroll -->
     <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HWG Tank Scroll Compressors</h3>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HWG-200.jpg" src="assets/images/products/hd/HWG-200.jpg" alt="HWG-200" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-200</h3><p class="text-xs text-slate-500 mb-3">200 L/min · 1.1 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HWG-400.jpg" src="assets/images/products/hd/HWG-400.jpg" alt="HWG-400" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HWG-600.jpg" src="assets/images/products/hd/HWG-600.jpg" alt="HWG-600" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-600</h3><p class="text-xs text-slate-500 mb-3">600 L/min · 3.3 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HWG-200.jpg" src="assets/images/products/hd/HWG-200.jpg" alt="HWG-200" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-200</h3><p class="text-xs text-slate-500 mb-3">200 L/min · 1.1 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HWG-400.jpg" src="assets/images/products/hd/HWG-400.jpg" alt="HWG-400" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img data-zoom data-hd="assets/images/products/hd/HWG-600.jpg" src="assets/images/products/hd/HWG-600.jpg" alt="HWG-600" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-600</h3><p class="text-xs text-slate-500 mb-3">600 L/min · 3.3 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
     </div>
   </div>
 </section>

@@ -122,72 +122,65 @@ tailwind.config = {
   </div>
 </div>
 
-<!-- ===================== 4 PRODUCT FAMILIES: LARGE IMAGE SHOWCASE ===================== -->
-<section class="py-20 bg-white">
+<!-- ===================== 4 PRODUCT FAMILIES: CARD GRID ===================== -->
+<section class="py-10 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Our Product Families</div>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Four Systems. One Standard of Purity.</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto">From a single dental chair to a full hospital gas network — engineered around a single promise: air you can trust with life.</p>
-    </div>
 
-    <!-- Family 1: HY Compressors -->
-    <div class="grid lg:grid-cols-5 gap-8 items-center mb-20">
-      <div class="lg:col-span-3 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-80">
-        <img data-zoom data-hd="assets/images/products/intl/HYT-500.jpg" src="assets/images/products/intl/HYT-500.jpg" alt="HYT-500 Twin-Head Oil-Free Dental Compressor" class="max-h-64 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
-      </div>
-      <div class="lg:col-span-2">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Oil-Free Compressors</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">HY / HYT Series</h3>
-        <p class="text-slate-600 mb-4 leading-relaxed">Zero-oil dental compressors from 1 to 10 chairs. Swedish spring plates, Saint-Gobain PTFE rings, ≤60 dB operation.</p>
-        <p class="text-slate-500 text-sm mb-6"><strong class="text-brand-blue">Models:</strong> HY-100 &rarr; HY-500 &middot; HYT-200 &rarr; HYT-500 (redundant twin-head)</p>
-        <a href="products-hy.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md">View HY Series <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
+    <!-- 4 Family Cards FIRST: name on top + HD image below, whole card clickable -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Family 1: HY Compressors -->
+      <a href="products-hy.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Oil-Free Compressors</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY / HYT Series</h3>
+          <p class="text-slate-500 text-xs">1–10 chairs &middot; ≤60 dB &middot; Class 0</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HYT-500.jpg" alt="HYT-500 Twin-Head Oil-Free Dental Compressor" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
 
-    <!-- Family 2: HVS Suction -->
-    <div class="grid lg:grid-cols-5 gap-8 items-center mb-20">
-      <div class="lg:col-span-2 order-2 lg:order-1">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Electric Suction</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">HVS Series</h3>
-        <p class="text-slate-600 mb-4 leading-relaxed">High-vacuum dental suction protecting the dentist and caring for the patient. 3-stage HEPA filtration, constant -70 kPa vacuum.</p>
-        <p class="text-slate-500 text-sm mb-6"><strong class="text-brand-blue">Models:</strong> HVS-1 &rarr; HVS-10 (clinic) &middot; HVS-15 &rarr; HVS-50 (hospital)</p>
-        <a href="products-hvs.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md">View HVS Series <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="lg:col-span-3 order-1 lg:order-2 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-80">
-        <img data-zoom data-hd="assets/images/products/intl/HVS-5-7-10.jpg" src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS-15 Hospital-Grade Suction System" class="max-h-64 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
-      </div>
-    </div>
+      <!-- Family 2: HVS Suction -->
+      <a href="products-hvs.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Electric Suction</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS Series</h3>
+          <p class="text-slate-500 text-xs">1–50 chairs &middot; -70 kPa &middot; HEPA</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS Hospital-Grade Suction System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
 
-    <!-- Family 3: Clean Air Source -->
-    <div class="grid lg:grid-cols-5 gap-8 items-center mb-20">
-      <div class="lg:col-span-3 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-80">
-        <img data-zoom data-hd="assets/images/products/hd/HVTG-1600.jpg" src="assets/images/products/hd/HVTG-1600.jpg" alt="HVTG-1600 Medical Clean Air Source" class="max-h-64 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
-      </div>
-      <div class="lg:col-span-2">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Clean Air Source</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">HYG / HVTG Series</h3>
-        <p class="text-slate-600 mb-4 leading-relaxed">Integrated medical clean air with desiccant drying. Pressure dew point ≤ -40&deg;C, 0.01&mu;m absolute filtration.</p>
-        <p class="text-slate-500 text-sm mb-6"><strong class="text-brand-blue">Models:</strong> HYG-301 &rarr; HYG-1000 &middot; HVTG-900 &rarr; HVTG-1600</p>
-        <a href="products-cleanair.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md">View Clean Air Series <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
+      <!-- Family 3: Clean Air Source -->
+      <a href="products-cleanair.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Clean Air Source</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HYG / HVTG Series</h3>
+          <p class="text-slate-500 text-xs">Dew point ≤ -40&deg;C &middot; 0.01&mu;m</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HVTG-900.jpg" alt="HVTG Medical Clean Air Source" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
 
-    <!-- Family 4: Hospital Systems -->
-    <div class="grid lg:grid-cols-5 gap-8 items-center">
-      <div class="lg:col-span-2 order-2 lg:order-1">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Hospital Medical Systems</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">HBG / HW / HWG</h3>
-        <p class="text-slate-600 mb-4 leading-relaxed">NMPA Class II Medical Device certified central air for hospitals. Silent scroll technology for continuous, sterile operation.</p>
-        <p class="text-slate-500 text-sm mb-6"><strong class="text-brand-blue">Models:</strong> HBG-400 &rarr; HBG-2400 &middot; HW-600 &rarr; HW-3600 &middot; HWG-200 &rarr; HWG-600</p>
-        <a href="products-hospital.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md">View Hospital Series <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-      <div class="lg:col-span-3 order-1 lg:order-2 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-80">
-        <img data-zoom data-hd="assets/images/products/intl/HBG-1200.jpg" src="assets/images/products/intl/HBG-1200.jpg" alt="HBG-1200 Class II Hospital Central Air System" class="max-h-64 w-auto object-contain mix-blend-multiply group-hover:scale-120 transition-transform duration-500"/>
-      </div>
+      <!-- Family 4: Hospital Systems -->
+      <a href="products-hospital.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <div class="p-6 pb-3 text-center">
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Hospital Medical Systems</div>
+          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG / HW / HWG</h3>
+          <p class="text-slate-500 text-xs">Class II &middot; Central gas &middot; Scroll</p>
+        </div>
+        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
+          <img src="assets/images/products/intl/HBG-1200.jpg" alt="HBG-1200 Class II Hospital Central Air System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
     </div>
 
     <div class="text-center mt-16">
+      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Our Product Families</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Four Systems. One Standard of Purity.</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto mb-8">From a single dental chair to a full hospital gas network — engineered around a single promise: air you can trust with life.</p>
       <a href="products.html" class="bg-slate-900 hover:bg-brand-blue text-white px-10 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center gap-2">View Full Product Catalog <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
@@ -198,14 +191,14 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-2 gap-8">
       <div class="bg-white p-10 rounded-sm border border-slate-200 hover:border-brand-blue transition relative overflow-hidden group">
-        <div class="absolute top-0 right-0 p-8 opacity-5 text-brand-blue group-hover:scale-120 transition duration-500"><i class="fa-solid fa-hospital text-9xl"></i></div>
+        <div class="absolute top-0 right-0 p-8 opacity-5 text-brand-blue group-hover:scale-115 transition duration-500"><i class="fa-solid fa-hospital text-9xl"></i></div>
         <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-sky text-white rounded flex items-center justify-center text-2xl mb-6 shadow-md"><i class="fa-solid fa-file-medical"></i></div>
         <h3 class="text-2xl font-bold text-brand-dark mb-3 font-display tracking-tight">Class II Medical Device License</h3>
         <p class="text-slate-600 mb-6 leading-relaxed">While 90% of dental compressors hold only basic Class I registration, Hongrun is certified by NMPA to manufacture and install <b>hospital-grade central gas and life-support systems (Class II)</b>.</p>
         <a class="text-brand-blue font-bold hover:text-brand-sky transition flex items-center gap-2" href="about.html#certifications">View Certificates <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="bg-white p-10 rounded-sm border border-slate-200 hover:border-brand-blue transition relative overflow-hidden group">
-        <div class="absolute top-0 right-0 p-8 opacity-5 text-brand-blue group-hover:scale-120 transition duration-500"><i class="fa-solid fa-droplet-slash text-9xl"></i></div>
+        <div class="absolute top-0 right-0 p-8 opacity-5 text-brand-blue group-hover:scale-115 transition duration-500"><i class="fa-solid fa-droplet-slash text-9xl"></i></div>
         <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-sky text-white rounded flex items-center justify-center text-2xl mb-6 shadow-md"><i class="fa-solid fa-award"></i></div>
         <h3 class="text-2xl font-bold text-brand-dark mb-3 font-display tracking-tight">ISO 8573-1 Class 0 Air</h3>
         <p class="text-slate-600 mb-6 leading-relaxed">The highest international purity standard for compressed air — oil, particles and moisture at near-zero. Certified by SGS and TÜV-equivalent testing bodies.</p>
