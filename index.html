@@ -34,9 +34,9 @@ tailwind.config = {
   .hero-slide { transition: opacity 1s ease-in-out; }
   .hero-slide.active { opacity: 1; z-index: 1; }
   .hero-slide:not(.active) { opacity: 0; z-index: 0; }
-  .stat-cell:hover .stat-num { color: #fff; }
-  .stat-cell { transition: background 0.3s; }
-  .stat-cell:hover { background: #0F4C81; }
+  .stat-cell { transition: background 0.3s, color 0.3s; }
+  .stat-cell:hover { background: #0EA5E9; }
+  .stat-cell:hover div { color: #ffffff !important; }
 </style>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
@@ -56,55 +56,55 @@ tailwind.config = {
 </nav>
 
 <!-- ===================== HERO: 3-BANNER CAROUSEL ===================== -->
-<section class="relative pt-20 overflow-hidden bg-brand-deep">
-  <div class="relative h-[560px] lg:h-[640px]">
+<section class="relative pt-20 overflow-hidden bg-slate-900">
+  <div class="relative h-[380px] lg:h-[440px]">
     <!-- Slide 1 -->
     <div class="hero-slide active absolute inset-0">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/banner1.jpg')"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-brand-deep/30 to-transparent"></div>
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-20">
-        <div class="max-w-2xl">
-          <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/30 text-white font-semibold text-xs tracking-wider uppercase mb-5">ISO 8573-1 Class 0 &middot; NMPA Class II Medical Device</div>
-          <h1 class="text-4xl lg:text-6xl font-extrabold text-white leading-tight mb-5 font-display tracking-tight">Clean Air.<br/><span class="text-sky-300">For Life.</span></h1>
-          <p class="text-lg lg:text-xl text-blue-100 mb-8 font-light leading-relaxed max-w-xl">30 years of engineering excellence. Medical-grade oil-free air and suction systems trusted by 65,000+ clinics worldwide.</p>
-          <a class="bg-white hover:bg-sky-100 text-brand-deep px-8 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center gap-2" href="products.html">Explore Products <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/en_b1.jpg')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
+        <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
+          <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap mb-4">ISO 8573-1 Class 0 &middot; NMPA Class II Medical Device</div>
+          <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Clean Air.<br/><span class="text-sky-300">For Life.</span></h1>
+          <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">30 years of engineering excellence. Medical-grade oil-free air and suction systems trusted by 65,000+ clinics worldwide.</p>
+          <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="products.html">Explore Products <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
     <!-- Slide 2 -->
     <div class="hero-slide absolute inset-0">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/banner2.jpg')"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-brand-deep/30 to-transparent"></div>
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-20">
-        <div class="max-w-2xl">
-          <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/30 text-white font-semibold text-xs tracking-wider uppercase mb-5">Zero-Oil Purity &middot; Absolute Filtration</div>
-          <h1 class="text-4xl lg:text-6xl font-extrabold text-white leading-tight mb-5 font-display tracking-tight">Zero Oil.<br/><span class="text-sky-300">Zero Compromise.</span></h1>
-          <p class="text-lg lg:text-xl text-blue-100 mb-8 font-light leading-relaxed max-w-xl">Oil-free compression with Saint-Gobain PTFE rings and nano-antibacterial tanks. Air purity at Class 0, every single cycle.</p>
-          <a class="bg-white hover:bg-sky-100 text-brand-deep px-8 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center gap-2" href="products-hy.html">Discover HY Series <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/en_b2.jpg')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
+        <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
+          <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap mb-4">Zero-Oil Purity &middot; Absolute Filtration</div>
+          <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Zero Oil.<br/><span class="text-sky-300">Zero Compromise.</span></h1>
+          <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Oil-free compression with Saint-Gobain PTFE rings and nano-antibacterial tanks. Air purity at Class 0, every single cycle.</p>
+          <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="products-hy.html">Discover HY Series <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
     <!-- Slide 3 -->
     <div class="hero-slide absolute inset-0">
-      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/banner3.jpg')"></div>
-      <div class="absolute inset-0 bg-gradient-to-t from-brand-deep via-brand-deep/30 to-transparent"></div>
-      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-20">
-        <div class="max-w-2xl">
-          <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/30 text-white font-semibold text-xs tracking-wider uppercase mb-5">From Factory to Global &middot; OEM/ODM Partner</div>
-          <h1 class="text-4xl lg:text-6xl font-extrabold text-white leading-tight mb-5 font-display tracking-tight">Built in China.<br/><span class="text-sky-300">Trusted Globally.</span></h1>
-          <p class="text-lg lg:text-xl text-blue-100 mb-8 font-light leading-relaxed max-w-xl">160K units annual capacity. OEM/ODM partner to Agilent, Bruker, Shimadzu, Xinhua Medical and Weigao Group.</p>
-          <a class="bg-white hover:bg-sky-100 text-brand-deep px-8 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center gap-2" href="about.html">Our Story <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/en_b3.jpg')"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
+        <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
+          <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap mb-4">From Factory to Global &middot; OEM/ODM Partner</div>
+          <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Built in China.<br/><span class="text-sky-300">Trusted Globally.</span></h1>
+          <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">160K units annual capacity. OEM/ODM partner to Agilent, Bruker, Shimadzu, Xinhua Medical and Weigao Group.</p>
+          <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="about.html">Our Story <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
     <!-- Arrows -->
-    <button onclick="slideTo((currentSlide+1)%3)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur text-white flex items-center justify-center transition"><i class="fa-solid fa-chevron-right"></i></button>
-    <button onclick="slideTo((currentSlide+2)%3)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur text-white flex items-center justify-center transition"><i class="fa-solid fa-chevron-left"></i></button>
+    <button onclick="slideTo((currentSlide+1)%3)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-400/40 hover:bg-brand-blue/80 backdrop-blur text-white flex items-center justify-center transition"><i class="fa-solid fa-chevron-right"></i></button>
+    <button onclick="slideTo((currentSlide+2)%3)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-400/40 hover:bg-brand-blue/80 backdrop-blur text-white flex items-center justify-center transition"><i class="fa-solid fa-chevron-left"></i></button>
     <!-- Dots -->
     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-      <button onclick="slideTo(0)" class="hero-dot w-8 h-1.5 rounded-full bg-white/30 hover:bg-white/60 transition" data-dot="0"></button>
-      <button onclick="slideTo(1)" class="hero-dot w-8 h-1.5 rounded-full bg-white/30 hover:bg-white/60 transition" data-dot="1"></button>
-      <button onclick="slideTo(2)" class="hero-dot w-8 h-1.5 rounded-full bg-white/30 hover:bg-white/60 transition" data-dot="2"></button>
+      <button onclick="slideTo(0)" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="0"></button>
+      <button onclick="slideTo(1)" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="1"></button>
+      <button onclick="slideTo(2)" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="2"></button>
     </div>
   </div>
 </section>
@@ -132,8 +132,8 @@ tailwind.config = {
 
     <!-- Family 1: HY Compressors -->
     <div class="grid lg:grid-cols-5 gap-8 items-center mb-20">
-      <div class="lg:col-span-3 bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-10 h-80">
-        <img src="assets/images/products/hd/HYT-500-cutout.png" alt="HYT-500 Twin-Head Oil-Free Dental Compressor" class="max-h-64 w-auto object-contain drop-shadow-2xl"/>
+      <div class="lg:col-span-3 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-80">
+        <img src="assets/images/products/hd/HYT-500.jpg" alt="HYT-500 Twin-Head Oil-Free Dental Compressor" class="max-h-64 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="lg:col-span-2">
         <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Oil-Free Compressors</div>
@@ -153,15 +153,15 @@ tailwind.config = {
         <p class="text-slate-500 text-sm mb-6"><strong class="text-brand-blue">Models:</strong> HVS-1 &rarr; HVS-10 (clinic) &middot; HVS-15 &rarr; HVS-50 (hospital)</p>
         <a href="products-hvs.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition">View HVS Series <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="lg:col-span-3 order-1 lg:order-2 bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-10 h-80">
-        <img src="assets/images/products/hd/HVS-15-cutout.png" alt="HVS-15 Hospital-Grade Suction System" class="max-h-64 w-auto object-contain drop-shadow-2xl"/>
+      <div class="lg:col-span-3 order-1 lg:order-2 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-80">
+        <img src="assets/images/products/hd/HVS-15.jpg" alt="HVS-15 Hospital-Grade Suction System" class="max-h-64 w-auto object-contain mix-blend-multiply"/>
       </div>
     </div>
 
     <!-- Family 3: Clean Air Source -->
     <div class="grid lg:grid-cols-5 gap-8 items-center mb-20">
-      <div class="lg:col-span-3 bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-10 h-80">
-        <img src="assets/images/products/hd/HVTG-1600-cutout.png" alt="HVTG-1600 Medical Clean Air Source" class="max-h-64 w-auto object-contain drop-shadow-2xl"/>
+      <div class="lg:col-span-3 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-80">
+        <img src="assets/images/products/hd/HVTG-1600.jpg" alt="HVTG-1600 Medical Clean Air Source" class="max-h-64 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="lg:col-span-2">
         <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Clean Air Source</div>
@@ -181,8 +181,8 @@ tailwind.config = {
         <p class="text-slate-500 text-sm mb-6"><strong class="text-brand-blue">Models:</strong> HBG-400 &rarr; HBG-2400 &middot; HW-600 &rarr; HW-3600 &middot; HWG-200 &rarr; HWG-600</p>
         <a href="products-hospital.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition">View Hospital Series <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="lg:col-span-3 order-1 lg:order-2 bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-10 h-80">
-        <img src="assets/images/products/hd/HBG-1200-cutout.png" alt="HBG-1200 Class II Hospital Central Air System" class="max-h-64 w-auto object-contain drop-shadow-2xl"/>
+      <div class="lg:col-span-3 order-1 lg:order-2 bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-80">
+        <img src="assets/images/products/hd/HBG-1200.jpg" alt="HBG-1200 Class II Hospital Central Air System" class="max-h-64 w-auto object-contain mix-blend-multiply"/>
       </div>
     </div>
 
@@ -219,7 +219,7 @@ tailwind.config = {
   <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image:url('assets/images/web/banner1_cropped.jpg')"></div>
   <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/40"></div>
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl">
+    <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
       <div class="inline-block text-sky-300 text-xs font-bold uppercase tracking-widest mb-3">From Father to Daughter: A 30-Year Legacy</div>
       <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-5 font-display tracking-tight">Born in 1995.<br/>Built on Integrity.</h2>
       <p class="text-slate-300 text-lg mb-8 leading-relaxed">From a veteran's vision in 1995 to 30 years of engineering excellence — a family legacy delivering medical-grade air systems trusted by 65,000+ clinics, 190+ research institutes, including Tsinghua, Peking University and CAS.</p>
@@ -244,11 +244,14 @@ tailwind.config = {
 </section>
 
 <!-- ===================== FOOTER ===================== -->
-<footer class="bg-gradient-to-br from-brand-blue to-brand-deep text-blue-100 pt-16 pb-8">
+<footer class="bg-gradient-to-br from-brand-blue to-brand-deep text-slate-600 pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <div class="md:col-span-2">
-        <img src="assets/images/logo_transparent.png" alt="Hongrun Technology" class="h-12 mb-4 brightness-0 invert opacity-90"/>
+        <div class="flex items-end gap-5 mb-4">
+          <img src="assets/images/logo_transparent.png" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95"/>
+          <img src="assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 opacity-95"/>
+        </div>
         <p class="text-sm leading-relaxed max-w-sm text-blue-200">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
         <div class="flex gap-4 mt-6">
           <a href="https://www.linkedin.com" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
@@ -278,10 +281,7 @@ tailwind.config = {
     </div>
     <div class="border-t border-blue-400/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-blue-300">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <div class="flex items-center gap-4">
-        <p class="text-xs text-blue-300">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II</p>
-        <img src="assets/images/banners/logo_cn_orange.png" alt="Hongrun China Logo" class="h-8 w-auto opacity-90"/>
-      </div>
+      <p class="text-xs text-blue-300">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II</p>
     </div>
   </div>
 </footer>
@@ -306,7 +306,7 @@ function initDots() {
   dots[0].classList.remove('bg-white/30');
 }
 initDots();
-setInterval(() => slideTo((currentSlide + 1) % 3), 6000);
+setInterval(() => slideTo((currentSlide + 1) % 3), 12000);
 </script>
 
 <script type="application/ld+json">
