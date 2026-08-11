@@ -8,29 +8,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
-<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Roboto','sans-serif'],display:['Oswald','sans-serif']},colors:{brand:{blue:'#0F4C81',dark:'#0F172A',light:'#F8FAFC',accent:'#D97706'}}}}}</script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    fontFamily: { sans: ["Roboto","sans-serif"], display: ["Oswald","sans-serif"] },
+    colors: { brand: { blue: "#0F4C81", deep: "#0C3D6B", sky: "#0EA5E9", dark: "#0F172A", light: "#F1F5F9", accent: "#EA580C", gold: "#EAB308" } }
+  }}
+}
+</script>
 </head>
 <body class="font-sans text-slate-800 bg-brand-light antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="index.html"><img alt="Hongrun Tech Logo" class="h-14 w-auto object-contain" src="assets/images/logo_transparent.png"/></a>
+    <a href="index.html"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="solutions.html">Solutions</a>
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">Our Story</a>
-      <a class="border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-6 py-2 rounded-sm font-semibold text-sm transition" href="contact.html">Request a Quote</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html#certifications">Resources</a>
+      <a class="bg-slate-900 hover:bg-brand-blue text-white px-6 py-2.5 rounded-sm font-semibold text-sm transition" href="contact.html">Request a Quote</a>
     </div>
   </div>
 </nav>
 
 <!-- Hero -->
-<section class="pt-28 pb-16 bg-slate-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="inline-block bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold px-3 py-1 rounded-full mb-6">Turnkey EPC · Single Vendor · Full Lifecycle</div>
+<section class="relative pt-28 pb-16 overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/banner2.jpg')"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/90 to-brand-deep/80"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-block bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full mb-6">Turnkey EPC · Single Vendor · Full Lifecycle</div>
     <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 font-display tracking-tight">"It Is Best to Be Part of a System."</h1>
-    <p class="text-slate-300 text-lg max-w-2xl mx-auto">Three proven solution packages — from a single dental chair to full hospital central gas infrastructure. One partner, zero coordination gaps.</p>
+    <p class="text-blue-100 text-lg max-w-2xl mx-auto">Three proven solution packages — from a single dental chair to full hospital central gas infrastructure. One partner, zero coordination gaps.</p>
   </div>
 </section>
 
@@ -43,21 +53,21 @@
         <h2 class="text-3xl font-extrabold text-brand-dark mb-6 font-display tracking-tight">Clean Dental Clinic<br/><span class="text-slate-500 font-medium text-2xl">1–15 Chairs</span></h2>
         <p class="text-slate-600 mb-6 leading-relaxed">The complete air and suction ecosystem for private practices and group clinics. Swedish-precision compressors paired with aerosol-eliminating suction — all from a single EPC supplier with one warranty, one point of contact.</p>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-sm border border-slate-200">
+          <div class="flex items-start gap-4 p-4 bg-brand-light rounded-sm border border-slate-200">
             <i class="fa-solid fa-wind text-brand-blue text-xl mt-1"></i>
             <div>
               <h4 class="font-bold text-brand-dark text-sm font-display">Air Supply: HY Series Compressor</h4>
               <p class="text-slate-500 text-xs mt-1">Oil-free, ≤60 dB, nano-antibacterial tank. Match model to chair count: HYT-200 (3–4 chairs) to HYT-500 (8–10 chairs).</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-sm border border-slate-200">
+          <div class="flex items-start gap-4 p-4 bg-brand-light rounded-sm border border-slate-200">
             <i class="fa-solid fa-arrow-down text-brand-blue text-xl mt-1"></i>
             <div>
               <h4 class="font-bold text-brand-dark text-sm font-display">Suction: HVS-1 to HVS-10</h4>
               <p class="text-slate-500 text-xs mt-1">80%+ aerosol reduction. Full clinical suction for saliva, blood, debris, and aerosol particles.</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-sm border border-slate-200">
+          <div class="flex items-start gap-4 p-4 bg-brand-light rounded-sm border border-slate-200">
             <i class="fa-solid fa-droplet text-brand-blue text-xl mt-1"></i>
             <div>
               <h4 class="font-bold text-brand-dark text-sm font-display">Optional: Pure Water System</h4>
@@ -65,14 +75,14 @@
             </div>
           </div>
         </div>
-        <a href="contact.html" class="bg-slate-900 text-white hover:bg-slate-700 px-8 py-4 rounded-sm font-bold text-sm transition inline-flex items-center gap-2">Get a Clinic Package Quote <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="bg-brand-deep text-white hover:bg-brand-sky px-8 py-4 rounded-sm font-bold text-sm transition inline-flex items-center gap-2">Get a Clinic Package Quote <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="relative rounded-sm overflow-hidden shadow-xl border border-slate-200">
         <img src="assets/images/products/clean-clinic-solution.jpg" alt="Clean Dental Clinic Solution" class="w-full object-cover" style="min-height:360px"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-8">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/80 to-transparent flex items-end p-8">
           <div>
             <p class="text-white font-bold font-display text-xl">Complete Clinic Package</p>
-            <p class="text-slate-300 text-sm">Air + Suction + Installation · 1–15 Chairs</p>
+            <p class="text-blue-200 text-sm">Air + Suction + Installation · 1–15 Chairs</p>
           </div>
         </div>
       </div>
@@ -81,15 +91,15 @@
 </section>
 
 <!-- Solution 02: Hospital EPC -->
-<section class="py-20 bg-slate-50 border-t border-slate-200" id="solution-hospital">
+<section class="py-20 bg-brand-light border-t border-slate-200" id="solution-hospital">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div class="order-2 lg:order-1 relative rounded-sm overflow-hidden shadow-xl border border-slate-200">
         <img src="assets/images/products/water-supply-solution.jpg" alt="Hospital EPC Solution" class="w-full object-cover" style="min-height:360px"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-8">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/80 to-transparent flex items-end p-8">
           <div>
             <p class="text-white font-bold font-display text-xl">Hospital EPC Package</p>
-            <p class="text-slate-300 text-sm">"Two Supplies, One Suction" · 16–50+ Chairs</p>
+            <p class="text-blue-200 text-sm">"Two Supplies, One Suction" · 16–50+ Chairs</p>
           </div>
         </div>
       </div>
@@ -111,7 +121,7 @@
             <div><h4 class="font-bold text-brand-dark text-sm font-display">One Suction: Central Vacuum</h4><p class="text-slate-500 text-xs mt-1">HVS-15 to HVS-50 central vacuum plant — covers all chairs simultaneously with compliant wastewater management.</p></div>
           </div>
         </div>
-        <a href="contact.html" class="bg-slate-900 text-white hover:bg-slate-700 px-8 py-4 rounded-sm font-bold text-sm transition inline-flex items-center gap-2">Request EPC Consultation <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="bg-brand-deep text-white hover:bg-brand-sky px-8 py-4 rounded-sm font-bold text-sm transition inline-flex items-center gap-2">Request EPC Consultation <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -126,21 +136,21 @@
         <h2 class="text-3xl font-extrabold text-brand-dark mb-6 font-display tracking-tight">Medical Water Treatment<br/><span class="text-slate-500 font-medium text-2xl">Pure Water + Wastewater Management</span></h2>
         <p class="text-slate-600 mb-6 leading-relaxed">Clean water in. Safe water out. Hongrun's complete medical water management solution ensures pharmaceutical-grade purity for clinical instruments while managing clinical wastewater to environmental compliance standards.</p>
         <div class="space-y-4 mb-8">
-          <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-sm border border-slate-200">
+          <div class="flex items-start gap-4 p-4 bg-brand-light rounded-sm border border-slate-200">
             <i class="fa-solid fa-droplet text-brand-blue text-xl mt-1"></i>
             <div>
               <h4 class="font-bold text-brand-dark text-sm font-display">Pure Water System (纯水机)</h4>
               <p class="text-slate-500 text-xs mt-1">Reverse osmosis + UV sterilization system. Removes heavy metals, bacteria, and endotoxins. Pharmaceutical-grade water for autoclaves, instrument rinsing, and dental unit waterlines.</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-sm border border-slate-200">
+          <div class="flex items-start gap-4 p-4 bg-brand-light rounded-sm border border-slate-200">
             <i class="fa-solid fa-recycle text-brand-blue text-xl mt-1"></i>
             <div>
               <h4 class="font-bold text-brand-dark text-sm font-display">Wastewater Treatment (污水处理)</h4>
               <p class="text-slate-500 text-xs mt-1">Clinical wastewater disinfection and treatment system. Compliant with GB 18466-2005 medical institution wastewater discharge standards.</p>
             </div>
           </div>
-          <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-sm border border-slate-200">
+          <div class="flex items-start gap-4 p-4 bg-brand-light rounded-sm border border-slate-200">
             <i class="fa-solid fa-link text-brand-blue text-xl mt-1"></i>
             <div>
               <h4 class="font-bold text-brand-dark text-sm font-display">Integrated with Suction System</h4>
@@ -148,24 +158,24 @@
             </div>
           </div>
         </div>
-        <a href="contact.html" class="bg-slate-900 text-white hover:bg-slate-700 px-8 py-4 rounded-sm font-bold text-sm transition inline-flex items-center gap-2">Request Water Treatment Quote <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="contact.html" class="bg-brand-deep text-white hover:bg-brand-sky px-8 py-4 rounded-sm font-bold text-sm transition inline-flex items-center gap-2">Request Water Treatment Quote <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="grid grid-cols-2 gap-4">
         <div class="relative rounded-sm overflow-hidden shadow-lg border border-slate-200">
-          <img src="assets/images/products/water-treatment.jpg" alt="Pure Water System" class="w-full object-cover bg-slate-100" style="min-height:220px"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-4">
+          <img src="assets/images/products/water-treatment.jpg" alt="Pure Water System" class="w-full object-cover bg-brand-light" style="min-height:220px"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/80 to-transparent flex items-end p-4">
             <p class="text-white font-bold text-sm">Pure Water System</p>
           </div>
         </div>
         <div class="relative rounded-sm overflow-hidden shadow-lg border border-slate-200">
-          <img src="assets/images/products/wastewater.jpg" alt="Wastewater Treatment" class="w-full object-cover bg-slate-100" style="min-height:220px"/>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-4">
+          <img src="assets/images/products/wastewater.jpg" alt="Wastewater Treatment" class="w-full object-cover bg-brand-light" style="min-height:220px"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-deep/80 to-transparent flex items-end p-4">
             <p class="text-white font-bold text-sm">Wastewater Treatment</p>
           </div>
         </div>
-        <div class="col-span-2 bg-slate-900 rounded-sm p-6 text-center">
+        <div class="col-span-2 bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm p-6 text-center">
           <p class="text-white font-bold font-display text-lg mb-2">Complete Water-to-Drain Compliance</p>
-          <p class="text-slate-400 text-xs">GB 18466-2005 · Reverse Osmosis · UV Sterilization · Closed-loop Integration</p>
+          <p class="text-blue-200 text-xs">GB 18466-2005 · Reverse Osmosis · UV Sterilization · Closed-loop Integration</p>
         </div>
       </div>
     </div>
@@ -173,26 +183,53 @@
 </section>
 
 <!-- CTA -->
-<section class="py-16 bg-slate-900 border-t border-slate-700">
+<section class="py-16 bg-gradient-to-br from-brand-blue to-brand-deep border-t border-blue-400/30">
   <div class="max-w-4xl mx-auto px-4 text-center">
     <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4 font-display tracking-tight">Which solution fits your facility?</h2>
-    <p class="text-slate-400 mb-8">Tell us your chair count and space constraints. We'll design the optimal package and respond within 24 hours.</p>
+    <p class="text-blue-200 mb-8">Tell us your chair count and space constraints. We'll design the optimal package and respond within 24 hours.</p>
     <a href="contact.html" class="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-sm font-bold text-base transition inline-flex items-center gap-2">Start the Conversation <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-brand-dark border-t border-slate-800 pt-20 pb-10">
+<footer class="bg-gradient-to-br from-brand-blue to-brand-deep text-blue-100 pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-      <div class="md:col-span-1"><div class="text-white font-extrabold text-2xl tracking-tighter mb-6">HONGRUN<span class="text-slate-600 font-light text-xl ml-1">|</span><span class="font-medium text-lg ml-1">TECH</span></div><p class="text-slate-400 text-sm leading-relaxed">Premium manufacturer of Medical-Grade Dental Air, Suction Systems, and Hospital Gas solutions since 1995.</p></div>
-      <div><h4 class="text-white font-bold mb-6">Products</h4><ul class="space-y-3 text-slate-400 text-sm"><li><a class="hover:text-white transition" href="products-hy.html">Dental Compressors (HY)</a></li><li><a class="hover:text-white transition" href="products-hvs.html">Dental Suction (HVS)</a></li><li><a class="hover:text-white transition" href="products-hospital.html">Hospital Air Series (HBG)</a></li><li><a class="hover:text-white transition" href="products-cleanair.html">Medical Clean Air Source</a></li></ul></div>
-      <div><h4 class="text-white font-bold mb-6">Company</h4><ul class="space-y-3 text-slate-400 text-sm"><li><a class="hover:text-white transition" href="about.html">Our 30-Year Story</a></li><li><a class="hover:text-white transition" href="about.html">Certifications &amp; Class 0</a></li><li><a class="hover:text-white transition" href="contact.html">Become a Distributor</a></li><li><a class="hover:text-white transition" href="contact.html">Contact Us</a></li></ul></div>
-      <div><h4 class="text-white font-bold mb-6">Contact</h4><ul class="space-y-3 text-slate-400 text-sm"><li class="flex items-start gap-3"><i class="fa-solid fa-envelope text-slate-500 mt-1"></i><span>sales@hongrun-tech.com<br/><span class="text-xs text-slate-500">24/7 Response Guaranteed</span></span></li><li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-slate-500 mt-1"></i><span>No. 3416 Shanggong Road, High-tech Zone, Zibo, Shandong, China</span></li></ul></div>
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <img src="assets/images/logo_transparent.png" alt="Hongrun Technology" class="h-12 mb-4 brightness-0 invert opacity-90"/>
+        <p class="text-sm leading-relaxed max-w-sm text-blue-200">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
+        <div class="flex gap-4 mt-6">
+          <a href="https://www.linkedin.com" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+          <a href="contact.html" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-display font-semibold uppercase tracking-wide mb-4">Products</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white transition" href="products-hy.html">Dental Compressors (HY)</a></li>
+          <li><a class="hover:text-white transition" href="products-hvs.html">Dental Suction (HVS)</a></li>
+          <li><a class="hover:text-white transition" href="products-hospital.html">Hospital Systems (HBG/HW)</a></li>
+          <li><a class="hover:text-white transition" href="products-cleanair.html">Clean Air &amp; Medical Gas</a></li>
+          <li><a class="hover:text-white transition" href="products.html">Full Catalog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-display font-semibold uppercase tracking-wide mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a class="hover:text-white transition" href="about.html">Our 30-Year Story</a></li>
+          <li><a class="hover:text-white transition" href="about.html#certifications">Certifications &amp; Class 0</a></li>
+          <li><a class="hover:text-white transition" href="solutions.html">Solutions</a></li>
+          <li><a class="hover:text-white transition" href="contact.html#dealership">Become a Distributor</a></li>
+          <li><a class="hover:text-white transition" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-slate-500 text-sm mb-4 md:mb-0">© 2026 Hongrun Compressor Technology Co., Ltd. All Rights Reserved.</p>
-      <div class="flex space-x-4"><a class="text-slate-500 hover:text-white transition" href="https://www.linkedin.com"><i class="fa-brands fa-linkedin text-xl"></i></a><a class="text-slate-500 hover:text-white transition" href="contact.html"><i class="fa-brands fa-whatsapp text-xl"></i></a></div>
+    <div class="border-t border-blue-400/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-blue-300">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
+      <div class="flex items-center gap-4">
+        <p class="text-xs text-blue-300">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II</p>
+        <img src="assets/images/banners/logo_cn_orange.png" alt="Hongrun China Logo" class="h-8 w-auto opacity-90"/>
+      </div>
     </div>
   </div>
 </footer>

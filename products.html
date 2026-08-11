@@ -10,14 +10,10 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: { sans: ['Roboto','sans-serif'], display: ['Oswald','sans-serif'] },
-      colors: {
-        brand: { blue:'#0F4C81', dark:'#0F172A', light:'#F8FAFC', accent:'#D97706', accentHover:'#B45309' }
-      }
-    }
-  }
+  theme: { extend: {
+    fontFamily: { sans: ["Roboto","sans-serif"], display: ["Oswald","sans-serif"] },
+    colors: { brand: { blue: "#0F4C81", deep: "#0C3D6B", sky: "#0EA5E9", dark: "#0F172A", light: "#F1F5F9", accent: "#EA580C", gold: "#EAB308" } }
+  }}
 }
 </script>
 <style>
@@ -25,35 +21,33 @@ tailwind.config = {
 .product-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12); }
 .sidebar-link { transition: all 0.2s; }
 .sidebar-link:hover { background: #f1f5f9; color: #0F4C81; }
-.sidebar-link.active { background: #0F172A; color: #fff; }
+.sidebar-link.active { background: #0F4C81; color: #fff; }
 </style>
 </head>
 <body class="font-sans text-slate-800 bg-brand-light antialiased">
 
 <!-- Navbar -->
-<nav class="fixed w-full z-50 backdrop-blur bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-20">
-      <a class="flex-shrink-0 flex items-center gap-3" href="index.html">
-        <img alt="Hongrun Tech Logo" class="h-14 w-auto object-contain" src="assets/images/logo_transparent.png"/>
-      </a>
-      <div class="hidden md:flex space-x-8 items-center">
-        <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="products.html">Products</a>
-        <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="solutions.html">Solutions</a>
-        <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">Our Story</a>
-        <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">Insights</a>
-        <a class="border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-6 py-2 rounded-sm font-semibold text-sm transition" href="contact.html">Request a Quote</a>
-      </div>
+<nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+    <a href="index.html"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
+    <div class="hidden md:flex space-x-8 items-center">
+      <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="products.html">Products</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="solutions.html">Solutions</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html#certifications">Resources</a>
+      <a class="bg-slate-900 hover:bg-brand-blue text-white px-6 py-2.5 rounded-sm font-semibold text-sm transition" href="contact.html">Request a Quote</a>
     </div>
   </div>
 </nav>
 
 <!-- Page Hero -->
-<section class="pt-32 pb-16 bg-slate-900 border-b border-slate-700">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="inline-block px-4 py-1.5 rounded-full border border-slate-600 bg-slate-800 text-slate-300 font-semibold text-xs tracking-wider uppercase mb-6">ISO 8573-1 Class 0 · Class II Medical Device · CE Certified</div>
+<section class="relative pt-32 pb-16 overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/banner1.jpg')"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/90 to-brand-deep/80"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-block px-4 py-1.5 rounded-full border border-white/30 bg-white/10 text-white font-semibold text-xs tracking-wider uppercase mb-6">ISO 8573-1 Class 0 · Class II Medical Device · CE Certified</div>
     <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4 font-display tracking-tight">Complete Air &amp; Suction Ecosystem</h1>
-    <p class="text-lg text-slate-400 max-w-2xl mx-auto">From a single dental chair to 50-chair hospital centers. Engineered for zero-oil purity and clinical safety.</p>
+    <p class="text-lg text-blue-200 max-w-2xl mx-auto">From a single dental chair to 50-chair hospital centers. Engineered for zero-oil purity and clinical safety.</p>
   </div>
 </section>
 
@@ -61,10 +55,10 @@ tailwind.config = {
 <div class="sticky top-20 z-40 bg-white border-b border-slate-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex overflow-x-auto gap-2 py-3 no-scrollbar">
-      <a href="#section-hy" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HY Series Compressors</a>
-      <a href="#section-hvs" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HVS Suction Systems</a>
-      <a href="#section-cleanair" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Medical Clean Air Source</a>
-      <a href="#section-hospital" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-slate-900 hover:bg-slate-900 hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Hospital &amp; Scroll Systems</a>
+      <a href="#section-hy" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HY Series Compressors</a>
+      <a href="#section-hvs" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HVS Suction Systems</a>
+      <a href="#section-cleanair" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Medical Clean Air Source</a>
+      <a href="#section-hospital" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Hospital &amp; Scroll Systems</a>
     </div>
   </div>
 </div>
@@ -78,18 +72,18 @@ tailwind.config = {
         <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Dental Oil-Free Compressors — HY Series</h2>
         <p class="text-slate-500 max-w-xl">Swedish spring plates, Saint-Gobain PTFE rings, nano-antibacterial tank. ≤60 dB. The backbone of the clean dental operatory.</p>
       </div>
-      <a href="products-hy.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-slate-700 transition">View Full HY Specs <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="products-hy.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-brand-sky transition">View Full HY Specs <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       <!-- HYT-200 -->
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-6">
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-64 bg-white flex items-center justify-center p-6">
           <img src="assets/images/products/HYT-200.jpg" alt="HYT-200 Oil-Free Compressor" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-6 flex-1 flex flex-col">
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight">HYT-200</h3>
-            <span class="bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold px-3 py-1 rounded-full">3–4 Chairs</span>
+            <span class="bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">3–4 Chairs</span>
           </div>
           <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-4">
             <div><span class="font-bold text-slate-800">Power:</span> 0.75 kW×2</div>
@@ -98,20 +92,20 @@ tailwind.config = {
             <div><span class="font-bold text-slate-800">Noise:</span> ≤60 dB</div>
           </div>
           <div class="mt-auto flex gap-2">
-            <a href="products-hy.html" class="flex-1 text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition">Full Specs</a>
-            <a href="contact.html" class="flex-1 text-center bg-slate-900 text-white hover:bg-slate-700 px-4 py-2 rounded-sm text-xs font-bold transition">Request Quote</a>
+            <a href="products-hy.html" class="flex-1 text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition">Full Specs</a>
+            <a href="contact.html" class="flex-1 text-center bg-brand-deep text-white hover:bg-brand-sky px-4 py-2 rounded-sm text-xs font-bold transition">Request Quote</a>
           </div>
         </div>
       </div>
       <!-- HYT-400 -->
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-6">
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-64 bg-white flex items-center justify-center p-6">
           <img src="assets/images/products/HYT-400.jpg" alt="HYT-400 Oil-Free Compressor" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-6 flex-1 flex flex-col">
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight">HYT-400</h3>
-            <span class="bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold px-3 py-1 rounded-full">5–6 Chairs</span>
+            <span class="bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">5–6 Chairs</span>
           </div>
           <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-4">
             <div><span class="font-bold text-slate-800">Power:</span> 0.75 kW×4</div>
@@ -120,20 +114,20 @@ tailwind.config = {
             <div><span class="font-bold text-slate-800">Noise:</span> ≤60 dB</div>
           </div>
           <div class="mt-auto flex gap-2">
-            <a href="products-hy.html" class="flex-1 text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition">Full Specs</a>
-            <a href="contact.html" class="flex-1 text-center bg-slate-900 text-white hover:bg-slate-700 px-4 py-2 rounded-sm text-xs font-bold transition">Request Quote</a>
+            <a href="products-hy.html" class="flex-1 text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition">Full Specs</a>
+            <a href="contact.html" class="flex-1 text-center bg-brand-deep text-white hover:bg-brand-sky px-4 py-2 rounded-sm text-xs font-bold transition">Request Quote</a>
           </div>
         </div>
       </div>
       <!-- HYT-500 -->
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-56 bg-white flex items-center justify-center p-6">
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-64 bg-white flex items-center justify-center p-6">
           <img src="assets/images/products/HYT-500.jpg" alt="HYT-500 Oil-Free Compressor" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-6 flex-1 flex flex-col">
           <div class="flex items-center justify-between mb-3">
             <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight">HYT-500</h3>
-            <span class="bg-slate-100 border border-slate-300 text-slate-700 text-xs font-bold px-3 py-1 rounded-full">8–10 Chairs</span>
+            <span class="bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">8–10 Chairs</span>
           </div>
           <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-4">
             <div><span class="font-bold text-slate-800">Power:</span> 1.1 kW×4</div>
@@ -142,8 +136,8 @@ tailwind.config = {
             <div><span class="font-bold text-slate-800">Noise:</span> ≤60 dB</div>
           </div>
           <div class="mt-auto flex gap-2">
-            <a href="products-hy.html" class="flex-1 text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition">Full Specs</a>
-            <a href="contact.html" class="flex-1 text-center bg-slate-900 text-white hover:bg-slate-700 px-4 py-2 rounded-sm text-xs font-bold transition">Request Quote</a>
+            <a href="products-hy.html" class="flex-1 text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition">Full Specs</a>
+            <a href="contact.html" class="flex-1 text-center bg-brand-deep text-white hover:bg-brand-sky px-4 py-2 rounded-sm text-xs font-bold transition">Request Quote</a>
           </div>
         </div>
       </div>
@@ -152,7 +146,7 @@ tailwind.config = {
 </section>
 
 <!-- SECTION 2: HVS Electric Suction Systems -->
-<section id="section-hvs" class="py-20 bg-slate-50 border-t border-slate-200">
+<section id="section-hvs" class="py-20 bg-brand-light border-t border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between">
       <div>
@@ -160,91 +154,91 @@ tailwind.config = {
         <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Electric Suction Systems — HVS Series</h2>
         <p class="text-slate-500 max-w-xl">Protect the dentist, care for the patient. 80%+ aerosol reduction. Full-spectrum clinical suction from 1 to 50 chairs.</p>
       </div>
-      <a href="products-hvs.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-slate-700 transition">View Full HVS Specs <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="products-hvs.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-brand-sky transition">View Full HVS Specs <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="grid md:grid-cols-4 gap-6">
       <!-- HVS-1 -->
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4">
+        <div class="h-56 bg-brand-light flex items-center justify-center p-4">
           <img src="assets/images/products/HVS-1.jpg" alt="HVS-1" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-1</h3>
           <p class="text-xs text-slate-500 mb-3">1 Chair · 0.75 kW · Clinic</p>
-          <a href="products-hvs.html" class="mt-auto text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
+          <a href="products-hvs.html" class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
         </div>
       </div>
       <!-- HVS-2 -->
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4">
+        <div class="h-56 bg-brand-light flex items-center justify-center p-4">
           <img src="assets/images/products/HVS-2.jpg" alt="HVS-2" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-2</h3>
           <p class="text-xs text-slate-500 mb-3">2 Chairs · 1.1 kW · Clinic</p>
-          <a href="products-hvs.html" class="mt-auto text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
+          <a href="products-hvs.html" class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
         </div>
       </div>
       <!-- HVS-3 -->
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4">
+        <div class="h-56 bg-brand-light flex items-center justify-center p-4">
           <img src="assets/images/products/HVS-3.jpg" alt="HVS-3" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-3</h3>
           <p class="text-xs text-slate-500 mb-3">3 Chairs · 1.5 kW · Clinic</p>
-          <a href="products-hvs.html" class="mt-auto text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
+          <a href="products-hvs.html" class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
         </div>
       </div>
       <!-- HVS-5&7 -->
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4">
+        <div class="h-56 bg-brand-light flex items-center justify-center p-4">
           <img src="assets/images/products/HVS-5-7.jpg" alt="HVS-5&7" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-5 &amp; 7</h3>
           <p class="text-xs text-slate-500 mb-3">5–7 Chairs · 3–4 kW · Clinic</p>
-          <a href="products-hvs.html" class="mt-auto text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
+          <a href="products-hvs.html" class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
         </div>
       </div>
       <!-- HVS-15&20 -->
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4">
+        <div class="h-56 bg-brand-light flex items-center justify-center p-4">
           <img src="assets/images/products/HVS-15-20.jpg" alt="HVS-15&20" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-15 &amp; 20</h3>
           <p class="text-xs text-slate-500 mb-3">15–20 Chairs · Hospital</p>
-          <a href="products-hvs.html" class="mt-auto text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
+          <a href="products-hvs.html" class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
         </div>
       </div>
       <!-- HVS-25&30 -->
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4">
+        <div class="h-56 bg-brand-light flex items-center justify-center p-4">
           <img src="assets/images/products/HVS-25-30.jpg" alt="HVS-25&30" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-25 &amp; 30</h3>
           <p class="text-xs text-slate-500 mb-3">25–30 Chairs · Hospital</p>
-          <a href="products-hvs.html" class="mt-auto text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
+          <a href="products-hvs.html" class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
         </div>
       </div>
       <!-- HVS-35&40 -->
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4">
+        <div class="h-56 bg-brand-light flex items-center justify-center p-4">
           <img src="assets/images/products/HVS-35-40.jpg" alt="HVS-35&40" class="max-h-full object-contain mix-blend-multiply"/>
         </div>
         <div class="p-4 flex-1 flex flex-col">
           <h3 class="font-bold text-brand-dark font-display mb-1">HVS-35 &amp; 40</h3>
           <p class="text-xs text-slate-500 mb-3">35–40 Chairs · Hospital</p>
-          <a href="products-hvs.html" class="mt-auto text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
+          <a href="products-hvs.html" class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a>
         </div>
       </div>
       <!-- Quote CTA card -->
-      <div class="bg-slate-900 border border-slate-700 rounded-sm flex flex-col items-center justify-center p-6 text-center">
-        <i class="fa-solid fa-hospital text-slate-500 text-3xl mb-4"></i>
+      <div class="bg-gradient-to-br from-brand-blue to-brand-deep border border-blue-400/30 rounded-sm flex flex-col items-center justify-center p-6 text-center">
+        <i class="fa-solid fa-hospital text-blue-200 text-3xl mb-4"></i>
         <p class="text-white font-bold font-display text-lg mb-2">Up to 50 Chairs</p>
-        <p class="text-slate-400 text-xs mb-4">Custom hospital configurations available</p>
+        <p class="text-blue-200 text-xs mb-4">Custom hospital configurations available</p>
         <a href="contact.html" class="bg-white text-slate-900 hover:bg-slate-100 px-5 py-2 rounded-sm text-xs font-bold transition">Request Quote</a>
       </div>
     </div>
@@ -260,35 +254,35 @@ tailwind.config = {
         <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Medical Clean Air Source — HYG / HVTG Series</h2>
         <p class="text-slate-500 max-w-xl">Dew point ≤ −40°C. 0.01 μm filtration. Serving endoscopy, sterilization, ICU, and dental sterilization rooms.</p>
       </div>
-      <a href="products-cleanair.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-slate-700 transition">View Full Specs <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="products-cleanair.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-brand-sky transition">View Full Specs <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="grid md:grid-cols-5 gap-6">
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HYG-301.jpg" alt="HYG-301" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-301</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dew −40°C</p><a href="products-cleanair.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HYG-301.jpg" alt="HYG-301" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-301</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dew −40°C</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HYG-302.jpg" alt="HYG-302" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-302</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dual-head</p><a href="products-cleanair.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HYG-302.jpg" alt="HYG-302" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-302</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dual-head</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HVTG-900.jpg" alt="HVTG-900" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-900</h3><p class="text-xs text-slate-500 mb-3">900 L/min · Hospital</p><a href="products-cleanair.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HVTG-900.jpg" alt="HVTG-900" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-900</h3><p class="text-xs text-slate-500 mb-3">900 L/min · Hospital</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HVTG-1200.jpg" alt="HVTG-1200" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · Hospital</p><a href="products-cleanair.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HVTG-1200.jpg" alt="HVTG-1200" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · Hospital</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
-      <div class="product-card bg-slate-50 border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HVTG-1600.jpg" alt="HVTG-1600" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1600</h3><p class="text-xs text-slate-500 mb-3">1600 L/min · Central Gas</p><a href="products-cleanair.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
+      <div class="product-card bg-brand-light border border-slate-200 rounded-sm overflow-hidden flex flex-col">
+        <div class="h-56 bg-white flex items-center justify-center p-4"><img src="assets/images/products/HVTG-1600.jpg" alt="HVTG-1600" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1600</h3><p class="text-xs text-slate-500 mb-3">1600 L/min · Central Gas</p><a href="products-cleanair.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Specs</a></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- SECTION 4: Scroll Compressors & Hospital Systems -->
-<section id="section-hospital" class="py-20 bg-slate-50 border-t border-slate-200">
+<section id="section-hospital" class="py-20 bg-brand-light border-t border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between">
       <div>
@@ -296,92 +290,91 @@ tailwind.config = {
         <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Scroll Compressors &amp; Hospital Systems — HW / HWG / HBG</h2>
         <p class="text-slate-500 max-w-xl">Hitachi scroll technology. 10,000-hour maintenance-free. Class II Medical Device EPC packages for ICUs and operating theaters.</p>
       </div>
-      <a href="products-hospital.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-slate-700 transition">View Full Specs <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="products-hospital.html" class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm hover:bg-brand-sky transition">View Full Specs <i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <!-- HBG Medical Compressors -->
     <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HBG Medical Compressors (Class II)</h3>
     <div class="grid md:grid-cols-3 gap-6 mb-12">
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4"><img src="assets/images/products/HBG-400.jpg" alt="HBG-400" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
+        <div class="h-44 bg-brand-light flex items-center justify-center p-4"><img src="assets/images/products/HBG-400.jpg" alt="HBG-400" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4"><img src="assets/images/products/HBG-800.jpg" alt="HBG-800" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-800</h3><p class="text-xs text-slate-500 mb-3">800 L/min · 4.4 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
+        <div class="h-44 bg-brand-light flex items-center justify-center p-4"><img src="assets/images/products/HBG-800.jpg" alt="HBG-800" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-800</h3><p class="text-xs text-slate-500 mb-3">800 L/min · 4.4 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
       </div>
       <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col">
-        <div class="h-44 bg-slate-50 flex items-center justify-center p-4"><img src="assets/images/products/HBG-1200.jpg" alt="HBG-1200" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · 6.6 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
+        <div class="h-44 bg-brand-light flex items-center justify-center p-4"><img src="assets/images/products/HBG-1200.jpg" alt="HBG-1200" class="max-h-full object-contain mix-blend-multiply"/></div>
+        <div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · 6.6 kW · Class II</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div>
       </div>
     </div>
     <!-- HW Scroll Systems -->
     <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HW Silent Scroll Systems (Hospital Central)</h3>
     <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-32 bg-slate-50 flex items-center justify-center p-3"><img src="assets/images/products/HW-600.jpg" alt="HW-600" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-600</h3><p class="text-xs text-slate-500">600 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-32 bg-slate-50 flex items-center justify-center p-3"><img src="assets/images/products/HW-800.jpg" alt="HW-800" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-800</h3><p class="text-xs text-slate-500">800 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-32 bg-slate-50 flex items-center justify-center p-3"><img src="assets/images/products/HW-1200.jpg" alt="HW-1200" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1200</h3><p class="text-xs text-slate-500">1200 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-32 bg-slate-50 flex items-center justify-center p-3"><img src="assets/images/products/HW-1800.jpg" alt="HW-1800" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1800</h3><p class="text-xs text-slate-500">1800 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-32 bg-slate-50 flex items-center justify-center p-3"><img src="assets/images/products/HW-2400.jpg" alt="HW-2400" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-2400</h3><p class="text-xs text-slate-500">2400 L/min</p></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-32 bg-slate-50 flex items-center justify-center p-3"><img src="assets/images/products/HW-3600.jpg" alt="HW-3600" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-3600</h3><p class="text-xs text-slate-500">3600 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-48 bg-brand-light flex items-center justify-center p-3"><img src="assets/images/products/HW-600.jpg" alt="HW-600" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-600</h3><p class="text-xs text-slate-500">600 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-48 bg-brand-light flex items-center justify-center p-3"><img src="assets/images/products/HW-800.jpg" alt="HW-800" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-800</h3><p class="text-xs text-slate-500">800 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-48 bg-brand-light flex items-center justify-center p-3"><img src="assets/images/products/HW-1200.jpg" alt="HW-1200" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1200</h3><p class="text-xs text-slate-500">1200 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-48 bg-brand-light flex items-center justify-center p-3"><img src="assets/images/products/HW-1800.jpg" alt="HW-1800" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1800</h3><p class="text-xs text-slate-500">1800 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-48 bg-brand-light flex items-center justify-center p-3"><img src="assets/images/products/HW-2400.jpg" alt="HW-2400" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-2400</h3><p class="text-xs text-slate-500">2400 L/min</p></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-48 bg-brand-light flex items-center justify-center p-3"><img src="assets/images/products/HW-3600.jpg" alt="HW-3600" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-3600</h3><p class="text-xs text-slate-500">3600 L/min</p></div></div>
     </div>
     <!-- HWG Tank Scroll -->
     <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HWG Tank Scroll Compressors</h3>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-44 bg-slate-50 flex items-center justify-center p-4"><img src="assets/images/products/HWG-200.jpg" alt="HWG-200" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-200</h3><p class="text-xs text-slate-500 mb-3">200 L/min · 1.1 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-44 bg-slate-50 flex items-center justify-center p-4"><img src="assets/images/products/HWG-400.jpg" alt="HWG-400" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
-      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-44 bg-slate-50 flex items-center justify-center p-4"><img src="assets/images/products/HWG-600.jpg" alt="HWG-600" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-600</h3><p class="text-xs text-slate-500 mb-3">600 L/min · 3.3 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-44 bg-brand-light flex items-center justify-center p-4"><img src="assets/images/products/HWG-200.jpg" alt="HWG-200" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-200</h3><p class="text-xs text-slate-500 mb-3">200 L/min · 1.1 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-44 bg-brand-light flex items-center justify-center p-4"><img src="assets/images/products/HWG-400.jpg" alt="HWG-400" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
+      <div class="product-card bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col"><div class="h-44 bg-brand-light flex items-center justify-center p-4"><img src="assets/images/products/HWG-600.jpg" alt="HWG-600" class="max-h-full object-contain mix-blend-multiply"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-600</h3><p class="text-xs text-slate-500 mb-3">600 L/min · 3.3 kW · Tank</p><a href="products-hospital.html" class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition">Full Specs</a></div></div>
     </div>
   </div>
 </section>
 
 <!-- Footer CTA -->
-<section class="py-16 bg-slate-900 border-t border-slate-700">
+<section class="py-16 bg-gradient-to-br from-brand-blue to-brand-deep border-t border-blue-400/30">
   <div class="max-w-4xl mx-auto px-4 text-center">
     <h2 class="text-2xl md:text-3xl font-extrabold text-white mb-4 font-display tracking-tight">Not sure which model fits your clinic?</h2>
-    <p class="text-slate-400 mb-8">Our engineering team will recommend the optimal configuration for your chair count, building layout, and budget.</p>
+    <p class="text-blue-200 mb-8">Our engineering team will recommend the optimal configuration for your chair count, building layout, and budget.</p>
     <a href="contact.html" class="bg-white text-slate-900 hover:bg-slate-100 px-10 py-4 rounded-sm font-bold text-base transition inline-flex items-center gap-2">Request a Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-brand-dark border-t border-slate-800 pt-20 pb-10">
+<footer class="bg-gradient-to-br from-brand-blue to-brand-deep text-blue-100 pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-      <div class="md:col-span-1">
-        <div class="text-white font-extrabold text-2xl tracking-tighter mb-6">HONGRUN<span class="text-slate-600 font-light text-xl ml-1">|</span><span class="font-medium text-lg ml-1">TECH</span></div>
-        <p class="text-slate-400 text-sm leading-relaxed mb-6">Premium manufacturer of Medical-Grade Dental Air, Suction Systems, and Hospital Gas solutions since 1995.</p>
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <div class="md:col-span-2">
+        <img src="assets/images/logo_transparent.png" alt="Hongrun Technology" class="h-12 mb-4 brightness-0 invert opacity-90"/>
+        <p class="text-sm leading-relaxed max-w-sm text-blue-200">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
+        <div class="flex gap-4 mt-6">
+          <a href="https://www.linkedin.com" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+          <a href="contact.html" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+        </div>
       </div>
       <div>
-        <h4 class="text-white font-bold mb-6">Products</h4>
-        <ul class="space-y-3 text-slate-400 text-sm">
+        <h4 class="text-white font-display font-semibold uppercase tracking-wide mb-4">Products</h4>
+        <ul class="space-y-2 text-sm">
           <li><a class="hover:text-white transition" href="products-hy.html">Dental Compressors (HY)</a></li>
           <li><a class="hover:text-white transition" href="products-hvs.html">Dental Suction (HVS)</a></li>
-          <li><a class="hover:text-white transition" href="products-hospital.html">Hospital Air Series (HBG)</a></li>
-          <li><a class="hover:text-white transition" href="products-cleanair.html">Medical Clean Air Source</a></li>
+          <li><a class="hover:text-white transition" href="products-hospital.html">Hospital Systems (HBG/HW)</a></li>
+          <li><a class="hover:text-white transition" href="products-cleanair.html">Clean Air &amp; Medical Gas</a></li>
+          <li><a class="hover:text-white transition" href="products.html">Full Catalog</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-white font-bold mb-6">Company</h4>
-        <ul class="space-y-3 text-slate-400 text-sm">
+        <h4 class="text-white font-display font-semibold uppercase tracking-wide mb-4">Company</h4>
+        <ul class="space-y-2 text-sm">
           <li><a class="hover:text-white transition" href="about.html">Our 30-Year Story</a></li>
-          <li><a class="hover:text-white transition" href="about.html">Certifications &amp; Class 0</a></li>
-          <li><a class="hover:text-white transition" href="contact.html">Become a Distributor</a></li>
+          <li><a class="hover:text-white transition" href="about.html#certifications">Certifications &amp; Class 0</a></li>
+          <li><a class="hover:text-white transition" href="solutions.html">Solutions</a></li>
+          <li><a class="hover:text-white transition" href="contact.html#dealership">Become a Distributor</a></li>
           <li><a class="hover:text-white transition" href="contact.html">Contact Us</a></li>
         </ul>
       </div>
-      <div>
-        <h4 class="text-white font-bold mb-6">Contact</h4>
-        <ul class="space-y-3 text-slate-400 text-sm">
-          <li class="flex items-start gap-3"><i class="fa-solid fa-envelope text-slate-500 mt-1"></i><span>sales@hongrun-tech.com<br/><span class="text-xs text-slate-500">24/7 Response Guaranteed</span></span></li>
-          <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-slate-500 mt-1"></i><span>No. 3416 Shanggong Road, High-tech Zone, Zibo, Shandong, China</span></li>
-        </ul>
-      </div>
     </div>
-    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-slate-500 text-sm text-center md:text-left mb-4 md:mb-0">© 2026 Hongrun Compressor Technology Co., Ltd. All Rights Reserved.</p>
-      <div class="flex space-x-4">
-        <a class="text-slate-500 hover:text-white transition" href="https://www.linkedin.com"><i class="fa-brands fa-linkedin text-xl"></i></a>
-        <a class="text-slate-500 hover:text-white transition" href="contact.html"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+    <div class="border-t border-blue-400/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-blue-300">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
+      <div class="flex items-center gap-4">
+        <p class="text-xs text-blue-300">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II</p>
+        <img src="assets/images/banners/logo_cn_orange.png" alt="Hongrun China Logo" class="h-8 w-auto opacity-90"/>
       </div>
     </div>
   </div>

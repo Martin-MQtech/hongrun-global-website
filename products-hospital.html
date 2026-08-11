@@ -4,8 +4,9 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Hospital-Grade Compressors | Class II Medical | Hongrun Tech</title>
-<meta name="description" content="HBG Series central air systems with Class II Medical Device License (NMPA). HW/HWG Silent Scroll Compressors for sterile EPC hospital environments."/>
-<meta property="og:title" content="Hospital Central Compressed Air — Hongrun Technology"/>
+<meta name="description" content="HBG Series central air systems with NMPA Class II Medical Device license. HW and HWG silent scroll compressors for hospital dental departments, ORs and EPC medical gas projects up to 3600 L/min."/>
+<meta property="og:title" content="Hospital-Grade Compressors — Hongrun Technology"/>
+<meta property="og:description" content="Class II Medical Device certified central air, silent scroll base units and turnkey medical gas EPC solutions for hospitals."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
@@ -15,12 +16,12 @@
 tailwind.config = {
   theme: { extend: {
     fontFamily: { sans: ["Roboto","sans-serif"], display: ["Oswald","sans-serif"] },
-    colors: { brand: { blue:"#0F4C81", dark:"#0F172A", light:"#F8FAFC", accent:"#D97706" } }
+    colors: { brand: { blue: "#0F4C81", deep: "#0C3D6B", sky: "#0EA5E9", dark: "#0F172A", light: "#F1F5F9", accent: "#EA580C", gold: "#EAB308" } }
   }}
 }
 </script>
 </head>
-<body class="font-sans text-slate-800 bg-brand-light antialiased">
+<body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -29,109 +30,354 @@ tailwind.config = {
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="products.html">Products</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="solutions.html">Solutions</a>
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">Our Story</a>
-      <a class="border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white px-6 py-2 rounded-sm font-semibold text-sm transition" href="contact.html">Request a Quote</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html#certifications">Resources</a>
+      <a class="bg-slate-900 hover:bg-brand-blue text-white px-6 py-2.5 rounded-sm font-semibold text-sm transition" href="contact.html">Request a Quote</a>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="pt-28 pb-16 bg-slate-900">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-sm text-slate-500 mb-6">
-      <a href="index.html" class="hover:text-white transition">Home</a>
-      <span class="mx-2">/</span>
-      <a href="products.html" class="hover:text-white transition">Products</a>
-      <span class="mx-2">/</span>
-      <span class="text-slate-300">Hospital Series</span>
+<!-- Hero: industrial banner + deep blue overlay -->
+<section class="relative pt-20 overflow-hidden bg-brand-deep">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/banner1.jpg')"></div>
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/90 to-brand-deep/80"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16">
+    <div class="text-sm text-blue-200 mb-6">
+      <a href="index.html" class="hover:text-white transition">Home</a> <span class="mx-2">/</span>
+      <a href="products.html" class="hover:text-white transition">Products</a> <span class="mx-2">/</span>
+      <span class="text-sky-200">Hospital Systems</span>
     </div>
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <div class="inline-block bg-brand-blue/20 border border-brand-blue/40 text-blue-300 text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Medical Gas Networks</div>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 font-display tracking-tight leading-tight">Hospital-Grade<br/><span class="text-slate-400">Class II Systems</span></h1>
-        <p class="text-slate-300 text-lg mb-8 leading-relaxed">Central compressed air stations (HBG) and Silent Scroll systems (HW/HWG). Officially licensed as Class II Medical Devices by the NMPA. Designed for hospital basements, delivering pristine air to hundreds of terminals miles away.</p>
-        <div class="flex flex-wrap gap-2 mb-8">
-          <span class="bg-slate-800 border border-slate-600 text-slate-200 text-xs font-bold px-3 py-1 rounded-full">NMPA Class II Medical Device</span>
-          <span class="bg-slate-800 border border-slate-600 text-slate-200 text-xs font-bold px-3 py-1 rounded-full">High Capacity Scroll</span>
-          <span class="bg-slate-800 border border-slate-600 text-slate-200 text-xs font-bold px-3 py-1 rounded-full">Central Monitoring</span>
-        </div>
-        <a href="solutions.html" class="bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-sm font-bold text-base transition inline-flex items-center gap-2 shadow-lg">Hospital EPC Solutions <i class="fa-solid fa-arrow-right"></i></a>
+    <div class="max-w-3xl">
+      <div class="inline-block bg-white/10 backdrop-blur border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full mb-5 uppercase tracking-widest">NMPA Class II Medical Device Licensed</div>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 font-display tracking-tight leading-tight">Hospital-Grade<br/><span class="text-sky-300">Medical Systems</span></h1>
+      <p class="text-blue-100 text-lg mb-8 leading-relaxed">Central compressed air engineered for hospitals — carrying a Class II Medical Device license, high-capacity scroll elements and central monitoring that keeps every department supplied, every shift.</p>
+      <div class="flex flex-wrap gap-2 mb-8">
+        <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">NMPA Class II Medical Device</span>
+        <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">High Capacity Scroll</span>
+        <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">Central Monitoring</span>
       </div>
-      <!-- Image Gallery -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        <div class="bg-white rounded-sm p-3 border border-slate-700 flex items-center justify-center h-36"><img src="assets/images/products/HBG-400.jpg" alt="HBG-400 Central System" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="bg-white rounded-sm p-3 border border-slate-700 flex items-center justify-center h-36"><img src="assets/images/products/HBG-800.jpg" alt="HBG-800 Heavy Duty" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="bg-white rounded-sm p-3 border border-slate-700 flex items-center justify-center h-36"><img src="assets/images/products/HBG-1200.jpg" alt="HBG-1200 Mass Capacity" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="bg-white rounded-sm p-3 border border-slate-700 flex items-center justify-center h-36"><img src="assets/images/products/HW-600.jpg" alt="HW-600 Scroll Module" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="bg-white rounded-sm p-3 border border-slate-700 flex items-center justify-center h-36"><img src="assets/images/products/HWG-400.jpg" alt="HWG-400 Tank Scroll" class="max-h-full object-contain mix-blend-multiply"/></div>
-        <div class="bg-white rounded-sm p-3 border border-slate-700 flex items-center justify-center h-36"><img src="assets/images/products/HW-3600.jpg" alt="HW-3600 Industrial Scale" class="max-h-full object-contain mix-blend-multiply"/></div>
+      <a href="solutions.html" class="bg-white text-brand-deep hover:bg-sky-100 px-8 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center gap-2">View Solutions <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- HBG Series -->
+<section class="py-16 bg-brand-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-6">
+      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Medical Device Certified</div>
+      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HBG Series — Class II Medical Certified</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Central air systems registered as medical devices — the reference standard for hospital dental departments, operating suites and ICU gas distribution.</p>
+    </div>
+
+    <div class="flex items-start gap-4 bg-brand-blue/10 border border-brand-blue/30 rounded-sm p-5 mb-12 max-w-4xl mx-auto">
+      <i class="fa-solid fa-certificate text-brand-blue text-3xl mt-1"></i>
+      <div>
+        <h4 class="font-bold text-brand-dark font-display uppercase text-sm">NMPA Class II Medical Device License</h4>
+        <p class="text-slate-600 text-sm mt-1 leading-relaxed">A rare qualification for life-support gas systems. HBG units are registered medical devices — not adapted industrial compressors — giving hospital engineering departments the compliance documentation their projects require.</p>
+      </div>
+    </div>
+
+    <!-- HBG-400 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
+      <div class="bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-8 h-72">
+        <img src="assets/images/products/hd/HBG-400-cutout.png" alt="HBG-400 Class II medical central air compressor" class="max-h-52 w-auto object-contain drop-shadow-2xl"/>
+      </div>
+      <div class="bg-white p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-400</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 6–10 chairs · 110 kg unit</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>400 L/min</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Pressure</span><strong>0.8 MPa</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Tank</span><strong>100 L</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>3.0 kW</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- HBG-800 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
+      <div class="bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-8 h-72">
+        <img src="assets/images/products/hd/HBG-800-cutout.png" alt="HBG-800 Class II medical central air compressor" class="max-h-52 w-auto object-contain drop-shadow-2xl"/>
+      </div>
+      <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-800</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 10–16 chairs · 175 kg unit</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>800 L/min</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Pressure</span><strong>0.8 MPa</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Tank</span><strong>150 L</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>6.0 kW</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- HBG-1200 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center">
+      <div class="bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-8 h-72">
+        <img src="assets/images/products/hd/HBG-1200-cutout.png" alt="HBG-1200 flagship Class II medical central air system" class="max-h-52 w-auto object-contain drop-shadow-2xl"/>
+      </div>
+      <div class="bg-white p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-1200</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 16–25 chairs · 240 kg unit</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>1200 L/min</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Pressure</span><strong>0.8 MPa</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Tank</span><strong>250 L</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>9.0 kW</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Specifications -->
-<section class="py-16 bg-brand-light">
+<!-- HW Series -->
+<section class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-extrabold text-brand-dark mb-2 font-display tracking-tight uppercase">HBG Series (Class II Medical Certified)</h2>
-    <p class="text-slate-500 mb-8 text-sm">Turnkey skid-mounted central air stations yielding strict sterile medical gas compliance.</p>
-    <div class="overflow-x-auto rounded-sm border border-slate-200 shadow-sm mb-16">
-      <table class="w-full text-sm text-left">
-        <thead class="bg-slate-900 text-white font-display uppercase tracking-wide text-xs">
-          <tr>
-            <th class="px-5 py-4">Model</th>
-            <th class="px-5 py-4">Chairs</th>
-            <th class="px-5 py-4">Flow (L/min)</th>
-            <th class="px-5 py-4">Pressure (MPa)</th>
-            <th class="px-5 py-4">Tank (L)</th>
-            <th class="px-5 py-4">Motor (kW)</th>
-            <th class="px-5 py-4">Weight (kg)</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          <tr class="bg-white hover:bg-slate-50 transition"><td class="px-5 py-4 font-bold text-brand-blue font-display">HBG-400</td><td class="px-5 py-4">6–10</td><td class="px-5 py-4">400</td><td class="px-5 py-4">0.8</td><td class="px-5 py-4">100</td><td class="px-5 py-4">3.0</td><td class="px-5 py-4">110</td></tr>
-          <tr class="bg-slate-50 hover:bg-slate-100 transition"><td class="px-5 py-4 font-bold text-brand-blue font-display">HBG-800</td><td class="px-5 py-4">10–16</td><td class="px-5 py-4">800</td><td class="px-5 py-4">0.8</td><td class="px-5 py-4">150</td><td class="px-5 py-4">6.0</td><td class="px-5 py-4">175</td></tr>
-          <tr class="bg-white hover:bg-slate-50 transition"><td class="px-5 py-4 font-bold text-brand-blue font-display">HBG-1200</td><td class="px-5 py-4">16–25</td><td class="px-5 py-4">1200</td><td class="px-5 py-4">0.8</td><td class="px-5 py-4">250</td><td class="px-5 py-4">9.0</td><td class="px-5 py-4">240</td></tr>
-        </tbody>
-      </table>
+    <div class="text-center mb-12">
+      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Silent Scroll Technology</div>
+      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HW Series — Silent Scroll Base Units</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Scroll-element base units with class-leading efficiency and whisper-quiet operation. The workhorses behind multi-department hospital air networks.</p>
     </div>
 
-    <!-- HW Scroll -->
-    <h2 class="text-2xl font-extrabold text-brand-dark mb-2 font-display tracking-tight uppercase">HW Series Silent Scroll Base Units</h2>
-    <p class="text-slate-500 mb-8 text-sm">Pure scroll compression. No sliding piston wear, perfectly continuous fluid motion, exceptionally quiet operation.</p>
-    <div class="overflow-x-auto rounded-sm border border-slate-200 shadow-sm mb-16">
-      <table class="w-full text-sm text-left">
-        <thead class="bg-slate-900 text-white font-display uppercase tracking-wide text-xs">
-          <tr>
-            <th class="px-5 py-4">Model</th>
-            <th class="px-5 py-4">Chairs</th>
-            <th class="px-5 py-4">Flow (L/min)</th>
-            <th class="px-5 py-4">Motor (kW)</th>
-            <th class="px-5 py-4">Noise (dB)</th>
-            <th class="px-5 py-4">Weight (kg)</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          <tr class="bg-white hover:bg-slate-50 transition"><td class="px-5 py-4 font-bold text-brand-blue font-display">HW-600</td><td class="px-5 py-4">10–13</td><td class="px-5 py-4">600</td><td class="px-5 py-4">4.0</td><td class="px-5 py-4">≤60</td><td class="px-5 py-4">130</td></tr>
-          <tr class="bg-slate-50 hover:bg-slate-100 transition"><td class="px-5 py-4 font-bold text-brand-blue font-display">HW-1200</td><td class="px-5 py-4">20–25</td><td class="px-5 py-4">1200</td><td class="px-5 py-4">8.0</td><td class="px-5 py-4">≤62</td><td class="px-5 py-4">180</td></tr>
-          <tr class="bg-white hover:bg-slate-50 transition"><td class="px-5 py-4 font-bold text-brand-blue font-display">HW-2400</td><td class="px-5 py-4">40–50</td><td class="px-5 py-4">2400</td><td class="px-5 py-4">16.0</td><td class="px-5 py-4">≤65</td><td class="px-5 py-4">320</td></tr>
-          <tr class="bg-slate-50 hover:bg-slate-100 transition"><td class="px-5 py-4 font-bold text-brand-blue font-display">HW-3600</td><td class="px-5 py-4">60–80</td><td class="px-5 py-4">3600</td><td class="px-5 py-4">24.0</td><td class="px-5 py-4">≤68</td><td class="px-5 py-4">450</td></tr>
-        </tbody>
-      </table>
+    <!-- HW-600 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
+      <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
+        <img src="assets/images/products/hd/HW-600.jpg" alt="HW-600 silent scroll base unit for 10-13 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
+      </div>
+      <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HW-600</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 10–13 chairs · Silent scroll element</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>600 L/min</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>4.0 kW</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤60 dB</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Weight</span><strong>130 kg</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- HW-1200 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
+      <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
+        <img src="assets/images/products/hd/HW-1200.jpg" alt="HW-1200 silent scroll base unit for 20-25 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
+      </div>
+      <div class="bg-white p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HW-1200</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 20–25 chairs · Silent scroll element</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>1200 L/min</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>8.0 kW</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤62 dB</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Weight</span><strong>180 kg</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- HW-3600 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center">
+      <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
+        <img src="assets/images/products/hd/HW-3600.jpg" alt="HW-3600 flagship silent scroll base unit for 60-80 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
+      </div>
+      <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HW-3600</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 60–80 chairs · Silent scroll element</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>3600 L/min</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>24.0 kW</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤68 dB</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Weight</span><strong>450 kg</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HWG Series -->
+<section class="py-16 bg-brand-light">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Tank-Mounted Scroll</div>
+      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HWG Series — Tank Scroll Systems</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Scroll technology married to an integral storage tank — a self-contained air plant for wings, departments and satellite clinics that cannot spare a machine room.</p>
+    </div>
+
+    <!-- HWG-200 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
+      <div class="bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-8 h-72">
+        <img src="assets/images/products/hd/HWG-200-cutout.png" alt="HWG-200 tank mounted scroll air system for 4-6 chairs" class="max-h-52 w-auto object-contain drop-shadow-2xl"/>
+      </div>
+      <div class="bg-white p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-200</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 4–6 chairs · Integral storage tank</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>200 L/min</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>2.2 kW</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤60 dB</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Start-Stop</span><strong>Automatic</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- HWG-400 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
+      <div class="bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-8 h-72">
+        <img src="assets/images/products/hd/HWG-400-cutout.png" alt="HWG-400 tank mounted scroll air system for 8-10 chairs" class="max-h-52 w-auto object-contain drop-shadow-2xl"/>
+      </div>
+      <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-400</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 8–10 chairs · Integral storage tank</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>400 L/min</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>4.0 kW</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤62 dB</strong></div>
+          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Start-Stop</span><strong>Automatic</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- HWG-600 -->
+    <div class="grid lg:grid-cols-2 gap-6 items-center">
+      <div class="bg-gradient-to-br from-brand-blue to-brand-deep rounded-sm overflow-hidden flex items-center justify-center p-8 h-72">
+        <img src="assets/images/products/hd/HWG-600-cutout.png" alt="HWG-600 tank mounted scroll air system for 12-16 chairs" class="max-h-52 w-auto object-contain drop-shadow-2xl"/>
+      </div>
+      <div class="bg-white p-8 rounded-sm border border-slate-200">
+        <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-600</h3>
+        <div class="text-brand-sky text-sm font-semibold mb-3">For 12–16 chairs · Integral storage tank</div>
+        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>600 L/min</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>5.5 kW</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤62 dB</strong></div>
+          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Start-Stop</span><strong>Automatic</strong></div>
+        </div>
+        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EPC: Two Supplies, One Suction -->
+<section class="py-16 bg-gradient-to-br from-brand-blue to-brand-deep">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <div class="inline-block bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full mb-5 uppercase tracking-widest">Turnkey Medical Gas Engineering</div>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 font-display tracking-tight uppercase">Two Supplies, One Suction</h2>
+      <p class="text-blue-100 max-w-3xl mx-auto">A hospital breathing system is three networks engineered as one. Hongrun designs, supplies and commissions all of them — so air, oxygen and vacuum arrive at the bedhead from a single accountable partner.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      <div class="p-8 bg-white/10 border border-white/20 rounded-sm backdrop-blur">
+        <i class="fa-solid fa-wind text-sky-300 text-3xl mb-4"></i>
+        <h3 class="text-white font-display font-bold uppercase mb-3">Central Air Supply</h3>
+        <p class="text-blue-100 text-sm leading-relaxed">HBG / HW / HWG scroll plants with Class 0 oil-free output, desiccant drying and redundant duty/standby configuration for uninterrupted instrument air.</p>
+      </div>
+      <div class="p-8 bg-white/10 border border-white/20 rounded-sm backdrop-blur">
+        <i class="fa-solid fa-circle-dot text-sky-300 text-3xl mb-4"></i>
+        <h3 class="text-white font-display font-bold uppercase mb-3">Central Oxygen</h3>
+        <p class="text-blue-100 text-sm leading-relaxed">Medical oxygen manifolds, terminal units and pipeline distribution engineered to national medical gas standards — sized to your bed count and critical care profile.</p>
+      </div>
+      <div class="p-8 bg-white/10 border border-white/20 rounded-sm backdrop-blur">
+        <i class="fa-solid fa-syringe text-sky-300 text-3xl mb-4"></i>
+        <h3 class="text-white font-display font-bold uppercase mb-3">Vacuum Negative Pressure</h3>
+        <p class="text-blue-100 text-sm leading-relaxed">Central suction plants with bacterial filtration and compliant negative-pressure control — protecting patients, staff and isolation rooms alike.</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">Pipeline Layout &amp; Sizing</span>
+      <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">Alarm &amp; Monitoring Panels</span>
+      <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">Terminal Units</span>
+      <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">Commissioning &amp; Validation</span>
+      <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">Lifecycle Service</span>
+    </div>
+    <div class="max-w-4xl mx-auto mt-10 grid md:grid-cols-2 gap-4">
+      <div class="flex items-start gap-3 bg-white/10 border border-white/20 rounded-sm p-4">
+        <i class="fa-solid fa-shield-halved text-sky-300 text-xl mt-0.5"></i>
+        <div>
+          <h4 class="text-white font-display font-semibold uppercase text-sm">Single-Point Responsibility</h4>
+          <p class="text-blue-100 text-sm mt-1">One engineering contract for air, oxygen and vacuum — no interface disputes between separate subcontractors.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/10 border border-white/20 rounded-sm p-4">
+        <i class="fa-solid fa-gauge-high text-sky-300 text-xl mt-0.5"></i>
+        <div>
+          <h4 class="text-white font-display font-semibold uppercase text-sm">Central Monitoring</h4>
+          <p class="text-blue-100 text-sm mt-1">One control panel supervises all three networks with pressure, alarm and duty-cycling status at a glance.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/10 border border-white/20 rounded-sm p-4">
+        <i class="fa-solid fa-boxes-stacked text-sky-300 text-xl mt-0.5"></i>
+        <div>
+          <h4 class="text-white font-display font-semibold uppercase text-sm">Redundancy Built In</h4>
+          <p class="text-blue-100 text-sm mt-1">Duty/standby compressor pairs and vacuum pump pairs keep critical supplies online during maintenance.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 bg-white/10 border border-white/20 rounded-sm p-4">
+        <i class="fa-solid fa-clipboard-check text-sky-300 text-xl mt-0.5"></i>
+        <div>
+          <h4 class="text-white font-display font-semibold uppercase text-sm">Documented Compliance</h4>
+          <p class="text-blue-100 text-sm mt-1">Validation dossiers, material certificates and test reports handed over with the plant for your regulatory file.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Also Consider -->
+<section class="py-14 bg-white border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-xl font-extrabold text-brand-dark mb-8 font-display tracking-tight uppercase">Complete Your System</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="products-cleanair.html" class="group block p-6 bg-brand-light border border-slate-200 rounded-sm hover:border-brand-blue transition">
+        <i class="fa-solid fa-fill-drip text-brand-blue text-2xl mb-3"></i>
+        <h3 class="font-bold text-brand-dark font-display uppercase mb-2 group-hover:text-brand-blue transition">Clean Air &amp; Medical Gas</h3>
+        <p class="text-slate-500 text-sm">HYG / HVTG integrated generation, drying and 0.01μm filtration — dew point ≤ -40°C in a single certified package.</p>
+        <span class="text-brand-blue text-sm font-bold mt-3 inline-flex items-center gap-1">View Clean Air Systems <i class="fa-solid fa-chevron-right text-xs"></i></span>
+      </a>
+      <a href="products-hy.html" class="group block p-6 bg-brand-light border border-slate-200 rounded-sm hover:border-brand-blue transition">
+        <i class="fa-solid fa-tooth text-brand-blue text-2xl mb-3"></i>
+        <h3 class="font-bold text-brand-dark font-display uppercase mb-2 group-hover:text-brand-blue transition">HY Dental Compressors</h3>
+        <p class="text-slate-500 text-sm">Zero-oil, Class 0 certified dental compressors from HY-100 to HYT-500 for standalone and satellite clinic installations.</p>
+        <span class="text-brand-blue text-sm font-bold mt-3 inline-flex items-center gap-1">View HY Series <i class="fa-solid fa-chevron-right text-xs"></i></span>
+      </a>
+      <a href="products-hvs.html" class="group block p-6 bg-brand-light border border-slate-200 rounded-sm hover:border-brand-blue transition">
+        <i class="fa-solid fa-wind text-brand-blue text-2xl mb-3"></i>
+        <h3 class="font-bold text-brand-dark font-display uppercase mb-2 group-hover:text-brand-blue transition">HVS Suction Systems</h3>
+        <p class="text-slate-500 text-sm">Central and chairside suction to match your air plant — complete the hospital network with vacuum negative pressure.</p>
+        <span class="text-brand-blue text-sm font-bold mt-3 inline-flex items-center gap-1">View HVS Series <i class="fa-solid fa-chevron-right text-xs"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-extrabold text-brand-dark mb-4 font-display tracking-tight uppercase">Plan Your Hospital Air Plant</h2>
+    <p class="text-slate-500 mb-8 text-lg">Send us your floor plan and bed count. Our engineers will return a full equipment schedule, layout drawing and budget within five working days.</p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="contact.html" class="bg-brand-blue text-white hover:bg-brand-deep px-10 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center justify-center gap-2">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="solutions.html" class="border border-brand-blue text-brand-blue hover:bg-brand-light px-10 py-4 rounded-sm font-semibold text-base transition inline-flex items-center justify-center gap-2">View Solutions <i class="fa-solid fa-building"></i></a>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-slate-900 text-slate-400 pt-16 pb-8">
+<footer class="bg-gradient-to-br from-brand-blue to-brand-deep text-blue-100 pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <div class="md:col-span-2">
-        <img src="assets/images/logo_transparent.png" alt="Hongrun Technology" class="h-12 mb-4 brightness-0 invert opacity-80"/>
-        <p class="text-sm leading-relaxed max-w-sm">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
+        <img src="assets/images/logo_transparent.png" alt="Hongrun Technology" class="h-12 mb-4 brightness-0 invert opacity-90"/>
+        <p class="text-sm leading-relaxed max-w-sm text-blue-200">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
         <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="contact.html" class="text-slate-500 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+          <a href="https://www.linkedin.com" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+          <a href="contact.html" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
         </div>
       </div>
       <div>
@@ -155,9 +401,12 @@ tailwind.config = {
         </ul>
       </div>
     </div>
-    <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-xs text-slate-600">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-600">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II Medical Device</p>
+    <div class="border-t border-blue-400/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-blue-300">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
+      <div class="flex items-center gap-4">
+        <p class="text-xs text-blue-300">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II</p>
+        <img src="assets/images/banners/logo_cn_orange.png" alt="Hongrun China Logo" class="h-8 w-auto opacity-90"/>
+      </div>
     </div>
   </div>
 </footer>
