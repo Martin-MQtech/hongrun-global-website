@@ -50,11 +50,11 @@ tailwind.config = {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
     <a href="index.html"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="products.html">Products</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="solutions.html">Solutions</a>
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html#certifications">Resources</a>
-      <a class="bg-slate-900 hover:bg-brand-blue text-white px-6 py-2.5 rounded-sm font-semibold text-sm transition" href="contact.html">Request a Quote</a>
+      <a class="inline-flex items-center gap-1 text-brand-blue hover:text-brand-sky transition font-display text-base font-semibold tracking-wide uppercase" href="about.html#certifications"><i class="fa-solid fa-newspaper text-sm"></i> News</a>
+      <a class="border border-slate-400 text-slate-600 hover:border-brand-blue hover:text-brand-blue px-4 py-2 rounded-sm font-medium text-xs transition" href="contact.html">Request a Quote</a>
     </div>
   </div>
 </nav>
@@ -84,66 +84,84 @@ tailwind.config = {
 <div class="sticky top-20 z-40 bg-white border-b border-slate-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex overflow-x-auto gap-2 py-3 no-scrollbar justify-center">
-      <a href="#section-hy" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HY Series Compressors</a>
-      <a href="#section-hvs" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">HVS Suction Systems</a>
-      <a href="#section-cleanair" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Medical Clean Air Source</a>
-      <a href="#section-hospital" class="whitespace-nowrap px-5 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Hospital &amp; Scroll Systems</a>
+      <a href="#section-hy" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Piston Compressors</a>
+      <a href="#section-hvs" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Dental Vacuum</a>
+      <a href="#section-cleanair" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Clean Air Source</a>
+      <a href="#section-hospital" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Hospital &amp; Scroll</a>
+      <a href="#section-water" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Water Treatment</a>
+      <a href="#section-core" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-medium tracking-wide uppercase transition">Core Components</a>
     </div>
   </div>
 </div>
 
-<!-- 4 Family Cards: centered grid, name on top + HD image below, whole card clickable -->
+<!-- 6 Family Cards: centered grid, name on top + HD image below, whole card clickable -->
 <section class="py-6 bg-brand-light border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card 1: HY Series Compressors -->
-      <a href="products-hy.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
-        <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Oil-Free Compressors</div>
-          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY Series Compressors</h3>
-          <p class="text-slate-500 text-xs">1–10 chairs &middot; ≤60 dB &middot; Class 0</p>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+      <!-- Card 1: Piston Compressors -->
+      <a href="products-hy.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div class="p-3 pb-2 text-center">
+          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Piston Compressors</h3>
+          <p class="text-slate-400 text-[10px]">1–10 chairs &middot; ≤60 dB</p>
         </div>
-        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/intl/HYT-500.jpg" alt="HY Series Oil-Free Compressors" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
-        </div>
-      </a>
-      <!-- Card 2: HVS Suction Systems -->
-      <a href="products-hvs.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
-        <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Electric Suction</div>
-          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS Suction Systems</h3>
-          <p class="text-slate-500 text-xs">1–50 chairs &middot; -70 kPa &middot; HEPA</p>
-        </div>
-        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/intl/HVS-5-7-10.jpg" alt="HVS Suction Systems" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
+          <img src="assets/images/products/intl/HYT-500.jpg" alt="Piston Oil-Free Compressors" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
       </a>
-      <!-- Card 3: Medical Clean Air Source -->
-      <a href="products-cleanair.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
-        <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Clean Air Source</div>
-          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">Medical Clean Air Source</h3>
-          <p class="text-slate-500 text-xs">Dew point ≤ -40&deg;C &middot; 0.01&mu;m</p>
+      <!-- Card 2: Dental Vacuum -->
+      <a href="products-hvs.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div class="p-3 pb-2 text-center">
+          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Dental Vacuum</h3>
+          <p class="text-slate-400 text-[10px]">1–50 chairs &middot; HEPA</p>
         </div>
-        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/intl/HVTG-900.jpg" alt="Medical Clean Air Source" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
+          <img src="assets/images/products/intl/HVS-5-7-10.jpg" alt="Dental Vacuum Systems" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
       </a>
-      <!-- Card 4: Hospital & Scroll Systems -->
-      <a href="products-hospital.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
-        <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Hospital Medical Systems</div>
-          <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">Hospital &amp; Scroll Systems</h3>
-          <p class="text-slate-500 text-xs">Class II &middot; Central gas &middot; Scroll</p>
+      <!-- Card 3: Clean Air Source -->
+      <a href="products-cleanair.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div class="p-3 pb-2 text-center">
+          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Clean Air Source</h3>
+          <p class="text-slate-400 text-[10px]">Dew point ≤ -40&deg;C</p>
         </div>
-        <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/intl/HBG-1200.jpg" alt="Hospital and Scroll Systems" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
+          <img src="assets/images/products/intl/HVTG-900.jpg" alt="Clean Compressed Air Source" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
+      <!-- Card 4: Hospital & Scroll -->
+      <a href="products-hospital.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div class="p-3 pb-2 text-center">
+          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Hospital &amp; Scroll</h3>
+          <p class="text-slate-400 text-[10px]">Class II &middot; Central gas</p>
+        </div>
+        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
+          <img src="assets/images/products/intl/HBG-1200.jpg" alt="Hospital and Scroll Systems" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
+      <!-- Card 5: Water Treatment -->
+      <a href="solutions.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div class="p-3 pb-2 text-center">
+          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Water Treatment</h3>
+          <p class="text-slate-400 text-[10px]">Ozone + UV &middot; Sterile</p>
+        </div>
+        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
+          <img src="assets/images/products/intl/product-water.jpg" alt="Purified Water Treatment System" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
+        </div>
+      </a>
+      <!-- Card 6: Core Components -->
+      <a href="products.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+        <div class="p-3 pb-2 text-center">
+          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Core Components</h3>
+          <p class="text-slate-400 text-[10px]">Pumps &middot; Dryers &middot; Spares</p>
+        </div>
+        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
+          <img src="assets/images/products/intl/product-core.jpg" alt="Core Components and Spare Parts" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
         </div>
       </a>
     </div>
-    <div class="text-center mt-14">
+    <div class="text-center mt-10">
       <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Product Families</div>
-      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Four Systems. One Standard of Purity.</h2>
+      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Six Systems. One Standard of Purity.</h2>
       <p class="text-slate-500 max-w-2xl mx-auto">Choose a family to explore the full product line — every system engineered around zero-oil purity and clinical safety.</p>
     </div>
   </div>
@@ -456,7 +474,7 @@ tailwind.config = {
           <img src="assets/images/logo_transparent.png" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95"/>
           <img src="assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-white/90">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-white/90">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
         <div class="flex gap-4 mt-6">
           <a href="https://www.linkedin.com" class="text-white/70 hover:text-sky-300 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
           <a href="contact.html" class="text-white/70 hover:text-sky-300 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
