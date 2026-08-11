@@ -37,26 +37,28 @@ tailwind.config = {
   </div>
 </nav>
 
-<!-- Hero: industrial banner + deep blue overlay -->
-<section class="relative pt-20 overflow-hidden bg-brand-deep">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/banner1.jpg')"></div>
-  <div class="absolute inset-0 bg-gradient-to-br from-brand-blue/90 to-brand-deep/80"></div>
-  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-16">
-    <div class="text-sm text-blue-200 mb-6">
-      <a href="index.html" class="hover:text-white transition">Home</a> <span class="mx-2">/</span>
-      <a href="products.html" class="hover:text-white transition">Products</a> <span class="mx-2">/</span>
-      <span class="text-sky-200">Hospital Systems</span>
-    </div>
-    <div class="max-w-3xl">
-      <div class="inline-block bg-white/10 backdrop-blur border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full mb-5 uppercase tracking-widest">NMPA Class II Medical Device Licensed</div>
-      <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-6 font-display tracking-tight leading-tight">Hospital-Grade<br/><span class="text-sky-300">Medical Systems</span></h1>
-      <p class="text-blue-100 text-lg mb-8 leading-relaxed">Central compressed air engineered for hospitals — carrying a Class II Medical Device license, high-capacity scroll elements and central monitoring that keeps every department supplied, every shift.</p>
-      <div class="flex flex-wrap gap-2 mb-8">
-        <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">NMPA Class II Medical Device</span>
-        <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">High Capacity Scroll</span>
-        <span class="bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full">Central Monitoring</span>
+<!-- ===================== PAGE HERO (V3.0 LOCKED) ===================== -->
+<section class="relative pt-20 overflow-hidden bg-slate-900">
+  <div class="relative h-[380px] lg:h-[440px]">
+    <!-- Background: sharp banner image, NO fog overlay -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/en_b2.jpg')"></div>
+    <!-- Very subtle dark gradient ONLY at bottom for readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
+      <!-- GLASS PANEL: compact, semi-transparent -->
+      <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
+        <p class="text-white/70 text-[10px] uppercase tracking-widest mb-3"><a href="index.html" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <a href="products.html" class="hover:text-sky-300 transition">Products</a> <span class="mx-1">/</span> <span class="text-sky-300">Hospital Systems</span></p>
+        <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap mb-4">NMPA Class II Medical Device Licensed</div>
+        <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Hospital-Grade<br/><span class="text-sky-300">Medical Systems</span></h1>
+        <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Central compressed air engineered for hospitals — carrying a Class II Medical Device license, high-capacity scroll elements and central monitoring that keeps every department supplied, every shift.</p>
+        <div class="flex flex-wrap gap-2 mb-5">
+          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap">NMPA Class II Medical Device</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap">High Capacity Scroll</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap">Central Monitoring</span>
+        </div>
+        <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="solutions.html">View Solutions <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <a href="solutions.html" class="bg-white text-brand-deep hover:bg-sky-100 px-8 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center gap-2">View Solutions <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -81,7 +83,7 @@ tailwind.config = {
     <!-- HBG-400 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
-        <img src="assets/images/products/hd/HBG-400.jpg" alt="HBG-400 Class II medical central air compressor" class="max-h-52 w-auto object-contain mix-blend-multiply"/>
+        <img src="assets/images/products/hd/HBG-400.jpg" alt="HBG-400 Class II medical central air compressor" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-400</h3>
@@ -99,7 +101,7 @@ tailwind.config = {
     <!-- HBG-800 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
-        <img src="assets/images/products/hd/HBG-800.jpg" alt="HBG-800 Class II medical central air compressor" class="max-h-52 w-auto object-contain mix-blend-multiply"/>
+        <img src="assets/images/products/hd/HBG-800.jpg" alt="HBG-800 Class II medical central air compressor" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-800</h3>
@@ -117,7 +119,7 @@ tailwind.config = {
     <!-- HBG-1200 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
-        <img src="assets/images/products/hd/HBG-1200.jpg" alt="HBG-1200 flagship Class II medical central air system" class="max-h-52 w-auto object-contain mix-blend-multiply"/>
+        <img src="assets/images/products/hd/HBG-1200.jpg" alt="HBG-1200 flagship Class II medical central air system" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-1200</h3>
@@ -211,7 +213,7 @@ tailwind.config = {
     <!-- HWG-200 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
-        <img src="assets/images/products/hd/HWG-200.jpg" alt="HWG-200 tank mounted scroll air system for 4-6 chairs" class="max-h-52 w-auto object-contain mix-blend-multiply"/>
+        <img src="assets/images/products/hd/HWG-200.jpg" alt="HWG-200 tank mounted scroll air system for 4-6 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-200</h3>
@@ -229,7 +231,7 @@ tailwind.config = {
     <!-- HWG-400 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
-        <img src="assets/images/products/hd/HWG-400.jpg" alt="HWG-400 tank mounted scroll air system for 8-10 chairs" class="max-h-52 w-auto object-contain mix-blend-multiply"/>
+        <img src="assets/images/products/hd/HWG-400.jpg" alt="HWG-400 tank mounted scroll air system for 8-10 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-400</h3>
@@ -247,7 +249,7 @@ tailwind.config = {
     <!-- HWG-600 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden flex items-center justify-center p-6 h-72">
-        <img src="assets/images/products/hd/HWG-600.jpg" alt="HWG-600 tank mounted scroll air system for 12-16 chairs" class="max-h-52 w-auto object-contain mix-blend-multiply"/>
+        <img src="assets/images/products/hd/HWG-600.jpg" alt="HWG-600 tank mounted scroll air system for 12-16 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply"/>
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-600</h3>
@@ -362,51 +364,51 @@ tailwind.config = {
     <h2 class="text-3xl font-extrabold text-brand-dark mb-4 font-display tracking-tight uppercase">Plan Your Hospital Air Plant</h2>
     <p class="text-slate-500 mb-8 text-lg">Send us your floor plan and bed count. Our engineers will return a full equipment schedule, layout drawing and budget within five working days.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="contact.html" class="bg-brand-blue text-white hover:bg-brand-deep px-10 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center justify-center gap-2">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contact.html" class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-10 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center justify-center gap-2">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
       <a href="solutions.html" class="border border-brand-blue text-brand-blue hover:bg-brand-light px-10 py-4 rounded-sm font-semibold text-base transition inline-flex items-center justify-center gap-2">View Solutions <i class="fa-solid fa-building"></i></a>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-gradient-to-br from-brand-blue to-brand-deep text-blue-100 pt-16 pb-8">
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-gradient-to-br from-brand-blue to-brand-deep text-white/80 pt-16 pb-8">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <div class="md:col-span-2">
-        <img src="assets/images/logo_transparent.png" alt="Hongrun Technology" class="h-12 mb-4 brightness-0 invert opacity-90"/>
-        <p class="text-sm leading-relaxed max-w-sm text-blue-200">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
+        <div class="flex items-end gap-5 mb-4">
+          <img src="assets/images/logo_transparent.png" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95"/>
+          <img src="assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
+        </div>
+        <p class="text-sm leading-relaxed max-w-sm text-white/90">30 years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air and suction systems.</p>
         <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="contact.html" class="text-blue-200 hover:text-white transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
+          <a href="https://www.linkedin.com" class="text-white/70 hover:text-sky-300 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+          <a href="contact.html" class="text-white/70 hover:text-sky-300 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
         </div>
       </div>
       <div>
-        <h4 class="text-white font-display font-semibold uppercase tracking-wide mb-4">Products</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:text-white transition" href="products-hy.html">Dental Compressors (HY)</a></li>
-          <li><a class="hover:text-white transition" href="products-hvs.html">Dental Suction (HVS)</a></li>
-          <li><a class="hover:text-white transition" href="products-hospital.html">Hospital Systems (HBG/HW)</a></li>
-          <li><a class="hover:text-white transition" href="products-cleanair.html">Clean Air &amp; Medical Gas</a></li>
-          <li><a class="hover:text-white transition" href="products.html">Full Catalog</a></li>
+        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hy.html">Dental Compressors (HY)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hvs.html">Dental Suction (HVS)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hospital.html">Hospital Systems (HBG/HW)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-cleanair.html">Clean Air &amp; Medical Gas</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products.html">Full Catalog</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="text-white font-display font-semibold uppercase tracking-wide mb-4">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a class="hover:text-white transition" href="about.html">Our 30-Year Story</a></li>
-          <li><a class="hover:text-white transition" href="about.html#certifications">Certifications &amp; Class 0</a></li>
-          <li><a class="hover:text-white transition" href="solutions.html">Solutions</a></li>
-          <li><a class="hover:text-white transition" href="contact.html#dealership">Become a Distributor</a></li>
-          <li><a class="hover:text-white transition" href="contact.html">Contact Us</a></li>
+        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Company</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="about.html">Our 30-Year Story</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="about.html#certifications">Certifications &amp; Class 0</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="solutions.html">Solutions</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="contact.html#dealership">Become a Distributor</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="contact.html">Contact Us</a></li>
         </ul>
       </div>
     </div>
     <div class="border-t border-blue-400/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p class="text-xs text-blue-300">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <div class="flex items-center gap-4">
-        <p class="text-xs text-blue-300">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II</p>
-        <img src="assets/images/banners/logo_cn_orange.png" alt="Hongrun China Logo" class="h-8 w-auto opacity-90"/>
-      </div>
+      <p class="text-xs text-white/50">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
+      <p class="text-xs text-white/50">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II</p>
     </div>
   </div>
 </footer>
