@@ -512,10 +512,12 @@ tailwind.config = {
       <div>
         <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
         <ul class="space-y-3 text-sm">
-          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hy.html">Dental Compressors (HY)</a></li>
-          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hvs.html">Dental Suction (HVS)</a></li>
-          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hospital.html">Hospital Systems (HBG/HW)</a></li>
-          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-cleanair.html">Clean Air &amp; Medical Gas</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hy.html">Piston Oil-Free Compressors (HY)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hospital.html">Scroll Compressors &amp; Hospital (HW/HBG)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-hvs.html">Dental Vacuum Systems (HVS)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-cleanair.html">Clean Compressed Air Source (HYG/HVTG)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-water.html">Purified Water Systems (HRC)</a></li>
+          <li><a class="text-white/75 hover:text-sky-300 transition" href="products-core.html">Core Components &amp; Spares</a></li>
           <li><a class="text-white/75 hover:text-sky-300 transition" href="products.html">Full Catalog</a></li>
         </ul>
       </div>
@@ -537,5 +539,30 @@ tailwind.config = {
   </div>
 </footer>
 <script src="assets/js/lightbox.js"></script>
+
+<script>
+// Products Hero Carousel Logic (2-Slide)
+let currentProdSlide = 0;
+const prodSlides = document.querySelectorAll('.hero-slide');
+const prodDots = document.querySelectorAll('.prod-hero-dot');
+
+function slideProductsTo(n) {
+  if (!prodSlides.length) return;
+  prodSlides[currentProdSlide].classList.remove('active');
+  if (prodDots[currentProdSlide]) {
+    prodDots[currentProdSlide].classList.remove('bg-white');
+    prodDots[currentProdSlide].classList.add('bg-white/30');
+  }
+  currentProdSlide = n;
+  prodSlides[currentProdSlide].classList.add('active');
+  if (prodDots[currentProdSlide]) {
+    prodDots[currentProdSlide].classList.add('bg-white');
+    prodDots[currentProdSlide].classList.remove('bg-white/30');
+  }
+}
+setInterval(() => {
+  slideProductsTo((currentProdSlide + 1) % 2);
+}, 8000);
+</script>
 </body>
 </html>
