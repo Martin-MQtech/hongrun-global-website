@@ -212,19 +212,65 @@ tailwind.config = {
       </div>
     </div>
 
-    <!-- System Diagrams (Two Supplies, One Suction) -->
-    <div class="bg-white p-8 rounded-xl border border-slate-200 shadow-xl">
-      <div class="text-center mb-8">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-2 uppercase tracking-widest">Engineering Topology</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark font-display tracking-tight">"Two Supplies, One Suction" System Diagram</h3>
-        <p class="text-slate-500 text-xs mt-1">Clean Air Supply + Pure Water Loop + High-Vacuum Suction Extraction</p>
+    <!-- System Diagrams: Modern Digital Clinic & Smart IoT Telemetry -->
+    <div class="bg-white p-8 lg:p-10 rounded-2xl border border-slate-200 shadow-2xl">
+      <div class="text-center mb-10">
+        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-2 uppercase tracking-widest">Digital Smart Topology</div>
+        <h3 class="text-2xl lg:text-3xl font-extrabold text-brand-dark font-display tracking-tight">Integrated Pipeline Architecture &amp; IoT Monitoring</h3>
+        <p class="text-slate-500 text-sm max-w-2xl mx-auto mt-2">Clean Class 0 Compressed Air Supply + Purified Water Loop + High-Vacuum Aerosol Extraction with Real-Time Smart Telemetry</p>
       </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="border border-slate-200 rounded-lg p-3 bg-brand-light flex items-center justify-center">
-          <img data-zoom data-hd="assets/images/solutions/diagram-dental-flow.jpg" src="assets/images/solutions/diagram-dental-flow.jpg" alt="Dental Operatory Flow Diagram" class="w-full h-auto object-contain mix-blend-multiply"/>
+      
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <!-- Digital Clinical Operatory -->
+        <div class="rounded-xl border border-slate-200 overflow-hidden shadow-lg group bg-slate-900 flex flex-col">
+          <div class="h-64 overflow-hidden relative">
+            <img data-zoom data-hd="assets/images/solutions/digital-dental-operatory.jpg" src="assets/images/solutions/digital-dental-operatory.jpg" alt="Digital Dental Operatory System Integration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-bold text-sky-300 uppercase tracking-wider">Clinical Space Integration</span>
+          </div>
+          <div class="p-6 bg-white flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-lg font-bold text-brand-dark font-display mb-2">Sterile Operatory "Two Supplies, One Suction"</h4>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">Under-floor stainless ducting connects chairside delivery units, air-driven surgical handpieces, and ultra-high suction nozzles with zero cross-contamination.</p>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-brand-blue">
+              <i class="fa-solid fa-circle-check text-emerald-500"></i> ISO 8573-1 Class 0 Air &middot; 0.01 &mu;m HEPA Filtered
+            </div>
+          </div>
         </div>
-        <div class="border border-slate-200 rounded-lg p-3 bg-brand-light flex items-center justify-center">
-          <img data-zoom data-hd="assets/images/solutions/diagram-hospital-system.jpg" src="assets/images/solutions/diagram-hospital-system.jpg" alt="Hospital Central System Architecture" class="w-full h-auto object-contain mix-blend-multiply"/>
+
+        <!-- Smart IoT Telemetry Dashboard -->
+        <div class="rounded-xl border border-slate-200 overflow-hidden shadow-lg group bg-slate-900 flex flex-col">
+          <div class="h-64 overflow-hidden relative">
+            <img data-zoom data-hd="assets/images/solutions/smart-iot-telemetry.jpg" src="assets/images/solutions/smart-iot-telemetry.jpg" alt="Smart IoT Telemetry & Central Monitoring System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-4 text-xs font-bold text-sky-300 uppercase tracking-wider">24/7 Real-Time Telemetry</span>
+          </div>
+          <div class="p-6 bg-white flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-lg font-bold text-brand-dark font-display mb-2">Intelligent Gas &amp; Pressure Telemetry</h4>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">Cloud-connected central gateway constantly tracks pipeline dynamic pressure, temperature, dew point status, and maintenance alerts across all operational chairs.</p>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-brand-blue">
+              <i class="fa-solid fa-microchip text-brand-sky"></i> Predictive Maintenance &middot; Automated VFD Modulation
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature highlight row -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-slate-100 text-center">
+        <div class="p-3 bg-brand-light rounded-lg border border-slate-200">
+          <span class="block text-xs font-bold text-brand-dark font-display">Zero-Oil Clean Supply</span>
+          <span class="text-[11px] text-slate-500">Pure compressed air safe for precision handpieces</span>
+        </div>
+        <div class="p-3 bg-brand-light rounded-lg border border-slate-200">
+          <span class="block text-xs font-bold text-brand-dark font-display">85%+ Aerosol Containment</span>
+          <span class="text-[11px] text-slate-500">High-vacuum negative pressure prevents pathogen spread</span>
+        </div>
+        <div class="p-3 bg-brand-light rounded-lg border border-slate-200">
+          <span class="block text-xs font-bold text-brand-dark font-display">Sterile Pure Water Loop</span>
+          <span class="text-[11px] text-slate-500">Ozone + UV dual barrier against biofilm formation</span>
         </div>
       </div>
     </div>
