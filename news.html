@@ -24,12 +24,11 @@ tailwind.config = {
 }
 </script>
 <style>
-.news-card { transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
-.news-card:hover { transform: translateY(-5px); box-shadow: 0 24px 48px -12px rgba(15,76,129,0.22); }
+.blog-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -8px rgba(15,76,129,0.18); }
 .tag-badge { transition: all 0.2s ease; }
 .tag-badge:hover { transform: translateY(-1px); }
-.photo-thumb { transition: all 0.3s ease; }
-.photo-thumb:hover { transform: scale(1.04); filter: brightness(1.08); }
+.filter-btn.active { background-color: #0F4C81; color: white; border-color: #0F4C81; }
 </style>
 <script type="application/ld+json">
 {
@@ -62,7 +61,6 @@ tailwind.config = {
 
 <!-- High-Tech Advanced Industrial Manufacturing Hero Banner (Sleek Compact Height & Building-Aligned View) -->
 <section class="relative pt-20 overflow-hidden bg-slate-950">
-  <!-- Compact Sleek Banner Height (Reduced empty sky) -->
   <div class="relative h-[320px] sm:h-[350px] lg:h-[370px]">
     <!-- High-Definition Industrial Scene with background-position shifted down to bring the building top right to the banner upper edge -->
     <div class="absolute inset-0 bg-cover" style="background-image:url('assets/images/banners/contact_hero_megafactory.jpg'); background-position: center 72%;"></div>
@@ -103,297 +101,271 @@ tailwind.config = {
     </div>
   </div>
 </section>
-  </div>
-</section>
 
-<!-- Keyword Pool & Topic Cluster Bar (Sorted Chronologically) -->
-<section id="keyword-pool" class="py-6 bg-slate-900 border-y border-slate-800 text-white sticky top-20 z-30 shadow-md">
+<!-- Keyword Pool & Topic Cluster Bar -->
+<section id="keyword-pool" class="py-5 bg-slate-900 border-y border-slate-800 text-white sticky top-20 z-30 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
       <div class="flex items-center gap-2 text-xs font-bold text-brand-sky uppercase tracking-wider shrink-0">
         <i class="fa-solid fa-tags text-brand-sky"></i>
-        <span>Engineering Keyword Pool:</span>
+        <span>Topic Keyword Pool:</span>
       </div>
-      <div class="flex flex-wrap items-center gap-2 text-xs">
-        <a href="#article-11" class="tag-badge bg-white/10 hover:bg-brand-accent border border-white/15 px-3 py-1 rounded-full transition text-slate-200 hover:text-white font-semibold">#15 Dental Chairs Sizing (Latest)</a>
-        <a href="#article-8" class="tag-badge bg-white/10 hover:bg-teal-600 border border-white/15 px-3 py-1 rounded-full transition text-slate-200 hover:text-white">#Beijing Quality Tour</a>
-        <a href="#article-10" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-3 py-1 rounded-full transition text-slate-200 hover:text-white">#Dental South China Expo</a>
-        <a href="#article-9" class="tag-badge bg-white/10 hover:bg-blue-600 border border-white/15 px-3 py-1 rounded-full transition text-slate-200 hover:text-white">#Jinan Medical Hub</a>
-        <a href="products-hy.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-3 py-1 rounded-full hover:bg-brand-sky hover:text-white transition">#ISO 8573-1 Class 0</a>
-        <a href="products-hospital.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-3 py-1 rounded-full hover:bg-brand-sky hover:text-white transition">#NMPA Class II Medical</a>
-        <a href="products-hvs.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-3 py-1 rounded-full hover:bg-brand-sky hover:text-white transition">#High-Vacuum Suction</a>
-        <a href="products-water.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-3 py-1 rounded-full hover:bg-brand-sky hover:text-white transition">#CSSD Purified Water</a>
+      <div class="flex flex-wrap items-center gap-1.5 text-xs">
+        <a href="#article-11" class="tag-badge bg-white/10 hover:bg-brand-accent border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#15 Dental Chairs Sizing</a>
+        <a href="#article-8" class="tag-badge bg-white/10 hover:bg-teal-600 border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Beijing Quality Tour</a>
+        <a href="#article-10" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Dental South China Expo</a>
+        <a href="#article-9" class="tag-badge bg-white/10 hover:bg-blue-600 border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Jinan Medical Hub</a>
+        <a href="products-hy.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#ISO 8573-1 Class 0</a>
+        <a href="products-hospital.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#NMPA Class II</a>
+        <a href="products-hvs.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#Dental Suction</a>
+        <a href="products-water.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#CSSD Pure Water</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 4 Official News Articles (Strict Reverse Chronological Order: 2026-08 -> 2025-10 -> 2025-03 -> 2025-02) -->
-<section id="articles" class="py-20 bg-brand-light">
+<!-- ==========================================
+     SCALABLE BLOG & ARTICLES HUB (Compact 3-Column Magazine Grid)
+     Designed to cleanly accommodate 9-15+ articles per page
+========================================== -->
+<section id="articles" class="py-14 bg-brand-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-8">
+    
+    <!-- Filter Tabs & Header Bar -->
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10 pb-4 border-b border-slate-200">
+      <div>
+        <h2 class="text-2xl font-extrabold text-brand-dark font-display tracking-tight">Articles &amp; Insights Hub</h2>
+        <p class="text-xs text-slate-500 mt-1">Explore engineering whitepapers, international trade expo reports, and quality tour chronicles.</p>
+      </div>
 
-      <!-- ==========================================
-           1. LATEST ARTICLE (ID 11): 2026-08-22 (15 Dental Chairs Sizing Guide)
-      ========================================== -->
-      <article id="article-11" class="news-card bg-white rounded-2xl border-2 border-brand-accent/40 shadow-xl overflow-hidden flex flex-col justify-between relative">
-        <div class="absolute top-0 right-0 bg-brand-accent text-white text-[10px] font-black px-3 py-1 rounded-bl-xl uppercase tracking-widest z-20">
-          Latest Release
-        </div>
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap items-center gap-2">
+        <button class="filter-btn active text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 transition">All Articles (4)</button>
+        <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Engineering Whitepapers</button>
+        <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Expos &amp; Events</button>
+        <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Quality Tour</button>
+      </div>
+    </div>
+
+    <!-- Compact 3-Column Blog Grid (Lightweight, High Information Density) -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- ==================== Article 1 (ID 11): 15 Dental Chairs Sizing Guide ==================== -->
+      <article id="article-11" class="blog-card bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between group">
         <div>
-          <!-- Real Main Cover Photo: Actual 15 Dental Chairs Clinical Facility -->
-          <div class="h-64 bg-slate-900 relative overflow-hidden group cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_11_15chairs_1.jpg" src="assets/images/news/news_11_15chairs_1.jpg" alt="15 Dental Chairs Engineering Sizing Real Installation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-brand-accent text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wider">
-              Engineering Whitepaper · August 2026
+          <!-- Clean 16:10 Aspect Thumbnail -->
+          <div class="h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
+            <img data-zoom data-hd="assets/images/news/news_11_15chairs_1.jpg" src="assets/images/news/news_11_15chairs_1.jpg" alt="15 Dental Chairs Engineering Sizing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-brand-accent text-white text-[10px] font-bold px-2.5 py-0.5 rounded shadow uppercase tracking-wider">
+              Engineering Sizing
             </div>
-            <div class="absolute bottom-3 right-4 text-white/90 text-xs font-semibold flex items-center gap-1.5 backdrop-blur-sm bg-black/40 px-2.5 py-1 rounded-lg">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> View Real Facility Photo
-            </div>
+            <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
+              <i class="fa-solid fa-camera"></i> 4 Photos
+            </span>
           </div>
 
-          <div class="p-6 lg:p-8">
-            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
-              <span class="text-brand-accent font-bold"><i class="fa-regular fa-calendar-check text-brand-accent"></i> August 22, 2026</span>
-              <span>•</span>
-              <span><i class="fa-solid fa-gear text-brand-accent"></i> Clinical Engineering &amp; Sizing</span>
+          <div class="p-5">
+            <!-- Date & Reading Info -->
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+              <span class="text-brand-accent font-semibold"><i class="fa-regular fa-calendar-check"></i> Aug 22, 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 4 min read</span>
             </div>
 
-            <h2 class="text-xl lg:text-2xl font-extrabold text-brand-dark font-display tracking-tight mb-3 hover:text-brand-accent transition">
-              Dental Operatory Equipment: Engineering Selection Guide for 15 Dental Chairs
-            </h2>
+            <!-- Title -->
+            <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-accent transition line-clamp-2">
+              Dental Operatory Equipment: Selection Reference for 15 Dental Chairs
+            </h3>
 
-            <p class="text-xs lg:text-sm text-slate-600 leading-relaxed mb-5">
-              Designing air, suction, and purified water infrastructure for a 15-chair stomatology department requires strict simultaneous coefficient calculations (k=0.70). This whitepaper details the recommended configuration: a dual-redundant HYT-500 air compressor (1,350 L/min displacement), an HVS-1200 central suction system with dual separator, and an HRC-300 RO pure water loop.
+            <!-- 2-line Clean Excerpt -->
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+              Planning pneumatic infrastructure for a 15-chair stomatology clinic: simultaneous coefficient calculations (k=0.70), HYT-500 compressor sizing, and vacuum suction loop pairing.
             </p>
 
-            <!-- Real On-site Photo Gallery Strip -->
-            <div class="mb-5 bg-slate-50 p-3 rounded-xl border border-slate-100">
-              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-2">Clinical Installation Real Photos (Click to Enlarge):</span>
-              <div class="grid grid-cols-3 gap-2">
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_11_15chairs_2.jpg" src="assets/images/news/news_11_15chairs_2.jpg" alt="15 Chairs Operatory Setup" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_11_15chairs_3.jpg" src="assets/images/news/news_11_15chairs_3.jpg" alt="Piping & Valve Skid" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_11_15chairs_4.jpg" src="assets/images/news/news_11_15chairs_4.jpg" alt="Clean Plant Room" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tags & Interlinks -->
-            <div class="flex flex-wrap gap-1.5 border-t border-slate-100 pt-3">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2.5 py-0.5 rounded">Engineering Sizing</span>
-              <a href="products-hy.html" class="text-[10px] bg-brand-accent/10 text-brand-accent font-bold px-2.5 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYT Dual Pump Skids</a>
-              <a href="products-water.html" class="text-[10px] bg-brand-accent/10 text-brand-accent font-bold px-2.5 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HRC-300 Water System</a>
+            <!-- Topic Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+              <a href="products-hy.html" class="text-[10px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYT Dual Pump</a>
+              <a href="products-water.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">HRC Water</a>
             </div>
           </div>
         </div>
 
-        <div class="p-6 lg:p-8 pt-0 flex items-center justify-between border-t border-slate-100">
-          <span class="text-xs text-slate-400">Related: <a href="solutions.html" class="text-brand-blue hover:underline">Clinic Solutions</a></span>
-          <a href="contact.html" class="text-xs font-bold text-brand-accent hover:text-brand-deep inline-flex items-center gap-1">Request Sizing Consultation <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <a href="products-hy.html" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
+            Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <span data-zoom data-hd="assets/images/news/news_11_15chairs_2.jpg" class="text-[11px] text-slate-400 hover:text-brand-accent cursor-pointer">View Gallery</span>
         </div>
       </article>
 
-      <!-- ==========================================
-           2. ARTICLE (ID 8): 2025-10-01 (Beijing Quality Tour Part 2)
-      ========================================== -->
-      <article id="article-8" class="news-card bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden flex flex-col justify-between">
+      <!-- ==================== Article 2 (ID 8): Beijing Quality Tour ==================== -->
+      <article id="article-8" class="blog-card bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between group">
         <div>
-          <!-- Real Main Cover Photo: Peking University & CAS Hospital Inspection -->
-          <div class="h-64 bg-slate-900 relative overflow-hidden group cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_8_beijing_1.png" src="assets/images/news/news_8_beijing_1.png" alt="Hongrun Quality Tour Beijing Hospital Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-teal-600 text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wider">
-              30th Milestone · October 2025
+          <!-- Clean 16:10 Aspect Thumbnail -->
+          <div class="h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
+            <img data-zoom data-hd="assets/images/news/news_8_beijing_1.png" src="assets/images/news/news_8_beijing_1.png" alt="Hongrun Quality Tour Beijing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-teal-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded shadow uppercase tracking-wider">
+              30th Milestone
             </div>
-            <div class="absolute bottom-3 right-4 text-white/90 text-xs font-semibold flex items-center gap-1.5 backdrop-blur-sm bg-black/40 px-2.5 py-1 rounded-lg">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> View Real Inspection Photo
-            </div>
+            <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
+              <i class="fa-solid fa-camera"></i> 3 Photos
+            </span>
           </div>
 
-          <div class="p-6 lg:p-8">
-            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
-              <span class="text-teal-700 font-bold"><i class="fa-regular fa-calendar-check text-teal-600"></i> October 01, 2025</span>
-              <span>•</span>
-              <span><i class="fa-solid fa-hospital text-teal-600"></i> Beijing Hospitals &amp; Institutes</span>
+          <div class="p-5">
+            <!-- Date & Reading Info -->
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+              <span class="text-teal-700 font-semibold"><i class="fa-regular fa-calendar-check"></i> Oct 01, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 3 min read</span>
             </div>
 
-            <h2 class="text-xl lg:text-2xl font-extrabold text-brand-dark font-display tracking-tight mb-3 hover:text-brand-blue transition">
+            <!-- Title -->
+            <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-blue transition line-clamp-2">
               Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision &amp; Innovation
-            </h2>
+            </h3>
 
-            <p class="text-xs lg:text-sm text-slate-600 leading-relaxed mb-5">
-              To celebrate 30 years of medical compressor leadership, the Hongrun National Quality Tour visited premier healthcare centers in Beijing, including Peking University School of Stomatology and Chinese Academy of Sciences laboratories. The technical team performed zero-downtime diagnostic audits, oil-particle sensor calibrations, and continuous air quality verification.
+            <!-- 2-line Clean Excerpt -->
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+              Celebrating 30 years of medical excellence: inspecting central gas systems at Peking University School of Stomatology and CAS institutes with preventative calibrations.
             </p>
 
-            <!-- Real On-site Photo Gallery Strip -->
-            <div class="mb-5 bg-slate-50 p-3 rounded-xl border border-slate-100">
-              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-2">Hospital Inspection Real Photos (Click to Enlarge):</span>
-              <div class="grid grid-cols-2 gap-2">
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_8_beijing_2.png" src="assets/images/news/news_8_beijing_2.png" alt="Sensor Calibration" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_8_beijing_3.png" src="assets/images/news/news_8_beijing_3.png" alt="Clinical Gas Verification" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tags & Interlinks -->
-            <div class="flex flex-wrap gap-1.5 border-t border-slate-100 pt-3">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2.5 py-0.5 rounded">30-Year Quality</span>
-              <a href="about.html" class="text-[10px] bg-teal-500/10 text-teal-600 font-bold px-2.5 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">30-Year Milestones</a>
-              <a href="products-hospital.html" class="text-[10px] bg-teal-500/10 text-teal-600 font-bold px-2.5 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">HW Scroll Hospital Station</a>
+            <!-- Topic Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+              <a href="about.html" class="text-[10px] bg-teal-500/10 text-teal-700 font-semibold px-2 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">30-Year Story</a>
+              <a href="products-hospital.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Hospital HW</a>
             </div>
           </div>
         </div>
 
-        <div class="p-6 lg:p-8 pt-0 flex items-center justify-between border-t border-slate-100">
-          <span class="text-xs text-slate-400">Related: <a href="#article-9" class="text-brand-blue hover:underline">Jinan Quality Tour Part 1</a></span>
-          <a href="about.html#culture" class="text-xs font-bold text-teal-600 hover:text-brand-deep inline-flex items-center gap-1">Read Corporate Legacy <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <a href="about.html#history" class="text-xs font-bold text-teal-700 hover:underline inline-flex items-center gap-1">
+            Read Chronicle <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <span data-zoom data-hd="assets/images/news/news_8_beijing_2.png" class="text-[11px] text-slate-400 hover:text-teal-700 cursor-pointer">View Gallery</span>
         </div>
       </article>
 
-      <!-- ==========================================
-           3. ARTICLE (ID 10): 2025-03-24 (Dental South China International Expo)
-      ========================================== -->
-      <article id="article-10" class="news-card bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden flex flex-col justify-between">
+      <!-- ==================== Article 3 (ID 10): Dental South China Expo ==================== -->
+      <article id="article-10" class="blog-card bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between group">
         <div>
-          <!-- Real Main Cover Photo: Real Live Booth & Machine Demonstration (Not Logo) -->
-          <div class="h-64 bg-slate-900 relative overflow-hidden group cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_10_expo_2.png" src="assets/images/news/news_10_expo_2.png" alt="Hongrun Live Booth at Dental South China Expo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-brand-blue text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wider">
-              International Expo · March 2025
+          <!-- Clean 16:10 Aspect Thumbnail -->
+          <div class="h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
+            <img data-zoom data-hd="assets/images/news/news_10_expo_2.png" src="assets/images/news/news_10_expo_2.png" alt="Dental South China Expo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-0.5 rounded shadow uppercase tracking-wider">
+              Global Expo
             </div>
-            <div class="absolute bottom-3 right-4 text-white/90 text-xs font-semibold flex items-center gap-1.5 backdrop-blur-sm bg-black/40 px-2.5 py-1 rounded-lg">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> View Live Booth Photo
-            </div>
+            <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
+              <i class="fa-solid fa-camera"></i> 4 Photos
+            </span>
           </div>
 
-          <div class="p-6 lg:p-8">
-            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
-              <span class="text-brand-blue font-bold"><i class="fa-regular fa-calendar-check text-brand-blue"></i> March 24, 2025</span>
-              <span>•</span>
-              <span><i class="fa-solid fa-location-dot text-brand-blue"></i> Guangzhou Pazhou Complex</span>
+          <div class="p-5">
+            <!-- Date & Reading Info -->
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+              <span class="text-brand-blue font-semibold"><i class="fa-regular fa-calendar-check"></i> Mar 24, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 3 min read</span>
             </div>
 
-            <h2 class="text-xl lg:text-2xl font-extrabold text-brand-dark font-display tracking-tight mb-3 hover:text-brand-blue transition">
+            <!-- Title -->
+            <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-blue transition line-clamp-2">
               Hongrun Technology Shines at the 32nd Dental South China International Expo
-            </h2>
+            </h3>
 
-            <p class="text-xs lg:text-sm text-slate-600 leading-relaxed mb-5">
-              At the 32nd Dental South China International Expo in Guangzhou, Hongrun demonstrated its full lineup of medical gas solutions, featuring next-gen IoT-monitored HYG Clean Air Stations and HVS multi-station suction units. The live booth drew over 1,200 dental clinic owners and overseas distributors from Southeast Asia, the Middle East, and Europe.
+            <!-- 2-line Clean Excerpt -->
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+              Demonstrating the next-gen IoT-monitored HYG Clean Air Stations and HVS suction units at Guangzhou Pazhou Complex, welcoming over 1,200 international buyers.
             </p>
 
-            <!-- Real On-site Photo Gallery Strip -->
-            <div class="mb-5 bg-slate-50 p-3 rounded-xl border border-slate-100">
-              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-2">Live Expo Real Photos (Click to Enlarge):</span>
-              <div class="grid grid-cols-2 gap-2">
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_10_expo_3.png" src="assets/images/news/news_10_expo_3.png" alt="Product Live Presentation" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_10_expo_4.png" src="assets/images/news/news_10_expo_4.png" alt="International Buyer Negotiations" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tags & Interlinks -->
-            <div class="flex flex-wrap gap-1.5 border-t border-slate-100 pt-3">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2.5 py-0.5 rounded">Expo Highlights</span>
-              <a href="products-cleanair.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HYG Clean Air Station</a>
-              <a href="products-hvs.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HVS Suction Unit</a>
+            <!-- Topic Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+              <a href="products-cleanair.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HYG Clean Air</a>
+              <a href="products-hvs.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">HVS Suction</a>
             </div>
           </div>
         </div>
 
-        <div class="p-6 lg:p-8 pt-0 flex items-center justify-between border-t border-slate-100">
-          <span class="text-xs text-slate-400">Next Expo: <a href="contact.html" class="text-brand-blue hover:underline">Book a Meeting</a></span>
-          <a href="contact.html" class="text-xs font-bold text-brand-blue hover:text-brand-deep inline-flex items-center gap-1">Inquire for OEM Partnership <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <a href="products-cleanair.html" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
+            Read Highlights <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <span data-zoom data-hd="assets/images/news/news_10_expo_3.png" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View Gallery</span>
         </div>
       </article>
 
-      <!-- ==========================================
-           4. ARTICLE (ID 9): 2025-02-01 (Jinan Quality Tour Part 1)
-      ========================================== -->
-      <article id="article-9" class="news-card bg-white rounded-2xl border border-slate-200 shadow-lg overflow-hidden flex flex-col justify-between">
+      <!-- ==================== Article 4 (ID 9): Jinan Quality Tour ==================== -->
+      <article id="article-9" class="blog-card bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between group">
         <div>
-          <!-- Real Main Cover Photo: Plant Floor Audit Real Photo -->
-          <div class="h-64 bg-slate-900 relative overflow-hidden group cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_9_jinan_1.png" src="assets/images/news/news_9_jinan_1.png" alt="Hongrun Quality Tour Jinan Plant Floor Audit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-brand-deep text-white text-[11px] font-bold px-3 py-1 rounded-md shadow-md uppercase tracking-wider">
-              30th Milestone · February 2025
+          <!-- Clean 16:10 Aspect Thumbnail -->
+          <div class="h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
+            <img data-zoom data-hd="assets/images/news/news_9_jinan_1.png" src="assets/images/news/news_9_jinan_1.png" alt="Hongrun Quality Tour Jinan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-brand-deep text-white text-[10px] font-bold px-2.5 py-0.5 rounded shadow uppercase tracking-wider">
+              Quality Tour
             </div>
-            <div class="absolute bottom-3 right-4 text-white/90 text-xs font-semibold flex items-center gap-1.5 backdrop-blur-sm bg-black/40 px-2.5 py-1 rounded-lg">
-              <i class="fa-solid fa-magnifying-glass-plus"></i> View Manufacturing Audit
-            </div>
+            <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
+              <i class="fa-solid fa-camera"></i> 4 Photos
+            </span>
           </div>
 
-          <div class="p-6 lg:p-8">
-            <div class="flex items-center gap-3 text-xs text-slate-400 mb-3">
-              <span class="text-brand-deep font-bold"><i class="fa-regular fa-calendar-check text-brand-deep"></i> February 01, 2025</span>
-              <span>•</span>
-              <span><i class="fa-solid fa-microscope text-brand-deep"></i> Jinan Medical Manufacturing Hub</span>
+          <div class="p-5">
+            <!-- Date & Reading Info -->
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+              <span class="text-brand-deep font-semibold"><i class="fa-regular fa-calendar-check"></i> Feb 01, 2025</span>
+              <span><i class="fa-regular fa-clock"></i> 3 min read</span>
             </div>
 
-            <h2 class="text-xl lg:text-2xl font-extrabold text-brand-dark font-display tracking-tight mb-3 hover:text-brand-blue transition">
-              Hongrun 30th Anniversary Quality Tour – Part 1: Jinan &amp; Shandong Medical Equipment Hub
-            </h2>
+            <!-- Title -->
+            <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-blue transition line-clamp-2">
+              Hongrun 30th Anniversary Quality Tour – Part 1: Jinan &amp; Shandong Medical Hub
+            </h3>
 
-            <p class="text-xs lg:text-sm text-slate-600 leading-relaxed mb-5">
-              The kickoff stop of the 30th Anniversary Quality Tour targeted regional manufacturing clusters in Jinan, inspecting centralized gas stations integrated into partner facilities like Shinva Medical. Engineers reviewed long-term wear metrics on ZB-series wobble pistons and confirmed zero detectable oil degradation after 20,000 continuous operating hours.
+            <!-- 2-line Clean Excerpt -->
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+              Inspecting centralized medical gas installations with partners like Shinva Medical, verifying 20,000-hour continuous zero-oil performance on ZB wobble pump heads.
             </p>
 
-            <!-- Real On-site Photo Gallery Strip -->
-            <div class="mb-5 bg-slate-50 p-3 rounded-xl border border-slate-100">
-              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider block mb-2">Plant Floor Audit Real Photos (Click to Enlarge):</span>
-              <div class="grid grid-cols-3 gap-2">
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_9_jinan_2.png" src="assets/images/news/news_9_jinan_2.png" alt="Shinva Plant Collaboration" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_9_jinan_3.png" src="assets/images/news/news_9_jinan_3.png" alt="Wobble Piston Wear Analysis" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-                <div class="h-20 rounded-lg overflow-hidden border border-slate-200 cursor-pointer shadow-sm">
-                  <img data-zoom data-hd="assets/images/news/news_9_jinan_4.png" src="assets/images/news/news_9_jinan_4.png" alt="Hospital Central Skid Check" class="photo-thumb w-full h-full object-cover"/>
-                </div>
-              </div>
-            </div>
-
-            <!-- Tags & Interlinks -->
-            <div class="flex flex-wrap gap-1.5 border-t border-slate-100 pt-3">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2.5 py-0.5 rounded">Regional Service</span>
-              <a href="products-core.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">Core Spares Lifecycle</a>
-              <a href="contact.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">Distributor Network</a>
+            <!-- Topic Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+              <a href="products-core.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">Core Spares</a>
+              <a href="contact.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Distributor</a>
             </div>
           </div>
         </div>
 
-        <div class="p-6 lg:p-8 pt-0 flex items-center justify-between border-t border-slate-100">
-          <span class="text-xs text-slate-400">Related: <a href="#article-8" class="text-brand-blue hover:underline">Beijing Quality Tour Part 2</a></span>
-          <a href="contact.html" class="text-xs font-bold text-brand-deep hover:text-brand-blue inline-flex items-center gap-1">Become a Service Partner <i class="fa-solid fa-arrow-right"></i></a>
+        <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <a href="about.html" class="text-xs font-bold text-brand-deep hover:underline inline-flex items-center gap-1">
+            Read Chronicle <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <span data-zoom data-hd="assets/images/news/news_9_jinan_2.png" class="text-[11px] text-slate-400 hover:text-brand-deep cursor-pointer">View Gallery</span>
         </div>
       </article>
 
     </div>
+
+    <!-- Clean Pagination Bar (Ready for 10-50+ future articles) -->
+    <div class="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <span>Showing <strong>1 – 4</strong> of <strong>4</strong> insights</span>
+      <div class="flex items-center gap-1">
+        <button class="px-3 py-1.5 rounded border border-slate-300 bg-white text-slate-400 cursor-not-allowed">Previous</button>
+        <button class="px-3 py-1.5 rounded bg-brand-blue text-white font-bold">1</button>
+        <button class="px-3 py-1.5 rounded border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition">2</button>
+        <button class="px-3 py-1.5 rounded border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition">Next</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- Global Distributor & Technical Support CTA -->
-<section class="py-16 bg-gradient-to-br from-brand-blue to-brand-deep text-white text-center">
+<section class="py-14 bg-gradient-to-br from-brand-blue to-brand-deep text-white text-center">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl lg:text-3xl font-extrabold font-display mb-3">Looking for Medical Gas Solutions or Global Distribution?</h2>
+    <h2 class="text-2xl lg:text-3xl font-extrabold font-display mb-2">Looking for Medical Gas Solutions or Global Distribution?</h2>
     <p class="text-slate-200 text-xs lg:text-sm mb-6 max-w-2xl mx-auto">Get in touch with our international engineering team for customized sizing, OEM specifications, and fast quotation support.</p>
-    <div class="flex flex-wrap justify-center gap-4">
-      <a href="contact.html" class="bg-gradient-to-r from-brand-accent to-brand-gold text-white px-6 py-3 rounded-lg font-bold text-xs shadow-lg hover:shadow-xl transition">Contact Our 8-Member Sales Matrix</a>
-      <a href="products.html" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-6 py-3 rounded-lg font-semibold text-xs transition">Browse 6 Product Categories</a>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="contact.html" class="bg-gradient-to-r from-brand-accent to-brand-gold text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-lg hover:shadow-xl transition">Contact Sales Matrix</a>
+      <a href="products.html" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-2.5 rounded-lg font-semibold text-xs transition">Browse 6 Product Categories</a>
     </div>
   </div>
 </section>
