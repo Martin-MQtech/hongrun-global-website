@@ -1,7 +1,7 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 4.0 (全站 11 页面全量落地 · 历史资料完整吸收归纳 · VI V3.0 终极实施标准 · 6 大产品品类与 8 人国际销售矩阵闭环)  
+> **版本 Version:** 3.0 (VI V3.0 终审通过版 · 完整吸收历史优化方案与参考资料 · 11 页面全量落地 · 6 大产品品类与 8 人销售矩阵闭环)  
 > **更新日期 Date:** 2026-08-20  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
@@ -79,10 +79,12 @@
 | **沉稳炭黑 Charcoal** | `#0F172A` | `slate-900 / brand.dark` | **最底部页脚（Footer）底色**、暗色卡片、高级感科技背景 |
 | **极浅蓝灰 Surface** | `#F1F5F9` | `brand.light / slate-100` | 浅色分区背景、产品参数卡片浅底、交替斑马行底色 |
 | **纯白界面 Pure White** | `#FFFFFF` | `white` | 产品展示卡片背景、正文字体、大面积留白区域 |
-| **点睛橙黄渐变 Accent** | `#EA580C` $ightarrow$ `#EAB308` | `from-brand-accent to-brand-gold` | **CTA 核心行动按钮**、国内版橙黄 Logo、Logo 图形内部局部点睛线条 |
+| **点睛橙黄渐变 Accent** | `#EA580C` $
+ightarrow$ `#EAB308` | `from-brand-accent to-brand-gold` | **CTA 核心行动按钮**、国内版橙黄 Logo、Logo 图形内部局部点睛线条 |
 
 ### 3.2 页面底层配色与层次节奏规范（严苛戒律）
-1. **上层深蓝科技背书 $ightarrow$ 底层炭黑厚重收尾**：全站页面底部的结构统一为“伙伴背书区采用深蓝渐变色（`bg-gradient-to-br from-brand-blue to-brand-deep`），最底部页脚统一采用深沉炭黑色（`bg-slate-900`）”，告别大面积同色块连成一体的单调感。
+1. **上层深蓝科技背书 $
+ightarrow$ 底层炭黑厚重收尾**：全站页面底部的结构统一为“伙伴背书区采用深蓝渐变色（`bg-gradient-to-br from-brand-blue to-brand-deep`），最底部页脚统一采用深沉炭黑色（`bg-slate-900`）”，告别大面积同色块连成一体的单调感。
 2. **Hero Banner 毛玻璃信息面板**：统一使用紧凑型半透明金属灰面板（`bg-slate-800/25` 或 `/35` + `backdrop-blur-sm rounded-xl border border-white/10`），绝不遮挡大屏背景中的核心设备或厂房字样。
 3. **禁用蓝色浓雾大遮罩**：严禁在背景图上方覆盖刺眼的实色蓝全遮罩；一律采用极清背景实景图 + 局部毛玻璃文字框承载。
 
