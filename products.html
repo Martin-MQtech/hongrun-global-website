@@ -125,7 +125,7 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- Sticky 6 Category Text Nav (Directly linked to 6 dedicated product pages) -->
+<!-- Sticky 6 Category Text Nav (Neutral Equal State - No Default Selection) -->
 <div class="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex overflow-x-auto gap-2 py-3 no-scrollbar justify-center">
@@ -133,13 +133,13 @@ tailwind.config = {
       <a href="products-hvs.html" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-semibold tracking-wide uppercase transition shadow-sm">Dental Vacuum</a>
       <a href="products-cleanair.html" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-semibold tracking-wide uppercase transition shadow-sm">Clean Air Source</a>
       <a href="products-hospital.html" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-semibold tracking-wide uppercase transition shadow-sm">Hospital &amp; Scroll</a>
-      <a href="products-water.html" class="whitespace-nowrap px-4 py-2 border border-brand-blue bg-brand-blue text-white hover:bg-brand-deep rounded-sm font-display text-sm font-semibold tracking-wide uppercase transition shadow-sm">Water Treatment</a>
+      <a href="products-water.html" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-semibold tracking-wide uppercase transition shadow-sm">Water Treatment</a>
       <a href="products-core.html" class="whitespace-nowrap px-4 py-2 border border-slate-300 text-slate-700 hover:border-brand-blue hover:bg-brand-blue hover:text-white rounded-sm font-display text-sm font-semibold tracking-wide uppercase transition shadow-sm">Core Components</a>
     </div>
   </div>
 </div>
 
-<!-- 6 Family Cards: centered grid, name on top + HD image below, whole card clickable to dedicated page -->
+<!-- 6 Family Cards: Neutral Uniform Grid (No default active border, all equal interactive hover) -->
 <section class="py-6 bg-brand-light border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -184,9 +184,9 @@ tailwind.config = {
         </div>
       </a>
       <!-- Card 5: Water Treatment -->
-      <a href="products-water.html" class="group block bg-white rounded-lg border-2 border-brand-blue shadow-lg overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
+      <a href="products-water.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-brand-blue transition duration-300">
         <div class="p-3 pb-2 text-center">
-          <h3 class="text-xs font-bold text-brand-blue font-display tracking-tight mb-0.5">Water Treatment</h3>
+          <h3 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue font-display tracking-tight mb-0.5 transition">Water Treatment</h3>
           <p class="text-slate-400 text-[10px]">Ozone + UV &middot; Sterile</p>
         </div>
         <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
@@ -204,45 +204,7 @@ tailwind.config = {
         </div>
       </a>
     </div>
-  </div>
-</section>
-          <p class="text-slate-400 text-[10px]">Dew point ≤ -40&deg;C</p>
-        </div>
-        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
-          <img src="assets/images/products/intl/HVTG-900.jpg" alt="Clean Compressed Air Source" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
-        </div>
-      </a>
-      <!-- Card 4: Hospital & Scroll -->
-      <a href="products-hospital.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
-        <div class="p-3 pb-2 text-center">
-          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Hospital &amp; Scroll</h3>
-          <p class="text-slate-400 text-[10px]">Class II &middot; Central gas</p>
-        </div>
-        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
-          <img src="assets/images/products/intl/HBG-1200.jpg" alt="Hospital and Scroll Systems" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
-        </div>
-      </a>
-      <!-- Card 5: Water Treatment -->
-      <a href="products-water.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
-        <div class="p-3 pb-2 text-center">
-          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Water Treatment</h3>
-          <p class="text-slate-400 text-[10px]">Ozone + UV &middot; Sterile</p>
-        </div>
-        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
-          <img src="assets/images/products/intl/product-water.jpg" alt="Purified Water Treatment System" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
-        </div>
-      </a>
-      <!-- Card 6: Core Components -->
-      <a href="products.html" class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition duration-300">
-        <div class="p-3 pb-2 text-center">
-          <h3 class="text-xs font-bold text-brand-dark font-display tracking-tight mb-0.5">Core Components</h3>
-          <p class="text-slate-400 text-[10px]">Pumps &middot; Dryers &middot; Spares</p>
-        </div>
-        <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
-          <img src="assets/images/products/intl/product-core.jpg" alt="Core Components and Spare Parts" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500"/>
-        </div>
-      </a>
-    </div>
+
     <div class="text-center mt-10">
       <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Product Families</div>
       <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Six Systems. One Standard of Purity.</h2>
