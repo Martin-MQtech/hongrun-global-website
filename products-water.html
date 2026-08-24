@@ -48,29 +48,97 @@ tailwind.config = {
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="products.html">Products</a>
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products-water.html">Solutions</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="solutions.html">Solutions</a>
       <a class="inline-flex items-center gap-1 text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="news.html"><i class="fa-solid fa-newspaper text-sm text-brand-blue"></i> News &amp; Insights</a>
       <a class="border border-slate-400 text-slate-600 hover:border-brand-blue hover:text-brand-blue px-4 py-2 rounded-sm font-medium text-xs transition" href="contact.html">Request a Quote</a>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="relative pt-20 overflow-hidden bg-slate-900">
-  <div class="relative h-[420px] lg:h-[480px]">
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/products/intl/product-water.jpg')"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/40 to-transparent"></div>
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-10">
-      <div class="max-w-xl p-6 rounded-2xl bg-slate-900/60 backdrop-blur-md border border-white/15 shadow-2xl">
-        <p class="text-white/70 text-[10px] uppercase tracking-widest mb-3"><a href="index.html" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <a href="products.html" class="hover:text-sky-300 transition">Products</a> <span class="mx-1">/</span> <span class="text-sky-300">Water Treatment</span></p>
-        <div class="inline-block px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 font-semibold text-[10px] tracking-wide uppercase mb-3">Ozone + UV Dual Sterilization · Continuous Loop Supply</div>
-        <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight">Central Medical Purified<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-sky to-teal-300">Water Treatment Systems</span></h1>
-        <p class="text-xs lg:text-sm text-slate-200 mb-5 font-light leading-relaxed">Multi-stage reverse osmosis (RO), EDI electro-deionization, and closed-loop bacterial inhibition for dental operatory pipelines, autoclaves, endoscopy centers, and hospital CSSD departments.</p>
-        <div class="flex items-center gap-3">
-          <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-lg font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="#specs">Explore Models &amp; Specs <i class="fa-solid fa-arrow-right"></i></a>
-          <a class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-4 py-2.5 rounded-lg font-semibold text-xs transition" href="#process">Process Topology</a>
+<!-- ==========================================
+     HERO SECTION (Optimized Composition: Full Machine View & Visible Top Logo)
+========================================== -->
+<section class="relative pt-20 overflow-hidden bg-slate-950 text-white border-b border-slate-800">
+  <!-- Dynamic Ambient Glows -->
+  <div class="absolute top-10 left-1/4 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-10 right-1/4 w-96 h-96 bg-brand-sky/20 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900/60 via-slate-950/90 to-slate-950 pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      
+      <!-- Left Column: Specs & Value Proposition -->
+      <div class="lg:col-span-7 space-y-6">
+        <p class="text-slate-400 text-xs uppercase tracking-widest flex items-center gap-2">
+          <a href="index.html" class="hover:text-brand-sky transition">Home</a>
+          <span class="text-slate-600">/</span>
+          <a href="products.html" class="hover:text-brand-sky transition">Products</a>
+          <span class="text-slate-600">/</span>
+          <span class="text-brand-sky font-semibold">Water Treatment</span>
+        </p>
+
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sky/15 border border-brand-sky/35 text-brand-sky text-xs font-bold uppercase tracking-widest backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-brand-sky animate-ping"></span>
+          Ozone + UV Dual Sterilization · Continuous Closed-Loop Supply
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-display tracking-tight">
+          Central Medical Purified<br/>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-sky via-teal-300 to-amber-300">Water Treatment Systems</span>
+        </h1>
+
+        <p class="text-sm lg:text-base text-slate-300 font-light leading-relaxed max-w-xl">
+          Multi-stage reverse osmosis (RO), EDI electro-deionization, and continuous chemical-free bacterial inhibition designed for multi-chair dental operatory pipelines, autoclaves, endoscopy centers, and hospital CSSD sterile reprocessing.
+        </p>
+
+        <!-- Feature Badges Matrix -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+          <div class="p-3 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md">
+            <span class="text-[11px] text-slate-400 block font-medium">Desalination Rate</span>
+            <span class="text-sm font-bold text-white font-display">&ge; 99.7% Efficiency</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md">
+            <span class="text-[11px] text-slate-400 block font-medium">Water Conductivity</span>
+            <span class="text-sm font-bold text-brand-sky font-display">&le; 1.0 μS/cm (or EDI)</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md col-span-2 sm:col-span-1">
+            <span class="text-[11px] text-slate-400 block font-medium">Bacterial Inhibition</span>
+            <span class="text-sm font-bold text-teal-300 font-display">Ozone + UV Dual Unit</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-3 rounded-lg font-bold text-xs transition shadow-lg inline-flex items-center gap-2" href="#specs">
+            Explore Models &amp; Specs <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-5 py-3 rounded-lg font-semibold text-xs transition" href="#process">
+            6-Stage Process Topology
+          </a>
         </div>
       </div>
+
+      <!-- Right Column: Full Machine Visual Showcase (Complete View & Clear Logo) -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative group w-full max-w-md">
+          <!-- Ambient Glow Platform -->
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand-sky/40 to-teal-500/30 rounded-3xl blur-xl group-hover:blur-2xl transition duration-500 opacity-80"></div>
+          
+          <div class="relative rounded-2xl bg-gradient-to-b from-slate-900/90 via-slate-900/95 to-slate-950 border-2 border-brand-sky/40 shadow-2xl p-4 lg:p-6 backdrop-blur-xl overflow-hidden text-center cursor-pointer">
+            <!-- Full Machine Photo Display with Lightbox -->
+            <div class="relative rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center p-2 mb-3 border border-white/10">
+              <img data-zoom data-hd="assets/images/products/intl/product-water.jpg" src="assets/images/products/intl/product-water.jpg" alt="Hongrun Purified Water Treatment Station (Full Machine)" class="w-full h-auto max-h-[380px] object-contain rounded-lg group-hover:scale-105 transition-transform duration-500"/>
+              <div class="absolute bottom-2 right-2 text-white/90 text-[11px] font-medium bg-black/60 backdrop-blur px-2 py-0.5 rounded flex items-center gap-1">
+                <i class="fa-solid fa-magnifying-glass-plus text-brand-sky"></i> Full View
+              </div>
+            </div>
+            <div class="flex items-center justify-between text-xs px-1">
+              <span class="font-bold text-white font-display tracking-wide">HRC Series Integrated Machine</span>
+              <span class="text-[11px] text-brand-sky font-semibold bg-brand-sky/10 border border-brand-sky/30 px-2 py-0.5 rounded-full">Medical Pure Water</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
