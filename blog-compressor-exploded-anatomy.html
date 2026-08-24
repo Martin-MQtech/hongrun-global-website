@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <link rel="canonical" href="https://www.hongrun1995.cn/blog-compressor-exploded-anatomy.html"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy &amp; Design Aesthetics of Class 0 Medical Air Compressors | Hongrun Insights"/>
+<meta property="og:title" content="Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors | Hongrun Insights"/>
 <meta property="og:description" content="An authoritative deep dive into Hongrun's German industrial design aesthetics and mechanical precision: 3D CAD exploded engineering, diamond-coated PTFE rings, dual-tower PSA desiccant drying, and 5-axis CNC drive shafts."/>
 <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/exploded/01-hy-compressor-exploded.jpg"/>
 <meta property="og:url" content="https://www.hongrun1995.cn/blog-compressor-exploded-anatomy.html"/>
@@ -14,24 +14,27 @@
 <meta name="twitter:description" content="Engineering whitepaper on Class 0 medical air compressor anatomy, 3D CAD exploded views, and industrial design aesthetics."/>
 <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/exploded/01-hy-compressor-exploded.jpg"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy &amp; Design Aesthetics of Class 0 Medical Air Compressors | Hongrun Insights</title>
+<title>Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors | Hongrun Insights</title>
 <meta content="Explore the mechanical precision and German industrial design aesthetics of Hongrun 100% oil-free medical air compressors. 3D CAD exploded analysis covering self-lubricating PTFE rings, PSA desiccant dryers, and 0.01μm filtration." name="description"/>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: { extend: {
-    fontFamily: { sans: ["Roboto","sans-serif"], display: ["Oswald","sans-serif"] },
-    colors: { brand: { blue: "#0F4C81", deep: "#0C3D6B", sky: "#0EA5E9", dark: "#0F172A", light: "#F1F5F9", accent: "#EA580C", gold: "#EAB308" } }
+    fontFamily: { sans: ["'Plus Jakarta Sans'","sans-serif"], display: ["Oswald","sans-serif"] },
+    colors: { brand: { blue: "#0F4C81", deep: "#0C3D6B", sky: "#0EA5E9", dark: "#0F172A", light: "#F8FAFC", accent: "#EA580C", gold: "#EAB308" } }
   }}
 }
 </script>
 <style>
-.prose-content p { margin-bottom: 1.25rem; line-height: 1.8; color: #334155; }
-.prose-content h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.65rem; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.5rem; }
-.prose-content h3 { font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; margin-top: 1.75rem; margin-bottom: 0.75rem; font-size: 1.25rem; }
-.spec-highlight { background: linear-gradient(135deg, rgba(15,76,129,0.04) 0%, rgba(14,165,233,0.08) 100%); border-left: 4px solid #0F4C81; }
+/* High-Contrast Technical Typography System */
+.article-body p { margin-bottom: 1.35rem; line-height: 1.85; color: #334155; font-size: 0.95rem; }
+.article-body h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 3rem; margin-bottom: 1.25rem; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; }
+.article-body h3 { font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; margin-top: 2rem; margin-bottom: 0.85rem; font-size: 1.3rem; letter-spacing: -0.01em; }
+.spec-box { background: #F8FAFC; border: 1px solid #E2E8F0; border-left: 4px solid #0F4C81; }
+.sketch-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+.sketch-card:hover { transform: translateY(-4px); box-shadow: 0 16px 32px -8px rgba(15,76,129,0.15); border-color: #0EA5E9; }
 </style>
 
 <!-- ==========================================
@@ -92,9 +95,9 @@ tailwind.config = {
   </div>
 </nav>
 
-<!-- Article Header & Breadcrumbs -->
-<header class="pt-28 pb-8 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
-  <div class="absolute top-0 right-0 w-96 h-96 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Article Header -->
+<header class="pt-28 pb-10 bg-slate-950 text-white relative overflow-hidden border-b border-slate-800">
+  <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none"></div>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-xs text-slate-400 uppercase tracking-widest mb-4">
@@ -105,64 +108,64 @@ tailwind.config = {
       <span class="text-brand-sky font-semibold">Engineering Whitepaper</span>
     </div>
 
-    <!-- Category & Status Badge -->
+    <!-- Badges -->
     <div class="flex flex-wrap items-center gap-2.5 mb-4">
       <span class="px-3 py-1 rounded-full bg-brand-accent text-white text-[11px] font-bold uppercase tracking-wider shadow">
         Featured Whitepaper · Aug 24, 2026
       </span>
-      <span class="px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-brand-sky text-[11px] font-semibold tracking-wide">
+      <span class="px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 text-[11px] font-semibold tracking-wide">
         ISO 8573-1 Class 0 Certified
       </span>
       <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-300 text-[11px] font-semibold tracking-wide">
-        NMPA Class II Medical
+        NMPA Class II Medical Device
       </span>
     </div>
 
-    <!-- Article Main Headline -->
-    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-display tracking-tight leading-tight mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.8)]">
+    <!-- Title -->
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-display tracking-tight leading-snug mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
       Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy &amp; Industrial Aesthetics of Class 0 Medical Compressors
     </h1>
 
-    <!-- Meta Info: Author & Read Time -->
-    <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400 border-t border-slate-800 pt-4">
+    <!-- Meta Info -->
+    <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
       <div class="flex items-center gap-2">
-        <div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display">HR</div>
-        <span class="text-slate-200 font-medium">Hongrun R&amp;D Engineering &amp; Industrial Design Studio</span>
+        <div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display shadow-sm">HR</div>
+        <span class="text-slate-100 font-medium">Hongrun R&amp;D Engineering &amp; Industrial Design Studio</span>
       </div>
-      <span>•</span>
+      <span class="text-slate-500">•</span>
       <span><i class="fa-regular fa-calendar-check text-brand-sky"></i> Published: August 24, 2026</span>
-      <span>•</span>
+      <span class="text-slate-500">•</span>
       <span><i class="fa-regular fa-clock text-brand-sky"></i> 8 min technical read</span>
     </div>
   </div>
 </header>
 
-<!-- Main Article Body Content -->
+<!-- Main Article Body -->
 <main class="py-14 bg-white">
-  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose-content">
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 article-body">
     
-    <!-- 3D Exploded Hero Banner Showcase (With Lightbox Zoom) -->
-    <div class="mb-12 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-2xl bg-slate-950 relative group cursor-pointer">
-      <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" src="assets/images/exploded/01-hy-compressor-exploded.jpg" alt="Hongrun HY Series 3D CAD Exploded Engineering Blueprint" class="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500"/>
-      <div class="absolute bottom-3 right-3 text-white/90 text-xs font-semibold bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/20 flex items-center gap-1.5">
-        <i class="fa-solid fa-magnifying-glass-plus text-brand-sky"></i> Click to Zoom 3D CAD High-Precision Blueprint (V3.0)
+    <!-- 3D Exploded Blueprint Showcase (Click to Enlarge via Lightbox) -->
+    <div class="mb-12 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl bg-slate-950 relative group cursor-pointer">
+      <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" src="assets/images/exploded/01-hy-compressor-exploded.jpg" alt="Hongrun HY Series 3D CAD Exploded Engineering Blueprint V3.0" class="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500"/>
+      <div class="absolute bottom-3 right-3 text-white text-xs font-semibold bg-black/75 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/20 flex items-center gap-2 shadow-lg">
+        <i class="fa-solid fa-magnifying-glass-plus text-brand-sky"></i> Click to Zoom 3D CAD High-Precision Blueprint
       </div>
-      <div class="p-3 bg-slate-900 text-slate-400 text-xs text-center border-t border-slate-800">
-        Figure 1.0: Official 3D CAD High-Precision Engineering Exploded Blueprint (HY Series) — German precision kinematics, Saint-Gobain PTFE composite rings, twin-tower PSA drying, and anti-microbial vessel.
+      <div class="p-3.5 bg-slate-900 text-slate-300 text-xs text-center border-t border-slate-800">
+        <strong>Figure 1.0:</strong> Official 3D CAD High-Precision Engineering Exploded Blueprint (HY Series) — German precision kinematics, Saint-Gobain PTFE composite rings, twin-tower PSA drying, and anti-microbial vessel.
       </div>
     </div>
 
-    <!-- Executive Abstract / GEO Summary Box -->
-    <div class="spec-highlight p-6 rounded-xl mb-10">
-      <h3 class="text-brand-dark font-display text-lg font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
+    <!-- Executive Abstract / GEO Summary Box (Clean High-Contrast Card) -->
+    <div class="spec-box p-6 rounded-xl mb-10 shadow-sm">
+      <h3 class="text-brand-dark font-display text-base font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
         <i class="fa-solid fa-microchip text-brand-blue"></i> Executive Engineering Summary
       </h3>
       <p class="text-xs sm:text-sm text-slate-700 leading-relaxed m-0">
-        Medical air purity in hospital operating theaters and dental operatories cannot tolerate even trace hydrocarbons. This engineering whitepaper dissects the <strong>Hongrun 100% Oil-Free Compressor Platform</strong> through proprietary 3D CAD exploded models and handcrafted R&amp;D sketches. We explore how <strong>German-standard industrial design aesthetics</strong>, <strong>diamond-coated self-lubricating PTFE composite piston rings</strong>, <strong>5-axis CNC dynamically balanced crankshafts</strong>, <strong>integrated dual-tower PSA desiccant dryers (&minus;40°C dew point)</strong>, and <strong>0.01μm multi-stage sterile filtration</strong> achieve genuine <strong>ISO 8573-1 Class 0 zero-oil purity</strong> with over 30,000 hours of maintenance-free continuous duty.
+        Medical air purity in hospital surgical operating theaters and dental operatories cannot tolerate even trace hydrocarbons. This engineering whitepaper dissects the <strong>Hongrun 100% Oil-Free Compressor Platform</strong> through proprietary 3D CAD exploded models and handcrafted R&amp;D sketches. We explore how <strong>German-standard industrial design aesthetics</strong>, <strong>diamond-coated self-lubricating PTFE composite piston rings</strong>, <strong>5-axis CNC dynamically balanced crankshafts</strong>, <strong>integrated dual-tower PSA desiccant dryers (&minus;40°C dew point)</strong>, and <strong>0.01μm multi-stage sterile filtration</strong> achieve genuine <strong>ISO 8573-1 Class 0 zero-oil purity</strong> with over 30,000 hours of maintenance-free continuous duty.
       </p>
     </div>
 
-    <!-- Section 1: The Zero-Oil Mandate -->
+    <!-- Section 1: The Clinical Zero-Oil Mandate -->
     <h2>1. The Clinical Zero-Oil Mandate &amp; ISO 8573-1 Class 0 Standards</h2>
     <p>
       In dental restorative procedures, oral surgeries, and hospital central medical gas pipeline systems (NFPA 99 &amp; ISO 7396-1 compliance), compressed air comes into direct contact with open surgical wounds, sterile instruments, and respiratory air circuits. Standard oil-flooded or oil-injected compressors equipped with coalescing filters still suffer from "filter bypass" during pressure surges, allowing carcinogenic oil aerosols and toxic hydrocarbon vapors to contaminate patient airways and destroy composite resin bonding surfaces.
@@ -176,139 +179,135 @@ tailwind.config = {
       <li><strong>Pressure Dew Point (Moisture):</strong> Class 2 (&le; &minus;40°C), preventing internal condensation and bacterial colonization.</li>
     </ul>
 
-    <!-- Industrial Design & Handcrafted Sketches Suite -->
-    <div class="my-10 bg-slate-50 p-6 rounded-2xl border border-slate-200">
-      <h3 class="text-brand-dark font-display text-base font-bold uppercase tracking-wider mb-4 flex items-center gap-2">
-        <i class="fa-solid fa-pen-ruler text-brand-blue"></i> Industrial Design Aesthetics: From Handcrafted Sketch to 5-Axis CNC
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-3">
-        <!-- Sketch 1 -->
-        <div class="rounded-xl overflow-hidden border border-slate-200 bg-white p-3 shadow-sm hover:shadow-md transition">
-          <div class="h-40 flex items-center justify-center overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/sketches/01-Sketch-活塞泵头与散热气缸手绘草图.jpg" src="assets/images/sketches/01-Sketch-活塞泵头与散热气缸手绘草图.jpg" alt="Piston Pump Head & Finned Cylinder Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"/>
-          </div>
-          <div class="border-t border-slate-100 pt-2 text-center">
-            <span class="text-xs font-bold text-brand-dark font-display block">01. Piston Pump &amp; Cylinder Head</span>
-            <span class="text-[10px] text-slate-400">Die-cast aluminum fins &amp; connecting rod kinematics</span>
-          </div>
-        </div>
+    <!-- Section 2: Industrial Design & Handcrafted Sketches Suite -->
+    <h2>2. Industrial Design Aesthetics: From Handcrafted Sketch to 5-Axis CNC</h2>
+    <p>
+      True engineering excellence begins with rigorous conceptual ideation. Hongrun’s industrial design philosophy combines <strong>German mechanical minimalism</strong> with <strong>clinical aseptic functionalism</strong>. Before entering 3D CAD parametric modeling, every core sub-assembly undergoes multi-iteration hand drafting to resolve acoustic paths, fluid thermal dissipation, and dynamic balance.
+    </p>
 
-        <!-- Sketch 2 -->
-        <div class="rounded-xl overflow-hidden border border-slate-200 bg-white p-3 shadow-sm hover:shadow-md transition">
-          <div class="h-40 flex items-center justify-center overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/sketches/03-Sketch-双塔吸附干燥器与三级微滤手绘草图.jpg" src="assets/images/sketches/03-Sketch-双塔吸附干燥器与三级微滤手绘草图.jpg" alt="Dual PSA Desiccant Dryer Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"/>
-          </div>
-          <div class="border-t border-slate-100 pt-2 text-center">
-            <span class="text-xs font-bold text-brand-dark font-display block">02. Dual PSA Dryer &amp; Micro-Filter</span>
-            <span class="text-[10px] text-slate-400">Twin-tower desiccant cycle &amp; 0.01μm sterile manifold</span>
-          </div>
+    <!-- 3 Sketch Cards Grid (Clean White Card + Zoom) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+      <!-- Sketch 1 -->
+      <div class="sketch-card rounded-xl overflow-hidden border border-slate-200 bg-white p-3 shadow-sm">
+        <div class="h-44 bg-slate-50 rounded-lg flex items-center justify-center p-2 overflow-hidden cursor-pointer">
+          <img data-zoom data-hd="assets/images/sketches/01-Sketch-活塞泵头与散热气缸手绘草图.jpg" src="assets/images/sketches/01-Sketch-活塞泵头与散热气缸手绘草图.jpg" alt="Piston Pump Head & Finned Cylinder Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"/>
         </div>
-
-        <!-- Sketch 3 -->
-        <div class="rounded-xl overflow-hidden border border-slate-200 bg-white p-3 shadow-sm hover:shadow-md transition">
-          <div class="h-40 flex items-center justify-center overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/sketches/04-Sketch-电机转子与精密曲轴轴承手绘草图.jpg" src="assets/images/sketches/04-Sketch-电机转子与精密曲轴轴承手绘草图.jpg" alt="Motor Rotor & Crankshaft Assembly Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"/>
-          </div>
-          <div class="border-t border-slate-100 pt-2 text-center">
-            <span class="text-xs font-bold text-brand-dark font-display block">03. Rotor, Crankshaft &amp; Bearings</span>
-            <span class="text-[10px] text-slate-400">Laser dynamic balanced copper rotor &amp; deep-groove seals</span>
-          </div>
+        <div class="pt-3 text-center">
+          <span class="text-xs font-bold text-brand-dark font-display block">01. Piston Pump &amp; Cylinder Head</span>
+          <span class="text-[11px] text-slate-500">Die-cast aluminum fins &amp; connecting rod kinematics</span>
         </div>
       </div>
-      <p class="text-[11px] text-slate-400 text-center m-0">Handcrafted R&amp;D conceptual sketches developed by Hongrun industrial design team, blending German mechanical minimalism with clinical purity.</p>
+
+      <!-- Sketch 2 -->
+      <div class="sketch-card rounded-xl overflow-hidden border border-slate-200 bg-white p-3 shadow-sm">
+        <div class="h-44 bg-slate-50 rounded-lg flex items-center justify-center p-2 overflow-hidden cursor-pointer">
+          <img data-zoom data-hd="assets/images/sketches/03-Sketch-双塔吸附干燥器与三级微滤手绘草图.jpg" src="assets/images/sketches/03-Sketch-双塔吸附干燥器与三级微滤手绘草图.jpg" alt="Dual PSA Desiccant Dryer Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="pt-3 text-center">
+          <span class="text-xs font-bold text-brand-dark font-display block">02. Dual PSA Dryer &amp; Micro-Filter</span>
+          <span class="text-[11px] text-slate-500">Twin-tower desiccant cycle &amp; 0.01μm sterile manifold</span>
+        </div>
+      </div>
+
+      <!-- Sketch 3 -->
+      <div class="sketch-card rounded-xl overflow-hidden border border-slate-200 bg-white p-3 shadow-sm">
+        <div class="h-44 bg-slate-50 rounded-lg flex items-center justify-center p-2 overflow-hidden cursor-pointer">
+          <img data-zoom data-hd="assets/images/sketches/04-Sketch-电机转子与精密曲轴轴承手绘草图.jpg" src="assets/images/sketches/04-Sketch-电机转子与精密曲轴轴承手绘草图.jpg" alt="Motor Rotor & Crankshaft Assembly Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300"/>
+        </div>
+        <div class="pt-3 text-center">
+          <span class="text-xs font-bold text-brand-dark font-display block">03. Rotor, Crankshaft &amp; Bearings</span>
+          <span class="text-[11px] text-slate-500">Laser dynamic balanced copper rotor &amp; deep-groove seals</span>
+        </div>
+      </div>
     </div>
 
-    <!-- Section 2: Six Core Sub-assembly Breakdowns -->
-    <h2>2. Key Mechanical Sub-Assemblies: 3D CAD Dissection</h2>
+    <!-- Section 3: 3D CAD Dissection -->
+    <h2>3. Key Mechanical Sub-Assemblies: 3D CAD Engineering Dissection</h2>
 
     <!-- Sub-assembly 1 -->
-    <h3>2.1. 5-Axis CNC Helical Gears &amp; Dynamically Balanced Drive Shaft</h3>
+    <h3>3.1. 5-Axis CNC Helical Gears &amp; Dynamically Balanced Drive Shaft</h3>
     <p>
       Vibration and acoustic noise are primary challenges for clinic-side air systems. Hongrun drive shafts are precision-ground from high-alloy carbon structural steel on German 5-axis CNC machining centers to a surface finish tolerance of <strong>Ra &le; 0.2 μm</strong>. Dual opposing eccentric counterweights undergo electronic dynamic balance balancing (ISO 1940 Grade G2.5 standard), reducing operating vibration to &lt; 1.2 mm/s and acoustic emission down to <strong>&le; 55 dB(A)</strong>.
     </p>
 
     <!-- Sub-assembly 2 -->
-    <h3>2.2. Diamond-Coated Composite Self-Lubricating PTFE Piston Rings</h3>
+    <h3>3.2. Diamond-Coated Composite Self-Lubricating PTFE Piston Rings</h3>
     <p>
       In place of standard carbon or low-grade teflon, Hongrun utilizes high-molecular-weight <strong>Saint-Gobain PTFE matrix composite rings embedded with nano-scale diamond ceramics and graphite lubricity agents</strong>. During initial run-in, a microscopic transfer film forms on the hard-anodized cylinder bore (Hardness &ge; 450 HV), resulting in near-zero friction coefficient (&mu; &le; 0.04) and guaranteeing over <strong>30,000 operating hours</strong> without cylinder scoring or seal degradation.
     </p>
 
     <!-- Sub-assembly 3 -->
-    <h3>2.3. High-Efficiency Pure Copper-Core Motor with 135°C Thermal Protection</h3>
+    <h3>3.3. High-Efficiency Pure Copper-Core Motor with 135°C Thermal Protection</h3>
     <p>
       Each motor stator is precision-wound with 99.99% high-purity oxygen-free copper magnet wire (Class F insulation rated up to 155°C). An embedded bi-metallic thermostat automatically interrupts current at 135°C &plusmn; 5°C to protect against locked-rotor or low-voltage anomalies. The motor complies with <strong>National Grade-1 Energy Efficiency standards</strong>, consuming 28% less electrical power than conventional compressors over a 10-year lifecycle.
     </p>
 
     <!-- Sub-assembly 4 -->
-    <h3>2.4. Integrated Dual-Tower PSA Desiccant Drying Module</h3>
+    <h3>3.4. Integrated Dual-Tower PSA Desiccant Drying Module</h3>
     <p>
       To eliminate water droplets that foul dental handpieces and encourage bacterial growth in piping, the compressor integrates an automated twin-tower Pressure Swing Adsorption (PSA) dryer. Packed with high-capacity synthetic 13X molecular sieves and activated alumina, it achieves a stable <strong>pressure dew point of &minus;40°C to &minus;70°C</strong> with an ultra-low regeneration purge loss of only <strong>&le; 3.5%</strong>.
     </p>
 
     <!-- Sub-assembly 5 -->
-    <h3>2.5. 0.01μm Sub-Micron Multi-Stage Borosilicate Sterile Filter</h3>
+    <h3>3.5. 0.01μm Sub-Micron Multi-Stage Borosilicate Sterile Filter</h3>
     <p>
       The discharge line incorporates high-efficiency borosilicate micro-glass fiber coalescing and particulate filters. The multi-layer gradient pore structure achieves a <strong>99.999% retention rate for particles &ge; 0.01 μm</strong>, effectively trapping airborne dust, rust residues, and bacterial aerosols before entering the air receiver.
     </p>
 
     <!-- Sub-assembly 6 -->
-    <h3>2.6. Anti-Microbial Nano-Coated Vessel &amp; Solid Brass Safety Valve</h3>
+    <h3>3.6. Anti-Microbial Nano-Coated Vessel &amp; Solid Brass Safety Valve</h3>
     <p>
       The internal vessel surface is electrostatically lined with a 120 μm food-grade thermosetting anti-corrosive epoxy layer infused with nano-silver anti-microbial ions. This completely prevents internal rusting and sludge buildup, ensuring that stored air maintains zero odor and 100% biological cleanliness. Overpressure safety is backed by an ASME/CE-certified solid brass automatic relief valve.
     </p>
 
-    <!-- Technical Specification Matrix Table -->
-    <div class="my-10 bg-brand-light p-6 rounded-2xl border border-slate-200">
-      <h3 class="text-brand-dark font-display text-base font-bold uppercase tracking-wider mb-3">
-        Hongrun 3D CAD Engineering Specifications vs. Standard Market Systems
-      </h3>
-      <div class="overflow-x-auto">
-        <table class="w-full text-xs text-left text-slate-700">
-          <thead class="bg-slate-200/80 text-brand-dark font-display uppercase text-[11px]">
-            <tr>
-              <th class="p-3">Engineering Parameter</th>
-              <th class="p-3 font-bold text-brand-blue">Hongrun Class 0 Platform</th>
-              <th class="p-3">Standard Dental Compressor</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-200 bg-white">
-            <tr class="hover:bg-slate-50">
-              <td class="p-3 font-semibold text-slate-900">Oil Purity Certification</td>
-              <td class="p-3 font-bold text-brand-blue">ISO 8573-1 Class 0 (Zero Trace)</td>
-              <td class="p-3 text-slate-500">Class 1 or Non-certified</td>
-            </tr>
-            <tr class="hover:bg-slate-50">
-              <td class="p-3 font-semibold text-slate-900">Piston Ring Material</td>
-              <td class="p-3 font-bold text-brand-blue">Diamond-Coated PTFE Composite</td>
-              <td class="p-3 text-slate-500">Standard Virgin PTFE</td>
-            </tr>
-            <tr class="hover:bg-slate-50">
-              <td class="p-3 font-semibold text-slate-900">Design Operating Life</td>
-              <td class="p-3 font-bold text-brand-blue">&ge; 30,000 Hours Standard</td>
-              <td class="p-3 text-slate-500">8,000 &ndash; 12,000 Hours</td>
-            </tr>
-            <tr class="hover:bg-slate-50">
-              <td class="p-3 font-semibold text-slate-900">Pressure Dew Point</td>
-              <td class="p-3 font-bold text-brand-blue">&le; &minus;40°C (Integrated PSA)</td>
-              <td class="p-3 text-slate-500">+3°C to +10°C (Simple cooling)</td>
-            </tr>
-            <tr class="hover:bg-slate-50">
-              <td class="p-3 font-semibold text-slate-900">Medical Qualification</td>
-              <td class="p-3 font-bold text-brand-blue">NMPA Class II Medical License</td>
-              <td class="p-3 text-slate-500">Class I or Industrial only</td>
-            </tr>
-            <tr class="hover:bg-slate-50">
-              <td class="p-3 font-semibold text-slate-900">Vessel Anti-Corrosion</td>
-              <td class="p-3 font-bold text-brand-blue">Internal Nano-Silver Coating</td>
-              <td class="p-3 text-slate-500">Uncoated Raw Steel</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <!-- Section 4: Specifications Table -->
+    <h2>4. Engineering Specifications vs. Standard Market Systems</h2>
+    <div class="overflow-x-auto my-6 rounded-xl border border-slate-200 shadow-sm">
+      <table class="w-full text-xs text-left text-slate-700">
+        <thead class="bg-slate-100 text-brand-dark font-display uppercase text-[11px]">
+          <tr>
+            <th class="p-3.5 font-bold">Engineering Parameter</th>
+            <th class="p-3.5 font-bold text-brand-blue">Hongrun Class 0 Platform</th>
+            <th class="p-3.5 font-bold text-slate-500">Standard Dental Compressor</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200 bg-white">
+          <tr class="hover:bg-slate-50 transition">
+            <td class="p-3.5 font-semibold text-slate-900">Oil Purity Certification</td>
+            <td class="p-3.5 font-bold text-brand-blue">ISO 8573-1 Class 0 (Zero Trace)</td>
+            <td class="p-3.5 text-slate-500">Class 1 or Non-certified</td>
+          </tr>
+          <tr class="hover:bg-slate-50 transition">
+            <td class="p-3.5 font-semibold text-slate-900">Piston Ring Material</td>
+            <td class="p-3.5 font-bold text-brand-blue">Diamond-Coated PTFE Composite</td>
+            <td class="p-3.5 text-slate-500">Standard Virgin PTFE</td>
+          </tr>
+          <tr class="hover:bg-slate-50 transition">
+            <td class="p-3.5 font-semibold text-slate-900">Design Operating Life</td>
+            <td class="p-3.5 font-bold text-brand-blue">&ge; 30,000 Hours Standard</td>
+            <td class="p-3.5 text-slate-500">8,000 &ndash; 12,000 Hours</td>
+          </tr>
+          <tr class="hover:bg-slate-50 transition">
+            <td class="p-3.5 font-semibold text-slate-900">Pressure Dew Point</td>
+            <td class="p-3.5 font-bold text-brand-blue">&le; &minus;40°C (Integrated PSA)</td>
+            <td class="p-3.5 text-slate-500">+3°C to +10°C (Simple cooling)</td>
+          </tr>
+          <tr class="hover:bg-slate-50 transition">
+            <td class="p-3.5 font-semibold text-slate-900">Medical Qualification</td>
+            <td class="p-3.5 font-bold text-brand-blue">NMPA Class II Medical License</td>
+            <td class="p-3.5 text-slate-500">Class I or Industrial only</td>
+          </tr>
+          <tr class="hover:bg-slate-50 transition">
+            <td class="p-3.5 font-semibold text-slate-900">Vessel Anti-Corrosion</td>
+            <td class="p-3.5 font-bold text-brand-blue">Internal Nano-Silver Coating</td>
+            <td class="p-3.5 text-slate-500">Uncoated Raw Steel</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
 
-    <!-- Section 3: Engineering Sizing Recommendations -->
-    <h2>3. Engineering Application &amp; Compressor Sizing Guide</h2>
+    <!-- Section 5: Engineering Sizing Recommendations -->
+    <h2>5. Clinical Sizing &amp; Compressor Selection Recommendations</h2>
     <p>
       When specifying central air sources for modern healthcare facilities, pneumatic engineers must calculate peak simultaneous usage factors (k-factors) and include safety redundancy:
     </p>
@@ -319,26 +318,36 @@ tailwind.config = {
       <li><strong>Cleanroom Analytical Labs &amp; LC-MS Instruments:</strong> HYG-IoT Series Clean Compressed Air Stations. <a href="products-cleanair.html" class="text-brand-blue font-bold hover:underline">Explore Clean Air Stations &rarr;</a></li>
     </ul>
 
-    <!-- Author Bio & Engineering Contact Box -->
-    <div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-brand-blue to-brand-deep text-white flex flex-col sm:flex-row items-center gap-6 shadow-xl">
-      <div class="w-16 h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-2xl text-brand-sky shrink-0 shadow-inner">
+    <!-- =========================================================================
+         REDESIGNED AUTHOR & ENGINEERING CONTACT BOX (High-Contrast White Card)
+         Completely fixes the dark-on-dark unreadable text issue
+    ========================================================================= -->
+    <div class="my-12 p-6 sm:p-8 rounded-2xl bg-white border-2 border-brand-blue/30 shadow-xl flex flex-col sm:flex-row items-center gap-6">
+      <div class="w-16 h-16 rounded-2xl bg-brand-blue text-white flex items-center justify-center text-2xl shrink-0 shadow-md">
         <i class="fa-solid fa-compass-drafting"></i>
       </div>
       <div class="flex-1 text-center sm:text-left">
-        <h4 class="text-lg font-bold font-display text-white mb-1">Hongrun R&amp;D Engineering &amp; Application Team</h4>
-        <p class="text-xs text-slate-200 leading-relaxed mb-3">
-          Specializing in custom OEM/ODM medical compressor engineering, hospital gas piping simulations, and international distributor project tenders.
+        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1.5">
+          <h4 class="text-lg font-bold font-display text-slate-900">Hongrun R&amp;D Engineering &amp; Application Team</h4>
+          <span class="text-[11px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded-full">OEM / ODM Specialist</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+          Specializing in custom OEM/ODM medical compressor engineering, 3D CAD modeling, hospital gas piping simulations, and international distributor project tenders.
         </p>
         <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3">
-          <a href="contact.html" class="bg-gradient-to-r from-brand-accent to-brand-gold text-white px-4 py-1.5 rounded-md font-bold text-xs shadow hover:shadow-lg transition">Request Sizing Consultation</a>
-          <a href="products-core.html" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-3.5 py-1.5 rounded-md font-semibold text-xs transition">Browse Genuine Spares</a>
+          <a href="contact.html" class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-lg font-bold text-xs shadow-md hover:shadow-lg transition inline-flex items-center gap-1.5">
+            <i class="fa-regular fa-paper-plane"></i> Request Sizing Consultation
+          </a>
+          <a href="products-core.html" class="bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-700 border border-slate-300 px-4 py-2.5 rounded-lg font-semibold text-xs transition inline-flex items-center gap-1.5">
+            <i class="fa-solid fa-gears"></i> Browse Genuine Spares
+          </a>
         </div>
       </div>
     </div>
 
     <!-- Related Articles / Interlink Section -->
-    <div class="mt-14 pt-8 border-t border-slate-200">
-      <h3 class="text-lg font-bold text-brand-dark font-display uppercase tracking-wider mb-4">Related Engineering Insights &amp; Case Studies</h3>
+    <div class="mt-12 pt-8 border-t border-slate-200">
+      <h3 class="text-base font-bold text-brand-dark font-display uppercase tracking-wider mb-4">Related Technical Insights &amp; Case Studies</h3>
       <div class="grid sm:grid-cols-2 gap-4">
         <a href="news.html#article-11" class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-brand-blue/5 hover:border-brand-blue transition group">
           <span class="text-[10px] text-brand-accent font-bold uppercase">Sizing Guide</span>
@@ -360,6 +369,7 @@ tailwind.config = {
 <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
           <img src="assets/images/logo_transparent.png" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95"/>
@@ -373,6 +383,7 @@ tailwind.config = {
         </div>
       </div>
 
+      <!-- Col 3: 6-Category Full Products Hub -->
       <div>
         <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
         <ul class="space-y-3 text-sm">
@@ -386,6 +397,7 @@ tailwind.config = {
         </ul>
       </div>
 
+      <!-- Col 4: Corporate, Technical Insights & Dealership -->
       <div>
         <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Company &amp; Insights</h4>
         <ul class="space-y-3 text-sm">
@@ -400,6 +412,7 @@ tailwind.config = {
       </div>
     </div>
 
+    <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
       <p class="text-xs text-slate-500">ISO 13485 &middot; ISO 8573-1 Class 0 &middot; CE &middot; NMPA Class II Medical Qualification</p>
