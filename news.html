@@ -140,7 +140,7 @@ tailwind.config = {
 
       <!-- Category Filter Pills -->
       <div class="flex flex-wrap items-center gap-2">
-        <button class="filter-btn active text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 transition">All Articles (5)</button>
+        <button class="filter-btn active text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 transition">All Articles (6)</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Engineering Whitepapers</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Expos &amp; Events</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Quality Tour</button>
@@ -150,18 +150,69 @@ tailwind.config = {
     <!-- Compact 3-Column Blog Grid (Lightweight, High Information Density) -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- ==================== Article 1 (TODAY'S FEATURED WHITEPAPER - 2026-08-24): 3D CAD Exploded Anatomy ==================== -->
-      <article class="blog-card bg-white rounded-xl border-2 border-brand-blue/50 shadow-md overflow-hidden flex flex-col justify-between group relative">
+      <!-- ==================== Article 1 (LATEST RELEASE - 2026-08-25): HVS Dental Suction 3D Exploded Anatomy ==================== -->
+      <article class="blog-card bg-white rounded-xl border-2 border-teal-500/40 shadow-md overflow-hidden flex flex-col justify-between group relative">
+        <div class="absolute top-0 right-0 bg-teal-600 text-white text-[9px] font-black px-2.5 py-0.5 rounded-bl-lg uppercase tracking-widest z-20">
+          Latest · Aug 25
+        </div>
+        <div>
+          <!-- 3D Exploded View Thumbnail -->
+          <a href="blog-suction-exploded-anatomy.html" class="block h-44 bg-slate-950 relative overflow-hidden cursor-pointer">
+            <img data-zoom data-hd="assets/images/exploded/02-hvs-suction-exploded.jpg" src="assets/images/exploded/02-hvs-suction-exploded.jpg" alt="3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+            <div class="absolute top-3 left-3 bg-teal-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded shadow uppercase tracking-wider">
+              HVS Vacuum Anatomy
+            </div>
+            <span class="absolute bottom-2.5 right-3 text-white/90 text-[11px] font-medium bg-black/60 backdrop-blur px-2 py-0.5 rounded flex items-center gap-1">
+              <i class="fa-solid fa-fan text-teal-300"></i> 3D Blueprint
+            </span>
+          </a>
+
+          <div class="p-5">
+            <!-- Date & Reading Info -->
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+              <span class="text-teal-700 font-bold"><i class="fa-regular fa-calendar-check text-teal-600"></i> Aug 25, 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-teal-600 transition line-clamp-2">
+              <a href="blog-suction-exploded-anatomy.html">Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems</a>
+            </h3>
+
+            <!-- 2-line Clean Excerpt -->
+            <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
+              Analyzing fluid dynamic turbine impellers, two-stage cyclone water-air separation chambers, and 85%+ aerosol suppression across 1–50 dental chairs.
+            </p>
+
+            <!-- Topic Chips -->
+            <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
+              <a href="products-hvs.html" class="text-[10px] bg-teal-500/10 text-teal-700 font-semibold px-2 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">HVS Suction</a>
+              <a href="products-hvs.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Cyclone Separator</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+          <a href="blog-suction-exploded-anatomy.html" class="text-xs font-bold text-teal-700 hover:underline inline-flex items-center gap-1">
+            Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <span data-zoom data-hd="assets/images/exploded/02-hvs-suction-exploded.jpg" class="text-[11px] text-slate-400 hover:text-teal-700 cursor-pointer">View CAD</span>
+        </div>
+      </article>
+
+      <!-- ==================== Article 2 (FEATURED WHITEPAPER - 2026-08-24): Air Compressor 3D CAD Exploded Anatomy ==================== -->
+      <article class="blog-card bg-white rounded-xl border-2 border-brand-blue/40 shadow-md overflow-hidden flex flex-col justify-between group relative">
         <div class="absolute top-0 right-0 bg-brand-blue text-white text-[9px] font-black px-2.5 py-0.5 rounded-bl-lg uppercase tracking-widest z-20">
-          Featured
+          Featured · Aug 24
         </div>
         <div>
           <!-- 3D Exploded View Thumbnail -->
           <a href="blog-compressor-exploded-anatomy.html" class="block h-44 bg-slate-950 relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/banners/products_hero_exploded.jpg" src="assets/images/banners/products_hero_exploded.jpg" alt="3D CAD Exploded Engineering Anatomy of Medical Oil-Free Compressor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" src="assets/images/exploded/01-hy-compressor-exploded.jpg" alt="3D CAD Exploded Engineering Anatomy of Medical Oil-Free Compressor" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <div class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2.5 py-0.5 rounded shadow uppercase tracking-wider">
-              3D CAD Anatomy
+              Compressor Anatomy
             </div>
             <span class="absolute bottom-2.5 right-3 text-white/90 text-[11px] font-medium bg-black/60 backdrop-blur px-2 py-0.5 rounded flex items-center gap-1">
               <i class="fa-solid fa-cube text-brand-sky"></i> 3D Blueprint
@@ -198,11 +249,11 @@ tailwind.config = {
           <a href="blog-compressor-exploded-anatomy.html" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
             Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
-          <span data-zoom data-hd="assets/images/banners/products_hero_exploded.jpg" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View CAD</span>
+          <span data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View CAD</span>
         </div>
       </article>
 
-      <!-- ==================== Article 2 (ID 11): 15 Dental Chairs Sizing Guide ==================== -->
+      <!-- ==================== Article 3 (ID 11): 15 Dental Chairs Sizing Guide ==================== -->
       <article id="article-11" class="blog-card bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col justify-between group">
         <div>
           <!-- Clean 16:10 Aspect Thumbnail -->
