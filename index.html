@@ -363,12 +363,44 @@ setInterval(() => slideTo((currentSlide + 1) % 3), 12000);
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Hongrun Compressor Technology Co., Ltd.",
-  "url": "https://www.hongrun-tech.com",
-  "description": "30+ years of medical-grade oil-free air and suction systems manufacturing. ISO 8573-1 Class 0, NMPA Class II Medical Device certified.",
-  "address": {"@type": "PostalAddress", "addressLocality": "Zibo", "addressRegion": "Shandong", "addressCountry": "CN"},
-  "knowsAbout": ["Oil-free dental compressors", "Dental suction systems", "Medical clean air source", "Hospital central gas systems"]
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "@id": "https://www.hongrun1995.cn/#organization",
+      "name": "Hongrun Compressor Technology Co., Ltd.",
+      "alternateName": "宏润空压机科技有限公司",
+      "url": "https://www.hongrun1995.cn/",
+      "logo": "https://www.hongrun1995.cn/assets/images/logo_transparent.png",
+      "foundingDate": "1995-11",
+      "description": "China's leading manufacturer of Class II medical oil-free air compressors, quiet scroll hospital gas systems, dental vacuum suction, and purified water treatment with ISO 8573-1 Class 0 certification.",
+      "sameAs": [
+        "https://www.linkedin.com/company/125624035/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "High-tech Industrial Development Zone",
+        "addressLocality": "Zibo",
+        "addressRegion": "Shandong",
+        "addressCountry": "CN"
+      },
+      "knowsAbout": [
+        "ISO 8573-1 Class 0 Oil-Free Air",
+        "NMPA Class II Medical Gas Systems",
+        "Dental High-Vacuum Suction & Cyclone Separation",
+        "Hospital Central Gas Pipeline Engineering",
+        "Medical Water Purification Systems"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.hongrun1995.cn/#website",
+      "url": "https://www.hongrun1995.cn/",
+      "name": "Hongrun Technology International",
+      "publisher": {
+        "@id": "https://www.hongrun1995.cn/#organization"
+      }
+    }
+  ]
 }
 </script>
 <script src="assets/js/lightbox.js"></script>
