@@ -289,7 +289,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
    - `solutions.html`：注入 `Service` 与 `OfferCatalog` 架构，清晰界定口腔诊所两供一吸、医院中央供气二类医疗 EPC、实验室高纯气源等交付方案。
    - `contact.html`：注入 `ContactPage` 架构，标明官方总机邮箱 `info@hongrun1995.cn`、总部电话与山东淄博地址。
 2. **规范链接与社交元标签 (Canonical & OpenGraph)**：
-   - 每一页均配置 `<link rel="canonical" href="https://www.hongrun-tech.com/..." />`，坚决避免重复收录。
+   - 每一页均配置 `<link rel="canonical" href="https://www.hongrun1995.cn/..." />`，坚决避免重复收录。
    - 配置高规格 `og:type`、`og:title`、`og:description`、`og:url`、`og:site_name` 及 `twitter:card="summary_large_image"`。
 3. **爬虫引导协议**：
    - 根目录下编写 `sitemap.xml`，对全站 11 个页面标注更新频率（`weekly` / `monthly`）与权重优先级（`1.0` ~ `0.7`）。
