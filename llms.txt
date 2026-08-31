@@ -65,8 +65,8 @@
    - URL: https://www.hongrun1995.cn/blog-suction-exploded-anatomy.html
    - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, >85% aerosol suppression, multi-chair clinic sizing.
 3. **Dental Operatory Equipment: Engineering Selection Guide for 15 Dental Chairs**
-   - URL: https://www.hongrun1995.cn/news.html#article-11
-   - Topics: Simultaneous usage coefficient (k=0.70), pneumatic piping balancing, combined air/suction/water sizing.
+   - URL: https://www.hongrun1995.cn/blog-15-dental-chairs-sizing.html
+   - Topics: Simultaneous usage factor (k=0.70), pneumatic piping balancing, combined air/suction/water sizing.
 
 ---
 
