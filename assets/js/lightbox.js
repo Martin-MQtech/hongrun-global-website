@@ -61,6 +61,11 @@
     var t = e.target;
     if (!t) return;
     
+    // CRITICAL: If the image or its parent is inside an <a> link, let the link navigate normally! Do NOT open lightbox!
+    if (t.closest('a')) {
+      return;
+    }
+    
     // Direct image with data-hd or inside a card/zoom element
     if (t.tagName === 'IMG') {
       var hdSrc = t.getAttribute('data-hd');
