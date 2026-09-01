@@ -1,12 +1,12 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.0 (VI V3.0 终审通过版 · 完整吸收历史优化方案与参考资料 · 11 页面全量落地 · 6 大产品品类与 8 人销售矩阵闭环)  
-> **更新日期 Date:** 2026-08-20  
+> **版本 Version:** 3.1 (同步吸收 2026-09-01 参考站交叉核对与域名对接成果 · 全站 19 页面 · 6 大产品品类与 8 人销售矩阵闭环)  
+> **更新日期 Date:** 2026-09-01  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
 > **项目定位 Positioning:** 国际顶级 B2B 工业品与高端医疗气源国际官网（纯静态极速架构 · 全球边缘加速 · 独立仓库与域名隔离）  
-> **线上生产发布地址 Public URL:** [https://martin-mqtech.github.io/hongrun-global-website/](https://martin-mqtech.github.io/hongrun-global-website/)  
+> **线上生产发布地址 Public URL:** [https://www.hongrun1995.cn/](https://www.hongrun1995.cn/)（正式生产主域，HTTP/HTTPS 强制；`hongrun1995.cn` 301 至 www）  
 > **GitHub 主干仓库 Repository:** `Martin-MQtech/hongrun-global-website` (Branch: `main`)
 
 ---
@@ -14,7 +14,7 @@
 ## 目录 (Table of Contents)
 
 1. [项目概览与技术基建架构 (Project Overview & Tech Stack)](#1-项目概览与技术基建架构)
-2. [全站 11 个核心页面统计与交付全貌 (Complete 11-Page Site Inventory)](#2-全站-11-个核心页面统计与交付全貌)
+2. [全站 19 个核心页面统计与交付全貌 (Complete 19-Page Site Inventory)](#2-全站-19-个核心页面统计与交付全貌)
 3. [VI V3.0 终极视觉规范与设计系统 (VI V3.0 Final Design Standards)](#3-vi-v30-终极视觉规范与设计系统)
 4. [三类核心商业买家与转化漏斗 (Target Audiences & Conversion Funnel)](#4-三类核心商业买家与转化漏斗)
 5. [全球对标竞争分析与出海护城河 (Global Competitor Benchmarking & Moats)](#5-全球对标竞争分析与出海护城河)
@@ -28,6 +28,7 @@
 13. [图片素材、视频流与工业设计草图资产清单 (Project Media Asset Inventory)](#13-图片素材视频流与工业设计草图资产清单)
 14. [Git 工作流与全自动部署规范 (Git Workflow & Deployment SOP)](#14-git-工作流与全自动部署规范)
 15. [历史否决方案风控存档 (Rejected Approaches & Negative Constraints)](#15-历史否决方案风控存档)
+16. [2026-09-01 参考站交叉核对与域名对接成果 (Auditing & Evolution Protocol)](#16-2026-09-01-参考站交叉核对与域名对接成果)
 
 ---
 
@@ -45,23 +46,31 @@
 
 ---
 
-## 2. 全站 11 个核心页面统计与交付全貌
+## 2. 全站 19 个核心页面统计与交付全貌
 
-目前全站共包含 **11 个相互贯通的 HTML 页面**，全网已通过自动化死链审计测试（0 死链、0 缺失图片资产、0 语法异常）：
+目前全站共包含 **19 个相互贯通的 HTML 页面**，全网已通过自动化死链审计测试（0 死链、0 缺失图片资产、0 语法异常）：
 
 | # | 页面文件名 | 页面职责与核心模块 | 访问绝对路径 / 生产 URL |
 | :---: | :--- | :--- | :--- |
-| 1 | **`index.html`** | **官网主页 (Home)**：3 镜头全景轮播、Trust Bar 动态数据条、6 大品类全景网格、父女两代家国传承叙事、权威合作伙伴背书 | `https://martin-mqtech.github.io/hongrun-global-website/index.html` |
-| 2 | **`products.html`** | **产品总览中心 (Products Hub)**：3 镜头 3D CAD/旗舰机轮播、6 标签吸顶锚点导航、6 大系统规格参数表、直通独立详情页 | `https://martin-mqtech.github.io/hongrun-global-website/products.html` |
-| 3 | **`products-hy.html`** | **摆动活塞无油空压机 (HY Series)**：1~10 台牙椅门诊主力气源、HY-100~HYT-500 双机头冗余机组全参数表 | `https://martin-mqtech.github.io/hongrun-global-website/products-hy.html` |
-| 4 | **`products-hospital.html`** | **静音涡旋与医院系统 (HW/HBG)**：二类医疗器械资质、大型医院中央气源站、HW-200~HW-3600 全系机组 | `https://martin-mqtech.github.io/hongrun-global-website/products-hospital.html` |
-| 5 | **`products-hvs.html`** | **牙科电动抽吸机组 (HVS Series)**：1~50 台牙椅高负压抽吸工程、85%+ 高效气溶胶控制系统 | `https://martin-mqtech.github.io/hongrun-global-website/products-hvs.html` |
-| 6 | **`products-cleanair.html`** | **医用洁净气源站 (HYG/HVTG)**：露点 $\le -40^\circ	ext{C}$、0.01μm 绝对过滤一体化站深度评测 | `https://martin-mqtech.github.io/hongrun-global-website/products-cleanair.html` |
-| 7 | **`products-water.html`** | **医用纯化水系统 (HRC Series)**：多级 RO 反渗透、臭氧 + UV 双重消毒、消毒供应中心与中央环路配置 | `https://martin-mqtech.github.io/hongrun-global-website/products-water.html` |
-| 8 | **`products-core.html`** | **核心部件与耗材 (Core Spares)**：ZB 摆动泵头、4V 机头、PSA 模块化吸附干燥器、冷干机与备件清单 | `https://martin-mqtech.github.io/hongrun-global-website/products-core.html` |
-| 9 | **`solutions.html`** | **工程解决方案 (Solutions)**：4 大行业应用场景、真实医院/诊所施工工程图册、4K 数字化手术室与智能 IoT 拓扑 | `https://martin-mqtech.github.io/hongrun-global-website/solutions.html` |
-| 10 | **`about.html`** | **关于我们 (About Us)**：都柏林图书馆知识传承 Hero、1080P 双流智造视频展、民营家国情怀、16 节点权威史、企业文化 5 核心、极清证书墙、顶尖高校背书 | `https://martin-mqtech.github.io/hongrun-global-website/about.html` |
-| 11 | **`contact.html`** | **联系我们 (Contact Us)**：国际手术室&实景车间轮播、8 人技术销售矩阵（内嵌 CAD 线稿与专属社媒）、3 栏直通条、24h 报价表单、经销商招募 | `https://martin-mqtech.github.io/hongrun-global-website/contact.html` |
+| 1 | **`index.html`** | **官网主页 (Home)**：3 镜头全景轮播、Trust Bar 动态数据条、6 大品类全景网格、父女两代家国传承叙事、权威合作伙伴背书 | `https://www.hongrun1995.cn/index.html` |
+| 2 | **`products.html`** | **产品总览中心 (Products Hub)**：3 镜头 3D CAD/旗舰机轮播、6 标签吸顶锚点导航、6 大系统规格参数表、直通独立详情页 | `https://www.hongrun1995.cn/products.html` |
+| 3 | **`products-hy.html`** | **摆动活塞无油空压机 (HY Series)**：1~10 台牙椅门诊主力气源、HY-100~HYT-500 双机头冗余机组全参数表 | `https://www.hongrun1995.cn/products-hy.html` |
+| 4 | **`products-hospital.html`** | **静音涡旋与医院系统 (HW/HBG)**：二类医疗器械资质、大型医院中央气源站、HW-200~HW-3600 全系机组 | `https://www.hongrun1995.cn/products-hospital.html` |
+| 5 | **`products-hvs.html`** | **牙科电动抽吸机组 (HVS Series)**：1~50 台牙椅高负压抽吸工程、85%+ 高效气溶胶控制系统 | `https://www.hongrun1995.cn/products-hvs.html` |
+| 6 | **`products-cleanair.html`** | **医用洁净气源站 (HYG/HVTG)**：露点 $\le -40^\circ	ext{C}$、0.01μm 绝对过滤一体化站深度评测 | `https://www.hongrun1995.cn/products-cleanair.html` |
+| 7 | **`products-water.html`** | **医用纯化水系统 (HRC Series)**：多级 RO 反渗透、臭氧 + UV 双重消毒、消毒供应中心与中央环路配置 | `https://www.hongrun1995.cn/products-water.html` |
+| 8 | **`products-core.html`** | **核心部件与耗材 (Core Spares)**：ZB 摆动泵头、4V 机头、PSA 模块化吸附干燥器、冷干机与备件清单 | `https://www.hongrun1995.cn/products-core.html` |
+| 9 | **`solutions.html`** | **工程解决方案 (Solutions)**：4 大行业应用场景、真实医院/诊所施工工程图册、4K 数字化手术室与智能 IoT 拓扑 | `https://www.hongrun1995.cn/solutions.html` |
+| 10 | **`about.html`** | **关于我们 (About Us)**：都柏林图书馆知识传承 Hero、1080P 双流智造视频展、民营家国情怀、16 节点权威史、企业文化 5 核心、极清证书墙、顶尖高校背书 | `https://www.hongrun1995.cn/about.html` |
+| 11 | **`contact.html`** | **联系我们 (Contact Us)**：国际手术室&实景车间轮播、8 人技术销售矩阵（内嵌 CAD 线稿与专属社媒）、3 栏直通条、24h 报价表单、经销商招募 | `https://www.hongrun1995.cn/contact.html` |
+| 12 | **`news.html`** | **新闻与技术洞察中心 (News Hub)**：官方企业新闻、牙科工程选型指南、30 周年全国质量巡检洞察、国际医疗展会里程碑 | `https://www.hongrun1995.cn/news.html` |
+| 13 | **`blog-15-dental-chairs-sizing.html`** | **15 台牙椅选型白皮书 (Sizing Whitepaper)**：同时使用系数 k=0.70 计算、HYT 双机头冗余、HVS 中央负压选型 | `https://www.hongrun1995.cn/blog-15-dental-chairs-sizing.html` |
+| 14 | **`blog-compressor-exploded-anatomy.html`** | **空压机 3D CAD 爆炸解剖 (Exploded Anatomy)**：Class 0 零油纯度工程、PTFE 活塞环生命周期、PSA 吸附干燥解剖 | `https://www.hongrun1995.cn/blog-compressor-exploded-anatomy.html` |
+| 15 | **`blog-suction-exploded-anatomy.html`** | **HVS 抽吸系统 3D 爆炸解剖**：流体动力学、两级旋风分离、气溶胶控制、多椅选型 | `https://www.hongrun1995.cn/blog-suction-exploded-anatomy.html` |
+| 16 | **`blog-dental-south-china-expo.html`** | **华南国际口腔展 (Dental South China Expo)**：智能化洁净空气站与 HVS 抽吸系统首发、OEM 合作签约 | `https://www.hongrun1995.cn/blog-dental-south-china-expo.html` |
+| 17 | **`blog-jinan-medical-hub.html`** | **30 周年质量巡检 · 济南医疗器械枢纽**：制造集群与医院中央气站现场工程审计 | `https://www.hongrun1995.cn/blog-jinan-medical-hub.html` |
+| 18 | **`blog-beijing-quality-tour.html`** | **30 周年质量巡检 · 北京**：三甲医院、北大口腔医学院、中科院实验室 | `https://www.hongrun1995.cn/blog-beijing-quality-tour.html` |
+| 19 | **`privacy-policy.html`** | **隐私政策 (Privacy Policy)**：国际化数据保护与 GDPR 合规声明 | `https://www.hongrun1995.cn/privacy-policy.html` |
 
 ---
 
@@ -281,7 +290,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 ## 12. 国际 SEO / GEO 结构化数据与爬虫优化
 
-全站 11 个 HTML 页面均已完成 **SEO（传统搜索引擎优化）** 以及 **GEO（AI/生成式搜索引擎优化 · Generative Engine Optimization）** 的最高规格部署：
+全站 19 个 HTML 页面均已完成 **SEO（传统搜索引擎优化）** 以及 **GEO（AI/生成式搜索引擎优化 · Generative Engine Optimization）** 的最高规格部署：
 
 1. **Schema.org 结构化 JSON-LD 注入**：
    - `index.html` / `about.html`：注入 `Organization` 架构，包含企业全称、始创年份 (1995)、质量认证标准、官方社交媒体主页与全球运营属地。
@@ -292,7 +301,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
    - 每一页均配置 `<link rel="canonical" href="https://www.hongrun1995.cn/..." />`，坚决避免重复收录。
    - 配置高规格 `og:type`、`og:title`、`og:description`、`og:url`、`og:site_name` 及 `twitter:card="summary_large_image"`。
 3. **爬虫引导协议**：
-   - 根目录下编写 `sitemap.xml`，对全站 11 个页面标注更新频率（`weekly` / `monthly`）与权重优先级（`1.0` ~ `0.7`）。
+   - 根目录下编写 `sitemap.xml`，对全站 19 个页面标注更新频率（`weekly` / `monthly`）与权重优先级（`1.0` ~ `0.7`）。
    - 根目录下配置 `robots.txt`，允许 Googlebot、Bingbot、Applebot、Baiduspider 全量爬取。
 
 ---
@@ -328,7 +337,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
 * **提交规范**：严格遵循 Conventional Commits（`feat:`, `fix:`, `style:`, `refactor:`, `docs:`）。
 
 ### 14.2 发布三步验收 SOP
-1. **本地自动化校验**：运行 Python 脚本对全站 11 个 HTML 文件的标签闭合、图片有效性、内部超链接进行 100% 遍历检查。
+1. **本地自动化校验**：运行 Python 脚本对全站 19 个 HTML 文件的标签闭合、图片有效性、内部超链接进行 100% 遍历检查。
 2. **Git 提交推送**：
    ```bash
    git add -A
@@ -351,6 +360,56 @@ Hongrun Complete Clean Air & Suction Ecosystem
 | **大面积橙黄色块侵占主视觉** | 页面大面积使用高饱和度橙黄色块导致工业稳重感丧失，视觉轻浮。 | **极致克制点睛**：橙黄渐变严格限制在 CTA 按钮常态与国内版 Footer 反衬 Logo 上。 |
 | **将大头贴随意放大或拉长露腰** | 过于贴脸产生压迫感，过度拉长下半身导致卡片高度失控、滚屏疲劳。 | **锁定 3:4 标准商务胸像**：头顶留白 5%~10%，下切至胸口领结上方，全员头肩比严格水平对齐。 |
 | **编造不存在的网址与 VIP 标签** | 随意增加虚假链接或夸大性用语（如滥用 VIP Desk）损害海外 B2B 信任。 | **实事求是**：信息严格按真实档案录入，客观表述特殊大客户与技术支持通道。 |
+
+---
+
+## 16. 2026-09-01 参考站交叉核对与域名对接成果 (Auditing & Evolution Protocol)
+
+### 16.1 域名对接（已完成，供复制参照）
+- **唯一生产主域**：`https://www.hongrun1995.cn`（`hongrun1995.cn` 301 至 `www`，HTTPS 强制）。
+- **GitHub Pages 绑定是双向握手，两步缺一不可**：
+  1. **DNS 侧**：apex A 记录 → `185.199.108-111.153`；`www` CNAME → `martin-mqtech.github.io`。
+  2. **仓库侧**：仓库根目录放置 `CNAME` 文件（内容 `www.hongrun1995.cn`），或 GitHub Pages 设置填自定义域名——**只做 DNS 不做仓库认领会 404 "There isn't a GitHub Pages site here"，且不签发 SSL 证书**。
+- **重要教训**：配置类任务验收标准应为"最终可观测结果"（打开域名能看到网站），而非"指令里的操作都做完了"；否则会像本次一样漏掉第②步，导致 DNS 正确却 404。
+
+### 16.2 参考站交叉核对结论（供后续 Agent 交叉验证）
+
+> 本节为 2026-09-01 针对参考站 `https://www.hongrun1995.com` 的全站产品型号/图片/参数交叉核对沉淀。**后续 Agent 做同类核对时必须先读本节，避免重复踩坑或用错误方法误判。**
+
+**A. 权威基准数据源分层（判断型号/参数/图是否可信）**
+1. **最高权威**：官方图册《25宏润医用空气系统图册0501版90120.pdf》(37 个型号) + 《HONGRUN-COMPANY-PROFILE-V2.1.md》——决定型号真实性、完整参数。
+2. **高权威**：国内站 `www.hong-run.com`（产品分类页）——确认型号是否真实存在（HW-1800/2400/3600、HWG-200/400/600、HVTG-1200/1600 等在此站确认真实）。
+3. **素材源但不可作依据**：参考站 `www.hongrun1995.com`——**自身错配严重**（多型号共用一张图、部分型号已下架），仅作素材来源，取图前必须先 MD5 校验 + OCR 图内型号文字。
+4. **型号↔图片归属的权威判定**：以**浏览器真实渲染 DOM 的行内配对**为准（型号标题所在 grid 内的 img），**不得**只用正则 `按 <h3> 切分取首图`——本站在"左图右文"布局下图排于标题之前，正则会误配到下一型号。
+
+**B. 参考站 hongrun1995.com 官方权威型号基准（36 款）**
+| 系列 | 官方型号 |
+|---|---|
+| 活塞/医用 | HY-200、HYT-200、HYT-400、HYT-500、HYTG-300、HBG-400、HBG-900、HBG-1200、HW-200、HW-400、HW-800、HW-1200 |
+| 牙科抽吸 | HVS-1、HVS-2、HVS-3、HVS-4、HVS-5、HVS-7、HVS-10 |
+| 洁净气源 | HVTG-400、HVTG-900、HYG-301、HYG-302 |
+| 纯水 | HRC-60、HRC-100、HRC-100L、HRC-100S、HRC-180S、HRC-300、HRC-500 |
+| 核心部件 | ZB-100、ZB-200、ZB-300、PSA-Dryer、Freezing-Dryer、Scroll-700、4V、Tubing-Disinfectant |
+
+**C. 本次核对核心结论（渲染级逐一验证，全部通过）**
+- 全站 7 个产品页（hy/hvs/cleanair/water/hospital/core/products 总览）的**型号↔图片匹配正确**，src 小图与 data-hd 大图均与型号同名对应，含 lazy 加载。**无系统性错位。**
+- 总览页 `products.html` 的 HVS 用合并命名（HVS-5&7、15&20、25&30、35&40）共 `HVS-5-7-10.jpg`；HVS-5/7/10 共用机架图为官方做法，但 15&20 及以上共用一张图语义略牵强，可后续优化。
+- HRC-1000/2000 为合卡（intl 无独立图），复用系列图集，非错误。
+- HWG-200/400/600 使用 `hd/HWG-*.jpg` 国内版图（已加 `[IMG-TODO]` 注记，符合 SSOT 规则）。
+
+**D. 待产品方核实型号清单（用户决策：保留 + 标记待核实，不删除）**
+以下型号参考站英文站未收录，但多数已在国内站 `hong-run.com` 确认真实存在，判定为"官方英文站未全收录"而非编造：
+- `HVS-15 / HVS-25 / HVS-35 / HVS-300 / HVS-500`（英文站仅 HVS-1/2/3/4/5/7/10）
+- `HRC-1000 / HRC-2000`（intl 无独立图）
+- `HVTG-1200 / HVTG-1600`、`HYG-400`（英文站仅 HVTG-400/900、HYG-301/302）
+- `HBG-800`、`HW-600`（英文站未列，国内站部分型号对应）
+
+> 处理原则：**勿把本地站型号当作官方站不存在的"错型号"删除**；核对型录缺口时应补英文站名单，而非删本地。
+
+**E. 审计方法教训（重要，防止后续 Agent 重复误判）**
+1. **不要用算法"反证"用户的眼睛**：用户说"图重复/配错"时，先排查线上实际渲染，再对照图库。
+2. **检查"图↔型号匹配"的正确维度**：按真实渲染 DOM 行内配对（型号所在容器内的 img），且同时核对 `src` 与 `data-hd`（Lightbox 大图）。只用文件名/MD5 会漏掉"视觉重复"，只用正则切分会误配。
+3. **型号真伪判定不能只对参考站英文站**：多个型号在官方英文站未收录但国内站真实存在。判定"是否可对外售卖"应综合【官方图册 + 国内站 + 产品方确认】三源，且整体遵循 SSOT（见手册 §5-§13 型号逻辑）。
 
 ---
 
