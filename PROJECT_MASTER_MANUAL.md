@@ -411,6 +411,39 @@ Hongrun Complete Clean Air & Suction Ecosystem
 2. **检查"图↔型号匹配"的正确维度**：按真实渲染 DOM 行内配对（型号所在容器内的 img），且同时核对 `src` 与 `data-hd`（Lightbox 大图）。只用文件名/MD5 会漏掉"视觉重复"，只用正则切分会误配。
 3. **型号真伪判定不能只对参考站英文站**：多个型号在官方英文站未收录但国内站真实存在。判定"是否可对外售卖"应综合【官方图册 + 国内站 + 产品方确认】三源，且整体遵循 SSOT（见手册 §5-§13 型号逻辑）。
 
+### 16.3 搜索引擎收录提交（供后续 Agent / 其他工具落地）
+
+> 本节为 2026-09-01 收录就绪度核查结论。**站点技术层已就绪，唯一缺口是"主动提交 + 验证所有权"。**
+
+**收录就绪度（已核实 ✅）**
+- `sitemap.xml` 线上 200，19 页全部可访问（含 1 次瞬态 000 但复测 200）。
+- `robots.txt` 线上 200，指向正确 sitemap。
+- `llms.txt` 线上 200；Googlebot UA 抓取首页 200（已被自然抓取）。
+- 全站 single-English（`<html lang="en">`），无 hreflang（单语站可不加，可选优化）。
+- 全站 canonical / og / HTTPS / 无 noindex 均达标。
+
+**目标引擎与优先级（外贸 B2B 面向欧美/俄语/亚太/中东非）**
+| 引擎 | 覆盖 | 优先级 |
+|---|---|---|
+| Google Search Console | 欧美/全球主力 | 必做 |
+| Bing Webmaster Tools | 微软系/Yahoo/部分 AI 检索 | 必做 |
+| Yandex Webmaster | 俄罗斯/独联体（对应俄语区销售） | 重点 |
+| Baidu | 中国（英文站非主营） | 后置 |
+| AI 引擎(ChatGPT/Perplexity 等) | 全球 | 靠 llms.txt+内容自动被引，无需手动 |
+
+**验证与提交机件（脚本已就绪）**
+- 仓库根目录已备好 `inject_verification.py`：一次注入 4 个引擎的 HTML 验证 meta（Google=`google-site-verification`、Bing=`msvalidate.01`、Yandex=`yandex-verification`、Baidu=`baidu-site-verification`），插入 `<head>` 后，**幂等**（重复运行不累积），传空串即清除。
+- 用法：`python3 inject_verification.py <google> <bing> <yandex> <baidu>`；验证码从各引擎后台获取。
+- 操作流程：拿到 4 个验证码 → 运行脚本 → `git add` + push 上线 → 各引擎后台点"验证"→ 通过后提交 `https://www.hongrun1995.cn/sitemap.xml`。
+
+**操作清单（用户需在对应后台完成）**
+1. Google：`https://search.google.com/search-console` → 添加资源(域 `https://www.hongrun1995.cn`) → HTML 标签验证 → 取得 `google-site-verification` 码 → 复制给我预埋 → 验证通过 → Sitemaps 提交 `sitemap.xml`。
+2. Bing：`https://www.bing.com/webmasters` → 可从 GSC 一键导入或 HTML 码 → 提交 `sitemap.xml`。
+3. Yandex：`https://webmaster.yandex.com` → HTML 验证 → 提交 sitemap（若主营俄语区可考虑俄语 hreflang）。
+4. Baidu：`https://ziyuan.baidu.com` → HTML 验证 → 提交 sitemap（可选/后置）。
+
+> **教训**：验证 `meta` 是引擎验证所有权的关键令牌；**未验证前勿提交、勿上线假码**。脚本已用假码全流程测试并清除，线上保持无码、干净。
+
 ---
 
 > **手册结语**：本手册已完全吸收并统筹合并了历史 `20260628 国际网站优化方案` 与全期档案中的所有有效资产与业务策略，成为宏润科技国际官网（VI V3.0）的单一事实基准（Single Source of Truth）。历史散落文件已无保留必要，后续维护唯本手册是从。
