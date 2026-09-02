@@ -1,0 +1,6 @@
+# IndexNow 增量推送状态文件（本地运行态，不随站点发布）
+indexnow_state.json
+
+# Python 运行时产物
+__pycache__/
+*.pyc
