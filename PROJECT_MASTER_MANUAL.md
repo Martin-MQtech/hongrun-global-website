@@ -1,7 +1,7 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.1 (同步吸收 2026-09-01 参考站交叉核对与域名对接成果 · 全站 19 页面 · 6 大产品品类与 8 人销售矩阵闭环)  
+> **版本 Version:** 3.2 (在 v3.1 基础上于 2026-09-01 下半天更新：产品方最终确认 HYTG-300 (非 HYT-300) 命名、HY-200 储气罐 38L、图片文件名统一、HY 页 meta 修正；新增 §16.4 本轮最终共识)  
 > **更新日期 Date:** 2026-09-01  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
@@ -443,6 +443,39 @@ Hongrun Complete Clean Air & Suction Ecosystem
 4. Baidu：`https://ziyuan.baidu.com` → HTML 验证 → 提交 sitemap（可选/后置）。
 
 > **教训**：验证 `meta` 是引擎验证所有权的关键令牌；**未验证前勿提交、勿上线假码**。脚本已用假码全流程测试并清除，线上保持无码、干净。
+
+### 16.4 产品方最终确认结论（2026-09-01 下半天，已落地到代码）
+
+> 本节为本轮针对 HY 系列型号 / 参数 / 图片 / meta 的**产品方最终拍板结论**，已实际修改到 `products-hy.html`、`products.html` 与图片资产。**后续任何 Agent 若再遇到"HYT-300 vs HYTG-300"或"HY-200 储气罐"问题，一律以本节为准。**
+
+**A. 型号命名：正确是 HYTG-300，** 不是 **HYT-300**
+- **HYT-300 型号不存在**（官方图册 p12、参考站 `hongrun1995.com`、产品方三源均确认）。我此前记忆里"正确型号是 HYT-300"的旧结论**作废**。
+- 官方图册 p12 明确列出 **HYTG-300**：220V / 1.1kW×2 / ZB300×2 / 0.8MPa / 产气量 400 L/min / 储气罐 90L / 重 77kg / Φ8 / 860×420×780。
+- 全站统一为 **HYTG-300**，彻底清除 `HYT-300` 文字与文件名残留（已清零）。
+
+**B. HYTG-300 配图：用高清图，文件名统一为 `HYTG-300.jpg`**
+- 正确的高清大图（1920×1534，264KB）原文件名误写为 `HYT-300.jpg`，**图为对、名错**。
+- 处理：把高清内容归档到 `assets/images/products/intl/HYTG-300.jpg` 与 `thumbs/HYTG-300.jpg`，删除错误的 `HYT-300.jpg` 文件，更新两页引用（products-hy.html + products.html，共 intl×2 + thumbs×2）。
+- ⚠️ **不要改用 999×800 的那张低清小图**——它是旧小图，清晰度与 Lightbox 效果都差。用户最终拍板用高清图。
+
+**C. HY-200 储气罐容量：38 L（不是 32 L）**
+- 官方图册 p12 明确 HY-200：220V / 0.75kW / ZB200 / 0.8MPa / 150 L/min / 储气罐 **38L** / 重 26.5kg / Φ8 / 410×410×710。
+- 站内 `products-hy.html` 已从 32 L 改为 38 L。
+- **HY-200 图片用原图**（即对应 38L 的实物图）；用户后提供的另一张图为 32L 版本，**不使用**（保留原图即可）。
+
+**D. HY 页 meta 修正（去掉误导性描述）**
+- `<meta name="description">` 原文含 "Swedish spring plates … ≤60 dB … ISO 8573-1 Class 0"，其中"瑞典弹簧片、≤60dB"与 HY 活塞机实际不符（详见产品方反馈）。
+- 已改为：「HY/HYT Series 100% oil-free dental compressors. Patented valve core, Saint-Gobain PTFE rings, nano-antibacterial tanks, ≤65 dB. HY-100 to HYT-500.」
+- 卖点卡标题已由产品方 / 另一路 Agent 同步为「≤65 dB Low Noise」等合规表述。
+
+**E. 需要说明的一处认知纠正（供后续 Agent）**
+- 参考站 `hongrun1995.com` 及早期资料曾出现 `HYTG-300`，我此前误判"参考站把 HYT-300 错标成 HYTG-300"。实际上**官方图册与产品方均确认正确型号就是 HYTG-300**，方向应反过来——是"HYT-300"这个叫法本身就是错的。后续勿再沿用过时结论。
+
+**F. 本轮已落地修改清单（供验收参照）**
+1. `products-hy.html`：HY-200 储气罐 32→38 L；meta description 改写；HYTG-300 卡图片引用 `HYT-300.jpg`→`HYTG-300.jpg`。
+2. `products.html`：HYTG-300 卡图片引用 `HYT-300.jpg`→`HYTG-300.jpg`。
+3. 资产：`intl/HYTG-300.jpg`、`thumbs/HYTG-300.jpg` 替换为高清内容；删除 `intl/HYT-300.jpg`、`thumbs/HYT-300.jpg`。
+4. 全站复验：`HYT-300` 零残留（HTML 与文件名均已清零），HYTG-300 引用一致。
 
 ---
 
