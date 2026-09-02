@@ -18,7 +18,7 @@
   <meta property="og:description" content="Complete engineering teardown, ISO 8573-1 Class 0 validation, and clinical air distribution guide for dental clinics and hospitals."/>
   <meta property="og:type" content="article"/>
   <meta property="og:url" content="https://www.hongrun1995.cn/blog-dental-air-purity-engineering-guide.html"/>
-  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/exploded/01-hy-compressor-exploded.jpg"/>
+  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg"/>
 
   <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -53,14 +53,15 @@
   
   <style>
     @media print {
-      body { font-size: 11pt; line-height: 1.5; color: #000; background: #fff; }
+      body { font-size: 10.5pt; line-height: 1.45; color: #000; background: #fff; }
       .no-print { display: none !important; }
       .page-break { page-break-before: always; }
       a { text-decoration: none; color: #000; }
-      .shadow-xl, .shadow-md, .shadow-sm { box-shadow: none !important; }
-      .border { border-color: #ccc !important; }
+      .shadow-xl, .shadow-lg, .shadow-md, .shadow-sm { box-shadow: none !important; }
+      .border { border-color: #e2e8f0 !important; }
       pre, blockquote { page-break-inside: avoid; }
       table { page-break-inside: avoid; }
+      img { max-width: 100% !important; }
     }
     .technical-grid {
       background-size: 24px 24px;
@@ -85,9 +86,6 @@
         <a href="#chinese-version" class="bg-brand-blue/30 text-sky-400 border border-brand-blue/50 text-xs px-3 py-1.5 rounded font-medium hover:bg-brand-blue hover:text-white transition">
           中文版 / Chinese
         </a>
-        <button onclick="window.print()" class="bg-brand-blue hover:bg-brand-sky text-white text-xs px-4 py-1.5 rounded-lg font-bold transition shadow flex items-center gap-1.5">
-          <i class="fa-solid fa-file-pdf"></i> Print / Save PDF
-        </button>
       </div>
     </div>
   </nav>
@@ -283,12 +281,31 @@
           Unlike converted industrial reciprocating compressors that rely on splash-lubricated sumps or fragile oil-free piston rings, the <strong>Hongrun HY Series (ZB100 / ZB200 / ZB300)</strong> utilizes an uncompromising, dedicated medical wobble-piston (摇摆活塞) architectural framework.
         </p>
 
-        <!-- Teardown Diagram Image -->
+        <!-- Teardown Diagram Image with Lightbox -->
         <div class="not-prose bg-slate-900 rounded-2xl p-4 border border-slate-800 shadow-xl mb-8 text-center">
-          <img src="assets/images/exploded/01-hy-compressor-exploded.jpg" alt="Hongrun HY Dental Compressor Engineering Teardown Architecture" class="w-full max-h-96 object-contain mx-auto rounded-lg"/>
+          <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" src="assets/images/exploded/01-hy-compressor-exploded.jpg" alt="Hongrun HY Dental Compressor Engineering Teardown Architecture" class="w-full max-h-96 object-contain mx-auto rounded-lg cursor-pointer hover:opacity-95 transition"/>
           <p class="text-xs text-slate-400 mt-3">
-            Figure 1.1: Precision Exploded Engineering Schematic of Hongrun HY Wobble-Piston Pump Head, Saint-Gobain Composite Piston Rings, Flapper Reed Valve, and Nano-Coated Vessel.
+            <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Figure 1.1: Precision Exploded Engineering Schematic of Hongrun HY Wobble-Piston Pump Head, Saint-Gobain Composite Piston Rings, Flapper Reed Valve, and Nano-Coated Vessel (Click to Zoom).
           </p>
+        </div>
+
+        <!-- 2 Engineering Sketches: Pump Head & PSA Dryer -->
+        <div class="grid md:grid-cols-2 gap-6 not-prose mb-8">
+          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col items-center text-center">
+            <div class="h-48 w-full bg-slate-50 rounded-lg flex items-center justify-center overflow-hidden mb-3">
+              <img data-zoom data-hd="assets/images/sketches/sketch_anatomy_1.jpg" src="assets/images/sketches/sketch_anatomy_1.jpg" alt="Wobble Pump Head and Finned Cylinder Sketch" class="max-h-full w-auto object-contain mix-blend-multiply cursor-pointer hover:scale-105 transition"/>
+            </div>
+            <h4 class="text-xs font-bold text-brand-dark">Figure 1.2: Precision Wobble Piston &amp; Finned Cylinder Blueprint</h4>
+            <p class="text-[11px] text-slate-500 mt-1">Integral aluminum alloy finned cylinder sleeve for rapid heat dissipation and zero thermal distortion.</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col items-center text-center">
+            <div class="h-48 w-full bg-slate-50 rounded-lg flex items-center justify-center overflow-hidden mb-3">
+              <img data-zoom data-hd="assets/images/sketches/sketch_anatomy_3.jpg" src="assets/images/sketches/sketch_anatomy_3.jpg" alt="Dual-Tower PSA Desiccant Dryer Sketch" class="max-h-full w-auto object-contain mix-blend-multiply cursor-pointer hover:scale-105 transition"/>
+            </div>
+            <h4 class="text-xs font-bold text-brand-dark">Figure 1.3: Dual-Tower PSA Desiccant Molecular Sieve System</h4>
+            <p class="text-[11px] text-slate-500 mt-1">Delivering constant -40°C pressure dew point and 0.01μm absolute sterile particulate filtration.</p>
+          </div>
         </div>
 
         <!-- 3 Engineering Pillars -->
@@ -390,7 +407,7 @@
         </div>
       </section>
 
-      <!-- Section 1.5: Sizing & Sizing Formula -->
+      <!-- Section 1.5: Sizing, Sizing Formula & Visual Product Echo -->
       <section class="mb-12">
         <h2 class="text-2xl font-bold font-display text-brand-dark border-b border-slate-200 pb-3 mb-6">
           5. Clinical Sizing Guide: Mathematical Flow Calculations for 1 to 50 Dental Chairs
@@ -414,6 +431,87 @@
               <p class="mb-1"><strong>K<sub>sim</sub> (Simultaneity Factor):</strong> 1.0 (1 chair) &rarr; 0.70 (5 chairs) &rarr; 0.55 (15 chairs) &rarr; 0.40 (50 chairs)</p>
               <p class="mb-1"><strong>K<sub>safety</sub> (Duty Cycle Factor):</strong> 1.25 (Ensures &le; 65% compressor motor on-cycle)</p>
             </div>
+          </div>
+        </div>
+
+        <!-- Visual Full Family Portfolio Composite Hero -->
+        <div class="not-prose bg-white rounded-2xl p-6 border border-slate-200 shadow-xl mb-10 text-center relative overflow-hidden">
+          <div class="flex items-center justify-between mb-4 text-left">
+            <div>
+              <span class="text-[10px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded uppercase">Complete Equipment Matrix</span>
+              <h3 class="text-base font-bold text-brand-dark mt-1">Hongrun HY / HYT / HYTG Medical Compressor Portfolio (1–12 Chairs)</h3>
+            </div>
+            <span class="text-xs text-slate-400 flex items-center gap-1"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Zoom (4K)</span>
+          </div>
+          <div class="bg-gradient-to-b from-slate-50 to-white rounded-xl p-4 border border-slate-100 flex items-center justify-center">
+            <img data-zoom data-hd="assets/images/products/hy-family-portfolio.jpg" src="assets/images/products/hy-family-portfolio.png" alt="Complete Hongrun HY Dental Compressor Product Lineup on Stage" class="w-full max-h-96 object-contain mix-blend-multiply cursor-pointer hover:scale-105 transition-transform duration-500"/>
+          </div>
+          <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+            Figure 1.4: Complete scalable family architecture—from Point-of-Care single-operatory units (HY-100 / HY-200 / HY-300) to twin and quad redundant central units (HYT-200 / HYTG-300 / HYT-400 / HYT-500).
+          </p>
+        </div>
+
+        <!-- 4-Column Product Cards Grid (Direct Echo to Catalog) -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 not-prose mb-10">
+          
+          <!-- Card 1: HY-100 -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+            <div>
+              <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
+                <img data-zoom data-hd="assets/images/products/intl/HY-100.jpg" src="assets/images/products/intl/HY-100.jpg" alt="HY-100 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+              </div>
+              <span class="text-[10px] bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded">1 Treatment Chair</span>
+              <h4 class="font-bold text-sm text-brand-dark mt-2">HY-100 Point-of-Care</h4>
+              <p class="text-[11px] text-slate-500 mt-1">0.55 kW · 100 L/min · 24L Tank · 22.5 kg</p>
+            </div>
+            <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
+              View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </a>
+          </div>
+
+          <!-- Card 2: HY-200 (32L) -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+            <div>
+              <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
+                <img data-zoom data-hd="assets/images/products/intl/HY-200.jpg" src="assets/images/products/intl/HY-200.jpg" alt="HY-200 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+              </div>
+              <span class="text-[10px] bg-teal-50 text-teal-700 font-bold px-2 py-0.5 rounded">1–2 Treatment Chairs</span>
+              <h4 class="font-bold text-sm text-brand-dark mt-2">HY-200 Standard</h4>
+              <p class="text-[11px] text-slate-500 mt-1">0.75 kW · 150 L/min · <strong>32L Nano-Tank</strong> · 26.5 kg</p>
+            </div>
+            <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
+              View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </a>
+          </div>
+
+          <!-- Card 3: HY-300 (50L) -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+            <div>
+              <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
+                <img data-zoom data-hd="assets/images/products/intl/HY-300.jpg" src="assets/images/products/intl/HY-300.jpg" alt="HY-300 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+              </div>
+              <span class="text-[10px] bg-blue-50 text-brand-blue font-bold px-2 py-0.5 rounded">2–3 Treatment Chairs</span>
+              <h4 class="font-bold text-sm text-brand-dark mt-2">HY-300 High-Output</h4>
+              <p class="text-[11px] text-slate-500 mt-1">1.10 kW · 200 L/min · 50L Tank · 45.0 kg</p>
+            </div>
+            <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
+              View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </a>
+          </div>
+
+          <!-- Card 4: HYTG-300 (90L) -->
+          <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+            <div>
+              <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
+                <img data-zoom data-hd="assets/images/products/intl/HYTG-300.jpg" src="assets/images/products/intl/HYTG-300.jpg" alt="HYTG-300 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+              </div>
+              <span class="text-[10px] bg-purple-50 text-purple-700 font-bold px-2 py-0.5 rounded">3–5 Treatment Chairs</span>
+              <h4 class="font-bold text-sm text-brand-dark mt-2">HYTG-300 Twin Redundant</h4>
+              <p class="text-[11px] text-slate-500 mt-1">2.20 kW (1.1&times;2) · 400 L/min · 90L Tank</p>
+            </div>
+            <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
+              View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+            </a>
           </div>
         </div>
 
@@ -784,6 +882,77 @@
         </div>
       </div>
     </div>
+  
+    <!-- ==========================================
+         GLOBAL SOCIAL MEDIA & MULTI-PLATFORM SHARE BAR
+         ========================================== -->
+    <div class="no-print bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-md mt-12 mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
+        <div>
+          <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
+          <h3 class="text-base font-bold text-brand-dark font-display mt-2">Share this Article with your Professional Network</h3>
+          <p class="text-xs text-slate-500 mt-0.5">Distribute technical benchmarks, clinical guides, and engineering updates across global platforms.</p>
+        </div>
+
+        <!-- Social Icons Row -->
+        <div class="flex flex-wrap items-center gap-2.5">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-dental-air-purity-engineering-guide.html" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="w-10 h-10 rounded-xl bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-linkedin-in text-base"></i>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://api.whatsapp.com/send?text=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors%20https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-dental-air-purity-engineering-guide.html" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+
+          <!-- X / Twitter -->
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-dental-air-purity-engineering-guide.html&text=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-10 h-10 rounded-xl bg-black text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-x-twitter text-base"></i>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-dental-air-purity-engineering-guide.html" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="w-10 h-10 rounded-xl bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-facebook-f text-base"></i>
+          </a>
+
+          <!-- Telegram -->
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-dental-air-purity-engineering-guide.html&text=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-10 h-10 rounded-xl bg-[#229ED9] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-telegram text-lg"></i>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:?subject=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors&body=Read%20this%20article%20from%20Hongrun%20Technology%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-dental-air-purity-engineering-guide.html" title="Share via Email" class="w-10 h-10 rounded-xl bg-slate-700 text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-regular fa-envelope text-base"></i>
+          </a>
+
+          <!-- Copy Link -->
+          <button onclick="copyArticleLink(this)" title="Copy Link to Clipboard" class="h-10 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 border border-slate-300 transition-all">
+            <i class="fa-solid fa-link text-xs"></i>
+            <span class="copy-text">Copy Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function copyArticleLink(btn) {
+      var url = window.location.href;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function() {
+          var txt = btn.querySelector('.copy-text');
+          var orig = txt ? txt.textContent : '';
+          if (txt) txt.textContent = 'Copied!';
+          btn.classList.add('bg-teal-50', 'text-teal-700', 'border-teal-300');
+          setTimeout(function() {
+            if (txt) txt.textContent = orig;
+            btn.classList.remove('bg-teal-50', 'text-teal-700', 'border-teal-300');
+          }, 2000);
+        });
+      }
+    }
+    </script>
+
   </main>
 
   <!-- Global Clean Footer -->

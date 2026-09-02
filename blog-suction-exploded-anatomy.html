@@ -353,7 +353,78 @@ tailwind.config = {
     </div>
 
   </article>
-</main>
+
+    <!-- ==========================================
+         GLOBAL SOCIAL MEDIA & MULTI-PLATFORM SHARE BAR
+         ========================================== -->
+    <div class="no-print bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-md mt-12 mb-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
+        <div>
+          <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
+          <h3 class="text-base font-bold text-brand-dark font-display mt-2">Share this Article with your Professional Network</h3>
+          <p class="text-xs text-slate-500 mt-0.5">Distribute technical benchmarks, clinical guides, and engineering updates across global platforms.</p>
+        </div>
+
+        <!-- Social Icons Row -->
+        <div class="flex flex-wrap items-center gap-2.5">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-suction-exploded-anatomy.html" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="w-10 h-10 rounded-xl bg-[#0A66C2] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-linkedin-in text-base"></i>
+          </a>
+
+          <!-- WhatsApp -->
+          <a href="https://api.whatsapp.com/send?text=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems%20https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-suction-exploded-anatomy.html" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-10 h-10 rounded-xl bg-[#25D366] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+          </a>
+
+          <!-- X / Twitter -->
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-suction-exploded-anatomy.html&text=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-10 h-10 rounded-xl bg-black text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-x-twitter text-base"></i>
+          </a>
+
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-suction-exploded-anatomy.html" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="w-10 h-10 rounded-xl bg-[#1877F2] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-facebook-f text-base"></i>
+          </a>
+
+          <!-- Telegram -->
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-suction-exploded-anatomy.html&text=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-10 h-10 rounded-xl bg-[#229ED9] text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-brands fa-telegram text-lg"></i>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:?subject=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems&body=Read%20this%20article%20from%20Hongrun%20Technology%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Fblog-suction-exploded-anatomy.html" title="Share via Email" class="w-10 h-10 rounded-xl bg-slate-700 text-white flex items-center justify-center hover:scale-110 hover:shadow-lg transition-all duration-200">
+            <i class="fa-regular fa-envelope text-base"></i>
+          </a>
+
+          <!-- Copy Link -->
+          <button onclick="copyArticleLink(this)" title="Copy Link to Clipboard" class="h-10 px-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 border border-slate-300 transition-all">
+            <i class="fa-solid fa-link text-xs"></i>
+            <span class="copy-text">Copy Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function copyArticleLink(btn) {
+      var url = window.location.href;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function() {
+          var txt = btn.querySelector('.copy-text');
+          var orig = txt ? txt.textContent : '';
+          if (txt) txt.textContent = 'Copied!';
+          btn.classList.add('bg-teal-50', 'text-teal-700', 'border-teal-300');
+          setTimeout(function() {
+            if (txt) txt.textContent = orig;
+            btn.classList.remove('bg-teal-50', 'text-teal-700', 'border-teal-300');
+          }, 2000);
+        });
+      }
+    }
+    </script>
+
+  </main>
 
 <!-- ===================== VI V3.0 STANDARD GLOBAL FOOTER ===================== -->
 <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
