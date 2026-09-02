@@ -426,91 +426,246 @@ tailwind.config = {
     </div>
 
     <!-- Section 5 -->
+        <!-- Section 5 -->
     <h2>5. Clinical Sizing Guide: Mathematical Flow Calculations for 1 to 50 Dental Chairs</h2>
     <p>
       Proper pneumatic sizing requires calculating the <strong>Total Free Air Delivery (FAD)</strong> under peak simultaneous operational demand. Under international dental clinic engineering design guidelines (HTM 02-01 &amp; ISO 10637), the required compressor capacity is formulated as:
     </p>
 
-    <!-- Sizing Formula Box -->
-    <div class="bg-slate-900 text-white rounded-xl p-6 not-prose mb-8 shadow-md">
-      <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">Pneumatic Sizing Equation</div>
-      <div class="text-lg sm:text-xl font-mono font-bold text-white mb-3">
-        Q<sub>req</sub> = [&sum; (N<sub>chairs</sub> &times; q<sub>chair</sub>) + Q<sub>aux</sub>] &times; K<sub>sim</sub> &times; K<sub>safety</sub>
-      </div>
-      <div class="grid sm:grid-cols-2 gap-4 text-xs text-slate-300">
-        <div>
-          <p class="mb-1"><strong>q<sub>chair</sub> (Standard Demand):</strong> 50 L/min @ 0.5 MPa (Turbine + 3-way Syringe)</p>
-          <p class="mb-1"><strong>q<sub>surg</sub> (Surgical/High Demand):</strong> 65–80 L/min (Implant / Micro-motor)</p>
+    <!-- High-Contrast Engineering Formula Card -->
+    <div class="bg-slate-950 text-white rounded-2xl p-6 sm:p-8 not-prose mb-10 border border-slate-800 shadow-2xl relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-64 h-64 bg-brand-sky/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative z-10">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
+          <span class="text-xs text-sky-400 font-mono font-bold tracking-widest uppercase flex items-center gap-2">
+            <i class="fa-solid fa-square-root-variable text-sky-400"></i> Pneumatic Flow Sizing Equation
+          </span>
+          <span class="text-[11px] text-slate-400 bg-slate-900 px-2.5 py-1 rounded border border-slate-800">
+            ISO 10637 &middot; HTM 02-01 Standard
+          </span>
         </div>
-        <div>
-          <p class="mb-1"><strong>K<sub>sim</sub> (Simultaneity Factor):</strong> 1.0 (1 chair) &rarr; 0.70 (5 chairs) &rarr; 0.55 (15 chairs) &rarr; 0.40 (50 chairs)</p>
-          <p class="mb-1"><strong>K<sub>safety</sub> (Duty Cycle Factor):</strong> 1.25 (Ensures &le; 65% compressor motor on-cycle)</p>
+
+        <!-- Formula Display -->
+        <div class="bg-slate-900/90 rounded-xl p-5 border border-slate-800/80 mb-6 text-center sm:text-left">
+          <div class="text-xl sm:text-2xl lg:text-3xl font-mono font-bold text-white tracking-wide">
+            Q<sub class="text-sky-400 text-lg sm:text-xl">req</sub> = <span class="text-sky-300">[</span> &sum;(N<sub class="text-slate-300 text-sm">chairs</sub> &times; q<sub class="text-slate-300 text-sm">chair</sub>) + Q<sub class="text-slate-300 text-sm">aux</sub> <span class="text-sky-300">]</span> &times; K<sub class="text-amber-400 text-sm">sim</sub> &times; K<sub class="text-teal-400 text-sm">safety</sub>
+          </div>
+        </div>
+
+        <!-- Parameter Breakdown Grid (High-Contrast Clean Text) -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-slate-900/60 rounded-xl p-4 border border-slate-800/80 space-y-2.5">
+            <div class="flex items-start gap-2.5 text-xs text-slate-200">
+              <span class="text-sky-400 font-mono font-bold flex-shrink-0 bg-sky-950/60 border border-sky-800/50 px-2 py-0.5 rounded">q<sub>chair</sub></span>
+              <div>
+                <strong class="text-white block">Standard Flow Demand:</strong>
+                <span class="text-slate-300">50 L/min @ 0.5 MPa (High-Speed Turbine + 3-Way Syringe)</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-200">
+              <span class="text-sky-400 font-mono font-bold flex-shrink-0 bg-sky-950/60 border border-sky-800/50 px-2 py-0.5 rounded">q<sub>surg</sub></span>
+              <div>
+                <strong class="text-white block">Surgical / Implant Demand:</strong>
+                <span class="text-slate-300">65–80 L/min @ 0.6 MPa (Implant Motor &amp; Sandblaster)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-900/60 rounded-xl p-4 border border-slate-800/80 space-y-2.5">
+            <div class="flex items-start gap-2.5 text-xs text-slate-200">
+              <span class="text-amber-400 font-mono font-bold flex-shrink-0 bg-amber-950/60 border border-amber-800/50 px-2 py-0.5 rounded">K<sub>sim</sub></span>
+              <div>
+                <strong class="text-white block">Simultaneity Factor:</strong>
+                <span class="text-slate-300">1.0 (1 chair) &rarr; 0.70 (5 chairs) &rarr; 0.55 (15 chairs) &rarr; 0.40 (50 chairs)</span>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5 text-xs text-slate-200">
+              <span class="text-teal-400 font-mono font-bold flex-shrink-0 bg-teal-950/60 border border-teal-800/50 px-2 py-0.5 rounded">K<sub>safety</sub></span>
+              <div>
+                <strong class="text-white block">Duty Cycle Reserve Factor:</strong>
+                <span class="text-slate-300">1.25 (Ensures &le; 65% motor on-cycle duty for maximum pump longevity)</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 4-Column Product Cards Grid (Direct Echo to Catalog) -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 not-prose mb-10">
+    <!-- 4-Column Product Cards Grid (High-Contrast Industrial UI Design) -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 not-prose mb-12">
       
       <!-- Card 1: HY-100 -->
-      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+      <div class="bg-white rounded-2xl border-2 border-slate-200 hover:border-brand-blue hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
         <div>
-          <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
-            <img data-zoom data-hd="assets/images/products/intl/HY-100.jpg" src="assets/images/products/intl/HY-100.jpg" alt="HY-100 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+          <!-- Image Box with Lightbox -->
+          <div class="h-48 bg-gradient-to-b from-slate-50 to-white flex items-center justify-center p-3 relative border-b border-slate-100 overflow-hidden">
+            <img data-zoom data-hd="assets/images/products/intl/HY-100.jpg" src="assets/images/products/intl/HY-100.jpg" alt="HY-100 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply drop-shadow-md group-hover:scale-105 transition-transform duration-300 cursor-pointer"/>
+            <span class="absolute top-3 right-3 text-[10px] font-bold bg-slate-900/80 text-white px-2 py-0.5 rounded backdrop-blur">24L Tank</span>
           </div>
-          <span class="text-[10px] bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded">1 Treatment Chair</span>
-          <h4 class="font-bold text-sm text-brand-dark mt-2">HY-100 Point-of-Care</h4>
-          <p class="text-[11px] text-slate-500 mt-1">0.55 kW · 100 L/min · 24L Tank · 22.5 kg</p>
+          
+          <div class="p-4">
+            <!-- Chair Tier Badge -->
+            <span class="inline-block text-[11px] font-bold bg-slate-800 text-white px-2.5 py-1 rounded-md mb-2">
+              1 Treatment Chair
+            </span>
+            <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-brand-blue transition">HY-100 Point-of-Care</h4>
+            
+            <!-- Specs Grid -->
+            <div class="mt-3 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Power</span>
+                <strong class="text-slate-800 font-bold">0.55 kW</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Flow Rate</span>
+                <strong class="text-slate-800 font-bold">100 L/min</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Receiver</span>
+                <strong class="text-slate-800 font-bold">24 L</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Weight</span>
+                <strong class="text-slate-800 font-bold">22.5 kg</strong>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
-          View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        
+        <a href="products-hy.html" class="bg-slate-50 hover:bg-brand-blue hover:text-white text-brand-blue font-bold text-xs py-2.5 px-4 text-center border-t border-slate-100 transition flex items-center justify-center gap-1.5">
+          <span>Explore HY-100 Specs</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
 
       <!-- Card 2: HY-200 (32L) -->
-      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+      <div class="bg-white rounded-2xl border-2 border-teal-500/60 shadow-sm hover:border-teal-600 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
         <div>
-          <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
-            <img data-zoom data-hd="assets/images/products/intl/HY-200.jpg" src="assets/images/products/intl/HY-200.jpg" alt="HY-200 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+          <!-- Image Box with Lightbox -->
+          <div class="h-48 bg-gradient-to-b from-teal-50/40 to-white flex items-center justify-center p-3 relative border-b border-slate-100 overflow-hidden">
+            <img data-zoom data-hd="assets/images/products/intl/HY-200.jpg" src="assets/images/products/intl/HY-200.jpg" alt="HY-200 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply drop-shadow-md group-hover:scale-105 transition-transform duration-300 cursor-pointer"/>
+            <span class="absolute top-3 right-3 text-[10px] font-bold bg-teal-700 text-white px-2 py-0.5 rounded shadow">32L Standard</span>
           </div>
-          <span class="text-[10px] bg-teal-50 text-teal-700 font-bold px-2 py-0.5 rounded">1–2 Treatment Chairs</span>
-          <h4 class="font-bold text-sm text-brand-dark mt-2">HY-200 Standard</h4>
-          <p class="text-[11px] text-slate-500 mt-1">0.75 kW · 150 L/min · <strong>32L Nano-Tank</strong> · 26.5 kg</p>
+          
+          <div class="p-4">
+            <!-- Chair Tier Badge -->
+            <span class="inline-block text-[11px] font-bold bg-teal-700 text-white px-2.5 py-1 rounded-md mb-2 shadow-sm">
+              1–2 Treatment Chairs
+            </span>
+            <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-teal-700 transition">HY-200 Standard</h4>
+            
+            <!-- Specs Grid -->
+            <div class="mt-3 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Power</span>
+                <strong class="text-slate-800 font-bold">0.75 kW</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Flow Rate</span>
+                <strong class="text-slate-800 font-bold">150 L/min</strong>
+              </div>
+              <div class="bg-teal-50/80 p-2 rounded border border-teal-200">
+                <span class="text-[10px] text-teal-800 block font-bold">Nano-Tank</span>
+                <strong class="text-teal-900 font-black">32 L</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Weight</span>
+                <strong class="text-slate-800 font-bold">26.5 kg</strong>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
-          View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        
+        <a href="products-hy.html" class="bg-teal-50 hover:bg-teal-700 hover:text-white text-teal-800 font-bold text-xs py-2.5 px-4 text-center border-t border-teal-100 transition flex items-center justify-center gap-1.5">
+          <span>Explore HY-200 Specs</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
 
       <!-- Card 3: HY-300 (50L) -->
-      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+      <div class="bg-white rounded-2xl border-2 border-brand-blue/60 shadow-sm hover:border-brand-blue hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
         <div>
-          <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
-            <img data-zoom data-hd="assets/images/products/intl/HY-300.jpg" src="assets/images/products/intl/HY-300.jpg" alt="HY-300 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+          <!-- Image Box with Lightbox -->
+          <div class="h-48 bg-gradient-to-b from-blue-50/40 to-white flex items-center justify-center p-3 relative border-b border-slate-100 overflow-hidden">
+            <img data-zoom data-hd="assets/images/products/intl/HY-300.jpg" src="assets/images/products/intl/HY-300.jpg" alt="HY-300 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply drop-shadow-md group-hover:scale-105 transition-transform duration-300 cursor-pointer"/>
+            <span class="absolute top-3 right-3 text-[10px] font-bold bg-brand-blue text-white px-2 py-0.5 rounded shadow">50L High-Cap</span>
           </div>
-          <span class="text-[10px] bg-blue-50 text-brand-blue font-bold px-2 py-0.5 rounded">2–3 Treatment Chairs</span>
-          <h4 class="font-bold text-sm text-brand-dark mt-2">HY-300 High-Output</h4>
-          <p class="text-[11px] text-slate-500 mt-1">1.10 kW · 200 L/min · 50L Tank · 45.0 kg</p>
+          
+          <div class="p-4">
+            <!-- Chair Tier Badge -->
+            <span class="inline-block text-[11px] font-bold bg-brand-blue text-white px-2.5 py-1 rounded-md mb-2 shadow-sm">
+              2–3 Treatment Chairs
+            </span>
+            <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-brand-blue transition">HY-300 High-Output</h4>
+            
+            <!-- Specs Grid -->
+            <div class="mt-3 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Power</span>
+                <strong class="text-slate-800 font-bold">1.10 kW</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Flow Rate</span>
+                <strong class="text-slate-800 font-bold">200 L/min</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Receiver</span>
+                <strong class="text-slate-800 font-bold">50 L</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Weight</span>
+                <strong class="text-slate-800 font-bold">45.0 kg</strong>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
-          View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        
+        <a href="products-hy.html" class="bg-blue-50 hover:bg-brand-blue hover:text-white text-brand-blue font-bold text-xs py-2.5 px-4 text-center border-t border-blue-100 transition flex items-center justify-center gap-1.5">
+          <span>Explore HY-300 Specs</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
 
       <!-- Card 4: HYTG-300 (90L) -->
-      <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm flex flex-col justify-between group hover:border-brand-blue transition">
+      <div class="bg-white rounded-2xl border-2 border-purple-400/60 shadow-sm hover:border-purple-600 hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden group">
         <div>
-          <div class="h-36 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-3 overflow-hidden">
-            <img data-zoom data-hd="assets/images/products/intl/HYTG-300.jpg" src="assets/images/products/intl/HYTG-300.jpg" alt="HYTG-300 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-300"/>
+          <!-- Image Box with Lightbox -->
+          <div class="h-48 bg-gradient-to-b from-purple-50/40 to-white flex items-center justify-center p-3 relative border-b border-slate-100 overflow-hidden">
+            <img data-zoom data-hd="assets/images/products/intl/HYTG-300.jpg" src="assets/images/products/intl/HYTG-300.jpg" alt="HYTG-300 Dental Compressor" class="max-h-full w-auto object-contain mix-blend-multiply drop-shadow-md group-hover:scale-105 transition-transform duration-300 cursor-pointer"/>
+            <span class="absolute top-3 right-3 text-[10px] font-bold bg-purple-700 text-white px-2 py-0.5 rounded shadow">90L Twin Host</span>
           </div>
-          <span class="text-[10px] bg-purple-50 text-purple-700 font-bold px-2 py-0.5 rounded">3–5 Treatment Chairs</span>
-          <h4 class="font-bold text-sm text-brand-dark mt-2">HYTG-300 Twin Redundant</h4>
-          <p class="text-[11px] text-slate-500 mt-1">2.20 kW (1.1&times;2) · 400 L/min · 90L Tank</p>
+          
+          <div class="p-4">
+            <!-- Chair Tier Badge -->
+            <span class="inline-block text-[11px] font-bold bg-purple-700 text-white px-2.5 py-1 rounded-md mb-2 shadow-sm">
+              3–5 Treatment Chairs
+            </span>
+            <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-purple-700 transition">HYTG-300 Twin Redundant</h4>
+            
+            <!-- Specs Grid -->
+            <div class="mt-3 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Power</span>
+                <strong class="text-slate-800 font-bold">2.20 kW</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Flow Rate</span>
+                <strong class="text-slate-800 font-bold">400 L/min</strong>
+              </div>
+              <div class="bg-slate-50 p-2 rounded border border-slate-100">
+                <span class="text-[10px] text-slate-400 block font-medium">Receiver</span>
+                <strong class="text-slate-800 font-bold">90 L</strong>
+              </div>
+              <div class="bg-purple-50/80 p-2 rounded border border-purple-200">
+                <span class="text-[10px] text-purple-800 block font-bold">Redundancy</span>
+                <strong class="text-purple-900 font-black">Dual Pump</strong>
+              </div>
+            </div>
+          </div>
         </div>
-        <a href="products-hy.html" class="text-xs font-bold text-brand-blue hover:text-brand-sky mt-3 inline-flex items-center gap-1">
-          View Specs <i class="fa-solid fa-arrow-right text-[9px]"></i>
+        
+        <a href="products-hy.html" class="bg-purple-50 hover:bg-purple-700 hover:text-white text-purple-800 font-bold text-xs py-2.5 px-4 text-center border-t border-purple-100 transition flex items-center justify-center gap-1.5">
+          <span>Explore HYTG-300 Specs</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
         </a>
       </div>
+
     </div>
 
     <!-- Master Sizing Table -->
