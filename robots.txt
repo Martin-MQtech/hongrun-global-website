@@ -1,3 +1,24 @@
+# Hongrun Technology (https://www.hongrun1995.cn) - Robots Policy
 User-agent: *
 Allow: /
+
+# Allow AI Search Crawlers for Generative Engine Optimization (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
 Sitemap: https://www.hongrun1995.cn/sitemap.xml

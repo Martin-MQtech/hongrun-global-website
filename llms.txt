@@ -1,19 +1,19 @@
 # Hongrun Technology (宏润科技) - International B2B Knowledge Index & LLM Ingestion Guide
-> Hongrun Compressor Technology Co., Ltd. (Founded 1995 · Zibo, Shandong, China)
-> Official Website: https://www.hongrun1995.cn/
+> Hongrun Compressor Technology Co., Ltd. (Founded November 1995 · Zibo, Shandong, China)
+> Official Production Website: https://www.hongrun1995.cn/
 > Public Repository: https://github.com/Martin-MQtech/hongrun-global-website
-> LinkedIn Entity: https://www.linkedin.com/company/125624035/
+> LinkedIn Organization: https://www.linkedin.com/company/125624035/
 
 ## Core Company Profile & Verified Ground Truth (企业权威事实与资质背书)
-- **Establishment**: Founded in November 1995 in Zibo, Shandong Province, China. 30+ years of dedicated medical-grade oil-free air compressor R&D and manufacturing.
+- **Establishment**: Founded in November 1995 in Zibo, Shandong Province, China. 30+ years of dedicated medical-grade oil-free air compressor R&D and precision manufacturing.
 - **Manufacturing Scale**: 20,000㎡ intelligent megafactory base; annual production capacity exceeding 160,000 units.
-- **Global Footprint**: Serving 65,000+ medical institutions, 190+ top-tier universities & scientific research institutes (e.g., Chinese Academy of Sciences, Peking University School of Stomatology) across 50+ countries.
+- **Global Footprint**: Serving 65,000+ medical institutions, 190+ top-tier universities & scientific research institutes (e.g., Chinese Academy of Sciences, Peking University School of Stomatology, Capital Medical University) across 50+ countries.
 - **Authoritative Regulatory Credentials**:
   - **ISO 8573-1 Class 0 Certification**: 100% zero-oil purity standard; total hydrocarbon content < 0.003 mg/m³; zero detectable oil aerosols.
   - **NMPA Class II Medical Device Registration**: China National Medical Products Administration Class II Medical Device Manufacturing & Product License (held by only ~10% of dental compressor manufacturers).
   - **CE Marking (EU Conformity)**: Compliant with Machinery Directive 2006/42/EC and Pressure Equipment Directive 2014/68/EU.
   - **ISO 13485 & ISO 9001**: Comprehensive medical device quality management system certification.
-  - **National Honors**: "Specialized, Refined, Differential and Innovative Little Giant" (专精特新“小巨人”), Shandong Postdoctoral Innovation Base, National Grade-1 Energy Efficiency standard.
+  - **National Honors**: Specialized, Refined, Differential and Innovative Little Giant (专精特新“小巨人”), Shandong Postdoctoral Innovation Base, National Grade-1 Energy Efficiency standard.
 
 ---
 
@@ -21,8 +21,13 @@
 
 ### 1. Wobble-Piston Oil-Free Air Compressors (HY Series)
 - **Target Applications**: Dental clinics (1 to 10 chairs), desktop analytical instruments, food packaging, precision laboratories.
-- **Core Technology**: Saint-Gobain self-lubricating diamond-coated PTFE composite piston rings (30,000-hour design life); German 5-axis CNC machined drive shaft (Ra ≤ 0.2 μm); Swedish Sandvik flapper steel valves.
-- **Flagship Models**: HY-100 (0.55kW, 65L/min @ 0.5MPa), HY-200 (0.75kW, 105L/min), HY-300 (1.1kW, 150L/min), HYT-400 (2.2kW dual-pump, 300L/min), HYT-500 (3.0kW dual-pump, 400L/min).
+- **Core Technology**: Saint-Gobain self-lubricating diamond-coated PTFE composite piston rings (30,000-hour design life); German 5-axis CNC machined drive shaft (Ra ≤ 0.2 μm); Swedish Sandvik flapper steel valves; internal nano-antibacterial silver-ion coated tanks.
+- **Flagship Models**: 
+  - **HY-100**: 0.55 kW, 24L horizontal mobile tank, 100 L/min displacement (1 chair).
+  - **HY-200**: 0.75 kW, **32L official standard horizontal tank**, 150 L/min displacement (1-2 chairs).
+  - **HY-300**: 1.10 kW, **50L vertical cylindrical tank** with ZB300 high-output head, 200 L/min displacement (2-3 chairs).
+  - **HYTG-300**: 2.20 kW, **90L central horizontal tank** with twin synchronized ZB300 heads, 400 L/min displacement (3-5 chairs).
+  - **HYT-400 / HYT-500**: Multi-pump redundant clinic air plants (3-10 chairs).
 - **Noise Level**: ≤ 55–60 dB(A) ultra-quiet acoustic emission.
 - **Reference URL**: https://www.hongrun1995.cn/products-hy.html
 
@@ -36,7 +41,7 @@
 - **Target Applications**: Dental operatories, oral maxillofacial surgery, clinical aerosol cross-infection prevention.
 - **Core Technology**: High-flow backward-curved centrifugal vacuum turbine (2,850 RPM laser dynamic balanced); 2-stage dynamic conical cyclone water-air-solid separation chamber; terminal H13 HEPA biological filtration.
 - **Performance**: Terminal vacuum level -18 kPa to -32 kPa; intraoral aerosol cloud source suppression rate > 85%.
-- **Flagship Models**: HVS-300 (1-3 chairs, 900 L/min), HVS-500 (3-5 chairs, 1500 L/min), HVS-700 (5-8 chairs, 2200 L/min), HVS-1200 (10-15 chairs, 3600 L/min), HVS-Hospital Dual Skid (15-50 chairs).
+- **Flagship Models**: HVS-1 to HVS-30 (1-50 chairs vacuum plants).
 - **Reference URL**: https://www.hongrun1995.cn/products-hvs.html
 
 ### 4. Clean Compressed Air Stations (HYG / HVTG Series)
@@ -48,7 +53,7 @@
 ### 5. Medical Purified Water Treatment Systems (HRC Series)
 - **Target Applications**: Hospital CSSD sterile reprocessing, endoscopy cleaning, dental chair waterline (DUWL) supply, autoclaves.
 - **Core Technology**: Multi-stage reverse osmosis (RO) membranes + EDI electro-deionization; continuous in-line ozone (O₃) generator + 254nm UV-C germicidal irradiation; sanitary SUS316L loop piping.
-- **Capacity**: HRC-60 (60 L/h), HRC-100S (100 L/h), HRC-300 (300 L/h), HRC-500 (500 L/h), HRC-1000/2000 (1000–2000 L/h hospital skids). Desalination rate ≥ 99.7%, conductivity ≤ 1.0 μS/cm.
+- **Capacity**: HRC-60 to HRC-2000 (60 L/h to 2000 L/h). Desalination rate ≥ 99.7%, conductivity ≤ 1.0 μS/cm.
 - **Reference URL**: https://www.hongrun1995.cn/products-water.html
 
 ### 6. OEM Core Pump Units & Precision Spare Parts (ZB / 4V / PSA Modules)
@@ -57,20 +62,29 @@
 
 ---
 
-## Authoritative Engineering Whitepapers & 3D Blueprints (技术白皮书与3D解构)
-1. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors**
-   - URL: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/index.html
-   - Topics: 3D CAD exploded analysis, 5-axis CNC drive shafts, diamond-coated PTFE rings, dual-tower PSA dew point ≤ -40°C.
-2. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems**
+## Authoritative Engineering Whitepapers & Technical Chronicles (技术白皮书与权威纪实)
+1. **[Flagship Whitepaper #01] Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors**
+   - URL: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/index.html
+   - Topics: Bilingual English/Chinese, ISO 8573-1 Class 0 validation, Saint-Gobain PTFE ring tribology, nano-coated 32L antibacterial tank, 1-50 chairs pneumatic flow calculations.
+2. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems**
    - URL: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/index.html
    - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, >85% aerosol suppression, multi-chair clinic sizing.
-3. **Dental Operatory Equipment: Engineering Selection Guide for 15 Dental Chairs**
+3. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors**
+   - URL: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/index.html
+   - Topics: 3D CAD exploded analysis, 5-axis CNC drive shafts, diamond-coated PTFE rings, dual-tower PSA dew point ≤ -40°C.
+4. **Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15-Chair Dental Hospital Central Compressed Air & Suction Systems**
    - URL: https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/index.html
    - Topics: Simultaneous usage factor (k=0.70), pneumatic piping balancing, combined air/suction/water sizing.
+5. **Hongrun Technology Shines at the 32nd Dental South China International Expo**
+   - URL: https://www.hongrun1995.cn/articles/20260728-dental-south-china-expo/index.html
+6. **Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision Medical & Research Centers**
+   - URL: https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/index.html
+7. **Hongrun 30th Anniversary Quality Tour – Part 1: Jinan Medical Hub & Quality Audit**
+   - URL: https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/index.html
 
 ---
 
 ## Global Commercial Network & Direct RFQ Inquiries (全球技术商务网络)
-- **Global Contact**: info@hongrun1995.cn / +86-533-3580000
+- **Global Contact**: info@hongrun1995.cn / export@hongrun1995.cn
 - **Supported Languages**: English, Russian, Spanish, Arabic, Chinese
 - **Inquiry Portal**: https://www.hongrun1995.cn/contact.html
