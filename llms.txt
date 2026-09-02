@@ -59,13 +59,13 @@
 
 ## Authoritative Engineering Whitepapers & 3D Blueprints (技术白皮书与3D解构)
 1. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors**
-   - URL: https://www.hongrun1995.cn/blog-compressor-exploded-anatomy.html
+   - URL: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/index.html
    - Topics: 3D CAD exploded analysis, 5-axis CNC drive shafts, diamond-coated PTFE rings, dual-tower PSA dew point ≤ -40°C.
 2. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems**
-   - URL: https://www.hongrun1995.cn/blog-suction-exploded-anatomy.html
+   - URL: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/index.html
    - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, >85% aerosol suppression, multi-chair clinic sizing.
 3. **Dental Operatory Equipment: Engineering Selection Guide for 15 Dental Chairs**
-   - URL: https://www.hongrun1995.cn/blog-15-dental-chairs-sizing.html
+   - URL: https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/index.html
    - Topics: Simultaneous usage factor (k=0.70), pneumatic piping balancing, combined air/suction/water sizing.
 
 ---
