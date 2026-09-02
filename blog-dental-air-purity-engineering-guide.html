@@ -34,9 +34,9 @@ tailwind.config = {
 </script>
 <style>
 /* High-Contrast Technical Typography System */
-.article-body p { margin-bottom: 1.35rem; line-height: 1.85; color: #334155; font-size: 0.95rem; }
-.article-body h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 3rem; margin-bottom: 1.25rem; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; }
-.article-body h3 { font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; margin-top: 2rem; margin-bottom: 0.85rem; font-size: 1.3rem; letter-spacing: -0.01em; }
+.article-body > p { margin-bottom: 1.35rem; line-height: 1.85; color: #334155; font-size: 0.95rem; }
+.article-body > h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 3rem; margin-bottom: 1.25rem; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; }
+.article-body > h3 { font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; margin-top: 2rem; margin-bottom: 0.85rem; font-size: 1.3rem; letter-spacing: -0.01em; }
 .spec-box { background: #F8FAFC; border: 1px solid #E2E8F0; border-left: 4px solid #0F4C81; }
 </style>
 
@@ -910,20 +910,29 @@ tailwind.config = {
 
     
 
-    <!-- Standard Engineering CTA Box -->
-    <div class="bg-gradient-to-r from-brand-blue to-brand-deep rounded-2xl p-8 text-white shadow-xl mt-14 mb-8 not-prose">
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <span class="text-xs text-sky-400 font-bold uppercase tracking-wider">Direct Engineering Support</span>
-          <h3 class="text-xl font-bold font-display mt-1 text-white">Need a Customized 1–50 Chair Pneumatic CAD Sizing Blueprint?</h3>
-          <p class="text-xs text-slate-200 mt-2 max-w-xl">Our senior biomedical application engineers provide comprehensive pipe sizing calculations, isometric plant room CAD drawings, and complete equipment schedules within 24 hours.</p>
+        <!-- ==========================================
+         HIGH-END ENGINEERING CTA CONSULTATION BOX
+         ========================================== -->
+    <div class="bg-gradient-to-br from-slate-900 via-[#0B2545] to-[#0A192F] rounded-2xl p-8 sm:p-10 text-white shadow-2xl border border-slate-700/80 mt-14 mb-8 not-prose">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+            <i class="fa-solid fa-compass-drafting text-sky-400"></i> Direct Engineering Consultation
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight leading-snug" style="color: #FFFFFF !important;">
+            Need a Customized 1–50 Chair Pneumatic CAD Sizing Blueprint?
+          </h3>
+          <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
+            Our senior biomedical application engineers provide comprehensive pipe pressure loss calculations, isometric plant room CAD drawings, and complete Class 0 equipment schedules within 24 hours.
+          </p>
         </div>
-        <div class="flex flex-wrap gap-3">
-          <a href="contact.html" class="bg-brand-accent hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-bold text-xs transition shadow-md">
-            Request Sizing Schedule
+
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
+          <a href="contact.html" class="bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
+            <i class="fa-regular fa-paper-plane"></i> Request Sizing Schedule
           </a>
-          <a href="products-hy.html" class="bg-white/10 hover:bg-white/20 text-white px-5 py-3 rounded-lg font-semibold text-xs border border-white/20 transition">
-            Explore HY Compressors
+          <a href="products-hy.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-all flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
+            <i class="fa-solid fa-layer-group"></i> Explore HY Compressors
           </a>
         </div>
       </div>
