@@ -63,23 +63,29 @@
 ---
 
 ## Authoritative Engineering Whitepapers & Technical Chronicles (技术白皮书与权威纪实)
-1. **[Flagship Whitepaper #01] Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors**
+1. **[Central Station Sizing Whitepaper #09] Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)**
+   - URL: https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html
+   - Topics: 4 to 8 dental chairs simultaneous flow diversity (k=0.60–0.45), closed-loop ring manifold (DN25/DN15), PLC multi-head alternation & soft start, N+1 parallel failover, HYTG-300 90L vs HY-300 50L engineering comparison.
+2. **[Clinical Sizing Whitepaper #08] Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 32L Makes or Breaks Your Practice)**
+   - URL: https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/index.html
+   - Topics: 1 to 3 dental chairs simultaneous sizing math, under-counter acoustic layout (≤55 dBA), cycle frequency analysis, and HY-100 (24L) vs. HY-200 (32L) vs. HY-300 (50L) selection benchmark.
+3. **[Flagship Whitepaper #01] Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors**
    - URL: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/index.html
    - Topics: Bilingual English/Chinese, ISO 8573-1 Class 0 validation, Saint-Gobain PTFE ring tribology, nano-coated 32L antibacterial tank, 1-50 chairs pneumatic flow calculations.
-2. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems**
+4. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems**
    - URL: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/index.html
    - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, >85% aerosol suppression, multi-chair clinic sizing.
-3. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors**
+5. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors**
    - URL: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/index.html
    - Topics: 3D CAD exploded analysis, 5-axis CNC drive shafts, diamond-coated PTFE rings, dual-tower PSA dew point ≤ -40°C.
-4. **Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15-Chair Dental Hospital Central Compressed Air & Suction Systems**
+6. **Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15-Chair Dental Hospital Central Compressed Air & Suction Systems**
    - URL: https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/index.html
    - Topics: Simultaneous usage factor (k=0.70), pneumatic piping balancing, combined air/suction/water sizing.
-5. **Hongrun Technology Shines at the 32nd Dental South China International Expo**
+7. **Hongrun Technology Shines at the 32nd Dental South China International Expo**
    - URL: https://www.hongrun1995.cn/articles/20260728-dental-south-china-expo/index.html
-6. **Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision Medical & Research Centers**
+8. **Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision Medical & Research Centers**
    - URL: https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/index.html
-7. **Hongrun 30th Anniversary Quality Tour – Part 1: Jinan Medical Hub & Quality Audit**
+9. **Hongrun 30th Anniversary Quality Tour – Part 1: Jinan Medical Hub & Quality Audit**
    - URL: https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/index.html
 
 ---

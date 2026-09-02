@@ -1,7 +1,7 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.4 (在 v3.3 基础上于 2026-09-02 傍晚完成全站 20 页 SEO / GEO / Schema.org / A11y / 协议全维度深度扫描升级：100% 元数据达标、0 死链、0 缺失 Alt、AI 搜索引擎索引 llms.txt 全面就绪；详见 §12, §16.4 与 §20.2)  
+> **版本 Version:** 3.5 (在 v3.4 基础上于 2026-09-02 全面升级白皮书矩阵与内容工厂执行规范：发布第 8、9 篇核心选型白皮书；锁死全站 VI V3.0 标准页脚与底部社交分享栏 SSOT；确立封面真实工业实物图优先 + CAD工程蓝图入正文插图策略；确立 news.html 卡片 6 要素与中文呼吸感杂志排版 1:1 对称标准；详见 §17 与 §20.3)  
 > **更新日期 Date:** 2026-09-02  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
@@ -555,27 +555,87 @@ Hongrun Complete Clean Air & Suction Ecosystem
 ### 17.3 全球主流社交媒体分享矩阵标准 (Social Share Bar V3.0)
 
 所有文章底部必须嵌入标准化 V3.0 社交媒体分享矩阵，满足国际 B2B 采购商与临床医生的全场景分享需求：
-
-| 渠道 | 平台定位 | 标准实现与技术细节 |
-| :--- | :--- | :--- |
-| **LinkedIn** | 海外 B2B 专业医疗器械分销商与采购商主渠道 | `#0A66C2`，官方分享接口，带参数 |
-| **WhatsApp** | 海外客户、诊所医生与经销商移动端一键私信/群发 | `#25D366`，官方移动 API，预设标题与链接 |
-| **X (Twitter)** | 国际行业前沿动态快速推文 | `#000000`，**必须使用内嵌原生矢量 SVG**，彻底防止字体库缺失导致图标空白 |
-| **YouTube** | 官方工程拆解、产品演示与品牌视频频道 | `#FF0000`，直达宏润官方工程频道 |
-| **Instagram** | 全球年轻口腔医生与诊所美学社群 | `#FCAF45` $	o$ `#C837AB` 官方渐变色 |
-| **Facebook** | 国际牙科医生社群与行业展会圈层分享 | `#1877F2`，官方分享接口 |
-| **Telegram** | 中东、东欧、拉美及东南亚客户常用即时通讯 | `#229ED9`，官方 Telegram 转发接口 |
-| **Email** | 采购团队与工程技术部邮件直发 | `#475569`，调起邮件客户端并预设 Subject 与 Body |
-| **Copy Link** | 一键复制当前 URL 至剪贴板 | `#0F4C81`，原生剪贴板 API + 动态 `Copied!` 绿色状态反馈 |
+1. **强制位置规范**：社交分享栏必须放置在 `<article>` 区域的**最底部**（紧随 CTA 咨询框之后，在 `</article>` 结束标签之前），杜绝错误上浮到 CTA 咨询框之上。
+2. **标准圆角方块外观**：每个图标统一采用 `w-9 h-9 rounded-lg` 标准尺寸与专色底色，悬停轻微缩放 `hover:scale-105`；
+3. **8 大平台与功能矩阵**：
+   - **LinkedIn** (`#0A66C2`)：海外 B2B 专业医疗器械分销商主渠道
+   - **WhatsApp** (`#25D366`)：海外客户与经销商移动端一键私信/群发
+   - **X (Twitter)** (`#000000`)：原生矢量 SVG 图标，防止字体图标丢失
+   - **YouTube** (`#FF0000`)：直达宏润官方工程频道
+   - **Instagram** (`#FCAF45` → `#C837AB` 渐变)：全球年轻口腔医生社群
+   - **Facebook** (`#1877F2`)：国际牙科医生与行业展会圈层
+   - **Telegram** (`#229ED9`)：中东、东欧、拉美客户即时通讯
+   - **Email** (`#475569`)：调起邮件客户端直发询盘
+   - **Copy Link** (`bg-slate-100 border border-slate-300`)：一键复制当前 URL，带有 `copyArticleLink(this)` 绿色 `Copied!` 状态反馈。
 
 ---
 
 ### 17.4 知识图谱与 WordPress 风格标签云互联规范
 
-1. **顶部语义标签带**：在 `<header>` 区域标明核心技术主题（如 `#ISO-8573-1-Class-0`、`#Wobble-Piston-Tech`、`#Nano-Tank-32L`）。
+1. **顶部语义标签带**：在 `<header>` 区域标明核心技术主题（如 `#4-8 Dental Chairs Sizing`、`#HYTG-300 90L`）。
 2. **底部主题标签中心 (`#taxonomy-hub`)**：
    - 交互式标签云（WordPress-style Tag Cloud），每个标签直达相关产品分类或技术专题；
    - 3 列跨文章关联白皮书卡片矩阵，实现各篇文章之间的网状交叉互联，极大提升站内停留时长与 Google SEO 权重传递。
+
+---
+
+### 17.5 全局统一页脚单一事实基准 (VI V3.0 Master Global Footer SSOT)
+
+**【绝对禁令】严禁以任何理由动用、替换或简化全站统一标准页脚！**
+所有标准文章页面与产品页面底部的页脚必须 100% 保持与 `index.html` 像素级一致的 **VI V3.0 STANDARD GLOBAL FOOTER**：
+1. **结构要素**：
+   - 统一使用 `<footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">`；
+   - **第一栏（Brand & Positioning）**：并列显示国际版透明反白 Logo（`logo_transparent.png`）与国内橙黄经典 Logo（`banners/logo_cn_orange.png`），配以 30 年品牌传承定位描述与 LinkedIn/WhatsApp/News 直达链接；
+   - **第二栏（Products）**：6 大核心产品线直达链接与产品总览中心入口；
+   - **第三栏（Company & Insights）**：企业故事、文化价值观、认证资质、解决方案、新闻中心与全球招商入口；
+   - **第四栏（Bottom Copyright & Certifications Baseline）**：准确版权声明 `© 2026 Hongrun Compressor Technology Co., Ltd. · Zibo, Shandong, China · All Rights Reserved.`，底线标注 `ISO 13485 · ISO 8573-1 Class 0 · CE · NMPA Class II Medical Qualification`。
+2. **严禁行为**：
+   - 严禁自行生造简易 4 列文字页脚；
+   - 严禁填入虚拟或错误的联系方式（如禁止出现假电话号码 `+86 533 2b09eacc` 等非真实信息）；
+   - 严禁擅自删除中英文双品牌 Logo 组合。
+
+---
+
+### 17.6 封面图片与正文插图分工策略 (Cover vs. Body Illustration Strategy)
+
+1. **文章主封面（Hero Cover Image）优先实物与真实工业场景**：
+   - 封面图片严禁千篇一律盲目强推 AI 生成草图；
+   - 优先从宏润官方高清实物图库（`assets/images/products/hd/`）、组合产品矩阵全景图（`banners/en_b2_products.jpg`）或现代装配制造实景图（`banners/contact_hero_assembly.jpg`）中选取；
+   - 真实工业实物能传达深厚制造底蕴，建立国际 B2B 买家信任。
+2. **AI 生成 CAD 拓扑与工程线稿的标准使用场景（正文工程插图）**：
+   - AI 生成的 16:9 高精 CAD 拓扑蓝图、流体动力学管网示意图，是极高价值的技术论证素材；
+   - 必须将其作为**正文技术插图（Figure 1.0 / Figure 2.0）**嵌入在对应的数学核算、管网设计或控制逻辑章节内；
+   - 配合深色渐变边框卡片、放大交互标签（`data-zoom`）与中英文工程图注，为临床医生和医院工程技术人员提供直观施工参考。
+
+---
+
+### 17.7 博客列表聚合页卡片解剖标准 (news.html Article Card Anatomy SSOT)
+
+在 `news.html` 列表中，每一篇博客/白皮书卡片必须 100% 完整包含以下 6 大标准解剖要素：
+1. **缩略图与徽章**：上部展示 16:9 产品/蓝图缩略图，右下角带有半透明毛玻璃彩色分类徽章（如 `N+1 Redundancy`、`Clinical Sizing`、`Engineering Whitepaper`）；
+2. **日期与双语药丸标**：显示格式化发布日期（如 `Sep 08, 2026`）与 `EN / 中文` 徽章；
+3. **标题 (Title)**：`h3` 标签，限制 2 行（`line-clamp-2`），悬停切换为品牌高亮色；
+4. **摘要 (Excerpt)**：限制 3 行（`line-clamp-3`），精炼总结核心工程痛点与解决路径；
+5. **关键词标签栏 (Topic Chips)**：**必须包含 3 个精准专题标签**（如 `HYTG-300 (90L)`、`N+1 Redundancy`、`4–8 Chairs Sizing`），提供快速语义识别；
+6. **双操作卡片底栏 (Card Footer)**：
+   - 左侧：深度阅读主链接（如 `Read Redundancy Guide →`）；
+   - 右侧：高清原图/CAD蓝图 Lightbox 放大交互按钮（如 `View Blueprint` 或 `View Gallery`）。
+
+---
+
+### 17.8 中英文 1:1 对称与呼吸感杂志级中文排版规范 (Bilingual Symmetry & Airy Typography)
+
+1. **篇章结构 1:1 严格对称**：
+   - 英文版 H2 章节数量必须与中文版章节编号（01~06）严格 1:1 对齐，技术覆盖点与计算公式毫无缺失；
+2. **呼吸感杂志级中文排版体系 (`.cn-article`)**：
+   - 行高放大至 `line-height: 2.1`，字间距 `letter-spacing: 0.025em`，段落间距 `margin-bottom: 1.75rem`；
+   - 章节标题采用渐变渐变背景圆角编号徽章（`01`–`06`）与深邃标题；
+   - 数据展示优先采用浅色卡片（Callout Box），搭配微图标进行视觉引导；
+   - 所有物理单位采用清晰的 HTML/Unicode 格式（如 `≤ 55 dB(A)`、`0.55 kW`、`100 L/min`、`0.5 MPa`），**绝对禁止残留未渲染的 LaTeX 源码**（如 `$600\text{ mm}$` 等）；
+3. **品牌与署名单一标准 (Author & Brand SSOT)**：
+   - 品牌全称统一使用 **宏润科技 (Hongrun Technology)**，禁止编造虚长科室名；
+   - 发布人统一使用 **Martin · 宏润科技 (Hongrun Technology)**（中文）与 **Martin · Hongrun Technology**（英文）；
+   - 发布日期中英文必须严格保持一致。
 
 ---
 
@@ -601,10 +661,6 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 ### 18.3 Lightbox 高清通道防缓存规范
 - 当产品图片或参数发生更新时，在页面中引用 `data-hd` 与 `src` 必须附加时间戳或版本号（如 `?v=20260902_v3`），确保 CDN 与浏览器强刷，杜绝因缓存导致的"点击放大显示旧缩略图/虚图"现象。
-
-
-
-
 
 ---
 
@@ -641,20 +697,29 @@ Hongrun Complete Clean Air & Suction Ecosystem
 | **2026-09-02 15:08** | HY-300 50L 立式实物配图校正 | 纠正此前 HY-300 与 HY-100（24L 卧式矮罐）的配图混淆，**采用用户上传的正版 50L 立式圆柱储气罐 + ZB300 高功率机头实拍图，保留天然 HORUN 经典标识，生成 1600px 超清大图**。 |
 | **2026-09-02 15:10** | 根目录清理与工作区收敛 | **彻底清理根目录下所有临时脚本与截图碎片，全站核心工程资产 100% 封闭在 `hrtech/` 目录内部**。 |
 
-
-
-
 ### 20.2 全站 SEO / GEO / Schema / 协议标准全维度深度扫描升级 (2026-09-02 15:30)
 
 | 审计维度 | 扫描范围 | 核心指标与落地成果 | 验收状态 |
 | :--- | :--- | :--- | :--- |
 | **Technical SEO** | 全站 20 个 HTML 页面 | Title (<65 chars)、Meta Description (140-160 chars)、Keywords、Canonical 权威链接 100% 全覆盖 | **100% 合规 (20/20)** |
-| **Social / OpenGraph** | 全站 20 个 HTML 页面 | , , , , ,  100% 规范配置 | **100% 合规 (20/20)** |
-| **GEO (AI 引擎优化)** | 全站 20 个 HTML 页面 | Schema.org JSON-LD 深度结构化数据（Product, MedicalDevice, TechArticle, MedicalOrganization, FAQPage）全部校验通过 | **100% 合规 (20/20)** |
-| **AI 语料索引协议** | 根目录  | 包含企业资质、6 大产品线参数、7 篇白皮书摘要与精准引用锚点，完全支持 GPTBot, ClaudeBot, PerplexityBot | **100% 就绪** |
-| **站点地图与爬虫引导** |  /  | 20 个标准化端点全量收录，明确允许 Googlebot, Bingbot, Yandex, GPTBot, PerplexityBot 抓取 | **100% 就绪** |
-| **可访问性与安全** | 全站 20 个 HTML 页面 | 全站图片 100% 具备英文 Alt 属性（0 缺失）；所有新窗口外链 100% 具备  安全防劫持 | **0 缺陷 (0 Flaws)** |
-| **死链健康度** | 全站 20 个 HTML 页面 | 运行深度链接树扫描，站内相对链接与资源加载实现 **0 死链 (0 Broken Links)** | **100% 闭环** |
+| **Social / OpenGraph** | 全站 20 个 HTML 页面 | og:title, og:desc, og:image, twitter:card 100% 规范配置 | **100% 合规 (20/20)** |
+| **GEO (AI 引擎优化)** | 全站 20 个 HTML 页面 | Schema.org JSON-LD 深度结构化数据全部校验通过 | **100% 合规 (20/20)** |
+| **AI 语料索引协议** | 根目录 `llms.txt` | 包含企业资质、6 大产品线参数、7 篇白皮书摘要与精准引用锚点，完全支持 AI 爬虫 | **100% 就绪** |
+| **站点地图与爬虫引导** | `sitemap.xml` / `robots.txt` | 20 个标准化端点全量收录，明确允许全网抓取 | **100% 就绪** |
+| **可访问性与安全** | 全站 20 个 HTML 页面 | 全站图片 100% 具备英文 Alt 属性；外链 100% 具备 `rel="noopener"` | **0 缺陷 (0 Flaws)** |
+| **死链健康度** | 全站 20 个 HTML 页面 | 运行深度链接树扫描，站内相对链接与资源加载实现 **0 死链** | **100% 闭环** |
 
+### 20.3 白皮书内容矩阵与全站工程标准固化 (2026-09-02 16:00, Manual V3.5)
 
-> **手册结语**：本手册已完全吸收并统筹合并了历史 `20260628 国际网站优化方案` 与全期档案中的所有有效资产与业务策略，成为宏润科技国际官网（VI V3.0）的单一事实基准（Single Source of Truth）。历史散落文件已无保留必要，后续维护唯本手册是从。
+| 时间戳 | 事项 / 用户指令 | 官方决策结论与系统落地 |
+| :--- | :--- | :--- |
+| **2026-09-02 15:35** | 白皮书 #08 选型指南重构 | 《小型独立牙科诊所 1~3 台牙椅选型指南》（`20260905-1-to-3-dental-chairs-compressor-selection-guide`）完成 6 章节 1:1 双语完全重构，去除所有生硬 LaTeX 源码，应用 `.cn-article` 呼吸感排版。 |
+| **2026-09-02 15:45** | 署名与品牌单一标准锁定 | 用户指令：“这个内容你也不要给我乱造，就统称宏润科技就好了。然后发布人可以是Martin。然后对应的日期。中文、英文都是一样的。” **确立宏润科技 + Martin 唯一署名 SSOT**。 |
+| **2026-09-02 15:50** | 白皮书 #09 双机头冗余发布 | 《4~8 台牙椅双机头冗余并联供气：HYTG-300 90L 选型指南》（`20260908-4-to-8-dental-chairs-dual-pump-redundancy`）正式发布。 |
+| **2026-09-02 15:52** | 封面图片与正文插图分工 | 用户指令：“我并不需要你每次都去AI generated这样的图片。如果我们自己的产品图片可以作为封面，那就用这个就好...生成的图片可以插入到文章中。” **确立封面实物优先、CAD图入正文插图的严谨工程标准**。 |
+| **2026-09-02 15:58** | 锁死统一标准页脚 (Footer) | 用户指令：“你干嘛又去动我的Footer？那个都已经确认好了，不要乱改。” **全局锁死 VI V3.0 STANDARD GLOBAL FOOTER，严禁任何形式的私自修改或精简**。 |
+| **2026-09-02 16:00** | 社交分享栏与列表卡片对齐 | 用户指令：“这些shared social media的这些风格不应该是在文章的最下面吗？且这些图标当时也都确认好了，使用统一风格；最新这篇是不是少了关键词？” **将社媒栏锁死在文章最底部，news.html 卡片补全 3 关键词标签与双交互底栏**。 |
+
+---
+
+> **手册结语**：本手册已升级至 **Version 3.5 最终执行基准**，完全吸收并统筹锁定了全站所有视觉组件、白皮书排版、SEO/GEO 及内容创作规范，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。

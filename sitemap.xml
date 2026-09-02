@@ -80,7 +80,19 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Engineering Whitepapers & Insight Articles (7) -->
+  <!-- Engineering Whitepapers & Insight Articles (9) -->
+  <url>
+    <loc>https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
   <url>
     <loc>https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/</loc>
     <lastmod>2026-09-02</lastmod>

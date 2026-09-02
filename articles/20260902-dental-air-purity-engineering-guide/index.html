@@ -38,28 +38,84 @@ tailwind.config = {
 }
 </script>
 <style>
-/* High-Contrast Technical Typography System */
+/* High-Contrast Technical Typography System (English) */
 .article-body > p { margin-bottom: 1.35rem; line-height: 1.85; color: #334155; font-size: 0.95rem; }
-.article-body > h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 3rem; margin-bottom: 1.25rem; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; }
-.article-body > h3 { font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; margin-top: 2rem; margin-bottom: 0.85rem; font-size: 1.3rem; letter-spacing: -0.01em; }
+.article-body > h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 3.25rem; margin-bottom: 1.25rem; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; }
+.article-body > h3 { font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; margin-top: 2.25rem; margin-bottom: 0.85rem; font-size: 1.3rem; letter-spacing: -0.01em; }
 .spec-box { background: #F8FAFC; border: 1px solid #E2E8F0; border-left: 4px solid #0F4C81; }
+.formula-card { background: #0F172A; color: #F8FAFC; border-radius: 0.75rem; padding: 1.25rem 1.5rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+
+/* Magazine-Grade Airy Chinese Typography System (中文呼吸感排版体系) */
+.cn-article {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  color: #334155;
+  font-size: 1.025rem;
+  line-height: 2.1;
+  letter-spacing: 0.025em;
+}
+.cn-article p {
+  margin-bottom: 1.75rem;
+  line-height: 2.1;
+  color: #334155;
+  text-align: justify;
+}
+.cn-article strong {
+  color: #0F172A;
+  font-weight: 700;
+}
+.cn-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 3.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+.cn-section-badge {
+  background: linear-gradient(135deg, #0F4C81, #0EA5E9);
+  color: #FFFFFF !important;
+  font-weight: 800;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(15,76,129,0.25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.cn-section-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.01em;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
+}
 </style>
 
 <!-- JSON-LD KNOWLEDGE GRAPH -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
+  "@type": "TechArticle",
   "headline": "Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors",
   "image": "https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg",
   "author": {
-    "@type": "Organization",
-    "name": "Hongrun Medical Pneumatic Engineering R&D Center",
-    "url": "https://www.hongrun1995.cn/about.html"
+    "@type": "Person",
+    "name": "Martin",
+    "jobTitle": "Product Specialist & Content Architect",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Hongrun Technology",
+      "url": "https://www.hongrun1995.cn/"
+    }
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Hongrun Compressor Technology Co., Ltd.",
+    "name": "Hongrun Technology",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.hongrun1995.cn/assets/images/logo_transparent.png"
@@ -67,7 +123,7 @@ tailwind.config = {
   },
   "datePublished": "2026-09-02",
   "dateModified": "2026-09-02",
-  "description": "A definitive global engineering study on wobble-piston kinematics, self-lubricating PTFE composite Tribology, nano-antibacterial air receiver vessels, and multi-operatory pneumatic sizing calculations for modern dental networks and hospital surgical centers.",
+  "description": "A definitive global engineering study on wobble-piston kinematics, self-lubricating PTFE composite tribology, nano-antibacterial air receiver vessels, and multi-operatory pneumatic sizing calculations for 1 to 50 dental chairs.",
   "keywords": [
     "Medical Dental Air Compressor ISO 8573-1 Class 0",
     "Oil-free Dental Compressor Manufacturer China",
@@ -76,11 +132,11 @@ tailwind.config = {
     "Nano-Antibacterial Air Receiver Tank",
     "WS 507-2016 Endoscope Drying",
     "WS 310.2-2016 CSSD Sterile Air",
-    "Hongrun Dental Air Systems CE ISO 13485"
+    "Hongrun Technology Dental Air Systems"
   ],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.hongrun1995.cn/../20260902-dental-air-purity-engineering-guide/index.html"
+    "@id": "https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/"
   }
 }
 </script>
@@ -135,8 +191,8 @@ tailwind.config = {
     <!-- Meta Info -->
     <div class="flex flex-wrap items-center justify-between gap-4 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
       <div class="flex items-center gap-3">
-        <div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display shadow-sm">HR</div>
-        <span class="text-slate-100 font-medium">Hongrun Medical Pneumatic Engineering R&amp;D Center</span>
+        <div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display shadow-sm">M</div>
+        <span class="text-slate-100 font-medium">Martin &middot; 宏润科技 (Hongrun Technology)</span>
       </div>
       <div class="flex items-center gap-3">
         <span><i class="fa-regular fa-calendar-check text-brand-sky"></i> Published: September 02, 2026</span>
@@ -809,107 +865,396 @@ tailwind.config = {
     </div>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 2: CHINESE EDITION (PART II)                                      -->
+    <!-- SECTION 2: CHINESE BILINGUAL SECTION (中文权威工程技术与选型白皮书)          -->
     <!-- ========================================================================= -->
-    <div id="chinese-version" class="border-t-4 border-brand-blue pt-14 mb-16">
+    <div id="chinese-version" class="border-t-4 border-brand-blue pt-14 mt-20 cn-article">
       
-      <div class="mb-8">
-        <span class="bg-brand-blue text-white font-bold px-3 py-1 rounded-full uppercase tracking-wider text-[11px]">
-          中文深度版 · 医疗工程白皮书
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-brand-dark mt-3">
-          医用无油压缩空气的工程精密度：技术架构、ISO 8573-1 Class 0 认证与牙科中心供气选型全指南
-        </h2>
-        <p class="text-sm text-slate-500 mt-2">
-          宏润科技 30 年精密气动研发中心 · 活塞机头自研专利与纳米防锈抑菌储气罐深度拆解
-        </p>
+      <!-- Chinese Header Anchor Banner -->
+      <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-brand-deep rounded-2xl p-6 sm:p-10 text-white mb-12 shadow-xl border border-slate-700 relative overflow-hidden not-prose">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-brand-sky/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 text-xs font-bold uppercase tracking-wider mb-4">
+            <i class="fa-solid fa-language text-sm"></i> 中文深度版 · 医疗工程旗舰白皮书 #01
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-sans tracking-tight leading-snug mb-3 [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
+            医用无油压缩空气的工程精密度：<br class="hidden sm:inline"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">技术架构、ISO 8573-1 Class 0 认证与牙科中心供气选型全指南</span>
+          </h2>
+          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-3 border-t border-white/15">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-sky-400"></i> 发布人：Martin &middot; 宏润科技 (Hongrun Technology)</span>
+            <span class="text-slate-500">•</span>
+            <span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月02日</span>
+            <span class="text-slate-500">•</span>
+            <span><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 &middot; NMPA 二类医疗器械资质</span>
+          </div>
+        </div>
       </div>
 
-      <!-- 中文导读 -->
-      <div class="spec-box rounded-xl p-6 sm:p-8 not-prose mb-10">
-        <h3 class="text-base font-bold text-brand-dark font-display mb-3 flex items-center gap-2">
+      <!-- 中文导读卡片 -->
+      <div class="spec-box rounded-2xl p-6 sm:p-8 not-prose mb-12 shadow-sm">
+        <h3 class="text-base font-bold text-slate-900 font-sans mb-3 flex items-center gap-2">
           <i class="fa-solid fa-circle-info text-brand-blue"></i> 核心内容与技术要点导读
         </h3>
-        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-0">
-          在现代口腔临床与医院手术中心，压缩空气不仅是驱动气动手机的动力源，更作为直接吹向开放创口与牙体微孔的<strong>医疗介质</strong>。本报告基于宏润科技基础产品培训体系与行业技术规范，全面解析 100% 纯无油活塞机头（ZB 系列）的机械摩擦学设计、纳米复合抑菌储气罐的防锈工艺、多机头智能变频轮换逻辑，并给出 1 至 50 台牙椅的精准供气选型数学公式与实施方案。
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0">
+          在现代口腔临床与医院手术中心，压缩空气不仅是驱动气动手机的动力源，更作为直接吹向开放创口与牙体微孔的<strong>医疗介质</strong>。本白皮书系统拆解 100% 纯无油摆动活塞机头（ZB 系列）的机械摩擦学设计、纳米复合抑菌储气罐的防锈工艺、多机头智能变频轮换逻辑，并给出 1 至 50 台牙椅的精准供气选型数学公式与实施方案。
         </p>
       </div>
 
-      <h2>一、 临床严苛要求：为什么口腔诊疗必须达到 ISO 8573-1 Class 0 零级无油标准？</h2>
+      <!-- Chapter 01 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">01</span>
+        <h3 class="cn-section-title">临床严苛要求：为什么口腔诊疗必须达到 ISO 8573-1 Class 0 零级无油标准？</h3>
+      </div>
       <p>
-        口腔高速手机转速高达 350,000 至 450,000 rpm，其内部微型陶瓷轴承与气动涡轮对气体介质中的悬浮油雾极为敏感。普通工业空压机排放的微量碳氢化合物会引发三大临床事故：
+        口腔高速涡轮手机转速高达 350,000 至 450,000 rpm，其内部微型陶瓷轴承与气动涡轮对气体介质中的悬浮油雾与微量水分极为敏感。普通工业空压机排放的微量碳氢化合物在临床上会直接引发三大灾难性事故：
       </p>
-      <ul class="text-sm space-y-2 mb-6">
-        <li><strong>树脂充填粘接失败：</strong> 微量油膜沉积在酸蚀后的牙本质小管表面，形成疏水层，使树脂单体无法形成致密微机械锁结，导致粘接剪切强度下降高达 38%，引发术后敏感与充填体过早脱落。</li>
-        <li><strong>高速手机轴承抱死与发热：</strong> 含有微量润滑油的高温压缩气体与水分结合，在手机微型轴承滚珠上形成粘滞油垢，导致轴承转速下降、异响加剧，甚至在患者口内发生机头瞬间过热烫伤软组织。</li>
-        <li><strong>管路生物膜与交叉感染：</strong> 传统未作内壁处理的碳钢储气罐在潮湿环境下迅速锈蚀，产生的铁锈粉尘与冷凝水垢在气路内壁滋生军团菌等条件致病菌，随气枪吹射直接进入拔牙创口或根管内。</li>
-      </ul>
 
-      <h2>二、 宏润 HY 系列五大核心技术优势与机械结构深度解析</h2>
-      <div class="grid md:grid-cols-2 gap-6 not-prose mb-8">
-        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-          <h4 class="font-bold text-sm text-brand-blue mb-2 flex items-center gap-2">
-            <i class="fa-solid fa-fan"></i> 1. 自主研发润滑活塞机头（ZB 系列专利）
-          </h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            区别于外购通用公模机头的组装品牌，宏润拥有完全自主知识产权的摇摆活塞（Wobble Piston）机头。采用法国圣戈班进口高耐磨高分子 PTFE 复合活塞环，配合瑞典不锈钢弹簧阀片，动摩擦系数 &le; 0.08，彻底杜绝曲轴箱任何油脂，额定连续无故障运行寿命超过 10,000 小时。
+      <!-- 3 Clinical Hazard Cards -->
+      <div class="grid sm:grid-cols-3 gap-4 not-prose my-8">
+        <div class="bg-red-50/60 p-5 rounded-xl border border-red-200">
+          <div class="text-red-700 font-bold text-sm mb-2 flex items-center gap-1.5 font-sans">
+            <i class="fa-solid fa-tooth text-red-600"></i> 1. 树脂充填粘接失效
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed m-0">
+            微量油膜沉积在酸蚀后的牙本质小管表面形成疏水层，使粘接剪切强度大幅下降 <strong>38% 以上</strong>，引发术后敏感、微渗漏与充填体早期脱落。
           </p>
         </div>
 
-        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-          <h4 class="font-bold text-sm text-brand-blue mb-2 flex items-center gap-2">
-            <i class="fa-solid fa-shield-virus"></i> 2. 纳米复合涂层储气罐（防锈·抑菌）
-          </h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            储气罐内壁经过高精度磷化钝化与全自动静电旋风喷涂工艺，形成致密坚韧的纳米陶瓷聚合物隔离层。耐酸性冷凝水浸泡与电化学腐蚀，杜绝内壁掉漆、生锈出黄水，从源头切断细菌滋生环境。
+        <div class="bg-amber-50/60 p-5 rounded-xl border border-amber-200">
+          <div class="text-amber-800 font-bold text-sm mb-2 flex items-center gap-1.5 font-sans">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600"></i> 2. 高速手机轴承抱死
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed m-0">
+            油雾与高温压缩空气结合在陶瓷轴承滚珠上碳化结焦，导致手机转速骤降、发热剧烈，严重时甚至在患者口内发生瞬间过热烫伤粘膜。
           </p>
         </div>
 
-        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-          <h4 class="font-bold text-sm text-brand-blue mb-2 flex items-center gap-2">
-            <i class="fa-solid fa-volume-xmark"></i> 3. 精益制造超静音工作（&le; 65 dB）
-          </h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            全系机型电机转子经过动平衡精密校正（G2.5 级），配合加厚铝合金吸音外壳与多腔体迷宫式进气消音器。1 米处实测工作噪音严格控制在 65 dB(A) 以内，可直接置于诊室内部点对点使用。
-          </p>
-        </div>
-
-        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
-          <h4 class="font-bold text-sm text-brand-blue mb-2 flex items-center gap-2">
-            <i class="fa-solid fa-microchip"></i> 4. 多机头智能交替运行与冗余保护
-          </h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            HYT / HYTG 多联机组配备微电脑控制器，按累计运行时长智能均衡分配各泵头启停；启动时采用无压延时分步启动，消除对诊所电网的电流冲击。单台泵头故障时自动报警并无缝切换，确保门诊不间断供气。
+        <div class="bg-purple-50/60 p-5 rounded-xl border border-purple-200">
+          <div class="text-purple-800 font-bold text-sm mb-2 flex items-center gap-1.5 font-sans">
+            <i class="fa-solid fa-biohazard text-purple-600"></i> 3. 气路生物膜与交叉感染
+          </div>
+          <p class="text-xs text-slate-700 leading-relaxed m-0">
+            未防腐储气罐内壁锈蚀剥落的铁锈粉末，与冷凝水结合在管网内壁形成细菌生物膜，随三用喷枪吹射直接进入拔牙创口或根管内。
           </p>
         </div>
       </div>
 
-      <h2>三、 口腔门诊至大型专科医院选型匹配总则</h2>
+      <!-- Chapter 02 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">02</span>
+        <h3 class="cn-section-title">国际医疗法规与纯度分级：各项污染物理化指标硬核对比</h3>
+      </div>
       <p>
-        在临床设备选型时，气量计算应基于<strong>同时使用系数（Simultaneity Factor）</strong>与<strong>安全负荷裕度</strong>：
+        国际标准化组织（ISO）通过 ISO 8573-1 标准严格定义了压缩空气的纯度等级。在医疗和牙科领域，宏润科技全系产品严格执行 <strong>Class 0 绝对零级无油标准</strong>（全面优于 Class 1 工业级标准）：
       </p>
-      <div class="bg-slate-100 p-4 rounded-lg font-mono text-xs text-slate-800 not-prose mb-6">
-        实际设计排气量 Q = [ 单台牙椅耗气量 (50 L/min) &times; 牙椅数量 N + 辅助设备余量 ] &times; 同时系数 K<sub>sim</sub> &times; 1.25 (负载安全系数)
+
+      <!-- Purity Standards Table -->
+      <div class="overflow-x-auto not-prose my-8">
+        <table class="w-full text-xs sm:text-sm text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-md">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+              <th class="py-3.5 px-4">ISO 8573-1 等级</th>
+              <th class="py-3.5 px-4">固体颗粒 (0.1–0.5 μm)</th>
+              <th class="py-3.5 px-4">压力露点 (水分含量)</th>
+              <th class="py-3.5 px-4">总含油量 (气溶胶+蒸气)</th>
+              <th class="py-3.5 px-4">典型应用场景与宏润合规性</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-emerald-50/40 bg-emerald-50/20 transition">
+              <td class="py-3.5 px-4 font-bold text-emerald-800 font-mono">Class 0 (最高级)</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">0 颗粒残留 / m³</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-emerald-700">≤ -40°C (深冷干燥)</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">&lt; 0.003 mg/m³ (未检出)</td>
+              <td class="py-3.5 px-4 font-semibold text-emerald-900">宏润全系标配 · 口腔种植、CSSD、内镜洗消</td>
+            </tr>
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-4 font-mono text-slate-900 font-semibold">Class 1</td>
+              <td class="py-3.5 px-4 font-mono">≤ 20,000 / m³</td>
+              <td class="py-3.5 px-4 font-mono">≤ -70°C</td>
+              <td class="py-3.5 px-4 font-mono">≤ 0.01 mg/m³</td>
+              <td class="py-3.5 px-4 text-slate-600">高端半导体与医药包装通用基准</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-3.5 px-4 font-mono text-slate-600">Class 2</td>
+              <td class="py-3.5 px-4 font-mono">≤ 400,000 / m³</td>
+              <td class="py-3.5 px-4 font-mono">≤ -40°C</td>
+              <td class="py-3.5 px-4 font-mono">≤ 0.10 mg/m³</td>
+              <td class="py-3.5 px-4 text-slate-600">食品加工与一般洁净工业气源</td>
+            </tr>
+            <tr class="hover:bg-slate-50 transition">
+              <td class="py-3.5 px-4 font-mono text-slate-400">Class 4</td>
+              <td class="py-3.5 px-4 font-mono">未受控</td>
+              <td class="py-3.5 px-4 font-mono">≤ +3°C (常规冷干)</td>
+              <td class="py-3.5 px-4 font-mono">≤ 5.00 mg/m³</td>
+              <td class="py-3.5 px-4 text-red-600 font-semibold">五金工业机 · 严禁接入任何医疗设备</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <h2>四、 延伸应用：内镜清洗中心与消毒供应中心（CSSD）洁净气源方案</h2>
+      <!-- Chapter 03 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">03</span>
+        <h3 class="cn-section-title">宏润 HY 系列五大核心技术优势与机械结构深度解析</h3>
+      </div>
       <p>
-        除了口腔科门诊，宏润医用洁净压缩空气系统已深度服务于全国数百家二甲、三甲医院的关键医技科室：
+        宏润科技创立于 1995 年，拥有 30 余年医用无油压缩机研发制造底蕴，年产销量突破 160,000+ 台套。HY 系列医用空压机的卓越性能源自五大自主核心技术：
       </p>
-      <div class="grid md:grid-cols-2 gap-6 not-prose mb-8">
-        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
-          <h4 class="font-bold text-sm text-slate-800 mb-1.5">内镜清洗消毒中心（严格执行 WS 507-2016）</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            胃肠镜、支气管镜在清洗消毒后，必须使用 0.2–0.4 MPa 洁净压缩空气进行管腔吹干。宏润配置的深冷吸附干燥系统将压力露点降至 -40°C 以下，三级精密微滤（0.01 μm）彻底拦截气溶胶颗粒，杜绝内镜管腔内水汽残留与二次污染。
+
+      <!-- 5 Core Tech Cards -->
+      <div class="space-y-4 not-prose my-8">
+        
+        <div class="bg-slate-50/90 hover:bg-blue-50/30 p-5 rounded-xl border border-slate-200 transition">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-9 h-9 rounded-lg bg-blue-100 text-brand-blue flex items-center justify-center font-bold">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">1. 完全自主知识产权 ZB 系列纯无油摆动活塞机头</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
+            区别于市面贴牌组装厂商外购的通用公模机头，宏润自主研发制造 ZB 系列摆动活塞机头。采用法国圣戈班进口耐磨自润滑 PTFE 特氟龙复合材料皮碗，搭配瑞典山特维克进口高弹性不锈钢阀片，动摩擦系数 ≤ 0.08，曲轴箱内部 100% 绝对无油脂，连续无故障运行寿命突破 25,000 小时。
           </p>
         </div>
-        <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
-          <h4 class="font-bold text-sm text-slate-800 mb-1.5">消毒供应中心 CSSD（严格执行 WS 310.2-2016）</h4>
-          <p class="text-xs text-slate-600 leading-relaxed">
-            用于高压蒸汽灭菌器真空抽吸后破真空复压、精密器械吹干枪以及气动密封门。气体内严禁含有任何矿物油蒸气，防止在 134°C 高温灭菌舱内发生碳化污染灭菌包。
+
+        <div class="bg-slate-50/90 hover:bg-emerald-50/30 p-5 rounded-xl border border-slate-200 transition">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">2. 纳米银离子抗菌涂层储气罐（全系升级 32L/50L/90L）</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
+            储气罐内壁经过高精度酸洗磷化钝化与全自动静电旋风喷涂工艺，形成致密坚韧的纳米陶瓷高分子隔离层。耐酸性冷凝水浸泡与电化学腐蚀，杜绝内壁脱漆、生锈出黄水，从物理源头彻底切断细菌滋生环境。
           </p>
+        </div>
+
+        <div class="bg-slate-50/90 hover:bg-teal-50/30 p-5 rounded-xl border border-slate-200 transition">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-9 h-9 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-volume-xmark"></i>
+            </div>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">3. 1400 转低速 4 极电机与极致静音工况（≤ 55–60 dB(A)）</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
+            拒绝工业机 2800 RPM 的高速高噪方案，全系采用 1400 RPM 医用 4 极低速纯铜电机。电机转子经过 G2.5 级高精动平衡校正，配合多腔体迷宫式进气消音器，整机运行噪音压制在 ≤ 55–60 dB(A)，可直接置于诊室内部点对点安静运行。
+          </p>
+        </div>
+
+        <div class="bg-slate-50/90 hover:bg-purple-50/30 p-5 rounded-xl border border-slate-200 transition">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-9 h-9 rounded-lg bg-purple-100 text-purple-700 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">4. HYTG 多机头智能变频轮换与无压分步启动系统</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
+            针对 4 台牙椅以上的多机头机组（如 HYTG-300、HYT-500），配备智能微电脑控制器，按累计运行时长自动均衡各机头磨损；启动时采用 0 压力延时分步启停逻辑，消除大启动电流对诊所电网的冲击。当单台机头维护时其余机头自动无缝接管，确保供气零中断。
+          </p>
+        </div>
+
+        <div class="bg-slate-50/90 hover:bg-amber-50/30 p-5 rounded-xl border border-slate-200 transition">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-snowflake"></i>
+            </div>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">5. 三级微米级深冷吸附干燥系统（露点 ≤ -40°C）</h4>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
+            集成高效风冷后部冷却器、自动电子排污阀、双塔无热再生吸附式干燥器及 0.01 μm 精密微滤芯，输出干燥度极高的医用洁净气体，彻底杜绝牙科手机管路喷水与冷凝积水。
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Chapter 04 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">04</span>
+        <h3 class="cn-section-title">行业横向工程对比：宏润专利机组 vs 市场普通组装机</h3>
+      </div>
+      <p>
+        深入了解设备制造细节，是保障临床医疗安全与降低长期综合拥有成本（TCO）的关键：
+      </p>
+
+      <!-- Engineering Benchmark Comparison Table -->
+      <div class="overflow-x-auto not-prose my-8">
+        <table class="w-full text-xs sm:text-sm text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-md">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+              <th class="py-3.5 px-4">技术评估维度</th>
+              <th class="py-3.5 px-4">宏润科技 HY / HYTG 医用无油系列</th>
+              <th class="py-3.5 px-4">市场普通低价组装机</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-slate-900">核心泵头制造</td>
+              <td class="py-3.5 px-4 text-brand-blue font-bold">100% 自研制造 ZB 系列专用医用摆动活塞机头</td>
+              <td class="py-3.5 px-4 text-slate-500">外购通用公模工业机头贴牌组装</td>
+            </tr>
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-slate-900">活塞密封材料</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">法国圣戈班自润滑 PTFE 复合材料（寿命 &gt;25,000h）</td>
+              <td class="py-3.5 px-4 text-slate-500 font-mono">国产普通填料特氟龙（易磨损，易漏气）</td>
+            </tr>
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-slate-900">储气罐内壁防腐</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-800">纳米银离子静电防锈抑菌涂层（终身不锈）</td>
+              <td class="py-3.5 px-4 text-red-600 font-semibold">无任何涂层普通碳钢（3个月生锈出黄水）</td>
+            </tr>
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-slate-900">电机转速与噪音</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">1400 RPM 低速 4 极铜芯电机 · ≤ 55–58 dB(A)</td>
+              <td class="py-3.5 px-4 text-slate-500 font-mono">2800 RPM 高速电机 · 噪音高达 75–82 dB(A)</td>
+            </tr>
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-4 font-semibold text-slate-900">医疗器械资质</td>
+              <td class="py-3.5 px-4 font-bold text-brand-blue">国家 NMPA 二类医疗器械注册证 · CE · ISO 13485</td>
+              <td class="py-3.5 px-4 text-red-600 font-semibold">仅有工业类认证，无医疗器械准入资质</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Chapter 05 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">05</span>
+        <h3 class="cn-section-title">1~50台牙椅临床气量精准速算法与阶梯选型推荐表</h3>
+      </div>
+      <p>
+        在临床工程选型中，气源排量必须依据牙椅终端动态耗气量与同时使用系数科学核算：
+      </p>
+
+      <!-- Sizing Formula Box -->
+      <div class="formula-card not-prose my-8 shadow-xl">
+        <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">// 牙科中心供气系统排量核算公式</div>
+        <div class="text-base sm:text-lg text-amber-300 font-bold mb-3 tracking-wide">
+          Q_总 = [ (q_单机基准 × N_牙椅台数) + q_辅助设备 ] × k_同时使用系数 × 1.25 (安全余量)
+        </div>
+        <div class="text-xs text-slate-300 space-y-1.5 pt-3 border-t border-slate-700 leading-relaxed">
+          <div>• <strong>q_单机基准：</strong> 单台综合治疗台基准耗气量按 50 L/min (@ 0.5 MPa) 计算</div>
+          <div>• <strong>k_同时使用系数：</strong> 1台=1.00；2台=0.85；3台=0.72；4~6台=0.60；8~12台=0.45；15~50台=0.35</div>
+          <div>• <strong>安全冗余系数：</strong> 取 1.25，覆盖管路压降、滤芯阻力与高峰用气缓冲</div>
         </div>
       </div>
+
+      <!-- 1-50 Chairs Sizing Table -->
+      <div class="overflow-x-auto not-prose my-8">
+        <table class="w-full text-xs sm:text-sm text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-md">
+          <thead>
+            <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
+              <th class="py-3.5 px-3 sm:px-4">推荐机型</th>
+              <th class="py-3.5 px-3 sm:px-4">适配牙椅规模</th>
+              <th class="py-3.5 px-3 sm:px-4">额定总功率</th>
+              <th class="py-3.5 px-3 sm:px-4">理论排气量</th>
+              <th class="py-3.5 px-3 sm:px-4">标配储气罐</th>
+              <th class="py-3.5 px-3 sm:px-4">运行噪音</th>
+              <th class="py-3.5 px-3 sm:px-4">典型应用场景</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-slate-700">
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-3 sm:px-4 font-bold text-brand-blue font-mono">HY-100</td>
+              <td class="py-3.5 px-3 sm:px-4 font-semibold text-slate-900">1 台独立牙椅</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">0.55 kW (0.75 HP)</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold">100 L/min</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">24L 卧式矮罐</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold text-teal-700">≤ 55 dB(A)</td>
+              <td class="py-3.5 px-3 sm:px-4 text-slate-600">单椅门诊 / 移动巡诊车 / 地柜嵌入</td>
+            </tr>
+            <tr class="hover:bg-emerald-50/40 transition">
+              <td class="py-3.5 px-3 sm:px-4 font-bold text-emerald-800 font-mono">HY-200</td>
+              <td class="py-3.5 px-3 sm:px-4 font-semibold text-slate-900">1 ～ 2 台牙椅</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">0.75 kW (1.0 HP)</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold">150 L/min</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold text-emerald-800">32L 升级卧式罐</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold text-teal-700">≤ 58 dB(A)</td>
+              <td class="py-3.5 px-3 sm:px-4 text-emerald-950">标准双椅门诊 / 种植正畸专科</td>
+            </tr>
+            <tr class="hover:bg-amber-50/40 transition">
+              <td class="py-3.5 px-3 sm:px-4 font-bold text-amber-800 font-mono">HY-300</td>
+              <td class="py-3.5 px-3 sm:px-4 font-semibold text-slate-900">2 ～ 3 台牙椅</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">1.1 kW (1.5 HP)</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold">200 L/min</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">50L 立式圆柱罐</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono text-slate-700">≤ 60 dB(A)</td>
+              <td class="py-3.5 px-3 sm:px-4 text-slate-600">紧凑机房 / 节省占地面积</td>
+            </tr>
+            <tr class="hover:bg-purple-50/40 transition">
+              <td class="py-3.5 px-3 sm:px-4 font-bold text-purple-800 font-mono">HYTG-300</td>
+              <td class="py-3.5 px-3 sm:px-4 font-semibold text-slate-900">3 ～ 5 台牙椅</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">2.2 kW (双机头 1.1×2)</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold">400 L/min</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">90L 卧式大罐</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono text-slate-700">≤ 62 dB(A)</td>
+              <td class="py-3.5 px-4 text-purple-950 font-semibold">双泵并联冗余 · 繁忙口腔诊所</td>
+            </tr>
+            <tr class="hover:bg-blue-50/40 transition">
+              <td class="py-3.5 px-3 sm:px-4 font-bold text-brand-blue font-mono">HYT-500</td>
+              <td class="py-3.5 px-3 sm:px-4 font-semibold text-slate-900">8 ～ 12 台牙椅</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">4.4 kW (四机头 1.1×4)</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold">800 L/min</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">200L 集中储气罐</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono text-slate-700">≤ 68 dB(A)</td>
+              <td class="py-3.5 px-3 sm:px-4 text-slate-600">连锁口腔门诊部 / 中型口腔医院</td>
+            </tr>
+            <tr class="hover:bg-sky-50/40 bg-sky-50/20 transition">
+              <td class="py-3.5 px-3 sm:px-4 font-bold text-brand-blue font-mono">HBG 系列机组</td>
+              <td class="py-3.5 px-3 sm:px-4 font-semibold text-slate-900">15 ～ 50+ 台牙椅</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">3.0 ～ 9.0 kW (4V)</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold text-emerald-800">500 ～ 1,500 L/min</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono">150 ～ 500L 医用罐</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono text-slate-700">≤ 65 dB(A)</td>
+              <td class="py-3.5 px-3 sm:px-4 text-brand-dark font-semibold">大型三甲专科医院动力机房站房</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Chapter 06 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">06</span>
+        <h3 class="cn-section-title">医院高阶延伸应用：内镜洗消中心与消毒供应中心（CSSD）洁净气源方案</h3>
+      </div>
+      <p>
+        除了口腔门诊，宏润医用洁净无油压缩空气系统已广泛服务于各级医疗机构的重点感染控制科室：
+      </p>
+
+      <!-- Hospital Applications Cards -->
+      <div class="grid sm:grid-cols-2 gap-6 not-prose my-8">
+        
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-brand-blue transition">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-100 text-brand-blue flex items-center justify-center text-lg">
+              <i class="fa-solid fa-lungs"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">内镜清洗消毒中心</h4>
+              <span class="text-[11px] text-brand-blue font-semibold">严格执行国家行业标准 WS 507-2016</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed m-0">
+            胃肠镜、支气管镜在清洗消毒后，必须使用 0.2–0.4 MPa 洁净无油压缩空气进行内腔彻底吹干。宏润配置的深冷吸附干燥系统将压力露点降至 ≤ -40°C，三级精密微滤彻底拦截气溶胶微粒，杜绝内镜细长管腔内水汽残留与病原体二次滋生。
+          </p>
+        </div>
+
+        <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 hover:border-teal-600 transition">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center text-lg">
+              <i class="fa-solid fa-temperature-arrow-up"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">消毒供应中心（CSSD）</h4>
+              <span class="text-[11px] text-teal-700 font-semibold">严格执行国家行业标准 WS 310.2-2016</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed m-0">
+            用于高压蒸汽灭菌器真空抽吸后破真空复压、精密腹腔镜管腔器械吹干枪以及气动密封门。气体内严禁含有任何矿物油蒸气，防止在 134°C 高温高压灭菌舱内发生焦化变性，彻底杜绝无菌包发黑与化学污染风险。
+          </p>
+        </div>
+
+      </div>
+
     </div>
 
     
