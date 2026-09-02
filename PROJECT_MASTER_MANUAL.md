@@ -1,8 +1,8 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.2 (在 v3.1 基础上于 2026-09-01 下半天更新：产品方最终确认 HYTG-300 (非 HYT-300) 命名、HY-200 储气罐 38L、图片文件名统一、HY 页 meta 修正；新增 §16.4 本轮最终共识)  
-> **更新日期 Date:** 2026-09-01  
+> **版本 Version:** 3.3 (在 v3.2 基础上于 2026-09-02 深度更新：收录旗舰白皮书 #01、HY-200 官方最新 32L 标准、HY-300 50L 正版立式超清实物图、社媒分享矩阵 V3.0、WordPress 知识图谱体系、CSS 作用域隔离与 hrtech 独立工作区隔离准则；详见 §17~§20)  
+> **更新日期 Date:** 2026-09-02  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
 > **项目定位 Positioning:** 国际顶级 B2B 工业品与高端医疗气源国际官网（纯静态极速架构 · 全球边缘加速 · 独立仓库与域名隔离）  
@@ -48,7 +48,7 @@
 
 ## 2. 全站 19 个核心页面统计与交付全貌
 
-目前全站共包含 **19 个相互贯通的 HTML 页面**，全网已通过自动化死链审计测试（0 死链、0 缺失图片资产、0 语法异常）：
+目前全站共包含 **20 个相互贯通的 HTML 页面**（含 8 篇技术白皮书与行业洞察），全网已通过自动化死链审计测试（0 死链、0 缺失图片资产、0 语法异常）：
 
 | # | 页面文件名 | 页面职责与核心模块 | 访问绝对路径 / 生产 URL |
 | :---: | :--- | :--- | :--- |
@@ -64,13 +64,14 @@
 | 10 | **`about.html`** | **关于我们 (About Us)**：都柏林图书馆知识传承 Hero、1080P 双流智造视频展、民营家国情怀、16 节点权威史、企业文化 5 核心、极清证书墙、顶尖高校背书 | `https://www.hongrun1995.cn/about.html` |
 | 11 | **`contact.html`** | **联系我们 (Contact Us)**：国际手术室&实景车间轮播、8 人技术销售矩阵（内嵌 CAD 线稿与专属社媒）、3 栏直通条、24h 报价表单、经销商招募 | `https://www.hongrun1995.cn/contact.html` |
 | 12 | **`news.html`** | **新闻与技术洞察中心 (News Hub)**：官方企业新闻、牙科工程选型指南、30 周年全国质量巡检洞察、国际医疗展会里程碑 | `https://www.hongrun1995.cn/news.html` |
-| 13 | **`blog-15-dental-chairs-sizing.html`** | **15 台牙椅选型白皮书 (Sizing Whitepaper)**：同时使用系数 k=0.70 计算、HYT 双机头冗余、HVS 中央负压选型 | `https://www.hongrun1995.cn/blog-15-dental-chairs-sizing.html` |
-| 14 | **`blog-compressor-exploded-anatomy.html`** | **空压机 3D CAD 爆炸解剖 (Exploded Anatomy)**：Class 0 零油纯度工程、PTFE 活塞环生命周期、PSA 吸附干燥解剖 | `https://www.hongrun1995.cn/blog-compressor-exploded-anatomy.html` |
-| 15 | **`blog-suction-exploded-anatomy.html`** | **HVS 抽吸系统 3D 爆炸解剖**：流体动力学、两级旋风分离、气溶胶控制、多椅选型 | `https://www.hongrun1995.cn/blog-suction-exploded-anatomy.html` |
-| 16 | **`blog-dental-south-china-expo.html`** | **华南国际口腔展 (Dental South China Expo)**：智能化洁净空气站与 HVS 抽吸系统首发、OEM 合作签约 | `https://www.hongrun1995.cn/blog-dental-south-china-expo.html` |
-| 17 | **`blog-jinan-medical-hub.html`** | **30 周年质量巡检 · 济南医疗器械枢纽**：制造集群与医院中央气站现场工程审计 | `https://www.hongrun1995.cn/blog-jinan-medical-hub.html` |
-| 18 | **`blog-beijing-quality-tour.html`** | **30 周年质量巡检 · 北京**：三甲医院、北大口腔医学院、中科院实验室 | `https://www.hongrun1995.cn/blog-beijing-quality-tour.html` |
-| 19 | **`privacy-policy.html`** | **隐私政策 (Privacy Policy)**：国际化数据保护与 GDPR 合规声明 | `https://www.hongrun1995.cn/privacy-policy.html` |
+| 13 | **`blog-dental-air-purity-engineering-guide.html`** | **【旗舰白皮书 #01】零油纯度工程架构与选型全指南 (HY Series)**：中英双语版、ISO 8573-1 Class 0 认证、活塞机械摩擦学、1~50 台牙椅选型公式、真实 ZB-300 机头/吸干机配图 | `https://www.hongrun1995.cn/blog-dental-air-purity-engineering-guide.html` |
+| 14 | **`blog-15-dental-chairs-sizing.html`** | **15 台牙椅选型白皮书 (Sizing Whitepaper)**：同时使用系数 k=0.70 计算、HYT 双机头冗余、HVS 中央负压选型 | `https://www.hongrun1995.cn/blog-15-dental-chairs-sizing.html` |
+| 15 | **`blog-compressor-exploded-anatomy.html`** | **空压机 3D CAD 爆炸解剖 (Exploded Anatomy)**：Class 0 零油纯度工程、PTFE 活塞环生命周期、PSA 吸附干燥解剖 | `https://www.hongrun1995.cn/blog-compressor-exploded-anatomy.html` |
+| 16 | **`blog-suction-exploded-anatomy.html`** | **HVS 抽吸系统 3D 爆炸解剖**：流体动力学、两级旋风分离、气溶胶控制、多椅选型 | `https://www.hongrun1995.cn/blog-suction-exploded-anatomy.html` |
+| 17 | **`blog-dental-south-china-expo.html`** | **华南国际口腔展 (Dental South China Expo)**：智能化洁净空气站与 HVS 抽吸系统首发、OEM 合作签约 | `https://www.hongrun1995.cn/blog-dental-south-china-expo.html` |
+| 18 | **`blog-jinan-medical-hub.html`** | **30 周年质量巡检 · 济南医疗器械枢纽**：制造集群与医院中央气站现场工程审计 | `https://www.hongrun1995.cn/blog-jinan-medical-hub.html` |
+| 19 | **`blog-beijing-quality-tour.html`** | **30 周年质量巡检 · 北京**：三甲医院、北大口腔医学院、中科院实验室 | `https://www.hongrun1995.cn/blog-beijing-quality-tour.html` |
+| 20 | **`privacy-policy.html`** | **隐私政策 (Privacy Policy)**：国际化数据保护与 GDPR 合规声明 | `https://www.hongrun1995.cn/privacy-policy.html` |
 
 ---
 
@@ -595,6 +596,45 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 ### 18.3 Lightbox 高清通道防缓存规范
 - 当产品图片或参数发生更新时，在页面中引用 `data-hd` 与 `src` 必须附加时间戳或版本号（如 `?v=20260902_v3`），确保 CDN 与浏览器强刷，杜绝因缓存导致的"点击放大显示旧缩略图/虚图"现象。
+
+
+
+
+
+---
+
+## 第十九章：工作区单一目录隔离与全站资产闭环规范 (Workspace Isolation SOP)
+
+### 19.1 独立闭环工作区原则
+1. **`hrtech/` 目录为全站唯一受控工作区**：
+   - 包含所有 HTML 页面、样式表、原生 JS、高清图库（`assets/`）、白皮书发布归档包、SEO 配置文件（`sitemap.xml`、`robots.txt`、`llms.txt`、`CNAME`）及 Git 仓库配置。
+   - 所有开发调试、页面新增、图库优化及 Git 提交流程，**必须在 `hrtech/` 内部闭环运行，严禁在项目根目录下生成散落文件**。
+2. **根目录整洁标准**：
+   - 项目根目录 `/Users/martin/Documents/2026 BUSINESS MTRIX /20260810 HR TECH WEBSITE/` 仅保留：
+     - `hrtech/`（网站生产工作目录）
+     - `20260628 国际网站优化方案备份文件和参考资料/`（用户原始资料库）
+     - `宏润官网-第三方视觉核对资料包/`（用户视觉资料库）
+     - `20260810-项目执行手册-宏润国际官网-V3.0.md`（项目顶层执行总则）
+     - `宏润官网-第三方视觉核对与修改任务包.md`（任务描述文件）
+   - 严禁在根目录下存放任何测试脚本（`*.py`）、临时截图（`*.png` / `*.jpg`）、数据提取中间件（`*.json`）或过程目录。
+
+---
+
+## 第二十章：项目全期迭代日志与用户核心决策履历 (Progress Log & Decisions)
+
+### 20.1 核心技术与产品决策里程碑 (2026-09-02)
+
+| 时间戳 | 事项 / 用户指令 | 官方决策结论与系统落地 |
+| :--- | :--- | :--- |
+| **2026-09-02 14:00** | HY-200 储气罐容积标准确认 | 用户正式指令：“HY-200 从38L改32L，这是公司最近刚做的安排，38是历史数据，按照32L更新。” **全站产品页与白皮书参数统一锁定为 32L**。 |
+| **2026-09-02 14:30** | 旗舰白皮书 #01 发布 | 编制并发布《零油纯度工程架构与选型全指南》（`blog-dental-air-purity-engineering-guide.html`），采用中英双语（英文在前，中文在后），集成 1~50 台牙椅选型公式与真实产品配图。 |
+| **2026-09-02 14:45** | 移除冗余打印/下载按钮 | 用户指令：“还有个什么print和save那个没有必要。” **彻底移除白皮书顶部与导航栏中的 Download PDF / Print 按钮**，聚焦纯粹网页阅读。 |
+| **2026-09-02 14:50** | 严禁使用营销线稿草图 | 用户指令：“这些Sketch更多是用来宣传和营销的，不够严谨，不要使用，改用真实产品配图。” **彻底移除手绘线稿，替换为 ZB-300 真实机头与 PSA-Dryer 实物白底照片**。 |
+| **2026-09-02 14:55** | 博客标准化固定大封面 | 确立大标题下方固定 16:9/21:9 宽屏大封面标准，与 `news.html` 列表页卡片缩略图 1:1 像素级呼应并支持 Lightbox 4K 放大。 |
+| **2026-09-02 15:00** | 全球社媒分享矩阵 V3.0 | 用户指令升级社媒图标，补充 YouTube、Instagram，修复 X 平台。**采用原生内嵌矢量 SVG 实现 X (Twitter)，全渠道覆盖 LinkedIn, WhatsApp, YouTube, IG, FB, TG, Email, Copy Link**。 |
+| **2026-09-02 15:05** | CSS 作用域与对比度重构 | 修复 `.article-body` 全局样式穿透导致的 CTA 模块深底深字问题；重构公式卡与 CTA 咨询框，达到 14:1 AAA 级可读性。 |
+| **2026-09-02 15:08** | HY-300 50L 立式实物配图校正 | 纠正此前 HY-300 与 HY-100（24L 卧式矮罐）的配图混淆，**采用用户上传的正版 50L 立式圆柱储气罐 + ZB300 高功率机头实拍图，保留天然 HORUN 经典标识，生成 1600px 超清大图**。 |
+| **2026-09-02 15:10** | 根目录清理与工作区收敛 | **彻底清理根目录下所有临时脚本与截图碎片，全站核心工程资产 100% 封闭在 `hrtech/` 目录内部**。 |
 
 
 
