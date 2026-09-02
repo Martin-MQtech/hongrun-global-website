@@ -1,17 +1,8 @@
-# Hongrun Technology (https://www.hongrun1995.cn) - Robots Policy
+# Hongrun Technology (https://www.hongrun1995.cn) - Global Robots & Crawlers Policy
 User-agent: *
 Allow: /
 
-# Allow AI Search Crawlers for Generative Engine Optimization (GEO)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
+# Global Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -21,4 +12,33 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
+User-agent: Yeti
+Allow: /
+
+User-agent: SeznamBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI & Generative Engine Optimization (GEO) Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
 Sitemap: https://www.hongrun1995.cn/sitemap.xml
+
