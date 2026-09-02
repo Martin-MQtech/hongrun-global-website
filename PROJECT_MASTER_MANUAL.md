@@ -459,10 +459,10 @@ Hongrun Complete Clean Air & Suction Ecosystem
 - 处理：把高清内容归档到 `assets/images/products/intl/HYTG-300.jpg` 与 `thumbs/HYTG-300.jpg`，删除错误的 `HYT-300.jpg` 文件，更新两页引用（products-hy.html + products.html，共 intl×2 + thumbs×2）。
 - ⚠️ **不要改用 999×800 的那张低清小图**——它是旧小图，清晰度与 Lightbox 效果都差。用户最终拍板用高清图。
 
-**C. HY-200 储气罐容量：38 L（不是 32 L）**
-- 官方图册 p12 明确 HY-200：220V / 0.75kW / ZB200 / 0.8MPa / 150 L/min / 储气罐 **38L** / 重 26.5kg / Φ8 / 410×410×710。
-- 站内 `products-hy.html` 已从 32 L 改为 38 L。
-- **HY-200 图片用原图**（即对应 38L 的实物图）；用户后提供的另一张图为 32L 版本，**不使用**（保留原图即可）。
+**C. HY-200 储气罐容量：32 L（公司最新安排，38L 为历史数据）**
+- 公司最新官方产品规格确认 HY-200：220V / 0.75kW / ZB200 / 0.8MPa / 150 L/min / 储气罐 **32L** / 1450 rpm / ≤65 dB。
+- 站内 `products-hy.html` 卡片与规格表已全部按最新标准更新为 **32 L**。
+- **后续任何 Agent 若再遇到 HY-200 储气罐容量问题，一律以 32L 最新标准为准。**
 
 **D. HY 页 meta 修正（去掉误导性描述）**
 - `<meta name="description">` 原文含 "Swedish spring plates … ≤60 dB … ISO 8573-1 Class 0"，其中"瑞典弹簧片、≤60dB"与 HY 活塞机实际不符（详见产品方反馈）。
