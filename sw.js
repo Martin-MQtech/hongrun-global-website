@@ -6,7 +6,6 @@
 const CACHE_NAME = "hongrun-cache-v1";
 const STATIC_ASSETS = [
   "/",
-  "/index.html",
   "/products.html",
   "/solutions.html",
   "/contact.html",
@@ -63,7 +62,7 @@ self.addEventListener("fetch", (event) => {
           return res;
         })
         .catch(() => {
-          return caches.match(req).then((cached) => cached || caches.match("/index.html"));
+          return caches.match(req).then((cached) => cached || caches.match("/"));
         })
     );
   } else {

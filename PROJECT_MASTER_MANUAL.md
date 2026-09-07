@@ -59,7 +59,7 @@
 
 | # | 页面文件名 | 页面职责与核心模块 | 访问绝对路径 / 生产 URL |
 | :---: | :--- | :--- | :--- |
-| 1 | **`index.html`** | **官网主页 (Home)**：3 镜头全景轮播、Trust Bar 动态数据条、6 大品类全景网格、父女两代家国传承叙事、权威合作伙伴背书 | `https://www.hongrun1995.cn/index.html` |
+| 1 | **`index.html`** | **官网主页 (Home)**：3 镜头全景轮播、Trust Bar 动态数据条、6 大品类全景网格、父女两代家国传承叙事、权威合作伙伴背书 | `https://www.hongrun1995.cn/` |
 | 2 | **`products.html`** | **产品总览中心 (Products Hub)**：3 镜头 3D CAD/旗舰机轮播、6 标签吸顶锚点导航、6 大系统规格参数表、直通独立详情页 | `https://www.hongrun1995.cn/products.html` |
 | 3 | **`products-hy.html`** | **摆动活塞无油空压机 (HY Series)**：1~10 台牙椅门诊主力气源、HY-100~HYT-500 双机头冗余机组全参数表 | `https://www.hongrun1995.cn/products-hy.html` |
 | 4 | **`products-hospital.html`** | **静音涡旋与医院系统 (HW/HBG)**：二类医疗器械资质、大型医院中央气源站、HW-200~HW-3600 全系机组 | `https://www.hongrun1995.cn/products-hospital.html` |
