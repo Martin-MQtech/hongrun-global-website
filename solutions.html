@@ -2,6 +2,53 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -75,13 +122,71 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How to calculate medical air compressor capacity for a dental clinic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The required compressed air volume is calculated by Q = N × 50 × f (L/min @ 5 bar), where N is the total number of dental treatment chairs, 50 L/min is the baseline air consumption per chair (handpiece + syringe), and f is the simultaneous diversity factor (0.70 for 3–5 chairs, 0.60 for 6–10 chairs). For 4–8 chairs, Hongrun recommends the HYTG-300 dual-pump redundant station (400 L/min, 90L tank)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What international standards govern hospital medical compressed air pipeline systems?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hospital central compressed air systems are governed by ISO 7396-1 (Medical gas pipeline systems), UK NHS HTM 02-01, US NFPA 99, and China GB 50751. Air purity must meet ISO 8573-1 Class 0 (Hongrun measures total hydrocarbon residual oil at 0.003 mg/m³) with a pressure dew point of -40°C to prevent bacterial biofilm formation in hospital distribution loops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is certified Class 0 oil-free air required for LC-MS and GC analytical laboratories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trace hydrocarbon vapors and volatile organic compounds (VOCs) elevate mass spectrometer (LC-MS) baseline noise and produce phantom ion peaks, destroying trace detection sensitivity. Hongrun HYG series clean air stations feature sub-micron 0.01 μm borosilicate filtration and dual-tower 13X synthetic molecular sieves (-40°C to -70°C dew point) to ensure zero hydrocarbon contamination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is dual-pump redundancy essential for 4 to 8 dental chair clinics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a 4 to 8 chair clinic, a single compressor failure stops multiple operatory procedures simultaneously. Hongrun HYTG-300 features two independent synchronized ZB300 pump heads on a single 90L tank with automatic PLC alternation. If one pump head requires routine maintenance, the second head maintains continuous clinical air supply without downtime."
+      }
+    }
+  ]
+}
+</script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="index.html"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
@@ -99,7 +204,7 @@
     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
       <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-        <p class="text-white/70 text-[10px] uppercase tracking-widest mb-3"><a href="index.html" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Engineering Solutions</span></p>
+        <p class="text-white/70 text-[10px] uppercase tracking-widest mb-3"><a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Engineering Solutions</span></p>
         <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap mb-4">Turnkey EPC · Class II Medical Standard</div>
         <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Tailored Clinical<br/><span class="text-sky-300">Engineering Systems</span></h1>
         <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">From dental clinics to central hospital gas stations. We design, build, and certify the entire pipeline network.</p>
@@ -119,74 +224,483 @@
     </div>
 
     <!-- Application 01: Dental Clinics -->
-    <div id="solution-clinic" class="mb-16 grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-xl border border-slate-200 shadow-xl">
-      <div class="lg:col-span-6 order-2 lg:order-1">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Application 01</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Dental Clinics &amp; Stomatology Centers</h3>
-        <p class="text-slate-600 mb-6 leading-relaxed text-sm">Turnkey operatory gas, vacuum, and water loops supporting 1 to 30 dental treatment units. Pairing HY oil-free compressors with HVS electric suction units eliminates up to 85% of aerosol cross-infection risks.</p>
-        <div class="grid grid-cols-2 gap-3 mb-6">
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">Air Purity</span><strong class="text-brand-blue text-sm">ISO 8573-1 Class 0</strong></div>
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">Aerosol Control</span><strong class="text-brand-blue text-sm">85%+ Suction Rate</strong></div>
+    <div id="solution-clinic" class="mb-16 grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
+      <div class="lg:col-span-7 order-2 lg:order-1">
+        <div class="inline-flex items-center gap-2 bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">
+          <i class="fa-solid fa-tooth"></i> Application 01 &middot; Stomatology &amp; Operatory Systems
         </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">Consult Clinical Specialist <i class="fa-solid fa-arrow-right"></i></a>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Dental Clinics &amp; Stomatology Centers (1 to 50 Chairs)</h3>
+        <p class="text-slate-600 mb-5 leading-relaxed text-sm">
+          Complete clinical ecosystem covering compressed air, dynamic fluid separation, and sterile waterline loops. Eliminating oil aerosols (<0.003 mg/m³) prevents composite restoration bonding failures, while HVS high-vacuum suction suppresses over 85% of intraoral biohazard aerosol plumes.
+        </p>
+
+        <!-- Purity & Standards Badges -->
+        <div class="flex flex-wrap items-center gap-2 mb-5">
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-shield-halved mr-1"></i> ISO 8573-1 Class 0</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-wind mr-1"></i> ISO 22052 Dental Air</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-lungs mr-1"></i> ISO 10637 Suction</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-amber-50 text-amber-700 rounded border border-amber-200"><i class="fa-solid fa-certificate mr-1"></i> NMPA Class II</span>
+        </div>
+
+        <!-- Mesh Interconnection: Recommended Products Matrix -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Recommended Equipment Configurations:</span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+            <a href="products-hy.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HY-200 (32L)</span>
+              <span class="text-[10px] text-slate-500">1-2 Chairs Boutique</span>
+            </a>
+            <a href="products-hy.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HYTG-300 (90L)</span>
+              <span class="text-[10px] text-slate-500">4-8 Chairs Dual-Pump</span>
+            </a>
+            <a href="products-hvs.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HVS-5 / HVS-10</span>
+              <span class="text-[10px] text-slate-500">High-Vacuum Evacuation</span>
+            </a>
+            <a href="products-water.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HRC-100S RO</span>
+              <span class="text-[10px] text-slate-500">Dental Chair Waterlines</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mesh Interconnection: Authoritative Whitepapers -->
+        <div class="border-t border-slate-200 pt-3 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Clinical Sizing &amp; Engineering Whitepapers:</span>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-file-lines text-sky-500"></i> Whitepaper #08 (1–3 Chairs) &rarr;
+            </a>
+            <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-file-lines text-teal-500"></i> Whitepaper #09 (4–8 Chairs Dual-Pump) &rarr;
+            </a>
+            <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-cube text-indigo-500"></i> Whitepaper #06 (HVS 3D Anatomy) &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">
+            <i class="fa-regular fa-paper-plane"></i> Consult Clinical Specialist
+          </a>
+          <a href="#sizing-calculator" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 px-4 py-2.5 rounded-sm font-semibold text-xs border border-slate-300 transition">
+            <i class="fa-solid fa-calculator text-brand-blue"></i> Launch Sizing Calculator &darr;
+          </a>
+        </div>
       </div>
-      <div class="lg:col-span-6 order-1 lg:order-2 rounded-xl overflow-hidden shadow-lg h-72 group">
+      <div class="lg:col-span-5 order-1 lg:order-2 rounded-xl overflow-hidden shadow-lg h-80 group">
         <img data-zoom data-hd="assets/images/solutions/app-dental-clinic.jpg" src="assets/images/solutions/app-dental-clinic.jpg" alt="Dental Clinic Application" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
       </div>
     </div>
 
-    <!-- Application 02: Medical Infection Control -->
-    <div id="solution-hospital" class="mb-16 grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-xl border border-slate-200 shadow-xl">
-      <div class="lg:col-span-6 rounded-xl overflow-hidden shadow-lg h-72 group">
+    <!-- Application 02: Hospital Central Gas EPC -->
+    <div id="solution-hospital" class="mb-16 grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
+      <div class="lg:col-span-5 rounded-xl overflow-hidden shadow-lg h-80 group">
         <img data-zoom data-hd="assets/images/solutions/app-medical-infection.jpg" src="assets/images/solutions/app-medical-infection.jpg" alt="Medical Infection Control" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
       </div>
-      <div class="lg:col-span-6">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Application 02</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Hospital &amp; Infection Control EPC</h3>
-        <p class="text-slate-600 mb-6 leading-relaxed text-sm">Certified NMPA Class II Medical Device central air and suction stations (HBG series). Delivers sterile medical gas and high negative pressure to operating rooms, ICU suites, endoscopy, and central sterilization departments.</p>
-        <div class="grid grid-cols-2 gap-3 mb-6">
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">Regulatory</span><strong class="text-brand-blue text-sm">NMPA Class II License</strong></div>
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">Dew Point</span><strong class="text-brand-blue text-sm">&le; -40&deg;C Sterile Dry</strong></div>
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">
+          <i class="fa-solid fa-hospital"></i> Application 02 &middot; Hospital Medical Gas EPC
         </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">Request EPC Proposal <i class="fa-solid fa-arrow-right"></i></a>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Hospital &amp; Central Gas Pipeline Engineering</h3>
+        <p class="text-slate-600 mb-5 leading-relaxed text-sm">
+          Certified NMPA Class II Medical Device central compressor and vacuum skids (HW / HBG series). Engineered to deliver continuous, zero-interruption medical breathing air and surgical drive air to intensive care units (ICUs), operating theatres, and central sterilization (CSSD).
+        </p>
+
+        <!-- Purity & Standards Badges -->
+        <div class="flex flex-wrap items-center gap-2 mb-5">
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-hospital-user mr-1"></i> ISO 7396-1 Pipeline System</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-temperature-arrow-down mr-1"></i> -40°C Pressure Dew Point</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-clipboard-check mr-1"></i> UK HTM 02-01 / NFPA 99</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-amber-50 text-amber-700 rounded border border-amber-200"><i class="fa-solid fa-network-wired mr-1"></i> N+1 / N+2 Redundancy</span>
+        </div>
+
+        <!-- Mesh Interconnection: Recommended Products Matrix -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Recommended Hospital Skids:</span>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+            <a href="products-hospital.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HW Series Scroll</span>
+              <span class="text-[10px] text-slate-500">200 to 3,600 L/min</span>
+            </a>
+            <a href="products-hospital.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HBG-800 / HBG-1200</span>
+              <span class="text-[10px] text-slate-500">Multi-4V Medical Air Stations</span>
+            </a>
+            <a href="products-water.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HRC-500 / HRC-1000</span>
+              <span class="text-[10px] text-slate-500">Hospital CSSD Pure Water</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mesh Interconnection: Authoritative Whitepapers -->
+        <div class="border-t border-slate-200 pt-3 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Hospital Engineering Whitepapers:</span>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-certificate text-teal-500"></i> Whitepaper #07: ISO 8573-1 Class 0 Medical Air Architecture &rarr;
+            </a>
+            <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-diagram-project text-sky-500"></i> Whitepaper #04: 15+ Chair Hospital Pneumatic Center CAD &rarr;
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">
+          <i class="fa-regular fa-paper-plane"></i> Request Hospital EPC Blueprint
+        </a>
       </div>
     </div>
 
-    <!-- Application 03: Analytical Laboratories -->
-    <div id="solution-lab" class="mb-16 grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-xl border border-slate-200 shadow-xl">
-      <div class="lg:col-span-6 order-2 lg:order-1">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Application 03</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Analytical &amp; Scientific Research Labs</h3>
-        <p class="text-slate-600 mb-6 leading-relaxed text-sm">Continuous high-purity carrier gas supplies for mass spectrometers (LC-MS), gas chromatographs (GC), and nuclear magnetic resonance (NMR). Trusted OEM partner for Agilent, Bruker, and Shimadzu.</p>
-        <div class="grid grid-cols-2 gap-3 mb-6">
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">Particulate</span><strong class="text-brand-blue text-sm">0.01 &mu;m Absolute</strong></div>
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">OEM Partners</span><strong class="text-brand-blue text-sm">Agilent &middot; Bruker &middot; CAS</strong></div>
+    <!-- Application 03: Analytical Laboratories & Cleanrooms -->
+    <div id="solution-lab" class="mb-16 grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
+      <div class="lg:col-span-7 order-2 lg:order-1">
+        <div class="inline-flex items-center gap-2 bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">
+          <i class="fa-solid fa-flask-vial"></i> Application 03 &middot; Analytical Instrumentation
         </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">Lab OEM Consultation <i class="fa-solid fa-arrow-right"></i></a>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Analytical &amp; Scientific Research Laboratories</h3>
+        <p class="text-slate-600 mb-5 leading-relaxed text-sm">
+          Ultra-pure, continuous carrier gas supplies for mass spectrometry (LC-MS / LC-MS/MS), gas chromatography (GC / GC-MS), and nuclear magnetic resonance (NMR). Total hydrocarbon removal prevents analytical baseline drift, protecting sensitive detector filaments.
+        </p>
+
+        <!-- Purity & Standards Badges -->
+        <div class="flex flex-wrap items-center gap-2 mb-5">
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-filter mr-1"></i> 0.01 μm Sub-Micron Filtration</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-droplet-slash mr-1"></i> -40°C to -70°C Dew Point</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-microscope mr-1"></i> Zero Hydrocarbon Noise</span>
+        </div>
+
+        <!-- Mesh Interconnection: Recommended Products Matrix -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Recommended Analytical Supply Units:</span>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+            <a href="products-cleanair.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HYG-301 / HYG-302</span>
+              <span class="text-[10px] text-slate-500">LC-MS Clean Air Station</span>
+            </a>
+            <a href="products-cleanair.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HVTG-400 / HVTG-900</span>
+              <span class="text-[10px] text-slate-500">High-Purity Laboratory Units</span>
+            </a>
+            <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">PSA Molecular Towers</span>
+              <span class="text-[10px] text-slate-500">Integrated Twin Adsorption</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mesh Interconnection: Authoritative Whitepapers -->
+        <div class="border-t border-slate-200 pt-3 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Technical Laboratory References:</span>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-file-contract text-sky-500"></i> Zero-Oil Class 0 Testing Dossier &rarr;
+            </a>
+            <a href="/articles/20260820-compressor-exploded-anatomy/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-cube text-teal-500"></i> Whitepaper #05: 3D CAD Anatomy of Class 0 Compressors &rarr;
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">
+          <i class="fa-regular fa-paper-plane"></i> Consult Laboratory OEM Specialist
+        </a>
       </div>
-      <div class="lg:col-span-6 order-1 lg:order-2 rounded-xl overflow-hidden shadow-lg h-72 group">
+      <div class="lg:col-span-5 order-1 lg:order-2 rounded-xl overflow-hidden shadow-lg h-80 group">
         <img data-zoom data-hd="assets/images/solutions/app-laboratory.jpg" src="assets/images/solutions/app-laboratory.jpg" alt="Analytical Laboratories" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
       </div>
     </div>
 
-    <!-- Application 04: Commercial & Industrial Manufacturing -->
-    <div id="solution-commercial" class="grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-xl border border-slate-200 shadow-xl">
-      <div class="lg:col-span-6 rounded-xl overflow-hidden shadow-lg h-72 group">
+    <!-- Application 04: Precision Manufacturing & Global OEM -->
+    <div id="solution-commercial" class="grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
+      <div class="lg:col-span-5 rounded-xl overflow-hidden shadow-lg h-80 group">
         <img data-zoom data-hd="assets/images/solutions/app-commercial.jpg" src="assets/images/solutions/app-commercial.jpg" alt="Commercial Manufacturing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"/>
       </div>
-      <div class="lg:col-span-6">
-        <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Application 04</div>
-        <h3 class="text-2xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Precision Industrial &amp; Clean Manufacturing</h3>
-        <p class="text-slate-600 mb-6 leading-relaxed text-sm">Pure compressed air for electronic chip assembly, semiconductor packaging, optical instruments, and pharmaceutical packaging with 100% zero oil tolerance.</p>
-        <div class="grid grid-cols-2 gap-3 mb-6">
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">Operating Life</span><strong class="text-brand-blue text-sm">30,000h+ Continuous</strong></div>
-          <div class="p-3 bg-brand-light rounded-lg border border-slate-200"><span class="block text-xs text-slate-500 font-bold uppercase">Energy Efficiency</span><strong class="text-brand-blue text-sm">National Level 1</strong></div>
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">
+          <i class="fa-solid fa-gears"></i> Application 04 &middot; Industrial Precision &amp; OEM
         </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">Commercial Inquiries <i class="fa-solid fa-arrow-right"></i></a>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Precision Industrial OEM &amp; Component Supply</h3>
+        <p class="text-slate-600 mb-5 leading-relaxed text-sm">
+          Supplying bare wobble-piston pump heads, 4V cylinder modular blocks, and precision sub-assemblies to global dental unit builders, analytical instrument brands, and automated clean manufacturing plants. Backed by 30 years of continuous machining excellence.
+        </p>
+
+        <!-- Purity & Standards Badges -->
+        <div class="flex flex-wrap items-center gap-2 mb-5">
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-microchip mr-1"></i> DMG MORI 5-Axis CNC (Ra ≤ 0.2 μm)</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-ring mr-1"></i> Saint-Gobain PTFE (20,000h)</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-industry mr-1"></i> 160,000 Units Annual Capacity</span>
+        </div>
+
+        <!-- Mesh Interconnection: Recommended OEM Units -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Recommended Bare Pump Heads &amp; Parts:</span>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+            <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">ZB-100 / 200 / 300</span>
+              <span class="text-[10px] text-slate-500">Wobble-Piston Bare Heads</span>
+            </a>
+            <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">4V Cylinder Blocks</span>
+              <span class="text-[10px] text-slate-500">2.2kW – 3.0kW Bare Assemblies</span>
+            </a>
+            <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">Saint-Gobain Rings</span>
+              <span class="text-[10px] text-slate-500">Diamond-Coated PTFE Seals</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mesh Interconnection: Authoritative Whitepapers -->
+        <div class="border-t border-slate-200 pt-3 mb-5">
+          <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Precision Manufacturing Whitepapers:</span>
+          <div class="flex flex-wrap gap-2 text-xs">
+            <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-microchip text-sky-500"></i> Whitepaper #10: Precision Manufacturing Meets Agentic Web &rarr;
+            </a>
+            <a href="/articles/20260820-compressor-exploded-anatomy/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
+              <i class="fa-solid fa-cube text-teal-500"></i> Whitepaper #05: 3D Exploded Anatomy &amp; Tribology &rarr;
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2.5 rounded-sm font-bold text-xs transition shadow-md">
+          <i class="fa-regular fa-paper-plane"></i> Request OEM Specification Dossier
+        </a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ==========================================
+     INTERACTIVE CLINICAL SIZING CALCULATOR WIDGET
+     Dual-Channel Architecture: Real-time UI for Humans + WebMCP for AI Agents
+========================================== -->
+<section id="sizing-calculator" class="py-16 bg-slate-900 text-white relative overflow-hidden">
+  <div class="absolute -right-24 -top-24 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -left-24 -bottom-24 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-2 bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider mb-3">
+        <i class="fa-solid fa-calculator text-amber-400"></i> Interactive Engineering Sizing Tool &middot; AI Agent Ready
+      </div>
+      <h2 class="text-3xl lg:text-4xl font-extrabold font-display tracking-tight text-white">
+        Dental Operatory <span class="text-sky-400">Pneumatic Sizing Calculator</span>
+      </h2>
+      <p class="text-slate-300 text-sm max-w-2xl mx-auto mt-2 font-light">
+        Instant dynamic calculation for Class 0 oil-free air flow (Q = N × 50 × f) and high-vacuum suction demand. 
+        Engineered for clinic owners, dental architects, and automated AI browser agents.
+      </p>
+    </div>
+
+    <!-- Calculator Grid -->
+    <div class="bg-slate-800/80 border border-slate-700 backdrop-blur-md rounded-2xl p-6 lg:p-10 shadow-2xl grid lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Input Controls (Left Column) -->
+      <div class="lg:col-span-5 space-y-6">
+        <!-- Chair Count Slider -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label for="chair-range" class="text-xs font-bold uppercase tracking-wider text-slate-300">Dental Chairs Installed (N)</label>
+            <span id="chair-display" class="font-display font-black text-2xl text-sky-400 bg-slate-900 px-3 py-1 rounded border border-slate-700">6 Chairs</span>
+          </div>
+          <input id="chair-range" type="range" min="1" max="25" value="6" step="1" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-sky-400 focus:outline-none"/>
+          <div class="flex justify-between text-[11px] text-slate-400 mt-1 font-mono">
+            <span>1 Chair (Solo)</span>
+            <span>8 (Medium)</span>
+            <span>16 (Center)</span>
+            <span>25+ (Hospital)</span>
+          </div>
+        </div>
+
+        <!-- Diversity Factor -->
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Simultaneous Usage Factor (f)</label>
+          <div class="grid grid-cols-3 gap-2" id="factor-buttons">
+            <button type="button" data-factor="0.6" class="factor-btn py-2 text-xs font-semibold rounded border border-slate-600 bg-slate-700 text-slate-200 hover:border-sky-400 transition">0.60 (Conservative)</button>
+            <button type="button" data-factor="0.7" class="factor-btn active py-2 text-xs font-semibold rounded border border-sky-400 bg-sky-500/20 text-white transition">0.70 (Standard)</button>
+            <button type="button" data-factor="0.8" class="factor-btn py-2 text-xs font-semibold rounded border border-slate-600 bg-slate-700 text-slate-200 hover:border-sky-400 transition">0.80 (Intensive)</button>
+          </div>
+          <p class="text-[11px] text-slate-400 mt-1.5 leading-relaxed">
+            *ISO 7396-1 recommends 0.70 for commercial dental practices with shared peak procedure hours.
+          </p>
+        </div>
+
+        <!-- Engineering Callout -->
+        <div class="p-3.5 bg-slate-900/60 rounded-xl border border-slate-700 text-xs text-slate-300 space-y-1">
+          <div class="font-bold text-amber-300 flex items-center gap-1.5"><i class="fa-solid fa-microchip"></i> W3C WebMCP Native Dual-Channel</div>
+          <p class="text-[11px] text-slate-400">
+            This algorithm is directly executable by AI Agents visiting this page via <code class="text-sky-300">document.modelContext.calculate_dental_sizing</code>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Output Results Panel (Right Column) -->
+      <div class="lg:col-span-7 bg-slate-900/90 rounded-xl border border-slate-700 p-6 space-y-6">
+        <!-- Live Computed Pneumatic Demand -->
+        <div class="grid grid-cols-2 gap-4 pb-5 border-b border-slate-800">
+          <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1"><i class="fa-solid fa-wind text-sky-400 mr-1"></i> Compressed Air Required</span>
+            <div id="air-flow-out" class="font-display font-extrabold text-2xl text-white">210 <span class="text-xs text-sky-300 font-sans">L/min @ 5 bar</span></div>
+            <span class="text-[10px] text-slate-400 font-mono">ISO 8573-1 Class 0 (Zero-Oil)</span>
+          </div>
+          <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700">
+            <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1"><i class="fa-solid fa-arrows-to-circle text-amber-400 mr-1"></i> Vacuum Suction Required</span>
+            <div id="suction-flow-out" class="font-display font-extrabold text-2xl text-white">1050 <span class="text-xs text-amber-300 font-sans">L/min @ -20 kPa</span></div>
+            <span class="text-[10px] text-slate-400 font-mono">2-Stage Cyclone Separation</span>
+          </div>
+        </div>
+
+        <!-- Recommended Equipment Stack -->
+        <div class="space-y-3">
+          <div class="flex items-start gap-3 bg-slate-800/40 p-3 rounded-lg border border-slate-700/60">
+            <div class="w-8 h-8 rounded bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 text-sm mt-0.5"><i class="fa-solid fa-compressor"></i></div>
+            <div class="flex-1">
+              <span class="text-[11px] font-bold uppercase text-slate-400 tracking-wider">Recommended Medical Compressor</span>
+              <div id="rec-compressor" class="font-bold text-sm text-sky-300">HYTG-300 (2.2kW Dual ZB300 Heads, 90L Tank, 400 L/min)</div>
+              <p id="rec-comp-note" class="text-xs text-slate-400 mt-0.5">Dual-head redundancy allows continuous operation during scheduled maintenance.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 bg-slate-800/40 p-3 rounded-lg border border-slate-700/60">
+            <div class="w-8 h-8 rounded bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-sm mt-0.5"><i class="fa-solid fa-fan"></i></div>
+            <div class="flex-1">
+              <span class="text-[11px] font-bold uppercase text-slate-400 tracking-wider">Recommended Dental Suction Unit</span>
+              <div id="rec-suction" class="font-bold text-sm text-amber-300">HVS-600 High-Vacuum Suction Unit (1.5kW, 1200 L/min)</div>
+              <p id="rec-suct-note" class="text-xs text-slate-400 mt-0.5">Eliminates >85% aerosol spray cross-infection at the operatory boundary.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="pt-2 flex flex-col sm:flex-row gap-3 items-center justify-between">
+          <a id="quote-with-config" href="contact.html?chairs=6&compressor=HYTG-300&suction=HVS-600" class="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-2.5 rounded-sm font-bold text-xs uppercase tracking-wider transition shadow-lg inline-flex items-center justify-center gap-2">
+            <span>Lock Config &amp; Request Engineering Quotation</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="text-xs text-sky-300 hover:text-white underline underline-offset-4 transition font-medium">
+            Read Whitepaper #09 (4-8 Chairs Redundancy) &rarr;
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+(function initSizingCalculator() {
+  var slider = document.getElementById('chair-range');
+  var display = document.getElementById('chair-display');
+  var airOut = document.getElementById('air-flow-out');
+  var suctionOut = document.getElementById('suction-flow-out');
+  var recComp = document.getElementById('rec-compressor');
+  var recCompNote = document.getElementById('rec-comp-note');
+  var recSuct = document.getElementById('rec-suction');
+  var recSuctNote = document.getElementById('rec-suct-note');
+  var quoteBtn = document.getElementById('quote-with-config');
+  var factorButtons = document.querySelectorAll('.factor-btn');
+
+  var currentFactor = 0.7;
+
+  function recalculate() {
+    var n = parseInt(slider.value, 10) || 1;
+    display.textContent = n + (n === 1 ? ' Chair' : ' Chairs');
+
+    var airFlow = Math.round(n * 50 * currentFactor);
+    var suctionFlow = Math.round(n * 250 * currentFactor);
+
+    airOut.innerHTML = airFlow + ' <span class="text-xs text-sky-300 font-sans">L/min @ 5 bar</span>';
+    suctionOut.innerHTML = suctionFlow + ' <span class="text-xs text-amber-300 font-sans">L/min @ -20 kPa</span>';
+
+    var compModel = "";
+    var compDesc = "";
+    var compNote = "";
+    var suctModel = "";
+    var suctDesc = "";
+    var suctNote = "";
+
+    if (n <= 2) {
+      compModel = "HY-1.5";
+      compDesc = "HY-1.5 Silent Cabinet Dental Compressor (1.1kW, 120 L/min, 50L Tank)";
+      compNote = "Quiet acoustic enclosure (52 dBA) fits under clinic operatory counter.";
+      suctModel = "HVS-300";
+      suctDesc = "HVS-300 Semi-Dry Vacuum Suction Unit (0.75kW, 600 L/min)";
+      suctNote = "Automatic float drainage with compact footprint.";
+    } else if (n <= 5) {
+      compModel = "HY-2.2 / HYTG-300";
+      compDesc = "HY-2.2 (2.2kW, 240 L/min, 90L) or HYTG-300 Dual-Pump Station";
+      compNote = "Twin head redundancy ensures uninterrupted patient flow.";
+      suctModel = "HVS-600";
+      suctDesc = "HVS-600 High-Vacuum Suction Unit (1.5kW, 1200 L/min)";
+      suctNote = "Dual-stage cyclone fluid separation with continuous drain.";
+    } else if (n <= 8) {
+      compModel = "HYTG-300 Dual Station";
+      compDesc = "HYTG-300 Dual-Head Redundancy Station (2x 1.1kW, 400 L/min, 90L)";
+      compNote = "Automated PLC alternation balances motor run-hours.";
+      suctModel = "HVS-1200";
+      suctDesc = "HVS-1200 Central Vacuum System (3.0kW, 2500 L/min)";
+      suctNote = "Central suction plant supporting multiple simultaneous procedures.";
+    } else if (n <= 16) {
+      compModel = "HR-600W Quad-Head";
+      compDesc = "HR-600W Quad-Head Medical Air Station (6.0kW, 750 L/min, 300L 304SS)";
+      compNote = "Hospital-grade N+1 redundancy; ISO 8573-1 Class 0 certified purity.";
+      suctModel = "HVS-1200 Duplex";
+      suctDesc = "HVS-1200 Dual-Pump Central Vacuum Plant (2x 3.0kW, 5000 L/min)";
+      suctNote = "Twin inverter pumps adjust dynamically to instantaneous suction demand.";
+    } else {
+      compModel = "Hongrun Custom Hospital Gas Skid EPC";
+      compDesc = "Central Modular Medical Gas Station Skid (Multi-compressor parallel + -40°C desiccant)";
+      compNote = "Full compliance with HTM 02-01 & ISO 7396-1 hospital gas codes.";
+      suctModel = "Hospital Surgical Vacuum Plant";
+      suctDesc = "Triple-Pump Surgical Vacuum Skid with Dual Bacterial Exhaust Filters";
+      suctNote = "Touchscreen PLC telemetry with BMS / IoT remote cloud connection.";
+    }
+
+    recComp.textContent = compDesc;
+    recCompNote.textContent = compNote;
+    recSuct.textContent = suctDesc;
+    recSuctNote.textContent = suctNote;
+
+    quoteBtn.href = "contact.html?chairs=" + n + "&compressor=" + encodeURIComponent(compModel) + "&suction=" + encodeURIComponent(suctModel);
+  }
+
+  quoteBtn.addEventListener('click', function() {
+    if (typeof gtag === 'function') {
+      var n = parseInt(slider.value, 10) || 1;
+      gtag('event', 'calculator_quote_click', {
+        event_category: 'B2B Sizing Tool',
+        chair_count: n,
+        event_label: quoteBtn.href
+      });
+    }
+  });
+
+  if (slider) {
+    slider.addEventListener('input', recalculate);
+  }
+
+  factorButtons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      factorButtons.forEach(function(b) {
+        b.classList.remove('active', 'border-sky-400', 'bg-sky-500/20', 'text-white');
+        b.classList.add('border-slate-600', 'bg-slate-700', 'text-slate-200');
+      });
+      btn.classList.add('active', 'border-sky-400', 'bg-sky-500/20', 'text-white');
+      btn.classList.remove('border-slate-600', 'bg-slate-700', 'text-slate-200');
+      currentFactor = parseFloat(btn.getAttribute('data-factor')) || 0.7;
+      recalculate();
+    });
+  });
+
+  // Init
+  recalculate();
+})();
+</script>
 
 <!-- SECTION 2: Real Project Engineering Gallery & Diagrams -->
 <section class="py-20 bg-brand-light border-t border-slate-200">
@@ -313,10 +827,14 @@
           <img src="assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
-        <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="contact.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-          <a href="news.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-solid fa-newspaper text-xl"></i></a>
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-linkedin text-base"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61594274000326" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-facebook text-base"></i></a>
+          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-instagram text-base"></i></a>
+          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-tiktok text-base"></i></a>
+          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-youtube text-base"></i></a>
+          <a href="https://x.com/martinhrtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-x-twitter text-base"></i></a>
+          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-whatsapp text-base"></i></a>
         </div>
       </div>
 
@@ -357,5 +875,13 @@
   </div>
 </footer>
 <script src="assets/js/lightbox.js"></script>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

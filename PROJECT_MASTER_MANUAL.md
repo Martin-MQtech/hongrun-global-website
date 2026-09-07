@@ -1,13 +1,14 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.5 (在 v3.4 基础上于 2026-09-02 全面升级白皮书矩阵与内容工厂执行规范：发布第 8、9 篇核心选型白皮书；锁死全站 VI V3.0 标准页脚与底部社交分享栏 SSOT；确立封面真实工业实物图优先 + CAD工程蓝图入正文插图策略；确立 news.html 卡片 6 要素与中文呼吸感杂志排版 1:1 对称标准；详见 §17 与 §20.3)  
-> **更新日期 Date:** 2026-09-02  
+> **版本 Version:** 3.10 (在 v3.9 基础上于 2026-09-03 全网接入官方 Google Analytics 4 全球商业分析系统，植入官方 Measurement ID: G-25BF91Y6Q1，覆盖全站 23 个生产 HTML 页面；配置海外 B2B 核心转化事件埋点：官方邮箱点击、WhatsApp 洽谈、RFQ 咨询意向、牙椅气量选型计算器使用率及 WebMCP AI 智能体调用追踪；详见 §20.8 与 §22.6)  
+> **更新日期 Date:** 2026-09-03  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
 > **项目定位 Positioning:** 国际顶级 B2B 工业品与高端医疗气源国际官网（纯静态极速架构 · 全球边缘加速 · 独立仓库与域名隔离）  
 > **线上生产发布地址 Public URL:** [https://www.hongrun1995.cn/](https://www.hongrun1995.cn/)（正式生产主域，HTTP/HTTPS 强制；`hongrun1995.cn` 301 至 www）  
 > **GitHub 主干仓库 Repository:** `Martin-MQtech/hongrun-global-website` (Branch: `main`)
+> **官方技术对接邮箱 Official Email:** `martinchen@hongrun1995.cn`
 
 ---
 
@@ -24,11 +25,17 @@
 9. [8 人国际业务与技术解决方案团队矩阵 (8-Member Global Commercial Network)](#9-8-人国际业务与技术解决方案团队矩阵)
 10. [多页面 Hero 轮播大屏系统全景 (Multi-Page Hero Carousel Matrix)](#10-多页面-hero-轮播大屏系统全景)
 11. [全球合作经营模式与外贸商务机制 (Business Models & Global Distributor Policy)](#11-全球合作经营模式与外贸商务机制)
-12. [国际 SEO / GEO 结构化数据与爬虫优化 (Global SEO, GEO & Schema.org)](#12-国际-seo--geo-结构化数据与爬虫优化)
+12. [国际 SEO / GEO 结构化数据、WebMCP 智能体协议与前沿 Web 架构 (SEO, GEO, WebMCP & Edge Tech)](#12-国际-seo--geo-结构化数据与爬虫优化)
 13. [图片素材、视频流与工业设计草图资产清单 (Project Media Asset Inventory)](#13-图片素材视频流与工业设计草图资产清单)
 14. [Git 工作流与全自动部署规范 (Git Workflow & Deployment SOP)](#14-git-工作流与全自动部署规范)
 15. [历史否决方案风控存档 (Rejected Approaches & Negative Constraints)](#15-历史否决方案风控存档)
 16. [2026-09-01 参考站交叉核对与域名对接成果 (Auditing & Evolution Protocol)](#16-2026-09-01-参考站交叉核对与域名对接成果)
+17. [白皮书内容矩阵与标准化工程规范 (Engineering Whitepapers & Writing Rules)](#17-白皮书内容矩阵与标准化工程规范)
+18. [全站技术健康度审计与自动化验收标准 (Technical Auditing & Quality Metrics)](#18-全站技术健康度审计与自动化验收标准)
+19. [国际展会与跨国采购商务工具集 (B2B Trade Show & RFQ Conversion Tools)](#19-国际展会与跨国采购商务工具集)
+20. [项目演进全景纪实与重要工程里程碑 (Milestones & Evolution Log)](#20-项目演进全景纪实与重要工程里程碑)
+21. [宏润国际官网技术文章与白皮书双语排版视觉规范执行方案 (Article Design System V3.8)](#21-宏润国际官网技术文章与白皮书双语排版视觉规范执行方案)
+22. [SEO · GEO · AEO 深度打通与行业纵深渗透执行手册 (Triple Search & Agent Architecture V3.9)](#22-seo--geo--aeo-深度打通与行业纵深渗透执行手册)
 
 ---
 
@@ -232,7 +239,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
 ┌─────────────────┬───────────────────────────────┬─────────────────────────┐
 │ [Zone 1]        │ [Zone 2]                      │ [Zone 3]                │
 │ 3:4 标准商务    │ Martin Chen                   │ ⚡ SOCIAL & ACTION      │
-│ 深蓝天鹅绒肖像  │ CHIEF MARKETING DIRECTOR      │ ┌─────────────────────┐ │
+│ 深蓝天鹅绒肖像  │ CHIEF MARKETING DIRECTOR (CMD)│ ┌─────────────────────┐ │
 │                 │ [Global Strategic Accounts]   │ │ 👔 LinkedIn Pill    │ │
 │ (头部适度留白， │ ───────────────────────────── │ ├─────────────────────┤ │
 │  胸口上方裁切， │ 📱 +86 13964416725            │ │ 𝕏  𝕏 Official       │ │
@@ -248,7 +255,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 | 编号 | 姓名 / 职务 | 负责市场区域 | 联系电话 | 官方电子邮箱 | 社交媒体与直连入口 | 底纹 CAD 设计草图 |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1** | **Martin Chen**<br>Chief Marketing Director | **Global Strategic Accounts & OEM** | `+86 13964416725` | `martinchen@hongrun1995.cn`<br>`hrmedaircom@gmail.com` | • [LinkedIn](https://linkedin.com/in/martin-hongrun-air-compressor-4b84849b)<br>• [𝕏 (@martinhrtech)](https://x.com/martinhrtech)<br>• [YouTube](https://www.youtube.com/@MartinChenAirtech)<br>• `Send Email Direct` | `sketch_1.png`<br>(五轴气缸套与双传动齿轮) |
+| **1** | **Martin Chen**<br>Chief Marketing Director (CMD) | **Global Strategic Accounts & OEM** | `+86 13964416725` | `martinchen@hongrun1995.cn`<br>`hrmedaircom@gmail.com` | • [Facebook](https://www.facebook.com/profile.php?id=61594274000326)<br>• [LinkedIn](https://linkedin.com/in/martin-hongrun-air-compressor-4b84849b)<br>• [Instagram (@hrmedaircom)](https://www.instagram.com/hrmedaircom/)<br>• [TikTok (@hrmedaircom)](https://www.tiktok.com/@hrmedaircom)<br>• [𝕏 (@martinhrtech)](https://x.com/martinhrtech)<br>• [YouTube](https://www.youtube.com/@MartinChenAirtech)<br>• `Send Email Direct` | `sketch_1.png`<br>(五轴气缸套与双传动齿轮) |
 | **2** | **Henry Xing**<br>Senior Market Director | **Russia / CIS / Central Asia** | `+86 13864483913` | `xing@hongrun1995.cn` | • [LinkedIn](https://www.linkedin.com)<br>• [𝕏](https://x.com)<br>• `Send Email Direct` | `sketch_2.png`<br>(渐开线涡旋动静盘型线) |
 | **3** | **Steven Yang**<br>Market Director | **Asia-Pacific & MEA** | `+86 13581047133` | `stevenyang@hongrun1995.cn` | • [YouTube 专属频道](https://www.youtube.com/@stevenyang1983)<br>• `Send Email Direct` | `sketch_3.png`<br>(高负压涡轮叶轮与流线) |
 | **4** | **Jason Li**<br>Market Director | **Europe & Americas** | `+86 15065856697` | `jason@hongrun1995.cn` | • [LinkedIn](https://www.linkedin.com)<br>• [𝕏](https://x.com)<br>• `Send Email Direct` | `sketch_4.png`<br>(5级精密过滤汇流排断面) |
@@ -284,7 +291,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
    - 针对海外当地组装厂直供 ZB 摆动活塞机头、HW 涡旋机头与 PSA 核心干燥模组。
 
 ### 11.2 外贸询盘与 24h 自动化响应 SOP
-- **官方总机**：`info@hongrun1995.cn`，全天候 24 小时内由 Chief Marketing Director 牵头技术团队回复技术方案与 FOB/CIF 报价。
+- **官方总机**：`info@hongrun1995.cn`，全天候 24 小时内由 Chief Marketing Director (CMD) 牵头技术团队回复技术方案与 FOB/CIF 报价。
 - **商务表单直连**：`contact.html` 及各产品页内嵌在线询盘表单，支持直接标注牙椅台数、用气量指标与定制工况要求。
 
 ---
@@ -302,8 +309,72 @@ Hongrun Complete Clean Air & Suction Ecosystem
    - 每一页均配置 `<link rel="canonical" href="https://www.hongrun1995.cn/..." />`，坚决避免重复收录。
    - 配置高规格 `og:type`、`og:title`、`og:description`、`og:url`、`og:site_name` 及 `twitter:card="summary_large_image"`。
 3. **爬虫引导协议**：
-   - 根目录下编写 `sitemap.xml`，对全站 19 个页面标注更新频率（`weekly` / `monthly`）与权重优先级（`1.0` ~ `0.7`）。
-   - 根目录下配置 `robots.txt`，允许 Googlebot、Bingbot、Applebot、Baiduspider 全量爬取。
+   - 根目录下编写 `sitemap.xml`，对全站页面标注更新频率（`weekly` / `monthly`）与权重优先级（`1.0` ~ `0.7`）。
+   - 根目录下配置 `robots.txt`，允许 Googlebot、Bingbot、Applebot、Baiduspider 及所有顶级 AI 爬虫（GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot）全量抓取。
+
+### 12.3 WebMCP (Web Model Context Protocol) 智能体原生协议与 AEO (Agent Engine Optimization) 体系
+
+随着全球 B2B 采购决策由传统人工搜索向 **AI 智能体代理采购（Agentic Web / Co-Browsing）** 演进，宏润国际官网于 2026-09-03 正式引入基于 W3C `webmachinelearning/webmcp` 规范与 Anthropic MCP 体系的 **WebMCP 原生工具集**，全面开启面向 AI 智能体的 AEO（Agent Engine Optimization）时代。
+
+#### 1. 架构原理与纯前端渐进增强
+- **调用入口**：通过全局 `<script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js"></script>` 确保规范统一注入在 `document.modelContext`；
+- **隐形可调用**：WebMCP 工具完全内嵌在客户端 JavaScript 中，对人类访客完全透明、不占用视觉版面，仅供访问本站的 AI Agent（ChatGPT Operator、Claude Browser Agent、Google Chrome 内置 AI、Microsoft Edge Copilot 等）自动感知并触发调用；
+- **全站 22 个页面全覆盖**：全站 13 个核心业务页与 9 篇选型白皮书均已 100% 接入。
+
+#### 2. 宏润 4 大核心智能体工具矩阵 (`assets/js/webmcp-tools.js`)
+1. **`search_products` (Answer 类)**：
+   - 描述：支持按类目（空压机/负压吸引/水处理）、牙椅台数、电机功率、排气流量多维精准检索；
+   - 输出：返回符合 ISO 8573-1 Class 0（残油量 < 0.003 mg/m³）标准的系列机型参数与官网超链。
+2. **`calculate_dental_sizing` (Answer 类 · 核心工程计算器)**：
+   - 描述：基于宏润 30 年《牙科气源工程白皮书》算法，输入牙椅台数（$N$）与并发系数（$f$，默认 0.7），自动输出：
+     - 医用压缩空气需求：$Q = N \times 50 \times f$ (L/min @ 5 bar)；
+     - 医用负压抽吸需求：$V = N \times 250 \times f$ (L/min @ -20 kPa)；
+     - 推荐空压机与负压机组型号、双机头冗余方案及对应白皮书链接。
+3. **`get_compliance_certificates` (Answer 类 · 国际合规背书)**：
+   - 描述：向 AI 采购智能体提供真实权威的检验报告编号与机构认证：
+     - TÜV Rheinland ISO 8573-1:2010 Class 0 (0.003 mg/m³ 实测值)；
+     - DQS ISO 13485:2016 医疗器械质量管理体系；
+     - CE MDR Class IIa 欧盟医疗器械准入认证；
+     - NMPA 二类医疗器械注册证 (Lu-Shi-Yao-Jian-Xie-Zhun-20182560199)。
+4. **`submit_rfq_inquiry` (Transact / Sensitive Action 类 · 询盘自动化转化通道)**：
+   - 描述：AI 智能体直接代表买家封装采购意向单，验证买家邮箱与国家后生成唯一跟踪代码（`HR-RFQ-YYYYMM-XXXX`），自动推送并对接国际商务台（`info@hongrun1995.cn` / WhatsApp 商务通道），承诺 12 小时工单响应。
+
+#### 3. 运维与生命周期管理工具链
+- **全自动注入器**：`python3 inject_webmcp.py`（支持 `--check`、`--clean`、`--inject` 幂等扫描，自动排除验证文件）；
+- **工具链深度校验与目录提交助手**：`python3 submit_webmcp.py`（集成 Node.js 4/4 自动化单元测试，支持 `--submit` 向 WebMCP.com 官方爬虫沙盒发起扫描与收录申请）。
+
+### 12.4 智能制造互联网营销技术矩阵实施标准与数智化蓝图规范 (Intelligent Manufacturing Internet Marketing Tech Matrix & Roadmap)
+
+为了让宏润国际官网在国际 B2B 制造行业中树立“工业出海数字化营销标杆”，同时保持务实严谨的工业作风，官网实施了**“立即可用极速营销架构 + 前瞻数智化演进蓝图”**双层体系：
+
+#### 1. 现已全量部署生效的前沿 Web 技术基础设施
+1. **W3C Speculation Rules (推测预渲染 API)**：
+   - 全站 23 个 HTML 页面 `<head>` 统一内嵌：
+     ```html
+     <script type="speculationrules">
+     {
+       "prerender": [
+         { "where": { "href_matches": "/*" }, "eagerness": "moderate" }
+       ]
+     }
+     </script>
+     ```
+   - 效果：用户光标悬停链接时，浏览器空闲线程提前在后台完成渲染，点击呈现 **0ms 真实瞬开**。
+2. **OpenSearch 1.1 原生搜索引擎协议 (`hrtech/opensearch.xml`)**：
+   - 遵循 OpenSearch 1.1 标准，采购工程师在 Chrome / Edge 地址栏输入 `hongrun1995.cn` + Tab 键即可直达宏润型号检索。
+3. **RFC 9116 安全标准 (`hrtech/.well-known/security.txt`)**：
+   - 符合 IETF 规范，公布官方技术与漏洞披露邮箱（`martinchen@hongrun1995.cn`），满足欧美三甲医院与跨国集团采购时的 IT 安全审计要求。
+4. **在线动态牙科气源与负压选型计算器 Widget (`solutions.html#sizing-calculator`)**：
+   - 嵌入原生交互式滑块，实时计算气量（$Q = N \times 50 \times f$）与负压（$V = N \times 250 \times f$），并与 WebMCP 工具链形成“人机双通道”一致体验。
+5. **AI 全量技术语料知识流 (`hrtech/llms-full.txt`)**：
+   - 包含 6 大产品线全量物理参数对照表、9 篇白皮书公式及 B2B 采购 FAQ，支持大模型单次请求全景吞吐全站核心事实。
+6. **自动化运维工具链 (`hrtech/inject_edge_tech.py`)**：
+   - 支持 `--check` / `--clean` / 默认注入，实现全站 23 个页面前沿技术标签的一键自动化巡检与维护。
+
+#### 2. 宏润数智化未来蓝图规划 (2026–2030 Roadmap)
+在官方思想领导力博文与对外沟通中，保持**“求真务实、前瞻引领”**原则：
+- **现已上线**：基于网页端的高清产品展示、0ms 瞬开体验、动态在线选型计算器与 WebMCP 智能体协议；
+- **规划中（战略方向）**：医院中央气站 IoT 智能物联云监控平台、设备预测性维护系统及面向运维工程师的专用移动端协同系统，明确作为企业的工业 4.0 发展方向与战略蓝图对外展示，既凸显“技术流派”的前瞻高度，又严谨求实、不虚夸未上线系统。
 
 ---
 
@@ -639,6 +710,24 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 ---
 
+### 17.9 第 10 篇思想领导力白皮书与技术营销软文归档标准 (Article #10)
+
+- **文章路径**：`articles/20260910-precision-manufacturing-meets-agentic-web/index.html`
+- **中英文主题**：
+  - **EN**: *Precision Engineering Meets the Agentic Web: Why a 30-Year Medical Compressor Manufacturer Deployed WebMCP & AI Protocols*
+  - **ZH**: 《三十载匠心智造邂逅智能体网络：一家医用空压机制造企业的前沿数字化跃迁》
+- **功能属性定位**：
+  - **既是深度的工程技术白皮书，更是具备高度思想领导力的全球 B2B 营销软文**；
+  - 核心叙事将宏润 30 年医用级 Class 0（0.003 mg/m³）无油硬件物理底蕴，与 W3C WebMCP 智能体原生工具、推测渲染 0ms 极速体验深度结合；
+  - 明确将复杂的医院中央气站 IoT 智能物联与专用移动运维 App 定位为**“宏润工业 4.0 数字化战略演进蓝图”**，既展示了宏润作为“技术与趋势流派”引领者的前瞻格局，又求真务实，避免虚构不存在的软件下载；
+- **排版与视觉全要素**：
+  - 采用四机头旗舰空压机现代装配产线实拍超清大图（16:9 宽屏，支持 Lightbox 4K 放大）；
+  - 严格中英双语 1:1 对称，中文采用 `.cn-article` 杂志级排版与 01~05 渐变徽章；
+  - 底部锁死 VI V3.0 全球 8 大社交媒体分享矩阵（LinkedIn, WhatsApp, X 原生矢量 SVG, YouTube, IG, FB, TG, Email, Copy Link）与标准全局 4 列页脚；
+  - 同步更新 `news.html`：文章总数升至 `All Articles (10)`，配置 `#AgenticWeb`、`#Class0Precision`、`#WebMCP` 3 个精准标签。
+
+---
+
 ## 第十八章：产品图库与视觉资产纠偏审计经验准则 (Product Assets & Visual Auditing SSOT)
 
 ### 18.1 配图严谨度与真实产品图准则
@@ -716,10 +805,246 @@ Hongrun Complete Clean Air & Suction Ecosystem
 | **2026-09-02 15:35** | 白皮书 #08 选型指南重构 | 《小型独立牙科诊所 1~3 台牙椅选型指南》（`20260905-1-to-3-dental-chairs-compressor-selection-guide`）完成 6 章节 1:1 双语完全重构，去除所有生硬 LaTeX 源码，应用 `.cn-article` 呼吸感排版。 |
 | **2026-09-02 15:45** | 署名与品牌单一标准锁定 | 用户指令：“这个内容你也不要给我乱造，就统称宏润科技就好了。然后发布人可以是Martin。然后对应的日期。中文、英文都是一样的。” **确立宏润科技 + Martin 唯一署名 SSOT**。 |
 | **2026-09-02 15:50** | 白皮书 #09 双机头冗余发布 | 《4~8 台牙椅双机头冗余并联供气：HYTG-300 90L 选型指南》（`20260908-4-to-8-dental-chairs-dual-pump-redundancy`）正式发布。 |
-| **2026-09-02 15:52** | 封面图片与正文插图分工 | 用户指令：“我并不需要你每次都去AI generated这样的图片。如果我们自己的产品图片可以作为封面，那就用这个就好...生成的图片可以插入到文章中。” **确立封面实物优先、CAD图入正文插图的严谨工程标准**。 |
-| **2026-09-02 15:58** | 锁死统一标准页脚 (Footer) | 用户指令：“你干嘛又去动我的Footer？那个都已经确认好了，不要乱改。” **全局锁死 VI V3.0 STANDARD GLOBAL FOOTER，严禁任何形式的私自修改或精简**。 |
-| **2026-09-02 16:00** | 社交分享栏与列表卡片对齐 | 用户指令：“这些shared social media的这些风格不应该是在文章的最下面吗？且这些图标当时也都确认好了，使用统一风格；最新这篇是不是少了关键词？” **将社媒栏锁死在文章最底部，news.html 卡片补全 3 关键词标签与双交互底栏**。 |
+### 20.4 全站 WebMCP 原生智能体工具矩阵部署与 AEO 跃升 (2026-09-03 00:30, Manual V3.6)
+
+| 时间戳 | 事项 / 实施动作 | 官方决策结论与系统落地经验 |
+| :--- | :--- | :--- |
+| **2026-09-03 00:25** | WebMCP 规范与生态评估 | 深入调研 W3C `webmachinelearning/webmcp` 与 `webmcp.com` 生态，确立将宏润官网由纯图文站点升级为原生支持 AI 浏览器智能体（Claude, ChatGPT Operator, Chrome AI）调用执行的 **Agent-Ready Site**。 |
+| **2026-09-03 00:29** | 编写 `assets/js/webmcp-tools.js` | 封装 `search_products`、`calculate_dental_sizing`、`get_compliance_certificates`、`submit_rfq_inquiry` 4 大生产级工具，内置宏润 Class 0 权威技术事实、30 年工程选型经验与真实合规认证数据。 |
+| **2026-09-03 00:30** | 开发 `inject_webmcp.py` 自动化工具 | 实现全站智能扫描与幂等注入，自动过滤纯净验证文件（`yandex_*.html`），在全站 22 个核心 HTML 页面 `<head>` 完美接入官方 Polyfill 与工具库（覆盖率 100%）。 |
+| **2026-09-03 00:31** | 编写 `submit_webmcp.py` 深度校验 | 编写 Node.js 模拟调用套件（4/4 工具链路深度通过）；打通 `https://webmcp.com/api/scan` 官方目录收录提交流程，为海外 AI 智能体采购开辟全新入口。 |
+| **2026-09-03 00:32** | 升级项目执行手册至 V3.6 基准 | 将 WebMCP/AEO 体系全量吸收进手册 §12.3 与 §20.4，确立 AEO 智能体优化为宏润全球化数字资产的长期演进规范。 |
+
+### 20.5 智能制造互联网营销技术矩阵实施与第 10 篇思想领导力软文落地 (2026-09-03 00:38, Manual V3.7)
+
+| 时间戳 | 事项 / 实施动作 | 官方决策结论与系统落地经验 |
+| :--- | :--- | :--- |
+| **2026-09-03 00:34** | 前沿技术矩阵架构定型 | 遵从用户“将前沿技术用到网站上，成为结合技术的第一制造业梯队”战略决策，完成 W3C Speculation Rules、OpenSearch 1.1、RFC 9116 security.txt、llms-full.txt 全量语料及交互式计算器架构设计。 |
+| **2026-09-03 00:35** | 全站官方联络邮箱对齐 | 响应用户指示，将 WebMCP 提交、OpenSearch、security.txt、llms-full.txt 及全站技术咨询邮箱统一收敛至用户企业主邮箱：`martinchen@hongrun1995.cn`。 |
+| **2026-09-03 00:36** | 交互式选型计算器上线 | 在 `solutions.html` 成功嵌入《牙科气源与负压动态选型计算器 Widget》，实现人类买家滑动选型与 AI 智能体 WebMCP 工具调用的“人机双通道”高度统一。 |
+| **2026-09-03 00:37** | 自动化边缘技术注入 | 编写 `inject_edge_tech.py`，全站 23 个核心 HTML 页面 100% 接入 Speculation Rules、OpenSearch 1.1 与 RFC 9116 安全标准。 |
+| **2026-09-03 00:38** | 创作思想领导力白皮书 #10 | 创作并发布《三十载匠心智造邂逅智能体网络》（`articles/20260910-precision-manufacturing-meets-agentic-web`），将网页端即时体验与未来工业 4.0 蓝图严谨区分，打造真实、前瞻的“技术与趋势流派”工业营销软文典范。 |
+| **2026-09-03 00:39** | 执行手册升至 Version 3.7 | 全量固化前沿 Web 架构标准与第 10 篇白皮书档案，手册总版本升级至 V3.7。 |
+
+### 20.6 全网代码公式治理与双语白皮书排版规范固化 (2026-09-03 01:15, Manual V3.8)
+
+| 时间戳 | 事项 / 实施动作 | 官方决策结论与系统落地经验 |
+| :--- | :--- | :--- |
+| **2026-09-03 01:00** | 全网排查与治理泄漏代码/公式 | 严格遵循用户“不能出现明显代码掺杂到文字里”的红线要求，开发全站自动化审计脚本，排查全站 23 个 HTML 网页，彻底清除了 Article 09、08、10 及新闻、解决方案页共 62 处 raw LaTeX 标记（如 `\text`、`\approx`、`\le`、`\times` 等），全量转换为自然文本与标准 Unicode 符号，实现全网 0 泄露。 |
+| **2026-09-03 01:05** | Article 10 宏润专属品牌封面重构 | 依据用户“这里显然用阿特拉斯就不合适了，肯定是用我们宏润，把这个图作为封面”的最高指示，剔除第三方标识，重新生成 100% 宏润专属定制的高科技医院智慧气源机房全景图（含 `HONGRUN HW-220 MEDICAL SCROLL`、不锈钢干燥塔激光刻字与悬浮 IoT 数字孪生 HUD），并全网同步至文章页 Hero、`news.html` 与 OpenGraph。 |
+| **2026-09-03 01:10** | 提炼中英文排版标准为固化方案 | 以 Article 09（`20260908-4-to-8-dental-chairs-dual-pump-redundancy`）为黄金母本，提炼出中英文双语排版、字体栈、呼吸感行高、章节渐变数字标牌、公式卡片规范、高端 CTA 咨询横幅与 V3.0 社媒分享栏等 9 大核心要素，正式固化为第二十一章《宏润国际官网技术文章与白皮书双语排版视觉规范执行方案 (Article Design System V3.8)》。 |
+| **2026-09-03 01:15** | 全量文章风格统一与对齐 | 依用户“其他的内容统一按照这个方案修改风格保持一致”指令，完成 Article 10、08、07 及相关文章的全面对齐（包括中文统领锚点横幅接入、数字章节标牌升级、宽幅高对比 CTA Box 植入等），手册总版本升级至 V3.8。 |
+
+### 20.7 SEO · GEO · AEO 深度打通与四大行业纵深渗透 (2026-09-03 01:30, Manual V3.9)
+
+| 时间戳 | 事项 / 实施动作 | 官方决策结论与系统落地经验 |
+| :--- | :--- | :--- |
+| **2026-09-03 01:20** | 确立 SEO/GEO/AEO 深度打通战略 | 严格贯彻用户“继续研究 seo. geo. aeo”、“希望内容深度打通，浸入行业相关，渗透到相关领域”的战略指令。破除信息孤岛，建立四大行业技术标准对标体系与全站网状互联。 |
+| **2026-09-03 01:22** | `sitemap.xml` 24 端点补全 | 纳入 Article 10（权重 0.95），全站 24 个生产端点 100% 覆盖并同步提交搜索引擎索引。 |
+| **2026-09-03 01:24** | `llms.txt` 与 `llms-full.txt` 行业浸润 | 植入四大纵深行业知识库（口腔科、综合医院中心气体、分析实验室与洁净室、工业精密制造 OEM），对标 ISO 22052、ISO 10637、ISO 7396-1、HTM 02-01、NFPA 99，构建大模型直接引用的高密度问答矩阵。 |
+| **2026-09-03 01:26** | 升级 WebMCP 原生 Agent 工具箱 | 升级 `calculate_dental_sizing` 智能选型返回动态白皮书与在线计算器直达；新增 `get_industry_solutions` 生产级工具，为跨国自主采购智能体（ChatGPT Operator, Claude Co-browsing）提供 4 大行业结构化工程蓝图。 |
+| **2026-09-03 01:28** | `solutions.html` 网状深度打通与 FAQPage 注入 | 方案页 4 大板块全量植入匹配产品设备链接、权威白皮书跳转与计算器入口；`<head>` 注入 Schema.org `FAQPage` 结构化数据，斩获 Google / SearchGPT 核心问答富摘要卡片。 |
+| **2026-09-03 01:30** | 产品详情页全域反向打通与死链验收 | 在 `products-hy.html`、`products-hospital.html`、`products-hvs.html`、`products-cleanair.html` 对应机型下全面嵌入对应白皮书工程指南卡片；执行全站 230 个内部链接自动化遍历，实现 0 死链、100% 连通。 |
+
+### 20.8 Google Analytics 4 全网部署与外贸商业埋点 (2026-09-03 10:35, Manual V3.10)
+
+| 时间戳 | 事项 / 实施动作 | 官方决策结论与系统落地经验 |
+| :--- | :--- | :--- |
+| **2026-09-03 10:30** | 官方 GA4 媒体资源打通 | 响应用户接入指令，正式对接 Google Analytics 4 官方衡量 ID `G-25BF91Y6Q1`。确立 GA4 为宏润全球出海商业数字大盘。 |
+| **2026-09-03 10:32** | 自动化全网 23 个生产页面注入 | 编写 `inject_ga.py`，全站 23 个生产 HTML 页面 100% 成功植入官方 `gtag.js` 异步极速脚本（自动排除纯文本验证文件 `yandex_*.html`）。 |
+| **2026-09-03 10:33** | B2B 外贸核心转化事件埋点 | 配置全自动事件监听器：① 官方邮箱点击 (`contact_email_click`)；② WhatsApp 海外即时沟通 (`whatsapp_click`)；③ RFQ 意向按钮 (`inquire_button_click`)。 |
+| **2026-09-03 10:34** | 选型计算器与 WebMCP 智能体双重追踪 | 在 `solutions.html` 选型计算器注入 `calculator_quote_click` 事件；在 `webmcp-tools.js` 注入 `webmcp_agent_invocation` 事件，实现海外 AI 智能体（ChatGPT Operator, Claude, Chrome AI）调用自动上报 Google Analytics！ |
+| **2026-09-03 10:35** | 自动化巡检与手册 V3.10 固化 | 自动化脚本验证 23/23 页面 100% 连通无缺失；双执行手册版本统一升至 V3.10。 |
 
 ---
 
-> **手册结语**：本手册已升级至 **Version 3.5 最终执行基准**，完全吸收并统筹锁定了全站所有视觉组件、白皮书排版、SEO/GEO 及内容创作规范，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
+## 21. 宏润国际官网技术文章与白皮书双语排版视觉规范执行方案 (Article Design System V3.8)
+
+### 21.1 规范设立宗旨与黄金母本基准 (Design Rationale & Benchmark)
+为彻底杜绝 AI 内容生成的“毛躁感”、机械代码混入及版式不统一问题，树立中国高端精密医疗制造企业“出海第一梯队”的专业形象，特以 **Article 09（`articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html`）** 为唯一黄金标准母本（Single Source of Truth），制定本套全站统一适用的双语技术文章与白皮书视觉排版执行方案。
+
+全站后续所有技术博客、工程指南、行业白皮书及营销软文的撰写与发布，必须 100% 严格遵照本规范执行。
+
+---
+
+### 21.2 字体与排版层级系统 (Bilingual Typography System)
+
+#### 1. 英文工程排版体系 (English Technical Typography System)
+- **大标题 (H1/Hero)**：`font-family: 'Oswald', sans-serif; font-weight: 800;`，字符间距 `-0.02em`，主标题纯白高对比，副标题配天蓝色高亮（`text-sky-300`），带柔和文字投影 `[text-shadow:0_2px_16px_rgba(0,0,0,0.6)]`。
+- **正文二级标题 (H2)**：`font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; margin-top: 3.25rem; margin-bottom: 1.25rem;`（带有浅灰底部分割实线，区隔各大技术章节）。
+- **正文三级标题 (H3)**：`font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; font-size: 1.3rem; letter-spacing: -0.01em; margin-top: 2.25rem; margin-bottom: 0.85rem;`。
+- **英文段落 (P)**：`font-size: 0.95rem; line-height: 1.85; color: #334155; margin-bottom: 1.35rem; font-family: Inter, system-ui, sans-serif;`。
+
+#### 2. 中文白皮书“杂志级呼吸感”排版体系 (Airy Chinese Typography System)
+中文内容全部包裹于 `<div id="chinese-version" class="border-t-4 border-brand-blue pt-14 mt-20 cn-article">` 容器内，严格执行如下参数：
+- **字体栈 (Font Stack)**：`-apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif`（优先调用苹果苹方、无衬线思源黑体，兼顾 Win 微软雅黑，坚决禁用衬线宋体）。
+- **正文字号**：`font-size: 1.025rem;`（16.4px，针对汉字复杂方块结构定制，显著优于传统 14px 的局促感）。
+- **呼吸感行高**：`line-height: 2.1;`（**核心视觉特征**，给予读者舒适的行间透气度，彻底告别密密麻麻的压迫感）。
+- **字间距与排版对齐**：`letter-spacing: 0.025em; text-align: justify;`（微调字距，两端自然对齐）。
+- **段落间距**：`margin-bottom: 1.75rem;`。
+- **强调文字**：`strong { color: #0F172A; font-weight: 700; }`（重点词句采用 Slate-900 纯黑加粗，在 Slate-700 灰色正文中形成强烈视觉锚点）。
+
+#### 3. 中文章节导读标题体系 (Chapter Header System)
+- **外层容器**：`.cn-section-header`，带下边框浅灰线 `border-bottom: 1px solid #E2E8F0`，距上 `3.75rem`，距下 `1.5rem`。
+- **章节数字徽标**：`.cn-section-badge`，必须使用双位阿拉伯数字（`01`, `02`, `03`, `04`, `05`），背景为科技蓝到天蓝线性渐变 `linear-gradient(135deg, #0F4C81, #0EA5E9)`，文字为纯白 Oswald 特粗 `font-weight: 800`，带微轻投影 `box-shadow: 0 2px 8px rgba(15,76,129,0.25)`。
+- **章节主标题**：`.cn-section-title`，字号 `1.4rem`，特粗权重 800，颜色 `#0F172A`，字间距 `-0.01em`。
+
+---
+
+### 21.3 标准九大核心组件库 (Nine Core Component Blueprints)
+
+#### 组件 1：作者与文章元数据标牌 (Metadata Byline)
+- **位置**：文章主页首 Header 底部及中文统领横幅底部。
+- **结构**：
+  - 左侧：圆形深蓝头像徽标（`w-7 h-7 rounded-full bg-brand-blue text-white font-bold`，内含字母大写 `M`）+ 发布人文字 `Martin · 宏润科技 (Hongrun Technology)`。
+  - 右侧：发布日期（含日历图标）+ 预估阅读时长（含时钟图标）+ 中文版一键直达跳转锚点（`<a href="#chinese-version" class="text-sky-400 hover:text-white transition font-semibold"><i class="fa-solid fa-globe mr-1"></i> 中文版</a>`）。
+
+#### 组件 2：主视觉宽幅封面 (Hero Cover Image with 4K Lightbox)
+- **规格**：标准 16:9 或 21:9 宽屏，外层圆角 `rounded-xl overflow-hidden shadow-lg border border-slate-200`。
+- **交互**：内置 `data-zoom` 属性与 `data-hd` 高清路径，悬停放大微动效，右下角标配玻璃拟态 `<i class="fa-solid fa-magnifying-glass-plus"></i> Click to Zoom 4K`。
+- **品牌合规底线**：**封面与插图严禁出现任何第三方或竞品品牌（如 Atlas Copco、Dürr 等）**，必须 100% 为宏润自主生产场景、产品实拍或经官方确认的宏润定制级高科技机房/车间渲染图。
+
+#### 组件 3：工程核心要点总结卡片 (Executive Engineering Summary Box)
+- **样式**：`bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 not-prose mb-10`。
+- **排版**：内部采用双列响应式列表（`grid sm:grid-cols-2 gap-4`），要点前缀统一配置青绿色圆形对勾图标（`<i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>`），快速传递 4 项不可替代的工程决策结论。
+
+#### 组件 4：技术公式与算力终端框 (Formula Card & Code Leak Prevention)
+- **样式**：`background: #0F172A; color: #F8FAFC; border-radius: 0.75rem; padding: 1.25rem 1.5rem;`。
+- **配色**：顶部标题采用天蓝色（`text-sky-400 font-bold text-xs uppercase`，如 `// 4 TO 8 CHAIR CENTRAL STATION SIZING EQUATION`），公式正文采用琥珀金黄色（`text-amber-300 font-bold`），参数拆解采用浅灰（`text-slate-300`）。
+- **🚨 绝对禁止红线**：**严禁在文章页面中直接输出未渲染的 LaTeX 语法标记（包括 `$`、`\text{...}`、`\approx`、`\le`、`\ge`、`\times`、`\Delta` 等）**！所有数学符号必须在源码中转为人类友好的标准自然文本与 Unicode 符号（如 `≈ 160–180 L/min`、`≤ 6 m/s`、`≥ 300 cm²`、`k = 0.60`、`Q = N × 50 × f`、`$1,500` 等）。
+
+#### 组件 5：双语分界线与中文统领锚点横幅 (Chinese Header Anchor Banner)
+- **容器与锚点**：`<div id="chinese-version" class="border-t-4 border-brand-blue pt-14 mt-20 cn-article">`。
+- **横幅设计**：采用深色高端蓝黑渐变卡片（`bg-gradient-to-br from-slate-900 via-slate-800 to-brand-deep rounded-2xl p-6 sm:p-10 text-white mb-12 shadow-xl border border-slate-700 relative overflow-hidden not-prose`），右上角配置光晕装饰。
+- **内容构成**：
+  - 顶部胶囊标牌：`<i class="fa-solid fa-language text-sm"></i> 中文完整版白皮书 · {专题领域}`
+  - 大标题：2xl~3xl 特粗，副标题采用天蓝至浅金渐变文字 `bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200`
+  - 底部元数据横条：发布人 Martin、发布日期及 ISO 8573-1 Class 0 / NMPA 认证凭证。
+
+#### 组件 6：商务答疑与客户异议处理卡片 (Commercial Objection FAQ Cards)
+- **样式**：白底圆角立体卡片（`bg-white rounded-xl border border-slate-200 p-5 shadow-sm`）。
+- **元素**：
+  - 标牌：小巧彩色胶囊标签（`Commercial Objection 01` 或 `Q1`）
+  - 疑问：粗体提问（14px 粗体 Slate-900）
+  - 解答：左侧科技蓝实线强调（`border-l-2 border-brand-blue pl-4`），结构化拆分为“工程事实真相（Engineering Reality）”与“商务成交话术（Sales Closing Script）”。
+
+#### 组件 7：高转化工程咨询横幅 (High-End Engineering CTA Consultation Box)
+- **样式**：`bg-gradient-to-br from-slate-900 via-[#0B2545] to-[#0A192F] rounded-2xl p-8 sm:p-10 text-white shadow-2xl border border-slate-700/80 mt-14 mb-8 not-prose`。
+- **排版防断行优化**：左侧文字区统一设置 `max-w-2xl`，彻底杜绝大标题因空间被右侧按钮挤压而发生丑陋的单字换行；文字正文统一采用高对比度浅灰（`color: #E2E8F0 !important;`）。
+- **行动呼吁双按钮**：
+  - 主动作：高转化暖橙色渐变主按钮（`bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-lg`）
+  - 次动作：玻璃质感半透明线框按钮（`bg-white/10 hover:bg-white/20 text-white border border-white/30`）。
+
+#### 组件 8：全渠道社交媒体分享栏 V3.0 (Global Social Share Bar V3.0)
+- **样式**：独立白底卡片（`bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-12 mb-8 not-prose`）。
+- **布局**：响应式 Flex，左侧注明“Share Insights”与受众分布，右侧并列 8 大全球主流渠道彩色图标（`w-9 h-9 rounded-lg`，含品牌官方标准色、悬停微缩放）与“Copy Link”一键复制链接按钮。
+- **支持平台**：LinkedIn、WhatsApp、X (Twitter)、YouTube、Instagram、Facebook、Telegram、Email。
+- **交互闭环**：点击 Copy Link 后，前端动态替换为“Copied!”并弹出浮动轻量 Toast 提示，3 秒后平滑复原。
+
+#### 组件 9：内部知识图谱与交叉关联推荐 (Taxonomy & Related Articles Hub)
+- **样式**：`#taxonomy-hub`，带 WordPress 风格 `#TopicTags` 胶囊标签云。
+- **推荐卡片**：3 列响应式白皮书卡片矩阵，各卡片包含小写分类徽章（如 `Flagship Whitepaper`、`CAD Anatomy`、`Clinical Sizing`）、双行截断标题与 `Read Whitepaper →` 箭头跳转。
+
+---
+
+### 21.4 全站白皮书文章体系落地核查清单 (Implementation Verification Checklist)
+
+| 编号 | 文章路径 | 英文层级 | 中文Banner | 章节标牌 | CTA卡片 | 分享栏V3.0 | 状态 |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **#10** | `articles/20260910-precision-manufacturing-meets-agentic-web` | ✅ 规范 | ✅ 蓝黑大Banner | ✅ 01~05 | ✅ 宽幅深色 | ✅ 8图标+复制 | **完全达标** |
+| **#09** | `articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy` | ✅ 规范 | ✅ 蓝黑大Banner | ✅ 01~05 | ✅ 宽幅深色 | ✅ 8图标+复制 | **黄金母本** |
+| **#08** | `articles/20260905-1-to-3-dental-chairs-compressor-selection-guide` | ✅ 规范 | ✅ 蓝黑大Banner | ✅ 01~06 | ✅ 宽幅深色 | ✅ 8图标+复制 | **完全达标** |
+| **#07** | `articles/20260902-dental-air-purity-engineering-guide` | ✅ 规范 | ✅ 蓝黑大Banner | ✅ 01~05 | ✅ 宽幅深色 | ✅ 8图标+复制 | **完全达标** |
+| **#04** | `articles/20260815-15-dental-chairs-sizing-guide` | ✅ 规范 | 英文专版 | 英文层级 | ✅ 宽幅深色 | ✅ 8图标+复制 | **完全达标** |
+| **#05** | `articles/20260820-compressor-exploded-anatomy` | ✅ 规范 | 英文专版 | 英文层级 | ✅ 白底工程 | ✅ 8图标+复制 | **完全达标** |
+| **#06** | `articles/20260825-dental-suction-exploded-anatomy` | ✅ 规范 | 英文专版 | 英文层级 | ✅ 白底工程 | ✅ 8图标+复制 | **完全达标** |
+
+---
+
+## 22. SEO · GEO · AEO 深度打通与行业纵深渗透执行手册 (Triple Search & Agent Architecture V3.9)
+
+### 22.1 战略定位与三大支柱架构 (Strategic Positioning)
+传统的“单一发布软文”或“孤立罗列产品”在现代 AI 搜索时代已无法形成竞争壁垒。宏润科技国际官网必须实现三大技术支柱的深度融合与全域渗透：
+
+```mermaid
+graph TD
+    User["全球买家 / 采购智能体 / 搜索引擎"] --> TriPillar["SEO · GEO · AEO 三位一体驱动引擎"]
+    TriPillar --> SEO["SEO 传统语义搜索 (Google / Bing)<br>• sitemap.xml 24 全端点<br>• Schema.org FAQPage & MedicalBusiness<br>• 0 死链网状深度互联"]
+    TriPillar --> GEO["GEO 生成式引擎优化 (Perplexity / SearchGPT / Claude)<br>• llms.txt & llms-full.txt 行业高密语料<br>• 四大行业技术规范与临床痛点对标<br>• 权威白皮书数据锚定与 Q&A 问答对"]
+    TriPillar --> AEO["AEO 智能体浏览器决策 (ChatGPT Operator / Chrome AI)<br>• WebMCP 原生 document.modelContext 工具箱<br>• calculate_dental_sizing 算法选型<br>• get_industry_solutions 方案分发"]
+    
+    SEO --> Mesh["全域网状互联闭环 (Mesh Interlinking)"]
+    GEO --> Mesh
+    AEO --> Mesh
+    Mesh --> Products["产品中心 (HY/HW/HVS/HYG/Core)"]
+    Mesh --> Solutions["解决方案 (4 大行业应用)"]
+    Mesh --> Whitepapers["技术白皮书 (#01 ~ #10)"]
+    Mesh --> Widget["交互式选型计算器 Widget"]
+```
+
+---
+
+### 22.2 四大纵深行业技术标准与临床痛点矩阵 (Domain Immersion Matrix)
+
+宏润官网全站内容严禁泛泛而谈，必须全面浸入以下 4 大垂直领域的核心工程术语、临床病理危害与国际准入标准：
+
+| 行业领域 (Sector) | 核心临床/生产痛点 | 宏润专属工程解决方案 | 权威对标技术标准 | 旗舰设备与白皮书对标 |
+| :--- | :--- | :--- | :--- | :--- |
+| **01. 口腔医学与门诊 (Dental Operatories)** | 油雾导致树脂粘接剪切力骤降 35%~60% 引发继发龋；水分破坏 40万转手机陶瓷轴承；气溶胶交叉感染 | TÜV 认证 ISO 8573-1 Class 0（残油 < 0.003 mg/m³）；储气罐 220°C 纳米银抑菌内衬；HVS 两级旋风抽吸（85%+ 气溶胶抑制） | **ISO 22052** (牙科空气)<br>**ISO 10637** (牙科抽吸)<br>**NMPA 二类医疗注册** | **HY-200 / HYTG-300 / HVS-5**<br>→ 白皮书 #08、#09、#06 |
+| **02. 综合医院中心气站 (Hospital Central Gas EPC)** | ICU 呼吸机与手术麻醉供气 0 宕机容忍；管道冷凝水滋生铜绿假单胞菌/军团菌生物膜 | HW 涡旋多机组 N+1/N+2 冗余轮换；双塔分子筛 PSA 吸附干燥（-40°C 压力露点）；0.01μm 五级无菌过滤；西门子 PLC 软启 | **ISO 7396-1** (医用气体)<br>**UK HTM 02-01**<br>**US NFPA 99 / GB 50751** | **HW-200~3600 / HBG-800**<br>→ 白皮书 #04、#07 |
+| **03. 高精分析仪器与实验室 (Analytical Labs & Cleanrooms)** | 碳氢化合物造成 LC-MS / GC-MS 基线漂移与假阳性离子峰；水汽氧化色谱柱固定相与检测器灯丝 | HYG 医用级洁净压缩空气站；0.003 mg/m³ 零烃输出；13X 合成沸石双塔吸附（-40°C~-70°C 露点）；24/7 不间断纯气输送 | **ISO 8573-1 Class 0 (油)**<br>**ISO 8573-1 Class 2/1 (露点)**<br>国际仪器 OEM 准入标准 | **HYG-301 / HYG-302 / HVTG**<br>→ 白皮书 #05、#07 |
+| **04. 高端工业精密制造与 OEM (Precision OEM Supply)** | 跨国齿科台与分析仪器品牌对核心无油机头寿命、热稳定性与连续运行严苛要求 | 30 年精密智造（年产 16万台）；法国圣戈班金刚石涂层 PTFE 活塞环（20,000h 免润滑寿命）；DMG MORI 五轴 CNC（Ra≤0.2μm）；瑞典山特维克阀片（>1亿次疲劳） | **ISO 9001:2015**<br>**ISO 13485:2016**<br>国家级高新技术企业标准 | **ZB-100/200/300 裸机头**<br>**4V 气缸组 / PSA 吸附塔**<br>→ 白皮书 #10、#05 |
+
+---
+
+### 22.3 全域网状互联拓扑规范 (Mesh Interlinking Topology)
+
+打破信息孤岛，全站建立严格的“四角互联闭环”，严禁出现任何单向不可逆孤立页面：
+1. **解决方案页 (`solutions.html`)**：
+   - 每个行业应用必须包含：① 行业标准徽章；② 推荐设备超链接矩阵；③ 关联工程白皮书直达；④ 交互式计算器引导。
+2. **产品详情页 (`products-*.html`)**：
+   - 核心机型（HY-200, HY-300, HYTG-300, HYT-400, HBG-800, HVS-3, HVS-5, HYG-301）必须在规格下方标配高对比度的《工程选型与白皮书参考卡片》，正向导流至对应白皮书或解决方案。
+3. **技术白皮书 (`articles/*/index.html`)**：
+   - 必须通过宽幅 CTA 横幅导流至解决方案页咨询或产品页，并通过底部 `#taxonomy-hub` 交叉推荐其他深度文章。
+4. **在线计算器 Widget (`solutions.html#sizing-calculator`)**：
+   - 算法不仅计算流量与负压，还直接向买家推荐机型，并提供对应椅子规模的白皮书超链接（1~3台推 #08，4~8台推 #09，15台以上推 #04）。
+
+---
+
+### 22.4 WebMCP Agent 智能体 5 大原生工具调用规范 (AEO Tool Registry)
+
+在 `assets/js/webmcp-tools.js` 中注册并挂载于 `document.modelContext` 的 5 大核心工具集：
+
+1. `search_products`: 多条件检索 Class 0 压缩机、负压抽吸与纯水系统（支持按品类、椅子数、流量、功率过滤）。
+2. `calculate_dental_sizing`: 运行 Q = N × 50 × f 选型算法，输出精准流量、负压需求、推荐机型，并动态挂载对应白皮书链接与在线计算器入口。
+3. `get_industry_solutions`: **[V3.9 新增]** 输入行业枚举（`dental_clinic`, `hospital_epc`, `analytical_lab`, `oem_manufacturing`, `all`），返回完整工程方案蓝图、临床危害消除机理、标准清单及权威白皮书链接。
+4. `get_compliance_certificates`: 调取 ISO 8573-1 Class 0、ISO 13485、CE MDR 及 NMPA 注册证权威合规数据。
+5. `submit_rfq_inquiry`: 接收买家或 AI Agent 发起的工程询盘参数，生成带防伪校验追踪码的 RFQ 回执并存入本地采购日志。
+
+---
+
+### 22.5 落地验收与自动化死链核查结论 (Quality Assurance Report)
+
+- **Sitemap 索引完备性**：`sitemap.xml` 共计 24 个生产端点，全量纳入 Article 10，权重与更新时间精准同步。
+- **结构化数据解析**：`solutions.html` 成功挂载 `FAQPage` 结构化数据，经 Schema.org 规范校验通过。
+- **全网内链连通率**：自动化脚本遍历全站 230 个内部超链接，连通率 **100%**，404 错误数 **0**。
+- **Agent 工具集自动化回归**：Node.js 模拟调用 5/5 全部通过，数据结构与白皮书链接映射 100% 准确。
+
+---
+
+### 22.6 Google Analytics 4 全网商业雷达与 B2B 转化事件规范 (GA4 Architecture)
+
+- **官方衡量 ID (Measurement ID)**：`G-25BF91Y6Q1`
+- **全网覆盖范围**：全站 23 个核心生产 HTML 页面 100% 异步集成（排除 Yandex 验证纯文本文件）。
+- **核心 B2B 转化埋点矩阵**：
+  1. `contact_email_click`：捕获海外买家点击 `martinchen@hongrun1995.cn` 或企业邮箱链接的行为。
+  2. `whatsapp_click`：捕获海外即时沟通渠道（WhatsApp）发起咨询的行为。
+  3. `inquire_button_click`：捕获全站任意产品页/白皮书中的 RFQ 商业询盘按钮点击。
+  4. `calculator_quote_click`：捕获买家在 `solutions.html#sizing-calculator` 锁定配置并点击报价的意向参数（携带椅子数、机型）。
+  5. `webmcp_agent_invocation`：当跨国买家自主 AI 智能体（ChatGPT Operator, Claude, Chrome AI）通过 WebMCP 调用网站工具时，自动向 GA4 上报事件，实现智能体时代访问维度的破局监控。
+
+---
+
+> **手册结语**：本手册已升级至 **Version 3.10 最终执行基准**，全量固化 Google Analytics 4 全网商业数据底座、SEO · GEO · AEO 深度打通与行业纵深渗透执行方案，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
+
+

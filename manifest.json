@@ -1,0 +1,45 @@
+{
+  "name": "Hongrun Medical - Oil-Free Air & Suction Systems",
+  "short_name": "HongrunTech",
+  "start_url": "/",
+  "id": "com.hongrun1995.web",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0284C7",
+  "orientation": "any",
+  "description": "China's premier manufacturer of Class 0 oil-free medical dental air compressors, hospital central suction, and CSSD water plants.",
+  "categories": ["medical", "business", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/images/favicon/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Product Catalog",
+      "short_name": "Products",
+      "description": "Explore Class 0 compressors, suction units & water plants",
+      "url": "/products.html"
+    },
+    {
+      "name": "Dental Sizing Calculator",
+      "short_name": "Calculator",
+      "description": "Calculate air flow & vacuum sizing for 1-50 chairs",
+      "url": "/solutions.html#sizing-calculator"
+    },
+    {
+      "name": "Request a Quote",
+      "short_name": "RFQ Quote",
+      "description": "Get fast official pricing & engineering CAD submittals",
+      "url": "/contact.html"
+    }
+  ]
+}

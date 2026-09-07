@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Hongrun Medical</ShortName>
+  <Description>Search Hongrun ISO 8573-1 Class 0 Medical Compressors, Dental Suction &amp; Water Systems</Description>
+  <Tags>medical compressor dental air oil-free suction class-0 hongrun</Tags>
+  <Contact>martinchen@hongrun1995.cn</Contact>
+  <Url type="text/html" template="https://www.hongrun1995.cn/products.html?q={searchTerms}"/>
+  <Image height="32" width="32" type="image/png">https://www.hongrun1995.cn/assets/images/favicon/favicon-32.png</Image>
+  <Developer>Hongrun Compressor Technology Co., Ltd. (Est. 1995)</Developer>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Language>en-US</Language>
+</OpenSearchDescription>

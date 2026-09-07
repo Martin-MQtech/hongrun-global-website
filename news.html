@@ -2,6 +2,53 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -49,13 +96,31 @@
   }
 }
 </script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="index.html"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
@@ -78,7 +143,7 @@
       <!-- Exquisite, Micro-Compact & Left-Aligned Crystal Glassmorphism Card -->
       <div class="max-w-[310px] sm:max-w-[340px] p-3 sm:p-3.5 rounded-xl bg-slate-950/30 backdrop-blur-md border border-white/15 shadow-[0_12px_32px_rgba(0,0,0,0.5)] ml-1 sm:ml-2">
         <p class="text-white/70 text-[9px] uppercase tracking-widest mb-1 flex items-center gap-1.5">
-          <a href="index.html" class="hover:text-sky-300 transition">Home</a>
+          <a href="/" class="hover:text-sky-300 transition">Home</a>
           <span>/</span>
           <span class="text-sky-300">News &amp; Insights</span>
         </p>
@@ -118,13 +183,14 @@
         <span>Topic Keyword Pool:</span>
       </div>
       <div class="flex flex-wrap items-center gap-1.5 text-xs">
-        <a href="articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#4-8 Dental Chairs Redundancy</a>
-        <a href="articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/index.html" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#1-3 Dental Chairs Sizing</a>
-        <a href="articles/20260902-dental-air-purity-engineering-guide/index.html" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#ISO 8573-1 Class 0</a>
-        <a href="articles/20260815-15-dental-chairs-sizing-guide/index.html" class="tag-badge bg-white/10 hover:bg-brand-accent border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#15 Dental Chairs Sizing</a>
-        <a href="articles/20260715-beijing-quality-tour/index.html" class="tag-badge bg-white/10 hover:bg-teal-600 border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Beijing Quality Tour</a>
-        <a href="articles/20260728-dental-south-china-expo/index.html" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Dental South China Expo</a>
-        <a href="articles/20260701-jinan-medical-hub/index.html" class="tag-badge bg-white/10 hover:bg-blue-600 border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Jinan Medical Hub</a>
+        <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#4-8 Dental Chairs Redundancy</a>
+        <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#1-3 Dental Chairs Sizing</a>
+        <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#ISO 8573-1 Class 0</a>
+        <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="tag-badge bg-white/10 hover:bg-brand-accent border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#15 Dental Chairs Sizing</a>
+        <a href="/articles/20260715-beijing-quality-tour/" class="tag-badge bg-white/10 hover:bg-teal-600 border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Beijing Quality Tour</a>
+        <a href="/articles/20260728-dental-south-china-expo/" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Dental South China Expo</a>
+        <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/" class="tag-badge bg-brand-blue/20 border border-brand-blue/40 text-sky-300 px-2.5 py-0.5 rounded-full hover:bg-brand-blue hover:text-white transition text-[11px]">#Agentic Web &amp; WebMCP</a>
+        <a href="/articles/20260701-jinan-medical-hub/" class="tag-badge bg-white/10 hover:bg-blue-600 border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Jinan Medical Hub</a>
         <a href="products-hospital.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#NMPA Class II</a>
         <a href="products-hvs.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#Dental Suction</a>
       </div>
@@ -148,7 +214,7 @@
 
       <!-- Category Filter Pills -->
       <div class="flex flex-wrap items-center gap-2">
-        <button class="filter-btn active text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 transition">All Articles (9)</button>
+        <button class="filter-btn active text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 transition">All Articles (10)</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Engineering Whitepapers</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Clinical Sizing</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Quality Tour</button>
@@ -158,11 +224,58 @@
     <!-- Compact 3-Column Blog Grid (Lightweight, High Information Density) -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- ==================== Article 00 (LATEST RELEASE - 2026-09-08): 4 to 8 Dental Chairs Dual Pump Redundancy ==================== -->
+      <!-- ==================== Article 10 (FLAGSHIP RELEASE - 2026-09-10): Precision Engineering Meets Agentic Web ==================== -->
+      <article class="blog-card bg-white rounded-xl border-2 border-brand-blue shadow-lg overflow-hidden flex flex-col justify-between group relative">
+        <div>
+          <!-- Thumbnail -->
+          <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
+            <img data-zoom data-hd="assets/images/news/hongrun_smart_plant_cover.jpg" src="assets/images/news/hongrun_smart_plant_cover.jpg" alt="Hongrun Intelligent Hospital Medical Air Plant Room with Digital Twin Telemetry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-microchip text-sky-300"></i> AI &amp; Agentic Web</span>
+          </a>
+
+          <div class="p-5">
+            <!-- Date & Reading Info -->
+            <div class="flex items-center justify-between text-[11px] text-slate-400 mb-2">
+              <span class="text-brand-blue font-bold"><i class="fa-regular fa-calendar-check text-brand-blue"></i> Sep 10, 2026</span>
+              <span class="bg-sky-50 text-sky-900 font-semibold px-2 py-0.5 rounded"><i class="fa-solid fa-globe mr-1"></i> EN / 中文</span>
+            </div>
+
+            <h3 class="text-base font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition font-display leading-snug">
+              <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/">
+                Precision Manufacturing Meets the Agentic Web: How a 30-Year Medical Compressor Manufacturer Revolutionizes B2B Digital Marketing
+              </a>
+            </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
+              In manufacturing, true technology lives in the metal, tribology, and 0.003 mg/m³ Class 0 purity. But in global export, internet and AI protocols are our ultimate marketing engines. How Hongrun embraces WebMCP and zero-latency tools.
+            </p>
+
+            <!-- 3 Keyword Tags -->
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#AgenticWeb</span>
+              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#Class0Precision</span>
+              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#WebMCP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Row -->
+        <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
+          <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
+            Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <a href="contact.html?source=Whitepaper10" class="text-slate-400 hover:text-brand-accent transition flex items-center gap-1 font-medium">
+            <i class="fa-regular fa-envelope"></i> Quick Inquire
+          </a>
+        </div>
+      </article>
+
+      <!-- ==================== Article 00 (2026-09-08): 4 to 8 Dental Chairs Dual Pump Redundancy ==================== -->
       <article class="blog-card bg-white rounded-xl border-2 border-brand-accent shadow-lg overflow-hidden flex flex-col justify-between group relative">
         <div>
           <!-- Thumbnail -->
-          <a href="articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html" class="block h-44 bg-slate-50 relative overflow-hidden cursor-pointer border-b border-slate-100">
+          <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="block h-44 bg-slate-50 relative overflow-hidden cursor-pointer border-b border-slate-100">
             <img data-zoom data-hd="assets/images/products/hd/HYTG-300.jpg" src="assets/images/news/news_13_hytg300_hero.jpg" alt="4 to 8 Dental Chairs Dual Pump Redundancy HYTG-300" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"/>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-accent/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-server text-amber-300"></i> N+1 Redundancy</span>
@@ -177,12 +290,12 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-accent transition line-clamp-2">
-              <a href="articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html">Dual-Pump Redundancy Architecture: 4-to-8 Dental Chair Central Air Sizing (HYTG-300 90L vs. HY-300 50L)</a>
+              <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/">Dual-Pump Redundancy Architecture: 4-to-8 Dental Chair Central Air Sizing (HYTG-300 90L vs. HY-300 50L)</a>
             </h3>
 
             <!-- Excerpt -->
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-              Eliminate catastrophic mid-procedure clinical air loss. Multi-pump parallel N+1 failover logic, simultaneous flow diversity math ($k=0.60\text{--}0.45$), and closed-loop ring manifold design.
+              Eliminate catastrophic mid-procedure clinical air loss. Multi-pump parallel N+1 failover logic, simultaneous flow diversity math (k = 0.60–0.45), and closed-loop ring manifold design.
             </p>
 
             <!-- Topic Chips / Keywords -->
@@ -196,7 +309,7 @@
 
         <!-- Card Footer -->
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-          <a href="articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
+          <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
             Read Redundancy Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/news/news_13_4to8chairs_redundancy.jpg" class="text-[11px] text-slate-400 hover:text-brand-accent cursor-pointer">View Blueprint</span>
@@ -207,7 +320,7 @@
       <article class="blog-card bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md overflow-hidden flex flex-col justify-between group relative">
         <div>
           <!-- Thumbnail -->
-          <a href="articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/index.html" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
+          <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
             <img data-zoom data-hd="assets/images/news/news_12_1to3chairs_blueprint.jpg" src="assets/images/news/news_12_1to3chairs_blueprint.jpg" alt="1 to 3 Dental Chairs Sizing Guide Blueprint" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"/>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-calculator text-amber-300"></i> Clinical Sizing</span>
@@ -222,7 +335,7 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-accent transition line-clamp-2">
-              <a href="articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/index.html">Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Sizing Guide (24L vs. 32L Benchmark)</a>
+              <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/">Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Sizing Guide (24L vs. 32L Benchmark)</a>
             </h3>
 
             <!-- Excerpt -->
@@ -240,7 +353,7 @@
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-          <a href="articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/index.html" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
+          <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
             Read Sizing Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/news/news_12_1to3chairs_blueprint.jpg" class="text-[11px] text-slate-400 hover:text-brand-accent cursor-pointer">View Blueprint</span>
@@ -251,7 +364,7 @@
       <article class="blog-card bg-white rounded-xl border-2 border-brand-blue shadow-lg overflow-hidden flex flex-col justify-between group relative">
         <div>
           <!-- Thumbnail -->
-          <a href="articles/20260902-dental-air-purity-engineering-guide/index.html" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
+          <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
             <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" src="assets/images/products/hy-family-portfolio.jpg?v=20260902_v4" data-hd="assets/images/products/hy-family-portfolio.jpg?v=20260902_v4" alt="Hongrun Medical Dental Compressor Family Portfolio" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"/>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/85 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-file-waveform text-sky-300"></i> Engineering Whitepaper</span>
@@ -266,7 +379,7 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-blue transition line-clamp-2">
-              <a href="articles/20260902-dental-air-purity-engineering-guide/index.html">Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0, and Sizing of HY Series</a>
+              <a href="/articles/20260902-dental-air-purity-engineering-guide/">Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0, and Sizing of HY Series</a>
             </h3>
 
             <!-- Excerpt -->
@@ -284,7 +397,7 @@
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-          <a href="articles/20260902-dental-air-purity-engineering-guide/index.html" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
+          <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
             Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/products/hy-family-portfolio.jpg" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View Gallery</span>
@@ -295,7 +408,7 @@
       <article class="blog-card bg-white rounded-xl border-2 border-teal-500/40 shadow-md overflow-hidden flex flex-col justify-between group relative">
         <div>
           <!-- 3D Exploded View Thumbnail -->
-          <a href="articles/20260825-dental-suction-exploded-anatomy/index.html" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
+          <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
             <img data-zoom data-hd="assets/images/exploded/02-hvs-suction-exploded.jpg" src="assets/images/exploded/02-hvs-suction-exploded.jpg" alt="3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum System" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"/>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/90 text-[11px] font-medium bg-black/60 backdrop-blur px-2 py-0.5 rounded flex items-center gap-1">
@@ -312,7 +425,7 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-teal-600 transition line-clamp-2">
-              <a href="articles/20260825-dental-suction-exploded-anatomy/index.html">Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems</a>
+              <a href="/articles/20260825-dental-suction-exploded-anatomy/">Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems</a>
             </h3>
 
             <!-- 2-line Clean Excerpt -->
@@ -329,7 +442,7 @@
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-          <a href="articles/20260825-dental-suction-exploded-anatomy/index.html" class="text-xs font-bold text-teal-700 hover:underline inline-flex items-center gap-1">
+          <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="text-xs font-bold text-teal-700 hover:underline inline-flex items-center gap-1">
             Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/exploded/02-hvs-suction-exploded.jpg" class="text-[11px] text-slate-400 hover:text-teal-700 cursor-pointer">View CAD</span>
@@ -340,7 +453,7 @@
       <article class="blog-card bg-white rounded-xl border-2 border-brand-blue/40 shadow-md overflow-hidden flex flex-col justify-between group relative">
         <div>
           <!-- 3D Exploded View Thumbnail -->
-          <a href="articles/20260820-compressor-exploded-anatomy/index.html" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
             <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" src="assets/images/exploded/01-hy-compressor-exploded.jpg" alt="3D CAD Exploded Engineering Anatomy of Medical Oil-Free Compressor" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"/>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/90 text-[11px] font-medium bg-black/60 backdrop-blur px-2 py-0.5 rounded flex items-center gap-1">
@@ -357,7 +470,7 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-blue transition line-clamp-2">
-              <a href="articles/20260820-compressor-exploded-anatomy/index.html">Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors</a>
+              <a href="/articles/20260820-compressor-exploded-anatomy/">Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors</a>
             </h3>
 
             <!-- 2-line Clean Excerpt -->
@@ -367,7 +480,7 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="articles/20260815-15-dental-chairs-sizing-guide/index.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">ISO Class 0</a>
+              <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">ISO Class 0</a>
               <a href="products-core.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">PTFE Rings</a>
               <a href="products-cleanair.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">PSA Dryer</a>
             </div>
@@ -375,7 +488,7 @@
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-          <a href="articles/20260820-compressor-exploded-anatomy/index.html" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
             Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View CAD</span>
@@ -413,14 +526,14 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="articles/20260815-15-dental-chairs-sizing-guide/index.html" class="text-[10px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYT Dual Pump</a>
+              <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-[10px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYT Dual Pump</a>
               <a href="products-water.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">HRC Water</a>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-          <a href="articles/20260815-15-dental-chairs-sizing-guide/index.html" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
+          <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
             Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/news/news_11_15chairs_2.jpg" class="text-[11px] text-slate-400 hover:text-brand-accent cursor-pointer">View Gallery</span>
@@ -601,10 +714,14 @@
           <img src="assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
-        <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="contact.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-          <a href="news.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-solid fa-newspaper text-xl"></i></a>
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-linkedin text-base"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61594274000326" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-facebook text-base"></i></a>
+          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-instagram text-base"></i></a>
+          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-tiktok text-base"></i></a>
+          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-youtube text-base"></i></a>
+          <a href="https://x.com/martinhrtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-x-twitter text-base"></i></a>
+          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-whatsapp text-base"></i></a>
         </div>
       </div>
 
@@ -646,5 +763,13 @@
 </footer>
 
 <script src="assets/js/lightbox.js"></script>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

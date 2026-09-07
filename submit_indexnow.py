@@ -23,7 +23,10 @@ import urllib.error
 HOST = "www.hongrun1995.cn"
 KEY = "8f1c4e92a7b64082b21c5f3e790a34dc"
 KEY_LOCATION = f"https://{HOST}/{KEY}.txt"
-API_ENDPOINT = "https://api.indexnow.org/indexnow"
+API_ENDPOINTS = [
+    ("IndexNow Global (api.indexnow.org)", "https://api.indexnow.org/indexnow"),
+    ("Microsoft Bing (www.bing.com)", "https://www.bing.com/indexnow"),
+]
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SITEMAP_PATH = os.path.join(ROOT, "sitemap.xml")
@@ -89,35 +92,40 @@ def submit(urls):
         "urlList": urls
     }
     data = json.dumps(payload).encode("utf-8")
-    req = urllib.request.Request(
-        API_ENDPOINT,
-        data=data,
-        headers={
-            "Content-Type": "application/json; charset=utf-8",
-            "User-Agent": "HongrunTech-IndexNow-Client/1.0"
-        }
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            status = resp.status
-            body = resp.read().decode("utf-8")
-            print(f"  ✅ [推送成功] HTTP 状态码: {status}")
-            if body:
-                print(f"  Response: {body}")
-            return True
-    except urllib.error.HTTPError as e:
-        print(f"  ℹ️ [HTTP 响应] 状态码: {e.code} ({e.reason})")
-        if e.code == 200 or e.code == 202:
-            print("  ✅ [推送成功] 搜索引擎已受理索引请求！")
-            return True
+    
+    all_success = True
+    for name, endpoint in API_ENDPOINTS:
+        print(f"\n  📡 正在向 [{name}] 提交 {len(urls)} 个网址...")
+        req = urllib.request.Request(
+            endpoint,
+            data=data,
+            headers={
+                "Content-Type": "application/json; charset=utf-8",
+                "User-Agent": "HongrunTech-IndexNow-Client/1.0"
+            }
+        )
         try:
-            print(f"  响应详情: {e.read().decode('utf-8')}")
-        except Exception:
-            pass
-        return False
-    except Exception as e:
-        print(f"  ❌ [连接错误]: {e}")
-        return False
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                status = resp.status
+                body = resp.read().decode("utf-8")
+                print(f"    ✅ [{name}] 推送成功！HTTP 状态码: {status}")
+                if body:
+                    print(f"    响应内容: {body}")
+        except urllib.error.HTTPError as e:
+            print(f"    ℹ️ [{name}] HTTP 状态码: {e.code} ({e.reason})")
+            if e.code in (200, 202):
+                print(f"    ✅ [{name}] 搜索引擎已正式受理收录请求 (HTTP {e.code})！")
+            else:
+                try:
+                    print(f"    响应详情: {e.read().decode('utf-8')}")
+                except Exception:
+                    pass
+                all_success = False
+        except Exception as e:
+            print(f"    ❌ [{name}] 连接错误: {e}")
+            all_success = False
+            
+    return all_success
 
 
 def main():

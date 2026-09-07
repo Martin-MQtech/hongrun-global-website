@@ -2,6 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -42,11 +89,29 @@
     }
   }
   </script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
   <header class="bg-white border-b border-slate-200 py-4 px-6 flex justify-between items-center">
-    <a href="index.html"><img src="assets/images/logo_transparent.png" alt="Hongrun Logo" class="h-10" /></a>
-    <a href="index.html" class="text-xs font-bold text-brand-blue">Back to Home</a>
+    <a href="/"><img src="assets/images/logo_transparent.png" alt="Hongrun Logo" class="h-10" /></a>
+    <a href="/" class="text-xs font-bold text-brand-blue">Back to Home</a>
   </header>
   <main class="max-w-4xl mx-auto px-4 py-12 prose prose-slate text-sm leading-relaxed">
     <h1 class="text-3xl font-bold font-display text-slate-900 mb-2">Privacy Policy &amp; Data Protection Statement</h1>
@@ -76,5 +141,13 @@
   <footer class="bg-slate-900 text-slate-400 text-xs py-8 text-center border-t border-slate-800">
     <p>&copy; 2026 Shandong Hongrun Air Compressor Technology Co., Ltd. &middot; ISO 13485 &middot; CE &middot; NMPA Class II</p>
   </footer>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

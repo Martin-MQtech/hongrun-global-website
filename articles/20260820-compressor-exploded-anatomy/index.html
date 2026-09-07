@@ -2,6 +2,53 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -81,13 +128,31 @@
   }
 }
 </script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="../../index.html"><img src="../../assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
+    <a href="/"><img src="../../assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
@@ -104,7 +169,7 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-xs text-slate-400 uppercase tracking-widest mb-4">
-      <a href="../../index.html" class="hover:text-brand-sky transition">Home</a>
+      <a href="/" class="hover:text-brand-sky transition">Home</a>
       <span>/</span>
       <a href="../../news.html" class="hover:text-brand-sky transition">News &amp; Insights</a>
       <span>/</span>
@@ -386,22 +451,22 @@
           <i class="fa-solid fa-tags text-brand-blue"></i> Article Keywords &amp; Global Indexing Tags:
         </h4>
         <div class="flex flex-wrap gap-2">
-          <a href="../20260902-dental-air-purity-engineering-guide/index.html" class="inline-flex items-center gap-1.5 text-xs bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white font-semibold px-3 py-1.5 rounded-lg border border-brand-blue/20 transition">
+          <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="inline-flex items-center gap-1.5 text-xs bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white font-semibold px-3 py-1.5 rounded-lg border border-brand-blue/20 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> ISO 8573-1 Class 0 <span class="text-[10px] opacity-75 bg-white/40 px-1 rounded">Core</span>
           </a>
-          <a href="../20260820-compressor-exploded-anatomy/index.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Wobble Piston Kinematics (ZB Series)
           </a>
           <a href="../../products-hy.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Nano-Coated Antibacterial Tank (32L)
           </a>
-          <a href="../20260815-15-dental-chairs-sizing-guide/index.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
+          <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> 1–50 Dental Chairs Sizing Equation
           </a>
           <a href="../../products-core.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Saint-Gobain Self-Lubricating PTFE
           </a>
-          <a href="../20260825-dental-suction-exploded-anatomy/index.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
+          <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Aerosol Suppression &amp; Cyclone Separation
           </a>
           <a href="../../solutions.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
@@ -421,7 +486,7 @@
           <i class="fa-solid fa-network-wired text-brand-blue"></i> Interconnected Deep-Dive Whitepapers:
         </h4>
         <div class="grid sm:grid-cols-3 gap-4">
-          <a href="../20260820-compressor-exploded-anatomy/index.html" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
@@ -430,7 +495,7 @@
             <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
-          <a href="../20260815-15-dental-chairs-sizing-guide/index.html" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-brand-accent text-white font-bold px-2 py-0.5 rounded uppercase">Clinical Sizing</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">15–50 Dental Chairs Pneumatic Pipe Sizing &amp; Hospital Blueprint</h5>
@@ -439,7 +504,7 @@
             <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
-          <a href="../20260825-dental-suction-exploded-anatomy/index.html" class="bg-white hover:border-teal-600 p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="bg-white hover:border-teal-600 p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">Aerodynamic Power: 3D Exploded Anatomy of HVS Dental Vacuum</h5>
@@ -465,17 +530,17 @@
         <!-- Mainstream Social Share Icons Matrix -->
         <div class="flex flex-wrap items-center gap-2">
           <!-- LinkedIn -->
-          <a href="../20260820-compressor-exploded-anatomy/index.html" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="w-9 h-9 rounded-lg bg-[#0A66C2] hover:bg-[#084e96] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="w-9 h-9 rounded-lg bg-[#0A66C2] hover:bg-[#084e96] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-linkedin-in text-sm"></i>
           </a>
 
           <!-- WhatsApp -->
-          <a href="../20260820-compressor-exploded-anatomy/index.html" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-whatsapp text-base"></i>
           </a>
 
           <!-- X / Twitter -->
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2F../20260820-compressor-exploded-anatomy/index.html&text=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260820-compressor-exploded-anatomy%2F&text=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
 
@@ -490,17 +555,17 @@
           </a>
 
           <!-- Facebook -->
-          <a href="../20260820-compressor-exploded-anatomy/index.html" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="w-9 h-9 rounded-lg bg-[#1877F2] hover:bg-[#0e65d8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="w-9 h-9 rounded-lg bg-[#1877F2] hover:bg-[#0e65d8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-facebook-f text-sm"></i>
           </a>
 
           <!-- Telegram -->
-          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2F../20260820-compressor-exploded-anatomy/index.html&text=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260820-compressor-exploded-anatomy%2F&text=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-telegram text-base"></i>
           </a>
 
           <!-- Email -->
-          <a href="../20260820-compressor-exploded-anatomy/index.html" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-regular fa-envelope text-sm"></i>
           </a>
 
@@ -548,10 +613,14 @@
           <img src="../../assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
-        <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="../../contact.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-          <a href="../../news.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-solid fa-newspaper text-xl"></i></a>
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-linkedin text-base"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61594274000326" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-facebook text-base"></i></a>
+          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-instagram text-base"></i></a>
+          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-tiktok text-base"></i></a>
+          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-youtube text-base"></i></a>
+          <a href="https://x.com/martinhrtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-x-twitter text-base"></i></a>
+          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-whatsapp text-base"></i></a>
         </div>
       </div>
 
@@ -593,5 +662,13 @@
 </footer>
 
 <script src="../../assets/js/lightbox.js"></script>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

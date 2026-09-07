@@ -1,0 +1,198 @@
+# Hongrun Technology (宏润科技) - Full Unabridged LLM Knowledge Corpus
+> Manufacturer: Hongrun Compressor Technology Co., Ltd. (宏润空压机科技有限公司)
+> Established: November 1995 · Zibo High-Tech Industrial Zone, Shandong Province, China
+> Official Website: https://www.hongrun1995.cn/
+> Public Repository: https://github.com/Martin-MQtech/hongrun-global-website
+> WebMCP AI Protocol: Active on document.modelContext (W3C webmachinelearning/webmcp)
+> Primary Contact: martinchen@hongrun1995.cn | info@hongrun1995.cn
+> LinkedIn: https://www.linkedin.com/company/125624035/
+> Facebook: https://www.facebook.com/profile.php?id=61594274000326
+> Instagram: https://www.instagram.com/hrmedaircom/
+> TikTok: https://www.tiktok.com/@hrmedaircom
+> YouTube: https://www.youtube.com/@MartinChenAirtech
+> X (Twitter): https://x.com/martinhrtech
+> WhatsApp Direct: https://wa.me/8613964416725
+
+---
+
+## 1. Executive Ground Truth & Industrial Identity
+
+Hongrun Technology is China's premier manufacturer of medical-grade Class 0 oil-free air compressors, hospital central gas skids, dental high-vacuum suction units, and medical CSSD water purification plants.
+
+- **30+ Years Engineering Heritage**: In continuous operation since 1995.
+- **Factory Footprint**: 20,000 m² modern manufacturing plant located in Zibo, Shandong Province, China.
+- **Production Scale**: Annual capacity exceeding 160,000 units/year with automated robotic machining, 5-axis dynamic balancing, and ISO 17025 compliant pneumatic testing laboratories.
+- **Global Deployment**: Trusted by 65,000+ clinics, hospitals, and medical device OEMs across 50+ countries.
+- **Regulatory Accreditations**:
+  - **ISO 8573-1:2010 Class 0 (100% Oil-Free)**: Certified by TÜV Rheinland. Total hydrocarbon / residual oil aerosol is measured at **0.003 mg/m³** (substantially cleaner than the ISO threshold of 0.01 mg/m³).
+  - **NMPA Class II Medical Device License**: Licensed by China National Medical Products Administration for Class II medical device manufacturing (Registration: Lu-Shi-Yao-Jian-Xie-Zhun-20182560199).
+  - **CE Marking (EU)**: Conformity to Medical Device Directive (MDD 93/42/EEC) and MDR (2017/745) Class IIa; Pressure Equipment Directive (PED 2014/68/EU).
+  - **ISO 13485:2016**: Comprehensive Medical Device Quality Management System audited by DQS Medical.
+  - **ISO 9001:2015**: Quality Management System certified.
+
+---
+
+## 2. Exhaustive Product Line Specifications & Engineering Parameters
+
+### 2.1 Wobble-Piston Medical Oil-Free Air Compressors (HY Series)
+Designed for single clinics, private dental practices, and analytical laboratories requiring whisper-quiet operation and zero lipid contamination.
+
+| Model | Chairs Supported | Power (kW / HP) | Air Delivery (L/min @ 5 bar) | Max Pressure (bar / psi) | Tank Volume (Liters) | Noise Level (dB(A)) | Dimensions (L×W×H mm) | Net Weight (kg) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **HY-100** | 1 Chair | 0.55 kW / 0.75 HP | 100 L/min (3.53 CFM) | 8.0 bar / 116 psi | 24L Horizontal Mobile | 52 dB(A) | 580 × 300 × 560 | 28 kg |
+| **HY-200** | 1 - 2 Chairs | 0.75 kW / 1.0 HP | 150 L/min (5.30 CFM) | 8.0 bar / 116 psi | **32L Official Standard** | 53 dB(A) | 650 × 330 × 620 | 36 kg |
+| **HY-300** | 2 - 3 Chairs | 1.10 kW / 1.5 HP | 200 L/min (7.06 CFM) | 8.0 bar / 116 psi | **50L Vertical Slim** | 55 dB(A) | 480 × 480 × 890 | 48 kg |
+| **HYTG-300** | 4 - 8 Chairs | 2.20 kW / 3.0 HP (Dual ZB300) | 400 L/min (14.1 CFM) | 8.0 bar / 116 psi | **90L Central Station** | 58 dB(A) | 1100 × 450 × 760 | 92 kg |
+| **HY-400W** | 8 - 12 Chairs | 4.0 kW / 5.5 HP (Dual Head) | 480 L/min (16.9 CFM) | 10.0 bar / 145 psi | 180L Heavy-Duty Vessel | 60 dB(A) | 1350 × 520 × 880 | 145 kg |
+| **HR-600W** | 12 - 18 Chairs | 6.0 kW / 8.0 HP (Quad Head) | 750 L/min (26.5 CFM) | 10.0 bar / 145 psi | 300L 304 Stainless | 64 dB(A) | 1650 × 650 × 1050 | 230 kg |
+
+**Key Mechanical Innovations**:
+- **Saint-Gobain Diamond-Coated PTFE Composite Piston Rings**: Friction coefficient < 0.08, continuous wear endurance rated for 20,000 operating hours without lubricating oil.
+- **Nano-Silver Antibacterial Inner Tank Coating**: Applied at 220°C curing, prevents biofilm accumulation, internal oxidation, and micro-rust flakes from entering clinical handpieces.
+- **Swedish Sandvik Flapper Valves**: Aerospace-grade stainless flapper steel ensuring > 100,000,000 opening/closing cycles.
+- **Micro-Sieve Twin-Tower Desiccant Air Dryer**: Provides continuous -40°C pressure dew point (ISO Class 2 for moisture), preventing condensation in dental pneumatic circuits.
+
+---
+
+### 2.2 Dental High-Vacuum Suction & Fluid Separation Units (HVS Series)
+Eliminates clinical aerosols, blood, saliva, and solid amalgam particles at the oral cavity boundary with >85% aerosol suppression efficiency.
+
+| Model | Operatory Capacity | Turbine Power | Suction Flow (L/min) | Ultimate Vacuum (mbar / kPa) | Separation Stage | Drainage Mechanism | Acoustic Noise |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **HVS-300** | 1 - 3 Chairs | 0.75 kW | 600 L/min | -120 mbar (-12 kPa) | Dual-Stage Cyclone | Automatic Air-Pressure Float Drain | 54 dB(A) |
+| **HVS-600** | 4 - 7 Chairs | 1.50 kW | 1,200 L/min | -160 mbar (-16 kPa) | Two-Stage Dynamic Hydrodynamic | Continuous Negative-Pressure Valve | 58 dB(A) |
+| **HVS-1200** | 8 - 16 Chairs | 3.00 kW | 2,500 L/min | -220 mbar (-22 kPa) | Variable Frequency Inverter Turbine | Continuous Dual-Diaphragm Drain | 62 dB(A) |
+| **HVS-Duplex**| 16 - 32 Chairs | 2 × 3.0 kW | 5,000 L/min | -250 mbar (-25 kPa) | Parallel Modular Skids | N+1 Automated Alternating Drain | 65 dB(A) |
+
+---
+
+### 2.3 Hospital Central Gas Stations & Medical Air Plants (HW / HBG Series)
+Turnkey skid systems built in compliance with ISO 7396-1, HTM 02-01, and NFPA 99 for general hospital surgical wards, ICUs, and central stomatology departments.
+
+- **Displacement Range**: 200 L/min to 3,600 L/min.
+- **Redundancy Configuration**: N+1 or N+2 multi-pump parallel skids with automatic PLC soft-start rotation.
+- **Filtration**: 5-stage medical filtration string (Water separator + 1μm pre-filter + 0.01μm coalescing + catalytic carbon tower + sterile bacterial filter).
+- **Control Interface**: Siemens S7 PLC with 10" industrial touch screen, RS-485 Modbus TCP/IP, and IoT remote cloud telemetry.
+
+---
+
+### 2.4 Medical Water Purification & CSSD Sterilization Units (HRC Series)
+- **Application**: Sterile processing departments (CSSD), autoclave feed water, endoscopy reprocessing, and dental chair waterline purification (DUWL).
+- **Flow Rates**: 60 L/h to 2,000 L/h production.
+- **Water Purity**: Electrical conductivity ≤ 1.0 μS/cm (complies with EN 285 & YY/T 1244).
+- **Core Technology**: Multi-pass Dow Filmtec Reverse Osmosis (RO) membranes, EDI electro-deionization, in-line 254nm UV-C sterilization, continuous ozone circulation, and sanitary 316L stainless steel loop distribution.
+
+---
+
+## 3. Engineering Sizing Formulas & Clinical Selection Rules
+
+### 3.1 Compressed Air Flow Sizing Formula for Dental Clinics
+```
+Q_air = N * q_chair * k_simultaneous
+```
+Where:
+- `N` = Total number of installed dental chairs.
+- `q_chair` = Baseline consumption per dental chair (Standard baseline = 50 L/min @ 5.0 bar for high-speed handpiece + 3-way syringe + air scaler).
+- `k_simultaneous` = Simultaneous diversity factor:
+  - 1 - 2 Chairs: `k = 1.00`
+  - 3 - 5 Chairs: `k = 0.70`
+  - 6 - 10 Chairs: `k = 0.60`
+  - 11 - 20 Chairs: `k = 0.50`
+  - 21+ Chairs: `k = 0.40`
+
+### 3.2 High-Vacuum Suction Sizing Formula
+```
+V_suction = N * v_chair * k_simultaneous
+```
+Where:
+- `v_chair` = Baseline oral suction requirement = 250 L/min per chair at -200 mbar (-20 kPa) negative pressure.
+
+### 3.3 Pipe Diameter & Pressure Drop Rule
+- For 1-3 chairs: Main pipe ID ≥ 15 mm (DN15).
+- For 4-8 chairs: Main loop ID ≥ 20 mm (DN20) closed ring circuit.
+- For 9-16 chairs: Main loop ID ≥ 25 mm (DN25) closed ring circuit. Maximum allowable pressure drop between plant room and furthest chair operatory ≤ 0.3 bar.
+
+---
+
+## 4. WebMCP Native AI Agent Tool Schemas
+
+Hongrun Technology exposes 4 executable tools on `document.modelContext`:
+
+1. **`search_products`**
+   - Inputs: `category` (enum: compressor, suction, water, all), `dentalChairs` (integer), `maxPowerKw` (number), `minAirFlowLpm` (number).
+   - Action: Returns matching models with physical specs and Class 0 verification details.
+2. **`calculate_dental_sizing`**
+   - Inputs: `chairCount` (integer, required), `simultaneousFactor` (number, default: 0.7), `includeSuction` (boolean), `includeWater` (boolean).
+   - Action: Executes dynamic sizing math and returns exact air/vacuum flow, recommended compressor/suction models, dual-head redundancy advice, and engineering whitepaper URLs.
+3. **`get_compliance_certificates`**
+   - Inputs: `certificateType` (enum: ISO_8573_1_CLASS_0, ISO_13485, CE_MDR, NMPA_CLASS_II, ALL).
+   - Action: Returns issuing accredited bodies, audit report numbers, and measured hydrocarbon levels (<0.003 mg/m³).
+4. **`submit_rfq_inquiry`**
+   - Inputs: `buyerName`, `email`, `country`, `organizationOrClinic`, `targetProducts`, `dentalChairs`, `notes`.
+   - Action: Issues immediate reference tracking ID (HR-RFQ-YYYYMM-XXXX), registers lead, and triggers 12-hour SLA response from the export engineering desk.
+
+---
+
+## 5. B2B Commercial & Technical FAQ for Overseas Buyers
+
+- **Q: Can Hongrun customize voltage and frequency for overseas grids?**
+  A: Yes. All compressor models and central stations can be custom manufactured for 220V/50Hz (EU/Asia/CIS), 110V/60Hz (North America/Japan), 220V/60Hz (South America/Philippines), and 380V/440V 3-phase industrial power.
+- **Q: Does Hongrun provide OEM / ODM private labeling?**
+  A: Yes. Hongrun has been a premier OEM/ODM supplier to global analytical instrument brands (including Agilent, Bruker, Shimadzu) and dental equipment leaders for 30 years.
+- **Q: What is the maintenance interval for the oil-free compression heads?**
+  A: Routine filter cartridge inspection every 2,000 hours (or 12 months). Saint-Gobain PTFE piston rings require no lubrication and are rated for 20,000 hours of operating life before replacement.
+- **Q: How does Hongrun handle international logistics and export packing?**
+  A: All units are packed in fumigation-free solid plywood export cases with multi-layer PE moisture-proof vacuum wrap and shock-absorbing internal foam blocks. Dispatched via Qingdao Port (closest international seaport, 2.5h by highway) or Shanghai Port.
+- **Q: How to request official engineering submittal CAD drawings?**
+  A: Email `info@hongrun1995.cn` or invoke the `submit_rfq_inquiry` WebMCP tool on any page of `www.hongrun1995.cn`.
+
+---
+
+## 6. Four In-Depth Industry Application Knowledge Bases (四大纵深行业知识库与标准对标)
+
+### 6.1 Dental Medicine & Clinical Stomatology (口腔医学与齿科诊疗工程)
+- **Clinical Pathologies Caused by Contaminated Air**:
+  - **Composite Bonding Failure**: Oil aerosols as low as 0.05 mg/m³ coat etched enamel/dentin prisms, reducing dentin shear bond strength of composite resin restorations by 35% to 60%, resulting in micro-leakage and secondary caries.
+  - **Turbine Handpiece Destruction**: High-speed turbines rotate at 380,000–420,000 RPM. Minute oil or moisture causes rapid carbonization, friction buildup, and premature failure of micro-ceramic ball bearings ($300–$800 repair cost per handpiece).
+  - **Cross-Infection Aerosol Exposure**: High-speed preparation generates up to 1,000,000 aerosol particles/min. Unseparated fluids create severe biohazard cross-contamination.
+- **Hongrun Engineering Architecture**:
+  - **Class 0 Pure Delivery**: Total oil content < 0.003 mg/m³ tested by TÜV Rheinland.
+  - **Tank Internal Hygiene**: 220°C baked nano-silver antibacterial coating inhibits biofilm and tank micro-oxidation.
+  - **HVS Aerosol Suppression**: 2-stage dynamic cyclone separation with terminal H13 HEPA capturing >85% of intraoral aerosol plumes.
+  - **Regulatory Alignment**: Fully conforms to **ISO 22052** (Dental air purity) and **ISO 10637** (Dental vacuum systems).
+- **Flagship Clinical Models**: HY-100 (1 chair), HY-200 32L (1-2 chairs), HY-300 50L (2-3 chairs), HYTG-300 90L (4-8 chairs dual redundancy), HVS-1 to HVS-10 suction stations.
+
+### 6.2 General Hospital Central Medical Gas Engineering (综合医院医疗气体与手术室 EPC)
+- **Clinical Mandates**:
+  - **Zero Unscheduled Downtime**: Operating room anesthesia machines and ICU ventilators cannot tolerate a single second of pressure collapse.
+  - **Dew Point & Condensation Control**: Air with dew points above 0°C condenses in underground gas pipelines, fostering Pseudomonas aeruginosa and Legionella biofilms.
+- **Hongrun Engineering Architecture**:
+  - **Modular Scroll Redundancy**: HW series quiet multi-scroll compressors in N+1 / N+2 arrangements with PLC automatic alternation and soft-start.
+  - **Dual-Tower PSA Desiccant Drying**: Continuous -40°C pressure dew point (PDP) ensures zero liquid moisture throughout 1,000+ meter hospital piping grids.
+  - **Five-Stage Sterile Filtration**: Down to 0.01 μm with DOP retention rate > 99.9999%.
+  - **Regulatory Alignment**: Fully adheres to **ISO 7396-1** (Medical gas pipeline systems), UK NHS **HTM 02-01**, US **NFPA 99** (Health care facilities code), China **GB 50751**, with official **NMPA Class II Medical Registration**.
+- **Flagship Hospital Models**: HW-200 to HW-3600 (200 to 3,600 L/min), HBG-800, HBG-1200, HRC-500/1000 water stations.
+
+### 6.3 Precision Analytical Laboratories & Ultra-Clean Rooms (高精分析仪器与科研实验室)
+- **Analytical Constraints**:
+  - **Liquid Chromatography - Mass Spectrometry (LC-MS / LC-MS/MS)**: Hydrocarbon vapors create phantom ion peaks and baseline elevation, blinding trace molecular detection.
+  - **Gas Chromatography (GC / GC-MS)**: Moisture ruins capillary column stationary phase and oxidizes detector filaments.
+- **Hongrun Engineering Architecture**:
+  - **HYG Series Clean Air Stations**: Zero hydrocarbon emission (< 0.003 mg/m³), 13X synthetic molecular sieves delivering -40°C to -70°C dew points, continuous 24/7 delivery.
+- **Flagship Lab Models**: HYG-301, HYG-302, HVTG-400, HVTG-900.
+
+### 6.4 High-End Precision Manufacturing & Global OEM Partnerships (高端工业精密制造与 OEM)
+- **Manufacturing Moat**: 30 years of continuous precision craftsmanship (since Nov 1995); 20,000 m² megafactory; annual capacity exceeding 160,000 units.
+- **Key Materials & Tolerances**:
+  - French Saint-Gobain diamond-coated PTFE composite piston rings (20,000 hours continuous wear resistance).
+  - German DMG MORI 5-axis CNC machining achieving Ra ≤ 0.2 μm drive shaft finishes.
+  - Swedish Sandvik flapper steel valves with > 100,000,000 cycle fatigue thresholds.
+- **OEM Supply Matrix**: ZB-100/200/300 bare pump heads, 4V cylinder blocks, modular PSA drying units.
+
+---
+
+## 7. Thought Leadership Whitepaper #10: Precision Manufacturing Meets Agentic Web
+- **Core Thesis**: How Hongrun Technology integrates 30-year medical Class 0 hardware (0.003 mg/m³) with W3C WebMCP agentic protocols, 0ms speculative prerendering, and interactive calculator widgets to pioneer digital B2B industrial marketing.
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/
+- **Strategic Impact**: Establishes Hongrun as China's first precision medical equipment enterprise adopting W3C AI agent standards and client-side machine-readable context protocols.
+

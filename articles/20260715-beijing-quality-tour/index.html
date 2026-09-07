@@ -2,6 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -32,10 +79,28 @@
   <script type="application/ld+json">
   { "@context": "https://schema.org", "@type": "NewsArticle", "headline": "Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision & Innovation", "datePublished": "2025-10-01", "publisher": { "@type": "Organization", "name": "Hongrun Compressor Technology Co., Ltd." } }
   </script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
   <header class="sticky top-0 z-50 bg-white border-b border-slate-200 py-3 px-4 sm:px-8 flex justify-between items-center">
-    <a href="../../index.html"><img src="../../assets/images/logo_transparent.png" alt="Logo" class="h-10" /></a>
+    <a href="/"><img src="../../assets/images/logo_transparent.png" alt="Logo" class="h-10" /></a>
     <nav class="hidden md:flex gap-6 text-sm font-semibold"><a href="../../news.html" class="text-brand-blue">Back to News</a><a href="../../contact.html">Contact</a></nav>
   </header>
   <section class="bg-slate-900 text-white py-14 px-4"><div class="max-w-4xl mx-auto"><h1 class="text-3xl sm:text-4xl font-extrabold font-display">Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision &amp; Innovation</h1><p class="text-xs text-slate-400 mt-2">Published: October 1, 2025 &middot; Beijing Class 3A Hospitals &amp; National Key Labs</p></div></section>
@@ -87,22 +152,22 @@
           <i class="fa-solid fa-tags text-brand-blue"></i> Article Keywords &amp; Global Indexing Tags:
         </h4>
         <div class="flex flex-wrap gap-2">
-          <a href="../20260902-dental-air-purity-engineering-guide/index.html" class="inline-flex items-center gap-1.5 text-xs bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white font-semibold px-3 py-1.5 rounded-lg border border-brand-blue/20 transition">
+          <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="inline-flex items-center gap-1.5 text-xs bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white font-semibold px-3 py-1.5 rounded-lg border border-brand-blue/20 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> ISO 8573-1 Class 0 <span class="text-[10px] opacity-75 bg-white/40 px-1 rounded">Core</span>
           </a>
-          <a href="../20260820-compressor-exploded-anatomy/index.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Wobble Piston Kinematics (ZB Series)
           </a>
           <a href="../../products-hy.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Nano-Coated Antibacterial Tank (32L)
           </a>
-          <a href="../20260815-15-dental-chairs-sizing-guide/index.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
+          <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> 1–50 Dental Chairs Sizing Equation
           </a>
           <a href="../../products-core.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Saint-Gobain Self-Lubricating PTFE
           </a>
-          <a href="../20260825-dental-suction-exploded-anatomy/index.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
+          <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[10px]"></i> Aerosol Suppression &amp; Cyclone Separation
           </a>
           <a href="../../solutions.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
@@ -122,7 +187,7 @@
           <i class="fa-solid fa-network-wired text-brand-blue"></i> Interconnected Deep-Dive Whitepapers:
         </h4>
         <div class="grid sm:grid-cols-3 gap-4">
-          <a href="../20260820-compressor-exploded-anatomy/index.html" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
@@ -131,7 +196,7 @@
             <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
-          <a href="../20260815-15-dental-chairs-sizing-guide/index.html" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-brand-accent text-white font-bold px-2 py-0.5 rounded uppercase">Clinical Sizing</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">15–50 Dental Chairs Pneumatic Pipe Sizing &amp; Hospital Blueprint</h5>
@@ -140,7 +205,7 @@
             <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
-          <a href="../20260825-dental-suction-exploded-anatomy/index.html" class="bg-white hover:border-teal-600 p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="bg-white hover:border-teal-600 p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">Aerodynamic Power: 3D Exploded Anatomy of HVS Dental Vacuum</h5>
@@ -166,17 +231,17 @@
         <!-- Mainstream Social Share Icons Matrix -->
         <div class="flex flex-wrap items-center gap-2">
           <!-- LinkedIn -->
-          <a href="../20260715-beijing-quality-tour/index.html" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="w-9 h-9 rounded-lg bg-[#0A66C2] hover:bg-[#084e96] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260715-beijing-quality-tour/" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" class="w-9 h-9 rounded-lg bg-[#0A66C2] hover:bg-[#084e96] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-linkedin-in text-sm"></i>
           </a>
 
           <!-- WhatsApp -->
-          <a href="../20260715-beijing-quality-tour/index.html" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260715-beijing-quality-tour/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-whatsapp text-base"></i>
           </a>
 
           <!-- X / Twitter -->
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2F../20260715-beijing-quality-tour/index.html&text=Hongrun%2030th%20Anniversary%20Quality%20Tour%20%E2%80%93%20Part%202%3A%20Beijing%20Precision%20%26%20Innovation" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260715-beijing-quality-tour%2F&text=Hongrun%2030th%20Anniversary%20Quality%20Tour%20%E2%80%93%20Part%202%3A%20Beijing%20Precision%20%26%20Innovation" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
 
@@ -191,17 +256,17 @@
           </a>
 
           <!-- Facebook -->
-          <a href="../20260715-beijing-quality-tour/index.html" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="w-9 h-9 rounded-lg bg-[#1877F2] hover:bg-[#0e65d8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260715-beijing-quality-tour/" target="_blank" rel="noopener noreferrer" title="Share on Facebook" class="w-9 h-9 rounded-lg bg-[#1877F2] hover:bg-[#0e65d8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-facebook-f text-sm"></i>
           </a>
 
           <!-- Telegram -->
-          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2F../20260715-beijing-quality-tour/index.html&text=Hongrun%2030th%20Anniversary%20Quality%20Tour%20%E2%80%93%20Part%202%3A%20Beijing%20Precision%20%26%20Innovation" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260715-beijing-quality-tour%2F&text=Hongrun%2030th%20Anniversary%20Quality%20Tour%20%E2%80%93%20Part%202%3A%20Beijing%20Precision%20%26%20Innovation" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-brands fa-telegram text-base"></i>
           </a>
 
           <!-- Email -->
-          <a href="../20260715-beijing-quality-tour/index.html" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
+          <a href="/articles/20260715-beijing-quality-tour/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105">
             <i class="fa-regular fa-envelope text-sm"></i>
           </a>
 
@@ -216,5 +281,13 @@
 
 </main>
   <footer class="bg-slate-900 text-slate-400 text-xs py-8 text-center"><p>&copy; 2026 Shandong Hongrun Air Compressor Technology Co., Ltd.</p></footer>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

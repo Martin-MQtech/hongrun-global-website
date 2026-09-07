@@ -2,6 +2,53 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -46,7 +93,12 @@
     "name": "Hongrun Compressor Technology Co., Ltd.",
     "url": "https://www.hongrun1995.cn/",
     "sameAs": [
-      "https://www.linkedin.com/company/125624035/"
+      "https://www.linkedin.com/company/125624035/",
+      "https://www.facebook.com/profile.php?id=61594274000326",
+      "https://www.instagram.com/hrmedaircom/",
+      "https://www.tiktok.com/@hrmedaircom",
+      "https://www.youtube.com/@MartinChenAirtech",
+      "https://x.com/martinhrtech"
     ],
     "contactPoint": [
       {
@@ -60,13 +112,31 @@
   }
 }
 </script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="index.html"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
@@ -87,7 +157,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
         <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/35 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-          <p class="text-white/70 text-[10px] uppercase tracking-widest mb-2"><a href="index.html" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Contact Us</span></p>
+          <p class="text-white/70 text-[10px] uppercase tracking-widest mb-2"><a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Contact Us</span></p>
           <div class="inline-block px-3 py-0.5 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase mb-3">Multi-Unit Manufacturing Array &middot; 160K Capacity</div>
           <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-2 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Connect with Our<br/><span class="text-sky-300">Global Operations</span></h1>
           <p class="text-xs lg:text-sm text-blue-50 mb-4 font-light leading-relaxed">Direct 1-on-1 access to regional sales directors, project engineers, and our 24-hour RFQ desk.</p>
@@ -102,7 +172,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
         <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/35 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-          <p class="text-white/70 text-[10px] uppercase tracking-widest mb-2"><a href="index.html" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Intelligent Base</span></p>
+          <p class="text-white/70 text-[10px] uppercase tracking-widest mb-2"><a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Intelligent Base</span></p>
           <div class="inline-block px-3 py-0.5 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase mb-3">20,000㎡ Modern Facility · Clean-Room Line</div>
           <h2 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-2 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Factory-Direct<br/><span class="text-sky-300">Technical Support</span></h2>
           <p class="text-xs lg:text-sm text-blue-50 mb-4 font-light leading-relaxed">Direct manufacturer pricing, ISO 8573-1 Class 0 certified testing, and custom OEM engineering.</p>
@@ -146,7 +216,7 @@
         <div class="p-3 sm:p-4 flex flex-col justify-between flex-1 min-w-0 relative z-10">
           <div>
             <h3 class="text-base font-bold font-display text-brand-dark truncate">Martin Chen</h3>
-            <p class="text-[10px] text-brand-blue font-bold tracking-wide uppercase mt-0.5">Chief Marketing Director</p>
+            <p class="text-[10px] text-brand-blue font-bold tracking-wide uppercase mt-0.5">Chief Marketing Director (CMD)</p>
             <div class="mt-1.5 px-2 py-0.5 bg-slate-50 rounded border border-slate-200 inline-block max-w-full truncate">
               <p class="text-[10px] text-slate-700 font-medium truncate"><i class="fa-solid fa-earth-americas text-brand-blue mr-1"></i> Global Strategic Accounts &amp; OEM</p>
             </div>
@@ -165,6 +235,8 @@
             <span class="text-[8px] uppercase tracking-widest text-slate-400 font-bold mb-0.5 flex items-center gap-1"><i class="fa-solid fa-share-nodes text-brand-sky text-[8px]"></i> Social</span>
             <a href="https://www.facebook.com/profile.php?id=61594274000326" target="_blank" class="w-full py-1 px-1.5 rounded-md bg-[#1877f2]/10 hover:bg-[#1877f2] text-[#1877f2] hover:text-white transition flex items-center justify-center gap-1 text-[11px] font-semibold shadow-xs" title="Facebook" rel="noopener noreferrer"><i class="fa-brands fa-facebook text-xs"></i> <span class="text-[9px] font-sans">Facebook</span></a>
             <a href="https://linkedin.com/in/martin-hongrun-air-compressor-4b84849b" target="_blank" class="w-full py-1 px-1.5 rounded-md bg-[#0077b5]/10 hover:bg-[#0077b5] text-[#0077b5] hover:text-white transition flex items-center justify-center gap-1 text-[11px] font-semibold shadow-xs" title="LinkedIn" rel="noopener noreferrer"><i class="fa-brands fa-linkedin text-xs"></i> <span class="text-[9px] font-sans">LinkedIn</span></a>
+            <a href="https://www.instagram.com/hrmedaircom/" target="_blank" class="w-full py-1 px-1.5 rounded-md bg-[#E1306C]/10 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-[#E1306C] hover:text-white transition flex items-center justify-center gap-1 text-[11px] font-semibold shadow-xs" title="Instagram" rel="noopener noreferrer"><i class="fa-brands fa-instagram text-xs"></i> <span class="text-[9px] font-sans">Instagram</span></a>
+            <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" class="w-full py-1 px-1.5 rounded-md bg-black/10 hover:bg-black text-slate-800 hover:text-[#25F4EE] transition flex items-center justify-center gap-1 text-[11px] font-semibold shadow-xs" title="TikTok" rel="noopener noreferrer"><i class="fa-brands fa-tiktok text-xs"></i> <span class="text-[9px] font-sans">TikTok</span></a>
             <a href="https://x.com/martinhrtech" target="_blank" class="w-full py-1 px-1.5 rounded-md bg-black/10 hover:bg-black text-slate-800 hover:text-white transition flex items-center justify-center gap-1 text-[11px] font-semibold shadow-xs" title="𝕏" rel="noopener noreferrer"><i class="fa-brands fa-x-twitter text-xs"></i> <span class="text-[11px] font-bold font-sans">𝕏</span></a>
             <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" class="w-full py-1 px-1.5 rounded-md bg-red-600/10 hover:bg-red-600 text-red-600 hover:text-white transition flex items-center justify-center gap-1 text-[11px] font-semibold shadow-xs" title="YouTube" rel="noopener noreferrer"><i class="fa-brands fa-youtube text-xs"></i> <span class="text-[9px] font-sans">YouTube</span></a>
           </div>
@@ -729,7 +801,7 @@
           <a href="mailto:info@hongrun1995.cn?subject=Application%20for%20Hongrun%20Authorized%20Distributorship" class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-white hover:to-slate-100 hover:text-brand-dark text-white px-6 py-3.5 rounded-lg font-bold text-xs transition shadow-lg inline-flex items-center gap-2">
             Apply via info@hongrun1995.cn <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
-          <span class="text-[10px] text-blue-300/80 mt-2 block">Directly reviewed by Chief Marketing Director</span>
+          <span class="text-[10px] text-blue-300/80 mt-2 block">Directly reviewed by Chief Marketing Director (CMD)</span>
         </div>
       </div>
     </div>
@@ -747,10 +819,14 @@
           <img src="assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
-        <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="contact.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-          <a href="news.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-solid fa-newspaper text-xl"></i></a>
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-linkedin text-base"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61594274000326" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-facebook text-base"></i></a>
+          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-instagram text-base"></i></a>
+          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-tiktok text-base"></i></a>
+          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-youtube text-base"></i></a>
+          <a href="https://x.com/martinhrtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-x-twitter text-base"></i></a>
+          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-whatsapp text-base"></i></a>
         </div>
       </div>
 
@@ -815,5 +891,13 @@ setInterval(() => {
   slideContactTo((currentContactSlide + 1) % 2);
 }, 10000);
 </script>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

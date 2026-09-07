@@ -1,0 +1,16 @@
+# Hongrun Technology - RFC 9116 Security & Enterprise Vulnerability Disclosure Policy
+# Domain: https://www.hongrun1995.cn
+# Organization: Hongrun Compressor Technology Co., Ltd. (宏润空压机科技有限公司)
+
+Contact: mailto:martinchen@hongrun1995.cn
+Contact: mailto:info@hongrun1995.cn
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en, zh
+Canonical: https://www.hongrun1995.cn/.well-known/security.txt
+Policy: https://www.hongrun1995.cn/privacy-policy.html
+Acknowledgments: https://www.hongrun1995.cn/about.html
+
+# Security & Compliance Posture:
+# - Web Infrastructure: Static Edge CDN (GitHub Pages + Cloudflare / Zero Attack Surface)
+# - AI Protocol: WebMCP sandbox compliant (document.modelContext)
+# - Quality Compliance: ISO 13485:2016 Medical Device QMS / ISO 8573-1 Class 0 (TÜV Rheinland)

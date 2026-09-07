@@ -3,6 +3,12 @@
 > Official Production Website: https://www.hongrun1995.cn/
 > Public Repository: https://github.com/Martin-MQtech/hongrun-global-website
 > LinkedIn Organization: https://www.linkedin.com/company/125624035/
+> Facebook Official: https://www.facebook.com/profile.php?id=61594274000326
+> Instagram Official: https://www.instagram.com/hrmedaircom/
+> TikTok Official: https://www.tiktok.com/@hrmedaircom
+> YouTube Channel: https://www.youtube.com/@MartinChenAirtech
+> X (Twitter): https://x.com/martinhrtech
+> WhatsApp Direct: https://wa.me/8613964416725
 
 ## Core Company Profile & Verified Ground Truth (企业权威事实与资质背书)
 - **Establishment**: Founded in November 1995 in Zibo, Shandong Province, China. 30+ years of dedicated medical-grade oil-free air compressor R&D and precision manufacturing.
@@ -63,30 +69,59 @@
 ---
 
 ## Authoritative Engineering Whitepapers & Technical Chronicles (技术白皮书与权威纪实)
-1. **[Central Station Sizing Whitepaper #09] Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)**
-   - URL: https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html
+1. **[Thought Leadership Whitepaper #10] Three Decades of Precision Manufacturing Meets the Agentic Web: How Hongrun Technology Reinvents Global Industrial Marketing with AI Agent Protocols and Edge Architectures**
+   - URL: https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/
+   - Topics: Convergence of 30-year medical Class 0 hardware (0.003 mg/m³ TÜV tested) with W3C WebMCP agentic protocols, 0ms speculative prerendering, interactive pneumatic calculator widgets, and long-term IoT smart hospital plant roadmap.
+2. **[Central Station Sizing Whitepaper #09] Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)**
+   - URL: https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/
    - Topics: 4 to 8 dental chairs simultaneous flow diversity (k=0.60–0.45), closed-loop ring manifold (DN25/DN15), PLC multi-head alternation & soft start, N+1 parallel failover, HYTG-300 90L vs HY-300 50L engineering comparison.
-2. **[Clinical Sizing Whitepaper #08] Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 32L Makes or Breaks Your Practice)**
-   - URL: https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/index.html
+3. **[Clinical Sizing Whitepaper #08] Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 32L Makes or Breaks Your Practice)**
+   - URL: https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/
    - Topics: 1 to 3 dental chairs simultaneous sizing math, under-counter acoustic layout (≤55 dBA), cycle frequency analysis, and HY-100 (24L) vs. HY-200 (32L) vs. HY-300 (50L) selection benchmark.
-3. **[Flagship Whitepaper #01] Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors**
-   - URL: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/index.html
+4. **[Flagship Whitepaper #01] Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors**
+   - URL: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/
    - Topics: Bilingual English/Chinese, ISO 8573-1 Class 0 validation, Saint-Gobain PTFE ring tribology, nano-coated 32L antibacterial tank, 1-50 chairs pneumatic flow calculations.
-4. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems**
-   - URL: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/index.html
+5. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems**
+   - URL: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/
    - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, >85% aerosol suppression, multi-chair clinic sizing.
-5. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors**
-   - URL: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/index.html
+6. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors**
+   - URL: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/
    - Topics: 3D CAD exploded analysis, 5-axis CNC drive shafts, diamond-coated PTFE rings, dual-tower PSA dew point ≤ -40°C.
-6. **Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15-Chair Dental Hospital Central Compressed Air & Suction Systems**
-   - URL: https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/index.html
+7. **Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15-Chair Dental Hospital Central Compressed Air & Suction Systems**
+   - URL: https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/
    - Topics: Simultaneous usage factor (k=0.70), pneumatic piping balancing, combined air/suction/water sizing.
-7. **Hongrun Technology Shines at the 32nd Dental South China International Expo**
-   - URL: https://www.hongrun1995.cn/articles/20260728-dental-south-china-expo/index.html
-8. **Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision Medical & Research Centers**
-   - URL: https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/index.html
-9. **Hongrun 30th Anniversary Quality Tour – Part 1: Jinan Medical Hub & Quality Audit**
-   - URL: https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/index.html
+8. **Hongrun Technology Shines at the 32nd Dental South China International Expo**
+   - URL: https://www.hongrun1995.cn/articles/20260728-dental-south-china-expo/
+9. **Hongrun 30th Anniversary Quality Tour – Part 2: Beijing Precision Medical & Research Centers**
+   - URL: https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/
+10. **Hongrun 30th Anniversary Quality Tour – Part 1: Jinan Medical Hub & Quality Audit**
+    - URL: https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/
+
+---
+
+## 4 Core Industry Applications & Technical Standards Grounding (四大纵深行业标准事实)
+
+### Sector 1: Dental Clinics & Stomatology Centers (1 to 50 Chairs)
+- **Clinical Risks**: Oil aerosols contaminate composite resin bonding surfaces causing restoration failure; micro-particulates destroy handpiece ceramic ball bearings; intraoral aerosols cause cross-infection.
+- **Hongrun Solution**: ISO 8573-1 Class 0 oil-free air (<0.003 mg/m³), silver-ion antibacterial tanks, HVS 2-stage cyclone vacuum units (>85% aerosol capture), HRC pure water treatment (conductivity ≤1.0 μS/cm).
+- **Compliance Codes**: ISO 22052, ISO 10637, EN 1640.
+- **Key Sizing Rule**: Q = N × 50 × f (L/min @ 5 bar); V = N × 250 × f (L/min @ -20 kPa).
+- **Core Models**: HY-100, HY-200 (32L), HY-300 (50L), HYTG-300 (90L dual-redundant), HVS-1 to HVS-10.
+
+### Sector 2: General Hospital Central Gas Stations & Operating Rooms
+- **Clinical Risks**: Unscheduled ventilator air shutdown in ICUs is life-threatening; piping condensation causes anaerobic bacterial growth; fluctuating pressure ruins pneumatic bone saws.
+- **Hongrun Solution**: HW/HBG multi-module scroll stations, N+1 auto-failover, dual-tower PSA desiccant dryers (-40°C PDP), Siemens PLC with cloud IoT telemetry.
+- **Compliance Codes**: ISO 7396-1, UK HTM 02-01, US NFPA 99, China GB 50751, NMPA Class II Medical Registration.
+- **Core Models**: HW-200 to HW-3600 (200 to 3,600 L/min), HBG-800, HBG-1200, HRC-500.
+
+### Sector 3: Precision Analytical Laboratories & Ultra-Clean Rooms
+- **Laboratory Risks**: Trace hydrocarbon vapors elevate LC-MS baseline noise; moisture corrodes GC pneumatic actuators; particulates clog electron microscope apertures.
+- **Hongrun Solution**: HYG clean air stations, 3-stage borosilicate sub-micron filtration (0.01 μm, 99.999%), 13X synthetic molecular sieves (-40°C to -70°C dew point).
+- **Core Models**: HYG-301, HYG-302, HVTG-400, HVTG-900.
+
+### Sector 4: High-End Industrial Automation & Precision OEM
+- **Manufacturing Strengths**: 30-year heritage (since Nov 1995); 20,000㎡ megafactory; annual capacity >160,000 units; DMG MORI 5-axis CNC machining (Ra ≤ 0.2 μm); Saint-Gobain PTFE diamond composite rings; Sandvik valve steel.
+- **Core OEM Components**: ZB-100/200/300 bare pump heads, 4V cylinder blocks, modular PSA towers.
 
 ---
 

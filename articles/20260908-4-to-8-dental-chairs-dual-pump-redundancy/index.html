@@ -2,6 +2,53 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -138,13 +185,31 @@
   }
 }
 </script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Standard Global Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="../../index.html"><img src="../../assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
+    <a href="/"><img src="../../assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
@@ -161,7 +226,7 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-xs text-slate-400 uppercase tracking-widest mb-4">
-      <a href="../../index.html" class="hover:text-brand-sky transition">Home</a>
+      <a href="/" class="hover:text-brand-sky transition">Home</a>
       <span>/</span>
       <a href="../../news.html" class="hover:text-brand-sky transition">News &amp; Insights</a>
       <span>/</span>
@@ -245,7 +310,7 @@
       <ul class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600 list-none pl-0 mb-0">
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Mid-Scale Diversity ($k$ Factors):</strong> 4 chairs ($k=0.60$) require $\approx 160\text{--}180\text{ L/min}$; 6 chairs ($k=0.52$) require $\approx 220\text{--}250\text{ L/min}$; 8 chairs ($k=0.45$) require $\approx 300\text{--}340\text{ L/min}$ at $5.5\text{ bar}$.</span>
+          <span><strong>Mid-Scale Diversity (k Factors):</strong> 4 chairs (k = 0.60) require approx. 160–180 L/min; 6 chairs (k = 0.52) require approx. 220–250 L/min; 8 chairs (k = 0.45) require approx. 300–340 L/min at 5.5 bar.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
@@ -257,7 +322,7 @@
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Piping Loop Hydraulics (DN25 / DN15):</strong> Sizing the main header at DN25 (1") and operatory drops at DN15 (1/2") keeps air flow velocity $\le 6\text{ m/s}$, restricting total system pressure drop to $\le 0.02\text{ MPa}$.</span>
+          <span><strong>Piping Loop Hydraulics (DN25 / DN15):</strong> Sizing the main header at DN25 (1") and operatory drops at DN15 (1/2") keeps air flow velocity ≤ 6 m/s, restricting total system pressure drop to ≤ 0.02 MPa.</span>
         </li>
       </ul>
     </div>
@@ -325,7 +390,7 @@
     <!-- Section 2 -->
     <h2>2. The Flow &amp; Diversity Math: Simultaneous Load Calculations for 4 to 8 Chairs</h2>
     <p>
-      As operatory counts rise, the statistical probability of all instruments operating at the exact same millisecond decreases. Medical pneumatic design accounts for this through the <strong>Simultaneous Diversity Factor ($k$)</strong> combined with total pipe network volumetric friction:
+      As operatory counts rise, the statistical probability of all instruments operating at the exact same millisecond decreases. Medical pneumatic design accounts for this through the <strong>Simultaneous Diversity Factor (k)</strong> combined with total pipe network volumetric friction:
     </p>
 
     <!-- Formula Box -->
@@ -351,7 +416,7 @@
           <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
             <th class="p-3">Clinic Scale</th>
             <th class="p-3">Active Chairs</th>
-            <th class="p-3">Diversity Factor ($k$)</th>
+            <th class="p-3">Diversity Factor (k)</th>
             <th class="p-3">Peak Clinical Flow (@ 5.0 bar)</th>
             <th class="p-3">Main Header / Branch Pipe</th>
             <th class="p-3">Recommended Hongrun Solution</th>
@@ -446,7 +511,7 @@
               <strong class="text-teal-700 font-mono font-bold">&le; 60 dB(A) (Quiet)</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
-              <span>Dimensions ($L \times W \times H$):</span>
+              <span>Dimensions (L × W × H):</span>
               <strong class="text-slate-900 font-mono">450 &times; 450 &times; 780 mm</strong>
             </li>
             <li class="flex items-center justify-between">
@@ -483,7 +548,7 @@
               <strong class="text-teal-700 font-mono font-bold">&le; 62 dB(A) (Low Frequency)</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
-              <span>Dimensions ($L \times W \times H$):</span>
+              <span>Dimensions (L × W × H):</span>
               <strong class="text-slate-900 font-mono">1050 &times; 420 &times; 720 mm</strong>
             </li>
             <li class="flex items-center justify-between">
@@ -545,7 +610,7 @@
         <i class="fa-solid fa-fan text-brand-blue text-lg mt-0.5 flex-shrink-0"></i>
         <div>
           <strong class="text-slate-900">Dedicated Airflow Ventilation:</strong>
-          The plant room (minimum 1.5 m² area) must feature a low-level air intake louver ($\ge 300\text{ cm}^2$) and an exhaust ventilation fan ($\ge 250\text{ m}^3\text{/h}$) to maintain ambient temperature below 35°C during continuous summer operation.
+          The plant room (minimum 1.5 m² area) must feature a low-level air intake louver (≥ 300 cm²) and an exhaust ventilation fan (≥ 250 m³/h) to maintain ambient temperature below 35°C during continuous summer operation.
         </div>
       </li>
       <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-start gap-3">
@@ -559,7 +624,7 @@
         <i class="fa-solid fa-snowflake text-brand-blue text-lg mt-0.5 flex-shrink-0"></i>
         <div>
           <strong class="text-slate-900">Desiccant Drying &amp; Micro-Filtration Loop:</strong>
-          Pair the HYTG-300 with an integrated twin-tower heatless desiccant dryer and 3-stage filtration (5 μm water separator &rarr; 0.01 μm particulate filter &rarr; 0.003 ppm active carbon vapor trap) to guarantee ISO 8573-1 Class 0 sterile air with $\le -40^\circ\text{C}$ pressure dew point.
+          Pair the HYTG-300 with an integrated twin-tower heatless desiccant dryer and 3-stage filtration (5 μm water separator &rarr; 0.01 μm particulate filter &rarr; 0.003 ppm active carbon vapor trap) to guarantee ISO 8573-1 Class 0 sterile air with ≤ -40°C pressure dew point.
         </div>
       </li>
     </ul>
@@ -581,7 +646,7 @@
         </h4>
         <div class="text-xs text-slate-600 space-y-2 border-l-2 border-brand-blue pl-4 ml-1">
           <p>
-            <strong>Engineering Reality:</strong> Two uncoordinated standalone compressors have independent pressure switches that fight each other. One unit will always start first and shoulder 90% of the wear, quickly failing from thermal overload. Furthermore, two separate tanks require dual drain lines, dual maintenance schedules, double the floor space, and generate chaotic acoustic resonance ($&gt;68\text{ dB(A)}$).
+            <strong>Engineering Reality:</strong> Two uncoordinated standalone compressors have independent pressure switches that fight each other. One unit will always start first and shoulder 90% of the wear, quickly failing from thermal overload. Furthermore, two separate tanks require dual drain lines, dual maintenance schedules, double the floor space, and generate chaotic acoustic resonance (> 68 dB(A)).
           </p>
           <p>
             <strong>Sales Closing Script:</strong> "The HYTG-300 features a single consolidated 90L certified receiver with unified microcomputer PLC synchronization. It balances running hours evenly across both heads and occupies half the floor space with whisper-quiet 62 dB(A) operation."
@@ -1066,9 +1131,9 @@
               <i class="fa-solid fa-sitemap text-brand-blue"></i> Sizing &amp; Selection Guides
             </h4>
             <ul class="space-y-2 text-xs text-slate-600">
-              <li><a href="../20260905-1-to-3-dental-chairs-compressor-selection-guide/index.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #08: 1–3 Chairs (HY-100 vs. HY-200)</a></li>
-              <li><a href="../20260815-15-dental-chairs-sizing-guide/index.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #04: 15–50 Chairs Hospital Central Station</a></li>
-              <li><a href="../20260902-dental-air-purity-engineering-guide/index.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #01: ISO 8573-1 Class 0 Flagship Guide</a></li>
+              <li><a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #08: 1–3 Chairs (HY-100 vs. HY-200)</a></li>
+              <li><a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #04: 15–50 Chairs Hospital Central Station</a></li>
+              <li><a href="/articles/20260902-dental-air-purity-engineering-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #01: ISO 8573-1 Class 0 Flagship Guide</a></li>
             </ul>
           </div>
 
@@ -1078,8 +1143,8 @@
               <i class="fa-solid fa-microchip text-emerald-600"></i> Engineering Teardowns
             </h4>
             <ul class="space-y-2 text-xs text-slate-600">
-              <li><a href="../20260820-compressor-exploded-anatomy/index.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Wobble Piston (ZB Series) Kinematics &amp; PTFE Rings</a></li>
-              <li><a href="../20260825-dental-suction-exploded-anatomy/index.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Semi-Dry vs. Wet Suction Dynamics &amp; Aerosol Control</a></li>
+              <li><a href="/articles/20260820-compressor-exploded-anatomy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Wobble Piston (ZB Series) Kinematics &amp; PTFE Rings</a></li>
+              <li><a href="/articles/20260825-dental-suction-exploded-anatomy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Semi-Dry vs. Wet Suction Dynamics &amp; Aerosol Control</a></li>
               <li><a href="../../products-core.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> OEM/ODM Medical Air Pump Heads Catalog</a></li>
             </ul>
           </div>
@@ -1205,10 +1270,14 @@
           <img src="../../assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
-        <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="../../contact.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-          <a href="../../news.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-solid fa-newspaper text-xl"></i></a>
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-linkedin text-base"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61594274000326" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-facebook text-base"></i></a>
+          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-instagram text-base"></i></a>
+          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-tiktok text-base"></i></a>
+          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-youtube text-base"></i></a>
+          <a href="https://x.com/martinhrtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-x-twitter text-base"></i></a>
+          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-whatsapp text-base"></i></a>
         </div>
       </div>
 
@@ -1267,5 +1336,13 @@ function copyArticleLink(btn) {
 }
 </script>
 <script src="../../assets/js/lightbox.js"></script>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

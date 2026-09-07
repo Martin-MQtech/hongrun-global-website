@@ -2,6 +2,53 @@
 <html class="scroll-smooth" lang="en">
 <head>
 <meta charset="utf-8"/>
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -137,13 +184,31 @@
   }
 }
 </script>
+  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
+  <script type="speculationrules">
+  {
+    "prerender": [
+      {
+        "where": { "href_matches": "/*" },
+        "eagerness": "moderate"
+      }
+    ]
+  }
+  </script>
+  <!-- PWA Web Capabilities & OpenSearch 1.1 -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0284C7" />
+  <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Standard Global Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="../../index.html"><img src="../../assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
+    <a href="/"><img src="../../assets/images/logo_transparent.png" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain"/></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
@@ -160,7 +225,7 @@
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Breadcrumb -->
     <div class="flex items-center gap-2 text-xs text-slate-400 uppercase tracking-widest mb-4">
-      <a href="../../index.html" class="hover:text-brand-sky transition">Home</a>
+      <a href="/" class="hover:text-brand-sky transition">Home</a>
       <span>/</span>
       <a href="../../news.html" class="hover:text-brand-sky transition">News &amp; Insights</a>
       <span>/</span>
@@ -245,11 +310,11 @@
       <ul class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600 list-none pl-0 mb-0">
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Precise Flow Sizing ($k$ Factors):</strong> Solo operatory ($k=1.0$) requires $\approx 50\text{--}60\text{ L/min}$; 2 chairs ($k=0.85$) require $\approx 90\text{--}100\text{ L/min}$; 3 chairs ($k=0.72$) require $\approx 125\text{--}140\text{ L/min}$ at $5.5\text{ bar}$.</span>
+          <span><strong>Precise Flow Sizing (k Factors):</strong> Solo operatory (k = 1.0) requires approx. 50–60 L/min; 2 chairs (k = 0.85) require approx. 90–100 L/min; 3 chairs (k = 0.72) require approx. 125–140 L/min at 5.5 bar.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Low-Profile Receiver Form Factor:</strong> The 24L horizontal low-profile tank ($H \le 520\text{ mm}$) and official 32L horizontal tank ($H \le 580\text{ mm}$) allow zero-footprint under-counter installation inside standard treatment cabinetry.</span>
+          <span><strong>Low-Profile Receiver Form Factor:</strong> The 24L horizontal low-profile tank (H ≤ 520 mm) and official 32L horizontal tank (H ≤ 580 mm) allow zero-footprint under-counter installation inside standard treatment cabinetry.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
@@ -257,7 +322,7 @@
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Acoustic Decibel Mastery ($\le 55\text{ dB(A)}$):</strong> 1400 RPM 4-pole low-speed motors and dynamic counterweights eliminate structural resonance, enabling quiet in-operatory placement without disturbing patients.</span>
+          <span><strong>Acoustic Decibel Mastery (≤ 55 dB(A)):</strong> 1400 RPM 4-pole low-speed motors and dynamic counterweights eliminate structural resonance, enabling quiet in-operatory placement without disturbing patients.</span>
         </li>
       </ul>
     </div>
@@ -276,7 +341,7 @@
       In private boutique dental practices, urban dental clinics, orthodontics suites, and specialized endodontic offices with <strong>1 to 3 dental treatment chairs</strong>, space optimization and acoustic comfort represent primary architectural challenges. Unlike large hospital dental departments that possess dedicated basement pneumatic plant rooms, compact clinics frequently lack remote mechanical utility spaces.
     </p>
     <p>
-      Consequently, the medical air compressor must often reside directly inside the treatment room, adjacent to the sterilization nook, or concealed within standard operatory under-counter cabinetry ($600\text{ mm}$ depth $\times 600\text{ mm}$ height). This spatial constraint imposes four strict engineering prerequisites on the compressor unit:
+      Consequently, the medical air compressor must often reside directly inside the treatment room, adjacent to the sterilization nook, or concealed within standard operatory under-counter cabinetry (600 mm depth × 600 mm height). This spatial constraint imposes four strict engineering prerequisites on the compressor unit:
     </p>
 
     <!-- 4 Engineering Constraints Cards -->
@@ -287,7 +352,7 @@
         </div>
         <h4 class="font-bold text-xs text-brand-dark mb-1">Low-Profile Height</h4>
         <p class="text-[11px] text-slate-600 leading-relaxed">
-          Overall unit height must remain $\le 550\text{--}580\text{ mm}$ to slide smoothly beneath standard medical cabinetry worktops.
+          Overall unit height must remain ≤ 550–580 mm to slide smoothly beneath standard medical cabinetry worktops.
         </p>
       </div>
 
@@ -297,7 +362,7 @@
         </div>
         <h4 class="font-bold text-xs text-brand-dark mb-1">Whisper Quiet (&le;55 dBA)</h4>
         <p class="text-[11px] text-slate-600 leading-relaxed">
-          Noise emissions cannot exceed normal conversational sound pressure ($55\text{--}58\text{ dB(A)}$) to prevent patient anxiety.
+          Noise emissions cannot exceed normal conversational sound pressure (55–58 dB(A)) to prevent patient anxiety.
         </p>
       </div>
 
@@ -334,24 +399,26 @@
       <div class="text-sm sm:text-base text-amber-300 font-bold mb-2">
         Q_required = [ &sum;(q_instrument &times; &eta;_active) &times; N_chairs ] &times; k_simultaneous &times; S_safety
       </div>
+        Q_required = [ Sum(q_instrument * n_active) * N_chairs ] * k_simultaneous * S_safety
+      </div>
       <div class="text-xs text-slate-300 space-y-1 pt-2 border-t border-slate-700">
-        <div>• <strong>q_turbine (High-Speed Turbine):</strong> 40 &ndash; 55 L/min @ 2.5 bar dynamic working pressure</div>
-        <div>• <strong>q_scaler (Air Scaler / Prophy Sandblaster):</strong> 25 &ndash; 40 L/min @ 3.5 bar continuous demand</div>
-        <div>• <strong>q_syringe (3-Way Air/Water Syringe):</strong> 15 &ndash; 20 L/min (pulsed usage)</div>
-        <div>• <strong>q_motor (Air Micro-Motor / Low-Speed):</strong> 20 &ndash; 30 L/min</div>
-        <div>• <strong>S_safety (System Safety &amp; Line Drop Factor):</strong> 1.15 &ndash; 1.20</div>
+        <div>• <strong>q_turbine (High-Speed Turbine):</strong> 40 – 55 L/min @ 2.5 bar dynamic working pressure</div>
+        <div>• <strong>q_scaler (Air Scaler / Prophy Sandblaster):</strong> 25 – 40 L/min @ 3.5 bar continuous demand</div>
+        <div>• <strong>q_syringe (3-Way Air/Water Syringe):</strong> 15 – 20 L/min (pulsed usage)</div>
+        <div>• <strong>q_motor (Air Micro-Motor / Low-Speed):</strong> 20 – 30 L/min</div>
+        <div>• <strong>S_safety (System Safety &amp; Line Drop Factor):</strong> 1.15 – 1.20</div>
       </div>
     </div>
 
     <!-- Simultaneous Utilization Matrix Table -->
-    <h3 class="text-base font-bold text-brand-dark mt-6 mb-3">Table 1.0: Simultaneous Utilization Factor ($k$) and Flow Requirements for 1–3 Chairs</h3>
+    <h3 class="text-base font-bold text-brand-dark mt-6 mb-3">Table 1.0: Simultaneous Utilization Factor (k) and Flow Requirements for 1–3 Chairs</h3>
     <div class="overflow-x-auto not-prose mb-8">
       <table class="w-full text-xs text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-sm">
         <thead>
           <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
             <th class="p-3">Clinic Scale</th>
-            <th class="p-3">Active Chairs ($N$)</th>
-            <th class="p-3">Simultaneous Factor ($k$)</th>
+            <th class="p-3">Active Chairs (N)</th>
+            <th class="p-3">Simultaneous Factor (k)</th>
             <th class="p-3">Peak Air Demand (@ 5.0 bar)</th>
             <th class="p-3">Recommended Hongrun Model</th>
             <th class="p-3">Standard Tank Form Factor</th>
@@ -362,31 +429,31 @@
             <td class="p-3 font-semibold text-brand-dark">Solo Operatory / Private Suite</td>
             <td class="p-3 font-mono">1 Chair</td>
             <td class="p-3 font-mono text-brand-blue font-bold">1.00 (100%)</td>
-            <td class="p-3 font-mono font-bold text-slate-900">50 &ndash; 60 L/min</td>
+            <td class="p-3 font-mono font-bold text-slate-900">50 – 60 L/min</td>
             <td class="p-3"><span class="bg-blue-100 text-brand-blue font-bold px-2 py-0.5 rounded">HY-100 (0.55 kW)</span></td>
-            <td class="p-3 text-slate-600">24L Horizontal Low-Profile ($H=515\text{ mm}$)</td>
+            <td class="p-3 text-slate-600">24L Horizontal Low-Profile (H = 515 mm)</td>
           </tr>
           <tr class="hover:bg-blue-50/50">
             <td class="p-3 font-semibold text-brand-dark">Standard Dual-Chair Clinic</td>
             <td class="p-3 font-mono">2 Chairs</td>
-            <td class="p-3 font-mono text-brand-blue font-bold">0.80 &ndash; 0.85</td>
-            <td class="p-3 font-mono font-bold text-slate-900">85 &ndash; 100 L/min</td>
+            <td class="p-3 font-mono text-brand-blue font-bold">0.80 – 0.85</td>
+            <td class="p-3 font-mono font-bold text-slate-900">85 – 100 L/min</td>
             <td class="p-3"><span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">HY-200 (0.75 kW)</span></td>
-            <td class="p-3 text-slate-600"><strong>Official 32L Horizontal</strong> ($H=575\text{ mm}$)</td>
+            <td class="p-3 text-slate-600"><strong>Official 32L Horizontal</strong> (H = 575 mm)</td>
           </tr>
           <tr class="hover:bg-blue-50/50">
             <td class="p-3 font-semibold text-brand-dark">Busy 2–3 Chairs / Heavy Prophy</td>
-            <td class="p-3 font-mono">2 &ndash; 3 Chairs</td>
-            <td class="p-3 font-mono text-brand-blue font-bold">0.70 &ndash; 0.75</td>
-            <td class="p-3 font-mono font-bold text-slate-900">125 &ndash; 145 L/min</td>
+            <td class="p-3 font-mono">2 – 3 Chairs</td>
+            <td class="p-3 font-mono text-brand-blue font-bold">0.70 – 0.75</td>
+            <td class="p-3 font-mono font-bold text-slate-900">125 – 145 L/min</td>
             <td class="p-3"><span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">HY-300 (1.1 kW)</span></td>
-            <td class="p-3 text-slate-600">50L Vertical Slim Cylinder ($D=400\text{ mm}$)</td>
+            <td class="p-3 text-slate-600">50L Vertical Slim Cylinder (D = 400 mm)</td>
           </tr>
           <tr class="hover:bg-blue-50/50 bg-slate-50/60">
             <td class="p-3 font-semibold text-brand-dark">3 Chairs + High Redundancy</td>
             <td class="p-3 font-mono">3 Chairs</td>
             <td class="p-3 font-mono text-brand-blue font-bold">0.70</td>
-            <td class="p-3 font-mono font-bold text-slate-900">140 &ndash; 160 L/min</td>
+            <td class="p-3 font-mono font-bold text-slate-900">140 – 160 L/min</td>
             <td class="p-3"><span class="bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">HYTG-300 (2.2 kW)</span></td>
             <td class="p-3 text-slate-600">90L Horizontal Dual-Pump Parallel Skid</td>
           </tr>
@@ -400,22 +467,22 @@
       The core decision for small clinic operators is choosing between the <strong>HY-100 (0.55 kW)</strong> with a 24L low-profile horizontal receiver and the <strong>HY-200 (0.75 kW)</strong> with Hongrun's latest official upgraded 32L horizontal receiver. While both units utilize Hongrun's patented wobble-piston architecture and Saint-Gobain self-lubricating PTFE sealing rings, their thermodynamic and pneumatic cycle behaviors differ significantly under clinical load:
     </p>
 
-    <!-- Side by Side Product Physical Cards -->
-    <div class="grid md:grid-cols-2 gap-6 not-prose mb-10">
+    <!-- Side-by-Side Spec Comparison Cards -->
+    <div class="grid sm:grid-cols-2 gap-6 not-prose mb-10">
       
       <!-- HY-100 Card -->
-      <div class="bg-white rounded-2xl border-2 border-slate-200 shadow-md p-6 flex flex-col justify-between hover:border-brand-blue transition">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 flex flex-col justify-between hover:border-brand-blue transition">
         <div>
           <div class="h-52 bg-slate-50 rounded-xl overflow-hidden mb-4 p-3 flex items-center justify-center border border-slate-100 relative">
-            <img data-zoom data-hd="../../assets/images/products/hd/HY-100.jpg" src="../../assets/images/products/hd/HY-100.jpg" alt="Hongrun HY-100 0.55kW 24L Low-Profile Dental Compressor" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300"/>
-            <span class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Solo Operatory Specialist</span>
+            <img data-zoom data-hd="../../assets/images/products/hd/HY-100.jpg" src="../../assets/images/products/hd/HY-100.jpg" alt="Hongrun HY-100 0.55kW 24L Dental Air Compressor" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300"/>
+            <span class="absolute top-3 left-3 bg-brand-blue text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase">Solo Chair Benchmark</span>
           </div>
           <h4 class="font-display font-bold text-lg text-brand-dark mb-1">Hongrun HY-100 (0.55 kW / 0.75 HP)</h4>
-          <p class="text-xs text-brand-blue font-semibold mb-3">24L Horizontal Low-Profile Tank · Transport Handle &amp; Wheels</p>
+          <p class="text-xs text-slate-500 font-semibold mb-3">24L Low-Profile Horizontal Receiver · Compact Wobble Piston</p>
           <ul class="text-xs text-slate-600 space-y-2 mb-4">
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Displacement / Flow Rate:</span>
-              <strong class="text-slate-900 font-mono">100 L/min (FAD ~65 L/min @ 5 bar)</strong>
+              <strong class="text-slate-900 font-mono">105 L/min (FAD ~70 L/min @ 5 bar)</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Receiver Volume:</span>
@@ -426,7 +493,7 @@
               <strong class="text-teal-700 font-mono font-bold">&le; 55 dB(A) (Whisper Quiet)</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
-              <span>Physical Dimensions ($L \times W \times H$):</span>
+              <span>Physical Dimensions (L × W × H):</span>
               <strong class="text-slate-900 font-mono">540 &times; 300 &times; 515 mm</strong>
             </li>
             <li class="flex items-center justify-between">
@@ -435,13 +502,10 @@
             </li>
           </ul>
         </div>
-        <div class="bg-blue-50/70 p-3 rounded-xl text-[11px] text-brand-dark border border-blue-100">
-          <strong>Best For:</strong> 1 Dedicated Dental Chair, Mobile Dental Units, Private Orthodontic Treatment Rooms, or Emergency Secondary Backup.
-        </div>
       </div>
 
       <!-- HY-200 Card -->
-      <div class="bg-white rounded-2xl border-2 border-emerald-500/40 shadow-md p-6 flex flex-col justify-between hover:border-emerald-600 transition">
+      <div class="bg-white rounded-2xl border border-slate-200 shadow-md p-6 flex flex-col justify-between hover:border-emerald-600 transition">
         <div>
           <div class="h-52 bg-slate-50 rounded-xl overflow-hidden mb-4 p-3 flex items-center justify-center border border-slate-100 relative">
             <img data-zoom data-hd="../../assets/images/products/hd/HY-200.jpg" src="../../assets/images/products/hd/HY-200.jpg" alt="Hongrun HY-200 0.75kW 32L Horizontal Dental Compressor" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300"/>
@@ -463,7 +527,7 @@
               <strong class="text-teal-700 font-mono font-bold">&le; 58 dB(A) (Ultra Quiet)</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
-              <span>Physical Dimensions ($L \times W \times H$):</span>
+              <span>Physical Dimensions (L × W × H):</span>
               <strong class="text-slate-900 font-mono">600 &times; 340 &times; 575 mm</strong>
             </li>
             <li class="flex items-center justify-between">
@@ -472,55 +536,36 @@
             </li>
           </ul>
         </div>
-        <div class="bg-emerald-50/70 p-3 rounded-xl text-[11px] text-emerald-950 border border-emerald-200">
-          <strong>Best For:</strong> 1 to 2 Busy Dental Chairs, Implant &amp; Surgery Clinics, High-Frequency Prophy Sandblasting, and Future Practice Expansion.
-        </div>
       </div>
-
     </div>
 
     <!-- Section 4 -->
     <h2>4. The Thermodynamics of Receiver Sizing: Why 32L Beats 24L for 2 Chairs</h2>
     <p>
-      In dental clinic sizing, the air receiver vessel is not simply a passive holding vessel; it functions as a <strong>dynamic thermodynamic heat-exchanger and motor cycle-limiter</strong>. The relationship between receiver volume ($V$), motor cycle frequency ($Z$ starts/hour), and system pressure differential ($\Delta P = P_{\text{cut-in}} - P_{\text{cut-out}}$) is dictated by compressor thermodynamic laws:
+      In dental clinic sizing, the air receiver vessel is not simply a passive holding vessel; it functions as a <strong>dynamic thermodynamic heat-exchanger and motor cycle-limiter</strong>. The relationship between receiver volume (V), motor cycle frequency (Z starts/hour), and system pressure differential (ΔP = P_cut-in − P_cut-out) is dictated by compressor thermodynamic laws:
     </p>
 
     <!-- Formula Box 2 -->
     <div class="formula-card not-prose mb-6 shadow-lg">
       <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">// MOTOR CYCLE FREQUENCY &amp; TANK SIZING EQUATION</div>
       <div class="text-sm sm:text-base text-amber-300 font-bold mb-2">
-        V_tank = [ Q_pump &times; (P_ambient / &Delta;P) ] / (4 &times; Z_max)
+        V_tank = [ Q_pump * (P_ambient / Delta_P) ] / (4 * Z_max)
       </div>
       <div class="text-xs text-slate-300 space-y-1 pt-2 border-t border-slate-700">
-        <div>• <strong>Z_max (Max Motor Starts per Hour):</strong> Recommended &le; 10 &ndash; 15 cycles/hr to prevent starter capacitor thermal degradation.</div>
-        <div>• <strong>&Delta;P (Pressure Band Differential):</strong> 0.20 MPa (2.0 bar, between 0.55 MPa cut-in and 0.75 MPa cut-out).</div>
-        <div>• <strong>Resulting Analysis:</strong> A 24L tank operating under a 2-chair peak load causes <strong>22&ndash;28 cycles/hour</strong> (exceeding thermal safety limits), whereas the <strong>32L receiver maintains &le; 12 cycles/hour</strong>.</div>
+        <div>• <strong>Z_max (Max Motor Starts per Hour):</strong> Recommended ≤ 10 – 15 cycles/hr to prevent starter capacitor thermal degradation.</div>
+        <div>• <strong>Delta_P (Pressure Band Differential):</strong> 0.20 MPa (2.0 bar).</div>
       </div>
     </div>
 
-    <p>
-      When an undersized 24L tank is paired with 2 active chairs, the compressor is forced to start and stop every 2.5 minutes. This frequent cycling generates three destructive side effects:
-    </p>
-    <ol class="text-sm text-slate-700 space-y-2 mb-8">
-      <li><strong>Excessive Inrush Current &amp; Heat:</strong> Starting current spikes to 4–5× nominal running amperage, overheating the stator windings and reducing motor insulation life.</li>
-      <li><strong>Moisture Carryover:</strong> Compressed air does not remain in the receiver long enough to cool below dew point and condense out, resulting in liquid water passing into the dental handpiece air lines.</li>
-      <li><strong>Accelerated PTFE Wear:</strong> Frequent starts under pressure cause frictional micro-shearing on the piston cup lip before thermal equilibrium is established.</li>
-    </ol>
-
     <!-- Section 5 -->
-    <h2>5. Spatial Layout: Under-Counter Cabinet Installation and Acoustic Ventilation</h2>
-    <p>
-      To seamlessly integrate an HY-100 or HY-200 inside an operatory cabinet, the clinic design must adhere to three critical installation clearances:
-    </p>
-
-    <!-- 3 Installation Rules -->
+    <h2>5. Spatial Layout: Under-Counter Cabinet Installation</h2>
     <div class="grid sm:grid-cols-3 gap-4 not-prose mb-8">
       <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
         <div class="text-brand-blue font-bold text-sm mb-1 flex items-center gap-1.5">
           <i class="fa-solid fa-fan"></i> 1. Cross Ventilation
         </div>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Provide at least $\ge 150\text{ cm}^2$ free louvre intake at the bottom and an exhaust vent at the cabinet top to prevent hot air recirculation ($T_{\text{ambient}} < 40^\circ\text{C}$).
+          Provide at least ≥ 150 cm² free louvre intake at the bottom and an exhaust vent at the cabinet top to prevent hot air recirculation (T_ambient < 40°C).
         </p>
       </div>
 
@@ -529,7 +574,7 @@
           <i class="fa-solid fa-arrows-split-up-and-left"></i> 2. Clearance Margins
         </div>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Maintain a minimum of $50\text{ mm}$ clearance on all sides of the receiver tank and $80\text{ mm}$ behind the cooling fan shroud to ensure unrestricted intake airflow.
+          Maintain a minimum of 50 mm clearance on all sides of the receiver tank and 80 mm behind the cooling fan shroud to ensure unrestricted intake airflow.
         </p>
       </div>
 
@@ -538,20 +583,14 @@
           <i class="fa-solid fa-droplet"></i> 3. Auto-Drain Tube Routing
         </div>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Route the $6\text{ mm}$ nylon condensate drain line directly to the clinic waste drain via a dedicated air gap or trap to avoid manual bucket emptying.
+          Route the 6 mm nylon condensate drain line directly to the clinic waste drain via a dedicated air gap or trap to avoid manual bucket emptying.
         </p>
       </div>
     </div>
 
     <!-- Section 6 -->
     <h2>6. Commercial B2B Sales Playbook &amp; Objection Handling Guide</h2>
-    <p>
-      For international medical distributors, sales engineers, and customer service teams, answering client inquiries with technical precision builds unmatched credibility and accelerates sales cycles. Below is the official Hongrun B2B Objection Handling Playbook:
-    </p>
-
-    <!-- Objection Handling Q&A Accordion Style Cards -->
     <div class="space-y-4 not-prose mb-12">
-      
       <!-- Q1 -->
       <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
         <h4 class="text-sm font-bold text-brand-dark flex items-start gap-2.5">
@@ -560,10 +599,10 @@
         </h4>
         <div class="mt-3 pl-8 text-xs text-slate-600 leading-relaxed space-y-2 border-l-2 border-brand-blue/30 ml-3">
           <p>
-            <strong>Engineering Answer:</strong> Hardware store compressors run at high speeds (2800 RPM), producing deafening noise ($75\text{--}82\text{ dB(A)}$) and extreme heat that degrades low-grade rubber seals within 500–800 hours. Furthermore, their uncoated steel tanks rust internally, shedding iron oxide flakes directly into your $\$1,500$ dental handpiece turbines, destroying the ceramic bearings.
+            <strong>Engineering Answer:</strong> Hardware store compressors run at high speeds (2800 RPM), producing deafening noise (75–82 dB(A)) and extreme heat that degrades low-grade rubber seals within 500–800 hours. Furthermore, their uncoated steel tanks rust internally, shedding iron oxide flakes directly into your $1,500 dental handpiece turbines, destroying the ceramic bearings.
           </p>
           <p>
-            <strong>Commercial Selling Point:</strong> Hongrun HY Series compressors are <strong>NMPA Class II Medical Certified</strong> and ISO 8573-1 Class 0 certified. They feature 1400 RPM 4-pole low-speed motors, Saint-Gobain self-lubricating PTFE rings ($25,000\text{+ hr}$ design life), and nano-silver antibacterial tank linings that completely eliminate rust sludge.
+            <strong>Commercial Selling Point:</strong> Hongrun HY Series compressors are <strong>NMPA Class II Medical Certified</strong> and ISO 8573-1 Class 0 certified. They feature 1400 RPM 4-pole low-speed motors, Saint-Gobain self-lubricating PTFE rings (25,000+ hr design life), and nano-silver antibacterial tank linings that completely eliminate rust sludge.
           </p>
         </div>
       </div>
@@ -576,10 +615,10 @@
         </h4>
         <div class="mt-3 pl-8 text-xs text-slate-600 leading-relaxed space-y-2 border-l-2 border-brand-blue/30 ml-3">
           <p>
-            <strong>Engineering Answer:</strong> If the 3rd chair will be used primarily for hygiene or consultations, the <strong>HY-200 (0.75 kW, 32L)</strong> can handle the load under normal staggered usage ($k=0.70$). However, if all 3 chairs perform simultaneous cavity preparations, air-polishing (sandblasting), and surgical crown seatings, air demand will reach $145\text{ L/min}$, which requires the <strong>HY-300 (1.1 kW ZB300 pump, 50L vertical tank)</strong>.
+            <strong>Engineering Answer:</strong> If the 3rd chair will be used primarily for hygiene or consultations, the <strong>HY-200 (0.75 kW, 32L)</strong> can handle the load under normal staggered usage (k = 0.70). However, if all 3 chairs perform simultaneous cavity preparations, air-polishing (sandblasting), and surgical crown seatings, air demand will reach 145 L/min, which requires the <strong>HY-300 (1.1 kW ZB300 pump, 50L vertical tank)</strong>.
           </p>
           <p>
-            <strong>Commercial Recommendation:</strong> Recommend the <strong>HY-300 with 50L vertical tank</strong>. Its vertical cylindrical shape requires the exact same floor footprint ($400 \times 400\text{ mm}$) as smaller horizontal units, but delivers 50% more air capacity, protecting the clinic against future equipment replacement costs.
+            <strong>Commercial Recommendation:</strong> Recommend the <strong>HY-300 with 50L vertical tank</strong>. Its vertical cylindrical shape requires the exact same floor footprint (400 × 400 mm) as smaller horizontal units, but delivers 50% more air capacity, protecting the clinic against future equipment replacement costs.
           </p>
         </div>
       </div>
@@ -1016,7 +1055,7 @@
           <i class="fa-solid fa-network-wired text-brand-blue"></i> Interconnected Deep-Dive Whitepapers:
         </h4>
         <div class="grid sm:grid-cols-3 gap-4">
-          <a href="../20260902-dental-air-purity-engineering-guide/index.html" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Flagship Whitepaper</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">Engineering Zero-Oil Purity &amp; ISO 8573-1 Class 0 Standards</h5>
@@ -1025,7 +1064,7 @@
             <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
-          <a href="../20260815-15-dental-chairs-sizing-guide/index.html" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-brand-accent text-white font-bold px-2 py-0.5 rounded uppercase">Hospital Sizing</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">15–50 Dental Chairs Pneumatic Pipe Sizing &amp; Hospital Blueprint</h5>
@@ -1034,13 +1073,41 @@
             <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
-          <a href="../20260820-compressor-exploded-anatomy/index.html" class="bg-white hover:border-teal-600 p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
+          <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-teal-600 p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[9px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">3D CAD Anatomy</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
               <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA dryers.</p>
             </div>
             <span class="text-[10px] font-bold text-teal-700 mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         HIGH-END ENGINEERING CTA CONSULTATION BOX (V3.8 Standard)
+         ========================================================================= -->
+    <div class="bg-gradient-to-br from-slate-900 via-[#0B2545] to-[#0A192F] rounded-2xl p-8 sm:p-10 text-white shadow-2xl border border-slate-700/80 mt-14 mb-8 not-prose">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+            <i class="fa-solid fa-calculator text-sky-400"></i> Dental Air Sizing Consultation
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight leading-snug" style="color: #FFFFFF !important;">
+            Planning a 1–3 Chair Boutique Dental Practice?
+          </h3>
+          <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
+            Our biomedical pneumatic specialists will calculate your exact peak flow, verify your cabinetry ventilation layout, and deliver tailored equipment recommendations within 24 hours.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
+          <a href="../../contact.html" class="bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
+            <i class="fa-regular fa-paper-plane"></i> Request Technical Consultation
+          </a>
+          <a href="../../products-hy.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-all flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
+            <i class="fa-solid fa-layer-group"></i> Explore HY Series Models
           </a>
         </div>
       </div>
@@ -1122,10 +1189,14 @@
           <img src="../../assets/images/banners/logo_cn_orange.png" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
-        <div class="flex gap-4 mt-6">
-          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-          <a href="../../contact.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-brands fa-whatsapp text-xl"></i></a>
-          <a href="../../news.html" class="text-slate-400 hover:text-sky-400 transition"><i class="fa-solid fa-newspaper text-xl"></i></a>
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-linkedin text-base"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61594274000326" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-facebook text-base"></i></a>
+          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-instagram text-base"></i></a>
+          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-tiktok text-base"></i></a>
+          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-youtube text-base"></i></a>
+          <a href="https://x.com/martinhrtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-x-twitter text-base"></i></a>
+          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105"><i class="fa-brands fa-whatsapp text-base"></i></a>
         </div>
       </div>
 
@@ -1184,5 +1255,13 @@ function copyArticleLink(btn) {
 }
 </script>
 <script src="../../assets/js/lightbox.js"></script>
+  <!-- PWA Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>
