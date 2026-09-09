@@ -74,11 +74,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.hongrun1995.cn/oem-partner.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://www.hongrun1995.cn/privacy-policy.html</loc>
     <lastmod>2026-09-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+
 
   <!-- Engineering Whitepapers & Insight Articles (10) -->
   <url>
