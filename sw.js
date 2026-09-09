@@ -3,7 +3,7 @@
  * Enables instant catalog review & sizing calculations even in offline or weak-signal expo environments.
  */
 
-const CACHE_NAME = "hongrun-cache-v1";
+const CACHE_NAME = "hongrun-cache-v2";
 const STATIC_ASSETS = [
   "/",
   "/products.html",
@@ -14,6 +14,7 @@ const STATIC_ASSETS = [
   "/assets/css/tailwind.css",
   "/assets/js/lightbox.js",
   "/assets/js/webmcp-tools.js",
+  "/assets/images/logo_transparent.webp",
   "/assets/images/logo_transparent.png",
   "/assets/images/favicon/favicon-32.png",
   "/manifest.json"
