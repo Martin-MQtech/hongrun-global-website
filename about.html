@@ -107,7 +107,7 @@
 }
 </script>
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
-  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
@@ -199,7 +199,7 @@
 
     <!-- Live Smart Factory & Workshop Video Tour (Dynamic Seamless Transition) -->
     <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-950 mb-10 group">
-      <video class="w-full h-72 lg:h-96 object-cover" autoplay loop muted playsinline preload="auto" poster="assets/videos/factory-tour-poster.webp">
+      <video class="w-full h-72 lg:h-96 object-cover" loop muted playsinline preload="none" data-autoplay="lazy"  poster="assets/videos/factory-tour-poster.webp">
         <source src="assets/videos/factory-tour.mp4" type="video/mp4"/>
         <source src="assets/videos/factory-tour.webm" type="video/webm"/>
       </video>
@@ -618,5 +618,6 @@
       });
     }
   </script>
+  <script src="/assets/js/lazy-video.js" defer></script>
 </body>
 </html>
