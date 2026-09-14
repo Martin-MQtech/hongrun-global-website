@@ -3,7 +3,7 @@
  * Enables instant catalog review & sizing calculations even in offline or weak-signal expo environments.
  */
 
-const CACHE_NAME = "hongrun-cache-v2";
+const CACHE_NAME = "hongrun-cache-v3";
 const STATIC_ASSETS = [
   "/",
   "/products.html",
