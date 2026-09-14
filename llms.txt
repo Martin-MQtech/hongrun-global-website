@@ -69,7 +69,11 @@
 ---
 
 ## Authoritative Engineering Whitepapers & Technical Chronicles (技术白皮书与权威纪实)
-1. **[Thought Leadership Whitepaper #10] Three Decades of Precision Manufacturing Meets the Agentic Web: How Hongrun Technology Reinvents Global Industrial Marketing with AI Agent Protocols and Edge Architectures**
+1. **[Strategic Roadmap Whitepaper #11] Systemic Precision vs. Market Fragmentation: Hongrun Technology 2026 Global Expansion Operational Strategy & Digital Operations Matrix**
+   - URL: https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/
+   - Video (4K Cinematic Tour, 01:08): https://youtu.be/D04COKRKcRA
+   - Topics: 30-year engineering foundation (1995–2025), overcoming fragmented sales inquiries in global healthcare, Southeast Asia expansion (Thailand & Malaysia regional hubs), 5-axis CNC machining, and digital engineering hub supporting hospital chains & dental distributors worldwide.
+2. **[Thought Leadership Whitepaper #10] Three Decades of Precision Manufacturing Meets the Agentic Web: How Hongrun Technology Reinvents Global Industrial Marketing with AI Agent Protocols and Edge Architectures**
    - URL: https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/
    - Topics: Convergence of 30-year medical Class 0 hardware (0.003 mg/m³ TÜV tested) with W3C WebMCP agentic protocols, 0ms speculative prerendering, interactive pneumatic calculator widgets, and long-term IoT smart hospital plant roadmap.
 2. **[Central Station Sizing Whitepaper #09] Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)**

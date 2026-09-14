@@ -1,7 +1,7 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.12 (在 v3.11 基础上于 2026-09-14 落实 YouTube 官方社区图文闭环发布标准，确立“严禁纯文本、100% 强制标配官方高清实物/CAD 拓扑图”硬性底线，攻克 BrowserOS Neo 穿透 Shadow DOM 上传图片技术难点，首发带图核心推文上线并在册更新；详见 §17.10 与 §20.10)  
+> **版本 Version:** 3.13 (在 v3.12 基础上于 2026-09-14 落实“视频优先 (Video-First) 博客架构与全渠道社媒矩阵联动发布”，官方 4K 宣传片在 YouTube 成功公开发布、领英与 Facebook 完成“公司主页官发 + Martin Chen 个人号带思考转发”双层渗透，全渠道文案统一回流至官网第 11 篇深度研报形成商业闭环；详见 §23)  
 > **更新日期 Date:** 2026-09-14  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
@@ -36,6 +36,7 @@
 20. [项目演进全景纪实与重要工程里程碑 (Milestones & Evolution Log)](#20-项目演进全景纪实与重要工程里程碑)
 21. [宏润国际官网技术文章与白皮书双语排版视觉规范执行方案 (Article Design System V3.8)](#21-宏润国际官网技术文章与白皮书双语排版视觉规范执行方案)
 22. [SEO · GEO · AEO 深度打通与行业纵深渗透执行手册 (Triple Search & Agent Architecture V3.9)](#22-seo--geo--aeo-深度打通与行业纵深渗透执行手册)
+23. [视频优先博客架构与全渠道社媒矩阵联动执行手册 (Video-First Blog & Omnichannel Distribution V3.13)](#23-视频优先博客架构与全渠道社媒矩阵联动执行手册)
 
 ---
 
@@ -1082,6 +1083,42 @@ graph TD
 
 ---
 
-> **手册结语**：本手册已升级至 **Version 3.12 最终执行基准**，全量固化 Google Analytics 4 全网商业数据底座、YouTube 官方社区每周 3 篇全渠道图文闭环矩阵（严格标配高清实物/CAD 图）与 SEO · GEO · AEO 深度打通执行方案，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
+## 23. 视频优先博客架构与全渠道社媒矩阵联动执行手册 (Video-First Blog & Omnichannel Distribution V3.13)
+
+### 23.1 战略定位与商业逻辑 (Strategic Rationale)
+现代工业品跨国采购已全面跨入“视频直观印证 + 深度白皮书研判”双轨时代。为彻底终结低端价格战与零散低质询盘，宏润科技确立了**“全渠道视频宣发先行、官网视频优先（Video-First）研报承接闭环”**的全新营销体系：
+1. **统一锚点文章 (Universal Conversion Hook)**：
+   全网所有社交媒体（YouTube、LinkedIn、Facebook 等）发布文案的末尾，100% 强制挂载统一的官网文章链接：
+   `👉 https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/`
+2. **视频置顶结构 (Video-First Article Layout)**：
+   买家无论从任一平台点击跳转进入官网，首屏顶端映入眼帘的即为 68 秒 4K 电影级高洁净医用气源战略宣传片，支持微秒级交互切换（本地零延迟 4K 直流播放 + 官方 YouTube 原生嵌入切换），并标配分段章节交互按钮（00:00 破局、00:08 根基、00:18 智造、00:30 布局、00:45 矩阵、01:00 闭环）。
+3. **图文交融与工程证言 (Interspersed Copy & Storyboard Proof)**：
+   视频下方接续 6 大高精工厂车间实拍大图、中英双语分镜脚本对照表、严谨的技术与运营战法阐述，并在文末提供双通道 B2B 询盘入口与 8 大渠道社交分享栏，实现“视觉冲击 → 专业信任 → 商业询盘”的绝对闭环。
+
+---
+
+### 23.2 全渠道社媒分发执行标准与双层渗透战法 (Omnichannel Dual-Layer Execution)
+
+| 平台 Channel | 发布形态 Post Type | 账号级别 Account Tier | 状态 Status | 核心内容与链接锚点 Content & Tracking Hook |
+| :--- | :--- | :--- | :--- | :--- |
+| **YouTube** | 4K 视频 / Shorts 联动 | 官方企业频道 (@MartinChenAirtech) | **已公开发布 (Live)** | **视频 ID:** `D04COKRKcRA`<br>**Shorts:** `https://youtube.com/shorts/D04COKRKcRA`<br>**Watch:** `https://www.youtube.com/watch?v=D04COKRKcRA`<br>完整说明挂载中英双语时间轴与文章直达链接 |
+| **LinkedIn** | 官方动态 (Company Post) | 官方企业主页 (125624035) | **已正式发布 (Live)** | **URN:** `urn:li:share:7505172805894836224`<br>附带高清战略大图与官方企业战略宣言，文末锚定文章链接 |
+| **LinkedIn** | 深度转评 (Executive Repost) | 个人主页 (Martin Chen CMD) | **已成功转评 (Live)** | 个人号以实名高管视角深度转评：“*After 30 years in medical pneumatic manufacturing, why did I tell our team to stop chasing fragmented, low-margin inquiries?...*”，实现行业精准人脉裂变 |
+| **Facebook** | 官方主页帖子 (Company Post) | 官方公共主页 (Hongrun Aircompressor Technology) | **已正式发布 (Live)** | 官方主页发布完整文案与高清战略大图，自动挂载全站统一链接并标配品牌标签矩阵 |
+| **Facebook** | 个人号深度分享 (Personal Share) | 个人账号 (Martin Chen) | **已成功分享/草稿 (Synced)** | 个人账号以第一人称思考转发企业主页动态，强化高管专业 IP 与国际采购信赖 |
+
+---
+
+### 23.3 站点与基础设施全量同步审计清单 (Site-wide Verification Checklist)
+
+1. **第 11 篇深度研报**：`hrtech/articles/20260915-global-expansion-operational-strategy/index.html` 交付上线，包含视频优先双轨播放器（集成 YouTube `D04COKRKcRA` 与本地 4K 流）、6 组车间实拍、中英脚本表与双通道询盘卡片，严谨核验 0 处 LaTeX 源码泄露。
+2. **新闻中心聚合 (`news.html`)**：总文章数量更新至 11 篇，头条显著展示 Article 11 特色封面与 `4K VIDEO · 01:08` 专属标签。
+3. **搜索引擎地图 (`sitemap.xml`)**：全网生产端点拓展至 25 个，Article 11 以优先级 0.95、变更频率 weekly 正式纳入。
+4. **AI Agent 大模型语料 (`llms.txt`)**：白皮书权威列表首位纳入 Article 11，明晰标注 4K 视频链接与关键技术主题，赋能全球大模型精准抓取。
+
+---
+
+> **手册结语**：本手册已升级至 **Version 3.13 最终执行基准**，全量固化“视频优先 (Video-First) 博客架构”、YouTube 官方 4K 宣传片公开发布、领英与 Facebook“公司主页 + Martin Chen 个人号”双层渗透机制与全网 25 端点统一回流商业闭环，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
+
 
 
