@@ -14,7 +14,7 @@
 
 | # | 计划发布日期 | 对应白皮书 / 文章主题 | 核心受众与应用场景 | 状态 Status | 官方生产落地页 |
 | :-: | :---: | :--- | :--- | :---: | :--- |
-| **01** | **2026-09-14 (Mon)** | **[Whitepaper #09] 4~8 台牙椅双机头冗余选型** | 中型口腔门诊、专科诊所、N+1 零停机机房设计 | ✅ **已在线发布 (LIVE)** | [`/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/`](https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/) |
+| **01** | **2026-09-14 (Mon)** | **[Whitepaper #09] 4~8 台牙椅双机头冗余选型** | 中型口腔门诊、专科诊所、N+1 零停机机房设计 | ✅ **已在线发布 (LIVE 带图)**<br>👉 [查看 YouTube 帖子](https://www.youtube.com/post/UgkxYMiXVtEKrSgqT2zLiPjq0aJm9ah06kTJ) | [`/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/`](https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/) |
 | **02** | **2026-09-16 (Wed)** | **[Whitepaper #08] 1~3 台牙椅静音与矮罐选型 (24L vs 32L)** | 小型独立诊所、地柜嵌入式安装、≤55 dB(A) 静音 | ⏳ 待发布 (Scheduled) | [`/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/`](https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/) |
 | **03** | **2026-09-18 (Fri)** | **[Flagship #01] ISO 8573-1 Class 0 零油纯度工程全景** | 医疗级零油认证、圣戈班特氟龙密封、1~50 台牙椅选型 | ⏳ 待发布 (Scheduled) | [`/articles/20260902-dental-air-purity-engineering-guide/`](https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/) |
 | **04** | **2026-09-21 (Mon)** | **[3D Exploded #05] HVS 牙科负压抽吸与气溶胶控制解剖** | 牙科高负压抽吸、两级旋风气水分离、>85% 气溶胶阻断 | ⏳ 待发布 (Scheduled) | [`/articles/20260825-dental-suction-exploded-anatomy/`](https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/) |
