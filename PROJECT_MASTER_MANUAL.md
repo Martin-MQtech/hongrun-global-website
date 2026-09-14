@@ -1,7 +1,7 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.11 (在 v3.10 基础上于 2026-09-14 正式打通 YouTube 官方频道社区动态图文传播矩阵，确立每周 3 篇（周一/周三/周五）全渠道同步发布标准，已完成全站 10 篇技术白皮书/3D解剖的 YouTube 社区专属图文素材重构储备与首发推文上线；详见 §17.9 与 §20.9)  
+> **版本 Version:** 3.12 (在 v3.11 基础上于 2026-09-14 落实 YouTube 官方社区图文闭环发布标准，确立“严禁纯文本、100% 强制标配官方高清实物/CAD 拓扑图”硬性底线，攻克 BrowserOS Neo 穿透 Shadow DOM 上传图片技术难点，首发带图核心推文上线并在册更新；详见 §17.10 与 §20.10)  
 > **更新日期 Date:** 2026-09-14  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
@@ -738,6 +738,13 @@ Hongrun Complete Clean Air & Suction Ecosystem
    - **③ 权威官网反链 (Canonical Link)**：文末统一嵌入对应文章的正式生产落地页链接（`https://www.hongrun1995.cn/articles/...`），实现公域流量向私域询盘闭环沉淀；
    - **④ 社区互动提问与标签矩阵 (Poll & Hashtags)**：设计激发评论区讨论的临床问题，并附带 6~8 个高权重行业标签（`#DentalClinic #MedicalAirCompressor #ISO8573Class0 #DentalEngineering #ClinicDesign`）。
 4. **统一资产矩阵索引**：全站 10 篇推文库已统一收录于 `hrtech/articles/YOUTUBE_COMMUNITY_CONTENT_MATRIX.md`，执行团队唯此表是从。
+5. **【绝对红线】严禁纯文本发布 · 100% 强制标配官方高清实物/CAD 拓扑图 (Mandatory Visual Asset Policy)**：
+   - **严禁发布任何无图纯文本动态**：YouTube 推荐流具有强烈的视觉消费倾向，无图纯文本帖子的展示曝光与转化率极其微弱；
+   - **配图标准**：每篇推文必须 100% 挂载 1~2 张官方高清实物图（`assets/images/products/hd/`，如 `HYTG-300.jpg`, `HY-200.jpg`）或 16:9 医用气源机房 CAD 拓扑蓝图；
+   - **BrowserOS Neo 自动化上传避坑指引 (Shadow DOM & CDP SOP)**：
+     - 注意：YouTube 顶部搜索框内包含一个隐藏的 `input.ytSearchboxComponentHiddenFileInput`，切勿将其误认作发帖上传控件；
+     - 真正的社区图片上传输入框为深嵌于 Shadow DOM 中的 `input[type="file"][accept="image/*"]`；
+     - 必须通过 `DOM.requestNode` 提取其实际 `nodeId`，调用 CDP `DOM.setFileInputFiles` 写入本地图片绝对路径，并派发 `change` 与 `input` 事件，确保图片被 YouTube CDN 成功转码（512×409 px）并呈现缩略预览。
 
 ---
 
@@ -876,6 +883,14 @@ Hongrun Complete Clean Air & Suction Ecosystem
 | :--- | :--- | :--- |
 | **2026-09-14 12:10** | YouTube 社区图文矩阵全量建立 | 提炼全站 10 篇技术白皮书为 YouTube 社区专属高转化英文帖文，完整覆盖 SEO/GEO/AEO 关键词与官方落地页反链，生成 `YOUTUBE_COMMUNITY_CONTENT_MATRIX.md`。 |
 | **2026-09-14 12:20** | 每周 3 篇发布节奏确立与首发上线 | 用户指令：“同意 每周3篇 节奏”。**正式锁定每周一、三、五发布节奏**；通过 BrowserOS Neo 在官方频道 `@MartinChenAirtech` 成功发布首篇核心推文（4~8台牙椅双机头冗余选型指南），实现在线闭环。 |
+
+### 20.10 社区推文配图标准纠偏与图文闭环上线 (2026-09-14 12:51, Manual V3.12)
+
+| 时间戳 | 事项 / 实施动作 | 官方决策结论与系统落地经验 |
+| :--- | :--- | :--- |
+| **2026-09-14 12:48** | 用户配图核对纠偏与红线锁定 | 用户指令：“怎么没有图 ？？”，严正指出海外社媒发帖必须带图。团队立即启动纠偏，确立“100% 必须挂载官方高清实物/CAD 图”底线规则。 |
+| **2026-09-14 12:50** | 攻克 BrowserOS Neo Shadow DOM 上传难点 | 克服 YouTube 搜索框隐藏控件干扰，精确穿透至社区专用 `input[type="file"][accept="image/*"]`，通过 CDP `DOM.requestNode` + `DOM.setFileInputFiles` 成功挂载 `HYTG-300.jpg` 高清大图。 |
+| **2026-09-14 12:51** | 首发图文版重新上线并验证 | 彻底删除原无图纯文本旧帖，重新发布图文完整版（[https://www.youtube.com/post/UgkxYMiXVtEKrSgqT2zLiPjq0aJm9ah06kTJ](https://www.youtube.com/post/UgkxYMiXVtEKrSgqT2zLiPjq0aJm9ah06kTJ)），经 YouTube CDN 转码校验（512×409 px）及官网反链全要素闭环生效。 |
 
 ---
 
@@ -1067,6 +1082,6 @@ graph TD
 
 ---
 
-> **手册结语**：本手册已升级至 **Version 3.11 最终执行基准**，全量固化 Google Analytics 4 全网商业数据底座、YouTube 官方社区动态每周 3 篇全渠道图文矩阵与 SEO · GEO · AEO 深度打通执行方案，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
+> **手册结语**：本手册已升级至 **Version 3.12 最终执行基准**，全量固化 Google Analytics 4 全网商业数据底座、YouTube 官方社区每周 3 篇全渠道图文闭环矩阵（严格标配高清实物/CAD 图）与 SEO · GEO · AEO 深度打通执行方案，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
 
 
