@@ -8,20 +8,22 @@
 
 ---
 
-## 目录与推文规划 (Content Schedule Matrix)
+## 目录与推文规划 (Content Schedule Matrix · 3 Posts / Week)
 
-| # | 对应白皮书 / 文章主题 | 核心受众与应用场景 | 推荐配图资产 | 官方生产链接 |
-| :-: | :--- | :--- | :--- | :--- |
-| **01** | **[Whitepaper #09] 4~8 台牙椅双机头冗余选型** | 中型口腔门诊、专科诊所、N+1 零停机机房设计 | `HYTG-300.jpg` + CAD 拓扑图 | [`/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/`](https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/) |
-| **02** | **[Whitepaper #08] 1~3 台牙椅静音与矮罐选型 (24L vs 32L)** | 小型独立诊所、地柜嵌入式安装、≤55 dB(A) 静音 | `HY-200.jpg` (32L) + 诊所管网图 | [`/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/`](https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/) |
-| **03** | **[Flagship #01] ISO 8573-1 Class 0 零油纯度工程全景** | 医疗级零油认证、圣戈班特氟龙密封、1~50 台牙椅选型 | `hy-family-portfolio.jpg` + ZB300 | [`/articles/20260902-dental-air-purity-engineering-guide/`](https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/) |
-| **04** | **[3D Exploded #05] HVS 牙科负压抽吸与气溶胶控制解剖** | 牙科高负压抽吸、两级旋风气水分离、>85% 气溶胶阻断 | `02-hvs-suction-exploded.jpg` | [`/articles/20260825-dental-suction-exploded-anatomy/`](https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/) |
-| **05** | **[3D Exploded #04] Class 0 医用空压机 3D CAD 机械解剖** | 5 轴 CNC 曲轴、金刚石涂层活塞环、-40°C 吸干机 | `01-hy-compressor-exploded.jpg` | [`/articles/20260820-compressor-exploded-anatomy/`](https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/) |
-| **06** | **[Whitepaper #03] 15~50 台牙椅医院级中央气站与管网平衡** | 大型口腔医院、环形管网水力学、k=0.70 选型公式 | `news_11_15chairs_1.jpg` + 机房图 | [`/articles/20260815-15-dental-chairs-sizing-guide/`](https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/) |
-| **07** | **[Whitepaper #10] 30年精密制造遇上 Agentic Web 与 WebMCP** | 智能机房监控、AI 代理自动化采购、工业 4.0 转型 | `hongrun_smart_plant_cover.jpg` | [`/articles/20260910-precision-manufacturing-meets-agentic-web/`](https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/) |
-| **08** | **[Expo #06] 华南国际口腔展智能洁净空气站首发纪实** | 国际医疗展会、OEM/ODM 合作、全球代理商招募 | `news_10_expo_1.png` + 展台实况 | [`/articles/20260728-dental-south-china-expo/`](https://www.hongrun1995.cn/articles/20260728-dental-south-china-expo/) |
-| **09** | **[Quality Tour #07] 30周年全国质量万里行 · 北京三甲医院与科研站** | 北大口腔、中科院实验室、极端严苛工况实测 | `news_8_beijing_1.png` + 现场审计 | [`/articles/20260715-beijing-quality-tour/`](https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/) |
-| **10** | **[Quality Tour #02] 30周年全国质量万里行 · 济南医疗器械枢纽** | 区域医疗中心、中央供气系统 10 年稳定运行回访 | `news_9_jinan_1.png` + 交付实景 | [`/articles/20260701-jinan-medical-hub/`](https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/) |
+> **发布节奏标准 (Publishing Rhythm):** 每周 3 篇（周一、周三、周五发布），与官网白皮书及海外采购高峰期保持高频共振。
+
+| # | 计划发布日期 | 对应白皮书 / 文章主题 | 核心受众与应用场景 | 状态 Status | 官方生产落地页 |
+| :-: | :---: | :--- | :--- | :---: | :--- |
+| **01** | **2026-09-14 (Mon)** | **[Whitepaper #09] 4~8 台牙椅双机头冗余选型** | 中型口腔门诊、专科诊所、N+1 零停机机房设计 | ✅ **已在线发布 (LIVE)** | [`/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/`](https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/) |
+| **02** | **2026-09-16 (Wed)** | **[Whitepaper #08] 1~3 台牙椅静音与矮罐选型 (24L vs 32L)** | 小型独立诊所、地柜嵌入式安装、≤55 dB(A) 静音 | ⏳ 待发布 (Scheduled) | [`/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/`](https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/) |
+| **03** | **2026-09-18 (Fri)** | **[Flagship #01] ISO 8573-1 Class 0 零油纯度工程全景** | 医疗级零油认证、圣戈班特氟龙密封、1~50 台牙椅选型 | ⏳ 待发布 (Scheduled) | [`/articles/20260902-dental-air-purity-engineering-guide/`](https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/) |
+| **04** | **2026-09-21 (Mon)** | **[3D Exploded #05] HVS 牙科负压抽吸与气溶胶控制解剖** | 牙科高负压抽吸、两级旋风气水分离、>85% 气溶胶阻断 | ⏳ 待发布 (Scheduled) | [`/articles/20260825-dental-suction-exploded-anatomy/`](https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/) |
+| **05** | **2026-09-23 (Wed)** | **[3D Exploded #04] Class 0 医用空压机 3D CAD 机械解剖** | 5 轴 CNC 曲轴、金刚石涂层活塞环、-40°C 吸干机 | ⏳ 待发布 (Scheduled) | [`/articles/20260820-compressor-exploded-anatomy/`](https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/) |
+| **06** | **2026-09-25 (Fri)** | **[Whitepaper #03] 15~50 台牙椅医院级中央气站与管网平衡** | 大型口腔医院、环形管网水力学、k=0.70 选型公式 | ⏳ 待发布 (Scheduled) | [`/articles/20260815-15-dental-chairs-sizing-guide/`](https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/) |
+| **07** | **2026-09-28 (Mon)** | **[Whitepaper #10] 30年精密制造遇上 Agentic Web 与 WebMCP** | 智能机房监控、AI 代理自动化采购、工业 4.0 转型 | ⏳ 待发布 (Scheduled) | [`/articles/20260910-precision-manufacturing-meets-agentic-web/`](https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/) |
+| **08** | **2026-09-30 (Wed)** | **[Expo #06] 华南国际口腔展智能洁净空气站首发纪实** | 国际医疗展会、OEM/ODM 合作、全球代理商招募 | ⏳ 待发布 (Scheduled) | [`/articles/20260728-dental-south-china-expo/`](https://www.hongrun1995.cn/articles/20260728-dental-south-china-expo/) |
+| **09** | **2026-10-02 (Fri)** | **[Quality Tour #07] 30周年全国质量万里行 · 北京三甲医院与科研站** | 北大口腔、中科院实验室、极端严苛工况实测 | ⏳ 待发布 (Scheduled) | [`/articles/20260715-beijing-quality-tour/`](https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/) |
+| **10** | **2026-10-05 (Mon)** | **[Quality Tour #02] 30周年全国质量万里行 · 济南医疗器械枢纽** | 区域医疗中心、中央供气系统 10 年稳定运行回访 | ⏳ 待发布 (Scheduled) | [`/articles/20260701-jinan-medical-hub/`](https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/) |
 
 ---
 

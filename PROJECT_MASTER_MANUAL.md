@@ -1,8 +1,8 @@
 # 宏润科技 (Hongrun Technology / HR Tech) 国际官网终极项目执行手册
 # PROJECT MASTER EXECUTION GUIDE & STANDARDS HANDBOOK
 
-> **版本 Version:** 3.10 (在 v3.9 基础上于 2026-09-03 全网接入官方 Google Analytics 4 全球商业分析系统，植入官方 Measurement ID: G-25BF91Y6Q1，覆盖全站 23 个生产 HTML 页面；配置海外 B2B 核心转化事件埋点：官方邮箱点击、WhatsApp 洽谈、RFQ 咨询意向、牙椅气量选型计算器使用率及 WebMCP AI 智能体调用追踪；详见 §20.8 与 §22.6)  
-> **更新日期 Date:** 2026-09-03  
+> **版本 Version:** 3.11 (在 v3.10 基础上于 2026-09-14 正式打通 YouTube 官方频道社区动态图文传播矩阵，确立每周 3 篇（周一/周三/周五）全渠道同步发布标准，已完成全站 10 篇技术白皮书/3D解剖的 YouTube 社区专属图文素材重构储备与首发推文上线；详见 §17.9 与 §20.9)  
+> **更新日期 Date:** 2026-09-14  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
 > **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
 > **项目定位 Positioning:** 国际顶级 B2B 工业品与高端医疗气源国际官网（纯静态极速架构 · 全球边缘加速 · 独立仓库与域名隔离）  
@@ -728,6 +728,20 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 ---
 
+### 17.10 YouTube 官方频道社区动态图文传播规范 (YouTube Community Posts SOP)
+
+1. **官方频道阵地**：`Hongrun Compressor Technology 30+ years factory` (`@MartinChenAirtech`)。
+2. **发布节奏标准 (Publishing Rhythm)**：**每周 3 篇（周一、周三、周五发布）**，与官网白皮书及海外采购高峰期保持高频共振。
+3. **内容结构四大核心解剖要素**：
+   - **① 痛点吸引子 (Clinical Hook)**：针对海外牙医、诊所业主与工程总监关心的严重临床停机事故、气溶胶感染风险或手柄漏油水损毁等现实痛点展开；
+   - **② 硬核参数提炼 (Engineering Digest)**：以 3~4 个精炼要点，给出算力公式（如 $k=0.60\text{--}0.45$）、核心机型（如 HYTG-300 / HY-200 32L）及 ISO 8573-1 Class 0 解决路径；
+   - **③ 权威官网反链 (Canonical Link)**：文末统一嵌入对应文章的正式生产落地页链接（`https://www.hongrun1995.cn/articles/...`），实现公域流量向私域询盘闭环沉淀；
+   - **④ 社区互动提问与标签矩阵 (Poll & Hashtags)**：设计激发评论区讨论的临床问题，并附带 6~8 个高权重行业标签（`#DentalClinic #MedicalAirCompressor #ISO8573Class0 #DentalEngineering #ClinicDesign`）。
+4. **统一资产矩阵索引**：全站 10 篇推文库已统一收录于 `hrtech/articles/YOUTUBE_COMMUNITY_CONTENT_MATRIX.md`，执行团队唯此表是从。
+
+---
+
+
 ## 第十八章：产品图库与视觉资产纠偏审计经验准则 (Product Assets & Visual Auditing SSOT)
 
 ### 18.1 配图严谨度与真实产品图准则
@@ -856,7 +870,15 @@ Hongrun Complete Clean Air & Suction Ecosystem
 | **2026-09-03 10:34** | 选型计算器与 WebMCP 智能体双重追踪 | 在 `solutions.html` 选型计算器注入 `calculator_quote_click` 事件；在 `webmcp-tools.js` 注入 `webmcp_agent_invocation` 事件，实现海外 AI 智能体（ChatGPT Operator, Claude, Chrome AI）调用自动上报 Google Analytics！ |
 | **2026-09-03 10:35** | 自动化巡检与手册 V3.10 固化 | 自动化脚本验证 23/23 页面 100% 连通无缺失；双执行手册版本统一升至 V3.10。 |
 
+### 20.9 YouTube 官方频道社区动态传播矩阵上线 (2026-09-14 12:20, Manual V3.11)
+
+| 时间戳 | 事项 / 实施动作 | 官方决策结论与系统落地经验 |
+| :--- | :--- | :--- |
+| **2026-09-14 12:10** | YouTube 社区图文矩阵全量建立 | 提炼全站 10 篇技术白皮书为 YouTube 社区专属高转化英文帖文，完整覆盖 SEO/GEO/AEO 关键词与官方落地页反链，生成 `YOUTUBE_COMMUNITY_CONTENT_MATRIX.md`。 |
+| **2026-09-14 12:20** | 每周 3 篇发布节奏确立与首发上线 | 用户指令：“同意 每周3篇 节奏”。**正式锁定每周一、三、五发布节奏**；通过 BrowserOS Neo 在官方频道 `@MartinChenAirtech` 成功发布首篇核心推文（4~8台牙椅双机头冗余选型指南），实现在线闭环。 |
+
 ---
+
 
 ## 21. 宏润国际官网技术文章与白皮书双语排版视觉规范执行方案 (Article Design System V3.8)
 
@@ -1045,6 +1067,6 @@ graph TD
 
 ---
 
-> **手册结语**：本手册已升级至 **Version 3.10 最终执行基准**，全量固化 Google Analytics 4 全网商业数据底座、SEO · GEO · AEO 深度打通与行业纵深渗透执行方案，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
+> **手册结语**：本手册已升级至 **Version 3.11 最终执行基准**，全量固化 Google Analytics 4 全网商业数据底座、YouTube 官方社区动态每周 3 篇全渠道图文矩阵与 SEO · GEO · AEO 深度打通执行方案，成为宏润科技国际官网唯一的单一事实基准（Single Source of Truth）。后续开发唯本手册是从。
 
 
