@@ -27,7 +27,7 @@
 
 ### 1. Wobble-Piston Oil-Free Air Compressors (HY Series)
 - **Target Applications**: Dental clinics (1 to 10 chairs), desktop analytical instruments, food packaging, precision laboratories.
-- **Core Technology**: Saint-Gobain self-lubricating diamond-coated PTFE composite piston rings (30,000-hour design life); German 5-axis CNC machined drive shaft (Ra ≤ 0.2 μm); Swedish Sandvik flapper steel valves; internal nano-antibacterial silver-ion coated tanks.
+- **Core Technology**: Saint-Gobain self-lubricating diamond-coated PTFE composite piston rings (20,000–25,000h continuous operating life / 30,000h design life); German 5-axis CNC machined drive shaft (Ra ≤ 0.2 μm); Swedish Sandvik flapper steel valves; internal nano-antibacterial silver-ion coated tanks.
 - **Flagship Models**: 
   - **HY-100**: 0.55 kW, 24L horizontal mobile tank, 100 L/min displacement (1 chair).
   - **HY-200**: 0.75 kW, **32L official standard horizontal tank**, 150 L/min displacement (1-2 chairs).
