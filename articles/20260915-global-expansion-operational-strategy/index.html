@@ -133,10 +133,15 @@
   <!-- W3C Speculation Rules -->
   <script type="speculationrules">
   {
-    "prerender": [
+    "prefetch": [
       {
-        "where": { "href_matches": "/*" },
-        "eagerness": "moderate"
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "*contact.html*" } }
+          ]
+        },
+        "eagerness": "conservative"
       }
     ]
   }
@@ -248,6 +253,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
     }
   </style>
+  <script src="/assets/js/mobile-nav.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
 
@@ -1348,6 +1354,11 @@
           <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
+          <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> High-Tech Industrial Development Zone, Zibo, Shandong, China</p>
+          <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
+          <p><i class="fa-solid fa-envelope text-brand-blue mr-1.5" aria-hidden="true"></i> Email: <a href="mailto:info@hongrun1995.cn" class="hover:text-white transition">info@hongrun1995.cn</a></p>
+        </div>
         <div class="flex flex-wrap items-center gap-3 mt-6">
           <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="LinkedIn Official"><i class="fa-brands fa-linkedin text-base" aria-hidden="true"></i><span class="sr-only">LinkedIn Official</span></a>
           <a href="https://www.facebook.com/profile.php?id=61594460695204" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Facebook Official"><i class="fa-brands fa-facebook text-base" aria-hidden="true"></i><span class="sr-only">Facebook Official</span></a>

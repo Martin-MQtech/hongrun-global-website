@@ -63,7 +63,7 @@
   <meta property="og:site_name" content="Hongrun Technology">
   <meta property="og:title" content="Privacy Policy & Data Protection | Shandong Hongrun Air Compressor Technology Co., Ltd.">
   <meta property="og:description" content="Privacy Policy and international data protection compliance standards (GDPR) for visitors and commercial partners of Hongrun Technology.">
-  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/logo_transparent.png">
+  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/privacy-policy.html">
   <meta property="og:type" content="website">
 
@@ -71,7 +71,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy Policy & Data Protection | Shandong Hongrun Air Compressor Technology Co., Ltd.">
   <meta name="twitter:description" content="Privacy Policy and international data protection compliance standards (GDPR) for visitors and commercial partners of Hongrun Technology.">
-  <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/logo_transparent.png"><link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
+  <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg"><link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/>
 <link rel="stylesheet" href="/assets/css/tailwind.css"/>
   <!-- Structured Data: Privacy Policy -->
@@ -95,10 +95,15 @@
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
-    "prerender": [
+    "prefetch": [
       {
-        "where": { "href_matches": "/*" },
-        "eagerness": "moderate"
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "*contact.html*" } }
+          ]
+        },
+        "eagerness": "conservative"
       }
     ]
   }
@@ -107,6 +112,7 @@
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <script src="/assets/js/mobile-nav.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
   <header class="bg-white border-b border-slate-200 py-4 px-6 flex justify-between items-center">

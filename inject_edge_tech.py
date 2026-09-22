@@ -25,10 +25,15 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 EDGE_HEAD_BLOCK = """  <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
-    "prerender": [
+    "prefetch": [
       {
-        "where": { "href_matches": "/*" },
-        "eagerness": "moderate"
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "*contact.html*" } }
+          ]
+        },
+        "eagerness": "conservative"
       }
     ]
   }

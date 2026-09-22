@@ -64,7 +64,7 @@
   <meta property="og:site_name" content="Hongrun Technology">
   <meta property="og:title" content="Contact Us | Hongrun Compressor Technology">
   <meta property="og:description" content="Contact Hongrun Technology global commercial team. Direct engineering consultation, 24-hour CAD plant room sizing estimates, and international distributor applications.">
-  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/contact/contact-hero.jpg">
+  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/banners/contact_hero_assembly.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/contact.html">
   <meta property="og:type" content="website">
 
@@ -72,8 +72,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Us | Hongrun Compressor Technology">
   <meta name="twitter:description" content="Contact Hongrun Technology global commercial team. Direct engineering consultation, 24-hour CAD plant room sizing estimates, and international distributor applications.">
-  <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/contact/contact-hero.jpg">
-<meta content="Direct contact directory for Hongrun international sales directors, clinical account managers, and 24h global RFQ desk. Factory in Zibo, Shandong, China." name="description"/>
+  <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/banners/contact_hero_assembly.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/css/tailwind.css"/>
@@ -118,10 +117,15 @@
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
-    "prerender": [
+    "prefetch": [
       {
-        "where": { "href_matches": "/*" },
-        "eagerness": "moderate"
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "*contact.html*" } }
+          ]
+        },
+        "eagerness": "conservative"
       }
     ]
   }
@@ -130,6 +134,7 @@
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <script src="/assets/js/mobile-nav.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
@@ -144,8 +149,72 @@
       <a class="inline-flex items-center gap-1 text-brand-blue hover:text-brand-sky transition font-display text-base font-semibold tracking-wide uppercase" href="news.html"><i class="fa-solid fa-newspaper text-sm"></i> News &amp; Insight</a>
       <a class="border border-brand-blue text-brand-blue font-bold px-4 py-2 rounded-sm font-display text-xs tracking-wide uppercase transition hover:bg-brand-blue hover:text-white" href="contact.html">Request a Quote</a>
     </div>
-  </div>
+      <!-- Mobile Hamburger Button -->
+    <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-lg text-slate-700 hover:text-brand-blue hover:bg-slate-300/40 focus:outline-none transition" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+    </button>
+</div>
 </nav>
+
+<!-- Mobile Navigation Drawer (Mobile-First Accessible Drawer) -->
+<div id="mobile-drawer" class="fixed inset-0 z-[60] hidden transition-opacity duration-300" aria-modal="true" role="dialog">
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+  <div class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl z-10 flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer-panel">
+    <div>
+      <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+        </a>
+        <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+      <nav class="p-4 space-y-1 text-sm font-medium text-slate-700 font-display">
+        <a href="/" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
+          <i class="fa-solid fa-house text-slate-400 w-5"></i> Home
+        </a>
+        <a href="/about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
+          <i class="fa-solid fa-building text-slate-400 w-5"></i> About Us (30 Years)
+        </a>
+        <div class="pt-1">
+          <div class="flex items-center justify-between px-3 py-2 text-xs font-bold text-slate-400 uppercase tracking-wider">
+            <span>Products</span>
+            <a href="/products.html" class="text-brand-blue text-[11px] font-semibold hover:underline">All Products &rarr;</a>
+          </div>
+          <div class="space-y-1 pl-2 border-l-2 border-slate-200 ml-3">
+            <a href="/products-hy.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HY Dental Compressors (1–10 Chairs)</a>
+            <a href="/products-hospital.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HW Hospital Scroll Systems</a>
+            <a href="/products-hvs.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HVS Dental Suction Plants</a>
+            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+            <a href="/products-water.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HRC Pure Water &amp; Disinfection</a>
+            <a href="/products-core.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">Core Pump Heads &amp; Spares</a>
+          </div>
+        </div>
+        <a href="/solutions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition mt-1">
+          <i class="fa-solid fa-diagram-project text-slate-400 w-5"></i> Solutions &amp; Sizing
+        </a>
+        <a href="/news.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
+          <i class="fa-solid fa-newspaper text-slate-400 w-5"></i> News &amp; Whitepapers
+        </a>
+        <a href="/oem-partner.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
+          <i class="fa-solid fa-handshake text-slate-400 w-5"></i> OEM/ODM Cooperation
+        </a>
+        <a href="/contact.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-brand-blue/10 text-brand-blue font-bold transition mt-2">
+          <i class="fa-solid fa-file-invoice text-brand-blue w-5"></i> Request a Quote
+        </a>
+      </nav>
+    </div>
+    <div class="p-4 border-t border-slate-200 bg-slate-50 space-y-2.5">
+      <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 rounded-lg text-xs font-bold transition shadow-sm">
+        <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
+      </a>
+      <a href="mailto:info@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
+        <i class="fa-solid fa-envelope text-slate-400"></i> info@hongrun1995.cn
+      </a>
+    </div>
+  </div>
+</div>
+
 
 <!-- Page Hero: 2-Slide Real Multi-Equipment Production Array & Automated Clean Assembly Line Carousel -->
 <section class="relative pt-20 overflow-hidden bg-slate-900">
@@ -602,6 +671,8 @@
       </div>
 
       <form id="rfqForm" class="space-y-6" novalidate>
+        <!-- Anti-Spam Honeypot Field (invisible to humans) -->
+        <input type="text" name="_gotcha" class="hidden" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div class="grid md:grid-cols-2 gap-6">
           <div>
             <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Your Name *</label>
@@ -671,8 +742,36 @@
             <p id="rfqTicketId" class="text-lg font-mono font-bold text-brand-blue mt-1">HR-RFQ-XXXXXX</p>
             <p class="text-[10px] text-slate-400 mt-1">Please save this ID for future reference and tracking.</p>
           </div>
-          <button type="button" onclick="document.getElementById(\"rfqSuccessModal\").classList.add(\"hidden\"); document.getElementById(\"rfqSuccessModal\").classList.remove(\"flex\"); document.getElementById(\"rfqForm\").reset();" class="bg-brand-blue hover:bg-brand-deep text-white px-5 py-2 rounded-lg font-semibold text-xs transition">
+          <button type="button" onclick="document.getElementById('rfqSuccessModal').classList.add('hidden'); document.getElementById('rfqSuccessModal').classList.remove('flex'); document.getElementById('rfqForm').reset();" class="bg-brand-blue hover:bg-brand-deep text-white px-5 py-2 rounded-lg font-semibold text-xs transition">
             Submit Another Request
+          </button>
+        </div>
+      </div>
+
+      <!-- Error / Fallback Modal Overlay -->
+      <div id="rfqErrorModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-7 text-center relative animate-[fadeInUp_0.4s_ease-out]">
+          <div class="w-16 h-16 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-triangle-exclamation text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 font-display mb-2">Network Transmission Delay</h3>
+          <p class="text-sm text-slate-600 mb-4">
+            We encountered a network timeout reaching the central inquiry server. Your message has been <strong>cached securely on this device</strong>.
+          </p>
+          <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-5 text-left">
+            <p class="text-[11px] text-amber-800 font-semibold uppercase tracking-wider mb-1">Recommended Instant Route:</p>
+            <p class="text-xs text-slate-600">Connect directly with our Chief Application Engineer via WhatsApp or Email for immediate technical quote.</p>
+          </div>
+          <div class="space-y-2 mb-4">
+            <a id="rfqWhatsappFallback" href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-bold text-xs transition shadow-md">
+              <i class="fa-brands fa-whatsapp text-sm"></i> Direct WhatsApp (+86-13964416725)
+            </a>
+            <a id="rfqEmailFallback" href="mailto:info@hongrun1995.cn" class="w-full inline-flex items-center justify-center gap-2 bg-brand-blue hover:bg-brand-deep text-white px-5 py-2.5 rounded-lg font-bold text-xs transition shadow-md">
+              <i class="fa-solid fa-envelope text-sm"></i> Direct Email (info@hongrun1995.cn)
+            </a>
+          </div>
+          <button type="button" onclick="document.getElementById('rfqErrorModal').classList.add('hidden'); document.getElementById('rfqErrorModal').classList.remove('flex');" class="text-xs text-slate-500 hover:text-slate-800 font-medium underline">
+            Close &amp; Edit Form
           </button>
         </div>
       </div>
@@ -722,6 +821,14 @@
 
         form.addEventListener("submit", function(e) {
           e.preventDefault();
+
+          // Check Anti-Spam Honeypot Field
+          const gotcha = form.querySelector('input[name="_gotcha"]');
+          if (gotcha && gotcha.value) {
+            console.warn("Spam submission prevented.");
+            return;
+          }
+
           let allValid = true;
           form.querySelectorAll("input[required], textarea").forEach(el => {
             if (!validateField(el)) allValid = false;
@@ -765,8 +872,15 @@
             localStorage.setItem("hr_rfq_leads", JSON.stringify(history.slice(0, 50)));
           } catch(err) { console.warn("Storage err:", err); }
 
+          // Prepare fallback links with prefilled info
+          const errorModal = document.getElementById("rfqErrorModal");
+          const waLink = document.getElementById("rfqWhatsappFallback");
+          const mailLink = document.getElementById("rfqEmailFallback");
+          const leadSummary = encodeURIComponent("Hi Hongrun, I submitted RFQ [" + generatedTicketId + "]: Name: " + payload.name + ", Email: " + payload.email + ", Country: " + payload.country + ", Product: " + payload.product + ". Please quote.");
+          if (waLink) waLink.href = "https://wa.me/8613964416725?text=" + leadSummary;
+          if (mailLink) mailLink.href = "mailto:info@hongrun1995.cn?subject=" + encodeURIComponent("Engineering RFQ: " + generatedTicketId) + "&body=" + leadSummary;
+
           // Dispatch to live Webhook endpoint (Formspree / Cloudflare / Email worker endpoint)
-          // Default endpoint fallback ensures continuous graceful degradation
           const endpoint = form.action && form.action !== "#" && !form.action.endsWith("#") 
             ? form.action 
             : "https://formspree.io/f/mqazkndr";
@@ -776,15 +890,21 @@
             headers: { "Content-Type": "application/json", "Accept": "application/json" },
             body: JSON.stringify(payload)
           }).then(response => {
-            return response.json().catch(() => ({}));
+            if (response.ok) {
+              ticketEl.textContent = generatedTicketId;
+              modal.classList.remove("hidden");
+              modal.classList.add("flex");
+              form.reset();
+            } else {
+              throw new Error("HTTP status " + response.status);
+            }
           }).catch(err => {
-            console.log("Inquiry logged to local sync cache, dispatching callback.");
+            console.error("Inquiry transmission failed:", err);
+            if (errorModal) {
+              errorModal.classList.remove("hidden");
+              errorModal.classList.add("flex");
+            }
           }).finally(() => {
-            // Display success modal with verified ticket ID
-            ticketEl.textContent = generatedTicketId;
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
-
             // Reset button state
             submitBtn.disabled = false;
             submitBtnText.textContent = "Submit Engineering Request";
@@ -849,6 +969,11 @@
           <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
+          <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> High-Tech Industrial Development Zone, Zibo, Shandong, China</p>
+          <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
+          <p><i class="fa-solid fa-envelope text-brand-blue mr-1.5" aria-hidden="true"></i> Email: <a href="mailto:info@hongrun1995.cn" class="hover:text-white transition">info@hongrun1995.cn</a></p>
+        </div>
         <div class="flex flex-wrap items-center gap-3 mt-6">
           <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="LinkedIn Official"><i class="fa-brands fa-linkedin text-base" aria-hidden="true"></i><span class="sr-only">LinkedIn Official</span></a>
           <a href="https://www.facebook.com/profile.php?id=61594460695204" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Facebook Official"><i class="fa-brands fa-facebook text-base" aria-hidden="true"></i><span class="sr-only">Facebook Official</span></a>

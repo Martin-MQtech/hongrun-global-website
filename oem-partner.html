@@ -132,10 +132,15 @@
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
-    "prerender": [
+    "prefetch": [
       {
-        "where": { "href_matches": "/*" },
-        "eagerness": "moderate"
+        "where": {
+          "and": [
+            { "href_matches": "/*" },
+            { "not": { "href_matches": "*contact.html*" } }
+          ]
+        },
+        "eagerness": "conservative"
       }
     ]
   }
@@ -144,6 +149,7 @@
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <script src="/assets/js/mobile-nav.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-slate-950 antialiased selection:bg-brand-sky selection:text-white">
 
