@@ -670,6 +670,31 @@
         <p class="text-slate-500 text-xs mt-2 max-w-xl mx-auto">Fill in your clinical or commercial requirements. Our application engineering team will send complete technical schematics and FOB/CIF pricing within 24 hours.</p>
       </div>
 
+      <!-- Quick-Select Scenario Pills (Frictionless RFQ Sizing) -->
+      <div class="mb-8 p-4 rounded-xl bg-slate-50 border border-slate-200">
+        <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2.5 flex items-center justify-between">
+          <span><i class="fa-solid fa-bolt text-amber-500 mr-1.5"></i> Quick Pre-Fill Scenario (Click to Auto-Populate):</span>
+          <span class="text-[10px] text-slate-400 font-normal hidden sm:inline">Pre-configures product &amp; message</span>
+        </div>
+        <div class="flex flex-wrap gap-2" id="quickPillsContainer">
+          <button type="button" class="quick-rfq-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-300 bg-white hover:border-brand-blue hover:text-brand-blue text-slate-700 transition flex items-center gap-1.5 cursor-pointer" data-product="Piston Oil-Free Compressors (HY/HYT Series)" data-message="Target: Solo Practice (1-2 Dental Chairs). Please provide FOB/CIF quotation, tank capacity recommendations (32L vs 50L), and 220V 50/60Hz electrical specifications for the HY-200 or HY-300.">
+            <i class="fa-solid fa-tooth text-brand-blue text-[11px]"></i> 1–2 Chairs Solo Practice
+          </button>
+          <button type="button" class="quick-rfq-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-300 bg-white hover:border-brand-blue hover:text-brand-blue text-slate-700 transition flex items-center gap-1.5 cursor-pointer" data-product="Piston Oil-Free Compressors (HY/HYT Series)" data-message="Target: Clinic with 3-5 Chairs requiring Dual-Pump Redundancy. We are interested in the HYTG-300 (90L tank, dual ZB300 heads with built-in desiccant dryer). Please send CAD dimensional drawings and pricing.">
+            <i class="fa-solid fa-hospital-user text-brand-blue text-[11px]"></i> 3–5 Chairs Dual Redundancy
+          </button>
+          <button type="button" class="quick-rfq-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-300 bg-white hover:border-brand-blue hover:text-brand-blue text-slate-700 transition flex items-center gap-1.5 cursor-pointer" data-product="Dental Vacuum Suction Systems (HVS Series)" data-message="Target: High-Vacuum Suction & Fluid Separation. Need equipment quote for HVS series (aerosol evacuation for 2-5 operatories, automatic continuous drainage, 220V/380V).">
+            <i class="fa-solid fa-shield-virus text-brand-blue text-[11px]"></i> Dental Vacuum &amp; Suction
+          </button>
+          <button type="button" class="quick-rfq-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-300 bg-white hover:border-brand-blue hover:text-brand-blue text-slate-700 transition flex items-center gap-1.5 cursor-pointer" data-product="Scroll Compressors &amp; Hospital Systems (HW/HBG Series)" data-message="Target: Hospital / Medical Gas Pipeline EPC (ISO 7396-1 / HTM 02-01). We need a central duplex/triplex medical air station with twin-tower -40°C desiccant dryer and PLC sequencing.">
+            <i class="fa-solid fa-hospital text-brand-blue text-[11px]"></i> Hospital Gas Station EPC
+          </button>
+          <button type="button" class="quick-rfq-pill text-xs font-semibold px-3 py-1.5 rounded-full border border-slate-300 bg-white hover:border-brand-blue hover:text-brand-blue text-slate-700 transition flex items-center gap-1.5 cursor-pointer" data-product="Core Components &amp; OEM Pump Units (ZB/PSA)" data-message="Target: OEM / ODM Custom Pump Head Partnership. We seek bare rocking piston compressor core heads (0.55kW–1.5kW, 8 bar) for brand private labeling. Annual estimated volume: 500–2,000 units.">
+            <i class="fa-solid fa-handshake text-brand-blue text-[11px]"></i> OEM / Private Label
+          </button>
+        </div>
+      </div>
+
       <form id="rfqForm" class="space-y-6" novalidate>
         <!-- Anti-Spam Honeypot Field (invisible to humans) -->
         <input type="text" name="_gotcha" class="hidden" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true" />
@@ -694,7 +719,7 @@
           </div>
           <div>
             <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Product System of Interest</label>
-            <select name="product" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition bg-slate-50">
+            <select name="product" id="rfqProductSelect" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition bg-slate-50">
               <option>Piston Oil-Free Compressors (HY/HYT Series)</option>
               <option>Scroll Compressors &amp; Hospital Systems (HW/HBG Series)</option>
               <option>Dental Vacuum Suction Systems (HVS Series)</option>
@@ -708,7 +733,7 @@
 
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Project Requirements &amp; Chair Count / Specs</label>
-          <textarea name="message" rows="4" minlength="10" placeholder="Please describe your chair count, building layout, required air flow (L/min), voltage/frequency, or OEM customization requirements..." class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition bg-slate-50"></textarea>
+          <textarea name="message" id="rfqMessageText" rows="4" minlength="10" placeholder="Please describe your chair count, building layout, required air flow (L/min), voltage/frequency, or OEM customization requirements..." class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition bg-slate-50"></textarea>
           <span class="field-error text-[11px] text-red-500 mt-1 hidden">Please provide a brief description of your project (at least 10 characters).</span>
         </div>
 
@@ -716,14 +741,20 @@
           <div class="text-xs text-slate-400 flex items-center gap-2">
             <i class="fa-solid fa-lock text-slate-400"></i> Your commercial information is strictly confidential.
           </div>
-          <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-8 py-3.5 rounded-lg font-bold text-sm transition shadow-lg inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
-            <span id="submitBtnText">Submit Engineering Request</span>
-            <i id="submitBtnIcon" class="fa-solid fa-paper-plane text-xs"></i>
-            <svg id="submitBtnSpinner" class="hidden w-4 h-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-            </svg>
-          </button>
+          <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <a href="https://wa.me/8613964416725?text=Hello%20Hongrun%20Engineering%2C%20I%20would%20like%20to%20request%20a%20technical%20quote%20for%20medical%20compressors." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3.5 rounded-lg font-bold text-xs transition shadow-md inline-flex items-center justify-center gap-2 shrink-0" id="instantWhatsAppBtn">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+              <span>Instant WhatsApp RFQ</span>
+            </a>
+            <button type="submit" id="submitBtn" class="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-8 py-3.5 rounded-lg font-bold text-sm transition shadow-lg inline-flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed shrink-0">
+              <span id="submitBtnText">Submit Engineering Request</span>
+              <i id="submitBtnIcon" class="fa-solid fa-paper-plane text-xs"></i>
+              <svg id="submitBtnSpinner" class="hidden w-4 h-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </form>
 
@@ -795,6 +826,44 @@
             const err = el.parentElement.querySelector(".field-error");
             if (err && !err.classList.contains("hidden")) {
               validateField(el);
+            }
+          });
+        });
+
+        // Quick Scenario Pills Logic
+        const pills = document.querySelectorAll(".quick-rfq-pill");
+        const productSelect = document.getElementById("rfqProductSelect");
+        const messageText = document.getElementById("rfqMessageText");
+        const instantWaBtn = document.getElementById("instantWhatsAppBtn");
+
+        pills.forEach(pill => {
+          pill.addEventListener("click", function() {
+            // Toggle active styling
+            pills.forEach(p => {
+              p.classList.remove("bg-brand-blue", "text-white", "border-brand-blue");
+              p.classList.add("bg-white", "text-slate-700", "border-slate-300");
+              const icon = p.querySelector("i");
+              if (icon) icon.className = icon.className.replace("text-white", "text-brand-blue");
+            });
+
+            this.classList.remove("bg-white", "text-slate-700", "border-slate-300");
+            this.classList.add("bg-brand-blue", "text-white", "border-brand-blue");
+            const activeIcon = this.querySelector("i");
+            if (activeIcon) activeIcon.className = activeIcon.className.replace("text-brand-blue", "text-white");
+
+            // Update form controls
+            if (productSelect && this.dataset.product) {
+              productSelect.value = this.dataset.product;
+            }
+            if (messageText && this.dataset.message) {
+              messageText.value = this.dataset.message;
+              validateField(messageText);
+            }
+
+            // Sync WhatsApp button link
+            if (instantWaBtn && this.dataset.message) {
+              const waText = encodeURIComponent("Hello Hongrun Engineering! I'm interested in: " + (this.dataset.product || "") + ".\n" + this.dataset.message);
+              instantWaBtn.href = "https://wa.me/8613964416725?text=" + waText;
             }
           });
         });
