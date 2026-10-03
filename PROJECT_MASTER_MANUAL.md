@@ -118,7 +118,7 @@ ightarrow$ 底层炭黑厚重收尾**：全站页面底部的结构统一为“�
 
 | 受众类型 Target Buyer | 买家画像 Buyer Persona | 核心诉求 Primary Pain Points | 网站转化入口 Site Touchpoints |
 | :--- | :--- | :--- | :--- |
-| **经销商/代理商 (Distributors)** | 目标市场的设备分销商、牙科通路商、医疗器械进口商 | 产品线完整度、利润空间、CE/ISO 13485 合规证件、区域独家保护 | 专属 Distributor 入口、Catelog 下载、认证质检背书、直发合作申请 |
+| **经销商/代理商 (Distributors)** | 目标市场的设备分销商、牙科通路商、医疗器械进口商 | 产品线完整度、利润空间、CE MDR / ISO 9001 医疗器械合规证件、区域独家保护 | 专属 Distributor 入口、Catelog 下载、认证质检背书、直发合作申请 |
 | **系统集成商 (EPC Integrators)** | 诊所装修工程总包、医院净化工程安装商 | 资质等级、管网阻力计算、两供一吸一体化交付能力 | EPC 方案页、两供一吸水汽拓扑、管径选型表、工程图纸 24h 响应 |
 | **终端机构 (End-user Clinics/Labs)** | 口腔门诊院长、三甲医院设备科长、高校分析室主任 | 零油洁净标准、静音低噪表现、标杆用户背书 (安捷伦/中科院)、持久耐用 | 单双椅/多椅智能选型配置器、30,000h 关键部件寿命指标、客户专访 |
 
@@ -155,7 +155,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 | 品类编号与名称 | 代表型号 | 核心性能与指标参数 | 国际资质与权威认证 | 单椅与多椅适用规模 |
 | :--- | :--- | :--- | :--- | :--- |
-| **01. Piston Compressors**<br>(活塞无油空压机) | `HY-100` ~ `HY-500`<br>`HYT-200` ~ `HYT-500` | 70 ~ 500 L/min<br>$\le 60	ext{ dB(A)}$ 超静音<br>双机头并联冗余供气 | ISO 8573-1 Class 0<br>CE · ISO 13485<br>国家一级能效 | 1 至 10 台牙科综合治疗台 |
+| **01. Piston Compressors**<br>(活塞无油空压机) | `HY-100` ~ `HY-500`<br>`HYT-200` ~ `HYT-500` | 70 ~ 500 L/min<br>$\le 60	ext{ dB(A)}$ 超静音<br>双机头并联冗余供气 | ISO 8573-1 Class 0<br>CE MDR · ISO 9001<br>国家一级能效 | 1 至 10 台牙科综合治疗台 |
 | **02. Dental Vacuum**<br>(口腔负压抽吸系统) | `HVS-1` ~ `HVS-10`<br>`HVS-15` ~ `HVS-50` | 300 ~ 3000 L/min<br>稳压 $-70	ext{ kPa}$ 负压<br>HEPA 0.01μm 排气过滤 | 二类医疗机械资质<br>气溶胶拦截率 $>85\%$ | 1 至 50 台牙椅中央负压系统 |
 | **03. Clean Air Source**<br>(医用洁净气源站) | `HYG-301` ~ `HYG-1000`<br>`HVTG-400` ~ `HVTG-1600` | 压力露点 $\le -40^\circ	ext{C}$<br>0.01μm 绝对过滤<br>集成冷干/吸干双塔 | ISO 8573-1 (1.1.1 级)<br>无菌干燥无油气源 | 内镜清洗、灭菌室、ICU、中心手术室 |
 | **04. Hospital & Scroll**<br>(医院中心站与涡旋机) | `HBG-400` ~ `HBG-2400`<br>`HW-200` ~ `HW-3600` | 400 ~ 3600 L/min<br>多机热备微机智能联控<br>全天候 24h 连续重载运行 | NMPA Class II 医疗器械<br>欧洲 CE 医疗认证 | 综合性三甲医院、口腔专科医院 |
@@ -334,7 +334,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
 3. **`get_compliance_certificates` (Answer 类 · 国际合规背书)**：
    - 描述：向 AI 采购智能体提供真实权威的检验报告编号与机构认证：
      - TÜV Rheinland ISO 8573-1:2010 Class 0 (0.003 mg/m³ 实测值)；
-     - DQS ISO 13485:2016 医疗器械质量管理体系；
+     - 国建联信 ISO 9001:2015 质量管理体系（医用空压机与负压机生产）；
      - CE MDR Class IIa 欧盟医疗器械准入认证；
      - NMPA 二类医疗器械注册证 (Lu-Shi-Yao-Jian-Xie-Zhun-20182560199)。
 4. **`submit_rfq_inquiry` (Transact / Sensitive Action 类 · 询盘自动化转化通道)**：
@@ -660,7 +660,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
    - **第一栏（Brand & Positioning）**：并列显示国际版透明反白 Logo（`logo_transparent.png`）与国内橙黄经典 Logo（`banners/logo_cn_orange.png`），配以 30 年品牌传承定位描述与 LinkedIn/WhatsApp/News 直达链接；
    - **第二栏（Products）**：6 大核心产品线直达链接与产品总览中心入口；
    - **第三栏（Company & Insights）**：企业故事、文化价值观、认证资质、解决方案、新闻中心与全球招商入口；
-   - **第四栏（Bottom Copyright & Certifications Baseline）**：准确版权声明 `© 2026 Hongrun Compressor Technology Co., Ltd. · Zibo, Shandong, China · All Rights Reserved.`，底线标注 `ISO 13485 · ISO 8573-1 Class 0 · CE · NMPA Class II Medical Qualification`。
+   - **第四栏（Bottom Copyright & Certifications Baseline）**：准确版权声明 `© 2026 Hongrun Compressor Technology Co., Ltd. · Zibo, Shandong, China · All Rights Reserved.`，底线标注 `Triple ISO (9001·14001·45001) · ISO 8573-1 Class 0 · CE MDR · NMPA Class II Medical Qualification`。
 2. **严禁行为**：
    - 严禁自行生造简易 4 列文字页脚；
    - 严禁填入虚拟或错误的联系方式（如禁止出现假电话号码 `+86 533 2b09eacc` 等非真实信息）；
@@ -1031,7 +1031,7 @@ graph TD
 | **01. 口腔医学与门诊 (Dental Operatories)** | 油雾导致树脂粘接剪切力骤降 35%~60% 引发继发龋；水分破坏 40万转手机陶瓷轴承；气溶胶交叉感染 | TÜV 认证 ISO 8573-1 Class 0（残油 < 0.003 mg/m³）；储气罐 220°C 纳米银抑菌内衬；HVS 两级旋风抽吸（85%+ 气溶胶抑制） | **ISO 22052** (牙科空气)<br>**ISO 10637** (牙科抽吸)<br>**NMPA 二类医疗注册** | **HY-200 / HYTG-300 / HVS-5**<br>→ 白皮书 #08、#09、#06 |
 | **02. 综合医院中心气站 (Hospital Central Gas EPC)** | ICU 呼吸机与手术麻醉供气 0 宕机容忍；管道冷凝水滋生铜绿假单胞菌/军团菌生物膜 | HW 涡旋多机组 N+1/N+2 冗余轮换；双塔分子筛 PSA 吸附干燥（-40°C 压力露点）；0.01μm 五级无菌过滤；西门子 PLC 软启 | **ISO 7396-1** (医用气体)<br>**UK HTM 02-01**<br>**US NFPA 99 / GB 50751** | **HW-200~3600 / HBG-800**<br>→ 白皮书 #04、#07 |
 | **03. 高精分析仪器与实验室 (Analytical Labs & Cleanrooms)** | 碳氢化合物造成 LC-MS / GC-MS 基线漂移与假阳性离子峰；水汽氧化色谱柱固定相与检测器灯丝 | HYG 医用级洁净压缩空气站；0.003 mg/m³ 零烃输出；13X 合成沸石双塔吸附（-40°C~-70°C 露点）；24/7 不间断纯气输送 | **ISO 8573-1 Class 0 (油)**<br>**ISO 8573-1 Class 2/1 (露点)**<br>国际仪器 OEM 准入标准 | **HYG-301 / HYG-302 / HVTG**<br>→ 白皮书 #05、#07 |
-| **04. 高端工业精密制造与 OEM (Precision OEM Supply)** | 跨国齿科台与分析仪器品牌对核心无油机头寿命、热稳定性与连续运行严苛要求 | 30 年精密智造（年产 16万台）；法国圣戈班金刚石涂层 PTFE 活塞环（20,000h 免润滑寿命）；DMG MORI 五轴 CNC（Ra≤0.2μm）；瑞典山特维克阀片（>1亿次疲劳） | **ISO 9001:2015**<br>**ISO 13485:2016**<br>国家级高新技术企业标准 | **ZB-100/200/300 裸机头**<br>**4V 气缸组 / PSA 吸附塔**<br>→ 白皮书 #10、#05 |
+| **04. 高端工业精密制造与 OEM (Precision OEM Supply)** | 跨国齿科台与分析仪器品牌对核心无油机头寿命、热稳定性与连续运行严苛要求 | 30 年精密智造（年产 16万台）；法国圣戈班金刚石涂层 PTFE 活塞环（20,000h 免润滑寿命）；DMG MORI 五轴 CNC（Ra≤0.2μm）；瑞典山特维克阀片（>1亿次疲劳） | **ISO 9001:2015**<br>**ISO 14001 / ISO 45001**<br>国家级高新技术企业标准 | **ZB-100/200/300 裸机头**<br>**4V 气缸组 / PSA 吸附塔**<br>→ 白皮书 #10、#05 |
 
 ---
 
@@ -1056,7 +1056,7 @@ graph TD
 1. `search_products`: 多条件检索 Class 0 压缩机、负压抽吸与纯水系统（支持按品类、椅子数、流量、功率过滤）。
 2. `calculate_dental_sizing`: 运行 Q = N × 50 × f 选型算法，输出精准流量、负压需求、推荐机型，并动态挂载对应白皮书链接与在线计算器入口。
 3. `get_industry_solutions`: **[V3.9 新增]** 输入行业枚举（`dental_clinic`, `hospital_epc`, `analytical_lab`, `oem_manufacturing`, `all`），返回完整工程方案蓝图、临床危害消除机理、标准清单及权威白皮书链接。
-4. `get_compliance_certificates`: 调取 ISO 8573-1 Class 0、ISO 13485、CE MDR 及 NMPA 注册证权威合规数据。
+4. `get_compliance_certificates`: 调取 ISO 8573-1 Class 0、ISO 9001、CE MDR 及 NMPA 注册证权威合规数据。
 5. `submit_rfq_inquiry`: 接收买家或 AI Agent 发起的工程询盘参数，生成带防伪校验追踪码的 RFQ 回执并存入本地采购日志。
 
 ---

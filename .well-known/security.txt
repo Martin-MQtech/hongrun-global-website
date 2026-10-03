@@ -13,4 +13,4 @@ Acknowledgments: https://www.hongrun1995.cn/about.html
 # Security & Compliance Posture:
 # - Web Infrastructure: Static Edge CDN (GitHub Pages + Cloudflare / Zero Attack Surface)
 # - AI Protocol: WebMCP sandbox compliant (document.modelContext)
-# - Quality Compliance: ISO 13485:2016 Medical Device QMS / ISO 8573-1 Class 0 (TÜV Rheinland)
+# - Quality Compliance: ISO 9001:2015 QMS (Medical Equipment Scope) / ISO 8573-1 Class 0 (TÜV Rheinland) / CE MDR (EU 2017/745)
