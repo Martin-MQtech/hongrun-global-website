@@ -17,8 +17,9 @@
 - **Authoritative Regulatory Credentials**:
   - **ISO 8573-1 Class 0 Certification**: 100% zero-oil purity standard; total hydrocarbon content < 0.003 mg/m³; zero detectable oil aerosols.
   - **NMPA Class II Medical Device Registration**: China National Medical Products Administration Class II Medical Device Manufacturing & Product License (held by only ~10% of dental compressor manufacturers).
-  - **CE Marking (EU Conformity)**: Compliant with Machinery Directive 2006/42/EC and Pressure Equipment Directive 2014/68/EU.
-  - **Triple ISO Systems**: ISO 9001:2015 (QMS with certified scope for medical oil-free compressors & dental suction), ISO 14001:2015, and ISO 45001:2018.
+  - **ISO 13485:2016 Medical Device Quality Management System**: Certified by Shanghai POSI Certification (accredited by ANAB &amp; IAF, Cert No: 381210185R1M, valid through 2027) covering R&amp;D, manufacturing and sales of dental and medical oil-free compressors, evacuation systems, and dryers.
+  - **CE Marking (EU Conformity)**: Compliant with Medical Device Regulation MDR (EU) 2017/745 and Machinery Directive 2006/42/EC.
+  - **Triple ISO Systems**: ISO 9001:2015 (QMS), ISO 14001:2015 (EMS), and ISO 45001:2018 (OHSMS).
   - **National Honors**: Specialized, Refined, Differential and Innovative Little Giant (专精特新“小巨人”), Shandong Postdoctoral Innovation Base, National Grade-1 Energy Efficiency standard.
 
 ---

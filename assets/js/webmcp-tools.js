@@ -259,6 +259,15 @@
         significance: "Zero risk of lipid contamination in dental restorations, implants, or ICU patient airways."
       },
       {
+        standard: "ISO 13485:2016 / GB/T 42061-2022",
+        category: "Medical Device Quality Management System",
+        certifiedBy: "Shanghai POSI Certification Co., Ltd. (ANAB & IAF Accredited)",
+        scope: "Development, production, and sales of dental electric oil-free air compressors, dental/oral electric suction systems, medical oil-free air compressors (sets), medical air-cooled oil-free air compressors, adsorption compressed air dryers, and medical ozone disinfectors.",
+        certificateNo: "381210185R1M",
+        validUntil: "2027-11-25",
+        significance: "Premier international medical device quality standard audited under ANAB & IAF recognition."
+      },
+      {
         standard: "ISO 9001:2015",
         category: "Quality Management System (Medical Equipment Manufacturing Scope)",
         certifiedBy: "Beijing Guojian Lianxin Certification Center / CNAS",
@@ -564,7 +573,7 @@
             { model: "4V Cylinder Blocks (2.2-3.0kW)", application: "High-Capacity Compression Modules", url: "https://www.hongrun1995.cn/products-core.html" },
             { model: "PSA Twin Adsorption Towers", application: "Medical Desiccant Dryer Modules", url: "https://www.hongrun1995.cn/products-core.html" }
           ],
-          applicableStandards: ["ISO 9001:2015 (Medical Scope)", "CE MDR (EU 2017/745)", "NMPA Class II Medical Manufacturer License"],
+          applicableStandards: ["ISO 13485:2016", "ISO 9001:2015", "CE MDR (EU 2017/745)", "NMPA Class II Medical Manufacturer License"],
           authoritativeWhitepapers: [
             "https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/",
             "https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/"
@@ -597,13 +606,13 @@
   const toolGetComplianceCertificates = {
     name: "get_compliance_certificates",
     description:
-      "Retrieve official certification data for Hongrun products, including ISO 8573-1 Class 0 oil-free report, ISO 9001:2015 medical equipment QMS certificate, CE MDR (EU 2017/745), and TÜV Rheinland inspection parameters.",
+      "Retrieve official certification data for Hongrun products, including ISO 8573-1 Class 0 oil-free report, ISO 13485:2016 medical device quality certificate, ISO 9001:2015 QMS, CE MDR (EU 2017/745), and TÜV Rheinland inspection parameters.",
     inputSchema: {
       type: "object",
       properties: {
         certificateType: {
           type: "string",
-          enum: ["ISO_8573_1_CLASS_0", "ISO_9001_QMS", "CE_MDR", "NMPA_CLASS_II", "ALL"],
+          enum: ["ISO_8573_1_CLASS_0", "ISO_13485", "ISO_9001_QMS", "CE_MDR", "NMPA_CLASS_II", "ALL"],
           description: "Specific certificate or standard to query. Use 'ALL' to retrieve full regulatory matrix."
         }
       }
@@ -619,7 +628,10 @@
           if (target.includes("8573") || target.includes("CLASS_0")) {
             return s.includes("8573") || s.includes("CLASS 0");
           }
-          if (target.includes("9001") || target.includes("QMS") || target.includes("13485")) {
+          if (target.includes("13485")) {
+            return s.includes("13485");
+          }
+          if (target.includes("9001") || target.includes("QMS")) {
             return s.includes("9001") || s.includes("QUALITY");
           }
           if (target.includes("CE") || target.includes("MDR")) {

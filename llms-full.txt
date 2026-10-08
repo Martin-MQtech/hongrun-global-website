@@ -26,7 +26,8 @@ Hongrun Technology is China's premier manufacturer of medical-grade Class 0 oil-
 - **Regulatory Accreditations**:
   - **ISO 8573-1:2010 Class 0 (100% Oil-Free)**: Certified by TÜV Rheinland. Total hydrocarbon / residual oil aerosol is measured at **0.003 mg/m³** (substantially cleaner than the ISO threshold of 0.01 mg/m³).
   - **NMPA Class II Medical Device License**: Licensed by China National Medical Products Administration for Class II medical device manufacturing (Registration: Lu-Shi-Yao-Jian-Xie-Zhun-20182560199).
-  - **CE Marking (EU)**: Conformity to Medical Device Directive (MDD 93/42/EEC) and MDR (2017/745) Class IIa; Pressure Equipment Directive (PED 2014/68/EU).
+  - **CE Marking (EU)**: Conformity to Medical Device Regulation MDR (EU 2017/745) Class IIa and Machinery Directive 2006/42/EC.
+  - **ISO 13485:2016 Medical Device Quality Management System**: Certified by Shanghai POSI Certification (accredited by ANAB &amp; IAF, Certificate No: **381210185R1M**, valid through 2027-11-25) for development, manufacturing, and sales of dental and medical oil-free compressors, suction systems, and dryers.
   - **ISO 9001:2015**: Quality Management System certified by Beijing Guojian Lianxin (CNAS) with explicit scope for manufacturing medical oil-free air compressors and medical dental electric suction units (Cert No: 0121Q11075R3M).
   - **Triple ISO Certified**: ISO 9001:2015 (QMS), ISO 14001:2015 (EMS), ISO 45001:2018 (OHSMS).
 
@@ -125,7 +126,7 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
    - Inputs: `chairCount` (integer, required), `simultaneousFactor` (number, default: 0.7), `includeSuction` (boolean), `includeWater` (boolean).
    - Action: Executes dynamic sizing math and returns exact air/vacuum flow, recommended compressor/suction models, dual-head redundancy advice, and engineering whitepaper URLs.
 3. **`get_compliance_certificates`**
-   - Inputs: `certificateType` (enum: ISO_8573_1_CLASS_0, ISO_9001_QMS, CE_MDR, NMPA_CLASS_II, ALL).
+   - Inputs: `certificateType` (enum: ISO_8573_1_CLASS_0, ISO_13485, ISO_9001_QMS, CE_MDR, NMPA_CLASS_II, ALL).
    - Action: Returns issuing accredited bodies, audit report numbers, and measured hydrocarbon levels (<0.003 mg/m³).
 4. **`submit_rfq_inquiry`**
    - Inputs: `buyerName`, `email`, `country`, `organizationOrClinic`, `targetProducts`, `dentalChairs`, `notes`.

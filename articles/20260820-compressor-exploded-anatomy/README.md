@@ -13,4 +13,4 @@
 ## Corporate Attribution
 - **Author**: Hongrun Medical Gas & Pneumatic Engineering R&D Center
 - **Manufacturer**: Shandong Hongrun Compressor Technology Co., Ltd. (Zibo, Shandong, China)
-- **Certifications**: Triple ISO (9001·14001·45001) | ISO 8573-1 Class 0 | CE MDR | NMPA Class II Medical Device
+- **Certifications**: ISO 13485:2016 | ISO 8573-1 Class 0 | CE MDR | NMPA Class II Medical Device
