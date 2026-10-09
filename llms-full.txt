@@ -197,3 +197,12 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
 - **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/
 - **Strategic Impact**: Establishes Hongrun as China's first precision medical equipment enterprise adopting W3C AI agent standards and client-side machine-readable context protocols.
 
+---
+
+## 8. Strategic Roadmap Whitepaper #11: Global Expansion & Digital Operations Matrix
+- **Core Thesis**: Systemic Precision vs. Market Fragmentation: Hongrun Technology 2026 Global Expansion Operational Strategy & Digital Operations Matrix.
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/
+- **Cinematic Tour (4K Video)**: https://youtu.be/D04COKRKcRA
+- **Strategic Impact**: 30-year engineering heritage (1995–2025), regional service hubs in Southeast Asia (Thailand & Malaysia), 5-axis CNC machining, and comprehensive digital operations matrix serving 65,000+ clinics and global distributors.
+
+
