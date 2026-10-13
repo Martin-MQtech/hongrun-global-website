@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../../assets/css/tailwind.css"/>
+
+  <style>
+    /* High-Contrast Technical Typography System (English) */
+    .article-body > p { margin-bottom: 1.35rem; line-height: 1.85; color: #334155; font-size: 0.95rem; }
+    .article-body > h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 3.25rem; margin-bottom: 1.25rem; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; }
+    .article-body > h3 { font-family: 'Oswald', sans-serif; font-weight: 600; color: #0F4C81; margin-top: 2.25rem; margin-bottom: 0.85rem; font-size: 1.3rem; letter-spacing: -0.01em; }
+    .spec-box { background: #F8FAFC; border: 1px solid #E2E8F0; border-left: 4px solid #0F4C81; }
+    .formula-card { background: #0F172A; color: #F8FAFC; border-radius: 0.75rem; padding: 1.25rem 1.5rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+
+    /* Magazine-Grade Airy Chinese Typography System (中文呼吸感排版体系) */
+    .cn-article {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      color: #334155;
+      font-size: 1.025rem;
+      line-height: 2.1;
+      letter-spacing: 0.025em;
+    }
+    .cn-article p {
+      margin-bottom: 1.75rem;
+      line-height: 2.1;
+      color: #334155;
+      text-align: justify;
+    }
+    .cn-article strong {
+      color: #0F172A;
+      font-weight: 700;
+    }
+    .cn-section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-top: 3.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .cn-section-badge {
+      background: linear-gradient(135deg, #0F4C81, #0EA5E9);
+      color: #FFFFFF !important;
+      font-weight: 800;
+      font-family: 'Oswald', sans-serif;
+      border-radius: 0.5rem;
+      padding: 0.25rem 0.65rem;
+      font-size: 0.95rem;
+      box-shadow: 0 2px 8px rgba(15,76,129,0.25);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cn-section-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.01em;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans SC", sans-serif;
+    }
+    .video-switch-btn.active {
+      background-color: #0F4C81 !important;
+      color: #FFFFFF !important;
+    }
+  </style>
+  <script src="../../assets/js/mobile-nav.js" defer></script>
+  <title>Inside the Machine: 3D CAD Deconstruction & 1,420 RPM Kinematics of Medical Oil-Free Compressors | Hongrun Technology</title>
+  <meta name="description" content="Interactive 3D mechanical breakdown: 17 core clinical components, 1,420 RPM wobble-piston kinematics, centrifugal cyclone moisture separation, and dual-tower PSA cryogenic drying."/>
+  <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/"/>
+  <meta property="og:title" content="Inside the Machine: 3D CAD Deconstruction & 1,420 RPM Kinematics of Medical Oil-Free Compressors"/>
+  <meta property="og:description" content="Explore Hongrun's 3D CAD simulator deconstructing medical oil-free compressor kinematics and -40°C desiccant drying."/>
+  <meta property="og:image" content="https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/card_cover.webp"/>
+  <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/"/>
+  <meta property="og:type" content="article"/>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
+
+<!-- Global Navigation Bar -->
+<nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <div class="hidden md:flex space-x-8 items-center">
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
+      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../solutions.html">Solutions</a>
+      <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="../../news.html"><i class="fa-solid fa-newspaper text-sm mr-1"></i> News &amp; Insights</a>
+      <a class="border border-slate-400 text-slate-600 hover:border-brand-blue hover:text-brand-blue px-4 py-2 rounded-sm font-medium text-xs transition" href="../../contact.html">Request a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Article Hero Header Section -->
+<header class="pt-28 pb-14 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
+  <div class="absolute inset-0 bg-cover bg-center opacity-15" style="background-image:url('card_cover.webp')"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-900/90 to-slate-900"></div>
+
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <nav class="flex items-center gap-2 text-xs font-medium text-slate-400 mb-6">
+      <a href="/" class="hover:text-sky-300 transition">Home</a>
+      <span>/</span>
+      <a href="../../news.html" class="hover:text-sky-300 transition">News &amp; Insights</a>
+      <span>/</span>
+      <span class="text-sky-400">Engineering Simulator #11</span>
+    </nav>
+
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="bg-emerald-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded shadow-sm inline-flex items-center gap-1.5"><i class="fa-solid fa-cube"></i> 3D CAD Simulation &middot; 110s</span>
+      <span class="bg-brand-blue text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Kinematics Breakdown &middot; Article #11</span>
+      <span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[10px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">1,420 RPM Wobble-Piston</span>
+      <span class="bg-sky-500/20 border border-sky-400/30 text-sky-300 font-semibold text-[10px] uppercase tracking-wider px-3 py-1 rounded">17 Core CAD Components</span>
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display leading-tight tracking-tight text-white mb-4 [text-shadow:0_2px_16px_rgba(0,0,0,0.6)]">
+      Inside the Machine: 3D CAD Deconstruction<br/>
+      <span class="text-sky-300">&amp; 1,420 RPM Kinematics of Medical Oil-Free Compressors</span>
+    </h1>
+
+    <p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-6">
+      Interactive 3D mechanical breakdown: 17 core clinical components, 1,420 RPM wobble-piston kinematics, centrifugal cyclone moisture separation, and dual-tower PSA cryogenic drying.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-between gap-4 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
+      <div class="flex items-center gap-3">
+        <div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display shadow-sm">M</div>
+        <span class="text-slate-100 font-medium">Martin &middot; 宏润科技国际品牌工程中心 (Hongrun Technology)</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <span><i class="fa-regular fa-calendar-check text-brand-sky"></i> September 25, 2026</span>
+        <span class="text-slate-500">•</span>
+        <span><i class="fa-regular fa-clock text-brand-sky"></i> 7 min read &middot; 110s 3D Film</span>
+        <span class="text-slate-500">•</span>
+        <a href="#chinese-version" class="text-sky-400 hover:text-white transition font-semibold"><i class="fa-solid fa-globe mr-1"></i> 中文完整版</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Article Section -->
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <article class="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 overflow-hidden">
+
+    <!-- Cinema Container (Dual-Stream Architecture: YouTube + Bilibili) -->
+  <section class="mb-12">
+    <div class="bg-slate-900 rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 text-white">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-800">
+        <div class="flex items-center gap-2.5">
+          <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
+          <h2 class="text-sm sm:text-base font-bold text-white tracking-wide uppercase font-display m-0 p-0 border-0">
+            Interactive 3D Engineering Simulator: 17 Core Components Unveiled
+          </h2>
+        </div>
+        
+        <div class="flex items-center gap-1.5 bg-slate-950 p-1 rounded-lg border border-slate-800">
+          <button id="src-btn-yt" onclick="switchVideoSource('yt')" class="video-switch-btn active px-3 py-1.5 rounded text-[11px] font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white cursor-pointer">
+            <i class="fa-brands fa-youtube text-red-400"></i> 🌐 YouTube Shorts
+          </button>
+          <button id="src-btn-bili" onclick="switchVideoSource('bili')" class="video-switch-btn px-3 py-1.5 rounded text-[11px] font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer">
+            <i class="fa-brands fa-bilibili text-sky-400"></i> 📺 哔哩哔哩 (国内直连)
+          </button>
+        </div>
+      </div>
+
+      <!-- YouTube Shorts Container -->
+      <div id="player-container-yt" class="relative aspect-video bg-black rounded-xl overflow-hidden border border-slate-800 shadow-inner">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ujT96Xtf8mM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <!-- Bilibili Container -->
+      <div id="player-container-bili" class="relative aspect-video bg-black rounded-xl overflow-hidden border border-slate-800 shadow-inner hidden">
+        <iframe class="w-full h-full" src="https://player.bilibili.com/player.html?bvid=BV1nKWA6uEXy&page=1&high_quality=1&danmaku=0&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+      </div>
+
+      <!-- Stream Footnote & Direct Links -->
+      <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
+        <div class="flex items-center gap-2">
+          <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Dual-Stream Architecture: YouTube Shorts (Global) &middot; 哔哩哔哩 Bilibili (China Direct)</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-2.5">
+          <a href="https://www.youtube.com/shorts/ujT96Xtf8mM" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-red-400 hover:text-white bg-red-950/40 hover:bg-red-900/60 border border-red-800/60 px-3 py-1 rounded transition">
+            <i class="fa-brands fa-youtube"></i> 在 YouTube 独立窗口播放 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+          <a href="https://www.bilibili.com/video/BV1nKWA6uEXy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-sky-400 hover:text-white bg-sky-950/40 hover:bg-sky-900/60 border border-sky-800/60 px-3 py-1 rounded transition">
+            <i class="fa-brands fa-bilibili"></i> 在 B站 高清直连播放 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- English Technical Article Body -->
+    <div class="article-body">
+
+      <!-- Executive Engineering Summary Box (Component 3) -->
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 not-prose mb-10">
+        <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-brand-blue mb-3">
+          <i class="fa-solid fa-microchip text-sky-600"></i> Engineering Highlights &middot; 3D Mechanical Transparency
+        </div>
+        <h3 class="text-xl font-bold font-display text-slate-900 mb-4">Kinematics &amp; Air Purification Engineering Pillars</h3>
+        <div class="grid sm:grid-cols-2 gap-4 text-sm text-slate-700">
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
+            <span><strong>1,420 RPM Wobble-Piston Architecture:</strong> One-piece self-aligning connecting rod physically eliminates gudgeon pin play and piston slap.</span>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
+            <span><strong>Dual Dynamic Counterweights:</strong> Opposed eccentric counterweights balance harmonic vibration vectors for whisper-quiet operatory stability.</span>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
+            <span><strong>Two-Stage Moisture Defense:</strong> Primary cyclone centrifugal water extraction coupled with dual-tower regenerative PSA desiccant adsorption.</span>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
+            <span><strong>-40°C Pressure Dew Point Delivery:</strong> Complete eradication of pipeline condensation and bio-burden accumulation.</span>
+          </div>
+        </div>
+      </div>
+
+      <h2>1. The Engineering Transparency Revolution: Why Physical Teardowns Are Obsolete</h2>
+      <p>
+        In mission-critical medical procurement, relying solely on glossy sales brochures is a high-stakes gamble. Conventional industrial compressors conceal critical design flaws behind cast-aluminum motor housings: undersized connecting-rod bushings, sub-standard bronze wrist pins prone to severe ovalization wear, and unbaffled air receivers that act as liquid slime reservoirs.
+      </p>
+      <p>
+        Hongrun’s <strong>3D Medical Air Interactive Simulator</strong> dismantles these information barriers. Developed directly from native parametric CAD production models, this digital twin reveals the complete kinematic heartbeat of Hongrun’s clinical compressor platforms across 17 precision subsystems.
+      </p>
+
+      <h2>2. Kinematics at 1,420 RPM: Wobble-Piston Mechanics vs Conventional Wrist-Pin Slap</h2>
+      <p>
+        Hongrun’s engineering core utilizes a proprietary <strong>one-piece wobble-piston (flexible guide-rod) design</strong>. Unlike automotive-style articulated pistons that require a wrist-pin bearing susceptible to oil degradation and knocking wear, the wobble-piston features an integrated rod-and-piston head assembly machined from aerospace-grade 6061-T6 aluminum alloy.
+      </p>
+      <p>
+        Operating at an optimized synchronous speed of 1,420 RPM (4-pole induction motor architecture), the piston ring flexes dynamically against the mirror-finished, hard-anodized cylinder bore. Dual eccentric counterweights, dynamically balanced to ISO 1940 G2.5 precision, completely cancel second-order reciprocating forces &mdash; lowering structural vibration by over 78% compared to standard workshop compressors.
+      </p>
+
+      <!-- Technical Formula Card (Component 4) -->
+      <div class="formula-card my-8 not-prose">
+        <div class="text-sky-400 font-bold text-xs uppercase tracking-wider mb-2">// KINEMATIC DYNAMIC BALANCE VECTOR FORMULA</div>
+        <div class="text-amber-300 font-mono text-sm sm:text-base font-bold mb-3">
+          F_recip = m_piston &middot; r &middot; &omega;² &middot; (cos &theta; + &lambda; cos 2&theta;) &rarr; F_net &approx; 0 N
+        </div>
+        <div class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+          &bull; &omega; = 2&pi; &middot; (1,420 / 60) &approx; 148.7 rad/s (Low-Speed Motor Design for Minimum Thermal Stress)<br/>
+          &bull; Dual Opposed Counterweights dynamically cancel primary reciprocating vectors (&plusmn;180&deg; phase shift)<br/>
+          &bull; Piston Radial Clearance: &le; 0.008 mm with Self-Lubricating Saint-Gobain Rulon PTFE Seals
+        </div>
+      </div>
+
+      <h2>3. The Dual Moisture Barrier: Centrifugal Cyclone Separation &amp; -40°C Desiccant Drying</h2>
+      <p>
+        Pipeline moisture is the primary incubator for microbial biofilm and the leading cause of premature failure in high-speed dental handpiece ceramic bearings. In the simulator’s dynamic airflow window, compressed air travels through a two-stage thermodynamic extraction cycle:
+      </p>
+      <ul class="list-disc pl-6 text-slate-700 text-sm space-y-2 mb-6">
+        <li><strong>Stage 1 (Centrifugal Cyclone Pre-Separation):</strong> High-velocity vortex spinning strips over 92% of bulk liquid water droplets and cooling aerosols prior to reaching the air receiver.</li>
+        <li><strong>Stage 2 (Dual-Tower PSA Regenerative Drying):</strong> Twin adsorption towers packed with high-capacity 13X synthetic zeolite molecular sieves purge moisture down to a verified <strong>-40&deg;C pressure dew point</strong> (ISO 8573-1 Class 2 water vapor limit).</li>
+      </ul>
+
+      <h2>4. Thirty Years of Dedicated Precision: Verified Production Architecture (1995–2025)</h2>
+      <p>
+        Every single bolt, spring-loaded reed valve, and capacitor displayed in this 3D simulator mirrors Hongrun’s live manufacturing line in Zibo, Shandong. Backed by 30 years of continuous research, NMPA Class II medical licensure, and TÜV Rheinland ISO 8573-1 Class 0 validation, Hongrun delivers uncompromised pneumatic safety to dental practices, surgical suites, and scientific laboratories worldwide.
+      </p>
+
+    </div>
+
+    <!-- =========================================================================
+         CHINESE BILINGUAL SECTION (中文权威工程技术与选型白皮书 - 杂志级呼吸感排版)
+         ========================================================================= -->
+    <div id="chinese-version" class="border-t-4 border-brand-blue pt-14 mt-20 cn-article">
+      
+      <!-- Chinese Header Anchor Banner -->
+      <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-brand-deep rounded-2xl p-6 sm:p-10 text-white mb-12 shadow-xl border border-slate-700 relative overflow-hidden not-prose">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-brand-sky/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="relative z-10">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 text-xs font-bold uppercase tracking-wider">
+              <i class="fa-solid fa-language text-sm"></i> 中文完整版白皮书 · 3D 医用空气模拟器工程拆解
+            </div>
+            <a href="#" class="inline-flex items-center gap-1.5 text-xs text-sky-300 hover:text-white transition font-medium">
+              <i class="fa-solid fa-arrow-up"></i> 返回英文版 (Back to English)
+            </a>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-sans tracking-tight leading-snug mb-3 [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
+            撕开金属外壳：全透明 3D 模拟器拆解 1,420 RPM 摆动活塞与物理极限<br class="hidden sm:inline"/>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">（为什么一张交互蓝图胜过十次物理拆机？17个精密子部件与 -40°C 深度脱水数字孪生）</span>
+          </h2>
+          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-3 border-t border-white/15">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-sky-400"></i> 发布人：Martin &middot; 宏润科技 (Hongrun Technology)</span>
+            <span class="text-slate-500">•</span>
+            <span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月25日</span>
+            <span class="text-slate-500">•</span>
+            <span><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 &middot; NMPA 二类医疗器械资质</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 01 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">01</span>
+        <h3 class="cn-section-title">工程透明度革命：为何物理拆机已被 3D 数字化解构超越</h3>
+      </div>
+      <p>
+        在严苛的医疗设备采购中，仅凭宣传册选型无异于对临床安全的盲目冒险。传统工业压缩机将其致命缺陷深藏在铸铝外壳内：简陋的活塞销铰接磨损、廉价含铜衬套的金属碎屑脱落，以及缺乏防腐涂层锈迹斑斑的气罐内胆。
+      </p>
+      <p>
+        宏润科技正式发布 <strong>3D 数字化工程级交互模拟器</strong>，彻底打破医疗机电设备的信息黑盒。直接基于原厂 CAD 参数化蓝图构建，全方位无死角向全球临床专家与工程技术官拆解宏润医用空压机的 17 大核心零部件与物理运动过程。
+      </p>
+
+      <!-- Section 02 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">02</span>
+        <h3 class="cn-section-title">1,420 RPM 动力学解析：单件摆动活塞如何从根源消灭敲缸震动</h3>
+      </div>
+      <p>
+        宏润采用<strong>单件式自对中摆动活塞（Wobble-Piston）连杆架构</strong>，从物理上消除了传统活塞销与小头衬套结构。活塞头与连杆采用航空级 6061-T6 铝合金高压一体锻造成型，活塞密封环随连杆曲轴的摆动呈周期性弹性贴合气缸内壁。
+      </p>
+      <p>
+        配合 1,420 RPM 低速 4 极铜芯电机设计与双偏心动平衡配重块，系统往复惯性力被抵消高达 90% 以上。运行微振动极低，甚至可以在满负荷运转的机壳上实现硬币直立不倒与水面无涟漪的稳定表现。
+      </p>
+
+      <!-- Section 03 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">03</span>
+        <h3 class="cn-section-title">双重阻水防线：旋流离心初级析水与 -40°C 深度吸附除水机制</h3>
+      </div>
+      <p>
+        压缩气体中的冷凝液是细菌生物膜滋生与昂贵牙科手机轴承结垢卡死的头号元凶。在 3D 气路动态追踪视窗中，气流经历两道重磅阻水关卡：
+      </p>
+      <ul class="list-disc pl-6 space-y-2 mb-6">
+        <li><strong>第一道防线（高效旋风分离器）：</strong> 压缩气体以切线方向高速切入旋风腔体，在离心力作用下析出 92% 以上的大颗粒液态冷凝水；</li>
+        <li><strong>第二道防线（双塔自再生吸附干燥器）：</strong> 气流进入充填高性能合成沸石分子筛的吸附塔，深度剥离气相水分，将压力露点深度拉低至 <strong>-40&deg;C</strong>（符合 ISO 8573-1 Class 2 湿度标准）。</li>
+      </ul>
+
+      <!-- Section 04 -->
+      <div class="cn-section-header not-prose">
+        <span class="cn-section-badge">04</span>
+        <h3 class="cn-section-title">三十载专精智造：从 CAD 原厂蓝图到临床级生命气源 (1995–2025)</h3>
+      </div>
+      <p>
+        3D 模拟器中所展示的每一颗螺栓与气阀，均凝聚着山东宏润空压机科技自 1995 年以来整整三十年的专精智造积淀。持有二类医疗器械注册备案与 TÜV Rheinland ISO 8573-1 Class 0 零级无油认证，宏润科技始终为全球口腔医学界与医疗综合体守护这口纯净气源。
+      </p>
+
+    </div>
+
+    <!-- =========================================================================
+         HIGH-END ENGINEERING CTA CONSULTATION BOX (V3.8 STANDARD)
+         ========================================================================= -->
+    <div class="bg-gradient-to-br from-slate-900 via-[#0B2545] to-[#0A192F] rounded-2xl p-8 sm:p-10 text-white shadow-2xl border border-slate-700/80 mt-14 mb-8 not-prose">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+            <i class="fa-solid fa-compass-drafting text-sky-400"></i> 3D CAD & Digital Twin Engineering Consultation
+          </div>
+          <h3 class="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight leading-snug" style="color: #FFFFFF !important;">
+            Explore 3D Digital Engineering or Request Customized CAD Files?
+          </h3>
+          <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
+            Access our complete 3D mechanical CAD model library, BIM plant-room blocks, and customized medical fluidic system schematics for dental polyclinics and hospitals.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
+          <a href="../../contact.html" class="bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
+            <i class="fa-regular fa-paper-plane"></i> Request Technical Consultation
+          </a>
+          <a href="../../products.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-all flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
+            <i class="fa-solid fa-layer-group"></i> Explore Full Catalog
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         GLOBAL & DOMESTIC SOCIAL MEDIA SHARE MATRIX (V3.8 SSOT - 14 PLATFORMS)
+         ========================================================================= -->
+    <div id="article-share-matrix" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-12 mb-8 not-prose">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b border-slate-200">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-blue flex items-center gap-1.5">
+            <i class="fa-solid fa-share-nodes text-brand-blue"></i> Multi-Channel Distribution Matrix
+          </span>
+          <h4 class="text-lg font-bold font-display text-slate-900 mt-1">
+            分享本篇白皮书至全渠道 / Share Technical Insights
+          </h4>
+        </div>
+        <div class="flex items-center gap-2">
+          <!-- Copy Link Button -->
+          <button onclick="copyArticleLink(this)" title="复制文章直链" class="h-9 px-3.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 border border-slate-300 transition-all cursor-pointer shadow-xs active:scale-95">
+            <i class="fa-solid fa-link text-xs"></i>
+            <span class="copy-text">Copy Link</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- 中国主流社交媒体 (Domestic Ecosystem) -->
+        <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200/80">
+          <div class="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-3 flex items-center justify-between">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-tower-broadcast text-teal-600"></i> 中国主流社交媒体 (Domestic Ecosystem)</span>
+            <span class="text-[10px] font-normal text-slate-400">微信扫码 · B站 · 微博</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <!-- 微信 WeChat -->
+            <button onclick="openWechatShareModal()" title="分享到微信朋友圈 / 好友" style="background-color: #07C160; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="微信分享">
+              <i class="fa-brands fa-weixin text-base" aria-hidden="true"></i>
+              <span class="sr-only">微信</span>
+            </button>
+
+            <!-- 哔哩哔哩 Bilibili -->
+            <a href="https://t.bilibili.com/" target="_blank" rel="noopener noreferrer" title="前往哔哩哔哩动态分享" style="background-color: #00AEEC; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="分享到哔哩哔哩">
+              <i class="fa-brands fa-bilibili text-base" aria-hidden="true"></i>
+              <span class="sr-only">哔哩哔哩</span>
+            </a>
+
+            <!-- 新浪微博 Weibo -->
+            <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F&title=Inside%20the%20Machine%3A%203D%20CAD%20Deconstruction%20%26%201%2C420%20RPM%20Kinematics%20of%20Medical%20Oil-Free%20Compressors" target="_blank" rel="noopener noreferrer" title="分享到新浪微博" style="background-color: #E6162D; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="分享到新浪微博">
+              <i class="fa-brands fa-weibo text-base" aria-hidden="true"></i>
+              <span class="sr-only">微博</span>
+            </a>
+
+            <!-- 抖音 / TikTok -->
+            <a href="https://www.douyin.com/" target="_blank" rel="noopener noreferrer" title="抖音官方号关注与分享" style="background-color: #000000; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="抖音">
+              <i class="fa-brands fa-tiktok text-sm" aria-hidden="true"></i>
+              <span class="sr-only">抖音</span>
+            </a>
+
+            <!-- 知乎 Zhihu -->
+            <a href="https://www.zhihu.com/share?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F&title=Inside%20the%20Machine%3A%203D%20CAD%20Deconstruction%20%26%201%2C420%20RPM%20Kinematics%20of%20Medical%20Oil-Free%20Compressors" target="_blank" rel="noopener noreferrer" title="分享到知乎问答 / 想法" style="background-color: #0066FF; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="分享到知乎">
+              <i class="fa-brands fa-zhihu text-base" aria-hidden="true"></i>
+              <span class="sr-only">知乎</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 全球商务与社群 (Global Platforms) -->
+        <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200/80">
+          <div class="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-3 flex items-center justify-between">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-sky-700"></i> 全球商务与社群 (Global Platforms)</span>
+            <span class="text-[10px] font-normal text-slate-400">8 大国际渠道</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-2.5">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" style="background-color: #0A66C2; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on LinkedIn">
+              <i class="fa-brands fa-linkedin-in text-sm" aria-hidden="true"></i>
+              <span class="sr-only">Share on LinkedIn</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://api.whatsapp.com/send?text=Inside%20the%20Machine%3A%203D%20CAD%20Deconstruction%20%26%201%2C420%20RPM%20Kinematics%20of%20Medical%20Oil-Free%20Compressors%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" style="background-color: #25D366; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share via WhatsApp">
+              <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
+              <span class="sr-only">Share via WhatsApp</span>
+            </a>
+
+            <!-- 𝕏 (Twitter) -->
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F&text=Inside%20the%20Machine%3A%203D%20CAD%20Deconstruction%20%26%201%2C420%20RPM%20Kinematics%20of%20Medical%20Oil-Free%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on 𝕏 (Twitter)" style="background-color: #000000; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on 𝕏 (Twitter)">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span class="sr-only">Share on 𝕏 (Twitter)</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F" target="_blank" rel="noopener noreferrer" title="Share on Facebook" style="background-color: #1877F2; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on Facebook">
+              <i class="fa-brands fa-facebook-f text-sm" aria-hidden="true"></i>
+              <span class="sr-only">Share on Facebook</span>
+            </a>
+
+            <!-- YouTube Channel Link -->
+            <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="Hongrun Engineering on YouTube" style="background-color: #FF0000; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Hongrun Engineering on YouTube">
+              <i class="fa-brands fa-youtube text-sm" aria-hidden="true"></i>
+              <span class="sr-only">YouTube Channel</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Follow &amp; Share on Instagram" style="background: linear-gradient(45deg, #FCAF45, #FF543E, #C837AB); color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Follow &amp; Share on Instagram">
+              <i class="fa-brands fa-instagram text-base" aria-hidden="true"></i>
+              <span class="sr-only">Instagram</span>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F&text=Inside%20the%20Machine%3A%203D%20CAD%20Deconstruction%20%26%201%2C420%20RPM%20Kinematics%20of%20Medical%20Oil-Free%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on Telegram" style="background-color: #229ED9; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on Telegram">
+              <i class="fa-brands fa-telegram text-base" aria-hidden="true"></i>
+              <span class="sr-only">Share on Telegram</span>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:?subject=Inside%20the%20Machine%3A%203D%20CAD%20Deconstruction%20%26%201%2C420%20RPM%20Kinematics%20of%20Medical%20Oil-Free%20Compressors&body=Check%20out%20this%20technical%20whitepaper%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F" title="Share via Email" style="background-color: #475569; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share via Email">
+              <i class="fa-solid fa-envelope text-sm" aria-hidden="true"></i>
+              <span class="sr-only">Share via Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </article>
+</main>
+
+<!-- ===================== VI V3.0 STANDARD GLOBAL FOOTER ===================== -->
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-10 mb-12">
+      <!-- Col 1 & 2: Brand & Positioning -->
+      <div class="md:col-span-2">
+        <div class="flex items-end gap-5 mb-4">
+          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
+          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+        </div>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
+          <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> High-Tech Industrial Development Zone, Zibo, Shandong, China</p>
+          <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
+          <p><i class="fa-solid fa-envelope text-brand-blue mr-1.5" aria-hidden="true"></i> Email: <a href="mailto:info@hongrun1995.cn" class="hover:text-white transition">info@hongrun1995.cn</a></p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 mt-6">
+          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="LinkedIn Official"><i class="fa-brands fa-linkedin text-base" aria-hidden="true"></i><span class="sr-only">LinkedIn Official</span></a>
+          <a href="https://www.facebook.com/profile.php?id=61594460695204" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Facebook Official"><i class="fa-brands fa-facebook text-base" aria-hidden="true"></i><span class="sr-only">Facebook Official</span></a>
+          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Instagram @hrmedaircom"><i class="fa-brands fa-instagram text-base" aria-hidden="true"></i><span class="sr-only">Instagram @hrmedaircom</span></a>
+          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="TikTok @hrmedaircom"><i class="fa-brands fa-tiktok text-base" aria-hidden="true"></i><span class="sr-only">TikTok @hrmedaircom</span></a>
+          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="YouTube Channel"><i class="fa-brands fa-youtube text-base" aria-hidden="true"></i><span class="sr-only">YouTube Channel</span></a>
+          <a href="https://x.com/martinhrtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="𝕏 (Twitter)"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="sr-only">𝕏 (Twitter)</span></a>
+          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Direct WhatsApp Chat"><i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i><span class="sr-only">Direct WhatsApp Chat</span></a>
+        </div>
+      </div>
+
+      <!-- Col 3: 6-Category Full Products Hub -->
+      <div>
+        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hy.html">Piston Oil-Free Compressors (HY)</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hospital.html">Scroll Compressors &amp; Hospital (HW/HBG)</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hvs.html">Dental Vacuum Systems (HVS)</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-cleanair.html">Clean Compressed Air Source (HYG/HVTG)</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-water.html">Purified Water Systems (HRC)</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-core.html">Core Components &amp; Spares</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition font-medium text-sky-400" href="../../products.html">Full Catalog &amp; Sizing Hub &rarr;</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Corporate, Technical Insights & Dealership -->
+      <div>
+        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Company &amp; Insights</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../about.html">Our 30-Year Story</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../about.html#culture">Corporate Culture &amp; Values</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../news.html">Engineering Insights Blog</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../solutions.html">Global Clinical Projects</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../contact.html">Global Dealership Program</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../contact.html">Request CAD / Engineering Specs</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Bar: Legal & Certifications -->
+    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <p>&copy; 1995&ndash;2026 Shandong Hongrun Compressor Technology Co., Ltd. All rights reserved.</p>
+        <span class="hidden md:inline text-slate-700">|</span>
+        <a href="../../privacy.html" class="hover:text-slate-300 transition">Privacy Policy</a>
+        <a href="../../terms.html" class="hover:text-slate-300 transition">Terms of Service</a>
+      </div>
+      <div class="flex items-center space-x-6 text-slate-400">
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 Certified</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-sky-400"></i> NMPA Class II Medical</span>
+        <span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-amber-400"></i> CE MDR Ready</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- WeChat QR Modal -->
+<div id="wechat-share-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs hidden" onclick="if(event.target===this)closeWechatShareModal()">
+  <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-sm w-full mx-4 shadow-2xl border border-slate-200 text-center relative animate-fade-in">
+    <button onclick="closeWechatShareModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition cursor-pointer">
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+    <div class="w-12 h-12 rounded-xl bg-[#07C160]/10 text-[#07C160] flex items-center justify-center mx-auto mb-3">
+      <i class="fa-brands fa-weixin text-2xl"></i>
+    </div>
+    <h3 class="text-lg font-bold font-display text-slate-900 mb-1">分享至微信 / Share to WeChat</h3>
+    <p class="text-xs text-slate-500 mb-4">使用微信“扫一扫”下方二维码，即可阅读并转发至好友或朋友圈</p>
+    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 inline-block shadow-inner mb-4">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&data=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260925-3d-medical-air-simulator%2F" alt="WeChat QR Code" class="w-48 h-48 rounded-lg block" loading="lazy" decoding="async"/>
+    </div>
+    <div class="text-[11px] text-slate-400">宏润科技官方白皮书 · 权威正品认证</div>
+  </div>
+</div>
+<!-- Core Scripts -->
+<script>
+function copyArticleLink(btn) {
+  var url = window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(function() {
+      var txt = btn.querySelector('.copy-text');
+      var orig = txt ? txt.textContent : '';
+      if (txt) txt.textContent = 'Copied!';
+      btn.classList.add('bg-teal-50', 'text-teal-700', 'border-teal-300');
+      setTimeout(function() {
+        if (txt) txt.textContent = orig;
+        btn.classList.remove('bg-teal-50', 'text-teal-700', 'border-teal-300');
+      }, 3000);
+    });
+  }
+}
+
+function openWechatShareModal() {
+  var m = document.getElementById('wechat-share-modal');
+  if (m) m.classList.remove('hidden');
+}
+
+function closeWechatShareModal() {
+  var m = document.getElementById('wechat-share-modal');
+  if (m) m.classList.add('hidden');
+}
+
+function switchVideoSource(source) {
+  var btnYt = document.getElementById('src-btn-yt');
+  var btnBili = document.getElementById('src-btn-bili');
+  var conYt = document.getElementById('player-container-yt');
+  var conBili = document.getElementById('player-container-bili');
+
+  if (source === 'yt') {
+    if (conYt) conYt.classList.remove('hidden');
+    if (conBili) conBili.classList.add('hidden');
+    if (btnYt) { btnYt.classList.add('active', 'bg-brand-blue', 'text-white'); btnYt.classList.remove('text-slate-400'); }
+    if (btnBili) { btnBili.classList.remove('active', 'bg-brand-blue', 'text-white'); btnBili.classList.add('text-slate-400'); }
+  } else if (source === 'bili') {
+    if (conBili) conBili.classList.remove('hidden');
+    if (conYt) conYt.classList.add('hidden');
+    if (btnBili) { btnBili.classList.add('active', 'bg-brand-blue', 'text-white'); btnBili.classList.remove('text-slate-400'); }
+    if (btnYt) { btnYt.classList.remove('active', 'bg-brand-blue', 'text-white'); btnYt.classList.add('text-slate-400'); }
+  }
+}
+</script>
+
+</body>
+</html>

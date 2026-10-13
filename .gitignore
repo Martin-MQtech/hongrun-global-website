@@ -4,3 +4,4 @@ indexnow_state.json
 # Python 运行时产物
 __pycache__/
 *.pyc
+*.mp4
