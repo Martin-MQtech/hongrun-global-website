@@ -186,6 +186,47 @@
   }
 }
 </script>
+<!-- AEO / GOOGLE AI OVERVIEWS STRUCTURED FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do 4 to 8 chair dental clinics require dual-pump redundancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single compressor represents a single point of failure (SPOF) for multi-chair practices; if the motor stops, all 4–8 operatories must shut down immediately. A dual-pump system like the Hongrun HYTG-300 features two independent ZB300 rocking piston heads on a 90L tank with automated alternating PLC control. If one head undergoes servicing, the secondary head sustains 50% capacity (200 L/min), enabling the clinic to continue priority surgical and routine treatments without clinic closure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the diversity factor (k) calculate air flow for 4 to 8 dental chairs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dental operatory air consumption is intermittent. As chair count grows, the statistical probability of simultaneous peak demand drops: for 4 chairs (k=0.60), required airflow Q = 4 × 50 × 0.60 = 120 L/min (recommended FAD ≥ 200–300 L/min); for 6 chairs (k=0.50), Q = 6 × 50 × 0.50 = 150 L/min (recommended FAD ≥ 300–400 L/min); for 8 chairs (k=0.45), Q = 8 × 50 × 0.45 = 180 L/min (recommended FAD ≥ 400 L/min, fully satisfied by Hongrun HYTG-300 providing 400 L/min)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the recommended piping diameter and loop configuration for 4 to 8 dental chairs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A closed-loop ring manifold with a main internal diameter of at least 25 mm (DN25) is strongly recommended over a linear trunk line. A ring circuit delivers air from dual directions, cutting flow velocity in half, preventing terminal operatory pressure drops, and maintaining overall line pressure loss below 0.2 bar across 50–100 meters of clinical distribution."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a 90L receiver tank essential for the HYTG-300 rather than a 50L tank?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 50L tank has insufficient buffer volume when 4 or more chairs operate simultaneous high-speed handpieces, ultrasonic scalers, and suction turbine assists, inducing rapid pressure fluctuations below 5.0 bar and causing motor hunting. The 90L nano-antibacterial silver-ion coated vessel on the HYTG-300 dampens cyclic pressure drops, reduces motor thermal cycles, and ensures steady 5.5–7.0 bar clinical air delivery."
+      }
+    }
+  ]
+}
+</script>
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
@@ -1200,6 +1241,72 @@
         </div>
       </div>
     </div>
+
+    <!-- ==========================================
+         AEO / AI DIRECT ANSWER CLINICAL & ENGINEERING FAQ SECTION (V3.0)
+         ========================================== -->
+    <section class="mt-14 mb-10 not-prose" id="engineering-faq">
+      <div class="bg-gradient-to-br from-slate-50 via-white to-blue-50/30 border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm">
+        <div class="flex items-center gap-3.5 mb-8 border-b border-slate-200 pb-5">
+          <div class="w-11 h-11 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold text-xl">
+            <i class="fa-solid fa-circle-question"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-0.5 rounded">AEO Redundancy &amp; Sizing FAQ</span>
+            <h2 class="text-xl sm:text-2xl font-bold font-display text-slate-900 mt-1">Frequently Asked Redundancy &amp; Piping Questions (4–8 Chairs)</h2>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q1</span>
+              <span>Why do 4 to 8 chair dental clinics require dual-pump redundancy?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              A single compressor represents a single point of failure (SPOF) for multi-chair practices; if the motor stops, all 4–8 operatories must shut down immediately. A dual-pump system like the <strong>Hongrun HYTG-300</strong> features two independent ZB300 rocking piston heads on a 90L tank with automated alternating PLC control. If one head undergoes servicing, the secondary head sustains <strong>50% capacity (200 L/min)</strong>, enabling the clinic to continue priority surgical and routine treatments without clinic closure.
+            </p>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q2</span>
+              <span>How does the diversity factor (k) calculate air flow for 4 to 8 dental chairs?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              Dental operatory air consumption is intermittent. As chair count grows, the statistical probability of simultaneous peak demand drops:
+              <br/><span class="block mt-1.5"><strong class="text-slate-800">· 4 Chairs (k=0.60):</strong> \(Q = 4 \times 50 \times 0.60 = 120\text{ L/min}\) (Recommended compressor FAD: \(\ge 200\text{–}300\text{ L/min}\)).</span>
+              <span class="block mt-1"><strong class="text-slate-800">· 6 Chairs (k=0.50):</strong> \(Q = 6 \times 50 \times 0.50 = 150\text{ L/min}\) (Recommended compressor FAD: \(\ge 300\text{–}400\text{ L/min}\)).</span>
+              <span class="block mt-1"><strong class="text-slate-800">· 8 Chairs (k=0.45):</strong> \(Q = 8 \times 50 \times 0.45 = 180\text{ L/min}\) (Recommended compressor FAD: \(\ge 400\text{ L/min}\), fully satisfied by <strong>Hongrun HYTG-300</strong> delivering 400 L/min).</span>
+            </p>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q3</span>
+              <span>What is the recommended piping diameter and loop configuration for 4 to 8 dental chairs?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              A <strong>closed-loop ring manifold with a main internal diameter of at least 25 mm (DN25)</strong> is strongly recommended over a linear trunk line. A ring circuit delivers air from dual directions, cutting flow velocity in half, preventing terminal operatory pressure drops, and maintaining overall line pressure loss <strong>below 0.2 bar</strong> across 50–100 meters of clinical distribution.
+            </p>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q4</span>
+              <span>Why is a 90L receiver tank essential for the HYTG-300 rather than a 50L tank?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              A 50L tank has insufficient buffer volume when 4 or more chairs operate simultaneous high-speed handpieces, ultrasonic scalers, and suction turbine assists, inducing rapid pressure fluctuations below 5.0 bar and causing motor hunting. The <strong>90L nano-antibacterial silver-ion coated vessel</strong> on the HYTG-300 dampens cyclic pressure drops, reduces motor thermal cycles, and ensures steady 5.5–7.0 bar clinical air delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ==========================================
          GLOBAL SOCIAL MEDIA & MULTI-PLATFORM SHARE BAR (V3.0)

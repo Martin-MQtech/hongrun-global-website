@@ -185,6 +185,47 @@
   }
 }
 </script>
+<!-- AEO / GOOGLE AI OVERVIEWS STRUCTURED FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much air flow (CFM / L/min) is required for 1 to 3 dental chairs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard dental operatory consumes approximately 50 L/min of air at 0.5–0.7 MPa during active procedures. Applying clinical diversity factors (k): 1 Chair requires 50 L/min (recommended FAD ≥ 65–100 L/min, Hongrun HY-100); 2 Chairs require 85 L/min with k=0.85 (recommended FAD ≥ 100–150 L/min, Hongrun HY-200); 3 Chairs require 105 L/min with k=0.70 (recommended FAD ≥ 150–200 L/min, Hongrun HY-300 with 50L receiver)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a 32L air tank superior to a 24L tank for a 2-chair dental clinic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 24L receiver causes small dental compressors to cycle on and off 16 to 22 times per hour during peak clinical procedures, triggering thermal fatigue on start capacitors and reed valves. A 32L receiver (standard on Hongrun HY-200) increases air buffer capacity by 33%, dropping motor starts to 10–12 cycles per hour, reducing internal operational temperatures by 12–15°C and prolonging PTFE composite piston ring lifespan beyond 20,000 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the acoustic and cabinet ventilation requirements for under-counter dental compressors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under-counter installations require at least 150 mm perimeter clearance and dual diagonal ventilation louvers of at least 300 × 200 mm (bottom intake, top exhaust fan rated for ≥ 180 m³/h). Operating ambient cabinet temperature must remain below 40°C to prevent desiccant dryer saturation and thermal protection trips, maintaining sound emissions at ≤ 55 dB(A)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Must small 1-3 chair dental clinics comply with ISO 8573-1 Class 0 oil-free standards?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Trace oil aerosols (>0.01 mg/m³) from oil-lubricated compressors compromise composite resin photopolymerization, causing restoration debonding, and destroy high-speed handpiece ceramic turbine bearings within months. Hongrun HY series delivers 100% oil-free air with residual hydrocarbons below 0.003 mg/m³ tested by TÜV Rheinland, fully complying with ISO 22052 and ISO 8573-1 Class 0."
+      }
+    }
+  ]
+}
+</script>
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
@@ -1119,6 +1160,72 @@
         </div>
       </div>
     </div>
+
+    <!-- ==========================================
+         AEO / AI DIRECT ANSWER CLINICAL & ENGINEERING FAQ SECTION (V3.0)
+         ========================================== -->
+    <section class="mt-14 mb-10 not-prose" id="engineering-faq">
+      <div class="bg-gradient-to-br from-slate-50 via-white to-blue-50/30 border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm">
+        <div class="flex items-center gap-3.5 mb-8 border-b border-slate-200 pb-5">
+          <div class="w-11 h-11 rounded-xl bg-brand-blue/10 flex items-center justify-center text-brand-blue font-bold text-xl">
+            <i class="fa-solid fa-circle-question"></i>
+          </div>
+          <div>
+            <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-0.5 rounded">AEO Clinical &amp; Sizing FAQ</span>
+            <h2 class="text-xl sm:text-2xl font-bold font-display text-slate-900 mt-1">Frequently Asked Clinical Sizing Questions (1–3 Chairs)</h2>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <!-- FAQ Item 1 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q1</span>
+              <span>How much air flow (CFM / L/min) is required for 1 to 3 dental chairs?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              A standard dental operatory consumes approximately <strong>50 L/min of air at 0.5–0.7 MPa</strong> during active procedures. Applying clinical diversity factors (<code class="bg-slate-100 px-1 py-0.5 rounded text-brand-blue font-mono">k</code>):
+              <br/><span class="block mt-1.5"><strong class="text-slate-800">· 1 Chair:</strong> \(Q = 1 \times 50 \times 1.0 = 50\text{ L/min}\) (Recommended FAD: \(\ge 65\text{–}100\text{ L/min}\), matched by <strong>Hongrun HY-100</strong>).</span>
+              <span class="block mt-1"><strong class="text-slate-800">· 2 Chairs:</strong> \(Q = 2 \times 50 \times 0.85 = 85\text{ L/min}\) (Recommended FAD: \(\ge 100\text{–}150\text{ L/min}\), matched by <strong>Hongrun HY-200</strong> with 32L tank).</span>
+              <span class="block mt-1"><strong class="text-slate-800">· 3 Chairs:</strong> \(Q = 3 \times 50 \times 0.70 = 105\text{ L/min}\) (Recommended FAD: \(\ge 150\text{–}200\text{ L/min}\), matched by <strong>Hongrun HY-300</strong> with 50L receiver).</span>
+            </p>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q2</span>
+              <span>Why is a 32L air tank superior to a 24L tank for a 2-chair dental clinic?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              A 24L receiver causes small dental compressors to cycle on and off <strong>16 to 22 times per hour</strong> during peak clinical procedures, triggering thermal fatigue on start capacitors and reed valves. A 32L receiver (standard on the Hongrun HY-200) increases air buffer capacity by 33%, dropping motor starts to <strong>10–12 cycles per hour</strong>, reducing internal operational temperatures by 12–15°C and prolonging PTFE composite piston ring lifespan beyond 20,000 hours.
+            </p>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q3</span>
+              <span>What are the acoustic and cabinet ventilation requirements for under-counter dental compressors?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              Under-counter installations require at least <strong>150 mm perimeter clearance</strong> and dual diagonal ventilation louvers of at least 300 × 200 mm (bottom intake, top exhaust fan rated for \(\ge 180\text{ m}^3/\text{h}\)). Operating ambient cabinet temperature must remain below 40°C to prevent desiccant dryer saturation and thermal protection trips, maintaining sound emissions at \(\le 55\text{ dB(A)}\).
+            </p>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q4</span>
+              <span>Must small 1-3 chair dental clinics comply with ISO 8573-1 Class 0 oil-free standards?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              <strong>Yes.</strong> Trace oil aerosols (\(>0.01\text{ mg/m}^3\)) from oil-lubricated compressors compromise composite resin photopolymerization, causing restoration debonding, and destroy high-speed handpiece ceramic turbine bearings within months. Hongrun HY series delivers 100% oil-free air with residual hydrocarbons <strong>below 0.003 mg/m³</strong> tested by TÜV Rheinland, fully complying with ISO 22052 and ISO 8573-1 Class 0.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ==========================================
          GLOBAL SOCIAL MEDIA & MULTI-PLATFORM SHARE BAR (V3.0)
