@@ -148,83 +148,155 @@
 <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   <article class="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 overflow-hidden">
 
-    <!-- Cinema Container (Dual-Stream Architecture: YouTube + Bilibili) -->
-  <section class="mb-12">
-    <div class="bg-slate-900 rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 text-white">
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-800">
-        <div class="flex items-center gap-2.5">
-          <span class="w-3 h-3 rounded-full bg-blue-500 animate-pulse"></span>
-          <h2 class="text-sm sm:text-base font-bold text-white tracking-wide uppercase font-display m-0 p-0 border-0">
-            Interactive 3D Engineering Simulator: 17 Core Components Unveiled
+    <!-- Video Showcase & Engineering Highlights (Muqi-style 2-Column Responsive Layout) -->
+    <section class="mb-14 not-prose">
+      <!-- Section Header -->
+      <div class="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue mb-1">
+            <span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></span>
+            <span>Video Showcase &middot; 3D Engineering Simulator</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold font-display text-slate-900 m-0 p-0 border-0">
+            Interactive 3D Engineering Simulator: 17 Core Subsystems Unveiled
           </h2>
         </div>
+        <!-- Dual Stream Platform Switcher Tabs -->
+        <div class="flex items-center gap-1 bg-slate-900 p-1 rounded-xl shadow-inner border border-slate-800">
+          <button id="switch-btn-yt" onclick="selectPlatform('yt', 'ujT96Xtf8mM', 'BV1nKWA6uEXy')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer">
+            <i class="fa-brands fa-youtube text-red-400"></i> <span>YouTube Shorts</span>
+          </button>
+          <button id="switch-btn-bili" onclick="selectPlatform('bili', 'ujT96Xtf8mM', 'BV1nKWA6uEXy')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer">
+            <i class="fa-brands fa-bilibili text-sky-400"></i> <span>哔哩哔哩 (国内直连)</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 2-Column Grid: Left Phone Mockup, Right 3 Engineering Metric Cards -->
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
         
-        <div class="flex items-center gap-1.5 bg-slate-950 p-1 rounded-lg border border-slate-800">
-          <button id="src-btn-yt" onclick="switchVideoSource('yt')" class="video-switch-btn active px-3 py-1.5 rounded text-[11px] font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white cursor-pointer">
-            <i class="fa-brands fa-youtube text-red-400"></i> 🌐 YouTube Shorts
-          </button>
-          <button id="src-btn-bili" onclick="switchVideoSource('bili')" class="video-switch-btn px-3 py-1.5 rounded text-[11px] font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer">
-            <i class="fa-brands fa-bilibili text-sky-400"></i> 📺 哔哩哔哩 (国内直连)
-          </button>
-        </div>
-      </div>
+        <!-- Left: Vertical 9:16 Smartphone Mockup Container (lg:col-span-5) -->
+        <div class="lg:col-span-5 flex flex-col items-center">
+          <div class="w-full max-w-[320px] bg-slate-950 p-3 sm:p-3.5 rounded-[2.5rem] shadow-2xl border-4 border-slate-800 ring-1 ring-white/10 relative">
+            
+            <!-- Dynamic Island / Speaker Notch -->
+            <div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-slate-900 rounded-full z-30 flex items-center justify-center gap-2 border border-slate-800">
+              <span class="w-2 h-2 rounded-full bg-slate-950"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/80"></span>
+            </div>
 
-      <!-- YouTube Shorts Container -->
-      <div id="player-container-yt" class="relative aspect-video bg-black rounded-xl overflow-hidden border border-slate-800 shadow-inner">
-        <iframe class="w-full h-full" src="https://www.youtube.com/embed/ujT96Xtf8mM?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
+            <!-- Screen Area with Exact 9:16 Aspect Ratio -->
+            <div class="relative w-full rounded-[2rem] overflow-hidden bg-black shadow-inner" style="aspect-ratio: 9/16;">
+              
+              <!-- 1. Cover State (Poster + Play Overlay) -->
+              <div id="poster-cover-wrapper" class="relative w-full h-full group cursor-pointer" onclick="startInlineVideo('ujT96Xtf8mM', 'BV1nKWA6uEXy')">
+                <img src="video_poster_9_16.webp" alt="Interactive 3D Engineering Simulator Video Cover" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-slate-950/60 pointer-events-none"></div>
 
-      <!-- Bilibili Container -->
-      <div id="player-container-bili" class="relative aspect-video bg-black rounded-xl overflow-hidden border border-slate-800 shadow-inner hidden">
-        <iframe class="w-full h-full" src="https://player.bilibili.com/player.html?bvid=BV1nKWA6uEXy&page=1&high_quality=1&danmaku=0&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-      </div>
+                <!-- Top Status Overlay inside Screen -->
+                <div class="absolute top-6 left-0 right-0 px-4 flex items-center justify-between pointer-events-none z-10 text-[10px] text-white/80 font-mono">
+                  <span class="flex items-center gap-1.5 bg-black/40 backdrop-blur px-2 py-0.5 rounded-full border border-white/10">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> 4K UHD
+                  </span>
+                  <span class="bg-black/40 backdrop-blur px-2 py-0.5 rounded-full border border-white/10">9:16 Vertical</span>
+                </div>
 
-      <!-- Stream Footnote & Direct Links -->
-      <div class="mt-4 pt-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
-        <div class="flex items-center gap-2">
-          <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>Dual-Stream Architecture: YouTube Shorts (Global) &middot; 哔哩哔哩 Bilibili (China Direct)</span>
+                <!-- Center Pulsing Play Button -->
+                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
+                  <div class="w-16 h-16 rounded-full bg-white/95 text-[#0F4C81] flex items-center justify-center shadow-2xl shadow-blue-900/50 group-hover:scale-110 group-hover:bg-white transition duration-300 pointer-events-auto">
+                    <i class="fa-solid fa-play text-xl translate-x-0.5 text-[#0F4C81]"></i>
+                  </div>
+                  <span class="mt-3 text-xs font-semibold text-white/90 bg-black/60 backdrop-blur px-3 py-1 rounded-full border border-white/20 tracking-wide">
+                    Click to Play Video
+                  </span>
+                </div>
+
+                <!-- Bottom Title Tag inside Screen -->
+                <div class="absolute bottom-4 left-4 right-4 z-10 pointer-events-none text-center">
+                  <p class="text-xs font-semibold text-white/95 drop-shadow line-clamp-2">
+                    Hongrun 3D Medical Air Kinematic Simulator
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2. Active Inline Player State (Hidden by Default) -->
+              <div id="inline-player-wrapper" class="hidden relative w-full h-full bg-black">
+                <!-- Return / Close Button -->
+                <button onclick="closeInlineVideo()" class="absolute top-3 right-3 z-30 bg-black/80 hover:bg-red-600 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur border border-white/20 transition flex items-center gap-1 cursor-pointer shadow-lg" title="Close Video">
+                  <i class="fa-solid fa-xmark"></i> <span>Close</span>
+                </button>
+                <div id="inline-iframe-slot" class="w-full h-full"></div>
+              </div>
+
+            </div>
+
+            <!-- Bottom Home Indicator Bar -->
+            <div class="w-24 h-1 bg-slate-700 rounded-full mx-auto mt-2"></div>
+          </div>
+
+          <!-- Dual External Direct Jump Buttons Below Mockup -->
+          <div class="flex items-center gap-2 mt-3.5 w-full max-w-[320px] justify-center">
+            <a href="https://www.youtube.com/shorts/ujT96Xtf8mM" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 px-2 bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition">
+              <i class="fa-brands fa-youtube text-red-600"></i> YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+            <a href="https://www.bilibili.com/video/BV1nKWA6uEXy/" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 px-2 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition">
+              <i class="fa-brands fa-bilibili text-sky-600"></i> Bilibili <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+          </div>
         </div>
-        <div class="flex flex-wrap items-center gap-2.5">
-          <a href="https://www.youtube.com/shorts/ujT96Xtf8mM" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-red-400 hover:text-white bg-red-950/40 hover:bg-red-900/60 border border-red-800/60 px-3 py-1 rounded transition">
-            <i class="fa-brands fa-youtube"></i> 在 YouTube 独立窗口播放 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
-          <a href="https://www.bilibili.com/video/BV1nKWA6uEXy/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-sky-400 hover:text-white bg-sky-950/40 hover:bg-sky-900/60 border border-sky-800/60 px-3 py-1 rounded transition">
-            <i class="fa-brands fa-bilibili"></i> 在 B站 高清直连播放 <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
+
+        <!-- Right: 3 Vertically Stacked Engineering Metric Cards (lg:col-span-7) -->
+        <div class="lg:col-span-7 space-y-4">
+          
+          <!-- Card 1 -->
+          <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">1,420 RPM</div>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-50 text-brand-blue border border-blue-200/60">
+                Wobble-Piston Kinematics
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-1.5">Direct-Drive Flexible Guide Rod Architecture</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
+              One-piece self-aligning connecting rod physically eliminates gudgeon pin play and piston slap, ensuring exceptional operational durability and whisper-quiet operatory stability.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">&le;52 dB(A)</div>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200/60">
+                Dynamic Equilibrium
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-1.5">Dual Harmonic Balancing Counterweights</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
+              Opposed eccentric counterweights balance harmonic vibration vectors to ISO 1940 Grade G2.5 rotor standards, completely isolating mechanical vibration from sensitive clinical environments.
+            </p>
+          </div>
+
+          <!-- Card 3 (With Distinctive Left Border Highlight Matching Reference) -->
+          <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200" style="border-left: 4px solid #0F4C81;">
+            <div class="flex items-center justify-between gap-3 mb-2">
+              <div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">-40&deg;C PDP</div>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                Cryogenic Desiccant Drying
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-1.5">Two-Stage Regenerative PSA Air Purity</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
+              Primary centrifugal cyclone moisture extraction coupled with dual-tower regenerative desiccant adsorption strips 100% micro-droplet humidity and bio-burden accumulation.
+            </p>
+          </div>
+
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
     <!-- English Technical Article Body -->
     <div class="article-body">
-
-      <!-- Executive Engineering Summary Box (Component 3) -->
-      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8 not-prose mb-10">
-        <div class="flex items-center gap-2.5 text-xs font-bold uppercase tracking-wider text-brand-blue mb-3">
-          <i class="fa-solid fa-microchip text-sky-600"></i> Engineering Highlights &middot; 3D Mechanical Transparency
-        </div>
-        <h3 class="text-xl font-bold font-display text-slate-900 mb-4">Kinematics &amp; Air Purification Engineering Pillars</h3>
-        <div class="grid sm:grid-cols-2 gap-4 text-sm text-slate-700">
-          <div class="flex items-start gap-2.5">
-            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-            <span><strong>1,420 RPM Wobble-Piston Architecture:</strong> One-piece self-aligning connecting rod physically eliminates gudgeon pin play and piston slap.</span>
-          </div>
-          <div class="flex items-start gap-2.5">
-            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-            <span><strong>Dual Dynamic Counterweights:</strong> Opposed eccentric counterweights balance harmonic vibration vectors for whisper-quiet operatory stability.</span>
-          </div>
-          <div class="flex items-start gap-2.5">
-            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-            <span><strong>Two-Stage Moisture Defense:</strong> Primary cyclone centrifugal water extraction coupled with dual-tower regenerative PSA desiccant adsorption.</span>
-          </div>
-          <div class="flex items-start gap-2.5">
-            <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-            <span><strong>-40°C Pressure Dew Point Delivery:</strong> Complete eradication of pipeline condensation and bio-burden accumulation.</span>
-          </div>
-        </div>
-      </div>
 
       <h2>1. The Engineering Transparency Revolution: Why Physical Teardowns Are Obsolete</h2>
       <p>
@@ -618,23 +690,60 @@ function closeWechatShareModal() {
   if (m) m.classList.add('hidden');
 }
 
-function switchVideoSource(source) {
-  var btnYt = document.getElementById('src-btn-yt');
-  var btnBili = document.getElementById('src-btn-bili');
-  var conYt = document.getElementById('player-container-yt');
-  var conBili = document.getElementById('player-container-bili');
+var activePlatform = 'yt';
 
-  if (source === 'yt') {
-    if (conYt) conYt.classList.remove('hidden');
-    if (conBili) conBili.classList.add('hidden');
-    if (btnYt) { btnYt.classList.add('active', 'bg-brand-blue', 'text-white'); btnYt.classList.remove('text-slate-400'); }
-    if (btnBili) { btnBili.classList.remove('active', 'bg-brand-blue', 'text-white'); btnBili.classList.add('text-slate-400'); }
-  } else if (source === 'bili') {
-    if (conBili) conBili.classList.remove('hidden');
-    if (conYt) conYt.classList.add('hidden');
-    if (btnBili) { btnBili.classList.add('active', 'bg-brand-blue', 'text-white'); btnBili.classList.remove('text-slate-400'); }
-    if (btnYt) { btnYt.classList.remove('active', 'bg-brand-blue', 'text-white'); btnYt.classList.add('text-slate-400'); }
+function selectPlatform(platform, videoId, biliBvid) {
+  activePlatform = platform;
+  var btnYt = document.getElementById('switch-btn-yt');
+  var btnBili = document.getElementById('switch-btn-bili');
+  if (platform === 'yt') {
+    if (btnYt) {
+      btnYt.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer';
+    }
+    if (btnBili) {
+      btnBili.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer';
+    }
+  } else {
+    if (btnBili) {
+      btnBili.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer';
+    }
+    if (btnYt) {
+      btnYt.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer';
+    }
   }
+  
+  var playerWrapper = document.getElementById('inline-player-wrapper');
+  if (playerWrapper && !playerWrapper.classList.contains('hidden')) {
+    startInlineVideo(videoId, biliBvid);
+  }
+}
+
+function startInlineVideo(videoId, biliBvid) {
+  var coverWrapper = document.getElementById('poster-cover-wrapper');
+  var playerWrapper = document.getElementById('inline-player-wrapper');
+  var iframeContainer = document.getElementById('inline-iframe-slot');
+  if (!playerWrapper || !iframeContainer) return;
+
+  var embedSrc = '';
+  if (activePlatform === 'yt') {
+    embedSrc = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0&playsinline=1';
+  } else {
+    embedSrc = 'https://player.bilibili.com/player.html?bvid=' + biliBvid + '&page=1&high_quality=1&danmaku=0&autoplay=1';
+  }
+
+  iframeContainer.innerHTML = '<iframe class="w-full h-full rounded-[2rem]" src="' + embedSrc + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen scrolling="no"></iframe>';
+  
+  if (coverWrapper) coverWrapper.classList.add('hidden');
+  playerWrapper.classList.remove('hidden');
+}
+
+function closeInlineVideo() {
+  var coverWrapper = document.getElementById('poster-cover-wrapper');
+  var playerWrapper = document.getElementById('inline-player-wrapper');
+  var iframeContainer = document.getElementById('inline-iframe-slot');
+  if (iframeContainer) iframeContainer.innerHTML = '';
+  if (playerWrapper) playerWrapper.classList.add('hidden');
+  if (coverWrapper) coverWrapper.classList.remove('hidden');
 }
 </script>
 
