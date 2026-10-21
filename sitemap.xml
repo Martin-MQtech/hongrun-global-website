@@ -117,7 +117,25 @@
   </url>
 
 
-  <!-- Engineering Whitepapers & Insight Articles (11) -->
+  <!-- Engineering Whitepapers & Insight Articles -->
+  <url>
+    <loc>https://www.hongrun1995.cn/articles/20261021-dentech-china-2026/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/</loc>
     <lastmod>2026-09-03</lastmod>
