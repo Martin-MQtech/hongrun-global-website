@@ -718,19 +718,14 @@
           <i class="fa-solid fa-industry text-brand-blue"></i>
           <span class="font-bold text-xs text-slate-800">Figure 4.0: Hongrun Technology Corporate Headquarters &amp; Advanced Manufacturing Facility</span>
         </div>
-        <!-- Toggle Switcher -->
-        <div class="inline-flex rounded-lg border border-slate-300 p-0.5 bg-slate-200 text-xs">
-          <button id="btn-hq-en" onclick="switchHqView('en')" class="img-toggle-btn active px-3 py-1 rounded-md text-xs font-semibold">
-            English Milestone View
-          </button>
-          <button id="btn-hq-zh" onclick="switchHqView('zh')" class="img-toggle-btn px-3 py-1 rounded-md text-xs text-slate-700 hover:text-slate-900">
-            中文原图
-          </button>
-        </div>
+        <!-- Authentic Milestone Photo Badge -->
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-semibold bg-brand-blue text-white shadow-sm">
+          <i class="fa-solid fa-building"></i> Headquarters &amp; Manufacturing Center
+        </span>
       </div>
       
       <div class="relative bg-slate-100 flex items-center justify-center p-2">
-        <img id="img-hq" src="factory_hq_en.webp" alt="Hongrun Technology Headquarters and 30-Year Medical Compressor Manufacturing Center" class="w-full h-auto object-cover rounded-xl max-h-[500px] transition-opacity duration-300"/>
+        <img id="img-hq" src="factory_hq_zh.webp" alt="Hongrun Technology Corporate Headquarters and 30-Year Medical Compressor Manufacturing Center" class="w-full h-auto object-cover rounded-xl max-h-[500px] transition-opacity duration-300"/>
       </div>
       
       <div class="p-4 bg-slate-50 text-xs text-slate-600 border-t border-slate-200">
@@ -1154,17 +1149,7 @@
 
   function switchHqView(lang) {
     const img = document.getElementById('img-hq');
-    const btnEn = document.getElementById('btn-hq-en');
-    const btnZh = document.getElementById('btn-hq-zh');
-    if (lang === 'zh') {
-      img.src = 'factory_hq_zh.webp';
-      btnZh.classList.add('active');
-      btnEn.classList.remove('active');
-    } else {
-      img.src = 'factory_hq_en.webp';
-      btnEn.classList.add('active');
-      btnZh.classList.remove('active');
-    }
+    if (img) img.src = 'factory_hq_zh.webp';
   }
 </script>
 
