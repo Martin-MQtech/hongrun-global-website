@@ -10,6 +10,8 @@
     style.textContent = `
       #mobile-drawer.hidden { display: none !important; }
       #mobile-drawer:not(.hidden) { display: block !important; }
+      #mobile-drawer { z-index: 100 !important; }
+      #mobile-drawer-panel { width: 85% !important; max-width: 24rem; overflow-y: auto; }
       #mobile-drawer-panel.translate-x-full { transform: translateX(100%) !important; }
       #mobile-drawer-panel.translate-x-0 { transform: translateX(0) !important; }
     `;
@@ -68,9 +70,16 @@
       <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 px-4 rounded-lg text-xs font-bold transition shadow-sm">
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
       </a>
-      <a href="mailto:info@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
-        <i class="fa-solid fa-envelope text-slate-400"></i> info@hongrun1995.cn
-      </a>
+      <div>
+        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
+        <a href="mailto:martinchen@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
+          <i class="fa-solid fa-envelope text-slate-400"></i> martinchen@hongrun1995.cn
+        </a>
+      </div>
+      <div class="pt-2 mt-2 border-t border-slate-200 text-center">
+        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
+        <a href="mailto:info@hongrun1995.cn" class="text-[11px] text-slate-500 hover:text-brand-blue transition">info@hongrun1995.cn</a>
+      </div>
     </div>
   </div>
 </div>`;

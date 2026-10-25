@@ -1,4 +1,4 @@
-/* Global Lightbox — click any thumbnail to view 4K Ultra-HD version */
+/* Global Lightbox — click any thumbnail or data-hd trigger to view the full-size image */
 (function() {
   var lb = null;
   var caption = null;
@@ -41,7 +41,7 @@
     var img = lb.querySelector('img');
     img.src = src;
     img.alt = alt || '';
-    caption.textContent = alt ? (alt + ' — Ultra-HD Inspection Blueprint') : 'Hongrun Medical Precision Product Blueprint (Ultra-HD)';
+    caption.textContent = alt ? (alt + ' — Hongrun Medical') : 'Hongrun Medical';
     lb.style.display = 'flex';
     setTimeout(function(){ lb.style.opacity = '1'; }, 10);
     document.body.style.overflow = 'hidden';
@@ -56,26 +56,37 @@
     }, 250);
   }
 
-  // Event delegation: capture clicks on any image with data-hd, data-zoom, or thumbnail
+  // Event delegation: images and explicit triggers such as "View Gallery" spans
   document.addEventListener('click', function(e) {
     var t = e.target;
     if (!t) return;
-    
-    // CRITICAL: If the image or its parent is inside an <a> link, let the link navigate normally! Do NOT open lightbox!
-    if (t.closest('a')) {
-      return;
+
+    // Let real links navigate normally
+    if (t.closest('a')) return;
+
+    var trigger = t.closest('[data-hd], [data-zoom]');
+    if (!trigger) return;
+
+    var hdSrc = trigger.getAttribute('data-hd');
+    var alt = trigger.getAttribute('alt') || '';
+
+    if (!hdSrc) {
+      var img = trigger.tagName === 'IMG' ? trigger : trigger.querySelector('img');
+      if (!img) return;
+      hdSrc = img.getAttribute('data-hd') || img.getAttribute('src');
+      if (!alt) alt = img.getAttribute('alt') || '';
     }
-    
-    // Direct image with data-hd or inside a card/zoom element
-    if (t.tagName === 'IMG') {
-      var hdSrc = t.getAttribute('data-hd');
-      if (hdSrc) {
-        e.preventDefault();
-        openLightbox(hdSrc, t.alt);
-      } else if (t.closest('[data-zoom]')) {
-        e.preventDefault();
-        openLightbox(t.src, t.alt);
-      }
+
+    if (!hdSrc) return;
+
+    if (!alt) {
+      var article = trigger.closest('article');
+      var heading = article && article.querySelector('h1, h2, h3');
+      if (heading) alt = heading.textContent.trim();
     }
+    if (!alt) alt = trigger.textContent.trim();
+
+    e.preventDefault();
+    openLightbox(hdSrc, alt);
   });
 })();
