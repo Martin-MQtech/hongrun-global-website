@@ -220,4 +220,56 @@ For technical specifications, pneumatic sizing guidelines, and distributor inqui
 **https://www.hongrun1995.cn/**
 
 **Official Corporate Portal**:  
-Website: https://www.hongrun1995.cn/warranty-policy.html  
+Website: https://www.hongrun1995.cn/warranty-policy.html
+
+---
+
+## Part 4: Overseas Blog & Media Asset Engineering SOP (博客与多媒体资产发布铁律 · 后续 Agent 执行标准)
+
+本规范为后续任何 AI 智能体（Agent）接手海外技术博客（Substack / Medium / WordPress / Blogger）与公关通稿发布时必须 100% 遵照的不可逾越之标准：
+
+### 1. 资质证书防盗水印准则 (Certificate Anti-Theft Watermark SSOT)
+- **拒绝暴力与过度防御（告别刺眼深红）**：严禁采用大红、深红等具有严重破坏性的警示颜色，严禁密集网格排布，避免破坏证书严肃性与审计可读性。
+- **色彩与透明度**：统一采用**高雅商务石板灰（Neutral Slate Grey，RGB: `105, 115, 130` / Hex: `#697382`）**，透明度严格锁定在 **约 40%**（`alpha = 105/255`），达到“**隐约可见水印存在，既具防伪穿透力，又丝毫不影响审计机构逐字核对公章与注册编号**”的专业境界。
+- **稀疏舒缓全幅斜纹（密度降低 2/3）**：
+  - 倾斜角度：**+32° ~ +35° 优雅向上对角线**；
+  - 行间距：**200 ~ 220px**，整张 A4 证书纵向仅贯穿 **5~6 条对角线暗纹**，保持大面积清爽呼吸感；
+  - 英文证书标准文案：`HONGRUN MEDICAL · FOR REFERENCE ONLY · DO NOT COPY`（Arial Bold 36pt）
+  - 中文证书标准文案：`HONGRUN 宏润医疗 · 仅供审核参考 · 严禁盗用 · DO NOT COPY`（Hiragino Sans GB 34pt）
+- **覆盖要件**：斜纹必须掠过证书编号（`381210185R1M`）、公司全称、三类医疗器械体系认证范围、波西（POSI）认证公章与总经理签字区。
+
+### 2. 产品实拍与 3D 剖解图透明水印规范 (Product & 3D Anatomy Watermark SSOT)
+- **右下角品牌与官方网址复合徽标 (Bottom-Right Brand Badge)**：
+  - 原厂金属质感橙蓝官方 Logo + 官方网址 `www.hongrun1995.cn`（无衬线字体，带 1px 柔和白色微投影）；
+  - 徽标宽度为底图宽度的 **30% ~ 32%**，透明度严格锁定为 **55% 半透明**（`alpha = 0.55`），保留 3.5% 安全外边距。
+- **画面核心区防裁剪微暗纹 (Center Anti-Crop Micro-Watermark)**：
+  - 画面中心中轴区叠加倾斜暗纹 `HONGRUN · www.hongrun1995.cn`，透明度 **15%**，防止第三方二次裁切。
+- **母版绝对隔离归档**：
+  - 原始无水印棚拍大图必须完整保留于 `hrtech/assets/images/products/unwatermarked_masters/`，严禁直接覆盖破坏原片。
+
+### 3. 破损白底抠图彻底清退铁律 (Zero Broken Cutouts Policy)
+- **严禁生成与引用 `*-cutout.*` 文件**：历史由于白底自动抠图导致的 68 个边缘咬蚀、脚轮缺失图片已彻底清除。
+- **真实完整工程摄影**：大型复合气站必须使用完整原厂棚拍大图（如 `assets/images/products/hd/HYT-500.jpg` 1920×1534），完整保留万向刹车脚轮、耐高压不锈钢金属编织软管与自然物理阴影。
+
+### 4. 博客去软文化与学术极客文风 (De-Commercialization & Pure Tech Voice)
+- **联系方式全面清零**：严禁出现任何销售邮箱、WhatsApp、手机直拨电话或物理门牌号；
+- **唯一定位**：打造纯粹的医疗流体动力装备白皮书与技术文献，全文仅保留官方技术门户反链：`https://www.hongrun1995.cn/`；
+- **实事求是不吹牛**：严禁使用“超级工厂 (megafactory)”或虚构“DMG MORI 5轴”等未经核实的字眼，必须使用“专精特新自动化制造基地”与“高精密自动化数控加工中心集群”；寿命必须严谨区隔“核心机械结构设计寿命 20,000 小时，自润滑皮碗常规更换周期 8,000~10,000 小时”。
+- **非标定制与高端模块免责说明**：文中涉及法国圣戈班 PTFE 活塞环、瑞典山特维克阀片、纳米银离子抗菌涂层气罐、PLC 智能交替双机柜时，必须强制嵌入独立提示框，声明此类均为针对特殊机构的定制选配项，合同与交付严格以正式技术协议与形式发票为准。
+
+### 5. Substack CMS ProseMirror 底层事务级持久化与 CDN 穿透协议
+- **ProseMirror 状态树事务更新**：Substack 编辑器为 ProseMirror 架构，直接修改 DOM `img.src` 无法生效。必须通过 ProseMirror 事务级 API：
+  ```javascript
+  const el = document.querySelector('.ProseMirror');
+  const view = el.editor?.view || el.pmViewDesc?.view;
+  let tr = view.state.tr;
+  view.state.doc.descendants((node, pos) => {
+    if (node.type.name === 'image2') {
+      tr = tr.setNodeMarkup(pos, null, Object.assign({}, node.attrs, { src: freshUrl, width: 992, height: 1403 }));
+    }
+  });
+  view.dispatch(tr);
+  ```
+- **CDN 路径去重穿透**：Substack 外部拉取器忽略 URL 查询参数。更新图片必须使用新的物理文件名（如 `-watermarked.jpg`）或 `raw.githubusercontent.com` 路径，强制触发全新 S3 媒体转存；
+- **两段式发布确认**：点击 `Update` 按钮后必须进一步在弹窗中点击 `Update now`，确保线上实时生效。
+
