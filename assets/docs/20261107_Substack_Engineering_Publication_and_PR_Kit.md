@@ -149,7 +149,7 @@ In contrast, a duplex system like the **Hongrun HYTG-300** mounts two independen
 > **Modular Redundancy Notice (冗余模块与储气罐说明)**:  
 > *Duplex parallel configurations (N+1), intelligent alternating PLC controllers, and optional internal nano-antibacterial silver-ion tank coatings are specialized modular configurations (HYTG and HYT series) engineered for surgical centers and polyclinics requiring high-availability uptime.*
 
-![Hongrun HYT-500 Duplex Redundant System](https://www.hongrun1995.cn/assets/images/products/HYT-500-cutout.png)
+![Hongrun HYT-500 Duplex Redundant System](https://www.hongrun1995.cn/assets/images/products/hd/HYT-500.jpg)
 *Figure 5.0: Hongrun HYT Series duplex multi-pump redundant station mounted on ASME/PED receiver vessel.*
 
 ---
@@ -188,8 +188,8 @@ Compare the detailed engineering benchmarks in our technical review: [Hongrun vs
 
 Founded in November 1995 in the National High-Tech Industrial Development Zone of Zibo, Shandong Province, China, **Hongrun Compressor Technology Co., Ltd.** operates a 20,000 m² automated manufacturing facility with an annual capacity exceeding 160,000 units. Certified under **ISO 13485:2016** (Medical Device QMS, Cert: `381210185R1M`), CE MDR Class IIa, and TÜV Rheinland ISO 8573-1 Class 0, Hongrun pneumatic solutions are trusted by 65,000+ clinics and medical institutions across 50+ countries.
 
-![ISO 13485:2016 Medical Device Certificate](https://www.hongrun1995.cn/assets/images/certs/certifications/08-iso-13485-medical-device-qms.webp)
-*Figure 8.0: Hongrun ISO 13485:2016 Medical Device Quality Management System Certificate (No. 381210185R1M) accredited by ANAB & IAF.*
+![ISO 13485:2016 Medical Device Certificate (Official Watermarked Specimen)](https://www.hongrun1995.cn/assets/images/certs/certifications/08-iso-13485-medical-device-qms.webp)
+*Figure 8.0: Hongrun ISO 13485:2016 Medical Device Quality Management System Certificate (No. 381210185R1M) accredited by ANAB & IAF (Official Verification Specimen).*
 
 **Official Technical Resource**: [https://www.hongrun1995.cn/](https://www.hongrun1995.cn/)
 
