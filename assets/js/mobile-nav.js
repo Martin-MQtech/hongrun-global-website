@@ -61,6 +61,9 @@
         <a href="/oem-partner.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
           <i class="fa-solid fa-handshake text-slate-400 w-5"></i> OEM/ODM Cooperation
         </a>
+        <a href="/warranty-policy.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
+          <i class="fa-solid fa-shield-halved text-slate-400 w-5"></i> Warranty Policy
+        </a>
         <a href="/contact.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-brand-blue/10 text-brand-blue font-bold transition mt-2">
           <i class="fa-solid fa-file-invoice text-brand-blue w-5"></i> Request a Quote
         </a>

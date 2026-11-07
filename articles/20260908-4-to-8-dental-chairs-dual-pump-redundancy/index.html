@@ -223,6 +223,14 @@
         "@type": "Answer",
         "text": "A 50L tank has insufficient buffer volume when 4 or more chairs operate simultaneous high-speed handpieces, ultrasonic scalers, and suction turbine assists, inducing rapid pressure fluctuations below 5.0 bar and causing motor hunting. The 90L nano-antibacterial silver-ion coated vessel on the HYTG-300 dampens cyclic pressure drops, reduces motor thermal cycles, and ensures steady 5.5–7.0 bar clinical air delivery."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "What size air compressor is needed for an 8-chair dental clinic in CFM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For an 8-chair dental clinic, standard clinical sizing rules specify 1.5 to 2.0 CFM per active chair at 80–100 PSI (5.5–7.0 bar). Applying the statistical diversity coefficient k=0.45 to 0.48, peak simultaneous consumption is 10.6 to 12.4 CFM (300 to 350 L/min). To prevent single-point downtime, a duplex redundant system such as the Hongrun HYTG-300 or HYT-400 (4.5 to 6.0 HP / 3.3 to 4.4 kW, 14.1 to 17.7 CFM displacement with a 90L to 150L ASME/PED tank) is recommended."
+      }
     }
   ]
 }
@@ -265,8 +273,34 @@
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1 inline-flex items-center gap-1" href="../../news.html"><i class="fa-solid fa-newspaper text-sm"></i> News &amp; Insights</a>
       <a class="border border-slate-400 text-slate-600 hover:border-brand-blue hover:text-brand-blue px-4 py-2 rounded-sm font-medium text-xs transition" href="../../contact.html">Request a Quote</a>
     </div>
+    <!-- Mobile Hamburger Button -->
+    <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-lg text-slate-700 hover:text-brand-blue hover:bg-slate-300/40 focus:outline-none transition" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobile-drawer">
+      <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-drawer" class="fixed inset-0 z-[100] hidden transition-opacity duration-300" aria-modal="true" role="dialog">
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
+  <div class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl z-10 flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer-panel">
+    <div>
+      <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
+        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain"></a>
+        <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <nav class="p-4 space-y-1 text-sm font-medium text-slate-700 font-display">
+        <a href="/" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-house text-slate-400 w-5"></i> Home</a>
+        <a href="../../about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-building text-slate-400 w-5"></i> About Us (30 Years)</a>
+        <a href="../../products.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-boxes-stacked text-slate-400 w-5"></i> Products</a>
+        <a href="../../solutions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-diagram-project text-slate-400 w-5"></i> Solutions &amp; Sizing</a>
+        <a href="../../news.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-newspaper text-slate-400 w-5"></i> News &amp; Whitepapers</a>
+        <a href="../../warranty-policy.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-shield-halved text-slate-400 w-5"></i> Warranty Policy</a>
+        <a href="../../contact.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-bold transition mt-2"><i class="fa-solid fa-file-invoice text-brand-blue w-5"></i> Request a Quote</a>
+      </nav>
+    </div>
+  </div>
+</div>
 
 <!-- Standard Article Header -->
 <header class="pt-28 pb-10 bg-slate-950 text-white relative overflow-hidden border-b border-slate-800">
@@ -456,8 +490,37 @@
       </div>
     </div>
 
+    <!-- CFM & HP Engineering Conversion Reference Box -->
+    <div class="my-6 p-5 bg-sky-50/70 border border-sky-200 rounded-xl not-prose">
+      <div class="flex items-center gap-2 text-brand-blue font-bold font-display text-sm mb-2">
+        <i class="fa-solid fa-calculator text-brand-sky"></i>
+        <span>Global Clinical Engineering Standard: CFM ↔ L/min &amp; HP Sizing Rules</span>
+      </div>
+      <p class="text-xs text-slate-700 leading-relaxed mb-3">
+        In international clinical engineering practice (US NFPA 99 / EU dental guidelines), operatory pneumatic consumption follows <strong>1.5 to 2.0 CFM per dental chair at 80–100 PSI (5.5–7.0 bar)</strong>, or approximately <strong>0.5 to 0.75 HP per active operatory</strong>. 
+        Using Hongrun's empirical formula \(Q = [\sum (q_i \times \eta_i) \times N + q_{\text{milling}}] \times k \times S\):
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+        <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
+          <div class="text-slate-500 font-sans text-[11px]">4-Chair Operatory</div>
+          <div class="text-brand-blue font-bold text-sm mt-0.5">4.9 &ndash; 6.0 CFM <span class="text-xs text-slate-500 font-normal">(140&ndash;170 L/min)</span></div>
+          <div class="text-slate-600 font-sans text-[11px] mt-1">Recommended: 1.5–3.0 HP duplex</div>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
+          <div class="text-slate-500 font-sans text-[11px]">6-Chair Polyclinic</div>
+          <div class="text-brand-blue font-bold text-sm mt-0.5">7.8 &ndash; 9.2 CFM <span class="text-xs text-slate-500 font-normal">(220&ndash;260 L/min)</span></div>
+          <div class="text-slate-600 font-sans text-[11px] mt-1">Recommended: 3.0 HP duplex (HYTG-300)</div>
+        </div>
+        <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
+          <div class="text-slate-500 font-sans text-[11px]">8-Chair Clinic / Surgicenter</div>
+          <div class="text-brand-blue font-bold text-sm mt-0.5">10.6 &ndash; 12.4 CFM <span class="text-xs text-slate-500 font-normal">(300&ndash;350 L/min)</span></div>
+          <div class="text-slate-600 font-sans text-[11px] mt-1">Recommended: 4.5–6.0 HP duplex (HYT-400/500)</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Simultaneous Load Table -->
-    <h3 class="text-base font-bold text-brand-dark mt-6 mb-3">Table 1.0: 4–8 Chair Sizing Matrix, Flow Rates, and Pipe Diameter Guidelines</h3>
+    <h3 class="text-base font-bold text-brand-dark mt-6 mb-3">Table 1.0: 4–8 Chair Sizing Matrix (Dual Units: L/min ↔ CFM, kW ↔ HP)</h3>
     <div class="overflow-x-auto not-prose mb-8">
       <table class="w-full text-xs text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-sm">
         <thead>
@@ -465,7 +528,7 @@
             <th class="p-3">Clinic Scale</th>
             <th class="p-3">Active Chairs</th>
             <th class="p-3">Diversity Factor (k)</th>
-            <th class="p-3">Peak Clinical Flow (@ 5.0 bar)</th>
+            <th class="p-3">Peak Clinical Flow (@ 5.0 bar / 72.5 PSI)</th>
             <th class="p-3">Main Header / Branch Pipe</th>
             <th class="p-3">Recommended Hongrun Solution</th>
           </tr>
@@ -475,33 +538,33 @@
             <td class="p-3 font-semibold text-brand-dark">Compact 3–4 Chair Clinic</td>
             <td class="p-3 font-mono">3 &ndash; 4 Chairs</td>
             <td class="p-3 font-mono text-brand-blue font-bold">0.60 &ndash; 0.65</td>
-            <td class="p-3 font-mono font-bold text-slate-900">140 &ndash; 170 L/min</td>
+            <td class="p-3 font-mono font-bold text-slate-900">140 &ndash; 170 L/min <span class="text-brand-sky font-normal font-sans">(4.9 &ndash; 6.0 CFM)</span></td>
             <td class="p-3 font-mono text-slate-600">DN20 (3/4") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-blue-100 text-brand-blue font-bold px-2 py-0.5 rounded">HY-300 (1.1 kW) or HYTG-300</span></td>
+            <td class="p-3"><span class="bg-blue-100 text-brand-blue font-bold px-2 py-0.5 rounded">HY-300 (1.1 kW / 1.5 HP) or HYTG-300</span></td>
           </tr>
           <tr class="hover:bg-emerald-50/50 bg-emerald-50/20">
             <td class="p-3 font-semibold text-brand-dark">Standard 4–6 Chair Polyclinic</td>
             <td class="p-3 font-mono">4 &ndash; 6 Chairs</td>
             <td class="p-3 font-mono text-emerald-700 font-bold">0.50 &ndash; 0.55</td>
-            <td class="p-3 font-mono font-bold text-emerald-800">220 &ndash; 260 L/min</td>
+            <td class="p-3 font-mono font-bold text-emerald-800">220 &ndash; 260 L/min <span class="text-emerald-700 font-normal font-sans">(7.8 &ndash; 9.2 CFM)</span></td>
             <td class="p-3 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">HYTG-300 (2.2 kW · 90L)</span></td>
+            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">HYTG-300 (2.2 kW / 3.0 HP · 90L)</span></td>
           </tr>
           <tr class="hover:bg-amber-50/50">
             <td class="p-3 font-semibold text-brand-dark">High-Volume 6–8 Chair Center</td>
             <td class="p-3 font-mono">6 &ndash; 8 Chairs</td>
             <td class="p-3 font-mono text-amber-700 font-bold">0.45 &ndash; 0.48</td>
-            <td class="p-3 font-mono font-bold text-slate-900">300 &ndash; 350 L/min</td>
+            <td class="p-3 font-mono font-bold text-slate-900">300 &ndash; 350 L/min <span class="text-amber-700 font-normal font-sans">(10.6 &ndash; 12.4 CFM)</span></td>
             <td class="p-3 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">HYT-400 / HYT-500 (3.3–4.4 kW)</span></td>
+            <td class="p-3"><span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">HYT-400 / HYT-500 (3.3–4.4 kW / 4.5–6.0 HP)</span></td>
           </tr>
           <tr class="hover:bg-purple-50/50">
             <td class="p-3 font-semibold text-brand-dark">8–12 Chair Surgical Hospital</td>
             <td class="p-3 font-mono">8 &ndash; 12 Chairs</td>
             <td class="p-3 font-mono text-purple-700 font-bold">0.40 &ndash; 0.45</td>
-            <td class="p-3 font-mono font-bold text-slate-900">420 &ndash; 520 L/min</td>
+            <td class="p-3 font-mono font-bold text-slate-900">420 &ndash; 520 L/min <span class="text-purple-700 font-normal font-sans">(14.8 &ndash; 18.4 CFM)</span></td>
             <td class="p-3 font-mono text-slate-600">DN32 (1-1/4") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">HYT-500 (4.4 kW · 200L)</span></td>
+            <td class="p-3"><span class="bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">HYT-500 (4.4 kW / 6.0 HP · 200L)</span></td>
           </tr>
         </tbody>
       </table>
@@ -852,6 +915,34 @@
         基于上述公式，4 至 8 台牙椅门诊的管径规格与选型推荐如下表所示：
       </p>
 
+      <!-- CFM & HP Dual Unit Reference Box CN -->
+      <div class="my-6 p-5 bg-sky-50/70 border border-sky-200 rounded-xl not-prose">
+        <div class="flex items-center gap-2 text-brand-blue font-bold font-display text-sm mb-2">
+          <i class="fa-solid fa-calculator text-brand-sky"></i>
+          <span>国际临床工程双单位对照：L/min ↔ CFM 流量换算与马力（HP）配比基准</span>
+        </div>
+        <p class="text-xs text-slate-700 leading-relaxed mb-3">
+          国际工程与欧美牙科规范（如 US NFPA 99）通常以 <strong>每台牙椅 1.5 ～ 2.0 CFM（@ 80–100 PSI / 5.5–7.0 bar）</strong> 或 <strong>每台椅 0.5 ～ 0.75 HP</strong> 作为选型基准。根据宏润临床实测公式：
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
+          <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
+            <div class="text-slate-500 font-sans text-[11px]">紧凑 3~4 椅诊所</div>
+            <div class="text-brand-blue font-bold text-sm mt-0.5">140 ～ 170 L/min <span class="text-xs text-slate-500 font-normal">(4.9 ～ 6.0 CFM)</span></div>
+            <div class="text-slate-600 font-sans text-[11px] mt-1">推荐功率：1.5 ～ 3.0 HP (1.1~2.2 kW)</div>
+          </div>
+          <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
+            <div class="text-slate-500 font-sans text-[11px]">标准 4~6 椅门诊部</div>
+            <div class="text-brand-blue font-bold text-sm mt-0.5">220 ～ 260 L/min <span class="text-xs text-slate-500 font-normal">(7.8 ～ 9.2 CFM)</span></div>
+            <div class="text-slate-600 font-sans text-[11px] mt-1">推荐功率：3.0 HP 双泵 (HYTG-300)</div>
+          </div>
+          <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
+            <div class="text-slate-500 font-sans text-[11px]">高负荷 6~8 椅专科中心</div>
+            <div class="text-brand-blue font-bold text-sm mt-0.5">300 ～ 350 L/min <span class="text-xs text-slate-500 font-normal">(10.6 ～ 12.4 CFM)</span></div>
+            <div class="text-slate-600 font-sans text-[11px] mt-1">推荐功率：4.5 ～ 6.0 HP 双泵 (HYT-400/500)</div>
+          </div>
+        </div>
+      </div>
+
       <!-- Sizing Table CN -->
       <div class="overflow-x-auto not-prose my-8">
         <table class="w-full text-xs sm:text-sm text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-md">
@@ -860,9 +951,9 @@
               <th class="py-3.5 px-4">门诊规模</th>
               <th class="py-3.5 px-4">牙椅数量</th>
               <th class="py-3.5 px-4">同时使用系数 (k)</th>
-              <th class="py-3.5 px-4">高峰气量需求 (@ 0.5 MPa)</th>
+              <th class="py-3.5 px-4">高峰气量需求 (@ 0.5 MPa / 72.5 PSI)</th>
               <th class="py-3.5 px-4">主干管 / 分支管推荐管径</th>
-              <th class="py-3.5 px-4">推荐宏润主力机型</th>
+              <th class="py-3.5 px-4">推荐宏润主力机型（功率与马力）</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-700">
@@ -870,33 +961,33 @@
               <td class="py-3.5 px-4 font-semibold text-slate-900">紧凑型 3~4 椅门诊</td>
               <td class="py-3.5 px-4 font-mono">3 ～ 4 台</td>
               <td class="py-3.5 px-4 font-mono text-brand-blue font-bold">0.60 ～ 0.65</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">140 ～ 170 L/min</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">140 ～ 170 L/min <span class="text-brand-sky font-normal text-xs">(4.9 ～ 6.0 CFM)</span></td>
               <td class="py-3.5 px-4 font-mono text-slate-600">DN20 (3/4") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-blue-100 text-brand-blue font-bold px-2.5 py-1 rounded">HY-300 (1.1 kW) 或 HYTG-300</span></td>
+              <td class="py-3.5 px-4"><span class="bg-blue-100 text-brand-blue font-bold px-2.5 py-1 rounded">HY-300 (1.1 kW / 1.5 HP) 或 HYTG-300</span></td>
             </tr>
             <tr class="hover:bg-emerald-50/40 bg-emerald-50/20 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">标准 4~6 椅口腔门诊部</td>
               <td class="py-3.5 px-4 font-mono">4 ～ 6 台</td>
               <td class="py-3.5 px-4 font-mono text-emerald-700 font-bold">0.50 ～ 0.55</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">220 ～ 260 L/min</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">220 ～ 260 L/min <span class="text-emerald-700 font-normal text-xs">(7.8 ～ 9.2 CFM)</span></td>
               <td class="py-3.5 px-4 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded">HYTG-300 (2.2 kW · 90L大罐)</span></td>
+              <td class="py-3.5 px-4"><span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded">HYTG-300 (2.2 kW / 3.0 HP · 90L大罐)</span></td>
             </tr>
             <tr class="hover:bg-amber-50/40 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">高负荷 6~8 椅专科门诊</td>
               <td class="py-3.5 px-4 font-mono">6 ～ 8 台</td>
               <td class="py-3.5 px-4 font-mono text-amber-700 font-bold">0.45 ～ 0.48</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">300 ～ 350 L/min</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">300 ～ 350 L/min <span class="text-amber-700 font-normal text-xs">(10.6 ～ 12.4 CFM)</span></td>
               <td class="py-3.5 px-4 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">HYT-400 / HYT-500 (3.3~4.4 kW)</span></td>
+              <td class="py-3.5 px-4"><span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">HYT-400 / HYT-500 (3.3~4.4 kW / 4.5~6.0 HP)</span></td>
             </tr>
             <tr class="hover:bg-purple-50/40 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">8~12 椅口腔专科医院</td>
               <td class="py-3.5 px-4 font-mono">8 ～ 12 台</td>
               <td class="py-3.5 px-4 font-mono text-purple-700 font-bold">0.40 ～ 0.45</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">420 ～ 520 L/min</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">420 ～ 520 L/min <span class="text-purple-700 font-normal text-xs">(14.8 ～ 18.4 CFM)</span></td>
               <td class="py-3.5 px-4 font-mono text-slate-600">DN32 (1-1/4") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded">HYT-500 (4.4 kW · 200L机组)</span></td>
+              <td class="py-3.5 px-4"><span class="bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded">HYT-500 (4.4 kW / 6.0 HP · 200L机组)</span></td>
             </tr>
           </tbody>
         </table>
@@ -1302,6 +1393,17 @@
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
               A 50L tank has insufficient buffer volume when 4 or more chairs operate simultaneous high-speed handpieces, ultrasonic scalers, and suction turbine assists, inducing rapid pressure fluctuations below 5.0 bar and causing motor hunting. The <strong>90L nano-antibacterial silver-ion coated vessel</strong> on the HYTG-300 dampens cyclic pressure drops, reduces motor thermal cycles, and ensures steady 5.5–7.0 bar clinical air delivery.
+            </p>
+          </div>
+
+          <!-- FAQ Item 5 (CFM Sizing Direct Answer) -->
+          <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
+              <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q5</span>
+              <span>What size compressor is needed for an 8-chair dental clinic in CFM and HP?</span>
+            </h3>
+            <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
+              For an 8-chair dental clinic, clinical engineering standards recommend <strong>1.5 to 2.0 CFM per dental chair at 80–100 PSI (5.5–7.0 bar)</strong>. Applying the simultaneous diversity coefficient (k = 0.45), the required peak continuous flow is <strong>10.6 to 12.4 CFM (300 to 350 L/min)</strong>. To eliminate single-point downtime, an 8-chair clinic should install a duplex redundant unit such as the <strong>Hongrun HYTG-300 or HYT-400 (4.5 to 6.0 HP total / 3.3 to 4.4 kW)</strong> delivering <strong>14.1 to 17.7 CFM (400 to 500 L/min)</strong> backed by a 90L to 150L air receiver tank.
             </p>
           </div>
         </div>

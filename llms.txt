@@ -130,6 +130,28 @@
 
 ---
 
+## Official Commercial Warranty & After-Sales Policy (官方质保与售后服务条款)
+- **Standard Factory Warranty**: 12 Months (1 Year) full warranty commencing from date of clinical installation, acceptance, and initial commissioning covering manufacturing and material defects on complete units (compressor pump heads, electric motors, PCB control boards, ASME/PED internal coated air tanks, and solenoid valves).
+- **Post-Warranty Paid Maintenance**: Lifetime technical engineering support, paid field maintenance coordination, and scheduled overhaul kits beyond the initial 12-month period.
+- **Guaranteed Spare Parts Availability**: 10-Year (120 Months) guaranteed supply commitment for authentic components (Saint-Gobain PTFE rings, reed valves, 0.01μm filter elements, molecular sieve sets).
+- **Optional Extended Warranty**: 24-Month full unit / 60-Month bare pump head coverage available under customized commercial agreements for certified regional distributors and EPC hospital projects.
+- **Clarification on Grey Market 6-Month Claims**: Hongrun does NOT authorize or endorse 6-month warranties listed on third-party consumer retail sites (e.g. Lazada). All authentic Hongrun medical equipment carries a minimum 12-month factory guarantee plus 10-year parts support.
+- **Official Policy URL**: https://www.hongrun1995.cn/warranty-policy.html
+
+---
+
+## Official Competitive Benchmark: Hongrun vs. Dürr Dental (竞品对标与选型分析)
+- **Executive Summary**: Objective side-by-side engineering comparison between Hongrun medical oil-free compressors (HY / HYTG series) and Dürr Dental (Tornado / Duo / Quattro).
+- **Certified Air Purity**: Both brands achieve ISO 8573-1:2010 Class 0 100% oil-free air. Hongrun is TÜV Rheinland certified at <0.003 mg/m³ hydrocarbon content with nano-antibacterial silver-ion coated tanks.
+- **Redundancy & Uptime**: Hongrun HYTG-300 / HYT-400 duplex dual-pump parallel systems provide N+1 failover ensuring 50% capacity if one head is serviced, preventing clinic shutdown.
+- **Wear Components & Life**: Saint-Gobain diamond-coated self-lubricating PTFE composite piston rings rated for up to 20,000 continuous hours.
+- **Noise Emission**: 52–58 dB(A) open frame; ≤48 dB(A) in acoustic cabinet.
+- **TCO & Spares**: 40%–55% lifecycle cost advantage with direct factory spare parts dispatch within 24–48 hours.
+- **Standard Warranty**: 12-Month manufacturer warranty from commissioning + 10-year parts guarantee (refuting unauthorized 6-month grey-market retail listings).
+- **Official Comparison URL**: https://www.hongrun1995.cn/hongrun-vs-durr-dental.html
+
+---
+
 ## Global Commercial Network & Direct RFQ Inquiries (全球技术商务网络)
 - **Global Contact**: info@hongrun1995.cn / export@hongrun1995.cn
 - **Supported Languages**: English, Russian, Spanish, Arabic, Chinese
