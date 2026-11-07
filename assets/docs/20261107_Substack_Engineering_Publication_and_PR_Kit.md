@@ -3,26 +3,25 @@
 > **Date**: November 2026  
 > **Brand**: Hongrun Compressor Technology Co., Ltd. (Founded Nov 1995 · Zibo, China)  
 > **Official Website**: https://www.hongrun1995.cn/  
+> **Official Substack Publication**: https://hrmedaircom.substack.com/  
 
 ---
 
-## Part 1: Substack Publication Setup Guide (专栏开通配置建议)
+## Part 1: Substack Publication Overview & Strategy (专栏现状与发布指引)
 
-### 1. 账号与专栏基础信息
-* **Publication Name (专栏名称)**: `Hongrun Medical Pneumatics` 或 `Zero-Oil Clinical Air Gazette`
-* **Subdomain Handle**: `hongrunmedair.substack.com` 或 `medicalpneumatics.substack.com`
-* **Tagline (一句话简介)**: 
-  > *Inside medical-grade Class 0 oil-free compression, dental suction dynamics, and hospital clean gas engineering. By Hongrun Technology (Est. 1995).*
-* **Author Profile (作者资料)**: 
-  > **Martin Chen** · Applications Engineering & International Operations Director at Hongrun Compressor Technology. Certified biomedical pneumatics specialist.
-* **Recommended Substack Tags**: `Dentistry`, `Medical Devices`, `Engineering`, `Healthcare Technology`, `Manufacturing`
+* **Publication URL (专栏地址)**: [https://hrmedaircom.substack.com/](https://hrmedaircom.substack.com/)
+* **Publication Name (刊物名称)**: `Hongrun Compressor Technology Co., Ltd.` / *Hongrun Medical Air Systems*
+* **Login Account (管理账号)**: `hrmedaircom@gmail.com`
+* **Author (署名作者)**: `Martin Chen`
+* **Recommended Substack Tags**: `Dentistry`, `Medical Devices`, `Engineering`, `Healthcare Technology`, `Manufacturing`, `ISO 8573`
+* **Image Assets (高精图片外链)**: 本文所有配图均已托管在官网全球 CDN（`https://www.hongrun1995.cn/assets/images/...`），直接复制下方 Markdown 粘贴进 Substack 后，**图片、表格、超链接和公式将 100% 自动高清加载渲染**，无需手动一张张上传！
 
 ---
 
-## Part 2: Substack Flagship Article (Substack 深度工程长文 · 即发版)
+## Part 2: Substack Flagship Article (Substack 深度工程长文 · 完整图文即发版)
 
 > **Instructions for Publishing**:
-> Copy and paste the Markdown content below directly into the Substack post editor. All links and tables will format automatically.
+> Copy and paste the Markdown content below directly into the Substack post editor at [https://hrmedaircom.substack.com/publish](https://hrmedaircom.substack.com/publish).
 
 ***
 
@@ -30,9 +29,12 @@
 
 *By Martin Chen · Hongrun Medical Pneumatics Engineering Taskforce*
 
+![Hongrun Smart Manufacturing Plant](https://www.hongrun1995.cn/assets/images/banners/hongrun_smart_plant_cover.webp)
+*Figure 1.0: Hongrun 20,000 m² automated medical compressor manufacturing megafactory in Zibo National High-Tech Zone, China (Annual capacity >160,000 units).*
+
 In modern clinical dentistry, compressed air is not merely a utility—it is an active medical fluid. From cooling turbine handpieces spinning at 400,000 RPM to air-drying etched enamel prior to resin bonding, the pneumatic stream comes into direct, micro-invasive contact with open tooth preparations, vascularized pulp tissue, and patient oral mucosa.
 
-Yet across clinical operatories worldwide, a silent contamination risk persists: microscopic oil aerosol mist and vapor. 
+Yet across clinical operatories worldwide, a silent contamination risk persists: microscopic oil aerosol mist and hydrocarbon vapors. 
 
 While conventional dental compressors rely on consumer-grade oily pump designs with downstream coalescing filters, leading healthcare institutions and international standards committees are mandating a more stringent engineering threshold: **ISO 8573-1:2010 Class 0**.
 
@@ -42,10 +44,10 @@ Here is an engineering examination of how oil-free compression physics, composit
 
 ## 1. The Purity Standard: Why 0.003 mg/m³ Matters in Clinical Dentistry
 
-Under the international standard **ISO 8573-1:2010**, air purity is classified into discrete tiers based on residual oil content (including aerosols, liquids, and vapors):
+Under the international standard **ISO 8573-1:2010**, compressed air purity is classified into discrete tiers based on residual oil content (including aerosols, liquids, and vapors):
 
 * **Class 1**: Total oil $\le 0.01\text{ mg/m}^3$
-* **Class 0**: Purity exceeding Class 1, strictly defined by manufacturer specifications and independently verified by third-party laboratories.
+* **Class 0**: Purity exceeding Class 1, strictly defined by manufacturer specifications and independently verified by third-party testing bodies.
 
 ```
 +-------------------------------------------------------------------------+
@@ -64,7 +66,10 @@ Under the international standard **ISO 8573-1:2010**, air purity is classified i
 2. **Turbine Bearing Destruction**: Oil mist subjected to high-temperature dental autoclave cycles polymerizes into abrasive carbon sludge, destroying ceramic micro-bearings in dental handpieces.
 3. **Regulatory Mandate**: Under ISO 7396-1, HTM 02-01, and US NFPA 99 medical gas codes, clinical gas delivery systems demand zero detectable hydrocarbons.
 
-At [Hongrun Technology](https://www.hongrun1995.cn/), rigorous testing conducted by **TÜV Rheinland** on our HY and HYT Series wobbling-piston medical compressors confirmed a total hydrocarbon content of **$< 0.003\text{ mg/m}^3$**—over three times cleaner than the strict Class 0 ceiling.
+![3D CAD Exploded Engineering Anatomy](https://www.hongrun1995.cn/assets/images/exploded/01-hy-compressor-exploded.jpg)
+*Figure 2.0: 3D CAD exploded engineering anatomy of Hongrun HY-Series medical oil-free compressor: wobbling-piston kinematics, hard-anodized cylinder sleeves, and dual-direction acoustic cooling flow.*
+
+At [Hongrun Technology](https://www.hongrun1995.cn/), rigorous independent testing conducted by **TÜV Rheinland** on our HY and HYT Series wobbling-piston medical compressors confirmed a total hydrocarbon content of **$< 0.003\text{ mg/m}^3$**—over three times cleaner than the strict Class 0 ceiling.
 
 ---
 
@@ -78,6 +83,9 @@ To solve this tribological challenge, modern medical-grade engineering employs s
 * **Friction Coefficient**: Dynamic friction drops below $\mu = 0.08$ under dry running conditions.
 * **Component Service Life**: Piston rings deliver up to **20,000 continuous operating hours** without oil lubrication or mechanical seizure.
 * **Swedish Sandvik Flapper Valves**: Manufactured from high-fatigue martensitic stainless strip steel, rated for $> 100,000,000$ cyclic deflections at 2,800 RPM.
+
+![ZB-300 Core Bare Pump Head](https://www.hongrun1995.cn/assets/images/products/intl/ZB-300.jpg)
+*Figure 3.0: Hongrun ZB-300 core medical rocking-piston pump head featuring Saint-Gobain diamond-coated self-lubricating PTFE composite piston rings and Sandvik flapper valves.*
 
 ---
 
@@ -106,6 +114,9 @@ Where:
 
 > **US NFPA 99 Engineering Rule of Thumb**: Budget approximately **1.5 to 2.0 CFM per dental chair at 80–100 PSI**, or approximately **0.5 to 0.75 HP per active operatory**.
 
+![4 to 8 Dental Chairs Central CAD Schematic](https://www.hongrun1995.cn/assets/images/news/news_13_4to8chairs_redundancy.webp)
+*Figure 4.0: Engineering CAD schematic and piping manifold layout for 4-to-8 dental chair central medical compressed air system with closed-loop ring distribution and N+1 duplex failover.*
+
 For in-depth piping schematics and CAD drawings, review Hongrun's technical whitepaper: [Dual-Pump Redundancy Architecture: 4-to-8 Dental Chair Sizing Guide](https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/).
 
 ---
@@ -126,11 +137,17 @@ In contrast, a duplex system like the **Hongrun HYTG-300** mounts two independen
 2. **Automatic Peak Boost**: During simultaneous peak hours, both heads engage to deliver full 400 L/min (14.1 CFM).
 3. **Zero-Downtime Serviceability**: If Pump Head A requires filter or ring maintenance, Pump Head B maintains continuous 200 L/min delivery—keeping emergency surgical and hygiene chairs operational.
 
+![Hongrun HYT-500 Duplex Redundant System](https://www.hongrun1995.cn/assets/images/products/HYT-500-cutout.png)
+*Figure 5.0: Hongrun HYT Series duplex multi-pump redundant station mounted on nano-antibacterial silver-ion coated ASME/PED receiver vessel.*
+
 ---
 
 ## 5. Global Commercial Grounding: Warranty Integrity & TCO Reality
 
 In global B2B procurement, engineering performance must be matched by commercial transparency.
+
+![Digital Dental Operatory](https://www.hongrun1995.cn/assets/images/solutions/digital-dental-operatory.jpg)
+*Figure 6.0: Multi-chair digital dental operatory powered by Class 0 clean air (<0.003 mg/m³) ensuring adhesive bonding integrity.*
 
 ### The Standard 12-Month Factory Guarantee
 Hongrun officially provides a **Standard 12-Month Factory Manufacturer Warranty** commencing from the verified date of clinical installation and commissioning (not from factory B/L date). Every machine is backed by:
@@ -147,11 +164,17 @@ While German pioneers like Dürr Dental represent excellent historical craftsman
 
 Compare the detailed engineering benchmarks in our technical review: [Hongrun vs. Dürr Dental: Comparative Analysis](https://www.hongrun1995.cn/hongrun-vs-durr-dental.html).
 
+![Precision Manufacturing Floor](https://www.hongrun1995.cn/assets/images/web/precision-manufacturing.jpg)
+*Figure 7.0: DMG MORI 5-axis CNC precision machining floor at Hongrun megafactory achieving sub-micron tolerances.*
+
 ---
 
 ## About Hongrun Technology
 
 Founded in November 1995 in the National High-Tech Industrial Development Zone of Zibo, Shandong Province, China, **Hongrun Compressor Technology Co., Ltd.** operates a 20,000 m² automated manufacturing facility with an annual capacity exceeding 160,000 units. Certified under **ISO 13485:2016** (Medical Device QMS, Cert: `381210185R1M`), CE MDR Class IIa, and TÜV Rheinland ISO 8573-1 Class 0, Hongrun pneumatic solutions are trusted by 65,000+ clinics and medical institutions across 50+ countries.
+
+![ISO 13485:2016 Medical Device Certificate](https://www.hongrun1995.cn/assets/images/certs/certifications/08-iso-13485-medical-device-qms.webp)
+*Figure 8.0: Hongrun ISO 13485:2016 Medical Device Quality Management System Certificate (No. 381210185R1M) accredited by ANAB & IAF.*
 
 * **Technical Inquiries & Sizing Blueprints**: [martinchen@hongrun1995.cn](mailto:martinchen@hongrun1995.cn)  
 * **Official Website**: [https://www.hongrun1995.cn/](https://www.hongrun1995.cn/)  
