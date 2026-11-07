@@ -1,6 +1,6 @@
 # Hongrun Technology - RFC 9116 Security & Enterprise Vulnerability Disclosure Policy
 # Domain: https://www.hongrun1995.cn
-# Organization: Hongrun Compressor Technology Co., Ltd. (宏润空压机科技有限公司)
+# Organization: Hongrun Compressor Technology Co., Ltd. (山东宏润空压机科技有限公司)
 
 Contact: mailto:martinchen@hongrun1995.cn
 Contact: mailto:info@hongrun1995.cn

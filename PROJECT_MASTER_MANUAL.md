@@ -4,7 +4,7 @@
 > **版本 Version:** 3.14 (在 v3.13 基础上于 2026-10-12 新增“全球医疗器械与工业 B2B 权威平台常态化注册与外链扩张矩阵”，确立五大梯队 18 大目标平台、6 个微批次“隔三差五”常态化推进打卡表及宏润专属标准化注册资料包 SSOT，严格执行与外部项目 100% 物理与账号隔离；详见 §24)  
 > **更新日期 Date:** 2026-10-12  
 > **使用对象 Target:** AI Agent / 全栈工程师 / 国际贸易专家 / SEO & GEO 架构师 / 运维团队  
-> **运营主体 Subject:** 宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
+> **运营主体 Subject:** 山东宏润空压机科技有限公司 (Hongrun Compressor Technology Co., Ltd.)  
 > **项目定位 Positioning:** 国际顶级 B2B 工业品与高端医疗气源国际官网（纯静态极速架构 · 全球边缘加速 · 独立仓库与域名隔离）  
 > **线上生产发布地址 Public URL:** [https://www.hongrun1995.cn/](https://www.hongrun1995.cn/)（正式生产主域，HTTP/HTTPS 强制；`hongrun1995.cn` 301 至 www）  
 > **GitHub 主干仓库 Repository:** `Martin-MQtech/hongrun-global-website` (Branch: `main`)
@@ -44,7 +44,7 @@
 ## 1. 项目概览与技术基建架构
 
 ### 1.1 项目背景与定位
-宏润空压机科技有限公司（Hongrun Compressor Technology Co., Ltd.）创立于 1995 年，制造基地位于中国工业重镇山东淄博。企业深耕医用与高洁净无油空压机制造 30 余载，持国家二类医疗器械注册资质（NMPA Class II）与 ISO 8573-1 Class 0 国际零油纯度认证，年产能超 160,000 台套，服务全球 65,000+ 医疗机构与 190+ 顶尖高校科研院所。
+山东宏润空压机科技有限公司（Hongrun Compressor Technology Co., Ltd.）创立于 1995 年，制造基地位于中国工业重镇山东淄博。企业深耕医用与高洁净无油空压机制造 30 余载，持国家二类医疗器械注册资质（NMPA Class II）与 ISO 8573-1 Class 0 国际零油纯度认证，年产能超 160,000 台套，服务全球 65,000+ 医疗机构与 190+ 顶尖高校科研院所。
 
 本国际官网工程专门面向欧洲、北美、俄罗斯/独联体、亚太及中东非等海外市场，以**纯正工业科技感（Modern European B2B Identity）**为基调，面向全球设备分销商（Distributors）、EPC 医院气体工程总包商（Integrators）与科研分析机构（Institutes），提供清晰的产品选型、工程方案与 24 小时报价通道。
 
@@ -257,7 +257,7 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 | 编号 | 姓名 / 职务 | 负责市场区域 | 联系电话 | 官方电子邮箱 | 社交媒体与直连入口 | 底纹 CAD 设计草图 |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **1** | **Martin Chen**<br>Chief Marketing Director (CMD) | **Global Strategic Accounts & OEM** | `+86 13964416725` | `martinchen@hongrun1995.cn`<br>`hrmedaircom@gmail.com` | • [Facebook](https://www.facebook.com/profile.php?id=61594460695204)<br>• [LinkedIn](https://linkedin.com/in/martin-hongrun-air-compressor-4b84849b)<br>• [Instagram (@hrmedaircom)](https://www.instagram.com/hrmedaircom/)<br>• [TikTok (@hrmedaircom)](https://www.tiktok.com/@hrmedaircom)<br>• [𝕏 (@Martinairtech)](https://x.com/Martinairtech)<br>• [YouTube](https://www.youtube.com/@MartinChenAirtech)<br>• `Send Email Direct` | `sketch_1.png`<br>(五轴气缸套与双传动齿轮) |
+| **1** | **Martin Chen**<br>Chief Marketing Director (CMD) | **Global Strategic Accounts & OEM** | `+86 13964416725` | `martinchen@hongrun1995.cn`<br>`hrmedaircom@gmail.com` | • [Facebook](https://www.facebook.com/profile.php?id=61595524485307)<br>• [LinkedIn](https://linkedin.com/in/martin-hongrun-air-compressor-4b84849b)<br>• [Instagram (@hrmedaircom)](https://www.instagram.com/hrmedaircom/)<br>• [TikTok (@hrmedaircom)](https://www.tiktok.com/@hrmedaircom)<br>• [𝕏 (@Martinairtech)](https://x.com/Martinairtech)<br>• [YouTube](https://www.youtube.com/@MartinChenAirtech)<br>• `Send Email Direct` | `sketch_1.png`<br>(五轴气缸套与双传动齿轮) |
 | **2** | **Henry Xing**<br>Senior Market Director | **Russia / CIS / Central Asia** | `+86 13864483913` | `xing@hongrun1995.cn` | • [LinkedIn](https://www.linkedin.com)<br>• [𝕏](https://x.com)<br>• `Send Email Direct` | `sketch_2.png`<br>(渐开线涡旋动静盘型线) |
 | **3** | **Steven Yang**<br>Market Director | **Asia-Pacific & MEA** | `+86 13581047133` | `stevenyang@hongrun1995.cn` | • [YouTube 专属频道](https://www.youtube.com/@stevenyang1983)<br>• `Send Email Direct` | `sketch_3.png`<br>(高负压涡轮叶轮与流线) |
 | **4** | **Jason Li**<br>Market Director | **Europe & Americas** | `+86 15065856697` | `jason@hongrun1995.cn` | • [LinkedIn](https://www.linkedin.com)<br>• [𝕏](https://x.com)<br>• `Send Email Direct` | `sketch_4.png`<br>(5级精密过滤汇流排断面) |
@@ -1163,7 +1163,7 @@ graph TD
 | **Standard Platform Password (SSOT)** | `hrmedaircom.`（带末尾句点，用户通用密码）/ `Hongrun@1995` |
 | **Phone / WhatsApp / WeChat** | `+86 13964416725` |
 | **Core Certifications** | `ISO 13485:2016 (Cert No. 381210185R1M)` · `TÜV Rheinland ISO 8573-1:2010 Class 0 (<0.003 mg/m³)` · `CE MDR Class IIa` · `NMPA Class II Medical Device Registration (Lu-Shi-Yao-Jian-Xie-Zhun-20182560199)` · `ISO 9001:2015` |
-| **Social Media Links** | · **LinkedIn Company**: `https://www.linkedin.com/company/125624035/`<br>· **YouTube**: `https://www.youtube.com/@MartinChenAirtech`<br>· **Facebook**: `https://www.facebook.com/profile.php?id=61594460695204`<br>· **Instagram**: `https://www.instagram.com/hrmedaircom/`<br>· **TikTok**: `https://www.tiktok.com/@hrmedaircom`<br>· **X (Twitter)**: `https://x.com/Martinairtech` |
+| **Social Media Links** | · **LinkedIn Company**: `https://www.linkedin.com/company/125624035/`<br>· **YouTube**: `https://www.youtube.com/@MartinChenAirtech`<br>· **Facebook**: `https://www.facebook.com/profile.php?id=61595981005259`<br>· **Instagram**: `https://www.instagram.com/hrmedaircom/`<br>· **TikTok**: `https://www.tiktok.com/@hrmedaircom`<br>· **X (Twitter)**: `https://x.com/Martinairtech` |
 
 #### 标准英文企业简介模板 (Standard English Boilerplates)
 * **50-Word Short Pitch (适用于黄页摘要/一句话简介)**：

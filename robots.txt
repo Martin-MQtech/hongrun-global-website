@@ -1,8 +1,10 @@
 # Hongrun Technology (https://www.hongrun1995.cn) - Global Robots & Crawlers Policy
+# Compliant with 2026 Generative Engine Optimization (GEO) & Search Crawling Standards
+
 User-agent: *
 Allow: /
 
-# Global Search Engine Crawlers
+# 1. Global Traditional & AI Hybrid Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -21,24 +23,51 @@ Allow: /
 User-agent: Baiduspider
 Allow: /
 
-# AI & Generative Engine Optimization (GEO) Crawlers
-User-agent: GPTBot
-Allow: /
-
+# 2. Generative Engine Search & Real-Time Citation Crawlers (Priority Allow)
+# OpenAI Search Engine (ChatGPT Search / OAI grounding)
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: ClaudeBot
-Allow: /
-
+# Perplexity AI Search Crawler (Real-time citation)
 User-agent: PerplexityBot
 Allow: /
 
+# Anthropic Claude Real-time Web Search Crawler
+User-agent: Claude-SearchBot
+Allow: /
+
+# 3. User-Triggered Real-Time Fetch & Browse Agents (Allow)
+# Triggered when users ask ChatGPT to inspect/read a URL
+User-agent: ChatGPT-User
+Allow: /
+
+# Triggered when users ask Claude to browse/fetch a URL
+User-agent: Claude-User
+Allow: /
+
+# Triggered when users query Perplexity
+User-agent: Perplexity-User
+Allow: /
+
+# 4. Foundation Model Pre-training Crawlers (Entity Knowledge Grounding)
+# OpenAI Foundation Model Training
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude Foundation Model Training
+User-agent: ClaudeBot
+Allow: /
+
+# Google Gemini / Vertex AI Training & In-App Search Grounding Control (Do NOT block)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence Web & Training Crawler
 User-agent: Applebot-Extended
 Allow: /
 
+# Meta AI & Llama Ingestion Agent
 User-agent: Meta-ExternalAgent
 Allow: /
 
 Sitemap: https://www.hongrun1995.cn/sitemap.xml
-

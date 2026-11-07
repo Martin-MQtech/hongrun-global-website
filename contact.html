@@ -93,7 +93,7 @@
     "url": "https://www.hongrun1995.cn/",
     "sameAs": [
       "https://www.linkedin.com/company/125624035/",
-      "https://www.facebook.com/profile.php?id=61594460695204",
+      "https://www.facebook.com/profile.php?id=61595981005259",
       "https://www.instagram.com/hrmedaircom/",
       "https://www.tiktok.com/@hrmedaircom",
       "https://www.youtube.com/@MartinChenAirtech",
@@ -314,7 +314,7 @@
         <div class="w-24 sm:w-28 shrink-0 bg-slate-50/90 border-l border-slate-200 p-2 sm:p-2.5 flex flex-col justify-between items-center relative z-10">
           <div class="w-full flex flex-col items-center gap-1">
             <span class="text-[8px] uppercase tracking-widest text-slate-400 font-bold mb-0.5 flex items-center gap-1"><i class="fa-solid fa-share-nodes text-brand-sky text-[8px]"></i> Social</span>
-            <a href="https://www.facebook.com/profile.php?id=61594460695204" target="_blank" class="w-full py-0.5 px-1 rounded bg-[#1877f2]/10 hover:bg-[#1877f2] text-[#1877f2] hover:text-white transition flex items-center justify-center gap-1 text-[9px] font-semibold shadow-2xs leading-tight" title="Facebook" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook text-[10px]"></i> <span class="font-sans">Facebook</span></a>
+            <a href="https://www.facebook.com/profile.php?id=61595524485307" target="_blank" class="w-full py-0.5 px-1 rounded bg-[#1877f2]/10 hover:bg-[#1877f2] text-[#1877f2] hover:text-white transition flex items-center justify-center gap-1 text-[9px] font-semibold shadow-2xs leading-tight" title="Facebook" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook text-[10px]"></i> <span class="font-sans">Facebook</span></a>
             <a href="https://linkedin.com/in/martin-hongrun-air-compressor-4b84849b" target="_blank" class="w-full py-0.5 px-1 rounded bg-[#0077b5]/10 hover:bg-[#0077b5] text-[#0077b5] hover:text-white transition flex items-center justify-center gap-1 text-[9px] font-semibold shadow-2xs leading-tight" title="LinkedIn" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-[10px]"></i> <span class="font-sans">LinkedIn</span></a>
             <a href="https://www.instagram.com/hrmedaircom/" target="_blank" class="w-full py-0.5 px-1 rounded bg-[#E1306C]/10 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-[#E1306C] hover:text-white transition flex items-center justify-center gap-1 text-[9px] font-semibold shadow-2xs leading-tight" title="Instagram" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram text-[10px]"></i> <span class="font-sans">Instagram</span></a>
             <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" class="w-full py-0.5 px-1 rounded bg-black/10 hover:bg-black text-slate-800 hover:text-[#25F4EE] transition flex items-center justify-center gap-1 text-[9px] font-semibold shadow-2xs leading-tight" title="TikTok" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok text-[10px]"></i> <span class="font-sans">TikTok</span></a>
@@ -750,6 +750,25 @@
           </div>
         </div>
 
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">How Did You Discover Hongrun?</label>
+            <select name="discovery_source" id="rfqDiscoverySource" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition bg-slate-50">
+              <option value="Google / Web Search">Google / Web Search</option>
+              <option value="AI Search &amp; Assistants (ChatGPT, Perplexity, Claude, Gemini)">AI Search &amp; Assistants (ChatGPT, Perplexity, Claude, Gemini)</option>
+              <option value="YouTube Technical &amp; Engineering Videos">YouTube Technical &amp; Engineering Videos</option>
+              <option value="International Trade Show (IDS, AEEDC, DenTech, Sino-Dental)">International Trade Show (IDS, AEEDC, DenTech, Sino-Dental)</option>
+              <option value="Industry Colleague / Doctor Peer Recommendation">Industry Colleague / Doctor Peer Recommendation</option>
+              <option value="LinkedIn / Social Media">LinkedIn / Social Media</option>
+              <option value="Other Channels">Other Channels</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Target Dental Chairs / Capacity</label>
+            <input type="text" name="chair_capacity" placeholder="e.g. 1-2 Chairs, 5-8 Chairs, Hospital Central, or OEM" class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition bg-slate-50"/>
+          </div>
+        </div>
+
         <div>
           <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Project Requirements &amp; Chair Count / Specs</label>
           <textarea name="message" id="rfqMessageText" rows="4" minlength="10" placeholder="Please describe your chair count, building layout, required air flow (L/min), voltage/frequency, or OEM customization requirements..." class="w-full px-4 py-3 rounded-lg border border-slate-300 text-sm focus:border-brand-blue focus:ring-1 focus:ring-brand-blue outline-none transition bg-slate-50"></textarea>
@@ -948,6 +967,8 @@
             email: formData.get("email"),
             country: formData.get("country"),
             product: formData.get("product"),
+            discovery_source: formData.get("discovery_source") || "Direct / Not Specified",
+            chair_capacity: formData.get("chair_capacity") || "",
             message: formData.get("message"),
             submitted_at: new Date().toISOString(),
             source_page: window.location.href
@@ -1064,7 +1085,7 @@
         </div>
         <div class="flex flex-wrap items-center gap-3 mt-6">
           <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="LinkedIn Official"><i class="fa-brands fa-linkedin text-base" aria-hidden="true"></i><span class="sr-only">LinkedIn Official</span></a>
-          <a href="https://www.facebook.com/profile.php?id=61594460695204" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Facebook Official"><i class="fa-brands fa-facebook text-base" aria-hidden="true"></i><span class="sr-only">Facebook Official</span></a>
+          <a href="https://www.facebook.com/profile.php?id=61595981005259" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Facebook Official"><i class="fa-brands fa-facebook text-base" aria-hidden="true"></i><span class="sr-only">Facebook Official</span></a>
           <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Instagram @hrmedaircom"><i class="fa-brands fa-instagram text-base" aria-hidden="true"></i><span class="sr-only">Instagram @hrmedaircom</span></a>
           <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="TikTok @hrmedaircom"><i class="fa-brands fa-tiktok text-base" aria-hidden="true"></i><span class="sr-only">TikTok @hrmedaircom</span></a>
           <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="YouTube Channel"><i class="fa-brands fa-youtube text-base" aria-hidden="true"></i><span class="sr-only">YouTube Channel</span></a>

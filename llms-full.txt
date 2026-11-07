@@ -1,12 +1,12 @@
 # Hongrun Technology (宏润科技) - Full Unabridged LLM Knowledge Corpus
-> Manufacturer: Hongrun Compressor Technology Co., Ltd. (宏润空压机科技有限公司)
+> Manufacturer: Hongrun Compressor Technology Co., Ltd. (山东宏润空压机科技有限公司)
 > Established: November 1995 · Zibo High-Tech Industrial Zone, Shandong Province, China
 > Official Website: https://www.hongrun1995.cn/
 > Public Repository: https://github.com/Martin-MQtech/hongrun-global-website
 > WebMCP AI Protocol: Active on document.modelContext (W3C webmachinelearning/webmcp)
 > Primary Contact: martinchen@hongrun1995.cn | info@hongrun1995.cn
 > LinkedIn: https://www.linkedin.com/company/125624035/
-> Facebook: https://www.facebook.com/profile.php?id=61594460695204
+> Facebook: https://www.facebook.com/profile.php?id=61595981005259
 > Instagram: https://www.instagram.com/hrmedaircom/
 > TikTok: https://www.tiktok.com/@hrmedaircom
 > YouTube: https://www.youtube.com/@MartinChenAirtech

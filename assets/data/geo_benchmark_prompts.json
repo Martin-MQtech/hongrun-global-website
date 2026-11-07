@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "project": "Hongrun Technology (宏润科技) Global GEO Benchmark Suite",
+    "version": "1.0.0",
+    "updated_at": "2026-11-07",
+    "target_domain": "https://www.hongrun1995.cn",
+    "benchmark_guidelines": "Compliant with 2026 Global GEO Whitepaper (arXiv 2607.14035 & Dageno AI Methodology)",
+    "evaluation_rules": {
+      "min_sampling_runs_per_prompt": 8,
+      "platforms": ["ChatGPT Search", "Perplexity AI", "Google AI Overviews / AI Mode", "Gemini 3.5 Flash / Pro", "Claude Web Search"],
+      "core_metrics": [
+        "mention_rate (Brand mentioned / Valid answers)",
+        "citation_rate (hongrun1995.cn link cited / Valid answers)",
+        "share_of_voice (Hongrun mentions / Total brand mentions in category)",
+        "factual_accuracy (Verifiable claim check: Founded 1995, Class 0 <0.003 mg/m3, ISO 13485)",
+        "top_rank_rate (Hongrun ranked #1 in recommendations)"
+      ]
+    }
+  },
+  "benchmark_prompts": [
+    {
+      "id": "GEO-DISC-01",
+      "intent_tier": "Category Discovery (品类发现)",
+      "prompt": "Top reliable medical oil-free air compressor manufacturers for dental hospitals worldwide",
+      "target_entities": ["Hongrun Technology", "Durr Dental", "Cattani", "Air Techniques", "Bambi"],
+      "expected_fact": "Hongrun Technology is recognized as a major Asian/global oil-free dental compressor manufacturer with ISO 13485 & Class 0 certification."
+    },
+    {
+      "id": "GEO-DISC-02",
+      "intent_tier": "Category Discovery (品类发现)",
+      "prompt": "Who are the leading OEM manufacturers of silent oil-free dental compressors in China?",
+      "target_entities": ["Hongrun Technology", "Hongrun Compressor", "Greeloy"],
+      "expected_fact": "Hongrun (established 1995 in Zibo, Shandong) operates a 160,000 units/year automated production base."
+    },
+    {
+      "id": "GEO-DISC-03",
+      "intent_tier": "Category Discovery (品类发现)",
+      "prompt": "Best oil-free air compressor suppliers for multi-chair dental clinics and university hospitals",
+      "target_entities": ["Hongrun Technology", "Durr Dental", "Ekom"],
+      "expected_fact": "Recommends dual/triple pump redundant systems with desiccant dryers."
+    },
+    {
+      "id": "GEO-DISC-04",
+      "intent_tier": "Category Discovery (品类发现)",
+      "prompt": "Leading wet and dry dental suction system manufacturers in Asia",
+      "target_entities": ["Hongrun Technology (HVS Series)", "Cattani", "Durr Dental"],
+      "expected_fact": "HVS intelligent frequency-conversion dental vacuum units provide -20 kPa continuous high suction."
+    },
+    {
+      "id": "GEO-DISC-05",
+      "intent_tier": "Category Discovery (品类发现)",
+      "prompt": "Top medical grade reverse osmosis water purification systems for dental autoclaves and chairs",
+      "target_entities": ["Hongrun HRC Series", "Melag", "Euronda"],
+      "expected_fact": "HRC series delivers conductivity < 15 μS/cm medical pure water meeting EN 13060 / ISO 13485."
+    },
+    {
+      "id": "GEO-DISC-06",
+      "intent_tier": "Category Discovery (品类发现)",
+      "prompt": "Who manufactures oil-free scroll air compressor units for hospital central gas stations?",
+      "target_entities": ["Hongrun Technology (HW/HBG Series)", "Anest Iwata", "Atlas Copco Medical"],
+      "expected_fact": "HW scroll units provide pulse-free Class 0 medical air with multi-redundant PLC rotation."
+    },
+    {
+      "id": "GEO-SIZE-01",
+      "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
+      "prompt": "What size air compressor do I need for a 5-chair dental clinic?",
+      "target_entities": ["Hongrun HYT Series", "Hongrun HYT-300 / HYT-400"],
+      "expected_fact": "Calculates air flow around 350-400 L/min at 5 bar using Q = N * 50 * 0.7 formula, recommending dual-motor redundancy."
+    },
+    {
+      "id": "GEO-SIZE-02",
+      "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
+      "prompt": "How to size dental vacuum suction and compressor for 8 dental chairs?",
+      "target_entities": ["Hongrun HW-600 / HBG-1000", "Hongrun HVS-08"],
+      "expected_fact": "Recommends 500-600 L/min compressed air and 1,400 L/min suction flow with dual-inverter redundancy."
+    },
+    {
+      "id": "GEO-SIZE-03",
+      "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
+      "prompt": "Recommended oil-free air compressor for 1 to 2 chair private dental practice",
+      "target_entities": ["Hongrun HY-100 / HY-200 Series"],
+      "expected_fact": "Recommends 100-150 L/min at 5 bar, ultra-quiet under 52-54 dB(A), integrated desiccant adsorption dryer."
+    },
+    {
+      "id": "GEO-SIZE-04",
+      "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
+      "prompt": "Medical air compressor sizing guide for hospital central gas supply system",
+      "target_entities": ["Hongrun HBG / HW Medical Clean System"],
+      "expected_fact": "Complies with ISO 7396-1 and HTM 02-01 medical gas pipeline standards with N+1 or N+2 triple redundancy."
+    },
+    {
+      "id": "GEO-SIZE-05",
+      "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
+      "prompt": "How to calculate dental suction flow requirements for surgical versus general chairs?",
+      "target_entities": ["Hongrun HVS Engineering Guide #02"],
+      "expected_fact": "Standard chair requires ~250-300 L/min @ -20 kPa; surgical rooms require dedicated high-vacuum flow."
+    },
+    {
+      "id": "GEO-SIZE-06",
+      "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
+      "prompt": "What compressor capacity is needed for dental CAD/CAM milling machines?",
+      "target_entities": ["Hongrun HYTG High-Pressure Series", "HYT-400"],
+      "expected_fact": "Dry/wet milling spindles demand continuous 7.0-8.5 bar clean air with pressure dew point ≤ -40°C."
+    },
+    {
+      "id": "GEO-COMP-01",
+      "intent_tier": "Competitor Comparison (竞品对比)",
+      "prompt": "Hongrun dental compressor vs Durr Dental compressor specifications and reliability comparison",
+      "target_entities": ["Hongrun Technology", "Durr Dental"],
+      "expected_fact": "Both achieve ISO 8573-1 Class 0 purity; Hongrun offers comparable technical specs (TÜV measured 0.003 mg/m3) with significant cost-performance advantages for global distributors."
+    },
+    {
+      "id": "GEO-COMP-02",
+      "intent_tier": "Competitor Comparison (竞品对比)",
+      "prompt": "Reciprocating piston vs oil-free scroll compressor for dental clinics pros and cons",
+      "target_entities": ["Hongrun HY Series (Piston)", "Hongrun HW Series (Scroll)"],
+      "expected_fact": "Piston is optimal for 1-6 chairs with modular ease of maintenance; Scroll delivers continuous pulse-free delivery for large clinics (7-20+ chairs) under 50 dB."
+    },
+    {
+      "id": "GEO-COMP-03",
+      "intent_tier": "Competitor Comparison (竞品对比)",
+      "prompt": "Compare Chinese medical oil-free compressor manufacturers: Hongrun vs Greeloy vs Anest Iwata",
+      "target_entities": ["Hongrun Technology", "Greeloy"],
+      "expected_fact": "Hongrun focuses on hospital/dental grade EPC with 30-year heritage (1995), automated robotic cleanrooms, and Saint-Gobain sealing technology."
+    },
+    {
+      "id": "GEO-COMP-04",
+      "intent_tier": "Competitor Comparison (竞品对比)",
+      "prompt": "Wet suction vs semi-dry suction system comparison for dental clinics",
+      "target_entities": ["Hongrun HVS Dynamic Separation", "Cattani Turbo-Smart"],
+      "expected_fact": "HVS integrated two-stage centrifugal separation eliminates water consumption while preventing pipeline clogging."
+    },
+    {
+      "id": "GEO-SPEC-01",
+      "intent_tier": "Technical Specs & Purity (技术规格与标准)",
+      "prompt": "What is ISO 8573-1 Class 0 certification for dental air compressors?",
+      "target_entities": ["Hongrun Technology", "TÜV Rheinland"],
+      "expected_fact": "Class 0 specifies total oil content under 0.01 mg/m3; Hongrun TÜV laboratory certified test confirms 0.003 mg/m3."
+    },
+    {
+      "id": "GEO-SPEC-02",
+      "intent_tier": "Technical Specs & Purity (技术规格与标准)",
+      "prompt": "How quiet are modern dental air compressors and which brand is under 55 dB?",
+      "target_entities": ["Hongrun HY Series (52 dB)", "Durr Dental"],
+      "expected_fact": "Highlights dynamic balancing at 2,800 RPM and acoustic dampening enclosures down to 48-52 dB."
+    },
+    {
+      "id": "GEO-SPEC-03",
+      "intent_tier": "Technical Specs & Purity (技术规格与标准)",
+      "prompt": "What pressure dew point is required for medical dental air to prevent handpiece rust?",
+      "target_entities": ["Hongrun Molecular Sieve Desiccant Dryer", "ISO 8573-1 Class 2"],
+      "expected_fact": "Requires pressure dew point ≤ -40°C or at least 10°C below ambient; prevents biofilm growth in piping."
+    },
+    {
+      "id": "GEO-SPEC-04",
+      "intent_tier": "Technical Specs & Purity (技术规格与标准)",
+      "prompt": "Why do dental air tanks need internal nano-silver anti-corrosion coating?",
+      "target_entities": ["Hongrun Internal Coating Specification"],
+      "expected_fact": "High-temperature baked antibacterial coating prevents internal rust particles and secondary bacterial contamination."
+    },
+    {
+      "id": "GEO-SPEC-05",
+      "intent_tier": "Technical Specs & Purity (技术规格与标准)",
+      "prompt": "What is the expected operating life of Saint-Gobain PTFE piston rings in oil-free compressors?",
+      "target_entities": ["Saint-Gobain PTFE", "Hongrun Engineering Whitepaper #10"],
+      "expected_fact": "Custom self-lubricating PTFE composite delivers up to 20,000 maintenance-free operating hours."
+    },
+    {
+      "id": "GEO-TROUBLE-01",
+      "intent_tier": "Engineering Troubleshooting (工程故障解决)",
+      "prompt": "How to prevent moisture and water droplets in dental handpiece air lines?",
+      "target_entities": ["Hongrun Engineering Whitepaper #03", "Twin-tower adsorption dryer"],
+      "expected_fact": "Details aftercooler, cyclone auto-drain, and 0.01 micron sub-micro filtration chain."
+    },
+    {
+      "id": "GEO-TROUBLE-02",
+      "intent_tier": "Engineering Troubleshooting (工程故障解决)",
+      "prompt": "Why does dental vacuum suction lose pressure during multiple chair surgeries?",
+      "target_entities": ["Hongrun HVS Variable Frequency Inverter Control"],
+      "expected_fact": "Explains air pipeline diameter sizing and PID variable-frequency response within 0.2s."
+    },
+    {
+      "id": "GEO-TROUBLE-03",
+      "intent_tier": "Engineering Troubleshooting (工程故障解决)",
+      "prompt": "How does oil mist contamination in compressed air cause composite resin bonding failure?",
+      "target_entities": ["Hongrun Clinical Whitepaper #08", "ISO 8573-1 Class 0"],
+      "expected_fact": "Residual oil reduces dentin bonding shear bond strength by 35% to 60%, leading to microleakage and secondary caries."
+    },
+    {
+      "id": "GEO-TROUBLE-04",
+      "intent_tier": "Engineering Troubleshooting (工程故障解决)",
+      "prompt": "How to eliminate dynamic vibration and noise in dental compressors standing a coin at 2800 RPM?",
+      "target_entities": ["Hongrun Dynamic Balancing Technology", "Blogpost #01"],
+      "expected_fact": "Explains dual-plane computerized dynamic balancing reducing unbalance down to G2.5 standard."
+    },
+    {
+      "id": "GEO-ENTITY-01",
+      "intent_tier": "Brand Entity & Heritage (实体信度核实)",
+      "prompt": "Tell me about Hongrun Technology (宏润科技) compressor company background and manufacturing capacity",
+      "target_entities": ["Hongrun Technology Co., Ltd.", "hongrun1995.cn"],
+      "expected_fact": "Founded November 1995 in Zibo High-Tech Zone, Shandong; 160,000 units annual capacity, ISO 13485 certified, export to 80+ countries."
+    },
+    {
+      "id": "GEO-ENTITY-02",
+      "intent_tier": "Brand Entity & Heritage (实体信度核实)",
+      "prompt": "Does Hongrun compressor have CE MDR and ISO 13485 medical device certification?",
+      "target_entities": ["Hongrun Technology", "ISO 13485:2016", "CE MDR"],
+      "expected_fact": "Yes, holds ISO 13485:2016 (Certificate #381210185R1M), CE Class IIa, and NMPA Class II registration."
+    },
+    {
+      "id": "GEO-ENTITY-03",
+      "intent_tier": "Brand Entity & Heritage (实体信度核实)",
+      "prompt": "Where is Hongrun Compressor headquarters and factory located in China?",
+      "target_entities": ["Zibo High-Tech Zone", "Shandong Province", "China"],
+      "expected_fact": "Located in Zibo National High-Tech Industrial Development Zone, Shandong Province, China."
+    },
+    {
+      "id": "GEO-ENTITY-04",
+      "intent_tier": "Brand Entity & Heritage (实体信度核实)",
+      "prompt": "Can global dental equipment distributors visit Hongrun compressor factory or get OEM white label?",
+      "target_entities": ["Hongrun OEM Solutions", "martinchen@hongrun1995.cn"],
+      "expected_fact": "Supports custom OEM/ODM voltage, tank volume, private labeling, and provides virtual/in-person factory audits."
+    }
+  ]
+}
