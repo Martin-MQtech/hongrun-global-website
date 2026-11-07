@@ -234,8 +234,8 @@ Website: https://www.hongrun1995.cn/warranty-policy.html
 - **稀疏舒缓全幅斜纹（密度降低 2/3）**：
   - 倾斜角度：**+32° ~ +35° 优雅向上对角线**；
   - 行间距：**200 ~ 220px**，整张 A4 证书纵向仅贯穿 **5~6 条对角线暗纹**，保持大面积清爽呼吸感；
-  - 英文证书标准文案：`HONGRUN MEDICAL · FOR REFERENCE ONLY · DO NOT COPY`（Arial Bold 36pt）
-  - 中文证书标准文案：`HONGRUN 宏润医疗 · 仅供审核参考 · 严禁盗用 · DO NOT COPY`（Hiragino Sans GB 34pt）
+  - 英文证书标准文案：`HONGRUN MEDICAL · FOR REFERENCE ONLY · DO NOT COPY · www.hongrun1995.cn`（Arial Bold 34pt）
+  - 中文证书标准文案：`HONGRUN 宏润医疗 · 仅供审核参考 · 严禁盗用 · www.hongrun1995.cn`（Hiragino Sans GB 32pt）
 - **覆盖要件**：斜纹必须掠过证书编号（`381210185R1M`）、公司全称、三类医疗器械体系认证范围、波西（POSI）认证公章与总经理签字区。
 
 ### 2. 产品实拍与 3D 剖解图透明水印规范 (Product & 3D Anatomy Watermark SSOT)
