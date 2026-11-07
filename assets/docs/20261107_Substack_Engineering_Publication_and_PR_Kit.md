@@ -9,12 +9,15 @@
 
 ## Part 1: Substack Publication Overview & Strategy (专栏现状与发布指引)
 
-* **Publication URL (专栏地址)**: [https://hrmedaircom.substack.com/](https://hrmedaircom.substack.com/)
+* **Publication URL (专栏主页)**: [https://hrmedaircom.substack.com/](https://hrmedaircom.substack.com/)
+* **Live Article URL (线上已发布文章)**: [https://hrmedaircom.substack.com/p/the-0003-milligram-catastrophe-what](https://hrmedaircom.substack.com/p/the-0003-milligram-catastrophe-what)
+* **Published Date & Time (发布时间)**: November 7, 2026 · 21:21 UTC+8 (Directly published via BrowserOS neo)
 * **Publication Name (刊物名称)**: `Hongrun Compressor Technology Co., Ltd.` / *Hongrun Medical Air Systems*
 * **Login Account (管理账号)**: `hrmedaircom@gmail.com`
 * **Author (署名作者)**: `Martin Chen`
-* **Recommended Substack Tags**: `Dentistry`, `Medical Devices`, `Engineering`, `Healthcare Technology`, `Manufacturing`, `ISO 8573`
-* **Image Assets (高精图片外链)**: 本文所有配图均已托管在官网全球 CDN（`https://www.hongrun1995.cn/assets/images/...`），直接复制下方 Markdown 粘贴进 Substack 后，**图片、表格、超链接和公式将 100% 自动高清加载渲染**，无需手动一张张上传！
+* **Article Title (文章标题)**: `The 0.003-Milligram Catastrophe: What Actually Happens When Compressed Air Hits Etched Dentin`
+* **Article Subtitle (副标题)**: `A forensic examination of hydrocarbon lipid films, adhesive bond failure, and the physics of oil-free medical air.`
+* **Image Assets (高精图片外链)**: 本文 8 张高清工程配图已全部完成 Substack 官方 CDN 托管解析与全球分发！
 
 ---
 
@@ -25,7 +28,9 @@
 
 ***
 
-# Inside ISO 8573-1 Class 0: How 0.003 mg/m³ Oil Purity & Duplex Redundancy Redefine Modern Dental Air
+# The 0.003-Milligram Catastrophe: What Actually Happens When Compressed Air Hits Etched Dentin
+
+### *A forensic examination of hydrocarbon lipid films, adhesive bond failure, and the physics of oil-free medical air.*
 
 *By Martin Chen · Hongrun Medical Pneumatics Engineering Taskforce*
 
@@ -34,11 +39,15 @@
 
 In modern clinical dentistry, compressed air is not merely a utility—it is an active medical fluid. From cooling turbine handpieces spinning at 400,000 RPM to air-drying etched enamel prior to resin bonding, the pneumatic stream comes into direct, micro-invasive contact with open tooth preparations, vascularized pulp tissue, and patient oral mucosa.
 
-Yet across clinical operatories worldwide, a silent contamination risk persists: microscopic oil aerosol mist and hydrocarbon vapors. 
+Yet across clinical operatories worldwide, a silent contamination catastrophe persists: microscopic oil aerosol mist and hydrocarbon vapors.
+
+When a dentist prepares a cavity, 37% phosphoric acid removes the smear layer and demineralizes the top 3–5 microns of dentin, exposing an intricate collagen fibril scaffold. The adhesive monomer must infiltrate this hydrophilic micro-porous network to create a hybrid layer with >25 MPa shear bond strength.
+
+Introduce just 0.01 milligrams of aerosolized mineral oil per cubic meter from an oily compressor—a quantity completely invisible to the human eye—and thermodynamic surface tension collapses. A monomolecular hydrophobic lipid film instantly blankets the collagen fibrils. Adhesive infiltration drops by up to 35%, causing premature marginal microleakage, chronic hypersensitivity, and unexplained restoration debonding within 18 months.
 
 While conventional dental compressors rely on consumer-grade oily pump designs with downstream coalescing filters, leading healthcare institutions and international standards committees are mandating a more stringent engineering threshold: **ISO 8573-1:2010 Class 0**.
 
-Here is an engineering examination of how oil-free compression physics, composite metallurgy, and dual-pump parallel redundancy define clinic uptime and patient safety.
+Here is an engineering forensic examination of how oil-free compression physics, composite metallurgy, and dual-pump parallel redundancy define clinic uptime and patient safety.
 
 ---
 
