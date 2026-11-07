@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -60,7 +65,7 @@
   <meta property="og:site_name" content="Hongrun Technology">
   <meta property="og:title" content="Global Expansion Operational Strategy: Replacing Fragmented Sales with Systemic Precision | Hongrun Technology">
   <meta property="og:description" content="Replacing fragmented sales with systemic precision: Inside Hongrun's 30-year medical Class 0 engineering foundation and global digital matrix. Includes official 68s 4K film.">
-  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg?v=20260915">
+  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/">
   <meta property="og:type" content="article">
 
@@ -68,7 +73,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Global Expansion Operational Strategy: Replacing Fragmented Sales with Systemic Precision | Hongrun Technology">
   <meta name="twitter:description" content="Replacing fragmented sales with systemic precision: Inside Hongrun's 30-year medical Class 0 engineering foundation and global digital matrix.">
-  <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg?v=20260915">
+  <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg">
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
@@ -284,13 +289,41 @@
     }
   </style>
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News & Insights",
+      "item": "https://www.hongrun1995.cn/news.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Global Expansion Operational Strategy: Replacing Fragmented Sales with Systemic Precision",
+      "item": "https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/"
+    }
+  ]
+}
+</script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
 
 <!-- Global Navigation Bar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — Medical Air Systems" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — Medical Air Systems" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
@@ -311,7 +344,7 @@
   <div class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl z-10 flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer-panel">
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
-        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain"></a>
+        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139"></a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark text-xl"></i></button>
       </div>
       <nav class="p-4 space-y-1 text-sm font-medium text-slate-700 font-display">
@@ -344,10 +377,10 @@
 
     <!-- Technical Badges -->
     <div class="flex flex-wrap items-center gap-2 mb-4">
-      <span class="bg-red-600 text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded shadow-sm inline-flex items-center gap-1.5"><i class="fa-brands fa-youtube"></i> 4K Video Featured &middot; 01:08</span>
-      <span class="bg-gradient-to-r from-brand-accent to-brand-gold text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Global Strategy Playbook &middot; Article #11</span>
-      <span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[10px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">Systemic Precision &middot; Medical Air Systems</span>
-      <span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[10px] uppercase tracking-wider px-3 py-1 rounded">ISO 8573-1 Class 0 &middot; NMPA Class II</span>
+      <span class="bg-red-600 text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm inline-flex items-center gap-1.5"><i class="fa-brands fa-youtube"></i> 4K Video Featured &middot; 01:08</span>
+      <span class="bg-gradient-to-r from-brand-accent to-brand-gold text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Global Strategy Playbook &middot; Article #11</span>
+      <span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">Systemic Precision &middot; Medical Air Systems</span>
+      <span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded">ISO 8573-1 Class 0 &middot; NMPA Class II</span>
     </div>
 
     <!-- Main Headline -->
@@ -420,7 +453,7 @@
         <!-- Right: Real-time Storyboard Index & Key Takeaways -->
         <div class="lg:col-span-5 space-y-3.5">
           <div class="bg-slate-800/60 backdrop-blur border border-slate-700/80 p-4 rounded-xl">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-sky-400 block mb-1">Film Overview &amp; Specifications</span>
+            <span class="text-[11px] font-mono uppercase tracking-widest text-sky-400 block mb-1">Film Overview &amp; Specifications</span>
             <div class="text-sm font-bold text-white mb-2 font-display">68 Seconds Cinematic Technical Tour</div>
             <p class="text-xs text-slate-300 leading-relaxed">
               Experience Hongrun Technology's automated 5-axis CNC machining, 100% oil-free ISO 8573-1 Class 0 assembly lines, Southeast Asia dual-hub expansion, and digital operations infrastructure in Ultra-High Definition.
@@ -429,7 +462,7 @@
 
           <!-- Interactive Chapter Jump Navigation -->
           <div class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400 block mb-3">
+            <span class="text-[11px] font-mono uppercase tracking-widest text-slate-400 block mb-3">
               <i class="fa-solid fa-list-ol mr-1 text-sky-400"></i> Interactive Engineering Chapters
             </span>
             <div class="space-y-2 text-xs">
@@ -438,7 +471,7 @@
                   <span class="text-sky-400 font-mono font-bold">00:00</span>
                   <span class="truncate">Breaking the Fragmentation Trap</span>
                 </span>
-                <i class="fa-solid fa-play text-[10px] text-slate-500 group-hover:text-sky-400 transition"></i>
+                <i class="fa-solid fa-play text-[11px] text-slate-500 group-hover:text-sky-400 transition"></i>
               </button>
 
               <button onclick="seekVideo(8)" class="w-full text-left py-1.5 px-2.5 rounded bg-slate-800 hover:bg-slate-700/80 transition flex items-center justify-between text-slate-200 hover:text-white group">
@@ -446,7 +479,7 @@
                   <span class="text-sky-400 font-mono font-bold">00:08</span>
                   <span class="truncate">30-Year Engineering Pedigree (1995–2025)</span>
                 </span>
-                <i class="fa-solid fa-play text-[10px] text-slate-500 group-hover:text-sky-400 transition"></i>
+                <i class="fa-solid fa-play text-[11px] text-slate-500 group-hover:text-sky-400 transition"></i>
               </button>
 
               <button onclick="seekVideo(18)" class="w-full text-left py-1.5 px-2.5 rounded bg-slate-800 hover:bg-slate-700/80 transition flex items-center justify-between text-slate-200 hover:text-white group">
@@ -454,7 +487,7 @@
                   <span class="text-sky-400 font-mono font-bold">00:18</span>
                   <span class="truncate">Core Pump Mechanics &amp; 5-Axis CNC Precision</span>
                 </span>
-                <i class="fa-solid fa-play text-[10px] text-slate-500 group-hover:text-sky-400 transition"></i>
+                <i class="fa-solid fa-play text-[11px] text-slate-500 group-hover:text-sky-400 transition"></i>
               </button>
 
               <button onclick="seekVideo(30)" class="w-full text-left py-1.5 px-2.5 rounded bg-slate-800 hover:bg-slate-700/80 transition flex items-center justify-between text-slate-200 hover:text-white group">
@@ -462,7 +495,7 @@
                   <span class="text-sky-400 font-mono font-bold">00:30</span>
                   <span class="truncate">Southeast Asia Expansion (Thailand &amp; Malaysia)</span>
                 </span>
-                <i class="fa-solid fa-play text-[10px] text-slate-500 group-hover:text-sky-400 transition"></i>
+                <i class="fa-solid fa-play text-[11px] text-slate-500 group-hover:text-sky-400 transition"></i>
               </button>
 
               <button onclick="seekVideo(45)" class="w-full text-left py-1.5 px-2.5 rounded bg-slate-800 hover:bg-slate-700/80 transition flex items-center justify-between text-slate-200 hover:text-white group">
@@ -470,7 +503,7 @@
                   <span class="text-sky-400 font-mono font-bold">00:45</span>
                   <span class="truncate">Digital Operations Matrix &amp; Brand Moat</span>
                 </span>
-                <i class="fa-solid fa-play text-[10px] text-slate-500 group-hover:text-sky-400 transition"></i>
+                <i class="fa-solid fa-play text-[11px] text-slate-500 group-hover:text-sky-400 transition"></i>
               </button>
 
               <button onclick="seekVideo(60)" class="w-full text-left py-1.5 px-2.5 rounded bg-slate-800 hover:bg-slate-700/80 transition flex items-center justify-between text-slate-200 hover:text-white group">
@@ -478,7 +511,7 @@
                   <span class="text-sky-400 font-mono font-bold">01:00</span>
                   <span class="truncate">Global Commercial RFQ &amp; Engineering Support</span>
                 </span>
-                <i class="fa-solid fa-play text-[10px] text-slate-500 group-hover:text-sky-400 transition"></i>
+                <i class="fa-solid fa-play text-[11px] text-slate-500 group-hover:text-sky-400 transition"></i>
               </button>
             </div>
           </div>
@@ -581,7 +614,7 @@
 
       <!-- Interspersed Image 1: Meeting & Strategy Discussion -->
       <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="../../assets/images/news/strategy_meeting_discussion.png" alt="Hongrun Technology Global Strategic Taskforce Meeting" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+        <img src="../../assets/images/news/strategy_meeting_discussion.webp" alt="Hongrun Technology Global Strategic Taskforce Meeting" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1643" height="1232" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <span><i class="fa-solid fa-camera text-slate-400 mr-1.5"></i> <strong>Executive Session</strong>: Hongrun International Strategic Taskforce (Global HQ, Zibo, Shandong)</span>
           <span class="text-sky-700 font-mono font-semibold">STRATEGY ARCHIVE</span>
@@ -608,13 +641,13 @@
       <!-- Interspersed Image 2 & 3 Grid: Workshop & Motor Frame -->
       <div class="grid md:grid-cols-2 gap-6 my-8">
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-          <img src="../../assets/images/news/video_frame_800_motor.png" alt="Precision Bare Pump Head and Dynamic Motor Assembly" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+          <img src="../../assets/images/news/video_frame_800_motor.webp" alt="Precision Bare Pump Head and Dynamic Motor Assembly" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
             <strong>01. Pump Engineering</strong>: Dynamically balanced motors &amp; aerospace-grade alloy heads.
           </figcaption>
         </figure>
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-          <img src="../../assets/images/news/video_frame_560_workshop.png" alt="Automated 5-Axis CNC Precision Machining Facility" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+          <img src="../../assets/images/news/video_frame_560_workshop.webp" alt="Automated 5-Axis CNC Precision Machining Facility" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
             <strong>02. Robotic Machining</strong>: Sub-micron tolerances on multi-axis machining centers.
           </figcaption>
@@ -664,13 +697,13 @@
       <!-- Interspersed Image 4 & 5 Grid: Southeast Asia Map & Complete Portfolio -->
       <div class="grid md:grid-cols-2 gap-6 my-8">
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-          <img src="../../assets/images/news/video_frame_1200_southeast_asia.png" alt="Southeast Asia Regional Expansion Map - Thailand and Malaysia" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+          <img src="../../assets/images/news/video_frame_1200_southeast_asia.webp" alt="Southeast Asia Regional Expansion Map - Thailand and Malaysia" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
             <strong>03. Regional Spearhead</strong>: Thailand &amp; Malaysia central distributor fulfillment hubs.
           </figcaption>
         </figure>
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-          <img src="../../assets/images/news/video_frame_940_portfolio.png" alt="Complete Medical Compressed Air and Suction Product Ecosystem" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+          <img src="../../assets/images/news/video_frame_940_portfolio.webp" alt="Complete Medical Compressed Air and Suction Product Ecosystem" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
             <strong>04. Solution Ecosystem</strong>: Bare heads, cabinet units, and central stations.
           </figcaption>
@@ -703,13 +736,13 @@
       <!-- Interspersed Image 6 & 7 Grid: Brand Moat & Finale Campus -->
       <div class="grid md:grid-cols-2 gap-6 my-8">
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-          <img src="../../assets/images/news/video_frame_1550_brand_moat.png" alt="Hongrun Certified Brand Moat and Global Compliance" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+          <img src="../../assets/images/news/video_frame_1550_brand_moat.webp" alt="Hongrun Certified Brand Moat and Global Compliance" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
             <strong>05. Certified Quality Moat</strong>: ISO 8573-1 Class 0, CE MDR, and ISO 13485:2016 compliance.
           </figcaption>
         </figure>
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-          <img src="../../assets/images/news/video_frame_1950_finale.png" alt="Hongrun Technology Advanced Industrial Manufacturing Campus" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+          <img src="../../assets/images/news/video_frame_1950_finale.webp" alt="Hongrun Technology Advanced Industrial Manufacturing Campus" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
             <strong>06. Advanced Campus</strong>: 20,000 m&sup2; production facilities delivering global certainty.
           </figcaption>
@@ -854,7 +887,7 @@
             </p>
           </div>
           <a href="../../products-core.html" class="text-xs font-bold text-sky-700 hover:text-sky-800 inline-flex items-center gap-1">
-            <span>Explore OEM Components</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <span>Explore OEM Components</span> <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
 
@@ -867,7 +900,7 @@
             </p>
           </div>
           <a href="../../products-hy.html" class="text-xs font-bold text-sky-700 hover:text-sky-800 inline-flex items-center gap-1">
-            <span>Review HY Dental Series</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <span>Review HY Dental Series</span> <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
 
@@ -880,7 +913,7 @@
             </p>
           </div>
           <a href="../../products-hospital.html" class="text-xs font-bold text-sky-700 hover:text-sky-800 inline-flex items-center gap-1">
-            <span>Hospital EPC Systems</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <span>Hospital EPC Systems</span> <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
       </div>
@@ -952,7 +985,7 @@
     </p>
 
     <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white not-prose">
-      <img src="../../assets/images/news/strategy_meeting_discussion.png" alt="宏润科技全球战略专班研讨会" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+      <img src="../../assets/images/news/strategy_meeting_discussion.webp" alt="宏润科技全球战略专班研讨会" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1643" height="1232" />
       <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
         <span><i class="fa-solid fa-camera text-slate-400 mr-1.5"></i> <strong>宏润科技国际业务项目组出海战术研讨会现场（淄博总部）</strong></span>
         <span class="text-sky-700 font-mono font-semibold">STRATEGY ARCHIVE</span>
@@ -978,13 +1011,13 @@
 
     <div class="grid md:grid-cols-2 gap-6 my-8 not-prose">
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="../../assets/images/news/video_frame_800_motor.png" alt="精密无油泵头与动平衡电机总成" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+        <img src="../../assets/images/news/video_frame_800_motor.webp" alt="精密无油泵头与动平衡电机总成" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
           <strong>01. 核心机头精工</strong>：航天级特种铝合金机头与动态高精度平衡电机。
         </figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="../../assets/images/news/video_frame_560_workshop.png" alt="自动化五轴联动 CNC 数控精密加工车间" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+        <img src="../../assets/images/news/video_frame_560_workshop.webp" alt="自动化五轴联动 CNC 数控精密加工车间" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
           <strong>02. 数控自动化柔性产线</strong>：亚微米级公差多轴加工中心全封闭流水作业。
         </figcaption>
@@ -1033,13 +1066,13 @@
 
     <div class="grid md:grid-cols-2 gap-6 my-8 not-prose">
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="../../assets/images/news/video_frame_1200_southeast_asia.png" alt="东南亚区域出海战略版图 - 泰国与马来西亚" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+        <img src="../../assets/images/news/video_frame_1200_southeast_asia.webp" alt="东南亚区域出海战略版图 - 泰国与马来西亚" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
           <strong>03. 区域战略突破口</strong>：泰国、马来西亚核心城市本地化分销与工程配件仓。
         </figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="../../assets/images/news/video_frame_940_portfolio.png" alt="医用无油压缩空气与负压抽吸全矩阵生态" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+        <img src="../../assets/images/news/video_frame_940_portfolio.webp" alt="医用无油压缩空气与负压抽吸全矩阵生态" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
           <strong>04. 完整系统生态</strong>：从静音机箱、双机头站房到中央医院供气机组全覆盖。
         </figcaption>
@@ -1071,13 +1104,13 @@
 
     <div class="grid md:grid-cols-2 gap-6 my-8 not-prose">
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="../../assets/images/news/video_frame_1550_brand_moat.png" alt="宏润科技权威质量认证与全球合规护城河" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+        <img src="../../assets/images/news/video_frame_1550_brand_moat.webp" alt="宏润科技权威质量认证与全球合规护城河" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
           <strong>05. 权威认证护城河</strong>：德国莱茵 ISO 8573-1 Class 0、欧盟 CE MDR 与 ISO 13485:2016 医疗器械体系认证。
         </figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-        <img src="../../assets/images/news/video_frame_1950_finale.png" alt="宏润科技现代化智造产业园区全景" class="w-full h-auto object-cover" loading="lazy" decoding="async"/>
+        <img src="../../assets/images/news/video_frame_1950_finale.webp" alt="宏润科技现代化智造产业园区全景" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
           <strong>06. 现代化智造产业园</strong>：20,000 m&sup2; 生产园区向全球客户提供确定性交付保障。
         </figcaption>
@@ -1345,7 +1378,7 @@
   <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-12 mb-8 not-prose">
     <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
       <div>
-        <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
+        <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
         <h3 class="text-base font-bold text-brand-dark font-display mt-2">Share this Playbook with your Professional Network</h3>
         <p class="text-xs text-slate-500 mt-0.5">Distribute engineering benchmarks, regional blueprints, and digital operations playbooks across global platforms.</p>
       </div>
@@ -1409,7 +1442,7 @@
       
       <a href="../20260910-precision-manufacturing-meets-agentic-web/index.html" class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition hover:-translate-y-1 block flex flex-col justify-between">
         <div>
-          <span class="text-[10px] font-mono text-purple-600 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Whitepaper #10</span>
+          <span class="text-[11px] font-mono text-purple-600 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Whitepaper #10</span>
           <h5 class="text-sm font-bold text-slate-900 mt-2 font-display leading-snug">
             Three Decades of Precision Manufacturing Meets the Agentic Web
           </h5>
@@ -1422,7 +1455,7 @@
 
       <a href="../20260908-4-to-8-dental-chairs-dual-pump-redundancy/index.html" class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition hover:-translate-y-1 block flex flex-col justify-between">
         <div>
-          <span class="text-[10px] font-mono text-sky-600 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">Whitepaper #09</span>
+          <span class="text-[11px] font-mono text-sky-600 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">Whitepaper #09</span>
           <h5 class="text-sm font-bold text-slate-900 mt-2 font-display leading-snug">
             Dual-Pump Redundancy Architecture: 4-to-8 Dental Chairs
           </h5>
@@ -1435,7 +1468,7 @@
 
       <a href="../20260902-dental-air-purity-engineering-guide/index.html" class="bg-white p-5 rounded-xl border border-slate-200 shadow-xs hover:shadow-md transition hover:-translate-y-1 block flex flex-col justify-between">
         <div>
-          <span class="text-[10px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Flagship Whitepaper #01</span>
+          <span class="text-[11px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Flagship Whitepaper #01</span>
           <h5 class="text-sm font-bold text-slate-900 mt-2 font-display leading-snug">
             Engineering Zero-Oil Purity: ISO 8573-1 Class 0 Standards
           </h5>
@@ -1458,8 +1491,8 @@
       <!-- Col 1 & 2: Brand & Positioning & Direct Contact -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">

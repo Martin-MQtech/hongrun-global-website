@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -119,13 +124,35 @@
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News & Insights",
+      "item": "https://www.hongrun1995.cn/news.html"
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
@@ -147,7 +174,7 @@
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
         <a href="/" class="flex items-center gap-2">
-          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139">
         </a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
@@ -193,13 +220,13 @@
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
       </a>
       <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
         <a href="mailto:martinchen@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
           <i class="fa-solid fa-envelope text-slate-400"></i> martinchen@hongrun1995.cn
         </a>
       </div>
       <div class="pt-2 mt-2 border-t border-slate-200 text-center">
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
         <a href="mailto:info@hongrun1995.cn" class="text-[11px] text-slate-500 hover:text-brand-blue transition">info@hongrun1995.cn</a>
       </div>
     </div>
@@ -218,13 +245,13 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-4 sm:pb-6">
       <!-- Exquisite, Micro-Compact & Left-Aligned Crystal Glassmorphism Card -->
       <div class="max-w-[310px] sm:max-w-[340px] p-3 sm:p-3.5 rounded-xl bg-slate-950/30 backdrop-blur-md border border-white/15 shadow-[0_12px_32px_rgba(0,0,0,0.5)] ml-1 sm:ml-2">
-        <p class="text-white/70 text-[9px] uppercase tracking-widest mb-1 flex items-center gap-1.5">
+        <p class="text-white/70 text-[11px] uppercase tracking-widest mb-1 flex items-center gap-1.5">
           <a href="/" class="hover:text-sky-300 transition">Home</a>
           <span>/</span>
           <span class="text-sky-300">News &amp; Insights</span>
         </p>
 
-        <div class="inline-block px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-sky-200 font-semibold text-[8px] tracking-wide uppercase mb-1">
+        <div class="inline-block px-2 py-0.5 rounded-full bg-white/10 border border-white/20 text-sky-200 font-semibold text-[11px] tracking-wide uppercase mb-1">
           Clinical Sizing · 30-Year Tour · Global Expos
         </div>
 
@@ -233,15 +260,15 @@
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-sky via-teal-300 to-amber-300">Technical Insights</span>
         </h1>
 
-        <p class="text-[10px] text-slate-200 mb-2 font-light leading-snug line-clamp-2 [text-shadow:0_1px_6px_rgba(0,0,0,0.8)]">
+        <p class="text-[11px] text-slate-200 mb-2 font-light leading-snug line-clamp-2 [text-shadow:0_1px_6px_rgba(0,0,0,0.8)]">
           Authoritative technical whitepapers, sizing guides, and 30-year engineering quality tour milestones.
         </p>
 
         <div class="flex items-center gap-2">
-          <a href="#articles" class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-2.5 py-1 rounded-md font-bold text-[10px] transition shadow-md inline-flex items-center gap-1">
-            Read Insights <i class="fa-solid fa-arrow-down text-[8px]"></i>
+          <a href="#articles" class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-2.5 py-1 rounded-md font-bold text-[11px] transition shadow-md inline-flex items-center gap-1">
+            Read Insights <i class="fa-solid fa-arrow-down text-[11px]"></i>
           </a>
-          <a href="#keyword-pool" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-2 py-1 rounded-md font-medium text-[10px] transition">
+          <a href="#keyword-pool" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-2 py-1 rounded-md font-medium text-[11px] transition">
             Keyword Pool
           </a>
         </div>
@@ -259,6 +286,8 @@
         <span>Topic Keyword Pool:</span>
       </div>
       <div class="flex flex-wrap items-center gap-1.5 text-xs">
+        <a href="/hongrun-vs-durr-dental.html" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px] font-bold">#Hongrun vs. Dürr Dental</a>
+        <a href="/warranty-policy.html" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#Official Warranty Policy</a>
         <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="tag-badge bg-brand-sky/20 border border-brand-sky/40 text-brand-sky px-2.5 py-0.5 rounded-full hover:bg-brand-sky hover:text-white transition text-[11px]">#4-8 Dental Chairs Redundancy</a>
         <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#1-3 Dental Chairs Sizing</a>
         <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="tag-badge bg-white/10 hover:bg-brand-blue border border-white/15 px-2.5 py-0.5 rounded-full transition text-slate-200 hover:text-white font-medium text-[11px]">#ISO 8573-1 Class 0</a>
@@ -305,10 +334,10 @@
         <div>
           <!-- Thumbnail with Standard h-44 Height -->
           <a href="/articles/20261021-dentech-china-2026/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20261021-dentech-china-2026/card_cover.webp" alt="DenTech China 2026: Hongrun Technology Booth M47-48, M69-70" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+            <img src="/articles/20261021-dentech-china-2026/card_cover.webp" alt="DenTech China 2026: Hongrun Technology Booth M47-48, M69-70" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1200" height="630" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-rose-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5">
-              <i class="fa-solid fa-fire text-amber-300 text-[10px]"></i> Oct 22–25 &middot; Booth M47-70
+              <i class="fa-solid fa-fire text-amber-300 text-[11px]"></i> Oct 22–25 &middot; Booth M47-70
             </span>
           </a>
 
@@ -330,9 +359,9 @@
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#DenTechChina2026</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#BoothM47-70</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#SmartDentalRoom</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#DenTechChina2026</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#BoothM47-70</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#SmartDentalRoom</span>
             </div>
           </div>
         </div>
@@ -340,7 +369,7 @@
         <!-- Action Row -->
         <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
           <a href="/articles/20261021-dentech-china-2026/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
-            Read Expo Guide &amp; RSVP <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Expo Guide &amp; RSVP <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
       </article>
@@ -350,9 +379,9 @@
         <div>
           <!-- Thumbnail with Standard h-44 Height -->
           <a href="/articles/20260926-silence-and-purity-stress-tests/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20260926-silence-and-purity-stress-tests/card_cover.webp" alt="Silence & Purity: The Ultimate Stress Tests" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+            <img src="/articles/20260926-silence-and-purity-stress-tests/card_cover.webp" alt="Silence & Purity: The Ultimate Stress Tests" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1920" height="1080" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-play text-white text-[10px]"></i> 93s Film &middot; Stress Tests</span>
+            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-play text-white text-[11px]"></i> 93s Film &middot; Stress Tests</span>
           </a>
 
           <!-- Content -->
@@ -373,9 +402,9 @@
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#ISO8573Class0</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#StressTests</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#WhisperQuiet</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#ISO8573Class0</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#StressTests</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#WhisperQuiet</span>
             </div>
           </div>
         </div>
@@ -383,7 +412,7 @@
         <!-- Action Row -->
         <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
           <a href="/articles/20260926-silence-and-purity-stress-tests/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
-            Watch Film &amp; Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Watch Film &amp; Read Whitepaper <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
       </article>
@@ -392,9 +421,9 @@
       <article class="blog-card bg-white rounded-xl border border-slate-200 hover:border-brand-blue shadow-sm hover:shadow-md transition overflow-hidden flex flex-col justify-between group relative">
         <div>
           <a href="/articles/20260925-3d-medical-air-simulator/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20260925-3d-medical-air-simulator/card_cover.webp" alt="3D CAD Simulator: 1,420 RPM Kinematics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+            <img src="/articles/20260925-3d-medical-air-simulator/card_cover.webp" alt="3D CAD Simulator: 1,420 RPM Kinematics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1920" height="1080" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-emerald-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-cube text-white text-[10px]"></i> 110s 3D CAD &middot; Kinematics</span>
+            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-emerald-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-cube text-white text-[11px]"></i> 110s 3D CAD &middot; Kinematics</span>
           </a>
 
           <div class="p-5">
@@ -414,16 +443,16 @@
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#3DMechanics</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#1420RPM</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#WobblePiston</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#3DMechanics</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#1420RPM</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#WobblePiston</span>
             </div>
           </div>
         </div>
 
         <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
           <a href="/articles/20260925-3d-medical-air-simulator/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
-            Explore 3D Film &amp; Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Explore 3D Film &amp; Read Article <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
       </article>
@@ -432,9 +461,9 @@
       <article class="blog-card bg-white rounded-xl border border-slate-200 hover:border-brand-blue shadow-sm hover:shadow-md transition overflow-hidden flex flex-col justify-between group relative">
         <div>
           <a href="/articles/20260916-world-class-manufacturing-profile/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20260916-world-class-manufacturing-profile/card_cover.webp" alt="Thirty Years of Dedicated Precision: Inside Hongrun's Manufacturing Base" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+            <img src="/articles/20260916-world-class-manufacturing-profile/card_cover.webp" alt="Thirty Years of Dedicated Precision: Inside Hongrun's Manufacturing Base" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1920" height="1080" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-blue-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-building text-white text-[10px]"></i> 90s Brand Film &middot; Plant Tour</span>
+            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-blue-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-building text-white text-[11px]"></i> 90s Brand Film &middot; Plant Tour</span>
           </a>
 
           <div class="p-5">
@@ -454,16 +483,16 @@
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#30YearsHeritage</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#ClassIIMedical</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#SmartManufacturing</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#30YearsHeritage</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#ClassIIMedical</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#SmartManufacturing</span>
             </div>
           </div>
         </div>
 
         <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
           <a href="/articles/20260916-world-class-manufacturing-profile/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
-            Watch Brand Film &amp; Tour Plant <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Watch Brand Film &amp; Tour Plant <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
       </article>
@@ -473,9 +502,9 @@
         <div>
           <!-- Thumbnail with Standard h-44 Height -->
           <a href="/articles/20260915-global-expansion-operational-strategy/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img data-zoom data-hd="assets/images/news/hongrun_global_expansion_cover.webp?v=20260915" src="assets/images/news/hongrun_global_expansion_cover.webp?v=20260915" alt="Hongrun Technology Global Expansion Operational Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+            <img data-zoom data-hd="assets/images/news/hongrun_global_expansion_cover.webp?v=20260915" src="assets/images/news/hongrun_global_expansion_cover.webp?v=20260915" alt="Hongrun Technology Global Expansion Operational Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1024" height="653" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-red-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-play text-white text-[10px]"></i> 4K Video &middot; Strategy</span>
+            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-red-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-play text-white text-[11px]"></i> 4K Video &middot; Strategy</span>
           </a>
 
           <!-- Content -->
@@ -496,9 +525,9 @@
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#GlobalExpansion</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#SystemicPrecision</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#Class0Medical</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#GlobalExpansion</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#SystemicPrecision</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#Class0Medical</span>
             </div>
           </div>
         </div>
@@ -506,7 +535,7 @@
         <!-- Action Row -->
         <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
           <a href="/articles/20260915-global-expansion-operational-strategy/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
-            Watch &amp; Read Playbook <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Watch &amp; Read Playbook <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
         </div>
       </article>
@@ -516,7 +545,7 @@
         <div>
           <!-- Thumbnail -->
           <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img data-zoom data-hd="assets/images/news/hongrun_smart_plant_cover.webp" src="assets/images/news/hongrun_smart_plant_cover.webp" alt="Hongrun Intelligent Hospital Medical Air Plant Room with Digital Twin Telemetry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+            <img data-zoom data-hd="assets/images/news/hongrun_smart_plant_cover.webp" src="assets/images/news/hongrun_smart_plant_cover.webp" alt="Hongrun Intelligent Hospital Medical Air Plant Room with Digital Twin Telemetry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1376" height="768" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-microchip text-sky-300"></i> AI &amp; Agentic Web</span>
           </a>
@@ -540,9 +569,9 @@
 
             <!-- 3 Keyword Tags -->
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#AgenticWeb</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#Class0Precision</span>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#WebMCP</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#AgenticWeb</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#Class0Precision</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#WebMCP</span>
             </div>
           </div>
         </div>
@@ -550,7 +579,7 @@
         <!-- Action Row -->
         <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
           <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
-            Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Whitepaper <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
           <a href="contact.html?source=Whitepaper10" class="text-slate-400 hover:text-brand-accent transition flex items-center gap-1 font-medium">
             <i class="fa-regular fa-envelope"></i> Quick Inquire
@@ -563,7 +592,7 @@
         <div>
           <!-- Thumbnail -->
           <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="block h-44 bg-slate-50 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img data-zoom data-hd="assets/images/products/hd/HYTG-300.webp" src="assets/images/news/news_13_hytg300_hero.webp" alt="4 to 8 Dental Chairs Dual Pump Redundancy HYTG-300" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/products/hd/HYTG-300.webp" src="assets/images/news/news_13_hytg300_hero.webp" alt="4 to 8 Dental Chairs Dual Pump Redundancy HYTG-300" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="1534" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-accent/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-server text-amber-300"></i> N+1 Redundancy</span>
           </a>
@@ -587,9 +616,9 @@
 
             <!-- Topic Chips / Keywords -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="products-hy.html" class="text-[10px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYTG-300 (90L)</a>
-              <a href="products-hy.html" class="text-[10px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded hover:bg-emerald-600 hover:text-white transition">N+1 Redundancy</a>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">4–8 Chairs Sizing</span>
+              <a href="products-hy.html" class="text-[11px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYTG-300 (90L)</a>
+              <a href="products-hy.html" class="text-[11px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded hover:bg-emerald-600 hover:text-white transition">N+1 Redundancy</a>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">4–8 Chairs Sizing</span>
             </div>
           </div>
         </div>
@@ -597,7 +626,7 @@
         <!-- Card Footer -->
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
-            Read Redundancy Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Redundancy Guide <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/news/news_13_4to8chairs_redundancy.jpg" class="text-[11px] text-slate-400 hover:text-brand-accent cursor-pointer">View Blueprint</span>
         </div>
@@ -608,7 +637,7 @@
         <div>
           <!-- Thumbnail -->
           <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_12_1to3chairs_blueprint.webp" src="assets/images/news/news_12_1to3chairs_blueprint.webp" alt="1 to 3 Dental Chairs Sizing Guide Blueprint" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/news/news_12_1to3chairs_blueprint.webp" src="assets/images/news/news_12_1to3chairs_blueprint.webp" alt="1 to 3 Dental Chairs Sizing Guide Blueprint" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1376" height="768" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-calculator text-amber-300"></i> Clinical Sizing</span>
           </a>
@@ -632,16 +661,16 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="products-hy.html" class="text-[10px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HY-100 (24L)</a>
-              <a href="products-hy.html" class="text-[10px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded hover:bg-emerald-600 hover:text-white transition">HY-200 (32L)</a>
-              <span class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">&le;55 dBA Silent</span>
+              <a href="products-hy.html" class="text-[11px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HY-100 (24L)</a>
+              <a href="products-hy.html" class="text-[11px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded hover:bg-emerald-600 hover:text-white transition">HY-200 (32L)</a>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">&le;55 dBA Silent</span>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
-            Read Sizing Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Sizing Guide <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/news/news_12_1to3chairs_blueprint.jpg" class="text-[11px] text-slate-400 hover:text-brand-accent cursor-pointer">View Blueprint</span>
         </div>
@@ -652,7 +681,7 @@
         <div>
           <!-- Thumbnail -->
           <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
-            <img data-zoom src="assets/images/products/hy-family-portfolio.webp?v=20260902_v4" data-hd="assets/images/products/hy-family-portfolio.webp?v=20260902_v4" alt="Hongrun Medical Dental Compressor Family Portfolio" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom src="assets/images/products/hy-family-portfolio.webp?v=20260902_v4" data-hd="assets/images/products/hy-family-portfolio.webp?v=20260902_v4" alt="Hongrun Medical Dental Compressor Family Portfolio" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="2560" height="1280" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/85 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-file-waveform text-sky-300"></i> Engineering Whitepaper</span>
           </a>
@@ -676,16 +705,16 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="products-hy.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HY Series</a>
-              <a href="products-hy.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Nano-Tank 32L</a>
-              <span class="text-[10px] bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">WS 507/310.2</span>
+              <a href="products-hy.html" class="text-[11px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HY Series</a>
+              <a href="products-hy.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Nano-Tank 32L</a>
+              <span class="text-[11px] bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">WS 507/310.2</span>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
-            Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Whitepaper <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/products/hy-family-portfolio.jpg" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View Gallery</span>
         </div>
@@ -696,7 +725,7 @@
         <div>
           <!-- 3D Exploded View Thumbnail -->
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/exploded/02-hvs-suction-exploded.webp" src="assets/images/exploded/02-hvs-suction-exploded.webp" alt="3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum System" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/exploded/02-hvs-suction-exploded.webp" src="assets/images/exploded/02-hvs-suction-exploded.webp" alt="3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum System" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1376" height="768" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/90 text-[11px] font-medium bg-black/60 backdrop-blur px-2 py-0.5 rounded flex items-center gap-1">
               <i class="fa-solid fa-fan text-teal-300"></i> 3D Blueprint
@@ -722,15 +751,15 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="products-hvs.html" class="text-[10px] bg-teal-500/10 text-teal-700 font-semibold px-2 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">HVS Suction</a>
-              <a href="products-hvs.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Cyclone Separator</a>
+              <a href="products-hvs.html" class="text-[11px] bg-teal-500/10 text-teal-700 font-semibold px-2 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">HVS Suction</a>
+              <a href="products-hvs.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Cyclone Separator</a>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="text-xs font-bold text-teal-700 hover:underline inline-flex items-center gap-1">
-            Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/exploded/02-hvs-suction-exploded.jpg" class="text-[11px] text-slate-400 hover:text-teal-700 cursor-pointer">View CAD</span>
         </div>
@@ -741,7 +770,7 @@
         <div>
           <!-- 3D Exploded View Thumbnail -->
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="block h-44 bg-white relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.webp" src="assets/images/exploded/01-hy-compressor-exploded.webp" alt="3D CAD Exploded Engineering Anatomy of Medical Oil-Free Compressor" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.webp" src="assets/images/exploded/01-hy-compressor-exploded.webp" alt="3D CAD Exploded Engineering Anatomy of Medical Oil-Free Compressor" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1376" height="768" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/90 text-[11px] font-medium bg-black/60 backdrop-blur px-2 py-0.5 rounded flex items-center gap-1">
               <i class="fa-solid fa-cube text-brand-sky"></i> 3D Blueprint
@@ -767,16 +796,16 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">ISO Class 0</a>
-              <a href="products-core.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">PTFE Rings</a>
-              <a href="products-cleanair.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">PSA Dryer</a>
+              <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-[11px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">ISO Class 0</a>
+              <a href="products-core.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">PTFE Rings</a>
+              <a href="products-cleanair.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">PSA Dryer</a>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
-            Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Full Whitepaper <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/exploded/01-hy-compressor-exploded.jpg" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View CAD</span>
         </div>
@@ -787,7 +816,7 @@
         <div>
           <!-- Clean 16:10 Aspect Thumbnail -->
           <div class="h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_11_15chairs_1.webp" src="assets/images/news/news_11_15chairs_1.webp" alt="15 Dental Chairs Engineering Sizing" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/news/news_11_15chairs_1.webp" src="assets/images/news/news_11_15chairs_1.webp" alt="15 Dental Chairs Engineering Sizing" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1080" height="559" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
               <i class="fa-solid fa-camera"></i> 4 Photos
@@ -813,15 +842,15 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-[10px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYT Dual Pump</a>
-              <a href="products-water.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">HRC Water</a>
+              <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-[11px] bg-brand-accent/10 text-brand-accent font-semibold px-2 py-0.5 rounded hover:bg-brand-accent hover:text-white transition">HYT Dual Pump</a>
+              <a href="products-water.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">HRC Water</a>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-xs font-bold text-brand-accent hover:underline inline-flex items-center gap-1">
-            Read Whitepaper <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Whitepaper <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
           <span data-zoom data-hd="assets/images/news/news_11_15chairs_2.jpg" class="text-[11px] text-slate-400 hover:text-brand-accent cursor-pointer">View Gallery</span>
         </div>
@@ -832,7 +861,7 @@
         <div>
           <!-- Clean 16:10 Aspect Thumbnail -->
           <a href="/articles/20260715-beijing-quality-tour/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_8_beijing_1.webp" src="assets/images/news/news_8_beijing_1.webp" alt="Hongrun Quality Tour Beijing" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/news/news_8_beijing_1.webp" src="assets/images/news/news_8_beijing_1.webp" alt="Hongrun Quality Tour Beijing" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="553" height="415" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
               <i class="fa-solid fa-camera"></i> 3 Photos
@@ -858,17 +887,17 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="about.html" class="text-[10px] bg-teal-500/10 text-teal-700 font-semibold px-2 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">30-Year Story</a>
-              <a href="products-hospital.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Hospital HW</a>
+              <a href="about.html" class="text-[11px] bg-teal-500/10 text-teal-700 font-semibold px-2 py-0.5 rounded hover:bg-teal-600 hover:text-white transition">30-Year Story</a>
+              <a href="products-hospital.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Hospital HW</a>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260715-beijing-quality-tour/" class="text-xs font-bold text-teal-700 hover:underline inline-flex items-center gap-1">
-            Read Chronicle <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Chronicle <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
-          <span data-zoom data-hd="assets/images/news/news_8_beijing_2.png" class="text-[11px] text-slate-400 hover:text-teal-700 cursor-pointer">View Gallery</span>
+          <span data-zoom data-hd="assets/images/news/news_8_beijing_2.webp" class="text-[11px] text-slate-400 hover:text-teal-700 cursor-pointer">View Gallery</span>
         </div>
       </article>
 
@@ -877,7 +906,7 @@
         <div>
           <!-- Clean 16:10 Aspect Thumbnail -->
           <a href="/articles/20260728-dental-south-china-expo/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_10_expo_2.webp" src="assets/images/news/news_10_expo_2.webp" alt="Dental South China Expo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/news/news_10_expo_2.webp" src="assets/images/news/news_10_expo_2.webp" alt="Dental South China Expo" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="553" height="369" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
               <i class="fa-solid fa-camera"></i> 4 Photos
@@ -903,17 +932,17 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="products-cleanair.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HYG Clean Air</a>
-              <a href="products-hvs.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">HVS Suction</a>
+              <a href="products-cleanair.html" class="text-[11px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HYG Clean Air</a>
+              <a href="products-hvs.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">HVS Suction</a>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260728-dental-south-china-expo/" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1">
-            Read Highlights <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Highlights <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
-          <span data-zoom data-hd="assets/images/news/news_10_expo_3.png" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View Gallery</span>
+          <span data-zoom data-hd="assets/images/news/news_10_expo_3.webp" class="text-[11px] text-slate-400 hover:text-brand-blue cursor-pointer">View Gallery</span>
         </div>
       </article>
 
@@ -922,7 +951,7 @@
         <div>
           <!-- Clean 16:10 Aspect Thumbnail -->
           <a href="/articles/20260701-jinan-medical-hub/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer">
-            <img data-zoom data-hd="assets/images/news/news_9_jinan_1.webp" src="assets/images/news/news_9_jinan_1.webp" alt="Hongrun Quality Tour Jinan" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/news/news_9_jinan_1.webp" src="assets/images/news/news_9_jinan_1.webp" alt="Hongrun Quality Tour Jinan" class="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="450" height="256" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white/80 text-[11px] font-medium bg-black/50 backdrop-blur px-2 py-0.5 rounded">
               <i class="fa-solid fa-camera"></i> 4 Photos
@@ -948,17 +977,17 @@
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
-              <a href="products-core.html" class="text-[10px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">Core Spares</a>
-              <a href="contact.html" class="text-[10px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Distributor</a>
+              <a href="products-core.html" class="text-[11px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">Core Spares</a>
+              <a href="contact.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Distributor</a>
             </div>
           </div>
         </div>
 
         <div class="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
           <a href="/articles/20260701-jinan-medical-hub/" class="text-xs font-bold text-brand-deep hover:underline inline-flex items-center gap-1">
-            Read Chronicle <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            Read Chronicle <i class="fa-solid fa-arrow-right text-[11px]"></i>
           </a>
-          <span data-zoom data-hd="assets/images/news/news_9_jinan_2.png" class="text-[11px] text-slate-400 hover:text-brand-deep cursor-pointer">View Gallery</span>
+          <span data-zoom data-hd="assets/images/news/news_9_jinan_2.webp" class="text-[11px] text-slate-400 hover:text-brand-deep cursor-pointer">View Gallery</span>
         </div>
       </article>
 
@@ -997,8 +1026,8 @@
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
@@ -1040,6 +1069,8 @@
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="about.html#certifications">Certifications &amp; Class 0</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="solutions.html">Engineering Solutions</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="news.html">News &amp; Technical Insights</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="hongrun-vs-durr-dental.html">Hongrun vs. Dürr Dental</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="warranty-policy.html">Warranty &amp; Service Policy</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="contact.html#dealership">Become a Global Distributor</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="contact.html">Contact Engineering Team</a></li>
         </ul>

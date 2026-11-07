@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -130,13 +135,35 @@
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "About Us",
+      "item": "https://www.hongrun1995.cn/about.html"
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
@@ -158,7 +185,7 @@
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
         <a href="/" class="flex items-center gap-2">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139">
         </a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
@@ -204,13 +231,13 @@
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
       </a>
       <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
         <a href="mailto:martinchen@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
           <i class="fa-solid fa-envelope text-slate-400"></i> martinchen@hongrun1995.cn
         </a>
       </div>
       <div class="pt-2 mt-2 border-t border-slate-200 text-center">
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
         <a href="mailto:info@hongrun1995.cn" class="text-[11px] text-slate-500 hover:text-brand-blue transition">info@hongrun1995.cn</a>
       </div>
     </div>
@@ -226,11 +253,11 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-center">
       <div class="max-w-2xl w-full px-8 py-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl mx-auto text-center">
         <div class="flex justify-center items-end gap-6 lg:gap-10 mb-5">
-          <div><span class="block text-4xl lg:text-6xl font-extrabold text-sky-300 font-display tracking-tight leading-none">30+</span><span class="text-[10px] text-blue-100 uppercase tracking-widest font-bold mt-1 block">Years</span></div>
+          <div><span class="block text-4xl lg:text-6xl font-extrabold text-sky-300 font-display tracking-tight leading-none">30+</span><span class="text-[11px] text-blue-100 uppercase tracking-widest font-bold mt-1 block">Years</span></div>
           <div class="h-12 border-l border-white/20"></div>
-          <div><span class="block text-4xl lg:text-6xl font-extrabold text-sky-300 font-display tracking-tight leading-none">1995</span><span class="text-[10px] text-blue-100 uppercase tracking-widest font-bold mt-1 block">Since</span></div>
+          <div><span class="block text-4xl lg:text-6xl font-extrabold text-sky-300 font-display tracking-tight leading-none">1995</span><span class="text-[11px] text-blue-100 uppercase tracking-widest font-bold mt-1 block">Since</span></div>
           <div class="h-12 border-l border-white/20"></div>
-          <div><span class="block text-4xl lg:text-6xl font-extrabold text-sky-300 font-display tracking-tight leading-none">65K+</span><span class="text-[10px] text-blue-100 uppercase tracking-widest font-bold mt-1 block">Clinics</span></div>
+          <div><span class="block text-4xl lg:text-6xl font-extrabold text-sky-300 font-display tracking-tight leading-none">65K+</span><span class="text-[11px] text-blue-100 uppercase tracking-widest font-bold mt-1 block">Clinics</span></div>
         </div>
         <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Built on Integrity.<br/><span class="text-sky-300">Driven by Precision.</span></h1>
         <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">30+ years of accumulated craftsmanship — from a veteran's unwavering standards to a new generation's vision for precision medical engineering. Every system carries the weight of that inheritance.</p>
@@ -244,10 +271,10 @@
 <div class="bg-white border-b border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-200 py-4">
-      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">160K+</div><div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Units / Year Capacity</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
-      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">40K</div><div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Dental Units / Year</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
-      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">65,000+</div><div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Clinics Served</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
-      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">190+</div><div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Research Institutes</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
+      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">160K+</div><div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Units / Year Capacity</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
+      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">40K</div><div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Dental Units / Year</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
+      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">65,000+</div><div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Clinics Served</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
+      <div class="text-center px-4 py-3 cursor-pointer group transition-all duration-300 hover:scale-115 relative overflow-hidden"><div class="text-2xl font-extrabold text-brand-dark group-hover:text-brand-blue transition duration-300 mb-0.5 font-display relative z-10">190+</div><div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 group-hover:text-brand-blue transition duration-300 relative z-10">Research Institutes</div><span class="absolute inset-0 bg-gradient-to-r from-transparent via-white/70 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></span></div>
     </div>
   </div>
 </div>
@@ -266,7 +293,7 @@
     
     <!-- Full-width mountain hero with text overlay -->
     <div class="relative rounded-2xl overflow-hidden shadow-2xl mb-8 group">
-      <img src="assets/images/hongrun1995/e83bcec4005f89bd.webp" alt="Scaling the summit of precision engineering — Hongrun's 30+ year journey" class="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" fetchpriority="high"/>
+      <img src="assets/images/hongrun1995/e83bcec4005f89bd.webp" alt="Scaling the summit of precision engineering — Hongrun's 30+ year journey" class="w-full h-80 lg:h-96 object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" fetchpriority="high" width="1920" height="1129" />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
       <div class="absolute bottom-0 left-0 right-0 p-8 text-center">
         <div class="text-sky-300 text-xs font-bold uppercase tracking-widest mb-2">Scaling the Summit of Precision</div>
@@ -310,13 +337,13 @@
     <!-- Embedded factory + campus images -->
     <div class="max-w-4xl mx-auto mt-8 grid grid-cols-2 gap-4">
       <div class="relative rounded-xl overflow-hidden shadow-lg group">
-        <img src="assets/images/banners/en_b1.webp" alt="Hongrun headquarters and industrial campus, Zibo" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img src="assets/images/banners/en_b1.webp" alt="Hongrun headquarters and industrial campus, Zibo" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="672" />
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/70 to-transparent p-3">
           <span class="text-white text-xs font-bold uppercase tracking-widest">Headquarters · Zibo</span>
         </div>
       </div>
       <div class="relative rounded-xl overflow-hidden shadow-lg group">
-        <img src="assets/images/banners/en_b3.webp" alt="Hongrun manufacturing facility and R&amp;D center" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img src="assets/images/banners/en_b3.webp" alt="Hongrun manufacturing facility and R&amp;D center" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="672" />
         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/70 to-transparent p-3">
           <span class="text-white text-xs font-bold uppercase tracking-widest">Manufacturing · R&amp;D</span>
         </div>
@@ -359,7 +386,7 @@
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-blue to-brand-sky flex items-center justify-center text-white text-lg shadow-lg mb-4 group-hover:scale-110 transition duration-300">
             <i class="fa-solid fa-gem"></i>
           </div>
-          <span class="text-[10px] font-extrabold text-brand-sky uppercase tracking-widest block mb-1">Brand Essence</span>
+          <span class="text-[11px] font-extrabold text-brand-sky uppercase tracking-widest block mb-1">Brand Essence</span>
           <h3 class="text-sm font-bold text-white font-display mb-1.5 tracking-tight whitespace-nowrap">宏天下正气·润世间万物</h3>
           <p class="text-[11px] text-slate-300 font-medium italic mb-3 leading-snug">"Vast integrity beneath heavens, nourishing all creation."</p>
         </div>
@@ -375,7 +402,7 @@
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-sky to-blue-600 flex items-center justify-center text-white text-lg shadow-lg mb-4 group-hover:scale-110 transition duration-300">
             <i class="fa-solid fa-earth-americas"></i>
           </div>
-          <span class="text-[10px] font-extrabold text-brand-sky uppercase tracking-widest block mb-1">Our Vision</span>
+          <span class="text-[11px] font-extrabold text-brand-sky uppercase tracking-widest block mb-1">Our Vision</span>
           <h3 class="text-sm font-bold text-white font-display mb-1.5 tracking-tight whitespace-nowrap">全球领先空压机民族品牌</h3>
           <p class="text-[11px] text-slate-300 font-medium italic mb-3 leading-snug">"A globally benchmarked pure oil-free compressor leader."</p>
         </div>
@@ -391,7 +418,7 @@
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-brand-blue flex items-center justify-center text-white text-lg shadow-lg mb-4 group-hover:scale-110 transition duration-300">
             <i class="fa-solid fa-shield-heart"></i>
           </div>
-          <span class="text-[10px] font-extrabold text-teal-400 uppercase tracking-widest block mb-1">Our Mission</span>
+          <span class="text-[11px] font-extrabold text-teal-400 uppercase tracking-widest block mb-1">Our Mission</span>
           <h3 class="text-sm font-bold text-white font-display mb-1.5 tracking-tight whitespace-nowrap">专业赢得满意·诚信值得信赖</h3>
           <p class="text-[11px] text-slate-300 font-medium italic mb-3 leading-snug">"Satisfaction via mastery, global trust via integrity."</p>
         </div>
@@ -407,7 +434,7 @@
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-brand-accent flex items-center justify-center text-white text-lg shadow-lg mb-4 group-hover:scale-110 transition duration-300">
             <i class="fa-solid fa-award"></i>
           </div>
-          <span class="text-[10px] font-extrabold text-amber-400 uppercase tracking-widest block mb-1">Core Values</span>
+          <span class="text-[11px] font-extrabold text-amber-400 uppercase tracking-widest block mb-1">Core Values</span>
           <h3 class="text-sm font-bold text-white font-display mb-1.5 tracking-tight whitespace-nowrap">专业品质·永久服务</h3>
           <p class="text-[11px] text-slate-300 font-medium italic mb-3 leading-snug">"Precision quality, dedicated lifecycle accountability."</p>
         </div>
@@ -423,7 +450,7 @@
           <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-accent to-brand-gold flex items-center justify-center text-white text-lg shadow-lg mb-4 group-hover:scale-110 transition duration-300">
             <i class="fa-solid fa-microchip"></i>
           </div>
-          <span class="text-[10px] font-extrabold text-brand-gold uppercase tracking-widest block mb-1">Strategic Anchor</span>
+          <span class="text-[11px] font-extrabold text-brand-gold uppercase tracking-widest block mb-1">Strategic Anchor</span>
           <h3 class="text-sm font-bold text-white font-display mb-1.5 tracking-tight whitespace-nowrap">数字化全无油生产商</h3>
           <p class="text-[11px] text-sky-200 font-medium italic mb-3 leading-snug">"High-Tech Digitalized Medical Air Manufacturer."</p>
         </div>
@@ -437,7 +464,7 @@
     <div class="relative rounded-2xl p-6 lg:p-8 bg-gradient-to-r from-white/[0.08] via-white/[0.04] to-white/[0.08] border border-brand-sky/30 backdrop-blur-xl shadow-[0_10px_35px_rgba(0,0,0,0.4)] text-center max-w-5xl mx-auto overflow-hidden group">
       <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-brand-sky/15 rounded-full blur-3xl pointer-events-none group-hover:bg-brand-sky/25 transition duration-700"></div>
       <div class="relative z-10">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-brand-sky text-[10px] font-extrabold uppercase tracking-widest mb-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-brand-sky text-[11px] font-extrabold uppercase tracking-widest mb-3">
           <i class="fa-solid fa-compass-drafting"></i>
           The HONGRUN Narrative · 300 Years of Global Trade Heritage
         </div>
@@ -617,7 +644,7 @@
     <!-- 08. ISO 13485:2016 Medical QMS (English Version) -->
     <div class="group bg-white rounded-xl border-2 border-brand-blue/30 shadow-md hover:shadow-xl hover:border-brand-blue transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/08-iso-13485-medical-device-qms.webp" src="assets/images/certs/certifications/08-iso-13485-medical-device-qms.webp" alt="ISO 13485:2016 Medical Device Quality Management System (English) - ANAB & IAF" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/08-iso-13485-medical-device-qms.webp" src="assets/images/certs/certifications/08-iso-13485-medical-device-qms.webp" alt="ISO 13485:2016 Medical Device Quality Management System (English) - ANAB & IAF" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="992" height="1403" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -637,7 +664,7 @@
     <!-- 09. GB/T 42061-2022 / ISO 13485:2016 (Chinese Official Version) -->
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/09-iso-13485-medical-device-qms-cn.webp" src="assets/images/certs/certifications/09-iso-13485-medical-device-qms-cn.webp" alt="GB/T 42061-2022 / ISO 13485:2016 医疗器械质量管理体系认证证书 - 上海波西认证" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/09-iso-13485-medical-device-qms-cn.webp" src="assets/images/certs/certifications/09-iso-13485-medical-device-qms-cn.webp" alt="GB/T 42061-2022 / ISO 13485:2016 医疗器械质量管理体系认证证书 - 上海波西认证" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="992" height="1403" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -656,7 +683,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/07-ce-mdr-oil-free-air-compressor-icr.webp" src="assets/images/certs/certifications/07-ce-mdr-oil-free-air-compressor-icr.webp" alt="CE MDR EU 2017/745 Verification - Medical Oil-Free Air Compressors" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/07-ce-mdr-oil-free-air-compressor-icr.webp" src="assets/images/certs/certifications/07-ce-mdr-oil-free-air-compressor-icr.webp" alt="CE MDR EU 2017/745 Verification - Medical Oil-Free Air Compressors" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="3142" height="4488" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -675,7 +702,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/02-ce-mdr-dental-suction-icr.webp" src="assets/images/certs/certifications/02-ce-mdr-dental-suction-icr.webp" alt="CE MDR EU 2017/745 Verification - Dental & Medical Suction Systems" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/02-ce-mdr-dental-suction-icr.webp" src="assets/images/certs/certifications/02-ce-mdr-dental-suction-icr.webp" alt="CE MDR EU 2017/745 Verification - Dental & Medical Suction Systems" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1080" height="1528" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -694,7 +721,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/01-ce-machinery-ecm.webp" src="assets/images/certs/certifications/01-ce-machinery-ecm.webp" alt="CE Certificate of Compliance - Machinery Directive 2006/42/EC" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/01-ce-machinery-ecm.webp" src="assets/images/certs/certifications/01-ce-machinery-ecm.webp" alt="CE Certificate of Compliance - Machinery Directive 2006/42/EC" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1080" height="1528" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -713,7 +740,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/03-tuv-rheinland-scroll-compressor.webp" src="assets/images/certs/certifications/03-tuv-rheinland-scroll-compressor.webp" alt="TÜV Rheinland Certificate of Conformity - Oil-Free Scroll Air Compressors" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/03-tuv-rheinland-scroll-compressor.webp" src="assets/images/certs/certifications/03-tuv-rheinland-scroll-compressor.webp" alt="TÜV Rheinland Certificate of Conformity - Oil-Free Scroll Air Compressors" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1080" height="1528" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -732,7 +759,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/04-iso-9001-quality-management.webp" src="assets/images/certs/certifications/04-iso-9001-quality-management.webp" alt="ISO 9001:2015 Quality Management - Design, R&D, Manufacture & Export" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/04-iso-9001-quality-management.webp" src="assets/images/certs/certifications/04-iso-9001-quality-management.webp" alt="ISO 9001:2015 Quality Management - Design, R&D, Manufacture & Export" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1080" height="1528" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -751,7 +778,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/05-iso-14001-environmental-management.webp" src="assets/images/certs/certifications/05-iso-14001-environmental-management.webp" alt="ISO 14001:2015 Environmental System - Clean Production & Eco-Design" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/05-iso-14001-environmental-management.webp" src="assets/images/certs/certifications/05-iso-14001-environmental-management.webp" alt="ISO 14001:2015 Environmental System - Clean Production & Eco-Design" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1080" height="1528" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -770,7 +797,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-brand-blue/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[3/4] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/certifications/06-iso-45001-occupational-health-safety.webp" src="assets/images/certs/certifications/06-iso-45001-occupational-health-safety.webp" alt="ISO 45001:2018 Occupational Health & Safety - Workplace Safety & Standards" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/certifications/06-iso-45001-occupational-health-safety.webp" src="assets/images/certs/certifications/06-iso-45001-occupational-health-safety.webp" alt="ISO 45001:2018 Occupational Health & Safety - Workplace Safety & Standards" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1080" height="1528" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Inspect HD</span>
         </div>
@@ -795,7 +822,7 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/02-national-high-tech-enterprise.webp" src="assets/images/certs/awards/02-national-high-tech-enterprise.webp" alt="National High-Tech Enterprise - 国家级高新技术企业证书" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/02-national-high-tech-enterprise.webp" src="assets/images/certs/awards/02-national-high-tech-enterprise.webp" alt="National High-Tech Enterprise - 国家级高新技术企业证书" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1210" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -816,7 +843,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/05-specialized-refined-innovative-sme.webp" src="assets/images/certs/awards/05-specialized-refined-innovative-sme.webp" alt="Specialized, Refined & Innovative SME - 山东省“专精特新”中小企业" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/05-specialized-refined-innovative-sme.webp" src="assets/images/certs/awards/05-specialized-refined-innovative-sme.webp" alt="Specialized, Refined & Innovative SME - 山东省“专精特新”中小企业" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1210" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -837,7 +864,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/07-postdoctoral-innovation-practice-base.webp" src="assets/images/certs/awards/07-postdoctoral-innovation-practice-base.webp" alt="Postdoctoral Innovation Practice Base - 山东省博士后创新实践基地" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/07-postdoctoral-innovation-practice-base.webp" src="assets/images/certs/awards/07-postdoctoral-innovation-practice-base.webp" alt="Postdoctoral Innovation Practice Base - 山东省博士后创新实践基地" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1211" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -858,7 +885,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/09-medical-compressor-engineering-tech-center.webp" src="assets/images/certs/awards/09-medical-compressor-engineering-tech-center.webp" alt="Medical Compressor Engineering Research Center - 淄博市医用无油空气压缩机工程技术研究中心" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/09-medical-compressor-engineering-tech-center.webp" src="assets/images/certs/awards/09-medical-compressor-engineering-tech-center.webp" alt="Medical Compressor Engineering Research Center - 淄博市医用无油空气压缩机工程技术研究中心" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1210" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -879,7 +906,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/03-shandong-premium-brand-product.webp" src="assets/images/certs/awards/03-shandong-premium-brand-product.webp" alt="Shandong Premium Brand Product - 山东优质品牌产品证书" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/03-shandong-premium-brand-product.webp" src="assets/images/certs/awards/03-shandong-premium-brand-product.webp" alt="Shandong Premium Brand Product - 山东优质品牌产品证书" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1210" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -900,7 +927,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/04-shandong-brand-promotion-honor.webp" src="assets/images/certs/awards/04-shandong-brand-promotion-honor.webp" alt="Brand Excellence Commendation - 山东省品牌建设促进会荣誉奖牌" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/04-shandong-brand-promotion-honor.webp" src="assets/images/certs/awards/04-shandong-brand-promotion-honor.webp" alt="Brand Excellence Commendation - 山东省品牌建设促进会荣誉奖牌" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1210" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -921,7 +948,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/06-top-30-high-growth-industrial-enterprise.webp" src="assets/images/certs/awards/06-top-30-high-growth-industrial-enterprise.webp" alt="Top 30 High-Growth Enterprise - 科技型高成长工业企业30强" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/06-top-30-high-growth-industrial-enterprise.webp" src="assets/images/certs/awards/06-top-30-high-growth-industrial-enterprise.webp" alt="Top 30 High-Growth Enterprise - 科技型高成长工业企业30强" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1211" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -942,7 +969,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/08-zibo-honest-enterprise.webp" src="assets/images/certs/awards/08-zibo-honest-enterprise.webp" alt="Model Honest & Credible Enterprise - 淄博市诚信企业" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/08-zibo-honest-enterprise.webp" src="assets/images/certs/awards/08-zibo-honest-enterprise.webp" alt="Model Honest & Credible Enterprise - 淄博市诚信企业" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1210" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -963,7 +990,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/10-top-10-pioneer-enterprise.webp" src="assets/images/certs/awards/10-top-10-pioneer-enterprise.webp" alt="Top 10 Emerging Pioneer Enterprise - 十佳新锋企业" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/10-top-10-pioneer-enterprise.webp" src="assets/images/certs/awards/10-top-10-pioneer-enterprise.webp" alt="Top 10 Emerging Pioneer Enterprise - 十佳新锋企业" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="1729" height="1211" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -984,7 +1011,7 @@
     </div>
     <div class="group bg-white rounded-xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-amber-500/40 transition-all duration-300 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 p-4 aspect-[4/3] flex items-center justify-center overflow-hidden border-b border-slate-100">
-        <img data-zoom data-hd="assets/images/certs/awards/01-certificate-of-achievement.webp" src="assets/images/certs/awards/01-certificate-of-achievement.webp" alt="Global Achievement Commendation - 国际市场拓展卓越成就证书" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/awards/01-certificate-of-achievement.webp" src="assets/images/certs/awards/01-certificate-of-achievement.webp" alt="Global Achievement Commendation - 国际市场拓展卓越成就证书" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer" loading="lazy" decoding="async" width="650" height="473" />
         <div class="absolute inset-0 bg-brand-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <span class="bg-white/90 text-brand-dark text-xs font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5"><i class="fa-solid fa-magnifying-glass-plus text-amber-600"></i> Click to Inspect HD</span>
         </div>
@@ -1020,493 +1047,493 @@
   <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-01.webp" src="assets/images/certs/patents/patent-01.webp" alt="Hongrun Authorized Patent Certificate #01" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-01.webp" src="assets/images/certs/patents/patent-01.webp" alt="Hongrun Authorized Patent Certificate #01" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #01</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #01</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #01">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-02.webp" src="assets/images/certs/patents/patent-02.webp" alt="Hongrun Authorized Patent Certificate #02" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-02.webp" src="assets/images/certs/patents/patent-02.webp" alt="Hongrun Authorized Patent Certificate #02" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #02</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #02</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #02">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-03.webp" src="assets/images/certs/patents/patent-03.webp" alt="Hongrun Authorized Patent Certificate #03" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-03.webp" src="assets/images/certs/patents/patent-03.webp" alt="Hongrun Authorized Patent Certificate #03" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #03</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #03</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #03">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-04.webp" src="assets/images/certs/patents/patent-04.webp" alt="Hongrun Authorized Patent Certificate #04" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-04.webp" src="assets/images/certs/patents/patent-04.webp" alt="Hongrun Authorized Patent Certificate #04" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #04</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #04</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #04">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-05.webp" src="assets/images/certs/patents/patent-05.webp" alt="Hongrun Authorized Patent Certificate #05" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-05.webp" src="assets/images/certs/patents/patent-05.webp" alt="Hongrun Authorized Patent Certificate #05" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #05</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #05</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #05">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-06.webp" src="assets/images/certs/patents/patent-06.webp" alt="Hongrun Authorized Patent Certificate #06" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-06.webp" src="assets/images/certs/patents/patent-06.webp" alt="Hongrun Authorized Patent Certificate #06" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #06</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #06</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #06">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-07.webp" src="assets/images/certs/patents/patent-07.webp" alt="Hongrun Authorized Patent Certificate #07" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-07.webp" src="assets/images/certs/patents/patent-07.webp" alt="Hongrun Authorized Patent Certificate #07" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #07</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #07</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #07">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-08.webp" src="assets/images/certs/patents/patent-08.webp" alt="Hongrun Authorized Patent Certificate #08" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-08.webp" src="assets/images/certs/patents/patent-08.webp" alt="Hongrun Authorized Patent Certificate #08" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #08</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #08</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #08">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-09.webp" src="assets/images/certs/patents/patent-09.webp" alt="Hongrun Authorized Patent Certificate #09" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-09.webp" src="assets/images/certs/patents/patent-09.webp" alt="Hongrun Authorized Patent Certificate #09" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #09</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #09</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #09">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-10.webp" src="assets/images/certs/patents/patent-10.webp" alt="Hongrun Authorized Patent Certificate #10" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-10.webp" src="assets/images/certs/patents/patent-10.webp" alt="Hongrun Authorized Patent Certificate #10" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #10</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #10</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #10">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-11.webp" src="assets/images/certs/patents/patent-11.webp" alt="Hongrun Authorized Patent Certificate #11" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-11.webp" src="assets/images/certs/patents/patent-11.webp" alt="Hongrun Authorized Patent Certificate #11" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #11</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #11</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #11">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-12.webp" src="assets/images/certs/patents/patent-12.webp" alt="Hongrun Authorized Patent Certificate #12" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-12.webp" src="assets/images/certs/patents/patent-12.webp" alt="Hongrun Authorized Patent Certificate #12" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #12</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #12</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #12">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-13.webp" src="assets/images/certs/patents/patent-13.webp" alt="Hongrun Authorized Patent Certificate #13" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-13.webp" src="assets/images/certs/patents/patent-13.webp" alt="Hongrun Authorized Patent Certificate #13" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #13</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #13</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #13">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-14.webp" src="assets/images/certs/patents/patent-14.webp" alt="Hongrun Authorized Patent Certificate #14" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-14.webp" src="assets/images/certs/patents/patent-14.webp" alt="Hongrun Authorized Patent Certificate #14" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #14</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #14</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #14">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-15.webp" src="assets/images/certs/patents/patent-15.webp" alt="Hongrun Authorized Patent Certificate #15" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-15.webp" src="assets/images/certs/patents/patent-15.webp" alt="Hongrun Authorized Patent Certificate #15" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #15</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #15</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #15">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-16.webp" src="assets/images/certs/patents/patent-16.webp" alt="Hongrun Authorized Patent Certificate #16" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-16.webp" src="assets/images/certs/patents/patent-16.webp" alt="Hongrun Authorized Patent Certificate #16" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #16</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #16</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #16">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-17.webp" src="assets/images/certs/patents/patent-17.webp" alt="Hongrun Authorized Patent Certificate #17" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-17.webp" src="assets/images/certs/patents/patent-17.webp" alt="Hongrun Authorized Patent Certificate #17" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #17</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #17</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #17">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-18.webp" src="assets/images/certs/patents/patent-18.webp" alt="Hongrun Authorized Patent Certificate #18" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-18.webp" src="assets/images/certs/patents/patent-18.webp" alt="Hongrun Authorized Patent Certificate #18" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #18</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #18</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #18">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-19.webp" src="assets/images/certs/patents/patent-19.webp" alt="Hongrun Authorized Patent Certificate #19" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-19.webp" src="assets/images/certs/patents/patent-19.webp" alt="Hongrun Authorized Patent Certificate #19" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #19</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #19</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #19">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-20.webp" src="assets/images/certs/patents/patent-20.webp" alt="Hongrun Authorized Patent Certificate #20" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-20.webp" src="assets/images/certs/patents/patent-20.webp" alt="Hongrun Authorized Patent Certificate #20" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #20</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #20</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #20">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-21.webp" src="assets/images/certs/patents/patent-21.webp" alt="Hongrun Authorized Patent Certificate #21" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-21.webp" src="assets/images/certs/patents/patent-21.webp" alt="Hongrun Authorized Patent Certificate #21" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #21</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #21</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #21">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-22.webp" src="assets/images/certs/patents/patent-22.webp" alt="Hongrun Authorized Patent Certificate #22" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-22.webp" src="assets/images/certs/patents/patent-22.webp" alt="Hongrun Authorized Patent Certificate #22" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #22</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #22</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #22">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-23.webp" src="assets/images/certs/patents/patent-23.webp" alt="Hongrun Authorized Patent Certificate #23" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-23.webp" src="assets/images/certs/patents/patent-23.webp" alt="Hongrun Authorized Patent Certificate #23" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #23</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #23</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #23">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-24.webp" src="assets/images/certs/patents/patent-24.webp" alt="Hongrun Authorized Patent Certificate #24" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-24.webp" src="assets/images/certs/patents/patent-24.webp" alt="Hongrun Authorized Patent Certificate #24" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #24</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #24</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #24">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-25.webp" src="assets/images/certs/patents/patent-25.webp" alt="Hongrun Authorized Patent Certificate #25" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-25.webp" src="assets/images/certs/patents/patent-25.webp" alt="Hongrun Authorized Patent Certificate #25" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #25</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #25</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #25">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-26.webp" src="assets/images/certs/patents/patent-26.webp" alt="Hongrun Authorized Patent Certificate #26" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-26.webp" src="assets/images/certs/patents/patent-26.webp" alt="Hongrun Authorized Patent Certificate #26" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #26</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #26</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #26">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-27.webp" src="assets/images/certs/patents/patent-27.webp" alt="Hongrun Authorized Patent Certificate #27" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-27.webp" src="assets/images/certs/patents/patent-27.webp" alt="Hongrun Authorized Patent Certificate #27" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #27</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #27</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #27">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-28.webp" src="assets/images/certs/patents/patent-28.webp" alt="Hongrun Authorized Patent Certificate #28" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-28.webp" src="assets/images/certs/patents/patent-28.webp" alt="Hongrun Authorized Patent Certificate #28" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #28</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #28</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #28">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-29.webp" src="assets/images/certs/patents/patent-29.webp" alt="Hongrun Authorized Patent Certificate #29" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-29.webp" src="assets/images/certs/patents/patent-29.webp" alt="Hongrun Authorized Patent Certificate #29" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #29</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #29</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #29">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-30.webp" src="assets/images/certs/patents/patent-30.webp" alt="Hongrun Authorized Patent Certificate #30" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-30.webp" src="assets/images/certs/patents/patent-30.webp" alt="Hongrun Authorized Patent Certificate #30" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #30</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #30</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #30">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-31.webp" src="assets/images/certs/patents/patent-31.webp" alt="Hongrun Authorized Patent Certificate #31" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-31.webp" src="assets/images/certs/patents/patent-31.webp" alt="Hongrun Authorized Patent Certificate #31" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #31</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #31</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #31">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-32.webp" src="assets/images/certs/patents/patent-32.webp" alt="Hongrun Authorized Patent Certificate #32" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-32.webp" src="assets/images/certs/patents/patent-32.webp" alt="Hongrun Authorized Patent Certificate #32" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #32</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #32</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #32">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-33.webp" src="assets/images/certs/patents/patent-33.webp" alt="Hongrun Authorized Patent Certificate #33" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-33.webp" src="assets/images/certs/patents/patent-33.webp" alt="Hongrun Authorized Patent Certificate #33" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #33</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #33</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #33">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-34.webp" src="assets/images/certs/patents/patent-34.webp" alt="Hongrun Authorized Patent Certificate #34" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-34.webp" src="assets/images/certs/patents/patent-34.webp" alt="Hongrun Authorized Patent Certificate #34" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #34</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #34</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #34">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-35.webp" src="assets/images/certs/patents/patent-35.webp" alt="Hongrun Authorized Patent Certificate #35" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-35.webp" src="assets/images/certs/patents/patent-35.webp" alt="Hongrun Authorized Patent Certificate #35" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #35</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #35</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #35">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-36.webp" src="assets/images/certs/patents/patent-36.webp" alt="Hongrun Authorized Patent Certificate #36" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-36.webp" src="assets/images/certs/patents/patent-36.webp" alt="Hongrun Authorized Patent Certificate #36" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #36</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #36</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #36">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-37.webp" src="assets/images/certs/patents/patent-37.webp" alt="Hongrun Authorized Patent Certificate #37" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-37.webp" src="assets/images/certs/patents/patent-37.webp" alt="Hongrun Authorized Patent Certificate #37" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #37</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #37</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #37">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-38.webp" src="assets/images/certs/patents/patent-38.webp" alt="Hongrun Authorized Patent Certificate #38" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-38.webp" src="assets/images/certs/patents/patent-38.webp" alt="Hongrun Authorized Patent Certificate #38" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #38</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #38</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #38">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-39.webp" src="assets/images/certs/patents/patent-39.webp" alt="Hongrun Authorized Patent Certificate #39" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-39.webp" src="assets/images/certs/patents/patent-39.webp" alt="Hongrun Authorized Patent Certificate #39" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #39</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #39</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #39">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-40.webp" src="assets/images/certs/patents/patent-40.webp" alt="Hongrun Authorized Patent Certificate #40" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-40.webp" src="assets/images/certs/patents/patent-40.webp" alt="Hongrun Authorized Patent Certificate #40" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #40</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #40</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #40">CNIPA Authorized</div>
       </div>
     </div>
     <div class="group bg-white rounded-lg border border-slate-200/80 shadow-sm hover:shadow-lg hover:border-brand-blue/50 transition-all duration-200 p-2.5 flex flex-col overflow-hidden">
       <div class="relative bg-slate-50 rounded aspect-[3/4] flex items-center justify-center overflow-hidden mb-2">
-        <img data-zoom data-hd="assets/images/certs/patents/patent-41.webp" src="assets/images/certs/patents/patent-41.webp" alt="Hongrun Authorized Patent Certificate #41" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async"/>
+        <img data-zoom data-hd="assets/images/certs/patents/patent-41.webp" src="assets/images/certs/patents/patent-41.webp" alt="Hongrun Authorized Patent Certificate #41" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-200 cursor-pointer" loading="lazy" decoding="async" width="794" height="1123" />
         <div class="absolute inset-0 bg-brand-dark/15 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
           <i class="fa-solid fa-magnifying-glass-plus text-white text-sm bg-brand-dark/60 p-1.5 rounded-full"></i>
         </div>
       </div>
       <div class="text-center">
-        <span class="text-[10px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #41</span>
+        <span class="text-[11px] font-mono font-bold text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Patent #41</span>
         <div class="text-[11px] font-medium text-slate-600 truncate mt-1" title="National Patent Certificate #41">CNIPA Authorized</div>
       </div>
     </div>
@@ -1537,70 +1564,70 @@
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">381210185R1M</td>
               <td class="px-5 py-3.5">Shanghai POSI Certification (ANAB &amp; IAF)</td>
               <td class="px-5 py-3.5">GB/T 42061-2022 / ISO 13485:2016: Development, production &amp; sales of dental oil-free compressors, suction systems, dryers &amp; medical ozone units</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> Valid to 2027</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> Valid to 2027</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">CE MDR (EU 2017/745) Compressor</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">ICR/VC/HTT260619/A1</td>
               <td class="px-5 py-3.5">ICR Co., Ltd. / XIMO Testing</td>
               <td class="px-5 py-3.5">IEC 60601-1, IEC 60601-1-2, EN ISO 14971 for HW, HV, HY Series Medical Compressors</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> Valid to 2031</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> Valid to 2031</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">CE MDR (EU 2017/745) Suction</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">ICR/VC/HTT251108</td>
               <td class="px-5 py-3.5">ICR Co., Ltd. / Notified Verification</td>
               <td class="px-5 py-3.5">EN 60601-1:2006+A13, EN 60601-1-2 for HVS-1 ~ HVS-50 Dental &amp; Medical Evacuation Plants</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> EU MDR Compliant</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> EU MDR Compliant</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">CE Machinery (2006/42/EC)</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">6D220601.HCTDQ56</td>
               <td class="px-5 py-3.5">Ente Certificazione Macchine (Italy)</td>
               <td class="px-5 py-3.5">EN ISO 12100:2010, EN 60204-1:2018 for Oilless Air Compressor Units</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> Valid to 2027</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> Valid to 2027</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">TÜV Rheinland Conformity</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">AK 50442317 0001</td>
               <td class="px-5 py-3.5">TÜV Rheinland LGA Products GmbH</td>
               <td class="px-5 py-3.5">Report 50272409 001: Oil-free Scroll Air Compressors</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> TÜV Certified</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> TÜV Certified</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">ISO 9001:2015 Quality QMS</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">174Q240351R1M</td>
               <td class="px-5 py-3.5">Shandong Guojian (CNAS C169-M)</td>
               <td class="px-5 py-3.5">GB/T 19001-2016 for R&amp;D, manufacture &amp; global sales of medical oil-free compressors &amp; suctions</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> CNAS Accredited</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> CNAS Accredited</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">ISO 14001:2015 Environmental</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">174E250204R0M</td>
               <td class="px-5 py-3.5">Shandong Guojian (CNAS C169-M)</td>
               <td class="px-5 py-3.5">GB/T 24001-2016 ecological management across clean air system manufacturing</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> Valid to 2028</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> Valid to 2028</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">ISO 45001:2018 Safety OHS</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">174S52S0191R0M</td>
               <td class="px-5 py-3.5">Shandong Guojian (CNAS C169-M)</td>
               <td class="px-5 py-3.5">GB/T 45001-2020 occupational health &amp; safety standard throughout operations</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> Valid to 2028</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> Valid to 2028</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">National High-Tech Enterprise</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">GR202337001205</td>
               <td class="px-5 py-3.5">State &amp; Provincial Science &amp; Tech Dept</td>
               <td class="px-5 py-3.5">Official state recognition for sustainable R&amp;D investment and intellectual property</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> State Certified</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> State Certified</span></td>
             </tr>
             <tr class="hover:bg-white transition">
               <td class="px-5 py-3.5 font-bold text-brand-dark">NMPA Class II Medical License</td>
               <td class="px-5 py-3.5 font-mono text-brand-blue font-bold">鲁械注准 20182560199</td>
               <td class="px-5 py-3.5">National Medical Products Administration</td>
               <td class="px-5 py-3.5">Clinical medical oil-free air delivery and dental evacuation equipment for hospital gas networks</td>
-              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[10px]"></i> State Approved</span></td>
+              <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1 text-emerald-700 font-bold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200"><i class="fa-solid fa-circle-check text-[11px]"></i> State Approved</span></td>
             </tr>
           </tbody>
         </table>
@@ -1675,8 +1702,8 @@
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">

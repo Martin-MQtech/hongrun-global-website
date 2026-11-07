@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -77,6 +82,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/css/tailwind.css"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://www.hongrun1995.cn/products.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "HY Dental Compressors",
+      "item": "https://www.hongrun1995.cn/products-hy.html"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -196,13 +227,15 @@
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="products.html">Products</a>
@@ -224,7 +257,7 @@
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
         <a href="/" class="flex items-center gap-2">
-          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139">
         </a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
@@ -270,13 +303,13 @@
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
       </a>
       <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
         <a href="mailto:martinchen@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
           <i class="fa-solid fa-envelope text-slate-400"></i> martinchen@hongrun1995.cn
         </a>
       </div>
       <div class="pt-2 mt-2 border-t border-slate-200 text-center">
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
         <a href="mailto:info@hongrun1995.cn" class="text-[11px] text-slate-500 hover:text-brand-blue transition">info@hongrun1995.cn</a>
       </div>
     </div>
@@ -295,15 +328,15 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
       <!-- GLASS PANEL: compact, semi-transparent -->
       <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-        <p class="text-white/70 text-[10px] uppercase tracking-widest mb-3"><a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <a href="products.html" class="hover:text-sky-300 transition">Products</a> <span class="mx-1">/</span> <span class="text-sky-300">HY Series</span></p>
-        <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap mb-4">Dental Oil-Free Compressors</div>
+        <p class="text-white/70 text-[11px] uppercase tracking-widest mb-3"><a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <a href="products.html" class="hover:text-sky-300 transition">Products</a> <span class="mx-1">/</span> <span class="text-sky-300">HY Series</span></p>
+        <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">Dental Oil-Free Compressors</div>
         <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">HY / HYT Series<br/><span class="text-sky-300">Oil-Free Compressors</span></h1>
         <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">30+ years of precision engineering in a single product line. Zero-oil, zero-compromise air for every dental handpiece — from solo practitioners to busy 10-chair clinics.</p>
         <div class="flex flex-wrap gap-2 mb-5">
-          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap">ISO 8573-1 Class 0</span>
-          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap">CE Certified</span>
-          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap">≤60 dB Silent</span>
-          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap">IoT Monitoring</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap">ISO 8573-1 Class 0</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap">CE Certified</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap">≤60 dB Silent</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap">IoT Monitoring</span>
         </div>
         <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="contact.html">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -363,20 +396,20 @@
     <!-- HY-100 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HY-100.webp" src="assets/images/products/thumbs/HY-100.webp" alt="HY-100 single chair oil-free dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+        <img data-zoom data-hd="assets/images/products/intl/HY-100.webp" src="assets/images/products/thumbs/HY-100.webp" alt="HY-100 single chair oil-free dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY-100</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 1 treatment chair · Compact Portable</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Power / Motor</span><strong class="text-brand-dark text-xs sm:text-sm">0.55 kW (ZB100×1)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">100 L/min</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">24 L</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">410 × 410 × 560</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">22.5 kg · 220V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motor</span><strong class="text-brand-dark text-xs sm:text-sm">0.55 kW (ZB100×1)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">100 L/min</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">24 L</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">410 × 410 × 560</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">22.5 kg · 220V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -385,20 +418,20 @@
     <!-- HY-200 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HY-200.webp" src="assets/images/products/thumbs/HY-200.webp" alt="HY-200 oil-free dental compressor for 1-2 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/products/intl/HY-200.webp" src="assets/images/products/thumbs/HY-200.webp" alt="HY-200 oil-free dental compressor for 1-2 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY-200</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 1–2 treatment chairs · Standard Clinic</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Power / Motor</span><strong class="text-brand-dark text-xs sm:text-sm">0.75 kW (ZB200×1)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">150 L/min</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">32 L</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">410 × 410 × 710</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">26.5 kg · 220V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motor</span><strong class="text-brand-dark text-xs sm:text-sm">0.75 kW (ZB200×1)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">150 L/min</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">32 L</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">410 × 410 × 710</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">26.5 kg · 220V</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-brand-blue transition bg-teal-50 px-2.5 py-1 rounded border border-teal-200">
@@ -412,20 +445,20 @@
     <!-- HY-300 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/hd/HY-300.webp?v=20260902_v3" src="assets/images/products/thumbs/HY-300.webp?v=20260902_v3" alt="HY-300 oil-free compressor for 2-3 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/products/hd/HY-300.webp?v=20260902_v3" src="assets/images/products/thumbs/HY-300.webp?v=20260902_v3" alt="HY-300 oil-free compressor for 2-3 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY-300</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 2–3 treatment chairs · High Output Single-Head</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Power / Motor</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW (ZB300×1)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">200 L/min</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">50 L</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">450 × 450 × 880</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">45 kg · 220V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motor</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW (ZB300×1)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">200 L/min</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">50 L</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">450 × 450 × 880</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">45 kg · 220V</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="solutions.html#sizing-calculator" class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-blue hover:underline bg-brand-light px-2.5 py-1 rounded border border-slate-200">
@@ -447,20 +480,20 @@
     <!-- HYT-200 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HYT-200.webp" src="assets/images/products/thumbs/HYT-200.webp" alt="HYT-200 twin-head redundant dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/products/intl/HYT-200.webp" src="assets/images/products/thumbs/HYT-200.webp" alt="HYT-200 twin-head redundant dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HYT-200</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 3–4 treatment chairs · Redundant Twin-Head</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">0.75 kW × 2 (1.5 kW)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">300 L/min</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">60 L</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">720 × 410 × 690</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">48.5 kg · 220V</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">0.75 kW × 2 (1.5 kW)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">300 L/min</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">60 L</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">720 × 410 × 690</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">48.5 kg · 220V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -469,20 +502,20 @@
     <!-- HYTG-300 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HYTG-300.webp" src="assets/images/products/thumbs/HYTG-300.webp" alt="HYTG-300 twin-head oil-free dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/products/intl/HYTG-300.webp" src="assets/images/products/thumbs/HYTG-300.webp" alt="HYTG-300 twin-head oil-free dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HYTG-300</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 4–5 treatment chairs · High-Duty Twin-Head</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW × 2 (2.2 kW)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">400 L/min</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">90 L</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">860 × 420 × 780</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">77 kg · 220V</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW × 2 (2.2 kW)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">400 L/min</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">90 L</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">860 × 420 × 780</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">77 kg · 220V</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-brand-blue transition bg-teal-50 px-2.5 py-1 rounded border border-teal-200">
@@ -496,20 +529,20 @@
     <!-- HYT-400 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HYT-400.webp" src="assets/images/products/thumbs/HYT-400.webp" alt="HYT-400 triple-head compressor for 6-8 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/products/intl/HYT-400.webp" src="assets/images/products/thumbs/HYT-400.webp" alt="HYT-400 triple-head compressor for 6-8 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HYT-400</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 6–8 treatment chairs · Triple-Head Redundant</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW × 3 (3.3 kW)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">600 L/min</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">120 L</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1080 × 440 × 800</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">102 kg · 380V</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW × 3 (3.3 kW)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">600 L/min</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">120 L</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1080 × 440 × 800</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">102 kg · 380V</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-brand-blue transition bg-sky-50 px-2.5 py-1 rounded border border-sky-200">
@@ -523,20 +556,20 @@
     <!-- HYT-500 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HYT-500.webp" src="assets/images/products/thumbs/HYT-500.webp" alt="HYT-500 flagship quad-head dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/products/intl/HYT-500.webp" src="assets/images/products/thumbs/HYT-500.webp" alt="HYT-500 flagship quad-head dental compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HYT-500</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 10 treatment chairs · Quad-Head Flagship</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW × 4 (4.4 kW)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">800 L/min</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">200 L</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1700 × 410 × 825</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">142.5 kg · 380V</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">1.1 kW × 4 (4.4 kW)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">800 L/min</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">200 L</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤65 dB(A)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1700 × 410 × 825</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">142.5 kg · 380V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -566,7 +599,7 @@
  data-hd="assets/images/products/hy-family-portfolio.webp" 
  src="assets/images/products/hy-family-portfolio.webp" 
  alt="Hongrun Complete Medical Air Compressor Portfolio — HY Single Head, HYT Multi-Motor and HW-1200 Silent Scroll Cabinet" 
- class="w-full max-w-5xl h-auto object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-md" decoding="async" loading="lazy"/>
+ class="w-full max-w-5xl h-auto object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-md" decoding="async" loading="lazy" width="2560" height="1280" />
       </div>
 
       <!-- Feature Badges Row -->
@@ -764,8 +797,8 @@
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">

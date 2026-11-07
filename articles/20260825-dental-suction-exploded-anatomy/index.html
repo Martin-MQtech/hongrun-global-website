@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -157,13 +162,41 @@
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News & Insights",
+      "item": "https://www.hongrun1995.cn/news.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum &amp; Separation Systems",
+      "item": "https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/"
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
@@ -184,7 +217,7 @@
   <div class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl z-10 flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer-panel">
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
-        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain"></a>
+        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139"></a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark text-xl"></i></button>
       </div>
       <nav class="p-4 space-y-1 text-sm font-medium text-slate-700 font-display">
@@ -251,7 +284,7 @@
     
     <!-- 3D Exploded Blueprint Showcase (Click to Enlarge via Lightbox) -->
     <div class="mb-12 rounded-2xl overflow-hidden border-2 border-slate-200 shadow-xl bg-slate-950 relative group cursor-pointer">
-      <img data-zoom src="../../assets/images/exploded/02-hvs-suction-exploded.webp" alt="Hongrun HVS Series 3D CAD Exploded Engineering Blueprint V3.0" class="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+      <img data-zoom src="../../assets/images/exploded/02-hvs-suction-exploded.webp" alt="Hongrun HVS Series 3D CAD Exploded Engineering Blueprint V3.0" class="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500" decoding="async" fetchpriority="high" width="1376" height="768" />
       <div class="absolute bottom-3 right-3 text-white text-xs font-semibold bg-black/75 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-white/20 flex items-center gap-2 shadow-lg">
         <i class="fa-solid fa-magnifying-glass-plus text-brand-sky"></i> Click to Zoom 3D CAD High-Precision Blueprint (HVS System)
       </div>
@@ -290,7 +323,7 @@
       <!-- Sketch 1: Vacuum Turbine & Cyclone -->
       <div class="sketch-card rounded-xl overflow-hidden border border-slate-200 bg-white p-4 shadow-sm">
         <div class="h-48 bg-slate-50 rounded-lg flex items-center justify-center p-2 overflow-hidden cursor-pointer">
-          <img data-zoom src="../../assets/images/sketches/sketch_anatomy_2.webp" alt="Vacuum Turbine Impeller & Cyclone Separator Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300" decoding="async" loading="lazy"/>
+          <img data-zoom src="../../assets/images/sketches/sketch_anatomy_2.webp" alt="Vacuum Turbine Impeller & Cyclone Separator Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300" decoding="async" loading="lazy" width="1200" height="896" />
         </div>
         <div class="pt-3 text-center">
           <span class="text-sm font-bold text-brand-dark font-display block">01. Turbine Impeller &amp; Cyclone Separation Chamber</span>
@@ -301,7 +334,7 @@
       <!-- Sketch 2: Laser Dynamic Balanced Rotor -->
       <div class="sketch-card rounded-xl overflow-hidden border border-slate-200 bg-white p-4 shadow-sm">
         <div class="h-48 bg-slate-50 rounded-lg flex items-center justify-center p-2 overflow-hidden cursor-pointer">
-          <img data-zoom src="../../assets/images/sketches/sketch_anatomy_4.webp" alt="Motor Rotor & Crankshaft Assembly Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300" decoding="async" loading="lazy"/>
+          <img data-zoom src="../../assets/images/sketches/sketch_anatomy_4.webp" alt="Motor Rotor & Crankshaft Assembly Sketch" class="max-h-full w-auto object-contain mix-blend-multiply hover:scale-105 transition-transform duration-300" decoding="async" loading="lazy" width="1200" height="896" />
         </div>
         <div class="pt-3 text-center">
           <span class="text-sm font-bold text-brand-dark font-display block">02. High-Speed Motor Rotor &amp; Sealed Bearings</span>
@@ -442,12 +475,12 @@
       <h3 class="text-base font-bold text-brand-dark font-display uppercase tracking-wider mb-4">Related Technical Insights &amp; Engineering Whitepapers</h3>
       <div class="grid sm:grid-cols-2 gap-4">
         <a href="/articles/20260820-compressor-exploded-anatomy/" class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-brand-blue/5 hover:border-brand-blue transition group">
-          <span class="text-[10px] text-brand-blue font-bold uppercase">3D CAD Whitepaper</span>
+          <span class="text-[11px] text-brand-blue font-bold uppercase">3D CAD Whitepaper</span>
           <h4 class="text-sm font-bold text-brand-dark group-hover:text-brand-blue font-display mt-1 mb-1">Inside Zero-Oil Purity: 3D Exploded Anatomy of Air Compressors</h4>
           <p class="text-xs text-slate-500 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA desiccant dryers.</p>
         </a>
         <a href="../../news.html#article-11" class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-brand-blue/5 hover:border-brand-blue transition group">
-          <span class="text-[10px] text-brand-accent font-bold uppercase">Sizing Guide</span>
+          <span class="text-[11px] text-brand-accent font-bold uppercase">Sizing Guide</span>
           <h4 class="text-sm font-bold text-brand-dark group-hover:text-brand-blue font-display mt-1 mb-1">Selection Reference for 15 Dental Chairs Operatory</h4>
           <p class="text-xs text-slate-500 line-clamp-2">Pneumatic piping design, simultaneous usage factor calculations, and vacuum suction pairing.</p>
         </a>
@@ -461,12 +494,12 @@
     <div id="taxonomy-hub" class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-14 mb-8 not-prose">
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-200">
         <div>
-          <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Knowledge Graph &amp; Taxonomy</span>
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Knowledge Graph &amp; Taxonomy</span>
           <h3 class="text-lg font-bold text-brand-dark font-display mt-2">Technical Taxonomy &amp; Related Engineering Topics</h3>
           <p class="text-xs text-slate-500 mt-0.5">Explore interconnected engineering whitepapers, regulatory standards, and clinical sizing calculations across the Hongrun Knowledge Base.</p>
         </div>
         <a href="../../news.html" class="text-xs font-bold text-brand-blue hover:underline inline-flex items-center gap-1 flex-shrink-0">
-          View All Topics <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          View All Topics <i class="fa-solid fa-arrow-right text-[11px]"></i>
         </a>
       </div>
 
@@ -476,31 +509,31 @@
         </h4>
         <div class="flex flex-wrap gap-2">
           <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="inline-flex items-center gap-1.5 text-xs bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white font-semibold px-3 py-1.5 rounded-lg border border-brand-blue/20 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> ISO 8573-1 Class 0 <span class="text-[10px] opacity-75 bg-white/40 px-1 rounded">Core</span>
+            <i class="fa-solid fa-tag text-[11px]"></i> ISO 8573-1 Class 0 <span class="text-[11px] opacity-75 bg-white/40 px-1 rounded">Core</span>
           </a>
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> Wobble Piston Kinematics (ZB Series)
+            <i class="fa-solid fa-tag text-[11px]"></i> Wobble Piston Kinematics (ZB Series)
           </a>
           <a href="../../products-hy.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> Nano-Coated Antibacterial Tank (32L)
+            <i class="fa-solid fa-tag text-[11px]"></i> Nano-Coated Antibacterial Tank (32L)
           </a>
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> 1–50 Dental Chairs Sizing Equation
+            <i class="fa-solid fa-tag text-[11px]"></i> 1–50 Dental Chairs Sizing Equation
           </a>
           <a href="../../products-core.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> Saint-Gobain Self-Lubricating PTFE
+            <i class="fa-solid fa-tag text-[11px]"></i> Saint-Gobain Self-Lubricating PTFE
           </a>
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> Aerosol Suppression &amp; Cyclone Separation
+            <i class="fa-solid fa-tag text-[11px]"></i> Aerosol Suppression &amp; Cyclone Separation
           </a>
           <a href="../../solutions.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> Endoscopy Reprocessing (WS 507-2016)
+            <i class="fa-solid fa-tag text-[11px]"></i> Endoscopy Reprocessing (WS 507-2016)
           </a>
           <a href="../../solutions.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> Hospital CSSD Sterile Air (WS 310.2)
+            <i class="fa-solid fa-tag text-[11px]"></i> Hospital CSSD Sterile Air (WS 310.2)
           </a>
           <a href="../../about.html#certifications" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[10px]"></i> CE MDR &amp; NMPA Class II Medical
+            <i class="fa-solid fa-tag text-[11px]"></i> CE MDR &amp; NMPA Class II Medical
           </a>
         </div>
       </div>
@@ -512,29 +545,29 @@
         <div class="grid sm:grid-cols-3 gap-4">
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
-              <span class="text-[9px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
+              <span class="text-[11px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
               <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA dryers.</p>
             </div>
-            <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
+            <span class="text-[11px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
-              <span class="text-[9px] bg-brand-accent text-white font-bold px-2 py-0.5 rounded uppercase">Clinical Sizing</span>
+              <span class="text-[11px] bg-brand-accent text-white font-bold px-2 py-0.5 rounded uppercase">Clinical Sizing</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">15–50 Dental Chairs Pneumatic Pipe Sizing &amp; Hospital Blueprint</h5>
               <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Engineering flow calculations, ring-main pipe sizing, and isometric plant room CAD.</p>
             </div>
-            <span class="text-[10px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
+            <span class="text-[11px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
 
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="bg-white hover:border-teal-600 p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
-              <span class="text-[9px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
+              <span class="text-[11px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">Aerodynamic Power: 3D Exploded Anatomy of HVS Dental Vacuum</h5>
               <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and 85%+ aerosol suppression.</p>
             </div>
-            <span class="text-[10px] font-bold text-teal-700 mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
+            <span class="text-[11px] font-bold text-teal-700 mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
         </div>
       </div>
@@ -546,7 +579,7 @@
     <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-12 mb-8 not-prose">
       <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
         <div>
-          <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
           <h3 class="text-base font-bold text-brand-dark font-display mt-2">Share this Article with your Professional Network</h3>
           <p class="text-xs text-slate-500 mt-0.5">Distribute technical benchmarks, clinical guides, and engineering updates across global platforms.</p>
         </div>
@@ -633,8 +666,8 @@
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">

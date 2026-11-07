@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -185,13 +190,35 @@
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solutions & Sizing",
+      "item": "https://www.hongrun1995.cn/solutions.html"
+    }
+  ]
+}
+</script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
@@ -213,7 +240,7 @@
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
         <a href="/" class="flex items-center gap-2">
-          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139">
         </a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
@@ -259,13 +286,13 @@
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
       </a>
       <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
         <a href="mailto:martinchen@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
           <i class="fa-solid fa-envelope text-slate-400"></i> martinchen@hongrun1995.cn
         </a>
       </div>
       <div class="pt-2 mt-2 border-t border-slate-200 text-center">
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
         <a href="mailto:info@hongrun1995.cn" class="text-[11px] text-slate-500 hover:text-brand-blue transition">info@hongrun1995.cn</a>
       </div>
     </div>
@@ -280,8 +307,8 @@
     <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
       <div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-        <p class="text-white/70 text-[10px] uppercase tracking-widest mb-3"><a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Engineering Solutions</span></p>
-        <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[10px] tracking-wide uppercase whitespace-nowrap mb-4">Turnkey EPC · Class II Medical Standard</div>
+        <p class="text-white/70 text-[11px] uppercase tracking-widest mb-3"><a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> <span class="text-sky-300">Engineering Solutions</span></p>
+        <div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">Turnkey EPC · Class II Medical Standard</div>
         <h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Tailored Clinical<br/><span class="text-sky-300">Engineering Systems</span></h1>
         <p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">From dental clinics to central hospital gas stations. We design, build, and certify the entire pipeline network.</p>
         <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="#applications">Explore Application Areas <i class="fa-solid fa-arrow-right"></i></a>
@@ -325,19 +352,19 @@
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
             <a href="products-hy.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HY-200 (32L)</span>
-              <span class="text-[10px] text-slate-500">1-2 Chairs Boutique</span>
+              <span class="text-[11px] text-slate-500">1-2 Chairs Boutique</span>
             </a>
             <a href="products-hy.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HYTG-300 (90L)</span>
-              <span class="text-[10px] text-slate-500">4-8 Chairs Dual-Pump</span>
+              <span class="text-[11px] text-slate-500">4-8 Chairs Dual-Pump</span>
             </a>
             <a href="products-hvs.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HVS-5 / HVS-10</span>
-              <span class="text-[10px] text-slate-500">High-Vacuum Evacuation</span>
+              <span class="text-[11px] text-slate-500">High-Vacuum Evacuation</span>
             </a>
             <a href="products-water.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HRC-100S RO</span>
-              <span class="text-[10px] text-slate-500">Dental Chair Waterlines</span>
+              <span class="text-[11px] text-slate-500">Dental Chair Waterlines</span>
             </a>
           </div>
         </div>
@@ -368,7 +395,7 @@
         </div>
       </div>
       <div class="lg:col-span-5 order-1 lg:order-2 rounded-xl overflow-hidden shadow-lg h-80 group">
-        <img data-zoom data-hd="assets/images/solutions/app-dental-clinic.webp" src="assets/images/solutions/app-dental-clinic.webp" alt="Dental Clinic Application" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" fetchpriority="high"/>
+        <img data-zoom data-hd="assets/images/solutions/app-dental-clinic.webp" src="assets/images/solutions/app-dental-clinic.webp" alt="Dental Clinic Application" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" fetchpriority="high" width="2560" height="1706" />
       </div>
     </div>
 
@@ -376,7 +403,7 @@
     <span id="cssd" class="relative -top-24 block"></span>
     <div id="solution-hospital" class="mb-16 grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
       <div class="lg:col-span-5 rounded-xl overflow-hidden shadow-lg h-80 group">
-        <img data-zoom data-hd="assets/images/solutions/app-medical-infection.webp" src="assets/images/solutions/app-medical-infection.webp" alt="Medical Infection Control" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/solutions/app-medical-infection.webp" src="assets/images/solutions/app-medical-infection.webp" alt="Medical Infection Control" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" loading="lazy" width="922" height="748" />
       </div>
       <div class="lg:col-span-7">
         <div class="inline-flex items-center gap-2 bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">
@@ -401,15 +428,15 @@
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
             <a href="products-hospital.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HW Series Scroll</span>
-              <span class="text-[10px] text-slate-500">200 to 3,600 L/min</span>
+              <span class="text-[11px] text-slate-500">200 to 3,600 L/min</span>
             </a>
             <a href="products-hospital.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HBG-800 / HBG-1200</span>
-              <span class="text-[10px] text-slate-500">Multi-4V Medical Air Stations</span>
+              <span class="text-[11px] text-slate-500">Multi-4V Medical Air Stations</span>
             </a>
             <a href="products-water.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HRC-500 / HRC-1000</span>
-              <span class="text-[10px] text-slate-500">Hospital CSSD Pure Water</span>
+              <span class="text-[11px] text-slate-500">Hospital CSSD Pure Water</span>
             </a>
           </div>
         </div>
@@ -458,15 +485,15 @@
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
             <a href="products-cleanair.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HYG-301 / HYG-302</span>
-              <span class="text-[10px] text-slate-500">LC-MS Clean Air Station</span>
+              <span class="text-[11px] text-slate-500">LC-MS Clean Air Station</span>
             </a>
             <a href="products-cleanair.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HVTG-400 / HVTG-900</span>
-              <span class="text-[10px] text-slate-500">High-Purity Laboratory Units</span>
+              <span class="text-[11px] text-slate-500">High-Purity Laboratory Units</span>
             </a>
             <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">PSA Molecular Towers</span>
-              <span class="text-[10px] text-slate-500">Integrated Twin Adsorption</span>
+              <span class="text-[11px] text-slate-500">Integrated Twin Adsorption</span>
             </a>
           </div>
         </div>
@@ -489,14 +516,14 @@
         </a>
       </div>
       <div class="lg:col-span-5 order-1 lg:order-2 rounded-xl overflow-hidden shadow-lg h-80 group">
-        <img data-zoom data-hd="assets/images/solutions/app-laboratory.webp" src="assets/images/solutions/app-laboratory.webp" alt="Analytical Laboratories" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/solutions/app-laboratory.webp" src="assets/images/solutions/app-laboratory.webp" alt="Analytical Laboratories" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" loading="lazy" width="2500" height="1406" />
       </div>
     </div>
 
     <!-- Application 04: Precision Manufacturing & Global OEM -->
     <div id="solution-commercial" class="grid lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-2xl border border-slate-200 shadow-xl">
       <div class="lg:col-span-5 rounded-xl overflow-hidden shadow-lg h-80 group">
-        <img data-zoom data-hd="assets/images/solutions/app-commercial.webp" src="assets/images/solutions/app-commercial.webp" alt="Commercial Manufacturing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom data-hd="assets/images/solutions/app-commercial.webp" src="assets/images/solutions/app-commercial.webp" alt="Commercial Manufacturing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" decoding="async" loading="lazy" width="2560" height="1438" />
       </div>
       <div class="lg:col-span-7">
         <div class="inline-flex items-center gap-2 bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">
@@ -520,15 +547,15 @@
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
             <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">ZB-100 / 200 / 300</span>
-              <span class="text-[10px] text-slate-500">Wobble-Piston Bare Heads</span>
+              <span class="text-[11px] text-slate-500">Wobble-Piston Bare Heads</span>
             </a>
             <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">4V Cylinder Blocks</span>
-              <span class="text-[10px] text-slate-500">2.2kW – 3.0kW Bare Assemblies</span>
+              <span class="text-[11px] text-slate-500">2.2kW – 3.0kW Bare Assemblies</span>
             </a>
             <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">Saint-Gobain Rings</span>
-              <span class="text-[10px] text-slate-500">Diamond-Coated PTFE Seals</span>
+              <span class="text-[11px] text-slate-500">Diamond-Coated PTFE Seals</span>
             </a>
           </div>
         </div>
@@ -625,12 +652,12 @@
           <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1"><i class="fa-solid fa-wind text-sky-400 mr-1"></i> Compressed Air Required</span>
             <div id="air-flow-out" class="font-display font-extrabold text-2xl text-white">210 <span class="text-xs text-sky-300 font-sans">L/min @ 5 bar</span></div>
-            <span class="text-[10px] text-slate-400 font-mono">ISO 8573-1 Class 0 (Zero-Oil)</span>
+            <span class="text-[11px] text-slate-400 font-mono">ISO 8573-1 Class 0 (Zero-Oil)</span>
           </div>
           <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1"><i class="fa-solid fa-arrows-to-circle text-amber-400 mr-1"></i> Vacuum Suction Required</span>
             <div id="suction-flow-out" class="font-display font-extrabold text-2xl text-white">1050 <span class="text-xs text-amber-300 font-sans">L/min @ -20 kPa</span></div>
-            <span class="text-[10px] text-slate-400 font-mono">2-Stage Cyclone Separation</span>
+            <span class="text-[11px] text-slate-400 font-mono">2-Stage Cyclone Separation</span>
           </div>
         </div>
 
@@ -794,7 +821,7 @@
     <div class="grid md:grid-cols-4 gap-6 mb-16">
       <div class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group">
         <div class="h-48 overflow-hidden">
-          <img data-zoom data-hd="assets/images/solutions/case-hospital-epc.webp" src="assets/images/solutions/case-hospital-epc.webp" alt="Hospital Central Gas Station" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy"/>
+          <img data-zoom data-hd="assets/images/solutions/case-hospital-epc.webp" src="assets/images/solutions/case-hospital-epc.webp" alt="Hospital Central Gas Station" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy" width="500" height="313" />
         </div>
         <div class="p-4">
           <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Central Gas Station</h4>
@@ -803,7 +830,7 @@
       </div>
       <div class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group">
         <div class="h-48 overflow-hidden">
-          <img data-zoom data-hd="assets/images/solutions/case-dental-center.webp" src="assets/images/solutions/case-dental-center.webp" alt="Large Dental Center Installation" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy"/>
+          <img data-zoom data-hd="assets/images/solutions/case-dental-center.webp" src="assets/images/solutions/case-dental-center.webp" alt="Large Dental Center Installation" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy" width="500" height="313" />
         </div>
         <div class="p-4">
           <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Dental Center Air &amp; Vacuum</h4>
@@ -812,7 +839,7 @@
       </div>
       <div class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group">
         <div class="h-48 overflow-hidden">
-          <img data-zoom data-hd="assets/images/solutions/case-clean-pipeline.webp" src="assets/images/solutions/case-clean-pipeline.webp" alt="Clean Stainless Pipeline Grid" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy"/>
+          <img data-zoom data-hd="assets/images/solutions/case-clean-pipeline.webp" src="assets/images/solutions/case-clean-pipeline.webp" alt="Clean Stainless Pipeline Grid" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy" width="500" height="313" />
         </div>
         <div class="p-4">
           <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Sterile Pipeline Network</h4>
@@ -821,7 +848,7 @@
       </div>
       <div class="bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden group">
         <div class="h-48 overflow-hidden">
-          <img data-zoom data-hd="assets/images/solutions/case-sterile-room.webp" src="assets/images/solutions/case-sterile-room.webp" alt="Sterilization Room Clean Air" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy"/>
+          <img data-zoom data-hd="assets/images/solutions/case-sterile-room.webp" src="assets/images/solutions/case-sterile-room.webp" alt="Sterilization Room Clean Air" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy" width="500" height="313" />
         </div>
         <div class="p-4">
           <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Sterile CSSD Supply</h4>
@@ -842,7 +869,7 @@
         <!-- Digital Clinical Operatory -->
         <div class="rounded-xl border border-slate-200 overflow-hidden shadow-lg group bg-slate-900 flex flex-col">
           <div class="h-64 overflow-hidden relative">
-            <img data-zoom data-hd="assets/images/solutions/digital-dental-operatory.webp" src="assets/images/solutions/digital-dental-operatory.webp" alt="Digital Dental Operatory System Integration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/solutions/digital-dental-operatory.webp" src="assets/images/solutions/digital-dental-operatory.webp" alt="Digital Dental Operatory System Integration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy" width="1920" height="1280" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-sky-300 uppercase tracking-wider">Clinical Space Integration</span>
           </div>
@@ -860,7 +887,7 @@
         <!-- Smart IoT Telemetry Dashboard -->
         <div class="rounded-xl border border-slate-200 overflow-hidden shadow-lg group bg-slate-900 flex flex-col">
           <div class="h-64 overflow-hidden relative">
-            <img data-zoom data-hd="assets/images/solutions/smart-iot-telemetry.webp" src="assets/images/solutions/smart-iot-telemetry.webp" alt="Smart IoT Telemetry & Central Monitoring System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy"/>
+            <img data-zoom data-hd="assets/images/solutions/smart-iot-telemetry.webp" src="assets/images/solutions/smart-iot-telemetry.webp" alt="Smart IoT Telemetry & Central Monitoring System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy" width="1920" height="1280" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-3 left-4 text-xs font-bold text-sky-300 uppercase tracking-wider">24/7 Real-Time Telemetry</span>
           </div>
@@ -902,8 +929,8 @@
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">

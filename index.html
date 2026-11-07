@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -108,20 +113,25 @@
   <link rel="manifest" href="/manifest.json" />
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
+  <!-- LCP Hero Image Preload -->
+  <link rel="preload" as="image" href="assets/images/banners/en_b1.webp" fetchpriority="high" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-blue focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none">Skip to main content</a>
 
 <!-- ===================== NAVBAR ===================== -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — Medical Air Systems" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — Medical Air Systems" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="products.html">Products</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="solutions.html">Solutions</a>
       <a class="inline-flex items-center gap-1 text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="news.html"><i class="fa-solid fa-newspaper text-sm text-brand-blue"></i> News &amp; Insights</a>
-      <a class="border border-slate-400 text-slate-600 hover:border-brand-blue hover:text-brand-blue px-4 py-2 rounded-sm font-medium text-xs transition" href="contact.html">Request a Quote</a>
+      <a class="bg-brand-blue hover:bg-brand-deep text-white px-4 py-2 rounded-md font-semibold text-xs tracking-wider uppercase transition shadow-sm" href="contact.html" data-cta-source="navbar">Request a Quote</a>
     </div>
     <!-- Mobile Hamburger Button -->
     <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-lg text-slate-700 hover:text-brand-blue hover:bg-slate-300/40 focus:outline-none transition" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobile-drawer">
@@ -137,7 +147,7 @@
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
         <a href="/" class="flex items-center gap-2">
-          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139">
         </a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
@@ -183,13 +193,13 @@
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
       </a>
       <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
         <a href="mailto:martinchen@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
           <i class="fa-solid fa-envelope text-slate-400"></i> martinchen@hongrun1995.cn
         </a>
       </div>
       <div class="pt-2 mt-2 border-t border-slate-200 text-center">
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
         <a href="mailto:info@hongrun1995.cn" class="text-[11px] text-slate-500 hover:text-brand-blue transition">info@hongrun1995.cn</a>
       </div>
     </div>
@@ -202,15 +212,15 @@
     <!-- Slide 1 -->
     <div class="hero-slide active absolute inset-0">
       <div class="absolute inset-0 overflow-hidden">
-        <img src="assets/images/banners/en_b1.webp" alt="Hongrun Medical Oil-Free Air Compressors and Suction Systems Factory Banner" class="w-full h-full object-cover object-center" fetchpriority="high" decoding="sync" />
+        <img src="assets/images/banners/en_b1.webp" alt="Hongrun Medical Oil-Free Air Compressors and Suction Systems Factory Banner" class="w-full h-full object-cover object-center" fetchpriority="high" decoding="sync" width="1920" height="672" />
       </div>
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-5 sm:pb-8">
         <div class="max-w-sm p-3.5 sm:p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[9px] sm:text-[10px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">ISO 8573-1 Class 0 &middot; NMPA Class II Medical Device</div>
+          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] sm:text-[11px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">ISO 8573-1 Class 0 &middot; NMPA Class II Medical Device</div>
           <h1 class="text-xl sm:text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-2 sm:mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">
-            <span class="block text-[11px] sm:text-[12px] lg:text-sm font-bold text-sky-300 tracking-wider uppercase mb-1">Medical &amp; Dental Oil-Free Air Compressor Manufacturer</span>
-            Clean Air.<br/><span class="text-sky-300">For Life.</span>
+            Medical &amp; Dental Oil-Free Air Compressors | Hongrun Technology
+            <span class="block text-sm sm:text-base lg:text-lg font-medium text-sky-200 mt-1 sm:mt-1.5 font-sans tracking-normal">Clean Air. <span class="text-sky-300 font-bold">For Life.</span></span>
           </h1>
           <p class="text-xs sm:text-sm lg:text-base text-blue-50 mb-3 sm:mb-5 font-light leading-relaxed line-clamp-2 sm:line-clamp-none [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">30+ years of engineering excellence. Medical-grade oil-free air and suction systems trusted by 65,000+ clinics worldwide.</p>
           <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="products.html">Explore Products <i class="fa-solid fa-arrow-right"></i></a>
@@ -223,7 +233,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-5 sm:pb-8">
         <div class="max-w-sm p-3.5 sm:p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[9px] sm:text-[10px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">Zero-Oil Purity &middot; Absolute Filtration</div>
+          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] sm:text-[11px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">Zero-Oil Purity &middot; Absolute Filtration</div>
           <h2 class="text-xl sm:text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-2 sm:mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Zero Oil.<br/><span class="text-sky-300">Zero Compromise.</span></h2>
           <p class="text-xs sm:text-sm lg:text-base text-blue-50 mb-3 sm:mb-5 font-light leading-relaxed line-clamp-2 sm:line-clamp-none [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Oil-free compression with Saint-Gobain PTFE rings and nano-antibacterial tanks. Air purity at Class 0, every single cycle.</p>
           <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="products-hy.html">Discover HY Series <i class="fa-solid fa-arrow-right"></i></a>
@@ -236,7 +246,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-5 sm:pb-8">
         <div class="max-w-sm p-3.5 sm:p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[9px] sm:text-[10px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">From Factory to Global &middot; OEM/ODM Partner</div>
+          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] sm:text-[11px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">From Factory to Global &middot; OEM/ODM Partner</div>
           <h2 class="text-xl sm:text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-2 sm:mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Built in China.<br/><span class="text-sky-300">Trusted Globally.</span></h2>
           <p class="text-xs sm:text-sm lg:text-base text-blue-50 mb-3 sm:mb-5 font-light leading-relaxed line-clamp-2 sm:line-clamp-none [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">160K units annual capacity. OEM/ODM partner to Agilent, Bruker, Shimadzu, Xinhua Medical and Weigao Group.</p>
           <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="about.html">Our Story <i class="fa-solid fa-arrow-right"></i></a>
@@ -244,13 +254,13 @@
       </div>
     </div>
     <!-- Arrows -->
-    <button onclick="slideTo((currentSlide+1)%3)" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-400/40 hover:bg-brand-blue/80 backdrop-blur text-white flex items-center justify-center transition"><i class="fa-solid fa-chevron-right"></i></button>
-    <button onclick="slideTo((currentSlide+2)%3)" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-400/40 hover:bg-brand-blue/80 backdrop-blur text-white flex items-center justify-center transition"><i class="fa-solid fa-chevron-left"></i></button>
+    <button onclick="slideTo((currentSlide+1)%3)" aria-label="Next Hero Slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-400/40 hover:bg-brand-blue/80 backdrop-blur text-white flex items-center justify-center transition shadow-lg"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+    <button onclick="slideTo((currentSlide+2)%3)" aria-label="Previous Hero Slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-slate-400/40 hover:bg-brand-blue/80 backdrop-blur text-white flex items-center justify-center transition shadow-lg"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
     <!-- Dots -->
-    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-      <button onclick="slideTo(0)" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="0"></button>
-      <button onclick="slideTo(1)" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="1"></button>
-      <button onclick="slideTo(2)" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="2"></button>
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2" role="tablist" aria-label="Hero Slide Navigation">
+      <button onclick="slideTo(0)" aria-label="Go to Slide 1: Medical Air Systems" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="0"></button>
+      <button onclick="slideTo(1)" aria-label="Go to Slide 2: Zero Oil Purity" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="1"></button>
+      <button onclick="slideTo(2)" aria-label="Go to Slide 3: OEM Global Partner" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="2"></button>
     </div>
   </div>
 </section>
@@ -259,17 +269,17 @@
 <div class="bg-slate-900 border-y border-slate-700 w-full relative z-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-800 py-6">
-      <div class="stat-cell text-center px-4 py-3 cursor-pointer"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight">30+</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Years of Engineering</div></div>
-      <div class="stat-cell text-center px-4 py-3 cursor-pointer"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight">65,000+</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Clinics Trusted</div></div>
-      <div class="stat-cell text-center px-4 py-3 cursor-pointer"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight">160K</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Units / Year Capacity</div></div>
-      <div class="stat-cell text-center px-4 py-3 cursor-pointer"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight">CLASS 0</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">ISO 8573-1 Certified</div></div>
+      <a href="about.html" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="Discover Hongrun 30-Year Medical Engineering Heritage"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">30+</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Years of Engineering</div></a>
+      <a href="about.html#scale" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="View 65,000+ Clinics Worldwide Reach"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">65,000+</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Clinics Trusted</div></a>
+      <a href="about.html#manufacturing" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="Explore 160K Unit Annual Smart Megafactory"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">160K</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Units / Year Capacity</div></a>
+      <a href="about.html#certifications" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="Inspect TÜV Verified ISO 8573-1 Class 0 Certification"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">CLASS 0</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">ISO 8573-1 Certified</div></a>
     </div>
   </div>
 </div>
 
 <!-- ===================== MOBILE QUICK CATEGORY STRIP ===================== -->
 <div class="md:hidden bg-slate-100 border-b border-slate-200 py-2.5 px-3 overflow-x-auto scrollbar-none whitespace-nowrap flex items-center gap-2 text-xs font-semibold text-slate-700">
-  <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider pl-1 pr-0.5">Quick:</span>
+  <span class="text-[11px] uppercase font-bold text-slate-400 tracking-wider pl-1 pr-0.5">Quick:</span>
   <a href="products-hy.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-300 shadow-xs hover:border-brand-blue hover:text-brand-blue shrink-0">
     <i class="fa-solid fa-tooth text-brand-blue text-[11px]"></i> HY Dental (1–10 Chairs)
   </a>
@@ -299,72 +309,72 @@
       <!-- Family 1: HY Compressors -->
       <a href="products-hy.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
         <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Oil-Free Compressors</div>
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Oil-Free Compressors</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY / HYT Series</h3>
           <p class="text-slate-500 text-xs">1–10 chairs &middot; ≤60 dB &middot; Class 0</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/thumbs/HYT-500.webp" data-hd="assets/images/products/intl/HYT-500.webp" alt="HYT-500 Twin-Head Oil-Free Dental Compressor" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+          <img src="assets/images/products/thumbs/HYT-500.webp" data-hd="assets/images/products/intl/HYT-500.webp" alt="HYT-500 Twin-Head Oil-Free Dental Compressor" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high" width="480" height="480" />
         </div>
       </a>
 
       <!-- Family 2: HVS Suction -->
       <a href="products-hvs.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
         <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Electric Suction</div>
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Electric Suction</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS Series</h3>
           <p class="text-slate-500 text-xs">1–50 chairs &middot; ≤ 12–20 kPa &middot; HEPA</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/thumbs/HVS-5-7-10.webp" data-hd="assets/images/products/intl/HVS-5-7-10.webp" alt="HVS Hospital-Grade Suction System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+          <img src="assets/images/products/thumbs/HVS-5-7-10.webp" data-hd="assets/images/products/intl/HVS-5-7-10.webp" alt="HVS Hospital-Grade Suction System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
         </div>
       </a>
 
       <!-- Family 3: Clean Air Source -->
       <a href="products-cleanair.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
         <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Clean Air Source</div>
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Clean Air Source</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HYG / HVTG Series</h3>
           <p class="text-slate-500 text-xs">Dew point ≤ -40&deg;C &middot; 0.01&mu;m</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/thumbs/HVTG-900.webp" data-hd="assets/images/products/intl/HVTG-900.webp" alt="HVTG Medical Clean Air Source" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+          <img src="assets/images/products/thumbs/HVTG-900.webp" data-hd="assets/images/products/intl/HVTG-900.webp" alt="HVTG Medical Clean Air Source" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
         </div>
       </a>
 
       <!-- Family 4: Hospital Systems -->
       <a href="products-hospital.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
         <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Hospital Medical Systems</div>
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Hospital Medical Systems</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG / HW / HWG</h3>
           <p class="text-slate-500 text-xs">Class II &middot; Central gas &middot; Scroll</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/thumbs/HBG-1200.webp" data-hd="assets/images/products/intl/HBG-1200.webp" alt="HBG-1200 Class II Hospital Central Air System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+          <img src="assets/images/products/thumbs/HBG-1200.webp" data-hd="assets/images/products/intl/HBG-1200.webp" alt="HBG-1200 Class II Hospital Central Air System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
         </div>
       </a>
 
       <!-- Card 5: Purified Water System -->
       <a href="solutions.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
         <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Water Treatment</div>
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Water Treatment</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">Purified Water System</h3>
           <p class="text-slate-500 text-xs">Ozone + UV &middot; Dental &middot; Sterile Supply</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/thumbs/product-water.webp" data-hd="assets/images/products/intl/product-water.webp" alt="Purified Water Treatment System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+          <img src="assets/images/products/thumbs/product-water.webp" data-hd="assets/images/products/intl/product-water.webp" alt="Purified Water Treatment System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="340" />
         </div>
       </a>
 
       <!-- Card 6: Core Components -->
       <a href="products.html" class="group block bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden hover:shadow-2xl hover:-translate-y-1 transition duration-300">
         <div class="p-6 pb-3 text-center">
-          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[10px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Core Components</div>
+          <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Core Components</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">Pumps, Dryers &amp; Spares</h3>
           <p class="text-slate-500 text-xs">ZB Pumps &middot; PSA Dryers &middot; Tubing</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
-          <img src="assets/images/products/thumbs/product-core.webp" data-hd="assets/images/products/intl/product-core.webp" alt="Core Components and Spare Parts" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+          <img src="assets/images/products/thumbs/product-core.webp" data-hd="assets/images/products/intl/product-core.webp" alt="Core Components and Spare Parts" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="340" />
         </div>
       </a>
     </div>
@@ -420,18 +430,18 @@
     <!-- Brand Logos: white card grid -->
     <h3 class="text-lg font-bold text-sky-300 font-display uppercase tracking-widest mb-8">OEM / ODM Partners</h3>
     <div class="grid grid-cols-3 md:grid-cols-6 gap-4 mb-12">
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942254133.webp" alt="Medical Device Integrator OEM Partner — Hongrun" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942175357.webp" alt="Dental Equipment Manufacturer OEM Partner — Hongrun" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942125819.webp" alt="Hospital Central Gas Engineering Partner — Hongrun" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942214668.webp" alt="Analytical Laboratory Instrument OEM Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942707297.webp" alt="Clinical Autoclave Pure Water System Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942187503.webp" alt="Precision Biotechnology Instrumentation Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847943115857.webp" alt="International Medical Supply Chain Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847943210383.webp" alt="Pharmaceutical Cleanroom Pneumatic Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847943986300.webp" alt="Stomatology Clinic Air System OEM Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640848079402839.webp" alt="Endoscopy Reprocessing Pure Water Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1642401438713821.webp" alt="Hospital Medical Gas Pipeline Integration Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
-      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1642401517856120.webp" alt="Life Science Electric Vacuum Suction Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy"/></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942254133.webp" alt="Medical Device Integrator OEM Partner — Hongrun" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942175357.webp" alt="Dental Equipment Manufacturer OEM Partner — Hongrun" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942125819.webp" alt="Hospital Central Gas Engineering Partner — Hongrun" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942214668.webp" alt="Analytical Laboratory Instrument OEM Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942707297.webp" alt="Clinical Autoclave Pure Water System Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847942187503.webp" alt="Precision Biotechnology Instrumentation Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847943115857.webp" alt="International Medical Supply Chain Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847943210383.webp" alt="Pharmaceutical Cleanroom Pneumatic Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640847943986300.webp" alt="Stomatology Clinic Air System OEM Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1640848079402839.webp" alt="Endoscopy Reprocessing Pure Water Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1642401438713821.webp" alt="Hospital Medical Gas Pipeline Integration Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
+      <div class="bg-white rounded-lg shadow-md border border-slate-200 p-2 flex items-center justify-center h-20 hover:shadow-lg hover:-translate-y-0.5 transition"><img src="assets/images/partners/1642401517856120.webp" alt="Life Science Electric Vacuum Suction Partner" class="max-h-16 w-auto object-contain" decoding="async" loading="lazy" width="240" height="80" /></div>
     </div>
     <!-- Research Institutes & Universities: pill tags (no card frame) -->
     <div class="text-xs font-display uppercase tracking-widest text-slate-400 mb-4">Research &amp; Education Partners</div>
@@ -457,8 +467,8 @@
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
@@ -500,6 +510,8 @@
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="about.html#certifications">Certifications &amp; Class 0</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="solutions.html">Engineering Solutions</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="news.html">News &amp; Technical Insights</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="hongrun-vs-durr-dental.html">Hongrun vs. Dürr Dental</a></li>
+          <li><a class="text-slate-400 hover:text-sky-400 transition" href="warranty-policy.html">Warranty &amp; Service Policy</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="contact.html#dealership">Become a Global Distributor</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="contact.html">Contact Engineering Team</a></li>
         </ul>
@@ -534,7 +546,20 @@ function initDots() {
   dots[0].classList.remove('bg-white/30');
 }
 initDots();
-setInterval(() => slideTo((currentSlide + 1) % 3), 12000);
+let heroCarouselTimer = setInterval(() => slideTo((currentSlide + 1) % 3), 10000);
+
+const heroSec = document.querySelector('section.relative.pt-20');
+if (heroSec) {
+  heroSec.addEventListener('mouseenter', () => clearInterval(heroCarouselTimer));
+  heroSec.addEventListener('mouseleave', () => {
+    clearInterval(heroCarouselTimer);
+    heroCarouselTimer = setInterval(() => slideTo((currentSlide + 1) % 3), 10000);
+  });
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'ArrowRight') slideTo((currentSlide + 1) % 3);
+  if (e.key === 'ArrowLeft') slideTo((currentSlide + 2) % 3);
+});
 </script>
 
 <script type="application/ld+json">

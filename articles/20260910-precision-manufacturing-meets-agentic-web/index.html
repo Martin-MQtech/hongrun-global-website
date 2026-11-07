@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -217,6 +222,34 @@
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News & Insights",
+      "item": "https://www.hongrun1995.cn/news.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Precision Engineering Meets the Agentic Web: Why a 30-Year Medical Compressor Manufacturer Deployed WebMCP &amp; AI Protocols",
+      "item": "https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/"
+    }
+  ]
+}
+</script>
 </head>
 
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
@@ -224,7 +257,7 @@
 <!-- Global Navigation Bar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — Medical Air Systems" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — Medical Air Systems" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
@@ -245,7 +278,7 @@
   <div class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl z-10 flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer-panel">
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
-        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain"></a>
+        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139"></a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark text-xl"></i></button>
       </div>
       <nav class="p-4 space-y-1 text-sm font-medium text-slate-700 font-display">
@@ -278,9 +311,9 @@
 
     <!-- Technical Badges -->
     <div class="flex flex-wrap items-center gap-2 mb-4">
-      <span class="bg-gradient-to-r from-brand-accent to-brand-gold text-white font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Global B2B Marketing Innovation &middot; Article #10</span>
-      <span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[10px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">AI-Driven Procurement &middot; WebMCP Ready</span>
-      <span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[10px] uppercase tracking-wider px-3 py-1 rounded">ISO 8573-1 Class 0 &middot; 0.003 mg/m³</span>
+      <span class="bg-gradient-to-r from-brand-accent to-brand-gold text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Global B2B Marketing Innovation &middot; Article #10</span>
+      <span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">AI-Driven Procurement &middot; WebMCP Ready</span>
+      <span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded">ISO 8573-1 Class 0 &middot; 0.003 mg/m³</span>
     </div>
 
     <!-- Main Headline -->
@@ -316,11 +349,11 @@
     
     <!-- Standard Hero Cover Image (16:9 / 21:9 Widescreen with Lightbox 4K Zoom) -->
     <div class="rounded-xl overflow-hidden shadow-lg border border-slate-200 mb-10 group relative bg-slate-900 cursor-pointer">
-      <img data-zoom data-hd="../../assets/images/news/hongrun_smart_plant_cover.webp" src="../../assets/images/news/hongrun_smart_plant_cover.webp" alt="Hongrun Intelligent Hospital Medical Air Plant Room with Digital Twin Telemetry" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" fetchpriority="high"/>
+      <img data-zoom data-hd="../../assets/images/news/hongrun_smart_plant_cover.webp" src="../../assets/images/news/hongrun_smart_plant_cover.webp" alt="Hongrun Intelligent Hospital Medical Air Plant Room with Digital Twin Telemetry" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" fetchpriority="high" width="1376" height="768" />
       <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
       <div class="absolute bottom-4 left-5 right-5 flex justify-between items-end">
         <div>
-          <span class="inline-block px-2.5 py-0.5 rounded bg-sky-500/80 text-white font-bold text-[10px] uppercase tracking-wider mb-1">Hongrun Medical Air Plant Room</span>
+          <span class="inline-block px-2.5 py-0.5 rounded bg-sky-500/80 text-white font-bold text-[11px] uppercase tracking-wider mb-1">Hongrun Medical Air Plant Room</span>
           <p class="text-white font-display font-medium text-xs sm:text-sm">Hongrun HW-220 Medical Scroll Station &middot; -40&deg;C Desiccant Towers &middot; Real-Time IoT Digital Twin</p>
         </div>
         <span class="bg-black/50 text-white/90 text-xs px-2.5 py-1 rounded border border-white/20 backdrop-blur shrink-0"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Click to Zoom 4K</span>
@@ -391,7 +424,7 @@
       <!-- Tech Figure 1: 5-Axis CNC Precision Machining Center -->
       <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-lg bg-slate-950 group">
         <div class="relative overflow-hidden cursor-zoom-in">
-          <img data-zoom data-hd="../../assets/images/news/tech_cnc_precision_machining.webp" src="../../assets/images/news/tech_cnc_precision_machining.webp" alt="DMG MORI 5-Axis High Precision CNC Machining & Laser Metrology" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+          <img data-zoom data-hd="../../assets/images/news/tech_cnc_precision_machining.webp" src="../../assets/images/news/tech_cnc_precision_machining.webp" alt="DMG MORI 5-Axis High Precision CNC Machining & Laser Metrology" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1376" height="768" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
           <span class="absolute top-3 right-3 bg-black/60 text-white/90 text-xs px-2.5 py-1 rounded border border-white/20 backdrop-blur shrink-0"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 4K Zoom</span>
         </div>
@@ -400,7 +433,7 @@
             <span class="text-sky-400 font-bold uppercase tracking-wider block sm:inline mr-2"><i class="fa-solid fa-microchip mr-1"></i> Fig 1.0 // Physical Precision Anchor:</span>
             <span>5-Axis CNC Machining Center with In-Situ Laser Metrology (&plusmn;0.001mm) &amp; Saint-Gobain Diamond PTFE Piston Ring Substrates.</span>
           </div>
-          <span class="text-[10px] text-slate-400 shrink-0 font-mono">TOLERANCE: &plusmn;0.001mm</span>
+          <span class="text-[11px] text-slate-400 shrink-0 font-mono">TOLERANCE: &plusmn;0.001mm</span>
         </figcaption>
       </figure>
 
@@ -418,7 +451,7 @@
       <!-- Tech Figure 2: Agentic Web & WebMCP Machine Intelligence Layer -->
       <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-lg bg-slate-950 group">
         <div class="relative overflow-hidden cursor-zoom-in">
-          <img data-zoom data-hd="../../assets/images/news/tech_agentic_web_ai.webp" src="../../assets/images/news/tech_agentic_web_ai.webp" alt="Agentic Web: Autonomous AI Agents Interacting with WebMCP Protocol and 3D Compressor CAD" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy"/>
+          <img data-zoom data-hd="../../assets/images/news/tech_agentic_web_ai.webp" src="../../assets/images/news/tech_agentic_web_ai.webp" alt="Agentic Web: Autonomous AI Agents Interacting with WebMCP Protocol and 3D Compressor CAD" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="1376" height="768" />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
           <span class="absolute top-3 right-3 bg-black/60 text-white/90 text-xs px-2.5 py-1 rounded border border-white/20 backdrop-blur shrink-0"><i class="fa-solid fa-magnifying-glass-plus mr-1"></i> 4K Zoom</span>
         </div>
@@ -427,7 +460,7 @@
             <span class="text-cyan-400 font-bold uppercase tracking-wider block sm:inline mr-2"><i class="fa-solid fa-network-wired mr-1"></i> Fig 2.0 // Agentic Web Protocol:</span>
             <span>Autonomous AI Agents Executing Hongrun WebMCP Tools for Automated Flow Sizing &amp; Class 0 Verification.</span>
           </div>
-          <span class="text-[10px] text-cyan-400 shrink-0 font-mono">PROTOCOL: WebMCP 1.0</span>
+          <span class="text-[11px] text-cyan-400 shrink-0 font-mono">PROTOCOL: WebMCP 1.0</span>
         </figcaption>
       </figure>
       <div class="space-y-3 my-6">
@@ -625,9 +658,9 @@
               <i class="fa-solid fa-sitemap text-brand-blue"></i> Sizing &amp; Selection Guides
             </h4>
             <ul class="space-y-2 text-xs text-slate-600">
-              <li><a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #09: 4–8 Chairs Dual-Pump Redundancy</a></li>
-              <li><a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #08: 1–3 Chairs Clinic Sizing Benchmark</a></li>
-              <li><a href="/articles/20260902-dental-air-purity-engineering-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Whitepaper #01: ISO 8573-1 Class 0 Flagship Guide</a></li>
+              <li><a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Whitepaper #09: 4–8 Chairs Dual-Pump Redundancy</a></li>
+              <li><a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Whitepaper #08: 1–3 Chairs Clinic Sizing Benchmark</a></li>
+              <li><a href="/articles/20260902-dental-air-purity-engineering-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Whitepaper #01: ISO 8573-1 Class 0 Flagship Guide</a></li>
             </ul>
           </div>
 
@@ -636,9 +669,9 @@
               <i class="fa-solid fa-microchip text-emerald-600"></i> Engineering Teardowns
             </h4>
             <ul class="space-y-2 text-xs text-slate-600">
-              <li><a href="/articles/20260820-compressor-exploded-anatomy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Wobble Piston (ZB Series) Kinematics &amp; PTFE Rings</a></li>
-              <li><a href="/articles/20260825-dental-suction-exploded-anatomy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Semi-Dry vs. Wet Suction Dynamics &amp; Aerosol Control</a></li>
-              <li><a href="../../products-core.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> OEM/ODM Medical Air Pump Heads Catalog</a></li>
+              <li><a href="/articles/20260820-compressor-exploded-anatomy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Wobble Piston (ZB Series) Kinematics &amp; PTFE Rings</a></li>
+              <li><a href="/articles/20260825-dental-suction-exploded-anatomy/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Semi-Dry vs. Wet Suction Dynamics &amp; Aerosol Control</a></li>
+              <li><a href="../../products-core.html" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> OEM/ODM Medical Air Pump Heads Catalog</a></li>
             </ul>
           </div>
 
@@ -647,9 +680,9 @@
               <i class="fa-solid fa-calculator text-purple-600"></i> Interactive Tools &amp; Solutions
             </h4>
             <ul class="space-y-2 text-xs text-slate-600">
-              <li><a href="../../solutions.html#sizing-calculator" class="hover:text-brand-blue transition flex items-center gap-1 font-semibold text-brand-blue"><i class="fa-solid fa-calculator text-[10px] text-amber-500"></i> Interactive Dental Sizing Calculator Widget</a></li>
-              <li><a href="../../solutions.html#dental" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> Dental Poly-Clinic &amp; Hospital Central Air Supply</a></li>
-              <li><a href="../../solutions.html#cssd" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i> CSSD Sterile Reprocessing &amp; Medical Water</a></li>
+              <li><a href="../../solutions.html#sizing-calculator" class="hover:text-brand-blue transition flex items-center gap-1 font-semibold text-brand-blue"><i class="fa-solid fa-calculator text-[11px] text-amber-500"></i> Interactive Dental Sizing Calculator Widget</a></li>
+              <li><a href="../../solutions.html#dental" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Dental Poly-Clinic &amp; Hospital Central Air Supply</a></li>
+              <li><a href="../../solutions.html#cssd" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> CSSD Sterile Reprocessing &amp; Medical Water</a></li>
             </ul>
           </div>
         </div>
@@ -691,7 +724,7 @@
     <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-12 mb-8 not-prose">
       <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
         <div>
-          <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
+          <span class="text-[11px] font-extrabold uppercase tracking-widest text-brand-blue bg-brand-blue/10 px-2.5 py-1 rounded">Share Insights</span>
           <h3 class="text-base font-bold text-brand-dark font-display mt-2">Share this Article with your Professional Network</h3>
           <p class="text-xs text-slate-500 mt-0.5">Distribute technical benchmarks, clinical guides, and engineering updates across global platforms.</p>
         </div>
@@ -775,8 +808,8 @@ function copyArticleLink(btn) {
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">

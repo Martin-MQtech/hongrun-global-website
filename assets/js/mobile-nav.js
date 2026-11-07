@@ -64,6 +64,9 @@
         <a href="/warranty-policy.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
           <i class="fa-solid fa-shield-halved text-slate-400 w-5"></i> Warranty Policy
         </a>
+        <a href="/hongrun-vs-durr-dental.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition">
+          <i class="fa-solid fa-scale-balanced text-slate-400 w-5"></i> Hongrun vs. Dürr Dental
+        </a>
         <a href="/contact.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-brand-blue/10 text-brand-blue font-bold transition mt-2">
           <i class="fa-solid fa-file-invoice text-brand-blue w-5"></i> Request a Quote
         </a>
@@ -164,9 +167,46 @@
     });
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMobileNav);
-  } else {
+  function initFloatingWhatsApp() {
+    if (document.getElementById("floating-whatsapp-btn")) return;
+    const btn = document.createElement("a");
+    btn.id = "floating-whatsapp-btn";
+    btn.href = "https://wa.me/8613964416725";
+    btn.target = "_blank";
+    btn.rel = "noopener noreferrer";
+    btn.setAttribute("aria-label", "Direct WhatsApp Chat with Hongrun Application Engineers (+86 13964416725)");
+    btn.className = "fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-110 group";
+    btn.innerHTML = `
+      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-200"></span>
+      </span>
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+      <span class="sr-only">Direct WhatsApp Chat</span>
+      <span class="hidden group-hover:md:block absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+        Chat with Engineering &middot; +86-13964416725
+      </span>
+    `;
+    btn.addEventListener("click", function() {
+      if (typeof gtag === "function") {
+        gtag("event", "whatsapp_click", {
+          event_category: "B2B Lead",
+          event_label: "Floating Widget Chat Initiation",
+          source_page: window.location.pathname
+        });
+      }
+    });
+    document.body.appendChild(btn);
+  }
+
+  function initGlobalEnhancements() {
     initMobileNav();
+    initFloatingWhatsApp();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initGlobalEnhancements);
+  } else {
+    initGlobalEnhancements();
   }
 })();

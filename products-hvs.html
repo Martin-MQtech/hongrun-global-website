@@ -36,13 +36,18 @@
           }
         });
       });
-      // 3. RFQ / Inquiry button clicks
+      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
       document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
         el.addEventListener('click', function() {
           if (typeof gtag === 'function') {
+            var ctaSource = el.getAttribute("data-cta-source") ||
+                            (el.closest("nav") ? "navbar" :
+                            (el.closest("footer") ? "footer" :
+                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
             gtag('event', 'inquire_button_click', {
               event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
+              event_label: el.getAttribute('href'),
+              cta_source: ctaSource
             });
           }
         });
@@ -77,6 +82,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/css/tailwind.css"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.hongrun1995.cn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Products",
+      "item": "https://www.hongrun1995.cn/products.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "HVS Dental Suction Systems",
+      "item": "https://www.hongrun1995.cn/products-hvs.html"
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -188,13 +219,15 @@
   <meta name="theme-color" content="#0284C7" />
   <link rel="search" type="application/opensearchdescription+xml" title="Hongrun Medical" href="/opensearch.xml" />
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async"/></a>
+    <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
     <div class="hidden md:flex space-x-8 items-center">
       <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="about.html">About</a>
       <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="products.html">Products</a>
@@ -216,7 +249,7 @@
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
         <a href="/" class="flex items-center gap-2">
-          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139">
         </a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
@@ -262,13 +295,13 @@
         <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: +86-13964416725
       </a>
       <div>
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1 text-center">Business Inquiry</p>
         <a href="mailto:martinchen@hongrun1995.cn" class="w-full flex items-center justify-center gap-2 border border-slate-300 hover:bg-white text-slate-700 py-2 px-4 rounded-lg text-xs font-medium transition">
           <i class="fa-solid fa-envelope text-slate-400"></i> martinchen@hongrun1995.cn
         </a>
       </div>
       <div class="pt-2 mt-2 border-t border-slate-200 text-center">
-        <p class="text-[10px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
+        <p class="text-[11px] text-slate-400 uppercase tracking-wider mb-1">General Inquiry</p>
         <a href="mailto:info@hongrun1995.cn" class="text-[11px] text-slate-500 hover:text-brand-blue transition">info@hongrun1995.cn</a>
       </div>
     </div>
@@ -319,12 +352,12 @@
     <!-- Content Glass Card (Floating) -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8 pointer-events-none">
       <div class="max-w-md p-5 lg:p-6 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/15 shadow-2xl ml-0 lg:ml-2 pointer-events-auto">
-        <p class="text-white/70 text-[10px] uppercase tracking-widest mb-2.5">
+        <p class="text-white/70 text-[11px] uppercase tracking-widest mb-2.5">
           <a href="/" class="hover:text-sky-300 transition">Home</a> <span class="mx-1">/</span> 
           <a href="products.html" class="hover:text-sky-300 transition">Products</a> <span class="mx-1">/</span> 
           <span class="text-sky-300 font-semibold">HVS Series</span>
         </p>
-        <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-400/30 text-[10px] font-bold tracking-wide uppercase mb-3">
+        <div class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-sky-500/20 text-sky-300 border border-sky-400/30 text-[11px] font-bold tracking-wide uppercase mb-3">
           <i class="fa-solid fa-shield-virus"></i> Dental Electric Suction &amp; Aerosol Defense
         </div>
         <h1 class="text-2xl lg:text-3xl font-extrabold text-white leading-tight mb-2.5 font-display tracking-tight">
@@ -334,17 +367,17 @@
           Protect the dentist. Care for the patient. Rated vacuum ≤ 12–20 kPa across the 1-to-50 chair range with two-stage cyclone separation — achieving &gt;85% aerosol cloud suppression across 1 to 50 chairs.
         </p>
         <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[10px]">Rated Vacuum (≤ 12–20 kPa)</span>
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[10px]">Cyclone Separation</span>
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[10px]">Auto-Drainage</span>
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[10px]">CE &amp; ISO 10637</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Rated Vacuum (≤ 12–20 kPa)</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Cyclone Separation</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Auto-Drainage</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">CE &amp; ISO 10637</span>
         </div>
         <div class="flex items-center gap-3">
           <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="contact.html">
             Request Proposal <i class="fa-solid fa-arrow-right"></i>
           </a>
           <a class="border border-white/30 hover:border-sky-400 text-white px-4 py-2 rounded-sm font-bold text-xs transition hover:bg-white/10 inline-flex items-center gap-1.5" href="#section-overview">
-            View All Models <i class="fa-solid fa-arrow-down text-[10px]"></i>
+            View All Models <i class="fa-solid fa-arrow-down text-[11px]"></i>
           </a>
         </div>
       </div>
@@ -404,20 +437,20 @@
     <!-- HVS-1 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-1-2.webp" data-hd="assets/images/products/intl/HVS-1-2.webp" alt="HVS-1 single chair dental suction unit" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high"/>
+        <img data-zoom src="assets/images/products/thumbs/HVS-1-2.webp" data-hd="assets/images/products/intl/HVS-1-2.webp" alt="HVS-1 single chair dental suction unit" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-1</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 1 treatment chair · Dry suction system with integrated hydrodynamic separation</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">0.75 kW (1 Pump)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥0.3 m³/min (18 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 12 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤68 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Dynamic Centrifugal</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">430 × 390 × 650</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">32 kg · 220V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">0.75 kW (1 Pump)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥0.3 m³/min (18 m³/h)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 12 kPa</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤68 dB(A)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Dynamic Centrifugal</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">430 × 390 × 650</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">32 kg · 220V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -426,20 +459,20 @@
     <!-- HVS-3 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-3.webp" data-hd="assets/images/products/intl/HVS-3.webp" alt="HVS-3 multi-chair dental suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom src="assets/images/products/thumbs/HVS-3.webp" data-hd="assets/images/products/intl/HVS-3.webp" alt="HVS-3 multi-chair dental suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-3</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 2–3 treatment chairs · VFD frequency control</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">1.5 kW (VFD Control)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥1.2 m³/min (72 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 14 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤69 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Dynamic Centrifugal</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">430 × 390 × 650</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">40 kg · 220V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">1.5 kW (VFD Control)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥1.2 m³/min (72 m³/h)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 14 kPa</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤69 dB(A)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Dynamic Centrifugal</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">430 × 390 × 650</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">40 kg · 220V</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-brand-blue transition bg-teal-50 px-2.5 py-1 rounded border border-teal-200">
@@ -453,20 +486,20 @@
     <!-- HVS-5 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-5.webp" data-hd="assets/images/products/intl/HVS-5.webp" alt="HVS-5 clinic suction system for 4-5 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom src="assets/images/products/thumbs/HVS-5.webp" data-hd="assets/images/products/intl/HVS-5.webp" alt="HVS-5 clinic suction system for 4-5 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-5</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 4–5 treatment chairs · Heavy-duty 3-phase station</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">1.9 kW (3-Phase)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥1.8 m³/min (108 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 15 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤76 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Two-Stage Cyclone</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">800 × 600 × 970</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">90 kg · 380V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">1.9 kW (3-Phase)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥1.8 m³/min (108 m³/h)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 15 kPa</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤76 dB(A)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Two-Stage Cyclone</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">800 × 600 × 970</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">90 kg · 380V</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-brand-blue transition bg-teal-50 px-2.5 py-1 rounded border border-teal-200">
@@ -480,20 +513,20 @@
     <!-- HVS-10 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-10.webp" data-hd="assets/images/products/intl/HVS-10.webp" alt="HVS-10 large clinic suction system 8-10 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom src="assets/images/products/thumbs/HVS-10.webp" data-hd="assets/images/products/intl/HVS-10.webp" alt="HVS-10 large clinic suction system 8-10 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-10</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 8–10 treatment chairs · Clinic high-capacity station</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">3.3 kW (3-Phase)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥3.6 m³/min (216 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 16 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤76 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN65 / DN65</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Two-Stage Cyclone</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">800 × 600 × 970</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">105 kg · 380V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">3.3 kW (3-Phase)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥3.6 m³/min (216 m³/h)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 16 kPa</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤76 dB(A)</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN65 / DN65</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Two-Stage Cyclone</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">800 × 600 × 970</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">105 kg · 380V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -510,20 +543,20 @@
     <!-- HVS-15 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-15.webp" data-hd="assets/images/products/intl/HVS-15.webp" alt="HVS-15 hospital central suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom src="assets/images/products/thumbs/HVS-15.webp" data-hd="assets/images/products/intl/HVS-15.webp" alt="HVS-15 hospital central suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-15</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 12–15 chairs · Dual turbine VFD hospital station</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Turbine Motors</span><strong class="text-brand-dark text-xs sm:text-sm">2 Pumps (Dual VFD)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">5.7 kW (380V 3P)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥5.1 m³/min (306 m³/h)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤78 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN80 Flange</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Centralized Liquid/Gas</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1300 × 750 × 1500</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">245 kg · 380V</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Turbine Motors</span><strong class="text-brand-dark text-xs sm:text-sm">2 Pumps (Dual VFD)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">5.7 kW (380V 3P)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥5.1 m³/min (306 m³/h)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤78 dB(A)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN80 Flange</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Centralized Liquid/Gas</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1300 × 750 × 1500</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">245 kg · 380V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -532,20 +565,20 @@
     <!-- HVS-25 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-25.webp" data-hd="assets/images/products/intl/HVS-25.webp" alt="HVS-25 hospital suction for 20-25 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom src="assets/images/products/thumbs/HVS-25.webp" data-hd="assets/images/products/intl/HVS-25.webp" alt="HVS-25 hospital suction for 20-25 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-25</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 20–25 chairs · Triple turbine hospital network</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Turbine Motors</span><strong class="text-brand-dark text-xs sm:text-sm">3 Pumps (Multi-VFD)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">8.7 kW (380V 3P)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥8.9 m³/min (534 m³/h)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤79 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN100 Flange</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Multi-Chamber Cyclone</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">2700 × 1300 × 2150</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">280 kg · 380V</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Turbine Motors</span><strong class="text-brand-dark text-xs sm:text-sm">3 Pumps (Multi-VFD)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">8.7 kW (380V 3P)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥8.9 m³/min (534 m³/h)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤79 dB(A)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN100 Flange</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Multi-Chamber Cyclone</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">2700 × 1300 × 2150</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">280 kg · 380V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -554,20 +587,20 @@
     <!-- HVS-30 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-30.webp?v=20261025" data-hd="assets/images/products/intl/HVS-30.webp?v=20261025" alt="HVS-30 hospital central suction system with three turbine heads" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy"/>
+        <img data-zoom src="assets/images/products/thumbs/HVS-30.webp?v=20261025" data-hd="assets/images/products/intl/HVS-30.webp?v=20261025" alt="HVS-30 hospital central suction system with three turbine heads" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-30</h3>
         <div class="text-brand-sky text-sm font-semibold mb-3">For 30 chairs · High capacity triple turbine hospital station</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Turbine Motors</span><strong class="text-brand-dark text-xs sm:text-sm">3 Pumps (Multi-VFD)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">9.5 kW (380V 3P)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥10.2 m³/min (612 m³/h)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤79 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Suction Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN100 Flange</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Multi-Chamber Cyclone</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">2700 × 1300 × 2150</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[10px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">300 kg · 380V</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Turbine Motors</span><strong class="text-brand-dark text-xs sm:text-sm">3 Pumps (Multi-VFD)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">9.5 kW (380V 3P)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥10.2 m³/min (612 m³/h)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤79 dB(A)</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN100 Flange</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Multi-Chamber Cyclone</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">2700 × 1300 × 2150</strong></div>
+          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">300 kg · 380V</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -588,7 +621,7 @@
  data-hd="assets/images/products/hvs-family-portfolio.webp" 
  src="assets/images/products/hvs-family-portfolio.webp" 
  alt="Hongrun Complete Dental Suction Portfolio — Clinic Unit, Cyclone Liquid-Gas Separation, and Multi-Turbine Hospital Central Vacuum Station" 
- class="w-full max-w-5xl h-auto object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-md" decoding="async" loading="lazy"/>
+ class="w-full max-w-5xl h-auto object-contain rounded-xl group-hover:scale-[1.02] transition-transform duration-500 drop-shadow-md" decoding="async" loading="lazy" width="1024" height="464" />
       </div>
 
       <!-- Feature Highlights Row -->
@@ -755,8 +788,8 @@
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
         <div class="flex items-end gap-5 mb-4">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy"/>
-          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy"/>
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
+          <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
         <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">

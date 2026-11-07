@@ -87,6 +87,8 @@
   }
   </script>
   <script src="/assets/js/mobile-nav.js" defer></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
 </head>
 <body class="font-sans text-slate-800 bg-slate-950 antialiased selection:bg-brand-sky selection:text-white">
 
@@ -94,7 +96,7 @@
   <header class="bg-gradient-to-r from-slate-900 via-brand-deep to-slate-900 border-b border-sky-500/20 py-2.5 px-4 text-center text-xs text-slate-300">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2 mx-auto sm:mx-0">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 tracking-wide uppercase">Executive Direct Desk</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 tracking-wide uppercase">Executive Direct Desk</span>
         <span class="text-slate-200 font-medium">Jason Li &middot; Market Director (Americas & Western Europe) &middot; United States, Canada, United Kingdom, France</span>
       </div>
       <div class="hidden sm:flex items-center gap-4 text-[11px] text-slate-400">
@@ -112,11 +114,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
       <div class="flex items-center gap-4">
         <a href="/" class="flex items-center gap-3">
-          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-12 w-auto object-contain brightness-0 invert" decoding="async"/>
+          <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology Logo" class="h-12 w-auto object-contain brightness-0 invert" decoding="async" width="640" height="139" />
         </a>
         <div class="hidden md:block pl-4 border-l border-slate-700 text-left">
           <p class="text-white font-display font-bold text-sm tracking-wider uppercase">Strategic OEM Division</p>
-          <p class="text-sky-400 text-[10px] font-mono tracking-tight">Jason Li &middot; United States, Canada, United Kingdom, France</p>
+          <p class="text-sky-400 text-[11px] font-mono tracking-tight">Jason Li &middot; United States, Canada, United Kingdom, France</p>
         </div>
       </div>
 
@@ -135,6 +137,9 @@
         <a href="#executive-contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white text-xs font-bold uppercase tracking-wider transition shadow-lg hover:shadow-sky-500/20">
           <i class="fa-solid fa-handshake" aria-hidden="true"></i> Request Sample / NDA
         </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none transition" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobile-drawer">
+          <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
       </div>
     </div>
   </nav>
@@ -197,10 +202,10 @@
           <div class="bg-slate-900 rounded-2xl border border-sky-500/30 p-6 shadow-2xl relative overflow-hidden backdrop-blur-md">
             <div class="flex items-center gap-4 mb-5">
               <div class="w-20 h-24 rounded-xl overflow-hidden border border-sky-400/40 shrink-0 bg-slate-800">
-                <img src="assets/images/team/team_4.webp" alt="Jason Li" class="w-full h-full object-cover object-top"/>
+                <img src="assets/images/team/team_4.webp" alt="Jason Li" class="w-full h-full object-cover object-top" width="750" height="1000" />
               </div>
               <div>
-                <span class="inline-block px-2 py-0.5 rounded text-[9px] font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 uppercase tracking-wider mb-1">Your Direct OEM Executive</span>
+                <span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-400/30 uppercase tracking-wider mb-1">Your Direct OEM Executive</span>
                 <h2 class="text-xl font-bold text-white font-display">Jason Li</h2>
                 <p class="text-xs text-sky-400 font-semibold">Market Director (Americas & Western Europe)</p>
                 <p class="text-[11px] text-slate-400 mt-0.5">United States, Canada, United Kingdom, France</p>
@@ -289,8 +294,8 @@
             </p>
 
             <div class="relative rounded-xl overflow-hidden border border-slate-700 bg-slate-950 mb-6 group cursor-zoom-in">
-              <img src="assets/images/exploded/01-hy-compressor-exploded.webp" alt="HY Compressor 3D CAD Exploded View" class="w-full h-64 object-contain p-4 group-hover:scale-105 transition duration-300" data-zoom="assets/images/exploded/01-hy-compressor-exploded.webp" decoding="async" loading="lazy"/>
-              <div class="absolute bottom-2 right-2 px-2 py-1 rounded bg-black/70 text-[10px] text-slate-300 font-mono flex items-center gap-1">
+              <img src="assets/images/exploded/01-hy-compressor-exploded.webp" alt="HY Compressor 3D CAD Exploded View" class="w-full h-64 object-contain p-4 group-hover:scale-105 transition duration-300" data-zoom="assets/images/exploded/01-hy-compressor-exploded.webp" decoding="async" loading="lazy" width="1376" height="768" />
+              <div class="absolute bottom-2 right-2 px-2 py-1 rounded bg-black/70 text-[11px] text-slate-300 font-mono flex items-center gap-1">
                 <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Click to Zoom 3D CAD
               </div>
             </div>
@@ -312,7 +317,7 @@
           </div>
           <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
             <span class="text-slate-400">Purity Standard: <strong class="text-white">ISO 8573-1 Class 0</strong></span>
-            <a href="products-hy.html" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1">View Full Specs <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+            <a href="products-hy.html" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1">View Full Specs <i class="fa-solid fa-chevron-right text-[11px]"></i></a>
           </div>
         </div>
 
@@ -329,8 +334,8 @@
             </p>
 
             <div class="relative rounded-xl overflow-hidden border border-slate-700 bg-slate-950 mb-6 group cursor-zoom-in">
-              <img src="assets/images/exploded/02-hvs-suction-exploded.webp" alt="HVS Suction System 3D CAD Exploded View" class="w-full h-64 object-contain p-4 group-hover:scale-105 transition duration-300" data-zoom="assets/images/exploded/02-hvs-suction-exploded.webp" decoding="async" loading="lazy"/>
-              <div class="absolute bottom-2 right-2 px-2 py-1 rounded bg-black/70 text-[10px] text-slate-300 font-mono flex items-center gap-1">
+              <img src="assets/images/exploded/02-hvs-suction-exploded.webp" alt="HVS Suction System 3D CAD Exploded View" class="w-full h-64 object-contain p-4 group-hover:scale-105 transition duration-300" data-zoom="assets/images/exploded/02-hvs-suction-exploded.webp" decoding="async" loading="lazy" width="1376" height="768" />
+              <div class="absolute bottom-2 right-2 px-2 py-1 rounded bg-black/70 text-[11px] text-slate-300 font-mono flex items-center gap-1">
                 <i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i> Click to Zoom 3D CAD
               </div>
             </div>
@@ -352,7 +357,7 @@
           </div>
           <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
             <span class="text-slate-400">Application: <strong class="text-white">DSO &middot; Specialized Surgery</strong></span>
-            <a href="products-hvs.html" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1">View Full Specs <i class="fa-solid fa-chevron-right text-[10px]"></i></a>
+            <a href="products-hvs.html" class="text-sky-400 hover:text-sky-300 font-semibold inline-flex items-center gap-1">View Full Specs <i class="fa-solid fa-chevron-right text-[11px]"></i></a>
           </div>
         </div>
       </div>
@@ -407,7 +412,7 @@
 
         <div class="lg:col-span-6">
           <div class="relative rounded-2xl overflow-hidden border border-slate-700 shadow-2xl bg-slate-950 p-2">
-            <img src="assets/images/solutions/smart-iot-telemetry.webp" alt="Hongrun Smart IoT Telemetry Dashboard" class="w-full h-auto rounded-xl object-cover" decoding="async" loading="lazy"/>
+            <img src="assets/images/solutions/smart-iot-telemetry.webp" alt="Hongrun Smart IoT Telemetry Dashboard" class="w-full h-auto rounded-xl object-cover" decoding="async" loading="lazy" width="1920" height="1280" />
             <div class="p-4 bg-slate-900/90 rounded-b-xl border-t border-slate-800 flex justify-between items-center text-xs">
               <span class="text-slate-400">Protocol: <strong class="text-sky-300">Modbus-RTU / MQTT IoT</strong></span>
               <span class="text-slate-400">Response: <strong class="text-emerald-400">&lt; 10ms Telemetry</strong></span>
@@ -593,7 +598,7 @@
   <footer class="bg-slate-950 border-t border-slate-800 py-10 text-xs text-slate-500">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-3">
-        <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-8 brightness-0 invert opacity-75" decoding="async" loading="lazy"/>
+        <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-8 brightness-0 invert opacity-75" decoding="async" loading="lazy" width="640" height="139" />
         <p>&copy; 2026 Hongrun Compressor Technology Co., Ltd. All Rights Reserved.</p>
       </div>
       <div class="flex items-center gap-4">
