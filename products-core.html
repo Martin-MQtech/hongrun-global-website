@@ -148,9 +148,7 @@
   ]
 }
 </script>
-  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
-  <script src="/assets/js/webmcp-tools.js" defer></script>
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
@@ -198,6 +196,9 @@
   ]
 }
 </script>
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
@@ -287,6 +288,7 @@
 
 
 <!-- Hero -->
+<main id="main-content">
 <section class="relative pt-20 overflow-hidden bg-slate-900">
   <div class="relative h-[420px] lg:h-[480px]">
     <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/products/intl/product-core.webp')"></div>
@@ -537,6 +539,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ===================== VI V3.0 STANDARD GLOBAL FOOTER ===================== -->
 <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">

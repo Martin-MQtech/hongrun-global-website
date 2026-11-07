@@ -2,8 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 — Page Not Found | Hongrun Technology</title>
+  <meta name="description" content="The requested medical engineering page or document was not found. Browse Hongrun Technology oil-free dental compressors, suction systems, and clean air solutions." />
+  <link rel="canonical" href="https://www.hongrun1995.cn/404.html" />
+  <meta property="og:title" content="404 — Page Not Found | Hongrun Technology" />
+  <meta property="og:description" content="The requested medical engineering page was not found. Explore Hongrun Class 0 oil-free air compressors and medical equipment." />
+  <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg" />
+  <meta property="og:url" content="https://www.hongrun1995.cn/404.html" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="robots" content="noindex, follow" />
   <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png" />
   <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png" />
@@ -13,6 +67,23 @@
   <script src="/assets/js/mobile-nav.js" defer></script>
   <script src="/assets/js/cookie-consent.js" defer></script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "404 Page Not Found",
+    "description": "Page not found error page for Hongrun Technology",
+    "url": "https://www.hongrun1995.cn/404.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hongrun Technology"
+    }
+  }
+  </script>
+
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
 
@@ -35,7 +106,7 @@
   </header>
 
   <!-- 404 Main Content -->
-  <main class="max-w-4xl mx-auto px-4 py-16 text-center my-auto">
+  <main id="main-content" class="max-w-4xl mx-auto px-4 py-16 text-center my-auto">
     <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-sky-100 text-brand-blue mb-6 shadow-inner">
       <i class="fa-solid fa-compass-drafting text-4xl"></i>
     </div>

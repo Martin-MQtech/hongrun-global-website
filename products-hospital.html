@@ -190,9 +190,7 @@
   ]
 }
 </script>
-  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
-  <script src="/assets/js/webmcp-tools.js" defer></script>
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
@@ -216,6 +214,9 @@
   <script src="/assets/js/mobile-nav.js" defer></script>
   <script src="/assets/js/cookie-consent.js" defer></script>
 
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
@@ -305,6 +306,7 @@
 
 
 <!-- ===================== PAGE HERO (Optimized Dual-Column Layout: Full Machine View & Visible Top Logo) ===================== -->
+<main id="main-content">
 <section class="relative pt-20 overflow-hidden bg-slate-950 text-white border-b border-slate-800">
   <!-- Dynamic Ambient Glows -->
   <div class="absolute top-10 left-1/4 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -597,9 +599,6 @@
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
-        <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
 
     <!-- [IMG-TODO] HWG-400 借用的国内版图(国际站暂无此型号图) -->
     <!-- HWG-400 -->
@@ -866,6 +865,8 @@
     <p class="text-slate-400 text-xs mt-4">Data source: official Hongrun product catalogue. HWG series not listed in this catalogue version — contact sales for those specifications.</p>
   </div>
 </section>
+
+</main>
 
 <!-- ===================== VI V3.0 STANDARD GLOBAL FOOTER ===================== -->
 <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">

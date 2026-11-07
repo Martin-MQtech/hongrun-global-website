@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="robots" content="index, follow"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="../../assets/css/tailwind.css"/>
 
-  <style>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<!-- Google tag (gtag.js) - Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25BF91Y6Q1', {
+      send_page_view: true
+    });
+
+    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
+    document.addEventListener('DOMContentLoaded', function() {
+      // 1. Email clicks
+      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'contact_email_click', {
+              event_category: 'B2B Lead',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+      // 2. WhatsApp clicks
+      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'B2B Lead',
+              event_label: 'WhatsApp Chat Initiation'
+            });
+          }
+        });
+      });
+      // 3. RFQ / Inquiry button clicks
+      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
+        el.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'inquire_button_click', {
+              event_category: 'B2B Engagement',
+              event_label: el.getAttribute('href')
+            });
+          }
+        });
+      });
+    });
+  </script>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+<link href="../../assets/css/tailwind.css" rel="stylesheet"/>
+<style>
     /* High-Contrast Technical Typography System (English) */
     .article-body > p { margin-bottom: 1.35rem; line-height: 1.85; color: #334155; font-size: 0.95rem; }
     .article-body > h2 { font-family: 'Oswald', sans-serif; font-weight: 700; color: #0F172A; margin-top: 3.25rem; margin-bottom: 1.25rem; font-size: 1.75rem; letter-spacing: -0.02em; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.65rem; }
@@ -72,15 +119,43 @@
       color: #FFFFFF !important;
     }
   </style>
-  <script src="../../assets/js/mobile-nav.js" defer></script>
-  <title>Silence & Purity: Inside the Ultimate Stress Tests of Hongrun Medical Air Systems | Hongrun Technology</title>
-  <meta name="description" content="Dynamic vibration neutralization, 60-minute white silk blast, and -40°C cryogenic dew point stripping: Deconstructing the engineering science behind medical-grade ISO 8573-1 Class 0 oil-free air and whisper-quiet operatory dynamics."/>
-  <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/"/>
-  <meta property="og:title" content="Silence & Purity: Inside the Ultimate Stress Tests of Hongrun Medical Air Systems"/>
-  <meta property="og:description" content="Watch the ultimate stress tests: Standing coin on running compressor, 60-min white silk blast, and -40°C cryogenic dew point drying."/>
-  <meta property="og:image" content="https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/card_cover.webp"/>
-  <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/"/>
-  <meta property="og:type" content="article"/>
+<script defer="" src="../../assets/js/mobile-nav.js"></script>
+<title>Silence &amp; Purity: Inside the Ultimate Stress Tests of Hongrun Medical Air Systems | Hongrun Technology</title>
+<meta content="Dynamic vibration neutralization, 60-minute white silk blast, and -40°C cryogenic dew point stripping: Deconstructing the engineering science behind medical-grade ISO 8573-1 Class 0 oil-free air and whisper-quiet operatory dynamics." name="description"/>
+<link href="https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/" rel="canonical"/>
+<meta content="Silence &amp; Purity: Inside the Ultimate Stress Tests of Hongrun Medical Air Systems" property="og:title"/>
+<meta content="Watch the ultimate stress tests: Standing coin on running compressor, 60-min white silk blast, and -40°C cryogenic dew point drying." property="og:description"/>
+<meta content="https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/card_cover.webp" property="og:image"/>
+<meta content="https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/" property="og:url"/>
+<meta content="article" property="og:type"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Silence & Purity: Inside the Ultimate Stress Tests of Hongrun Medical Air Systems",
+  "description": "Watch the ultimate stress tests: Standing coin on running compressor, 60-min white silk blast, and -40°C cryogenic dew point drying.",
+  "image": "https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/card_cover.webp",
+  "datePublished": "2026-09-26T08:00:00+08:00",
+  "dateModified": "2026-11-07T12:00:00+08:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Hongrun Technology Quality Testing Division",
+    "url": "https://www.hongrun1995.cn/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Shandong Hongrun Compressor Technology Co., Ltd.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.hongrun1995.cn/assets/images/logo_transparent.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/"
+  }
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -107,245 +182,220 @@
   ]
 }
 </script>
+<!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+<script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js"></script>
+<script defer="" src="/assets/js/webmcp-tools.js"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
-
 <!-- Global Navigation Bar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
-    <a href="/"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-14 w-auto object-contain" decoding="async" width="640" height="139" /></a>
-    <div class="hidden md:flex space-x-8 items-center">
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
-      <a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../solutions.html">Solutions</a>
-      <a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="../../news.html"><i class="fa-solid fa-newspaper text-sm mr-1"></i> News &amp; Insights</a>
-      <a class="border border-slate-400 text-slate-600 hover:border-brand-blue hover:text-brand-blue px-4 py-2 rounded-sm font-medium text-xs transition" href="../../contact.html">Request a Quote</a>
-    </div>
-    <!-- Mobile Hamburger Button -->
-    <button id="mobile-menu-btn" type="button" class="md:hidden p-2.5 rounded-lg text-slate-700 hover:text-brand-blue hover:bg-slate-300/40 focus:outline-none transition" aria-label="Open Mobile Menu" aria-expanded="false" aria-controls="mobile-drawer">
-      <i id="mobile-menu-icon" class="fa-solid fa-bars text-xl"></i>
-    </button>
-  </div>
-</nav>
-
-<!-- Mobile Navigation Drawer -->
-<div id="mobile-drawer" class="fixed inset-0 z-[100] hidden transition-opacity duration-300" aria-modal="true" role="dialog">
-  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm"></div>
-  <div class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl z-10 flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer-panel">
-    <div>
-      <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
-        <a href="/" class="flex items-center gap-2"><img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain" width="640" height="139"></a>
-        <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu"><i class="fa-solid fa-xmark text-xl"></i></button>
-      </div>
-      <nav class="p-4 space-y-1 text-sm font-medium text-slate-700 font-display">
-        <a href="/" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-house text-slate-400 w-5"></i> Home</a>
-        <a href="../../about.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-building text-slate-400 w-5"></i> About Us (30 Years)</a>
-        <a href="../../products.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-boxes-stacked text-slate-400 w-5"></i> Products</a>
-        <a href="../../solutions.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-diagram-project text-slate-400 w-5"></i> Solutions &amp; Sizing</a>
-        <a href="../../news.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-newspaper text-slate-400 w-5"></i> News &amp; Whitepapers</a>
-        <a href="../../warranty-policy.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition"><i class="fa-solid fa-shield-halved text-slate-400 w-5"></i> Warranty Policy</a>
-        <a href="../../contact.html" class="flex items-center gap-3 px-3 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-bold transition mt-2"><i class="fa-solid fa-file-invoice text-brand-blue w-5"></i> Request a Quote</a>
-      </nav>
-    </div>
-  </div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+<a href="/"><img alt="Hongrun Technology" class="h-14 w-auto object-contain" decoding="async" height="139" src="../../assets/images/logo_transparent.webp" width="640"/></a>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../about.html">About</a>
+<a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../products.html">Products</a>
+<a class="text-brand-dark hover:text-brand-blue transition font-display text-base font-medium tracking-wide uppercase" href="../../solutions.html">Solutions</a>
+<a class="text-brand-blue font-display text-base font-semibold tracking-wide uppercase border-b-2 border-brand-blue pb-1" href="../../news.html"><i class="fa-solid fa-newspaper text-sm mr-1"></i> News &amp; Insights</a>
+<a class="border border-slate-400 text-slate-600 hover:border-brand-blue hover:text-brand-blue px-4 py-2 rounded-sm font-medium text-xs transition" href="../../contact.html">Request a Quote</a>
 </div>
-
+<!-- Mobile Hamburger Button -->
+<button aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open Mobile Menu" class="md:hidden p-2.5 rounded-lg text-slate-700 hover:text-brand-blue hover:bg-slate-300/40 focus:outline-none transition" id="mobile-menu-btn" type="button">
+<i class="fa-solid fa-bars text-xl" id="mobile-menu-icon"></i>
+</button>
+</div>
+</nav>
+<!-- Mobile Navigation Drawer -->
+<div aria-modal="true" class="fixed inset-0 z-[100] hidden transition-opacity duration-300" id="mobile-drawer" role="dialog">
+<div class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" id="mobile-drawer-backdrop"></div>
+<div class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white shadow-2xl z-10 flex flex-col justify-between overflow-y-auto transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-drawer-panel">
+<div>
+<div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
+<a class="flex items-center gap-2" href="/"><img alt="Hongrun Technology" class="h-10 w-auto object-contain" height="139" src="../../assets/images/logo_transparent.webp" width="640"/></a>
+<button aria-label="Close Mobile Menu" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" id="mobile-drawer-close" type="button"><i class="fa-solid fa-xmark text-xl"></i></button>
+</div>
+<nav class="p-4 space-y-1 text-sm font-medium text-slate-700 font-display">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition" href="/"><i class="fa-solid fa-house text-slate-400 w-5"></i> Home</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition" href="../../about.html"><i class="fa-solid fa-building text-slate-400 w-5"></i> About Us (30 Years)</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition" href="../../products.html"><i class="fa-solid fa-boxes-stacked text-slate-400 w-5"></i> Products</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition" href="../../solutions.html"><i class="fa-solid fa-diagram-project text-slate-400 w-5"></i> Solutions &amp; Sizing</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition" href="../../news.html"><i class="fa-solid fa-newspaper text-slate-400 w-5"></i> News &amp; Whitepapers</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-slate-100 hover:text-brand-blue transition" href="../../warranty-policy.html"><i class="fa-solid fa-shield-halved text-slate-400 w-5"></i> Warranty Policy</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg border border-slate-300 text-slate-700 font-bold transition mt-2" href="../../contact.html"><i class="fa-solid fa-file-invoice text-brand-blue w-5"></i> Request a Quote</a>
+</nav>
+</div>
+</div>
+</div>
 <!-- Article Hero Header Section -->
 <header class="pt-28 pb-14 bg-slate-900 text-white relative overflow-hidden border-b border-slate-800">
-  <div class="absolute inset-0 bg-cover bg-center opacity-15" style="background-image:url('card_cover.webp')"></div>
-  <div class="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-900/90 to-slate-900"></div>
-
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <nav class="flex items-center gap-2 text-xs font-medium text-slate-400 mb-6">
-      <a href="/" class="hover:text-sky-300 transition">Home</a>
-      <span>/</span>
-      <a href="../../news.html" class="hover:text-sky-300 transition">News &amp; Insights</a>
-      <span>/</span>
-      <span class="text-sky-400">Stress Tests #12</span>
-    </nav>
-
-    <div class="flex flex-wrap items-center gap-2 mb-4">
-      <span class="bg-rose-600 text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm inline-flex items-center gap-1.5"><i class="fa-solid fa-flask-vial"></i> Stress Tests Film &middot; 4K</span>
-      <span class="bg-brand-blue text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Purity &amp; Acoustics &middot; Article #12</span>
-      <span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">ISO 8573-1 Class 0</span>
-      <span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded">-40°C Dew Point &middot; Upright Coin</span>
-    </div>
-
-    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display leading-tight tracking-tight text-white mb-4 [text-shadow:0_2px_16px_rgba(0,0,0,0.6)]">
+<div class="absolute inset-0 bg-cover bg-center opacity-15" style="background-image:url('card_cover.webp')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-900/90 to-slate-900"></div>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<nav class="flex items-center gap-2 text-xs font-medium text-slate-400 mb-6">
+<a class="hover:text-sky-300 transition" href="/">Home</a>
+<span>/</span>
+<a class="hover:text-sky-300 transition" href="../../news.html">News &amp; Insights</a>
+<span>/</span>
+<span class="text-sky-400">Stress Tests #12</span>
+</nav>
+<div class="flex flex-wrap items-center gap-2 mb-4">
+<span class="bg-rose-600 text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm inline-flex items-center gap-1.5"><i class="fa-solid fa-flask-vial"></i> Stress Tests Film · 4K</span>
+<span class="bg-brand-blue text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Purity &amp; Acoustics · Article #12</span>
+<span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">ISO 8573-1 Class 0</span>
+<span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded">-40°C Dew Point · Upright Coin</span>
+</div>
+<h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display leading-tight tracking-tight text-white mb-4 [text-shadow:0_2px_16px_rgba(0,0,0,0.6)]">
       Silence &amp; Purity:<br/>
-      <span class="text-sky-300">Inside the Ultimate Stress Tests of Hongrun Medical Air Systems</span>
-    </h1>
-
-    <p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-6">
-      Dynamic vibration neutralization, 60-minute white silk blast, and -40&deg;C cryogenic dew point stripping: Deconstructing the engineering science behind medical-grade ISO 8573-1 Class 0 oil-free air and whisper-quiet operatory dynamics.
+<span class="text-sky-300">Inside the Ultimate Stress Tests of Hongrun Medical Air Systems</span>
+</h1>
+<p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-6">
+      Dynamic vibration neutralization, 60-minute white silk blast, and -40°C cryogenic dew point stripping: Deconstructing the engineering science behind medical-grade ISO 8573-1 Class 0 oil-free air and whisper-quiet operatory dynamics.
     </p>
-
-    <div class="flex flex-wrap items-center justify-between gap-4 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
-      <div class="flex items-center gap-3">
-        <div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display shadow-sm">M</div>
-        <span class="text-slate-100 font-medium">Martin &middot; 宏润科技国际品牌工程中心 (Hongrun Technology)</span>
-      </div>
-      <div class="flex items-center gap-3">
-        <span><i class="fa-regular fa-calendar-check text-brand-sky"></i> September 26, 2026</span>
-        <span class="text-slate-500">•</span>
-        <span><i class="fa-regular fa-clock text-brand-sky"></i> 10 min read &middot; 4K Stress Test Film</span>
-        <span class="text-slate-500">•</span>
-        <a href="#chinese-version" class="text-sky-400 hover:text-white transition font-semibold"><i class="fa-solid fa-globe mr-1"></i> 中文完整版</a>
-      </div>
-    </div>
-  </div>
+<div class="flex flex-wrap items-center justify-between gap-4 text-xs text-slate-300 border-t border-slate-800/80 pt-4">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-brand-blue text-white flex items-center justify-center text-xs font-bold font-display shadow-sm">M</div>
+<span class="text-slate-100 font-medium">Martin · 宏润科技国际品牌工程中心 (Hongrun Technology)</span>
+</div>
+<div class="flex items-center gap-3">
+<span><i class="fa-regular fa-calendar-check text-brand-sky"></i> September 26, 2026</span>
+<span class="text-slate-500">•</span>
+<span><i class="fa-regular fa-clock text-brand-sky"></i> 10 min read · 4K Stress Test Film</span>
+<span class="text-slate-500">•</span>
+<a class="text-sky-400 hover:text-white transition font-semibold" href="#chinese-version"><i class="fa-solid fa-globe mr-1"></i> 中文完整版</a>
+</div>
+</div>
+</div>
 </header>
-
 <!-- Main Article Section -->
 <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-  <article class="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 overflow-hidden">
-
-    <!-- Video Showcase & Engineering Highlights (Muqi-style 2-Column Responsive Layout) -->
-    <section class="mb-14 not-prose">
-      <!-- Section Header -->
-      <div class="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
-        <div>
-          <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue mb-1">
-            <span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></span>
-            <span>Stress Test Showcase &middot; Clinical Validation</span>
-          </div>
-          <h2 class="text-xl sm:text-2xl font-bold font-display text-slate-900 m-0 p-0 border-0">
-            High-Definition Stress Test Film: Coin Balance &middot; Silk Blast &middot; -40&deg;C Dew Point
+<article class="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 overflow-hidden">
+<!-- Video Showcase & Engineering Highlights (Muqi-style 2-Column Responsive Layout) -->
+<section class="mb-14 not-prose">
+<!-- Section Header -->
+<div class="mb-6 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
+<div>
+<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-blue mb-1">
+<span class="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse"></span>
+<span>Stress Test Showcase · Clinical Validation</span>
+</div>
+<h2 class="text-xl sm:text-2xl font-bold font-display text-slate-900 m-0 p-0 border-0">
+            High-Definition Stress Test Film: Coin Balance · Silk Blast · -40°C Dew Point
           </h2>
-        </div>
-        <!-- Dual Stream Platform Switcher Tabs -->
-        <div class="flex items-center gap-1 bg-slate-900 p-1 rounded-xl shadow-inner border border-slate-800">
-          <button id="switch-btn-yt" onclick="selectPlatform('yt', 'apPnxs9OBIs', 'BV1kPWA66EEX')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer">
-            <i class="fa-brands fa-youtube text-red-400"></i> <span>YouTube Shorts</span>
-          </button>
-          <button id="switch-btn-bili" onclick="selectPlatform('bili', 'apPnxs9OBIs', 'BV1kPWA66EEX')" class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer">
-            <i class="fa-brands fa-bilibili text-sky-400"></i> <span>哔哩哔哩 (国内直连)</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- 2-Column Grid: Left Phone Mockup, Right 3 Engineering Metric Cards -->
-      <div class="grid lg:grid-cols-12 gap-8 items-center">
-        
-        <!-- Left: Vertical 9:16 Smartphone Mockup Container (lg:col-span-5) -->
-        <div class="lg:col-span-5 flex flex-col items-center">
-          <div class="w-full max-w-[320px] bg-slate-950 p-3 sm:p-3.5 rounded-[2.5rem] shadow-2xl border-4 border-slate-800 ring-1 ring-white/10 relative">
-            
-            <!-- Dynamic Island / Speaker Notch -->
-            <div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-slate-900 rounded-full z-30 flex items-center justify-center gap-2 border border-slate-800">
-              <span class="w-2 h-2 rounded-full bg-slate-950"></span>
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-500/80"></span>
-            </div>
-
-            <!-- Screen Area with Exact 9:16 Aspect Ratio -->
-            <div class="relative w-full rounded-[2rem] overflow-hidden bg-black shadow-inner" style="aspect-ratio: 9/16;">
-              
-              <!-- 1. Cover State (Poster + Play Overlay) -->
-              <div id="poster-cover-wrapper" class="relative w-full h-full group cursor-pointer" onclick="startInlineVideo('apPnxs9OBIs', 'BV1kPWA66EEX')">
-                <img src="video_poster_9_16.webp" alt="Silence and Purity Stress Tests Video Cover" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" width="1080" height="1920" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-slate-950/60 pointer-events-none"></div>
-
-                <!-- Top Status Overlay inside Screen -->
-                <div class="absolute top-6 left-0 right-0 px-4 flex items-center justify-between pointer-events-none z-10 text-[11px] text-white/80 font-mono">
-                  <span class="flex items-center gap-1.5 bg-black/40 backdrop-blur px-2 py-0.5 rounded-full border border-white/10">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> 4K UHD
+</div>
+<!-- Dual Stream Platform Switcher Tabs -->
+<div class="flex items-center gap-1 bg-slate-900 p-1 rounded-xl shadow-inner border border-slate-800">
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer" id="switch-btn-yt" onclick="selectPlatform('yt', 'apPnxs9OBIs', 'BV1kPWA66EEX')">
+<i class="fa-brands fa-youtube text-red-400"></i> <span>YouTube Shorts</span>
+</button>
+<button class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer" id="switch-btn-bili" onclick="selectPlatform('bili', 'apPnxs9OBIs', 'BV1kPWA66EEX')">
+<i class="fa-brands fa-bilibili text-sky-400"></i> <span>哔哩哔哩 (国内直连)</span>
+</button>
+</div>
+</div>
+<!-- 2-Column Grid: Left Phone Mockup, Right 3 Engineering Metric Cards -->
+<div class="grid lg:grid-cols-12 gap-8 items-center">
+<!-- Left: Vertical 9:16 Smartphone Mockup Container (lg:col-span-5) -->
+<div class="lg:col-span-5 flex flex-col items-center">
+<div class="w-full max-w-[320px] bg-slate-950 p-3 sm:p-3.5 rounded-[2.5rem] shadow-2xl border-4 border-slate-800 ring-1 ring-white/10 relative">
+<!-- Dynamic Island / Speaker Notch -->
+<div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-4 bg-slate-900 rounded-full z-30 flex items-center justify-center gap-2 border border-slate-800">
+<span class="w-2 h-2 rounded-full bg-slate-950"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-blue-500/80"></span>
+</div>
+<!-- Screen Area with Exact 9:16 Aspect Ratio -->
+<div class="relative w-full rounded-[2rem] overflow-hidden bg-black shadow-inner" style="aspect-ratio: 9/16;">
+<!-- 1. Cover State (Poster + Play Overlay) -->
+<div class="relative w-full h-full group cursor-pointer" id="poster-cover-wrapper" onclick="startInlineVideo('apPnxs9OBIs', 'BV1kPWA66EEX')">
+<img alt="Silence and Purity Stress Tests Video Cover" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700 ease-out" height="1920" src="video_poster_9_16.webp" width="1080"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-slate-950/60 pointer-events-none"></div>
+<!-- Top Status Overlay inside Screen -->
+<div class="absolute top-6 left-0 right-0 px-4 flex items-center justify-between pointer-events-none z-10 text-[11px] text-white/80 font-mono">
+<span class="flex items-center gap-1.5 bg-black/40 backdrop-blur px-2 py-0.5 rounded-full border border-white/10">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> 4K UHD
                   </span>
-                  <span class="bg-black/40 backdrop-blur px-2 py-0.5 rounded-full border border-white/10">9:16 Vertical</span>
-                </div>
-
-                <!-- Center Pulsing Play Button -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
-                  <div class="w-16 h-16 rounded-full bg-white/95 text-[#0F4C81] flex items-center justify-center shadow-2xl shadow-blue-900/50 group-hover:scale-110 group-hover:bg-white transition duration-300 pointer-events-auto">
-                    <i class="fa-solid fa-play text-xl translate-x-0.5 text-[#0F4C81]"></i>
-                  </div>
-                  <span class="mt-3 text-xs font-semibold text-white/90 bg-black/60 backdrop-blur px-3 py-1 rounded-full border border-white/20 tracking-wide">
+<span class="bg-black/40 backdrop-blur px-2 py-0.5 rounded-full border border-white/10">9:16 Vertical</span>
+</div>
+<!-- Center Pulsing Play Button -->
+<div class="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none">
+<div class="w-16 h-16 rounded-full bg-white/95 text-[#0F4C81] flex items-center justify-center shadow-2xl shadow-blue-900/50 group-hover:scale-110 group-hover:bg-white transition duration-300 pointer-events-auto">
+<i class="fa-solid fa-play text-xl translate-x-0.5 text-[#0F4C81]"></i>
+</div>
+<span class="mt-3 text-xs font-semibold text-white/90 bg-black/60 backdrop-blur px-3 py-1 rounded-full border border-white/20 tracking-wide">
                     Click to Play Video
                   </span>
-                </div>
-
-                <!-- Bottom Title Tag inside Screen -->
-                <div class="absolute bottom-4 left-4 right-4 z-10 pointer-events-none text-center">
-                  <p class="text-xs font-semibold text-white/95 drop-shadow line-clamp-2">
+</div>
+<!-- Bottom Title Tag inside Screen -->
+<div class="absolute bottom-4 left-4 right-4 z-10 pointer-events-none text-center">
+<p class="text-xs font-semibold text-white/95 drop-shadow line-clamp-2">
                     Hongrun Medical Pneumatic Stress Protocol
                   </p>
-                </div>
-              </div>
-
-              <!-- 2. Active Inline Player State (Hidden by Default) -->
-              <div id="inline-player-wrapper" class="hidden relative w-full h-full bg-black">
-                <!-- Return / Close Button -->
-                <button onclick="closeInlineVideo()" class="absolute top-3 right-3 z-30 bg-black/80 hover:bg-red-600 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur border border-white/20 transition flex items-center gap-1 cursor-pointer shadow-lg" title="Close Video">
-                  <i class="fa-solid fa-xmark"></i> <span>Close</span>
-                </button>
-                <div id="inline-iframe-slot" class="w-full h-full"></div>
-              </div>
-
-            </div>
-
-            <!-- Bottom Home Indicator Bar -->
-            <div class="w-24 h-1 bg-slate-700 rounded-full mx-auto mt-2"></div>
-          </div>
-
-          <!-- Dual External Direct Jump Buttons Below Mockup -->
-          <div class="flex items-center gap-2 mt-3.5 w-full max-w-[320px] justify-center">
-            <a href="https://www.youtube.com/shorts/apPnxs9OBIs" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 px-2 bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition">
-              <i class="fa-brands fa-youtube text-red-600"></i> YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </a>
-            <a href="https://www.bilibili.com/video/BV1kPWA66EEX/" target="_blank" rel="noopener noreferrer" class="flex-1 py-1.5 px-2 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition">
-              <i class="fa-brands fa-bilibili text-sky-600"></i> Bilibili <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: 3 Vertically Stacked Engineering Metric Cards (lg:col-span-7) -->
-        <div class="lg:col-span-7 space-y-4">
-          
-          <!-- Card 1 -->
-          <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200">
-            <div class="flex items-center justify-between gap-3 mb-2">
-              <div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">2,800 RPM</div>
-              <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-50 text-brand-blue border border-blue-200/60">
+</div>
+</div>
+<!-- 2. Active Inline Player State (Hidden by Default) -->
+<div class="hidden relative w-full h-full bg-black" id="inline-player-wrapper">
+<!-- Return / Close Button -->
+<button class="absolute top-3 right-3 z-30 bg-black/80 hover:bg-red-600 text-white text-[11px] font-medium px-2.5 py-1 rounded-full backdrop-blur border border-white/20 transition flex items-center gap-1 cursor-pointer shadow-lg" onclick="closeInlineVideo()" title="Close Video">
+<i class="fa-solid fa-xmark"></i> <span>Close</span>
+</button>
+<div class="w-full h-full" id="inline-iframe-slot"></div>
+</div>
+</div>
+<!-- Bottom Home Indicator Bar -->
+<div class="w-24 h-1 bg-slate-700 rounded-full mx-auto mt-2"></div>
+</div>
+<!-- Dual External Direct Jump Buttons Below Mockup -->
+<div class="flex items-center gap-2 mt-3.5 w-full max-w-[320px] justify-center">
+<a class="flex-1 py-1.5 px-2 bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition" href="https://www.youtube.com/shorts/apPnxs9OBIs" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-youtube text-red-600"></i> YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+</a>
+<a class="flex-1 py-1.5 px-2 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition" href="https://www.bilibili.com/video/BV1kPWA66EEX/" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-bilibili text-sky-600"></i> Bilibili <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+</a>
+</div>
+</div>
+<!-- Right: 3 Vertically Stacked Engineering Metric Cards (lg:col-span-7) -->
+<div class="lg:col-span-7 space-y-4">
+<!-- Card 1 -->
+<div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200">
+<div class="flex items-center justify-between gap-3 mb-2">
+<div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">2,800 RPM</div>
+<span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-50 text-brand-blue border border-blue-200/60">
                 Upright Coin Test
               </span>
-            </div>
-            <h3 class="text-base font-bold text-slate-900 mb-1.5">Harmonic Balance &amp; Ultra-Low Vibration</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-1.5">Harmonic Balance &amp; Ultra-Low Vibration</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
               Eliminating the gudgeon wrist-pin reduces reciprocating mass by 42%. With ISO 1940 Grade G2.5 dynamic rotor balancing, vibration velocity RMS is held below 0.05 mm/s, allowing a coin to stand upright on the cylinder head.
             </p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200">
-            <div class="flex items-center justify-between gap-3 mb-2">
-              <div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">60 Mins</div>
-              <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200/60">
+</div>
+<!-- Card 2 -->
+<div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200">
+<div class="flex items-center justify-between gap-3 mb-2">
+<div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">60 Mins</div>
+<span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200/60">
                 Pure Silk Blast Test
               </span>
-            </div>
-            <h3 class="text-base font-bold text-slate-900 mb-1.5">100% Zero-Oil ISO 8573-1 Class 0 Purity</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-1.5">100% Zero-Oil ISO 8573-1 Class 0 Purity</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
               Continuous full-flow compressed air discharge across pristine white silk for 60 minutes reveals zero discoloration, zero grease, and zero hydrocarbon fog, safeguarding delicate patient tissues and precision lab sensors.
             </p>
-          </div>
-
-          <!-- Card 3 (With Distinctive Left Border Highlight Matching Reference) -->
-          <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200" style="border-left: 4px solid #0F4C81;">
-            <div class="flex items-center justify-between gap-3 mb-2">
-              <div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">-40&deg;C PDP</div>
-              <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+</div>
+<!-- Card 3 (With Distinctive Left Border Highlight Matching Reference) -->
+<div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200" style="border-left: 4px solid #0F4C81;">
+<div class="flex items-center justify-between gap-3 mb-2">
+<div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">-40°C PDP</div>
+<span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">
                 Cryogenic Desiccant Drying
               </span>
-            </div>
-            <h3 class="text-base font-bold text-slate-900 mb-1.5">Dual-Tower 13X Molecular Sieve Adsorption</h3>
-            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
-              Twin regenerative desiccant columns deliver -40&deg;C pressure dew point, stripping micro-droplet humidity and physically eradicating bacterial biofilm formation inside dental delivery conduits.
+</div>
+<h3 class="text-base font-bold text-slate-900 mb-1.5">Dual-Tower 13X Molecular Sieve Adsorption</h3>
+<p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
+              Twin regenerative desiccant columns deliver -40°C pressure dew point, stripping micro-droplet humidity and physically eradicating bacterial biofilm formation inside dental delivery conduits.
             </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
+</div>
+</div>
+</div>
+</section>
 <div class="bg-gradient-to-r from-slate-900 via-[#0F4C81] to-slate-900 text-white rounded-2xl p-6 sm:p-8 mb-12 shadow-xl border-t-4 border-sky-400 relative overflow-hidden">
 <div class="relative z-10">
 <span class="inline-block px-3 py-1 bg-sky-400/20 text-sky-300 rounded-full text-xs font-bold uppercase tracking-wider mb-2 border border-sky-400/30">
@@ -359,9 +409,8 @@
       </p>
 </div>
 </div>
-
-    <!-- English Technical Article Body -->
-    <div id="english-version" class="article-body">
+<!-- English Technical Article Body -->
+<div class="article-body" id="english-version">
 <section>
 <h2><span class="step-badge">01</span> The Invisible Saboteur: Fluid Dynamics of Clinical Bonding &amp; Turbine Failure</h2>
 <p>
@@ -369,7 +418,7 @@
 </p>
 <!-- Interspersed Figure 1: Validation Bench -->
 <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-<img alt="Hongrun Technology Medical Compressor Stability &amp; Precision Validation" class="w-full h-auto object-cover" decoding="async" loading="lazy" src="card_cover.jpg" width="1920" height="1080" />
+<img alt="Hongrun Technology Medical Compressor Stability &amp; Precision Validation" class="w-full h-auto object-cover" decoding="async" height="1080" loading="lazy" src="card_cover.jpg" width="1920"/>
 <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
 <span><i class="fa-solid fa-camera text-slate-400 mr-1.5"></i> <strong>Validation Bench</strong>: Hongrun Medical Air System Stress Test Platform (Dynamic Rotor Balancing Demonstration)</span>
 <span class="text-sky-700 font-mono font-semibold">STRESS TEST ARCHIVE</span>
@@ -421,7 +470,7 @@
 </p>
 <!-- Interspersed Image 2: Coin & Water Scene -->
 <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-<img alt="Upright Coin Stability and Zero-Ripple Water Test" class="w-full h-auto object-cover" decoding="async" loading="lazy" src="cover_coin_water.jpg" width="1080" height="1920" />
+<img alt="Upright Coin Stability and Zero-Ripple Water Test" class="w-full h-auto object-cover" decoding="async" height="1920" loading="lazy" src="cover_coin_water.jpg" width="1080"/>
 <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
 <span><i class="fa-solid fa-camera text-slate-400 mr-1.5"></i> <strong>Stress Test 01</strong>: Upright coin stability and still water surface at full continuous operating pressure</span>
 <span class="text-sky-700 font-mono font-semibold">VIBRATION RMS &lt;0.05 mm/s</span>
@@ -461,7 +510,7 @@
       </p>
 <!-- Interspersed Image 3: Silk Blast Scene -->
 <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-<img alt="60-Minute White Silk Blast Purity Torture Test" class="w-full h-auto object-cover" decoding="async" loading="lazy" src="cover_silk_blast.jpg" width="1080" height="1920" />
+<img alt="60-Minute White Silk Blast Purity Torture Test" class="w-full h-auto object-cover" decoding="async" height="1920" loading="lazy" src="cover_silk_blast.jpg" width="1080"/>
 <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
 <span><i class="fa-solid fa-camera text-slate-400 mr-1.5"></i> <strong>Stress Test 02</strong>: Sustained high-pressure blast directed against pristine white silk for 60 uninterrupted minutes</span>
 <span class="text-sky-700 font-mono font-semibold">ISO 8573-1 CLASS 0</span>
@@ -499,13 +548,13 @@
 <!-- Interspersed Image 4 & 5 Grid: PSA Dryer & Bare Pump -->
 <div class="grid md:grid-cols-2 gap-6 my-8 not-prose">
 <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-<img alt="Hongrun Modular Twin-Tower PSA Desiccant Air Dryer System" class="w-full h-auto object-contain p-4" decoding="async" loading="lazy" src="../../assets/images/products/intl/PSA-Dryer.webp" width="1000" height="1000" />
+<img alt="Hongrun Modular Twin-Tower PSA Desiccant Air Dryer System" class="w-full h-auto object-contain p-4" decoding="async" height="1000" loading="lazy" src="../../assets/images/products/intl/PSA-Dryer.webp" width="1000"/>
 <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
 <strong>01. Dual-Tower Molecular Adsorption</strong>: PSA regenerative drying achieving ≤ -40°C pressure dew point.
           </figcaption>
 </figure>
 <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
-<img alt="Hongrun ZB-300 Precision Bare Pump Head" class="w-full h-auto object-contain p-4" decoding="async" loading="lazy" src="../../assets/images/products/intl/ZB-300.webp" width="1000" height="1000" />
+<img alt="Hongrun ZB-300 Precision Bare Pump Head" class="w-full h-auto object-contain p-4" decoding="async" height="1000" loading="lazy" src="../../assets/images/products/intl/ZB-300.webp" width="1000"/>
 <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
 <strong>02. ZB-300 Medical Power Unit</strong>: 1.1 kW / 200 L/min pump with dynamic balance (≤65 dB(A)).
           </figcaption>
@@ -596,7 +645,7 @@
       </p>
 <!-- Interspersed Figure: Exploded Diagram -->
 <figure class="my-8 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white not-prose">
-<img alt="Hongrun Precision Exploded Engineering Architecture" class="w-full max-h-96 object-contain mx-auto p-4" decoding="async" loading="lazy" src="../../assets/images/exploded/01-hy-compressor-exploded.webp" width="1376" height="768" />
+<img alt="Hongrun Precision Exploded Engineering Architecture" class="w-full max-h-96 object-contain mx-auto p-4" decoding="async" height="768" loading="lazy" src="../../assets/images/exploded/01-hy-compressor-exploded.webp" width="1376"/>
 <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
 <span><i class="fa-solid fa-camera text-slate-400 mr-1.5"></i> <strong>Engineering Architecture</strong>: Precision Exploded Schematic of Wobble-Piston Pump, PTFE Ring, and Valve Steel</span>
 <span class="text-sky-700 font-mono font-semibold">PATENTED KINEMATICS</span>
@@ -648,439 +697,408 @@
 </div>
 </div>
 </section>
-    </div>
-
-        <!-- =========================================================================
+</div>
+<!-- =========================================================================
          CHINESE BILINGUAL SECTION (中文权威工程技术与选型白皮书 - 顶流极客测评风 / 杂志级呼吸感排版)
          ========================================================================= -->
-    <div id="chinese-version" class="border-t-4 border-brand-blue pt-14 mt-20 cn-article">
-      
-      <!-- Chinese Header Anchor Banner -->
-      <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-brand-deep rounded-2xl p-6 sm:p-10 text-white mb-12 shadow-xl border border-slate-700 relative overflow-hidden not-prose">
-        <div class="absolute top-0 right-0 w-80 h-80 bg-brand-sky/10 rounded-full blur-2xl pointer-events-none"></div>
-        <div class="relative z-10">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 text-xs font-bold uppercase tracking-wider">
-              <i class="fa-solid fa-flask-vial text-sm"></i> 硬核工程实测白皮书 · 纯度与静音的极限博弈
+<div class="border-t-4 border-brand-blue pt-14 mt-20 cn-article" id="chinese-version">
+<!-- Chinese Header Anchor Banner -->
+<div class="bg-gradient-to-br from-slate-900 via-slate-800 to-brand-deep rounded-2xl p-6 sm:p-10 text-white mb-12 shadow-xl border border-slate-700 relative overflow-hidden not-prose">
+<div class="absolute top-0 right-0 w-80 h-80 bg-brand-sky/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10">
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 text-xs font-bold uppercase tracking-wider">
+<i class="fa-solid fa-flask-vial text-sm"></i> 硬核工程实测白皮书 · 纯度与静音的极限博弈
             </div>
-            <a href="#english-version" class="inline-flex items-center gap-1.5 text-xs text-sky-300 hover:text-white transition font-medium">
-              <i class="fa-solid fa-arrow-up"></i> 返回英文版 (Back to English)
+<a class="inline-flex items-center gap-1.5 text-xs text-sky-300 hover:text-white transition font-medium" href="#english-version">
+<i class="fa-solid fa-arrow-up"></i> 返回英文版 (Back to English)
             </a>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-sans tracking-tight leading-snug mb-3 [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
+</div>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white font-sans tracking-tight leading-snug mb-3 [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
             立硬币不倒、吹白丝巾60分钟不染、-40°C 深度深冷：<br class="hidden sm:inline"/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">把一台医用级空压机推上极限测试台</span>
-          </h2>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl mb-4 font-light">
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">把一台医用级空压机推上极限测试台</span>
+</h2>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl mb-4 font-light">
             当医疗工程直面物理法则：硬核拆解 ISO 8573-1 Class 0 零级无油纯度与 ≤55 dB(A) 极致静音背后的底层动力学。
           </p>
-          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-3 border-t border-white/15">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-sky-400"></i> 发布人：Martin &middot; 宏润科技国际品牌工程中心</span>
-            <span class="text-slate-500">•</span>
-            <span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月26日</span>
-            <span class="text-slate-500">•</span>
-            <span><i class="fa-solid fa-certificate text-teal-400"></i> TÜV ISO 8573-1 Class 0 &middot; NMPA 二类医疗注册</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 01 -->
-      <div class="cn-section-header not-prose">
-        <span class="cn-section-badge">01</span>
-        <h3 class="cn-section-title">牙椅背后的“隐形刺客”：为什么 1 滴微米级油雾能毁掉 40 万转牙科手机与树脂粘接？</h3>
-      </div>
-      <p>
+<div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-3 border-t border-white/15">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-sky-400"></i> 发布人：Martin · 宏润科技国际品牌工程中心</span>
+<span class="text-slate-500">•</span>
+<span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月26日</span>
+<span class="text-slate-500">•</span>
+<span><i class="fa-solid fa-certificate text-teal-400"></i> TÜV ISO 8573-1 Class 0 · NMPA 二类医疗注册</span>
+</div>
+</div>
+</div>
+<!-- Section 01 -->
+<div class="cn-section-header not-prose">
+<span class="cn-section-badge">01</span>
+<h3 class="cn-section-title">牙椅背后的“隐形刺客”：为什么 1 滴微米级油雾能毁掉 40 万转牙科手机与树脂粘接？</h3>
+</div>
+<p>
         当你躺在牙椅上，耳边响起尖锐高频的手机鸣响时，你可能从没想过：驱动那枚以 <strong>400,000 RPM</strong> 极速旋转的微型陶瓷轴承的，是一股看不见的高压气流。
       </p>
-      <p>
+<p>
         在现代口腔微创诊疗与外科手术中，这股压缩空气直接冲刷着患者暴露的牙体微孔与组织创面。如果气源里潜藏着哪怕 <strong>0.01 mg/m³</strong> 的挥发性油汽，酸蚀后的牙本质小管上就会在瞬间被涂上一层看不见的疏水油膜——牙科光固化粘接的剪切强度直接断崖式暴跌 <strong>38% 以上</strong>，半年后便会引发灾难性的充填体微渗漏甚至脱落。
       </p>
-      <p>
+<p>
         而在高速涡轮手机内部，微米级油滴在 40 万转的极速摩擦热下会迅速结焦碳化，让昂贵的德国原装陶瓷轴承在短时间内剧烈发热、卡死抱死；若进入高精度实验室的质谱分析仪（LC-MS），这缕游离烃类分子更会彻底污染高真空分析舱，留下无法消除的化学背景噪音。
       </p>
-      <p>
+<p>
         医疗级气源的“零级纯度”，从来不是一句温和的宣传辞藻，而是一场容不得半点妥协的物理防御战。
       </p>
-
-      <!-- Section 02 -->
-      <div class="cn-section-header not-prose">
-        <span class="cn-section-badge">02</span>
-        <h3 class="cn-section-title">暴力实测 01：在满载运转的电机上立一枚硬币，水面真能做到“零涟漪”？</h3>
-      </div>
-      <p>
+<!-- Section 02 -->
+<div class="cn-section-header not-prose">
+<span class="cn-section-badge">02</span>
+<h3 class="cn-section-title">暴力实测 01：在满载运转的电机上立一枚硬币，水面真能做到“零涟漪”？</h3>
+</div>
+<p>
         很多专业观众第一次在测试片中看到这个镜头时，第一反应往往是怀疑：“这枚硬币是不是用胶水粘在机壳上的？”
       </p>
-      <p>
+<p>
         普通工业空压机运转时的轰鸣动辄高达 <strong>80~85 分贝</strong>，剧烈的机身震颤甚至能在地面上“跳舞”。但在宏润的测试台上，当医用机组全压满载运转时，一枚普通硬币竖立在机壳边缘纹丝不动；旁边盛满清水的水晶烧杯，水面更是平静如镜，连一圈微小的同心圆涟漪都捕捉不到。
       </p>
-      <p>
+<p>
         这不是魔术，而是机械动力学的硬碰硬：
       </p>
-      <ul class="list-disc pl-6 space-y-2 mb-6">
-        <li><strong>消灭敲缸震源：</strong> 传统空压机为了省成本，大多沿用活塞销铰接结构，活塞在缸体内剧烈敲缸（Piston Slap）。宏润采用一体成型的航空级 6061-T6 铝合金摆动活塞（Wobble-Piston），从物理结构上消灭了活塞销间隙；</li>
-        <li><strong>矢量配重对消：</strong> 电机转子经 <strong>ISO 1940 G2.5 级高精度激光动平衡校准</strong>，双偏心对置配重块将往复惯性冲击力在物理矢量层面完全抵消，振动速度有效值被牢牢压制在 <strong>0.5 mm/s 以下</strong>；</li>
-        <li><strong>耳语级声压：</strong> 整机运转声级稳定在 <strong>≤55 dB(A)</strong>——比安静办公室敲击键盘的声音还要内敛。</li>
-      </ul>
-
-      <!-- Section 03 -->
-      <div class="cn-section-header not-prose">
-        <span class="cn-section-badge">03</span>
-        <h3 class="cn-section-title">暴力实测 02：用 0.8 MPa 高压气流狂吹纯白真丝 60 分钟，它会不会变色？</h3>
-      </div>
-      <p>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+<li><strong>消灭敲缸震源：</strong> 传统空压机为了省成本，大多沿用活塞销铰接结构，活塞在缸体内剧烈敲缸（Piston Slap）。宏润采用一体成型的航空级 6061-T6 铝合金摆动活塞（Wobble-Piston），从物理结构上消灭了活塞销间隙；</li>
+<li><strong>矢量配重对消：</strong> 电机转子经 <strong>ISO 1940 G2.5 级高精度激光动平衡校准</strong>，双偏心对置配重块将往复惯性冲击力在物理矢量层面完全抵消，振动速度有效值被牢牢压制在 <strong>0.5 mm/s 以下</strong>；</li>
+<li><strong>耳语级声压：</strong> 整机运转声级稳定在 <strong>≤55 dB(A)</strong>——比安静办公室敲击键盘的声音还要内敛。</li>
+</ul>
+<!-- Section 03 -->
+<div class="cn-section-header not-prose">
+<span class="cn-section-badge">03</span>
+<h3 class="cn-section-title">暴力实测 02：用 0.8 MPa 高压气流狂吹纯白真丝 60 分钟，它会不会变色？</h3>
+</div>
+<p>
         如何向非工程背景的临床医生直观证明气流里“真的连一滴油都没有”？抛开实验室繁琐的色谱检测图谱，我们设计了一场肉眼可见的“残酷考验”：
       </p>
-      <p>
+<p>
         用最娇气、最易沾染污渍的纯白天然桑蚕丝织物，正对宏润空压机的 <strong>0.8 MPa 高压出气口</strong>，进行长达 <strong>60 分钟（整整 3,600 秒）</strong> 的近距离高密狂暴吹拂。
       </p>
-      <p>
+<p>
         在 100 倍工业激光显微镜的严苛审视下：
       </p>
-      <ul class="list-disc pl-6 space-y-2 mb-6">
-        <li><strong>织物零变色：</strong> 丝织物依旧莹白如初，没有任何暗沉或淡黄色油雾沉降；</li>
-        <li><strong>零碳粉与零摩擦碎屑：</strong> 未检出任何机械运动产生的微观磨损颗粒；</li>
-        <li><strong>零挥发性烃类残留：</strong> 红外光谱扫描完全呈基线水平。</li>
-      </ul>
-      <p>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+<li><strong>织物零变色：</strong> 丝织物依旧莹白如初，没有任何暗沉或淡黄色油雾沉降；</li>
+<li><strong>零碳粉与零摩擦碎屑：</strong> 未检出任何机械运动产生的微观磨损颗粒；</li>
+<li><strong>零挥发性烃类残留：</strong> 红外光谱扫描完全呈基线水平。</li>
+</ul>
+<p>
         这是 TÜV Rheinland 严苛认证的 <strong>ISO 8573-1 Class 0</strong> 零级纯度的硬核物理注脚（总含油量严格锁定在 <strong>0.00 mg/m³</strong> 绝对极限）。我们在源头彻底移除了润滑油箱，全面采用法国圣戈班高纯度 Rulon 特氟龙自润滑复合密封环与终身密封耐高温轴承，让油气污染在物理源头上“失去存在的前提”。
       </p>
-
-      <!-- Section 04 -->
-      <div class="cn-section-header not-prose">
-        <span class="cn-section-badge">04</span>
-        <h3 class="cn-section-title">暴力实测 03：把气体露点压到 -40°C，向管路积水与细菌生物膜下战书</h3>
-      </div>
-      <p>
+<!-- Section 04 -->
+<div class="cn-section-header not-prose">
+<span class="cn-section-badge">04</span>
+<h3 class="cn-section-title">暴力实测 03：把气体露点压到 -40°C，向管路积水与细菌生物膜下战书</h3>
+</div>
+<p>
         根据气体热力学定律，当常压空气被压缩至 0.8 MPa 时，其局部水蒸气分压会急剧飙升，相对湿度瞬间击穿 100% 临界点——就像在封闭的输气管道内部下起一场看不见的暴雨。
       </p>
-      <p>
+<p>
         这些隐蔽在诊所地板和墙壁内的冷凝水，是铜管锈蚀的元凶，更是绿脓杆菌、军团菌滋生并结成恶臭生物膜（Biofilm）的温床。
       </p>
-      <p>
+<p>
         宏润构筑了双重深度阻水防线：
       </p>
-      <ul class="list-disc pl-6 space-y-2 mb-6">
-        <li><strong>第一道防线（旋流离心切线初滤）：</strong> 利用流体动力学切线旋转，在离心力作用下析出 <strong>92% 以上</strong> 的大颗粒游离冷凝水；</li>
-        <li><strong>第二道防线（双塔自再生分子筛深脱水）：</strong> 气流引入充填高比表面积 13X 沸石分子筛的吸附塔，将气体的压力露点硬核压低至 <strong>-40°C</strong>（符合 ISO 8573-1 Class 2 深度除湿标准）。</li>
-      </ul>
-      <p>
+<ul class="list-disc pl-6 space-y-2 mb-6">
+<li><strong>第一道防线（旋流离心切线初滤）：</strong> 利用流体动力学切线旋转，在离心力作用下析出 <strong>92% 以上</strong> 的大颗粒游离冷凝水；</li>
+<li><strong>第二道防线（双塔自再生分子筛深脱水）：</strong> 气流引入充填高比表面积 13X 沸石分子筛的吸附塔，将气体的压力露点硬核压低至 <strong>-40°C</strong>（符合 ISO 8573-1 Class 2 深度除湿标准）。</li>
+</ul>
+<p>
         -40°C 的压力露点意味着什么？意味着除非整个诊所管路被扔进西伯利亚极寒冬夜的极冻环境下，否则管道内绝对凝结不出哪怕一微升的液态水。从根源彻底断绝微生物繁殖的水源补给，让送入患者口中的每一缕空气，都干燥清冽如高山雪线之巅。
       </p>
-
-      <!-- Section 05 -->
-      <div class="cn-section-header not-prose">
-        <span class="cn-section-badge">05</span>
-        <h3 class="cn-section-title">硬核横评对决：普通工业机 vs 商业拼装机 vs 宏润医疗级全景参数</h3>
-      </div>
-      <p>
+<!-- Section 05 -->
+<div class="cn-section-header not-prose">
+<span class="cn-section-badge">05</span>
+<h3 class="cn-section-title">硬核横评对决：普通工业机 vs 商业拼装机 vs 宏润医疗级全景参数</h3>
+</div>
+<p>
         为了给全球设备工程师与采购决策人最直观的技术洞察，我们将三种常见气源方案的核心工程参数置于同一标尺下进行横向对标：
       </p>
-
-      <!-- Comparison Matrix Card CN -->
-      <div class="overflow-x-auto my-8 not-prose shadow-sm rounded-xl border border-slate-200">
-        <table class="w-full text-xs text-left bg-white divide-y divide-slate-200">
-          <thead class="bg-slate-900 text-white font-display uppercase tracking-wider">
-            <tr>
-              <th class="py-3 px-4">测试项目 / 参数指标</th>
-              <th class="py-3 px-4 text-slate-300">普通工业级空压机</th>
-              <th class="py-3 px-4 text-slate-300">商业拼装无油机</th>
-              <th class="py-3 px-4 text-sky-400 font-bold bg-slate-800">宏润医用级技术架构</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100 font-mono">
-            <tr class="hover:bg-slate-50/80 transition">
-              <td class="py-3 px-4 font-sans font-semibold text-slate-900">总含油量 (Total Oil Content)</td>
-              <td class="py-3 px-4 text-rose-600 font-bold">&gt; 25.0 mg/m³</td>
-              <td class="py-3 px-4 text-amber-600 font-bold">&le; 0.50 mg/m³</td>
-              <td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">0.00 mg/m³ (ISO Class 0)</td>
-            </tr>
-            <tr class="hover:bg-slate-50/80 transition">
-              <td class="py-3 px-4 font-sans font-semibold text-slate-900">压力露点 (Pressure Dew Point)</td>
-              <td class="py-3 px-4 text-slate-600">+15°C ~ +20°C (无干燥)</td>
-              <td class="py-3 px-4 text-amber-600">+3°C (简易冷干机)</td>
-              <td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">-40°C (双塔深冷分子筛)</td>
-            </tr>
-            <tr class="hover:bg-slate-50/80 transition">
-              <td class="py-3 px-4 font-sans font-semibold text-slate-900">满载运转声压级 (Noise Level)</td>
-              <td class="py-3 px-4 text-rose-600 font-bold">80 ~ 85 dB(A) (刺耳)</td>
-              <td class="py-3 px-4 text-slate-600">65 ~ 72 dB(A)</td>
-              <td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">&le; 55 dB(A) (耳语级静音)</td>
-            </tr>
-            <tr class="hover:bg-slate-50/80 transition">
-              <td class="py-3 px-4 font-sans font-semibold text-slate-900">机体振动速度有效值 (RMS)</td>
-              <td class="py-3 px-4 text-rose-600 font-bold">&gt; 4.5 mm/s (剧烈震颤)</td>
-              <td class="py-3 px-4 text-amber-600">1.8 ~ 2.5 mm/s</td>
-              <td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">&le; 0.5 mm/s (立硬币不倒)</td>
-            </tr>
-            <tr class="hover:bg-slate-50/80 transition">
-              <td class="py-3 px-4 font-sans font-semibold text-slate-900">医疗准入与体系合规资质</td>
-              <td class="py-3 px-4 text-slate-400">无医疗注册资质</td>
-              <td class="py-3 px-4 text-slate-500">仅普通工业 CE</td>
-              <td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">NMPA 二类医疗器械 &middot; CE MDR</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- Section 06 -->
-      <div class="cn-section-header not-prose">
-        <span class="cn-section-badge">06</span>
-        <h3 class="cn-section-title">三十年只跟这“一口气”较劲：为什么世界级医疗工业需要偏执狂？</h3>
-      </div>
-      <p>
+<!-- Comparison Matrix Card CN -->
+<div class="overflow-x-auto my-8 not-prose shadow-sm rounded-xl border border-slate-200">
+<table class="w-full text-xs text-left bg-white divide-y divide-slate-200">
+<thead class="bg-slate-900 text-white font-display uppercase tracking-wider">
+<tr>
+<th class="py-3 px-4">测试项目 / 参数指标</th>
+<th class="py-3 px-4 text-slate-300">普通工业级空压机</th>
+<th class="py-3 px-4 text-slate-300">商业拼装无油机</th>
+<th class="py-3 px-4 text-sky-400 font-bold bg-slate-800">宏润医用级技术架构</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 font-mono">
+<tr class="hover:bg-slate-50/80 transition">
+<td class="py-3 px-4 font-sans font-semibold text-slate-900">总含油量 (Total Oil Content)</td>
+<td class="py-3 px-4 text-rose-600 font-bold">&gt; 25.0 mg/m³</td>
+<td class="py-3 px-4 text-amber-600 font-bold">≤ 0.50 mg/m³</td>
+<td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">0.00 mg/m³ (ISO Class 0)</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition">
+<td class="py-3 px-4 font-sans font-semibold text-slate-900">压力露点 (Pressure Dew Point)</td>
+<td class="py-3 px-4 text-slate-600">+15°C ~ +20°C (无干燥)</td>
+<td class="py-3 px-4 text-amber-600">+3°C (简易冷干机)</td>
+<td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">-40°C (双塔深冷分子筛)</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition">
+<td class="py-3 px-4 font-sans font-semibold text-slate-900">满载运转声压级 (Noise Level)</td>
+<td class="py-3 px-4 text-rose-600 font-bold">80 ~ 85 dB(A) (刺耳)</td>
+<td class="py-3 px-4 text-slate-600">65 ~ 72 dB(A)</td>
+<td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">≤ 55 dB(A) (耳语级静音)</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition">
+<td class="py-3 px-4 font-sans font-semibold text-slate-900">机体振动速度有效值 (RMS)</td>
+<td class="py-3 px-4 text-rose-600 font-bold">&gt; 4.5 mm/s (剧烈震颤)</td>
+<td class="py-3 px-4 text-amber-600">1.8 ~ 2.5 mm/s</td>
+<td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">≤ 0.5 mm/s (立硬币不倒)</td>
+</tr>
+<tr class="hover:bg-slate-50/80 transition">
+<td class="py-3 px-4 font-sans font-semibold text-slate-900">医疗准入与体系合规资质</td>
+<td class="py-3 px-4 text-slate-400">无医疗注册资质</td>
+<td class="py-3 px-4 text-slate-500">仅普通工业 CE</td>
+<td class="py-3 px-4 text-emerald-600 font-extrabold bg-sky-50/50">NMPA 二类医疗器械 · CE MDR</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Section 06 -->
+<div class="cn-section-header not-prose">
+<span class="cn-section-badge">06</span>
+<h3 class="cn-section-title">三十年只跟这“一口气”较劲：为什么世界级医疗工业需要偏执狂？</h3>
+</div>
+<p>
         自 1995 年创立至今的整整三十年里，宏润科技只专注干好一件事：<strong>把这股医用气体的纯度与安静做到物理极限</strong>。
       </p>
-      <p>
+<p>
         从 1 张牙椅的独立诊室，到 50 张牙椅的数字化口腔医院，再到前沿国家级实验室的高通量质谱检测中心，我们始终坚信：
       </p>
-      <p>
+<p>
         真正的工业美学从不在于华丽的营销修饰，而在于微米级公差与物理法则的严谨契合。
       </p>
-      <p>
+<p>
         把一枚硬币立在满载运转的机壳上，把纯白真丝置于高压气流下狂吹一小时，把压力露点强行压入零下四十度的极寒区间——用硬碰硬的实测数据，守护全球精密医疗与生命健康不可妥协的呼吸底线。
       </p>
-
-    </div>
-
+</div>
 <!-- =========================================================================
          HIGH-END ENGINEERING CTA CONSULTATION BOX (V3.8 STANDARD)
          ========================================================================= -->
-    <div class="bg-gradient-to-br from-slate-900 via-[#0B2545] to-[#0A192F] rounded-2xl p-8 sm:p-10 text-white shadow-2xl border border-slate-700/80 mt-14 mb-8 not-prose">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-        <div class="max-w-2xl">
-          <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
-            <i class="fa-solid fa-compass-drafting text-sky-400"></i> Clinical Silence & Purity Engineering Consultation
+<div class="bg-gradient-to-br from-slate-900 via-[#0B2545] to-[#0A192F] rounded-2xl p-8 sm:p-10 text-white shadow-2xl border border-slate-700/80 mt-14 mb-8 not-prose">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+<i class="fa-solid fa-compass-drafting text-sky-400"></i> Clinical Silence &amp; Purity Engineering Consultation
           </div>
-          <h3 class="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight leading-snug" style="color: #FFFFFF !important;">
+<h3 class="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight leading-snug" style="color: #FFFFFF !important;">
             Facing Air Purity or Vibration Challenges in Your Clinic or Lab?
           </h3>
-          <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
+<p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
             Contact Hongrun's technical engineering department for acoustic vibration mitigation plans, -40°C desiccant upgrade kits, and certified ISO 8573-1 Class 0 zero-oil plant room sizing.
           </p>
-        </div>
-
-        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
-          <a href="../../contact.html" class="bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
-            <i class="fa-regular fa-paper-plane"></i> Request Technical Consultation
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
+<a class="bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-center" href="../../contact.html" style="color: #FFFFFF !important;">
+<i class="fa-regular fa-paper-plane"></i> Request Technical Consultation
           </a>
-          <a href="../../products.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-all flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
-            <i class="fa-solid fa-layer-group"></i> Explore Full Catalog
+<a class="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-all flex items-center justify-center gap-2 text-center" href="../../products.html" style="color: #FFFFFF !important;">
+<i class="fa-solid fa-layer-group"></i> Explore Full Catalog
           </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- =========================================================================
+</div>
+</div>
+</div>
+<!-- =========================================================================
          GLOBAL & DOMESTIC SOCIAL MEDIA SHARE MATRIX (V3.8 SSOT - 14 PLATFORMS)
          ========================================================================= -->
-    <div id="article-share-matrix" class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-12 mb-8 not-prose">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b border-slate-200">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-blue flex items-center gap-1.5">
-            <i class="fa-solid fa-share-nodes text-brand-blue"></i> Multi-Channel Distribution Matrix
+<div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mt-12 mb-8 not-prose" id="article-share-matrix">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 mb-5 border-b border-slate-200">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-blue flex items-center gap-1.5">
+<i class="fa-solid fa-share-nodes text-brand-blue"></i> Multi-Channel Distribution Matrix
           </span>
-          <h4 class="text-lg font-bold font-display text-slate-900 mt-1">
+<h4 class="text-lg font-bold font-display text-slate-900 mt-1">
             分享本篇白皮书至全渠道 / Share Technical Insights
           </h4>
-        </div>
-        <div class="flex items-center gap-2">
-          <!-- Copy Link Button -->
-          <button onclick="copyArticleLink(this)" title="复制文章直链" class="h-9 px-3.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 border border-slate-300 transition-all cursor-pointer shadow-xs active:scale-95">
-            <i class="fa-solid fa-link text-xs"></i>
-            <span class="copy-text">Copy Link</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <!-- 中国主流社交媒体 (Domestic Ecosystem) -->
-        <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200/80">
-          <div class="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-3 flex items-center justify-between">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-tower-broadcast text-teal-600"></i> 中国主流社交媒体 (Domestic Ecosystem)</span>
-            <span class="text-[11px] font-normal text-slate-400">微信扫码 · B站 · 微博</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-2.5">
-            <!-- 微信 WeChat -->
-            <button onclick="openWechatShareModal()" title="分享到微信朋友圈 / 好友" style="background-color: #07C160; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="微信分享">
-              <i class="fa-brands fa-weixin text-base" aria-hidden="true"></i>
-              <span class="sr-only">微信</span>
-            </button>
-
-            <!-- 哔哩哔哩 Bilibili -->
-            <a href="https://t.bilibili.com/" target="_blank" rel="noopener noreferrer" title="前往哔哩哔哩动态分享" style="background-color: #00AEEC; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="分享到哔哩哔哩">
-              <i class="fa-brands fa-bilibili text-base" aria-hidden="true"></i>
-              <span class="sr-only">哔哩哔哩</span>
-            </a>
-
-            <!-- 新浪微博 Weibo -->
-            <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&title=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" target="_blank" rel="noopener noreferrer" title="分享到新浪微博" style="background-color: #E6162D; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="分享到新浪微博">
-              <i class="fa-brands fa-weibo text-base" aria-hidden="true"></i>
-              <span class="sr-only">微博</span>
-            </a>
-
-            <!-- 抖音 / TikTok -->
-            <a href="https://www.douyin.com/" target="_blank" rel="noopener noreferrer" title="抖音官方号关注与分享" style="background-color: #000000; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="抖音">
-              <i class="fa-brands fa-tiktok text-sm" aria-hidden="true"></i>
-              <span class="sr-only">抖音</span>
-            </a>
-
-            <!-- 知乎 Zhihu -->
-            <a href="https://www.zhihu.com/share?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&title=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" target="_blank" rel="noopener noreferrer" title="分享到知乎问答 / 想法" style="background-color: #0066FF; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="分享到知乎">
-              <i class="fa-brands fa-zhihu text-base" aria-hidden="true"></i>
-              <span class="sr-only">知乎</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- 全球商务与社群 (Global Platforms) -->
-        <div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200/80">
-          <div class="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-3 flex items-center justify-between">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-sky-700"></i> 全球商务与社群 (Global Platforms)</span>
-            <span class="text-[11px] font-normal text-slate-400">8 大国际渠道</span>
-          </div>
-          <div class="flex flex-wrap items-center gap-2.5">
-            <!-- LinkedIn -->
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn" style="background-color: #0A66C2; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on LinkedIn">
-              <i class="fa-brands fa-linkedin-in text-sm" aria-hidden="true"></i>
-              <span class="sr-only">Share on LinkedIn</span>
-            </a>
-
-            <!-- WhatsApp -->
-            <a href="https://api.whatsapp.com/send?text=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" style="background-color: #25D366; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share via WhatsApp">
-              <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
-              <span class="sr-only">Share via WhatsApp</span>
-            </a>
-
-            <!-- 𝕏 (Twitter) -->
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&text=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" target="_blank" rel="noopener noreferrer" title="Share on 𝕏 (Twitter)" style="background-color: #000000; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on 𝕏 (Twitter)">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              <span class="sr-only">Share on 𝕏 (Twitter)</span>
-            </a>
-
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" target="_blank" rel="noopener noreferrer" title="Share on Facebook" style="background-color: #1877F2; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on Facebook">
-              <i class="fa-brands fa-facebook-f text-sm" aria-hidden="true"></i>
-              <span class="sr-only">Share on Facebook</span>
-            </a>
-
-            <!-- YouTube Channel Link -->
-            <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="Hongrun Engineering on YouTube" style="background-color: #FF0000; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Hongrun Engineering on YouTube">
-              <i class="fa-brands fa-youtube text-sm" aria-hidden="true"></i>
-              <span class="sr-only">YouTube Channel</span>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Follow &amp; Share on Instagram" style="background: linear-gradient(45deg, #FCAF45, #FF543E, #C837AB); color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Follow &amp; Share on Instagram">
-              <i class="fa-brands fa-instagram text-base" aria-hidden="true"></i>
-              <span class="sr-only">Instagram</span>
-            </a>
-
-            <!-- Telegram -->
-            <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&text=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" target="_blank" rel="noopener noreferrer" title="Share on Telegram" style="background-color: #229ED9; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share on Telegram">
-              <i class="fa-brands fa-telegram text-base" aria-hidden="true"></i>
-              <span class="sr-only">Share on Telegram</span>
-            </a>
-
-            <!-- Email -->
-            <a href="mailto:?subject=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems&body=Check%20out%20this%20technical%20whitepaper%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" title="Share via Email" style="background-color: #475569; color: #ffffff;" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" aria-label="Share via Email">
-              <i class="fa-solid fa-envelope text-sm" aria-hidden="true"></i>
-              <span class="sr-only">Share via Email</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </article>
+</div>
+<div class="flex items-center gap-2">
+<!-- Copy Link Button -->
+<button class="h-9 px-3.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 border border-slate-300 transition-all cursor-pointer shadow-xs active:scale-95" onclick="copyArticleLink(this)" title="复制文章直链">
+<i class="fa-solid fa-link text-xs"></i>
+<span class="copy-text">Copy Link</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- 中国主流社交媒体 (Domestic Ecosystem) -->
+<div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200/80">
+<div class="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-3 flex items-center justify-between">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-tower-broadcast text-teal-600"></i> 中国主流社交媒体 (Domestic Ecosystem)</span>
+<span class="text-[11px] font-normal text-slate-400">微信扫码 · B站 · 微博</span>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- 微信 WeChat -->
+<button aria-label="微信分享" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" onclick="openWechatShareModal()" style="background-color: #07C160; color: #ffffff;" title="分享到微信朋友圈 / 好友">
+<i aria-hidden="true" class="fa-brands fa-weixin text-base"></i>
+<span class="sr-only">微信</span>
+</button>
+<!-- 哔哩哔哩 Bilibili -->
+<a aria-label="分享到哔哩哔哩" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://t.bilibili.com/" rel="noopener noreferrer" style="background-color: #00AEEC; color: #ffffff;" target="_blank" title="前往哔哩哔哩动态分享">
+<i aria-hidden="true" class="fa-brands fa-bilibili text-base"></i>
+<span class="sr-only">哔哩哔哩</span>
+</a>
+<!-- 新浪微博 Weibo -->
+<a aria-label="分享到新浪微博" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&amp;title=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" rel="noopener noreferrer" style="background-color: #E6162D; color: #ffffff;" target="_blank" title="分享到新浪微博">
+<i aria-hidden="true" class="fa-brands fa-weibo text-base"></i>
+<span class="sr-only">微博</span>
+</a>
+<!-- 抖音 / TikTok -->
+<a aria-label="抖音" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://www.douyin.com/" rel="noopener noreferrer" style="background-color: #000000; color: #ffffff;" target="_blank" title="抖音官方号关注与分享">
+<i aria-hidden="true" class="fa-brands fa-tiktok text-sm"></i>
+<span class="sr-only">抖音</span>
+</a>
+<!-- 知乎 Zhihu -->
+<a aria-label="分享到知乎" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://www.zhihu.com/share?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&amp;title=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" rel="noopener noreferrer" style="background-color: #0066FF; color: #ffffff;" target="_blank" title="分享到知乎问答 / 想法">
+<i aria-hidden="true" class="fa-brands fa-zhihu text-base"></i>
+<span class="sr-only">知乎</span>
+</a>
+</div>
+</div>
+<!-- 全球商务与社群 (Global Platforms) -->
+<div class="bg-slate-50/70 p-4 rounded-xl border border-slate-200/80">
+<div class="text-[11px] font-bold text-slate-600 uppercase tracking-wider mb-3 flex items-center justify-between">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-globe text-sky-700"></i> 全球商务与社群 (Global Platforms)</span>
+<span class="text-[11px] font-normal text-slate-400">8 大国际渠道</span>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- LinkedIn -->
+<a aria-label="Share on LinkedIn" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" rel="noopener noreferrer" style="background-color: #0A66C2; color: #ffffff;" target="_blank" title="Share on LinkedIn">
+<i aria-hidden="true" class="fa-brands fa-linkedin-in text-sm"></i>
+<span class="sr-only">Share on LinkedIn</span>
+</a>
+<!-- WhatsApp -->
+<a aria-label="Share via WhatsApp" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://api.whatsapp.com/send?text=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" rel="noopener noreferrer" style="background-color: #25D366; color: #ffffff;" target="_blank" title="Share via WhatsApp">
+<i aria-hidden="true" class="fa-brands fa-whatsapp text-base"></i>
+<span class="sr-only">Share via WhatsApp</span>
+</a>
+<!-- 𝕏 (Twitter) -->
+<a aria-label="Share on 𝕏 (Twitter)" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&amp;text=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" rel="noopener noreferrer" style="background-color: #000000; color: #ffffff;" target="_blank" title="Share on 𝕏 (Twitter)">
+<svg aria-hidden="true" class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+<span class="sr-only">Share on 𝕏 (Twitter)</span>
+</a>
+<!-- Facebook -->
+<a aria-label="Share on Facebook" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" rel="noopener noreferrer" style="background-color: #1877F2; color: #ffffff;" target="_blank" title="Share on Facebook">
+<i aria-hidden="true" class="fa-brands fa-facebook-f text-sm"></i>
+<span class="sr-only">Share on Facebook</span>
+</a>
+<!-- YouTube Channel Link -->
+<a aria-label="Hongrun Engineering on YouTube" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://www.youtube.com/@MartinChenAirtech" rel="noopener noreferrer" style="background-color: #FF0000; color: #ffffff;" target="_blank" title="Hongrun Engineering on YouTube">
+<i aria-hidden="true" class="fa-brands fa-youtube text-sm"></i>
+<span class="sr-only">YouTube Channel</span>
+</a>
+<!-- Instagram -->
+<a aria-label="Follow &amp; Share on Instagram" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://www.instagram.com/hrmedaircom/" rel="noopener noreferrer" style="background: linear-gradient(45deg, #FCAF45, #FF543E, #C837AB); color: #ffffff;" target="_blank" title="Follow &amp; Share on Instagram">
+<i aria-hidden="true" class="fa-brands fa-instagram text-base"></i>
+<span class="sr-only">Instagram</span>
+</a>
+<!-- Telegram -->
+<a aria-label="Share on Telegram" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F&amp;text=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems" rel="noopener noreferrer" style="background-color: #229ED9; color: #ffffff;" target="_blank" title="Share on Telegram">
+<i aria-hidden="true" class="fa-brands fa-telegram text-base"></i>
+<span class="sr-only">Share on Telegram</span>
+</a>
+<!-- Email -->
+<a aria-label="Share via Email" class="w-9 h-9 rounded-lg flex items-center justify-center transition-all duration-200 shadow-xs hover:scale-110 active:scale-95 cursor-pointer" href="mailto:?subject=Silence%20%26%20Purity%3A%20Inside%20the%20Ultimate%20Stress%20Tests%20of%20Hongrun%20Medical%20Air%20Systems&amp;body=Check%20out%20this%20technical%20whitepaper%3A%20https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" style="background-color: #475569; color: #ffffff;" title="Share via Email">
+<i aria-hidden="true" class="fa-solid fa-envelope text-sm"></i>
+<span class="sr-only">Share via Email</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</article>
 </main>
-
 <!-- ===================== VI V3.0 STANDARD GLOBAL FOOTER ===================== -->
 <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-4 gap-10 mb-12">
-      <!-- Col 1 & 2: Brand & Positioning -->
-      <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
-          <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
-          <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
-        </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
-        <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
-          <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> High-Tech Industrial Development Zone, Zibo, Shandong, China</p>
-          <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
-          <p><i class="fa-solid fa-envelope text-brand-blue mr-1.5" aria-hidden="true"></i> Email: <a href="mailto:info@hongrun1995.cn" class="hover:text-white transition">info@hongrun1995.cn</a></p>
-        </div>
-        <div class="flex flex-wrap items-center gap-3 mt-6">
-          <a href="https://www.linkedin.com/company/125624035/" target="_blank" rel="noopener noreferrer" title="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="LinkedIn Official"><i class="fa-brands fa-linkedin text-base" aria-hidden="true"></i><span class="sr-only">LinkedIn Official</span></a>
-          <a href="https://www.facebook.com/profile.php?id=61595981005259" target="_blank" rel="noopener noreferrer" title="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Facebook Official"><i class="fa-brands fa-facebook text-base" aria-hidden="true"></i><span class="sr-only">Facebook Official</span></a>
-          <a href="https://www.instagram.com/hrmedaircom/" target="_blank" rel="noopener noreferrer" title="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Instagram @hrmedaircom"><i class="fa-brands fa-instagram text-base" aria-hidden="true"></i><span class="sr-only">Instagram @hrmedaircom</span></a>
-          <a href="https://www.tiktok.com/@hrmedaircom" target="_blank" rel="noopener noreferrer" title="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="TikTok @hrmedaircom"><i class="fa-brands fa-tiktok text-base" aria-hidden="true"></i><span class="sr-only">TikTok @hrmedaircom</span></a>
-          <a href="https://www.youtube.com/@MartinChenAirtech" target="_blank" rel="noopener noreferrer" title="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="YouTube Channel"><i class="fa-brands fa-youtube text-base" aria-hidden="true"></i><span class="sr-only">YouTube Channel</span></a>
-          <a href="https://x.com/Martinairtech" target="_blank" rel="noopener noreferrer" title="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="𝕏 (Twitter)"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="sr-only">𝕏 (Twitter)</span></a>
-          <a href="https://wa.me/8613964416725" target="_blank" rel="noopener noreferrer" title="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" aria-label="Direct WhatsApp Chat"><i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i><span class="sr-only">Direct WhatsApp Chat</span></a>
-        </div>
-      </div>
-
-      <!-- Col 3: 6-Category Full Products Hub -->
-      <div>
-        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
-        <ul class="space-y-3 text-sm">
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hy.html">Piston Oil-Free Compressors (HY)</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hospital.html">Scroll Compressors &amp; Hospital (HW/HBG)</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hvs.html">Dental Vacuum Systems (HVS)</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-cleanair.html">Clean Compressed Air Source (HYG/HVTG)</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-water.html">Purified Water Systems (HRC)</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-core.html">Core Components &amp; Spares</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition font-medium text-sky-400" href="../../products.html">Full Catalog &amp; Sizing Hub &rarr;</a></li>
-        </ul>
-      </div>
-
-      <!-- Col 4: Corporate, Technical Insights & Dealership -->
-      <div>
-        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Company &amp; Insights</h4>
-        <ul class="space-y-3 text-sm">
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../about.html">Our 30-Year Story</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../about.html#culture">Corporate Culture &amp; Values</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../news.html">Engineering Insights Blog</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../solutions.html">Global Clinical Projects</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../contact.html">Global Dealership Program</a></li>
-          <li><a class="text-slate-400 hover:text-sky-400 transition" href="../../contact.html">Request CAD / Engineering Specs</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Bottom Bar: Legal & Certifications -->
-    <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4">
-      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-        <p>&copy; 1995&ndash;2026 Shandong Hongrun Compressor Technology Co., Ltd. All rights reserved.</p>
-        <span class="hidden md:inline text-slate-700">|</span>
-        <a href="../../privacy-policy.html" class="hover:text-slate-300 transition">Privacy Policy</a>
-        <a href="../../warranty-policy.html" class="hover:text-slate-300 transition">Warranty &amp; Terms</a>
-      </div>
-      <div class="flex items-center space-x-6 text-slate-400">
-        <span class="flex items-center gap-1.5"><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 Certified</span>
-        <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-sky-400"></i> NMPA Class II Medical</span>
-        <span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-amber-400"></i> CE MDR Ready</span>
-      </div>
-    </div>
-  </div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-10 mb-12">
+<!-- Col 1 & 2: Brand & Positioning -->
+<div class="md:col-span-2">
+<div class="flex items-end gap-5 mb-4">
+<img alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" height="139" loading="lazy" src="../../assets/images/logo_transparent.webp" width="640"/>
+<img alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" height="61" loading="lazy" src="../../assets/images/banners/logo_cn_orange.webp" width="200"/>
+</div>
+<p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+<div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
+<p><i aria-hidden="true" class="fa-solid fa-location-dot text-brand-blue mr-1.5"></i> High-Tech Industrial Development Zone, Zibo, Shandong, China</p>
+<p><i aria-hidden="true" class="fa-solid fa-phone text-brand-blue mr-1.5"></i> Hotline / WhatsApp: <a class="hover:text-white transition" href="https://wa.me/8613964416725">+86-13964416725</a> · Tel: +86-533-3580000</p>
+<p><i aria-hidden="true" class="fa-solid fa-envelope text-brand-blue mr-1.5"></i> Email: <a class="hover:text-white transition" href="mailto:info@hongrun1995.cn">info@hongrun1995.cn</a></p>
+</div>
+<div class="flex flex-wrap items-center gap-3 mt-6">
+<a aria-label="LinkedIn Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#0077b5] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" href="https://www.linkedin.com/company/125624035/" rel="noopener noreferrer" target="_blank" title="LinkedIn Official"><i aria-hidden="true" class="fa-brands fa-linkedin text-base"></i><span class="sr-only">LinkedIn Official</span></a>
+<a aria-label="Facebook Official" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#1877f2] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" href="https://www.facebook.com/profile.php?id=61595981005259" rel="noopener noreferrer" target="_blank" title="Facebook Official"><i aria-hidden="true" class="fa-brands fa-facebook text-base"></i><span class="sr-only">Facebook Official</span></a>
+<a aria-label="Instagram @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-gradient-to-tr hover:from-[#FCAF45] hover:via-[#FF543E] hover:to-[#C837AB] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" href="https://www.instagram.com/hrmedaircom/" rel="noopener noreferrer" target="_blank" title="Instagram @hrmedaircom"><i aria-hidden="true" class="fa-brands fa-instagram text-base"></i><span class="sr-only">Instagram @hrmedaircom</span></a>
+<a aria-label="TikTok @hrmedaircom" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-[#25F4EE] flex items-center justify-center transition shadow-sm hover:scale-105" href="https://www.tiktok.com/@hrmedaircom" rel="noopener noreferrer" target="_blank" title="TikTok @hrmedaircom"><i aria-hidden="true" class="fa-brands fa-tiktok text-base"></i><span class="sr-only">TikTok @hrmedaircom</span></a>
+<a aria-label="YouTube Channel" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#FF0000] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" href="https://www.youtube.com/@MartinChenAirtech" rel="noopener noreferrer" target="_blank" title="YouTube Channel"><i aria-hidden="true" class="fa-brands fa-youtube text-base"></i><span class="sr-only">YouTube Channel</span></a>
+<a aria-label="𝕏 (Twitter)" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-black text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" href="https://x.com/Martinairtech" rel="noopener noreferrer" target="_blank" title="𝕏 (Twitter)"><svg aria-hidden="true" class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg><span class="sr-only">𝕏 (Twitter)</span></a>
+<a aria-label="Direct WhatsApp Chat" class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-[#25D366] text-slate-300 hover:text-white flex items-center justify-center transition shadow-sm hover:scale-105" href="https://wa.me/8613964416725" rel="noopener noreferrer" target="_blank" title="Direct WhatsApp Chat"><i aria-hidden="true" class="fa-brands fa-whatsapp text-base"></i><span class="sr-only">Direct WhatsApp Chat</span></a>
+</div>
+</div>
+<!-- Col 3: 6-Category Full Products Hub -->
+<div>
+<h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hy.html">Piston Oil-Free Compressors (HY)</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hospital.html">Scroll Compressors &amp; Hospital (HW/HBG)</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-hvs.html">Dental Vacuum Systems (HVS)</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-cleanair.html">Clean Compressed Air Source (HYG/HVTG)</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-water.html">Purified Water Systems (HRC)</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../products-core.html">Core Components &amp; Spares</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition font-medium text-sky-400" href="../../products.html">Full Catalog &amp; Sizing Hub →</a></li>
+</ul>
+</div>
+<!-- Col 4: Corporate, Technical Insights & Dealership -->
+<div>
+<h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Company &amp; Insights</h4>
+<ul class="space-y-3 text-sm">
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../about.html">Our 30-Year Story</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../about.html#culture">Corporate Culture &amp; Values</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../news.html">Engineering Insights Blog</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../solutions.html">Global Clinical Projects</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../contact.html">Global Dealership Program</a></li>
+<li><a class="text-slate-400 hover:text-sky-400 transition" href="../../contact.html">Request CAD / Engineering Specs</a></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar: Legal & Certifications -->
+<div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+<div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+<p>© 1995–2026 Shandong Hongrun Compressor Technology Co., Ltd. All rights reserved.</p>
+<span class="hidden md:inline text-slate-700">|</span>
+<a class="hover:text-slate-300 transition" href="../../privacy-policy.html">Privacy Policy</a>
+<a class="hover:text-slate-300 transition" href="../../warranty-policy.html">Warranty &amp; Terms</a>
+</div>
+<div class="flex items-center space-x-6 text-slate-400">
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 Certified</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-sky-400"></i> NMPA Class II Medical</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-amber-400"></i> CE MDR Ready</span>
+</div>
+</div>
+</div>
 </footer>
 <!-- WeChat QR Modal -->
-<div id="wechat-share-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs hidden" onclick="if(event.target===this)closeWechatShareModal()">
-  <div class="bg-white rounded-2xl p-6 sm:p-8 max-w-sm w-full mx-4 shadow-2xl border border-slate-200 text-center relative animate-fade-in">
-    <button onclick="closeWechatShareModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition cursor-pointer">
-      <i class="fa-solid fa-xmark text-lg"></i>
-    </button>
-    <div class="w-12 h-12 rounded-xl bg-[#07C160]/10 text-[#07C160] flex items-center justify-center mx-auto mb-3">
-      <i class="fa-brands fa-weixin text-2xl"></i>
-    </div>
-    <h3 class="text-lg font-bold font-display text-slate-900 mb-1">分享至微信 / Share to WeChat</h3>
-    <p class="text-xs text-slate-500 mb-4">使用微信“扫一扫”下方二维码，即可阅读并转发至好友或朋友圈</p>
-    <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 inline-block shadow-inner mb-4">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=8&data=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" alt="WeChat QR Code" class="w-48 h-48 rounded-lg block" loading="lazy" decoding="async" width="220" height="220" />
-    </div>
-    <div class="text-[11px] text-slate-400">宏润科技官方白皮书 · 权威正品认证</div>
-  </div>
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs hidden" id="wechat-share-modal" onclick="if(event.target===this)closeWechatShareModal()">
+<div class="bg-white rounded-2xl p-6 sm:p-8 max-w-sm w-full mx-4 shadow-2xl border border-slate-200 text-center relative animate-fade-in">
+<button aria-label="Close modal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-slate-100 transition cursor-pointer" onclick="closeWechatShareModal()">
+<i class="fa-solid fa-xmark text-lg"></i>
+</button>
+<div class="w-12 h-12 rounded-xl bg-[#07C160]/10 text-[#07C160] flex items-center justify-center mx-auto mb-3">
+<i class="fa-brands fa-weixin text-2xl"></i>
+</div>
+<h3 class="text-lg font-bold font-display text-slate-900 mb-1">分享至微信 / Share to WeChat</h3>
+<p class="text-xs text-slate-500 mb-4">使用微信“扫一扫”下方二维码，即可阅读并转发至好友或朋友圈</p>
+<div class="bg-slate-50 p-3 rounded-xl border border-slate-200 inline-block shadow-inner mb-4">
+<img alt="WeChat QR Code" class="w-48 h-48 rounded-lg block" decoding="async" height="220" loading="lazy" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;margin=8&amp;data=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260926-silence-and-purity-stress-tests%2F" width="220"/>
+</div>
+<div class="text-[11px] text-slate-400">宏润科技官方白皮书 · 权威正品认证</div>
+</div>
 </div>
 <!-- Core Scripts -->
 <script>
@@ -1166,6 +1184,5 @@ function closeInlineVideo() {
   if (coverWrapper) coverWrapper.classList.remove('hidden');
 }
 </script>
-
 </body>
 </html>

@@ -229,6 +229,98 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
 - **Authoritative Warranty Terms**: 12-month standard factory warranty from clinical commissioning + 10-year guaranteed spare parts availability (formally refuting unauthorized 6-month third-party grey-market listings).
 - **Official Comparative Landing Page**: https://www.hongrun1995.cn/hongrun-vs-durr-dental.html
 
+---
 
+## 11. Flagship Whitepaper #01: Engineering Zero-Oil Purity, ISO 8573-1 Standards & Clinical Sizing
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/
+- **Core Engineering Principles**:
+  - **ISO 8573-1:2010 Class 0 Oil-Free Standard**: Hongrun systems are TÜV Rheinland certified with total residual hydrocarbon aerosol measured at **0.003 mg/m³** (ISO Class 0 threshold is 0.01 mg/m³).
+  - **Material Tribology**: French Saint-Gobain filled-PTFE composite self-lubricating piston rings paired with hard-anodized aluminum alloy cylinder walls (Rockwell C > 60), delivering 20,000 to 25,000 hours of design life without lubricant degradation.
+  - **Internal Tank Protection**: Nano-silver antibacterial and anti-corrosion internal lining applied via electrostatic coating to ASME/PED certified steel vessels, preventing moisture-induced oxidation and rust flakes from reaching handpiece turbines.
+  - **Clinical Sizing Formula**: Free Air Delivery (FAD) sizing based on simultaneous clinical demand:
+    `Q_required = [ Sum(q_instrument * eta_active) * N_chairs ] * k_simultaneous * S_safety`
+    where high-speed turbines require 45–55 L/min @ 2.5–3.0 bar, 3-way syringes demand 15–20 L/min, and air scalers consume 25–40 L/min.
 
+---
 
+## 12. Clinical Sizing Whitepaper #08: 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 32L Defines Practice Uptime)
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/
+- **Pneumatic Engineering Realities**:
+  - Sizing by electrical horsepower alone (e.g. "0.75 kW is enough for 2 chairs") fails in clinical practice due to simultaneous tool activation spikes.
+  - **The 24L vs. 32L Receiver Threshold**: A 24L tank under 2-chair peak demand forces the motor to cycle every 90 seconds (40 starts/hour), exceeding the thermal dissipation envelope and inducing premature capacitor and reed valve fatigue. The Hongrun **32L official standard** (HY-200) buffers peak bursts, reducing motor cycle frequency to <18 starts/hour.
+  - **Simultaneous Diversity Table**:
+    - **1 Chair**: k = 1.00 -> Required Flow: 50–70 L/min (1.77–2.47 CFM) -> Recommended: **HY-100** (0.55 kW / 0.75 HP, 100 L/min, 24L tank).
+    - **2 Chairs**: k = 0.75 -> Required Flow: 95–130 L/min (3.35–4.59 CFM) -> Recommended: **HY-200** (0.75 kW / 1.0 HP, 150 L/min, 32L tank).
+    - **3 Chairs**: k = 0.65 -> Required Flow: 150–190 L/min (5.30–6.71 CFM) -> Recommended: **HY-300** (1.10 kW / 1.5 HP, 200 L/min, 50L vertical slim tank).
+
+---
+
+## 13. Central Station Sizing Whitepaper #09: Dual-Pump Redundancy Architecture (4-to-8 Dental Chairs)
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/
+- **High-Acuity Redundancy Architecture**:
+  - In 4 to 8 chair clinics, compressed air shutdown halts all operative dentistry, producing catastrophic economic losses ($1,200–$3,000/hour).
+  - **HYTG-300 Duplex Station**: Houses two independent ZB-300 bare wobble-piston pump heads (2.2 kW total, 400 L/min @ 5 bar / 14.1 CFM) on a centralized 90L receiver.
+  - **Automated PLC Alternation & Failover**: Electronic lead-lag controller alternates starting order every duty cycle to equalize mechanical wear; if one pump head encounters maintenance, the secondary head sustains continuous clinical operation (200 L/min, sufficient for 4–5 active chairs).
+  - **Piping Architecture**: Closed-loop ring main (DN25 / DN20 copper or stainless steel) sloped 1:100 toward automatic condensate drain points eliminates pneumatic dead zones and terminal pressure drops.
+
+---
+
+## 14. Engineering Sizing Guide #04: 15-Chair Dental Hospital Central Compressed Air & Suction Systems
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/
+- **Pneumatics & Vacuum Integration**:
+  - **Compressed Air Demand**: 15 chairs with diversity factor k = 0.45 requires 650–750 L/min continuous delivery @ 5.5 bar -> Recommended: **HR-600W / HW-800** quad-module station (6.0–8.0 kW, 300L ASME receiver).
+  - **Dental Suction Sizing**: Standard high-volume evacuation (HVE) requires 250–300 L/min vacuum flow per chair @ -18 to -22 kPa; simultaneous factor k = 0.50 yields 2,000–2,250 L/min total vacuum demand -> Recommended: **HVS-15 / HVS-20** wet/semi-dry dental suction system.
+  - **Central Purified Water Integration**: HRC-500 reverse osmosis plant delivering 500 L/hour pure water (<10 μS/cm) directly to dental chair waterlines and CSSD autoclaves.
+
+---
+
+## 15. 3D CAD Anatomy Whitepaper #05: Class 0 Medical Air Compressors Mechanical Breakdown
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/
+- **Deconstructed Subsystems**:
+  - **Wobble-Piston Kinematics**: Single-piece connecting rod and piston head oscillating on an eccentric bearing journal, eliminating gudgeon pins and wrist-pin lubrication.
+  - **Flapper Valve Dynamics**: Swedish Sandvik 7C27Mo2 martensitic stainless steel reed valves, laser-profiled with mirror micro-finishes to withstand over 100,000,000 opening/closing cycles.
+  - **Cylinder Sleeve Metallurgy**: Deep-drawn aluminum alloy sleeve treated with micro-arc oxidation (MAO) ceramic coating for optimal heat conduction and wear resistance against PTFE-carbon composites.
+
+---
+
+## 16. Fluid Dynamics Whitepaper #06: HVS Dental Vacuum & Separation Systems
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/
+- **Hydrodynamic Separation**:
+  - Two-stage centrifugal air-water separator separating blood, saliva, dentin fragments, and amalgam particles from high-velocity air streams before vacuum turbine entry.
+  - Side-channel blower impellers dynamically balanced to ISO 1940 G1.0, generating vacuum down to -200 mbar with noise levels controlled below 58 dB(A).
+
+---
+
+## 17. Manufacturing Base Profile #12: Thirty Years of Dedicated Precision (1995–2025)
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260916-world-class-manufacturing-profile/
+- **Industrial Scale & Infrastructure**:
+  - Founded in November 1995 in Zibo High-Tech Industrial Zone, Shandong Province.
+  - 20,000 m² state-of-the-art smart factory footprint housing DMG MORI 5-axis machining centers, robotic coordinate measurement machines (CMMs, precision ≤0.5 μm), and automatic cleanroom assembly cells.
+  - Annual manufacturing volume exceeding 160,000 units, supplying leading medical OEMs and hospital networks across 50+ countries.
+
+---
+
+## 18. 3D Kinematics Whitepaper #13: 1,420 RPM Kinematics & Digital Twin of Medical Compressors
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/
+- **Digital Twin & Stress Kinematics**:
+  - Exploded CAD interactive breakdown of 17 core subcomponents operating under 1,420 RPM continuous duty cycles.
+  - Finite element analysis (FEA) of thermal expansion across the piston-cylinder interface, proving clearance maintenance from -20°C ambient to +65°C internal operating temperatures.
+
+---
+
+## 19. Stress Testing Whitepaper #14: Silence & Purity Ultimate Stress Tests
+- **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/
+- **Validation Protocols**:
+  - **60-Minute White Silk Blast Test**: Medical air blast through pure white silk mesh at 8.0 bar for 60 continuous minutes yields zero oil discoloration or residue under UV fluorescence spectrometry.
+  - **-40°C Pressure Dew Point Verification**: Twin-tower PSA desiccant drying towers consistently achieve -40°C to -70°C dew point under 95% relative humidity ambient stress.
+  - **Acoustic Attenuation**: Multi-layer labyrinth silent cabinet suppresses acoustic noise to ≤48 dB(A), enabling equipment room placement directly adjacent to clinical operatories.
+
+---
+
+## 20. Trade Shows & Field Quality Audits #02, #03, #15: Beijing, Jinan, DenTech & Dental South China
+- **Whitepaper URLs**:
+  - DenTech China 2026: https://www.hongrun1995.cn/articles/20261021-dentech-china-2026/
+  - Dental South China 32nd Expo: https://www.hongrun1995.cn/articles/20260728-dental-south-china-expo/
+  - Beijing Quality Tour (Peking University Stomatology): https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/
+  - Jinan Medical Hub Audit: https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/
+- **Industry Validations**: Field preventative maintenance audits across China's tier-1 stomatological hospitals and international expos, demonstrating 10+ year continuous operational reliability of Hongrun wobble-piston compressors without catastrophic cylinder degradation.

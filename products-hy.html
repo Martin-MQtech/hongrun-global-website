@@ -203,9 +203,7 @@
   ]
 }
 </script>
-  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
-  <script src="/assets/js/webmcp-tools.js" defer></script>
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
@@ -229,6 +227,9 @@
   <script src="/assets/js/mobile-nav.js" defer></script>
   <script src="/assets/js/cookie-consent.js" defer></script>
 
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 
@@ -318,6 +319,7 @@
 
 
 <!-- ===================== PAGE HERO (V3.0 LOCKED) ===================== -->
+<main id="main-content">
 <section class="relative pt-20 overflow-hidden bg-slate-900">
   <div class="relative h-[380px] lg:h-[440px]">
     <!-- Background: sharp banner image, NO fog overlay -->
@@ -789,6 +791,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ===================== VI V3.0 STANDARD GLOBAL FOOTER ===================== -->
 <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">

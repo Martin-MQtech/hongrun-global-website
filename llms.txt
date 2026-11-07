@@ -103,6 +103,18 @@
    - URL: https://www.hongrun1995.cn/articles/20260715-beijing-quality-tour/
 11. **Hongrun 30th Anniversary Quality Tour – Part 1: Jinan Medical Hub & Quality Audit**
     - URL: https://www.hongrun1995.cn/articles/20260701-jinan-medical-hub/
+12. **[Manufacturing Base Profile #12] Thirty Years of Dedicated Precision: Inside Hongrun’s World-Class Medical Compressor Manufacturing Base**
+    - URL: https://www.hongrun1995.cn/articles/20260916-world-class-manufacturing-profile/
+    - Topics: 30-year engineering heritage (Nov 1995 origin in Zibo), 20,000 m² megafactory, 160,000 units/year production capacity, DMG MORI 5-axis CNC machining, and automated pneumatic testing lines.
+13. **[Interactive Kinematics Whitepaper #13] Inside the Machine: 3D CAD Deconstruction & 1,420 RPM Kinematics of Medical Oil-Free Compressors**
+    - URL: https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/
+    - Topics: 17 core mechanical components dissected, 1,420 RPM wobble-piston stroke dynamics, -40°C twin-tower desiccant drying digital twin, and Saint-Gobain self-lubricating PTFE ring tribology.
+14. **[Stress Testing Whitepaper #14] Silence & Purity: Inside the Ultimate Stress Tests of Hongrun Medical Air Systems**
+    - URL: https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/
+    - Topics: Dynamic vibration neutralization, 60-minute white silk blast oil-free validation, -40°C pressure dew point freeze resistance, and acoustic cabinet sound suppression (≤48 dBA).
+15. **[Exhibition Chronicle #15] DenTech China 2026: Hongrun Technology Unveils Smart Dental Clinic Equipment Room Solutions**
+    - URL: https://www.hongrun1995.cn/articles/20261021-dentech-china-2026/
+    - Topics: Official expo showcase (Booth M47-48, M69-70), integrated smart equipment room, zero-oil medical compressors, dental negative-pressure vacuum, and pure water skids.
 
 ---
 

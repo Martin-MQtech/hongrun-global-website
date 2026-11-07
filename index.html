@@ -90,9 +90,7 @@
   .stat-cell:hover { background: #0EA5E9; }
   .stat-cell:hover div { color: #ffffff !important; }
 </style>
-  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
-  <script src="/assets/js/webmcp-tools.js" defer></script>
   <!-- W3C Speculation Rules (Instant Zero-Latency Prerendering) -->
   <script type="speculationrules">
   {
@@ -118,6 +116,9 @@
   <script src="/assets/js/mobile-nav.js" defer></script>
   <script src="/assets/js/cookie-consent.js" defer></script>
 
+  <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
+  <script src="/assets/js/webmcp-tools.js" defer></script>
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
 <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-blue focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none">Skip to main content</a>
@@ -207,6 +208,7 @@
 </div>
 
 <!-- ===================== HERO: 3-BANNER CAROUSEL ===================== -->
+<main id="main-content">
 <section class="relative pt-20 overflow-hidden bg-slate-900">
   <div class="relative h-[320px] sm:h-[380px] lg:h-[440px]">
     <!-- Slide 1 -->
@@ -459,6 +461,7 @@
     <p class="text-slate-400 text-base font-medium">Trusted by 190+ research institutes, hospitals and universities across China</p>
   </div>
 </section>
+</main>
 
 <!-- ===================== VI V3.0 STANDARD GLOBAL FOOTER ===================== -->
 <footer class="bg-slate-900 text-slate-300 pt-16 pb-8 border-t border-slate-800">
