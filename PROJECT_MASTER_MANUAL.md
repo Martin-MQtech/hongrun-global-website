@@ -533,10 +533,10 @@ Hongrun Complete Clean Air & Suction Ecosystem
 - 处理：把高清内容归档到 `assets/images/products/intl/HYTG-300.jpg` 与 `thumbs/HYTG-300.jpg`，删除错误的 `HYT-300.jpg` 文件，更新两页引用（products-hy.html + products.html，共 intl×2 + thumbs×2）。
 - ⚠️ **不要改用 999×800 的那张低清小图**——它是旧小图，清晰度与 Lightbox 效果都差。用户最终拍板用高清图。
 
-**C. HY-200 储气罐容量：32 L（公司最新安排，38L 为历史数据）**
-- 公司最新官方产品规格确认 HY-200：220V / 0.75kW / ZB200 / 0.8MPa / 150 L/min / 储气罐 **32L** / 1450 rpm / ≤65 dB。
-- 站内 `products-hy.html` 卡片与规格表已全部按最新标准更新为 **32 L**。
-- **后续任何 Agent 若再遇到 HY-200 储气罐容量问题，一律以 32L 最新标准为准。**
+**C. HY-200 储气罐容量校准：38 L（以官方印刷画册 page_12 为准，支持按需定制）**
+- 2026-11-10 用户最新拍板确认：统一按照官方印刷画册数据安排，HY-200 储气罐官方标准容量统一锁定为 **38 L**，并标明支持按需定制（如 24L 紧凑罐或 32L 卧式罐等 OEM/定制需求）。
+- 站内 `products-hy.html` 卡片、规格表、llms.txt、llms-full.txt、白皮书已全部按 2026-11-10 最新标准统一更新为 **38 L**。
+- **后续任何 Agent 若再遇到 HY-200 储气罐容量问题，一律以 38L（印刷画册定版，可定制）为准。**
 
 **D. HY 页 meta 修正（去掉误导性描述）**
 - `<meta name="description">` 原文含 "Swedish spring plates … ≤60 dB … ISO 8573-1 Class 0"，其中"瑞典弹簧片、≤60dB"与 HY 活塞机实际不符（详见产品方反馈）。
@@ -835,7 +835,8 @@ Hongrun Complete Clean Air & Suction Ecosystem
 
 | 时间戳 | 事项 / 用户指令 | 官方决策结论与系统落地 |
 | :--- | :--- | :--- |
-| **2026-09-02 14:00** | HY-200 储气罐容积标准确认 | 用户正式指令：“HY-200 从38L改32L，这是公司最近刚做的安排，38是历史数据，按照32L更新。” **全站产品页与白皮书参数统一锁定为 32L**。 |
+| **2026-11-10 15:30** | 全站商务数据一致性与审计全面校准 (SEO/GEO/AEO v1.0 闭环) | 1. **HY-200 储气罐**：以官方印刷画册 page_12 为最高基准统一锁定为 **38L (Customizable)**，全站 15 个文件 83 处彻底同步；<br>2. **HVS 抽吸功率**：HVS-2 统一为 1.3 kW，HVS-7 统一为 2.5 kW，与印刷画册严格一致；<br>3. **TÜV 认证事实边界**：明确核心涡旋机头供应商（浙江高领）获德国莱茵 TÜV ISO 8573-1:2010 Class 0（AK 50442317 0001 / Report 50272409 001），杜绝以宏润整机名义虚标，消除伪造报告号；<br>4. **CE MDR 统一术语**：全站统一使用 `EU MDR (2017/745) Voluntary Verification of Conformity (VoC)` 严谨合规表述；<br>5. **气溶胶抑制出处**：≥85% 气溶胶抑制率全量补充学术文献引用（Koch & Graetz 2021 高流量抽吸 ≥300 L/min 实测结论）；<br>6. **语言支持真实化**：统一纠偏为 `English (with bilingual English/Chinese technical articles)`，停止宣称未上线的俄/西/阿语种；<br>7. **社媒 Coming Soon 彻底清除**：contact.html 移除所有 Coming Soon 文字与未上线社媒占位，统一保留无链接的极简 LinkedIn 图标，保护专业质感；<br>8. **个人 OEM 页面去权重**：oem-*.html 5 个代表页面添加 `noindex, follow` 并移出 sitemap.xml，保留名片直达但不分散站内权重与引发 doorway 风险；<br>9. **首页幻灯片净化**：Slide 1 / Slide 3 替换为 1920×672 无内置文字的干净现代智造产业园与装配实景图（contact_hero_megafactory.webp / contact_hero_assembly.webp）；<br>10. **注册地址全量规范化**：全站 22 个 HTML 统一升级为 `National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China`。 |
+| **2026-09-02 14:00** | HY-200 储气罐容积标准确认 | （历史记录：曾一度调整为 32L，已于 2026-11-10 依据最新印刷画册重新校准锁定为 38L 可定制）。 |
 | **2026-09-02 14:30** | 旗舰白皮书 #01 发布 | 编制并发布《零油纯度工程架构与选型全指南》（`blog-dental-air-purity-engineering-guide.html`），采用中英双语（英文在前，中文在后），集成 1~50 台牙椅选型公式与真实产品配图。 |
 | **2026-09-02 14:45** | 移除冗余打印/下载按钮 | 用户指令：“还有个什么print和save那个没有必要。” **彻底移除白皮书顶部与导航栏中的 Download PDF / Print 按钮**，聚焦纯粹网页阅读。 |
 | **2026-09-02 14:50** | 严禁使用营销线稿草图 | 用户指令：“这些Sketch更多是用来宣传和营销的，不够严谨，不要使用，改用真实产品配图。” **彻底移除手绘线稿，替换为 ZB-300 真实机头与 PSA-Dryer 实物白底照片**。 |

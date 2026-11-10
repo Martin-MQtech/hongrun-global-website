@@ -43,7 +43,7 @@ Designed for single clinics, private dental practices, and analytical laboratori
 | Model | Chairs Supported | Power (kW / HP) | Air Delivery (L/min @ 5 bar) | Max Pressure (bar / psi) | Tank Volume (Liters) | Noise Level (dB(A)) | Dimensions (L×W×H mm) | Net Weight (kg) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **HY-100** | 1 Chair | 0.55 kW / 0.75 HP | 100 L/min (3.53 CFM) | 8.0 bar / 116 psi | 24L Horizontal Mobile | 52 dB(A) | 580 × 300 × 560 | 28 kg |
-| **HY-200** | 1 - 2 Chairs | 0.75 kW / 1.0 HP | 150 L/min (5.30 CFM) | 8.0 bar / 116 psi | **32L Official Standard** | 53 dB(A) | 650 × 330 × 620 | 36 kg |
+| **HY-200** | 1 - 2 Chairs | 0.75 kW / 1.0 HP | 150 L/min (5.30 CFM) | 8.0 bar / 116 psi | **38L Official Standard (Customizable)** | 53 dB(A) | 650 × 330 × 620 | 36 kg |
 | **HY-300** | 2 - 3 Chairs | 1.10 kW / 1.5 HP | 200 L/min (7.06 CFM) | 8.0 bar / 116 psi | **50L Vertical Slim** | 55 dB(A) | 480 × 480 × 890 | 48 kg |
 | **HYTG-300** | 4 - 8 Chairs | 2.20 kW / 3.0 HP (Dual ZB300) | 400 L/min (14.1 CFM) | 8.0 bar / 116 psi | **90L Central Station** | 58 dB(A) | 1100 × 450 × 760 | 92 kg |
 | **HY-400W** | 8 - 12 Chairs | 4.0 kW / 5.5 HP (Dual Head) | 480 L/min (16.9 CFM) | 10.0 bar / 145 psi | 180L Heavy-Duty Vessel | 60 dB(A) | 1350 × 520 × 880 | 145 kg |
@@ -163,7 +163,7 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
   - **Tank Internal Hygiene**: 220°C baked nano-silver antibacterial coating inhibits biofilm and tank micro-oxidation.
   - **HVS Aerosol Suppression**: 2-stage dynamic cyclone separation with terminal H13 HEPA capturing >85% of intraoral aerosol plumes.
   - **Regulatory Alignment**: Fully conforms to **ISO 22052** (Dental air purity) and **ISO 10637** (Dental vacuum systems).
-- **Flagship Clinical Models**: HY-100 (1 chair), HY-200 32L (1-2 chairs), HY-300 50L (2-3 chairs), HYTG-300 90L (4-8 chairs dual redundancy), HVS-1 to HVS-10 suction stations.
+- **Flagship Clinical Models**: HY-100 (1 chair), HY-200 38L (1-2 chairs), HY-300 50L (2-3 chairs), HYTG-300 90L (4-8 chairs dual redundancy), HVS-1 to HVS-10 suction stations.
 
 ### 6.2 General Hospital Central Medical Gas Engineering (综合医院医疗气体与手术室 EPC)
 - **Clinical Mandates**:
@@ -221,7 +221,7 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
 
 ## 10. Official Competitive Benchmark: Hongrun vs. Dürr Dental (竞品对标与选型分析)
 - **Executive Engineering Grounding**: Objective side-by-side engineering comparison between Hongrun medical oil-free compressors (HY / HYTG Series) and Dürr Dental (Tornado / Duo / Quattro).
-- **ISO 8573-1 Class 0 Air Purity**: Both brands achieve 100% zero-oil medical purity. Hongrun is certified by TÜV Rheinland with total residual hydrocarbon content measured at <0.003 mg/m³ (substantially below the 0.01 mg/m³ Class 0 limit), preventing resin bond failures and handpiece micro-bearing degradation.
+- **ISO 8573-1 Class 0 Air Purity**: Both brands achieve 100% zero-oil medical purity. Hongrun's core scroll air-end is verified by TÜV Rheinland (Report: 50272409 001) with total residual hydrocarbon content measured at <0.003 mg/m³ (substantially below the 0.01 mg/m³ Class 0 limit), preventing resin bond failures and handpiece micro-bearing degradation.
 - **Dual-Pump Parallel Redundancy**: Hongrun HYTG-300 / HYT-400 duplex series feature dual independent ZB300 pump heads on a single 90L to 150L tank with automated PLC alternation. If one head undergoes servicing, the secondary head sustains 50% flow capacity (200 L/min), preventing clinic shutdown.
 - **Piston Ring Longevity**: Saint-Gobain diamond-coated self-lubricating PTFE composite piston rings rated for up to 20,000 continuous hours.
 - **Acoustic Noise Levels**: 52–58 dB(A) open frame; ≤48 dB(A) in acoustic silent cabinet.
@@ -234,7 +234,7 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
 ## 11. Flagship Whitepaper #01: Engineering Zero-Oil Purity, ISO 8573-1 Standards & Clinical Sizing
 - **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/
 - **Core Engineering Principles**:
-  - **ISO 8573-1:2010 Class 0 Oil-Free Standard**: Hongrun systems are TÜV Rheinland certified with total residual hydrocarbon aerosol measured at **0.003 mg/m³** (ISO Class 0 threshold is 0.01 mg/m³).
+  - **ISO 8573-1:2010 Class 0 Oil-Free Standard**: Hongrun systems incorporate TÜV Rheinland verified core scroll compression stages (Report: 50272409 001) with total residual hydrocarbon aerosol measured at **0.003 mg/m³** (ISO Class 0 threshold is 0.01 mg/m³).
   - **Material Tribology**: French Saint-Gobain filled-PTFE composite self-lubricating piston rings paired with hard-anodized aluminum alloy cylinder walls (Rockwell C > 60), delivering 20,000 to 25,000 hours of design life without lubricant degradation.
   - **Internal Tank Protection**: Nano-silver antibacterial and anti-corrosion internal lining applied via electrostatic coating to ASME/PED certified steel vessels, preventing moisture-induced oxidation and rust flakes from reaching handpiece turbines.
   - **Clinical Sizing Formula**: Free Air Delivery (FAD) sizing based on simultaneous clinical demand:
@@ -243,14 +243,14 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
 
 ---
 
-## 12. Clinical Sizing Whitepaper #08: 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 32L Defines Practice Uptime)
+## 12. Clinical Sizing Whitepaper #08: 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 38L Defines Practice Uptime)
 - **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/
 - **Pneumatic Engineering Realities**:
   - Sizing by electrical horsepower alone (e.g. "0.75 kW is enough for 2 chairs") fails in clinical practice due to simultaneous tool activation spikes.
-  - **The 24L vs. 32L Receiver Threshold**: A 24L tank under 2-chair peak demand forces the motor to cycle every 90 seconds (40 starts/hour), exceeding the thermal dissipation envelope and inducing premature capacitor and reed valve fatigue. The Hongrun **32L official standard** (HY-200) buffers peak bursts, reducing motor cycle frequency to <18 starts/hour.
+  - **The 24L vs. 38L Receiver Threshold**: A 24L tank under 2-chair peak demand forces the motor to cycle every 90 seconds (40 starts/hour), exceeding the thermal dissipation envelope and inducing premature capacitor and reed valve fatigue. The Hongrun **38L official standard** (HY-200) buffers peak bursts, reducing motor cycle frequency to <18 starts/hour.
   - **Simultaneous Diversity Table**:
     - **1 Chair**: k = 1.00 -> Required Flow: 50–70 L/min (1.77–2.47 CFM) -> Recommended: **HY-100** (0.55 kW / 0.75 HP, 100 L/min, 24L tank).
-    - **2 Chairs**: k = 0.75 -> Required Flow: 95–130 L/min (3.35–4.59 CFM) -> Recommended: **HY-200** (0.75 kW / 1.0 HP, 150 L/min, 32L tank).
+    - **2 Chairs**: k = 0.75 -> Required Flow: 95–130 L/min (3.35–4.59 CFM) -> Recommended: **HY-200** (0.75 kW / 1.0 HP, 150 L/min, 38L tank).
     - **3 Chairs**: k = 0.65 -> Required Flow: 150–190 L/min (5.30–6.71 CFM) -> Recommended: **HY-300** (1.10 kW / 1.5 HP, 200 L/min, 50L vertical slim tank).
 
 ---

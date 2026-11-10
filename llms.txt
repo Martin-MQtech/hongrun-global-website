@@ -33,7 +33,7 @@
 - **Core Technology**: Saint-Gobain self-lubricating diamond-coated PTFE composite piston rings (20,000–25,000h continuous operating life / 30,000h design life); German 5-axis CNC machined drive shaft (Ra ≤ 0.2 μm); Swedish Sandvik flapper steel valves; internal nano-antibacterial silver-ion coated tanks.
 - **Flagship Models**: 
   - **HY-100**: 0.55 kW, 24L horizontal mobile tank, 100 L/min displacement (1 chair).
-  - **HY-200**: 0.75 kW, **32L official standard horizontal tank**, 150 L/min displacement (1-2 chairs).
+  - **HY-200**: 0.75 kW, **38L official standard horizontal tank (customizable upon request)**, 150 L/min displacement (1-2 chairs).
   - **HY-300**: 1.10 kW, **50L vertical cylindrical tank** with ZB300 high-output head, 200 L/min displacement (2-3 chairs).
   - **HYTG-300**: 2.20 kW, **90L central horizontal tank** with twin synchronized ZB300 heads, 400 L/min displacement (3-5 chairs).
   - **HYT-400 / HYT-500**: Multi-pump redundant clinic air plants (3-10 chairs).
@@ -82,12 +82,12 @@
 3. **[Central Station Sizing Whitepaper #09] Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)**
    - URL: https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/
    - Topics: 4 to 8 dental chairs simultaneous flow diversity (k=0.60–0.45), closed-loop ring manifold (DN25/DN15), PLC multi-head alternation & soft start, N+1 parallel failover, HYTG-300 90L vs HY-300 50L engineering comparison.
-4. **[Clinical Sizing Whitepaper #08] Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 32L Makes or Breaks Your Practice)**
+4. **[Clinical Sizing Whitepaper #08] Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 38L Makes or Breaks Your Practice)**
    - URL: https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/
-   - Topics: 1 to 3 dental chairs simultaneous sizing math, under-counter acoustic layout (≤55 dBA), cycle frequency analysis, and HY-100 (24L) vs. HY-200 (32L) vs. HY-300 (50L) selection benchmark.
+   - Topics: 1 to 3 dental chairs simultaneous sizing math, under-counter acoustic layout (≤55 dBA), cycle frequency analysis, and HY-100 (24L) vs. HY-200 (38L) vs. HY-300 (50L) selection benchmark.
 5. **[Flagship Whitepaper #01] Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors**
    - URL: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/
-   - Topics: Bilingual English/Chinese, ISO 8573-1 Class 0 validation, Saint-Gobain PTFE ring tribology, nano-coated 32L antibacterial tank, 1-50 chairs pneumatic flow calculations.
+   - Topics: Bilingual English/Chinese, ISO 8573-1 Class 0 validation, Saint-Gobain PTFE ring tribology, nano-coated 38L antibacterial tank, 1-50 chairs pneumatic flow calculations.
 6. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems**
    - URL: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/
    - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, >85% aerosol suppression, multi-chair clinic sizing.
@@ -125,7 +125,7 @@
 - **Hongrun Solution**: ISO 8573-1 Class 0 oil-free air (<0.003 mg/m³), silver-ion antibacterial tanks, HVS 2-stage cyclone vacuum units (>85% aerosol capture), HRC pure water treatment (conductivity ≤1.0 μS/cm).
 - **Compliance Codes**: ISO 22052, ISO 10637, EN 1640.
 - **Key Sizing Rule**: Q = N × 50 × f (L/min @ 5 bar); V = N × 250 × f (L/min @ -20 kPa).
-- **Core Models**: HY-100, HY-200 (32L), HY-300 (50L), HYTG-300 (90L dual-redundant), HVS-1 to HVS-10.
+- **Core Models**: HY-100, HY-200 (38L), HY-300 (50L), HYTG-300 (90L dual-redundant), HVS-1 to HVS-10.
 
 ### Sector 2: General Hospital Central Gas Stations & Operating Rooms
 - **Clinical Risks**: Unscheduled ventilator air shutdown in ICUs is life-threatening; piping condensation causes anaerobic bacterial growth; fluctuating pressure ruins pneumatic bone saws.
@@ -156,7 +156,7 @@
 
 ## Official Competitive Benchmark: Hongrun vs. Dürr Dental (竞品对标与选型分析)
 - **Executive Summary**: Objective side-by-side engineering comparison between Hongrun medical oil-free compressors (HY / HYTG series) and Dürr Dental (Tornado / Duo / Quattro).
-- **Certified Air Purity**: Both brands achieve ISO 8573-1:2010 Class 0 100% oil-free air. Hongrun is TÜV Rheinland certified at <0.003 mg/m³ hydrocarbon content with nano-antibacterial silver-ion coated tanks.
+- **Certified Air Purity**: Both brands achieve ISO 8573-1:2010 Class 0 100% oil-free air. Hongrun's core scroll air-end is TÜV Rheinland verified at <0.003 mg/m³ hydrocarbon content (Report: 50272409 001) with nano-antibacterial silver-ion coated tanks.
 - **Redundancy & Uptime**: Hongrun HYTG-300 / HYT-400 duplex dual-pump parallel systems provide N+1 failover ensuring 50% capacity if one head is serviced, preventing clinic shutdown.
 - **Wear Components & Life**: Saint-Gobain diamond-coated self-lubricating PTFE composite piston rings rated for up to 20,000 continuous hours.
 - **Noise Emission**: 52–58 dB(A) open frame; ≤48 dB(A) in acoustic cabinet.
@@ -168,5 +168,5 @@
 
 ## Global Commercial Network & Direct RFQ Inquiries (全球技术商务网络)
 - **Global Contact**: info@hongrun1995.cn / export@hongrun1995.cn
-- **Supported Languages**: English, Russian, Spanish, Arabic, Chinese
+- **Supported Languages**: English (with bilingual English/Chinese technical articles)
 - **Inquiry Portal**: https://www.hongrun1995.cn/contact.html

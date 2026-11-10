@@ -251,8 +251,9 @@
       {
         standard: "ISO 8573-1:2010 Class 0",
         category: "Air Purity",
-        certifiedBy: "TÜV Rheinland",
-        certificateNo: "TUV-TR-8573-HR1995-001",
+        certifiedBy: "TÜV Rheinland LGA Products GmbH",
+        certificateNo: "AK 50442317 0001 (Report 50272409 001)",
+        scope: "Oil-free scroll air-end component verification (Supplier: Zhejiang Gaoling New Energy Technology Co., Ltd.)",
         measuredOilContent: "0.003 mg/m³ (Well below the 0.01 mg/m³ Class 0 threshold)",
         particleClass: "Class 1 (Solid particles <= 0.1 - 0.5 μm <= 20,000 / m³)",
         humidityClass: "Class 2 (Pressure dew point -40°C)",
@@ -269,22 +270,24 @@
       },
       {
         standard: "ISO 9001:2015",
-        category: "Quality Management System (Medical Equipment Manufacturing Scope)",
-        certifiedBy: "Beijing Guojian Lianxin Certification Center / CNAS",
-        scope: "Production of medical oil-free air compressors and medical dental electric suction units.",
-        certificateNo: "0121Q11075R3M"
+        category: "Quality Management System",
+        certifiedBy: "Shandong Guojian Certification Inspection Co., Ltd. (CNAS C169-M)",
+        scope: "Design, development, production, and sales of medical oil-free air compressors and medical dental electric suction units.",
+        certificateNo: "174Q240351R1M",
+        validUntil: "2027-07-17"
       },
       {
-        standard: "CE MDR (EU 2017/745)",
+        standard: "EU MDR (2017/745) Voluntary Verification of Conformity (VoC)",
         category: "European Medical Device Conformity",
-        notifiedBody: "ICR Polska (CE 2703)",
-        classification: "Medical Air Compressors & Dental Suction Units (EN 60601-1, EN ISO 10079-1)",
-        certificateNo: "2403251296ER / 2403251295ER"
+        notifiedBody: "ICR Polska Sp. z o.o.",
+        classification: "Medical Oil-Free Air Compressors & Dental Suction Units (EN 60601-1, EN ISO 10079-1)",
+        certificateNo: "ICR/VC/HTT260619/A1 (Compressors) & ICR/VC/HTT251108 (Suction Units)",
+        validUntil: "2031-06-28 / 2030-11-13"
       },
       {
         standard: "NMPA Class II Medical Device Registration (China)",
         category: "National Regulatory Approval",
-        registrationNo: "Lu-Shi-Yao-Jian-Xie-Zhun-20182560199",
+        registrationNo: "鲁械注准 20182560199",
         status: "Fully licensed for Class II medical device clinical supply"
       }
     ]
@@ -401,11 +404,11 @@
       let redundancyAdvice = "";
 
       if (n <= 3) {
-        compressorModel = "HY-200 (32L) or HY-300 (50L)";
-        recommendedCompressor = "HY-200 (0.75kW, 150 L/min, 32L tank) or HY-300 (1.1kW, 200 L/min, 50L slim tank) with Saint-Gobain diamond-coated PTFE rings";
+        compressorModel = "HY-200 (38L) or HY-300 (50L)";
+        recommendedCompressor = "HY-200 (0.75kW, 150 L/min, 38L tank) or HY-300 (1.1kW, 200 L/min, 50L slim tank) with Saint-Gobain diamond-coated PTFE rings";
         suctionModel = "HVS-1 or HVS-2";
-        recommendedSuction = "HVS-1 / HVS-2 Single-Surgery Dynamic Vacuum Unit (0.75kW, 600 L/min, >85% intraoral aerosol capture)";
-        redundancyAdvice = "Single-unit configuration with 32L/50L antibacterial vessel is optimal for 1-3 chair practices.";
+        recommendedSuction = "HVS-1 / HVS-2 Single-Surgery Dynamic Vacuum Unit (0.75–1.3kW, 600 L/min, >85% intraoral aerosol capture)";
+        redundancyAdvice = "Single-unit configuration with 38L/50L antibacterial vessel is optimal for 1-3 chair practices.";
       } else if (n <= 8) {
         compressorModel = "HYTG-300 (90L Dual-Pump Redundant)";
         recommendedCompressor = "HYTG-300 Twin Synchronized ZB300 Heads (2.2kW, 400 L/min @ 5 bar, 90L tank). Dual-pump parallel architecture ensures zero clinical downtime.";
@@ -416,7 +419,7 @@
         compressorModel = "HBG-800 or HBG-1200";
         recommendedCompressor = "HBG-800 Dual 4V Medical Air Station (6.0kW, 1000 L/min) or HBG-1200 Triple 4V Station (9.0kW, 1500 L/min) with twin-tower desiccant -40°C dew point";
         suctionModel = "HVS-7 or HVS-10";
-        recommendedSuction = "HVS-7 / HVS-10 Central Vacuum Station (2.2–3.0kW, 2500 L/min)";
+        recommendedSuction = "HVS-7 / HVS-10 Central Vacuum Station (2.5–3.3kW, 2500 L/min)";
         redundancyAdvice = "N+1 Dual Group System Redundancy mandated by ISO 7396-1 / HTM 02-01 hospital standards.";
       } else {
         compressorModel = "HW Series Multi-Scroll Hospital Central Gas Station (HW-220 to HW-3600)";
@@ -512,7 +515,7 @@
           ],
           solutionArchitecture: "Turnkey Trio: ISO 8573-1 Class 0 oil-free air + HVS 2-stage cyclone vacuum + HRC purified water loop",
           recommendedEquipment: [
-            { model: "HY-200 (32L)", application: "1-2 Chairs Boutique Practice", url: "https://www.hongrun1995.cn/products-hy.html" },
+            { model: "HY-200 (38L)", application: "1-2 Chairs Boutique Practice", url: "https://www.hongrun1995.cn/products-hy.html" },
             { model: "HYTG-300 (90L)", application: "4-8 Chairs Dual-Pump Redundancy", url: "https://www.hongrun1995.cn/products-hy.html" },
             { model: "HVS-5 / HVS-10", application: "Dental Vacuum Fluid Separation", url: "https://www.hongrun1995.cn/products-hvs.html" },
             { model: "HRC-100S", application: "Dental Pure Water Treatment", url: "https://www.hongrun1995.cn/products-water.html" }
