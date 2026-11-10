@@ -10,10 +10,65 @@
     style.textContent = `
       #mobile-drawer.hidden { display: none !important; }
       #mobile-drawer:not(.hidden) { display: block !important; }
-      #mobile-drawer { z-index: 100 !important; }
+      #mobile-drawer { z-index: 9995 !important; }
       #mobile-drawer-panel { width: 85% !important; max-width: 24rem; overflow-y: auto; }
       #mobile-drawer-panel.translate-x-full { transform: translateX(100%) !important; }
       #mobile-drawer-panel.translate-x-0 { transform: translateX(0) !important; }
+      @media (min-width: 768px) { #mobile-menu-btn { display: none !important; } }
+      #floating-whatsapp-btn {
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+        z-index: 9980 !important;
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 9999px !important;
+        background-color: #25D366 !important;
+        color: #ffffff !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 12px 28px rgba(37, 211, 102, 0.35) !important;
+        transition: transform 0.25s ease, background-color 0.25s ease;
+      }
+      @media (min-width: 640px) {
+        #floating-whatsapp-btn { bottom: 24px !important; right: 24px !important; }
+      }
+      #floating-whatsapp-btn:hover {
+        background-color: #20ba59 !important;
+        transform: scale(1.08);
+      }
+      #floating-whatsapp-btn .hr-wa-ping-wrap {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 14px;
+        height: 14px;
+        display: flex;
+      }
+      #floating-whatsapp-btn .hr-wa-ping-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 9999px;
+        background-color: #6ee7b7;
+      }
+      #floating-whatsapp-btn .hr-wa-tooltip {
+        display: none;
+        position: absolute;
+        right: 68px;
+        background-color: #0f172a;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 8px;
+        white-space: nowrap;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        pointer-events: none;
+      }
+      @media (min-width: 768px) {
+        #floating-whatsapp-btn:hover .hr-wa-tooltip { display: block; }
+      }
     `;
     document.head.appendChild(style);
   }
@@ -25,7 +80,7 @@
     <div>
       <div class="p-4 flex items-center justify-between border-b border-slate-200 bg-slate-100">
         <a href="/" class="flex items-center gap-2">
-          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" class="h-10 w-auto object-contain">
+          <img src="/assets/images/logo_transparent.webp" alt="Hongrun Technology" width="640" height="139" loading="lazy" class="h-10 w-auto object-contain">
         </a>
         <button id="mobile-drawer-close" type="button" class="p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-200 rounded-lg transition" aria-label="Close Mobile Menu">
           <i class="fa-solid fa-xmark text-xl"></i>
@@ -175,15 +230,15 @@
     btn.target = "_blank";
     btn.rel = "noopener noreferrer";
     btn.setAttribute("aria-label", "Direct WhatsApp Chat with Hongrun Application Engineers (+86 13964416725)");
-    btn.className = "fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 w-14 h-14 bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full flex items-center justify-center shadow-2xl transition duration-300 transform hover:scale-110 group";
+    btn.className = "fixed z-40 rounded-full flex items-center justify-center text-white";
     btn.innerHTML = `
-      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+      <span class="hr-wa-ping-wrap">
         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-200"></span>
+        <span class="hr-wa-ping-dot relative inline-flex"></span>
       </span>
       <i class="fa-brands fa-whatsapp text-3xl"></i>
       <span class="sr-only">Direct WhatsApp Chat</span>
-      <span class="hidden group-hover:md:block absolute right-16 bg-slate-900 text-white text-xs font-semibold px-3 py-1.5 rounded-lg whitespace-nowrap shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+      <span class="hr-wa-tooltip">
         Chat with Engineering &middot; +86-13964416725
       </span>
     `;
