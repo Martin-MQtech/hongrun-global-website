@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 <meta name="robots" content="index, follow"/>
 <title>Nourishing Life Worldwide: Hongrun Compressor Technology Unveils 2026 Global Brand Film | Hongrun Technology</title>
 <meta name="description" content="Built on Integrity. Driven by Precision. Watch Hongrun's 2026 bilingual flagship corporate film — available in Chinese and English editions — chronicling 30 years of zero-oil medical pneumatic purity, Class II qualification, and TÜV Class 0 certification."/>
@@ -304,8 +307,8 @@
                   <div class="w-16 h-16 rounded-full bg-white/95 text-[#0F4C81] flex items-center justify-center shadow-2xl shadow-blue-900/50 group-hover:scale-110 group-hover:bg-white transition duration-300 pointer-events-auto">
                     <i class="fa-solid fa-play text-xl translate-x-0.5 text-[#0F4C81]"></i>
                   </div>
-                  <span class="mt-3 text-xs font-semibold text-white/90 bg-black/60 backdrop-blur px-3 py-1 rounded-full border border-white/20 tracking-wide">
-                    Click to Play
+                  <span class="mt-3 text-xs font-semibold text-white/90 bg-black/60 backdrop-blur px-3 py-1 rounded-full border border-white/20 tracking-wide flex items-center gap-1.5">
+                    <i class="fa-solid fa-bolt text-amber-400"></i> 点击原画秒播 (免登录)
                   </span>
                 </div>
                 <!-- Bottom Title Tag inside Screen -->
@@ -328,8 +331,13 @@
             <div class="w-24 h-1 bg-slate-700 rounded-full mx-auto mt-2"></div>
           </div>
 
+          <!-- Direct Play Status Pill -->
+          <div class="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 mt-3 flex items-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-circle-check text-emerald-500"></i> <span>官网直连已就绪 · 100%免登录秒开</span>
+          </div>
+
           <!-- Film Edition Toggle (CN / EN) below mockup -->
-          <div class="flex items-center gap-2 mt-4 w-full justify-center bg-slate-900 rounded-xl p-1 border border-slate-800" style="max-width: 320px;">
+          <div class="flex items-center gap-2 mt-2.5 w-full justify-center bg-slate-900 rounded-xl p-1 border border-slate-800" style="max-width: 320px;">
             <button class="film-tab-btn active flex-1 justify-center" id="film-tab-cn" onclick="switchFilm('cn')">
               🇨🇳 <span>中文版</span> <span class="text-[10px] opacity-70">(2:36)</span>
             </button>
@@ -339,13 +347,18 @@
           </div>
 
           <!-- Dual External Jump Buttons -->
-          <div class="flex items-center gap-2 mt-3 w-full justify-center" style="max-width: 320px;">
-            <a class="flex-1 py-1.5 px-2 bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition" href="https://www.youtube.com/watch?v=QbbMy52RKHs" id="ext-yt-link" rel="noopener noreferrer" target="_blank">
-              <i class="fa-brands fa-youtube text-red-600"></i> YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </a>
-            <a class="flex-1 py-1.5 px-2 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition" href="https://www.bilibili.com/video/BV1R5W26QEfr/" id="ext-bili-link" rel="noopener noreferrer" target="_blank">
-              <i class="fa-brands fa-bilibili text-sky-600"></i> Bilibili <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-            </a>
+          <div class="w-full text-center mt-3" style="max-width: 320px;">
+            <div class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider mb-1.5">
+              公域平台互动跳转 (可选)：
+            </div>
+            <div class="flex items-center gap-2">
+              <a class="flex-1 py-1.5 px-2 bg-red-50 hover:bg-red-100 text-red-700 border border-red-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition" href="https://www.youtube.com/watch?v=QbbMy52RKHs" id="ext-yt-link" rel="noopener noreferrer" target="_blank">
+                <i class="fa-brands fa-youtube text-red-600"></i> <span>YouTube</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+              <a class="flex-1 py-1.5 px-2 bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5 transition" href="https://www.bilibili.com/video/BV1R5W26QEfr/" id="ext-bili-link" rel="noopener noreferrer" target="_blank">
+                <i class="fa-brands fa-bilibili text-sky-600"></i> <span>哔哩哔哩</span> <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -1018,14 +1031,14 @@ var filmData = {
     biliBvid: 'BV1R5W26QEfr',
     poster: '/articles/20261111-brand-film-2026/cover_cn.jpg',
     label: '宏润科技 2026 官方旗舰宣传片 · 中文发音版 (2:36)',
-    src: '/articles/20261111-brand-film-2026/film_zh_web.mp4'
+    src: '/articles/20261111-brand-film-2026/film_zh_web.mp4?v=20261112v2'
   },
   en: {
     ytId: 'q5KjvZ47Ww0',
     biliBvid: 'BV1MaW263ENG',
     poster: '/articles/20261111-brand-film-2026/cover_en.jpg',
     label: 'Hongrun Technology 2026 Corporate Film · English Edition (2:03)',
-    src: '/articles/20261111-brand-film-2026/film_en_web.mp4'
+    src: '/articles/20261111-brand-film-2026/film_en_web.mp4?v=20261112v2'
   }
 };
 
