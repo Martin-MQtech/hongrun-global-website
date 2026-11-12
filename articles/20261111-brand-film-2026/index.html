@@ -261,13 +261,16 @@
             Watch: Chinese &amp; English Editions — Full Cinematic Vertical Film
           </h2>
         </div>
-        <!-- Platform Switcher: YouTube / Bilibili -->
+        <!-- Platform Switcher: Direct / YouTube / Bilibili -->
         <div class="flex items-center gap-1 bg-slate-900 p-1 rounded-xl shadow-inner border border-slate-800">
-          <button class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer" id="switch-btn-yt" onclick="selectPlatform('yt')">
+          <button class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer" id="switch-btn-direct" onclick="selectPlatform('direct')">
+            <i class="fa-solid fa-bolt text-amber-400"></i> <span>官网直连 (免登秒播)</span>
+          </button>
+          <button class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer" id="switch-btn-yt" onclick="selectPlatform('yt')">
             <i class="fa-brands fa-youtube text-red-400"></i> <span>YouTube</span>
           </button>
           <button class="px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer" id="switch-btn-bili" onclick="selectPlatform('bili')">
-            <i class="fa-brands fa-bilibili text-sky-400"></i> <span>哔哩哔哩 (国内直连)</span>
+            <i class="fa-brands fa-bilibili text-sky-400"></i> <span>哔哩哔哩</span>
           </button>
         </div>
       </div>
@@ -1007,34 +1010,37 @@ function closeWechatShareModal() {
 }
 
 var currentFilm = 'cn';
-var currentPlatform = 'yt';
+var currentPlatform = 'direct';
 
 var filmData = {
   cn: {
     ytId: 'QbbMy52RKHs',
     biliBvid: 'BV1R5W26QEfr',
     poster: '/articles/20261111-brand-film-2026/cover_cn.jpg',
-    label: '宏润科技 2026 官方旗舰宣传片 · 中文发音版 (2:36)'
+    label: '宏润科技 2026 官方旗舰宣传片 · 中文发音版 (2:36)',
+    src: '/articles/20261111-brand-film-2026/film_zh_web.mp4'
   },
   en: {
     ytId: 'q5KjvZ47Ww0',
     biliBvid: 'BV1MaW263ENG',
     poster: '/articles/20261111-brand-film-2026/cover_en.jpg',
-    label: 'Hongrun Technology 2026 Corporate Film · English Edition (2:03)'
+    label: 'Hongrun Technology 2026 Corporate Film · English Edition (2:03)',
+    src: '/articles/20261111-brand-film-2026/film_en_web.mp4'
   }
 };
 
 function selectPlatform(platform) {
   currentPlatform = platform;
+  var btnDirect = document.getElementById('switch-btn-direct');
   var btnYt = document.getElementById('switch-btn-yt');
   var btnBili = document.getElementById('switch-btn-bili');
-  if (platform === 'yt') {
-    if (btnYt) btnYt.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer';
-    if (btnBili) btnBili.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer';
-  } else {
-    if (btnBili) btnBili.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer';
-    if (btnYt) btnYt.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer';
-  }
+
+  var activeClass = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 bg-brand-blue text-white shadow cursor-pointer';
+  var inactiveClass = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition flex items-center gap-1.5 text-slate-400 hover:text-white cursor-pointer';
+
+  if (btnDirect) btnDirect.className = (platform === 'direct') ? activeClass : inactiveClass;
+  if (btnYt) btnYt.className = (platform === 'yt') ? activeClass : inactiveClass;
+  if (btnBili) btnBili.className = (platform === 'bili') ? activeClass : inactiveClass;
 
   var playerWrapper = document.getElementById('inline-player-wrapper');
   if (playerWrapper && !playerWrapper.classList.contains('hidden')) {
@@ -1078,14 +1084,22 @@ function startInlineVideo() {
   if (!playerWrapper || !iframeContainer) return;
 
   var data = filmData[currentFilm];
-  var embedSrc = '';
-  if (currentPlatform === 'yt') {
-    embedSrc = 'https://www.youtube.com/embed/' + data.ytId + '?autoplay=1&rel=0&playsinline=1';
-  } else {
-    embedSrc = 'https://player.bilibili.com/player.html?bvid=' + data.biliBvid + '&page=1&high_quality=1&danmaku=0&autoplay=1';
-  }
 
-  iframeContainer.innerHTML = '<iframe class="w-full h-full rounded-[2rem]" src="' + embedSrc + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen scrolling="no"></iframe>';
+  if (currentPlatform === 'direct') {
+    iframeContainer.innerHTML = '<video id="native-brand-video" class="w-full h-full object-cover rounded-[2rem]" controls playsinline autoplay preload="auto" poster="' + data.poster + '"><source src="' + data.src + '" type="video/mp4">您的浏览器不支持视频播放。</video>';
+    var v = document.getElementById('native-brand-video');
+    if (v) {
+      v.play().catch(function(e) {
+        console.log('Autoplay prevented by browser:', e);
+      });
+    }
+  } else if (currentPlatform === 'yt') {
+    var embedSrc = 'https://www.youtube.com/embed/' + data.ytId + '?autoplay=1&rel=0&playsinline=1';
+    iframeContainer.innerHTML = '<iframe class="w-full h-full rounded-[2rem]" src="' + embedSrc + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen scrolling="no"></iframe>';
+  } else if (currentPlatform === 'bili') {
+    var embedSrc = 'https://player.bilibili.com/player.html?bvid=' + data.biliBvid + '&page=1&high_quality=1&danmaku=0&autoplay=1';
+    iframeContainer.innerHTML = '<iframe class="w-full h-full rounded-[2rem]" referrerpolicy="no-referrer" src="' + embedSrc + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen scrolling="no"></iframe>';
+  }
 
   if (coverWrapper) coverWrapper.classList.add('hidden');
   playerWrapper.classList.remove('hidden');
@@ -1095,7 +1109,13 @@ function closeInlineVideo() {
   var coverWrapper = document.getElementById('poster-cover-wrapper');
   var playerWrapper = document.getElementById('inline-player-wrapper');
   var iframeContainer = document.getElementById('inline-iframe-slot');
-  if (iframeContainer) iframeContainer.innerHTML = '';
+  if (iframeContainer) {
+    var v = document.getElementById('native-brand-video');
+    if (v) {
+      v.pause();
+    }
+    iframeContainer.innerHTML = '';
+  }
   if (playerWrapper) playerWrapper.classList.add('hidden');
   if (coverWrapper) coverWrapper.classList.remove('hidden');
 }

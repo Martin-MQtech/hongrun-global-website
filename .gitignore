@@ -4,4 +4,8 @@ indexnow_state.json
 # Python 运行时产物
 __pycache__/
 *.pyc
+
+# 视频资产过滤规则（屏蔽超大体积未经压缩的原始母带，放行经 FFmpeg 压制的 2分钟/<15MB Web 优化流）
 *.mp4
+!*_web.mp4
+!assets/videos/*.mp4
