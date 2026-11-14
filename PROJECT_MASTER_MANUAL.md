@@ -1166,7 +1166,27 @@ graph TD
 
 ---
 
-> **手册结语（v3.13 节点）**：本手册于 v3.13 全量固化“视频优先 (Video-First) 博客架构”、YouTube 官方 4K 宣传片公开发布、领英与 Facebook“公司主页 + Martin Chen 个人号”双层渗透机制与全网 25 端点统一回流商业闭环。
+### 23.4 2026 宏润官方品牌大片全渠道社媒发布与双层飞轮矩阵 (2026 Brand Film Syndication Matrix)
+
+- **官方文章与自托管入口**：`articles/20261111-brand-film-2026/`
+- **中英文主题**：
+  - **EN**: *Nourishing Life Worldwide: Hongrun Compressor Technology Unveils 2026 Global Brand Film*
+  - **ZH**: 《宏天下正气·润世间万物：宏润科技 2026 全球品牌大片正式发布》
+- **全网多平台落地清单 (Live Status)**：
+
+| 平台 Channel | 发布形态 Post Type | 账号级别 Account Tier | 状态 Status | 核心内容、视频 ID 与链接锚点 Tracking Hook |
+| :--- | :--- | :--- | :--- | :--- |
+| **官网直连** | 原生 HTML5 免登秒播 | 官方独立域名 (hongrun1995.cn) | **已全面上线 (Live)** | **EN:** `film_en_web.mp4` (10.7MB) · **ZH:** `film_zh_web.mp4` (13MB)<br>100% 免翻墙、免登录、秒开即播，全设备深度优化 |
+| **YouTube** | 4K 旗舰长视频 / 竖屏 | 官方企业频道 (@MartinChenAirtech) | **已公开发布 (Live)** | **EN 视频 ID:** `q5KjvZ47Ww0`<br>**ZH 视频 ID:** `QbbMy52RKHs`<br>中英双语独立发布，锚定官网文章唯一回流链接 |
+| **哔哩哔哩** | 高清直连专线 (Bilibili) | 官方认证号 (HONGRUNAIR) | **已公开发布 (Live)** | **EN BVID:** `BV1MaW263ENG` (2:04)<br>**ZH BVID:** `BV1R5W26QEfr` (2:36)<br>国内极速播放线路，规避防盗链风控 |
+| **LinkedIn** | 官方动态 (Company Video Post) | 官方企业主页 (125624035) | **已正式发布 (Live)** | **链接:** `https://www.linkedin.com/feed/update/urn:li:activity:7527341732577927168/`<br>直发 1080P 原版英文短视频，配专属医用定位文案与标签 |
+| **LinkedIn** | 高管专业点赞与评论 | 个人主页 (Martin Chen CMD) | **已成功互动 (Live)** | Martin 实名个人号完成点赞与第一条专业高管评论，强化 30 年医用级气源专业度 |
+| **LinkedIn** | 带观点深度转发 (Repost with thoughts) | 个人主页 (Martin Chen CMD) | **已成功转发 (Live)** | **链接:** `https://www.linkedin.com/feed/update/urn:li:activity:7527342586211192832/`<br>向全球人脉圈深度阐述 1995 创业技术破局历史与 Class 0 坚守 |
+| **Facebook** | 官方公共主页 (Company Reel) | 官方企业主页 (Hongrun Tech) | **已正式发布 (Live)** | **Reel 链接:** `https://www.facebook.com/reel/1102680829250011`<br>直发 9:16 竖屏英文短视频，挂载英文封面 `cover_en.jpg` 与完整技术白皮书外链 |
+
+---
+
+> **手册结语（v3.18 节点）**：本手册已升级至 v3.18，全量固化“2026 宏润品牌大片全网多源直连与社媒双层飞轮”，实现 YouTube 4K、哔哩哔哩、官网原生免登秒播、LinkedIn 企业与个人高管号联动、Facebook 官方主页全渠道闭环沉淀。
 
 ---
 
