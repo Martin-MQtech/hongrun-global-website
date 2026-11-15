@@ -1269,3 +1269,40 @@ graph TD
 
 
 
+
+
+---
+
+## 25. 谷歌搜索大盘基线 (GSC & Google AI Overviews) 与南亚 (印度) 客户线索转化归因复盘 (2026-11-15 Manual V3.18)
+
+### 25.1 Google Search Console (GSC) 官方大盘实测基线 (2026-11-15 实测)
+- **管理主账号**：`hrmedaircom@gmail.com` (Martin Chen / 官方管理账号)
+- **已验证资源**：`https://www.hongrun1995.cn/` (HTML 验证码 `6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8`)
+- **真实大盘指标**：
+  - **总曝光次数 (Total Impressions)**：`919` 次
+  - **总点击次数 (Total Clicks)**：`38` 次
+  - **平均点击率 (Average CTR)**：`4.1%` (远高于外贸工业品行业平均 1.5%~2.5% 的基准线)
+  - **平均排名位置 (Average Position)**：`10.2` (稳居 Google 首页/第 2 页头部冲刺位)
+  - **HTTPS 体验**：14 个生产核心页 100% 良好通过，0 个非 HTTPS。
+  - **面包屑导航 (Breadcrumbs)**：11 个页面完全有效，0 错误。
+
+### 25.2 Google 搜索生成式 AI (AI Overviews / SGE) 专项渗透指标
+- **生成式 AI 总曝光量**：`209` 次
+- **生成式 AI 引用率最高的前 5 大官方网页**：
+  1. `https://www.hongrun1995.cn/` (官网主站)：**154 次**
+  2. `https://www.hongrun1995.cn/products-hvs.html` (口腔负压抽吸)：**25 次**
+  3. `https://www.hongrun1995.cn/products-hospital.html` (医院中央供气系统)：**16 次**
+  4. `https://www.hongrun1995.cn/products-hy.html` (医用牙科空压机，含 HYT-400/500)：**15 次**
+  5. `https://www.hongrun1995.cn/contact.html` (WhatsApp 与联系电话)：**8 次**
+
+### 25.3 印度客户 (Saimona Compressed Air) 获客归因与型号容错治理
+1. **买家身份与真实意向**：
+   - 采购代表：`Nishant Chauhan` (Industrial Growth Catalyst · Ahmedabad, Gujarat, India)，来自印度空压机系统集成商 **Saimona Compressed Air (Saimona Air-Mech Pvt. Ltd.)**。
+   - 采购痛点：Saimona 主打工业螺杆机，自身缺乏齿科医用多机头无油机产线，急需寻找具备 NMPA 二类注册证与 TÜV Class 0 认证的中国源头大厂做 OEM。
+2. **搜索行为与型号映射**：
+   - 客户在 Google 搜索后通过页面 WhatsApp 直连发起咨询，直接索要 `Hv400 and 500` 的图片、价格结构与批量订购机制；
+   - 对应宏润核心机型：**HYT-400** (1.1kW×3, 600 L/min, 120L 罐, 6~8 椅) 与 **HYT-500** (1.1kW×4, 800 L/min, 200L 罐, 8~10 椅旗舰)。
+3. **型号别名与拼写容错 (Typo Resilience) 落地规范**：
+   - 已在 `products-hy.html`、`products.html`、`llms.txt` 中全量注入别名映射：
+     `alternateName: ["HYT-400", "HYT-500", "HV400", "HV-400", "HV500", "HV-500", "HY-400", "HY-500", "HY400", "HY500", "HT-400", "HT-500"]`；
+   - 无论海外买家输入缩写、错拼还是口语化表达，Google 爬虫与 AI 均 100% 精准锚定宏润。

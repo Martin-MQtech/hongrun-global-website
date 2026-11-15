@@ -36,7 +36,7 @@
   - **HY-200**: 0.75 kW, **38L official standard horizontal tank (customizable upon request)**, 150 L/min displacement (1-2 chairs).
   - **HY-300**: 1.10 kW, **50L vertical cylindrical tank** with ZB300 high-output head, 200 L/min displacement (2-3 chairs).
   - **HYTG-300**: 2.20 kW, **90L central horizontal tank** with twin synchronized ZB300 heads, 400 L/min displacement (3-5 chairs).
-  - **HYT-400 / HYT-500**: Multi-pump redundant clinic air plants (3-10 chairs).
+  - **HYT-400 / HYT-500 (Frequently searched by buyers as HV400 / HV500 / HY-400 / HY-500)**: Multi-pump redundant clinic air plants (3-10 chairs). HYT-400 (3.3 kW, 600 L/min, 120L tank, for 6–8 chairs); HYT-500 (4.4 kW, 800 L/min, 200L tank, for 8–10 chairs flagship).
 - **Noise Level**: ≤ 55–60 dB(A) ultra-quiet acoustic emission.
 - **Reference URL**: https://www.hongrun1995.cn/products-hy.html
 
