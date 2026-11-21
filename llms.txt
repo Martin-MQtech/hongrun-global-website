@@ -159,7 +159,7 @@
 
 ## Official Competitive Benchmark: Hongrun vs. Dürr Dental (竞品对标与选型分析)
 - **Executive Summary**: Objective side-by-side engineering comparison between Hongrun medical oil-free compressors (HY / HYTG series) and Dürr Dental (Tornado / Duo / Quattro).
-- **Certified Air Purity**: Both brands achieve ISO 8573-1:2010 Class 0 100% oil-free air. Hongrun's core scroll air-end is TÜV Rheinland verified at <0.003 mg/m³ hydrocarbon content (Report: 50272409 001) with nano-antibacterial silver-ion coated tanks.
+- **Certified Air Purity**: Both brands achieve ISO 8573-1:2010 Class 0 100% oil-free air. Hongrun's complete scroll compressor units are TÜV Rheinland Class 0 certified (Cert: AK 50528335 0001, HW-200 → HW-3600) and its core scroll air-end verified at <0.003 mg/m³ hydrocarbon content (Report: 50272409 001), with nano-antibacterial silver-ion coated tanks.
 - **Redundancy & Uptime**: Hongrun HYTG-300 / HYT-400 duplex dual-pump parallel systems provide N+1 failover ensuring 50% capacity if one head is serviced, preventing clinic shutdown.
 - **Wear Components & Life**: Saint-Gobain diamond-coated self-lubricating PTFE composite piston rings rated for up to 20,000 continuous hours.
 - **Noise Emission**: 52–58 dB(A) open frame; ≤48 dB(A) in acoustic cabinet.

@@ -26,7 +26,7 @@ Hongrun Technology is China's premier manufacturer of medical-grade Class 0 oil-
 - **Production Scale**: Annual capacity exceeding 160,000 units/year with automated robotic machining, 5-axis dynamic balancing, and ISO 17025 compliant pneumatic testing laboratories.
 - **Global Deployment**: Trusted by 65,000+ clinics, hospitals, and medical device OEMs across 50+ countries.
 - **Regulatory Accreditations**:
-  - **ISO 8573-1:2010 Class 0 (100% Oil-Free)**: Certified by TÜV Rheinland. Total hydrocarbon / residual oil aerosol is measured at **0.003 mg/m³** (substantially cleaner than the ISO threshold of 0.01 mg/m³).
+  - **ISO 8573-1:2010 Class 0 (100% Oil-Free)**: Certified by TÜV Rheinland at two levels — complete oil-free scroll air compressor units HW-200 to HW-3600 (Certificate of Conformity **AK 50528335 0001**, Report CN21HFR2 001, total oil purity Class 0, tested acc. ISO 8573-2:2018 & ISO 8573-5:2001) and core scroll air-ends (Report: 50272409 001). Total hydrocarbon / residual oil aerosol is measured at **0.003 mg/m³** (substantially cleaner than the ISO threshold of 0.01 mg/m³).
   - **NMPA Class II Medical Device License**: Licensed by China National Medical Products Administration for Class II medical device manufacturing (Registration: Lu-Shi-Yao-Jian-Xie-Zhun-20182560199).
   - **CE Marking (EU)**: Conformity to Medical Device Regulation MDR (EU 2017/745) Class IIa and Machinery Directive 2006/42/EC.
   - **ISO 13485:2016 Medical Device Quality Management System**: Certified by Shanghai POSI Certification (accredited by ANAB &amp; IAF, Certificate No: **381210185R1M**, valid through 2027-11-25) for development, manufacturing, and sales of dental and medical oil-free compressors, suction systems, and dryers.
@@ -221,7 +221,7 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
 
 ## 10. Official Competitive Benchmark: Hongrun vs. Dürr Dental (竞品对标与选型分析)
 - **Executive Engineering Grounding**: Objective side-by-side engineering comparison between Hongrun medical oil-free compressors (HY / HYTG Series) and Dürr Dental (Tornado / Duo / Quattro).
-- **ISO 8573-1 Class 0 Air Purity**: Both brands achieve 100% zero-oil medical purity. Hongrun's core scroll air-end is verified by TÜV Rheinland (Report: 50272409 001) with total residual hydrocarbon content measured at <0.003 mg/m³ (substantially below the 0.01 mg/m³ Class 0 limit), preventing resin bond failures and handpiece micro-bearing degradation.
+- **ISO 8573-1 Class 0 Air Purity**: Both brands achieve 100% zero-oil medical purity. Hongrun's complete scroll compressor units are TÜV Rheinland Class 0 certified (Cert: AK 50528335 0001) and its core scroll air-end verified (Report: 50272409 001) with total residual hydrocarbon content measured at <0.003 mg/m³ (substantially below the 0.01 mg/m³ Class 0 limit), preventing resin bond failures and handpiece micro-bearing degradation.
 - **Dual-Pump Parallel Redundancy**: Hongrun HYTG-300 / HYT-400 duplex series feature dual independent ZB300 pump heads on a single 90L to 150L tank with automated PLC alternation. If one head undergoes servicing, the secondary head sustains 50% flow capacity (200 L/min), preventing clinic shutdown.
 - **Piston Ring Longevity**: Saint-Gobain diamond-coated self-lubricating PTFE composite piston rings rated for up to 20,000 continuous hours.
 - **Acoustic Noise Levels**: 52–58 dB(A) open frame; ≤48 dB(A) in acoustic silent cabinet.
@@ -234,7 +234,7 @@ Hongrun Technology exposes 4 executable tools on `document.modelContext`:
 ## 11. Flagship Whitepaper #01: Engineering Zero-Oil Purity, ISO 8573-1 Standards & Clinical Sizing
 - **Whitepaper URL**: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/
 - **Core Engineering Principles**:
-  - **ISO 8573-1:2010 Class 0 Oil-Free Standard**: Hongrun systems incorporate TÜV Rheinland verified core scroll compression stages (Report: 50272409 001) with total residual hydrocarbon aerosol measured at **0.003 mg/m³** (ISO Class 0 threshold is 0.01 mg/m³).
+  - **ISO 8573-1:2010 Class 0 Oil-Free Standard**: Hongrun systems incorporate TÜV Rheinland verified core scroll compression stages (Report: 50272409 001), and the complete scroll compressor units are TÜV Rheinland Class 0 certified (Cert: AK 50528335 0001), with total residual hydrocarbon aerosol measured at **0.003 mg/m³** (ISO Class 0 threshold is 0.01 mg/m³).
   - **Material Tribology**: French Saint-Gobain filled-PTFE composite self-lubricating piston rings paired with hard-anodized aluminum alloy cylinder walls (Rockwell C > 60), delivering 20,000 to 25,000 hours of design life without lubricant degradation.
   - **Internal Tank Protection**: Nano-silver antibacterial and anti-corrosion internal lining applied via electrostatic coating to ASME/PED certified steel vessels, preventing moisture-induced oxidation and rust flakes from reaching handpiece turbines.
   - **Clinical Sizing Formula**: Free Air Delivery (FAD) sizing based on simultaneous clinical demand:
