@@ -252,9 +252,10 @@
         standard: "ISO 8573-1:2010 Class 0",
         category: "Air Purity",
         certifiedBy: "TÜV Rheinland LGA Products GmbH",
-        certificateNo: "AK 50442317 0001 (Report 50272409 001)",
-        scope: "Oil-free scroll air-end component verification (Supplier: Zhejiang Gaoling New Energy Technology Co., Ltd.)",
-        measuredOilContent: "0.003 mg/m³ (Well below the 0.01 mg/m³ Class 0 threshold)",
+        certificateNo: "AK 50528335 0001 (Report CN21HFR2 001)",
+        scope: "Complete Oil-Free Scroll Air Compressor Units (HW-200 to HW-3600), total oil purity Class 0 (Tested acc. ISO 8573-2:2018 & ISO 8573-5:2001)",
+        holder: "Hongrun Compressor Technology Co., Ltd. (Direct Holder)",
+        measuredOilContent: "<0.003 mg/m³ (Well below the 0.01 mg/m³ Class 0 threshold)",
         particleClass: "Class 1 (Solid particles <= 0.1 - 0.5 μm <= 20,000 / m³)",
         humidityClass: "Class 2 (Pressure dew point -40°C)",
         significance: "Zero risk of lipid contamination in dental restorations, implants, or ICU patient airways."
