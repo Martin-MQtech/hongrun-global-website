@@ -72,7 +72,7 @@
         "@type": "VideoObject",
         "@id": "https://www.hongrun1995.cn/articles/20261128-sales-engineering-global-market-sync/#video",
         "name": "Hongrun Official Session Film — One Team, Many Markets (Vertical)",
-        "description": "49-second official vertical session film from Hongrun's cross-functional market review at Zibo HQ: marketing × engineering in sync, evidence-backed answers, digital backbone and partner-first growth. English narration with bilingual subtitles.",
+        "description": "49-second official vertical session film from Hongrun's cross-functional market review at Zibo HQ: marketing × engineering in sync, evidence-backed answers, digital backbone and partner-first growth. English narration with bilingual subtitles. Native-first self-hosted playback; also distributed via YouTube and Bilibili.",
         "thumbnailUrl": "https://www.hongrun1995.cn/articles/20261128-sales-engineering-global-market-sync/20261128-session-film-poster.webp",
         "uploadDate": "2026-11-28T20:00:00+08:00",
         "duration": "PT49S",
@@ -419,8 +419,9 @@
       </div>
     </div>
 
+
     <!-- ========================================================= -->
-    <!-- OFFICIAL SESSION FILM — VERTICAL PLAYER (49s, EN VO, bilingual subs) -->
+    <!-- OFFICIAL SESSION FILM — NATIVE-FIRST PLAYER (§21.6)        -->
     <!-- ========================================================= -->
     <section class="mb-12 not-prose" id="session-video">
       <div class="bg-slate-900 rounded-2xl p-4 sm:p-6 shadow-2xl border border-slate-800 text-white">
@@ -436,10 +437,10 @@
           </span>
         </div>
         <div class="grid lg:grid-cols-12 gap-6 items-start">
-          <!-- Left: 9:16 vertical player -->
+          <!-- Left: 9:16 native player (self-hosted, faststart, zero-login) -->
           <div class="lg:col-span-5 flex flex-col items-center">
             <div class="w-full max-w-[300px] rounded-[1.8rem] overflow-hidden border-4 border-slate-800 bg-black shadow-2xl relative" style="aspect-ratio: 9/16;">
-              <video controls preload="none" playsinline
+              <video controls playsinline preload="auto"
                      poster="/articles/20261128-sales-engineering-global-market-sync/20261128-session-film-poster.webp"
                      class="w-full h-full object-cover">
                 <source src="/articles/20261128-sales-engineering-global-market-sync/20261128-session-film_web.mp4" type="video/mp4"/>
@@ -449,7 +450,19 @@
               </video>
             </div>
             <div class="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 mt-3 flex items-center gap-1.5 shadow-sm">
-              <i class="fa-solid fa-circle-check text-emerald-500"></i> <span>官网直连播放 · 免登录 · EN 旁白 + 中英双语字幕</span>
+              <i class="fa-solid fa-circle-check text-emerald-500"></i> <span>官网直连 · 免登录秒播 · EN 旁白 + 中英字幕</span>
+            </div>
+            <!-- Platform relay (Native-First Hybrid §21.6): direct links land here once official uploads go live -->
+            <div class="w-full text-center mt-3" style="max-width: 300px;">
+              <div class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider mb-1.5">公域平台同步 · Also streaming on</div>
+              <div class="flex items-center gap-2">
+                <span class="flex-1 py-1.5 px-2 bg-slate-800/70 text-slate-400 border border-slate-700 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5" title="Official upload link wiring in progress">
+                  <i class="fa-brands fa-youtube text-red-400"></i> <span>YouTube</span>
+                </span>
+                <span class="flex-1 py-1.5 px-2 bg-slate-800/70 text-slate-400 border border-slate-700 rounded-lg text-[11px] font-semibold flex items-center justify-center gap-1.5" title="Official upload link wiring in progress">
+                  <i class="fa-solid fa-tv text-sky-400"></i> <span>哔哩哔哩</span>
+                </span>
+              </div>
             </div>
           </div>
           <!-- Right: chapter & spec cards -->
