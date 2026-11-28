@@ -3,62 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy & Data Protection | Shandong Hongrun Air Compressor Technology Co., Ltd.</title>
+  <title>Privacy Policy &amp; Data Protection | Hongrun</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
   <meta name="description" content="Privacy Policy and international data protection compliance standards (GDPR) for visitors and commercial partners of Hongrun Technology.">
   <meta name="keywords" content="Hongrun privacy policy, GDPR compliance, medical website terms">
@@ -66,7 +16,7 @@
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Privacy Policy & Data Protection | Shandong Hongrun Air Compressor Technology Co., Ltd.">
+  <meta property="og:title" content="Privacy Policy &amp; Data Protection | Hongrun">
   <meta property="og:description" content="Privacy Policy and international data protection compliance standards (GDPR) for visitors and commercial partners of Hongrun Technology.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/privacy-policy.html">
@@ -74,7 +24,7 @@
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Privacy Policy & Data Protection | Shandong Hongrun Air Compressor Technology Co., Ltd.">
+  <meta name="twitter:title" content="Privacy Policy &amp; Data Protection | Hongrun">
   <meta name="twitter:description" content="Privacy Policy and international data protection compliance standards (GDPR) for visitors and commercial partners of Hongrun Technology.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg"><link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/>
@@ -121,8 +71,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
   <header class="bg-white border-b border-slate-200 py-4 px-6 flex justify-between items-center">
     <a href="/"><img src="assets/images/logo_transparent.webp" alt="Hongrun Logo" class="h-10" decoding="async" width="640" height="139" /></a>
     <div class="flex items-center gap-3">
@@ -132,30 +86,45 @@
       </button>
     </div>
   </header>
-  <main class="max-w-4xl mx-auto px-4 py-12 prose prose-slate text-sm leading-relaxed">
+  <main class="max-w-4xl mx-auto px-4 py-12 prose prose-slate text-sm leading-relaxed" id="main-content" tabindex="-1">
     <h1 class="text-3xl font-bold font-display text-slate-900 mb-2">Privacy Policy &amp; Data Protection Statement</h1>
-    <p class="text-xs text-slate-500 mb-8">Effective Date: August 28, 2026 &middot; Shandong Hongrun Air Compressor Technology Co., Ltd.</p>
+    <p class="text-xs text-slate-500 mb-8">Effective Date: November 28, 2026 &middot; Shandong Hongrun Air Compressor Technology Co., Ltd.</p>
 
-    <h2>1. Overview &amp; Controller Identity</h2>
-    <p>Shandong Hongrun Air Compressor Technology Co., Ltd. (hereinafter "Hongrun", "we", "our") respects the privacy rights of all international distributors, engineering contractors, and medical procurement specialists who visit our website (hongrun1995.cn) and submit engineering request for quotation (RFQ) inquiries.</p>
+    <h2>1. Controller &amp; Scope</h2>
+    <p>Shandong Hongrun Air Compressor Technology Co., Ltd. ("Hongrun", "we", "our") is the controller of business contact information submitted through this website. This policy explains how we handle information provided through RFQ, OEM and catalog forms, direct email or WhatsApp contact, and anonymous website measurement. It applies to hongrun1995.cn and its public subpages.</p>
 
-    <h2>2. Data We Collect</h2>
-    <p>We only collect business contact information voluntarily submitted through our Request for Quotation (RFQ) and dealership inquiry forms, including:</p>
+    <h2>2. Information We Receive</h2>
     <ul>
-      <li>Full name and corporate business title</li>
-      <li>Corporate email address</li>
-      <li>Country of operation and clinic / company name</li>
-      <li>Specific equipment model interest and pneumatic engineering specifications</li>
+      <li>Information you submit: name, business email, country or region, company or clinic, product interests, project specifications, and any other details you choose to include.</li>
+      <li>Direct communications: the content and contact details you send by email or WhatsApp, including attachments.</li>
+      <li>Technical and security data: IP address, browser and device information, request logs, and cache records needed to deliver and protect the website.</li>
     </ul>
+    <p>Please do not submit patient records, clinical records, payment-card data, or other information that is not needed for a business inquiry.</p>
 
-    <h2>3. Purpose of Processing &amp; Legal Basis</h2>
-    <p>All submitted data is processed strictly for legitimate B2B commercial purposes: providing sizing calculations, issuing formal engineering quotations, and providing after-sales technical support. We never sell, rent, or trade your contact data to third parties.</p>
+    <h2>3. How We Use Information &amp; Legal Bases</h2>
+    <p>Where applicable data-protection law applies, we process information to respond to your request, assess technical requirements, prepare quotations, manage OEM or distributor discussions, provide after-sales support, maintain security, and meet accounting or other legal obligations. Depending on the purpose, the legal basis may be steps requested before a contract, performance of a contract, legitimate business interests, compliance with law, or your consent. We do not sell inquiry contact details or use them for advertising profiles.</p>
 
-    <h2>4. Data Retention &amp; International Security</h2>
-    <p>Inquiry records are stored securely in encrypted form and retained only for as long as necessary to fulfill ongoing business relations or comply with applicable legal accounting obligations.</p>
+    <h2>4. Service Providers &amp; International Processing</h2>
+    <ul>
+      <li><strong>Formspree</strong> receives website form submissions and transmits them to our business inquiry mailbox.</li>
+      <li><strong>Cloudflare</strong> provides website delivery, caching, and security services and may process request and security logs.</li>
+      <li><strong>Google Analytics</strong> measures aggregate site usage only after you select "Accept Analytics". Inquiry names, email addresses, companies, and form messages are not sent to Analytics.</li>
+      <li><strong>Email and WhatsApp providers</strong> process communications when you choose those direct contact channels.</li>
+    </ul>
+    <p>These providers may process data in countries other than your country of residence, including outside the European Economic Area. Where required, transfers are subject to applicable legal safeguards. Provider availability and processing locations can change; we review the services we use before making material changes to this policy.</p>
 
-    <h2>5. Contact &amp; Data Protection Officer</h2>
-    <p>If you have any questions regarding your personal data or wish to request data erasure, please contact our Compliance Desk at: <a href="mailto:muqizb@gmail.com">muqizb@gmail.com</a> or via our direct desk at Zibo, Shandong, China.</p>
+    <h2>5. Cookies, Analytics &amp; Browser Storage</h2>
+    <p>Google Analytics is not requested before a consent choice. Selecting "Essential Only" keeps analytics denied. Selecting "Accept Analytics" allows analytics cookies and aggregate usage measurement; advertising storage and advertising personalization remain denied. You can withdraw analytics consent by clearing this site's browser storage and choosing "Essential Only" on your next visit.</p>
+    <p>Your browser stores the consent choice, a submission-throttling timestamp with a non-reversible email hash, and public website content cached by the service worker for offline viewing. Routine inquiry payloads are not stored in plaintext in your browser. Earlier-version plaintext inquiry backups are removed when the consent module runs.</p>
+
+    <h2>6. Retention &amp; Security</h2>
+    <p>We retain inquiry information only as long as needed for the inquiry, quotation, contractual relationship, technical support, or applicable legal and accounting obligations. When it is no longer needed, we delete or anonymize it where practicable. The website uses HTTPS and business access controls; no internet transmission or storage system can be guaranteed completely secure.</p>
+
+    <h2>7. Your Choices &amp; Rights</h2>
+    <p>Subject to the law applicable to you, you may request access, correction, deletion, restriction, portability, or object to processing, and you may withdraw consent at any time. We may need to verify your identity and may retain information where law requires. You may also lodge a complaint with your local data-protection authority.</p>
+
+    <h2>8. Contact &amp; Policy Updates</h2>
+    <p>For privacy questions or data-rights requests, email <a href="mailto:info@hongrun1995.cn">info@hongrun1995.cn</a> or contact Shandong Hongrun Air Compressor Technology Co., Ltd., National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China. We will update this page if our data practices materially change; the effective date above identifies the current version.</p>
   </main>
   <footer class="bg-slate-900 text-slate-400 text-xs py-8 text-center border-t border-slate-800">
     <p>&copy; 2026 Shandong Hongrun Air Compressor Technology Co., Ltd. &middot; ISO 13485:2016 &middot; CE MDR &middot; NMPA Class II</p>

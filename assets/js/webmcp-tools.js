@@ -17,9 +17,9 @@
       founded: 1995,
       headquarters: "Zibo High-Tech Industrial Zone, Shandong Province, China",
       annualCapacity: "160,000 units/year",
-      cleanlinessStandard: "ISO 8573-1 Class 0 100% Oil-Free (TÜV Rheinland certified)",
-      measuredResidualOil: "0.003 mg/m³ (ISO limit is 0.01 mg/m³)",
-      measuredDewPoint: "-40°C Class 2 (Molecular sieve twin-tower desiccant dryer)",
+      cleanlinessStandard: "ISO 8573-1 total-oil Class 0 for certified complete HW-200 through HW-3600 scroll units; other families use oil-free designs with model-specific documentation",
+      measuredTotalOil: "<0.003 mg/m³ in TÜV report CN21HFR2 001 for certified complete HW-200 through HW-3600 scroll units (ISO Class 0 total-oil limit is 0.01 mg/m³)",
+      measuredDewPoint: "Model- and configuration-specific; verify pressure dew point from the supplied documentation",
       officialEmail: "info@hongrun1995.cn",
       salesEmail: "martinchen@hongrun1995.cn",
       officialWebsite: "https://www.hongrun1995.cn"
@@ -37,9 +37,9 @@
         noiseDba: 52,
         tankVolumeL: 24,
         chairCapacity: "1 Dental Chair",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Saint-Gobain PTFE Composite (20,000–25,000h wear life)",
-        tankCoating: "Nano-Silver Antibacterial Anti-Rust Internal Lining",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE composite; service life depends on model, load, temperature, air quality and maintenance",
+        tankCoating: "Model-specific receiver protection, drainage and maintenance",
         url: "https://www.hongrun1995.cn/products-hy.html"
       },
       {
@@ -52,11 +52,11 @@
         flowCfm: 5.30,
         maxPressureBar: 8.0,
         noiseDba: 54,
-        tankVolumeL: 32,
+        tankVolumeL: 38,
         chairCapacity: "1-2 Dental Chairs",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Saint-Gobain PTFE Composite (20,000–25,000h wear life)",
-        tankCoating: "Nano-Silver Antibacterial Anti-Rust Internal Lining",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE composite; service life depends on model, load, temperature, air quality and maintenance",
+        tankCoating: "Model-specific receiver protection, drainage and maintenance",
         url: "https://www.hongrun1995.cn/products-hy.html"
       },
       {
@@ -71,9 +71,9 @@
         noiseDba: 56,
         tankVolumeL: 50,
         chairCapacity: "2-3 Dental Chairs",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Saint-Gobain PTFE Composite (20,000–25,000h wear life)",
-        tankCoating: "Nano-Silver Antibacterial Anti-Rust Internal Lining",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE composite; service life depends on model, load, temperature, air quality and maintenance",
+        tankCoating: "Model-specific receiver protection, drainage and maintenance",
         url: "https://www.hongrun1995.cn/products-hy.html"
       },
       {
@@ -88,9 +88,9 @@
         noiseDba: 58,
         tankVolumeL: 60,
         chairCapacity: "2-4 Dental Chairs",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Saint-Gobain PTFE Composite (20,000–25,000h wear life)",
-        tankCoating: "Nano-Silver Antibacterial Anti-Rust Internal Lining",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE composite; service life depends on model, load, temperature, air quality and maintenance",
+        tankCoating: "Model-specific receiver protection, drainage and maintenance",
         url: "https://www.hongrun1995.cn/products-hy.html"
       },
       {
@@ -105,9 +105,9 @@
         noiseDba: 60,
         tankVolumeL: 90,
         chairCapacity: "3-5 Dental Chairs",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Saint-Gobain PTFE Composite (20,000–25,000h wear life)",
-        tankCoating: "Nano-Silver Antibacterial Anti-Rust Internal Lining",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE composite; service life depends on model, load, temperature, air quality and maintenance",
+        tankCoating: "Model-specific receiver protection, drainage and maintenance",
         url: "https://www.hongrun1995.cn/products-hy.html"
       },
       {
@@ -122,25 +122,88 @@
         noiseDba: 62,
         tankVolumeL: 120,
         chairCapacity: "6-8 Dental Chairs",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Saint-Gobain PTFE Composite (20,000–25,000h wear life)",
-        tankCoating: "Nano-Silver Antibacterial Anti-Rust Internal Lining",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE composite; service life depends on model, load, temperature, air quality and maintenance",
+        tankCoating: "Model-specific receiver protection, drainage and maintenance",
         url: "https://www.hongrun1995.cn/products-hy.html"
       },
       {
-        model: "HR-ZW200",
+        model: "HY-400",
         category: "compressor",
-        series: "Bare Core Pump & Motor Series (OEM/ODM)",
+        series: "HY Three-Head Clinic Central Series",
+        powerKw: 2.25,
+        flowLpmAt5Bar: 450,
+        maxPressureBar: 8.0,
+        tankVolumeL: 90,
+        pistonHeads: "ZB200 × 3",
+        voltage: "220V",
+        dimensionsMm: "860 × 420 × 730",
+        weightKg: 84,
+        chairCapacity: "5-6 Dental Chairs (preliminary)",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        url: "https://www.hongrun1995.cn/products-hy.html"
+      },
+      {
+        model: "HYT-500",
+        category: "compressor",
+        series: "HYT Quad-Head Clinic Central Series",
+        powerKw: 4.4,
+        flowLpmAt5Bar: 800,
+        maxPressureBar: 8.0,
+        tankVolumeL: 200,
+        pistonHeads: "ZB300 × 4",
+        voltage: "380V",
+        dimensionsMm: "1700 × 410 × 825",
+        weightKg: 142.5,
+        chairCapacity: "9-10 Dental Chairs (preliminary)",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        url: "https://www.hongrun1995.cn/products-hy.html"
+      },
+      {
+        model: "HY-500",
+        category: "compressor",
+        series: "HY Quad-Head Clinic Central Series",
+        powerKw: 3.0,
+        flowLpmAt5Bar: 600,
+        maxPressureBar: 8.0,
+        tankVolumeL: 120,
+        pistonHeads: "ZB200 × 4",
+        voltage: "380V",
+        dimensionsMm: "1080 × 440 × 740",
+        weightKg: 89,
+        chairCapacity: "6-8 Dental Chairs (preliminary)",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        url: "https://www.hongrun1995.cn/products-hy.html"
+      },
+      {
+        model: "HYG-1000",
+        category: "compressor",
+        series: "HYG Five-Head Integrated Clean Air Station",
+        powerKw: 5.5,
+        flowLpmAt5Bar: 1000,
+        maxPressureBar: 8.0,
+        tankVolumeL: 200,
+        pistonHeads: "ZB300 × 5",
+        voltage: "380V",
+        dimensionsMm: "1700 × 410 × 825",
+        weightKg: 178,
+        chairCapacity: "10+ Dental Chairs (engineering review)",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        url: "https://www.hongrun1995.cn/products-hy.html"
+      },
+      {
+        model: "ZB-200",
+        category: "compressor",
+        series: "ZB Wobble-Piston Bare Pump Head (OEM/ODM)",
         powerKw: 0.75,
         powerHp: 1.0,
-        flowLpmAt5Bar: 150,
-        flowCfm: 5.30,
+        flowLpmAt5Bar: 105,
+        flowCfm: 3.71,
         maxPressureBar: 8.0,
-        noiseDba: 58,
         tankVolumeL: 0,
-        chairCapacity: "1-2 Dental Chairs (Bare Pump Unit)",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Imported Saint-Gobain PTFE Compound (20,000–25,000h wear life)",
+        chairCapacity: "Complete assembly sizing required",
+        oilFreeGrade: "Bare pump head; the TÜV Class 0 certificate does not cover bare ZB components. Complete-system air quality requires model-specific testing.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE compound; service life depends on model, load, temperature, air quality and maintenance",
         tankCoating: "N/A (Bare Head)",
         url: "https://www.hongrun1995.cn/products-core.html"
       },
@@ -156,9 +219,9 @@
         noiseDba: 64,
         tankVolumeL: 150,
         chairCapacity: "10-18 Dental Chairs / Hospital Gas Pipeline",
-        oilFreeGrade: "ISO 8573-1 Class 0",
-        pistonRing: "Saint-Gobain PTFE Composite (20,000–25,000h wear life)",
-        tankCoating: "Medical Grade Vessel with Twin-Tower Desiccant (-40°C Dew Point)",
+        oilFreeGrade: "Oil-free design; model-specific documentation required. TÜV Class 0 certificate scope is complete HW-200 through HW-3600 scroll units only.",
+        pistonRing: "Saint-Gobain self-lubricating PTFE composite; service life depends on model, load, temperature, air quality and maintenance",
+        tankCoating: "Model-specific receiver and dryer configuration; verify pressure dew point for the supplied system",
         url: "https://www.hongrun1995.cn/products-hospital.html"
       },
       {
@@ -172,8 +235,8 @@
         maxPressureBar: 8.0,
         noiseDba: 59,
         tankVolumeL: 200,
-        chairCapacity: "Continuous Hospital & ICU Medical Air Delivery",
-        oilFreeGrade: "ISO 8573-1 Class 0 100% Continuous Duty",
+        chairCapacity: "Hospital / ICU project sizing required",
+        oilFreeGrade: "TÜV total-oil Class 0 evidence for certified complete HW-200 through HW-3600 units; verify the supplied configuration and duty rating",
         pistonRing: "Contactless High-Precision Scroll Orbit",
         tankCoating: "Medical Grade 304 Stainless Steel Vessel",
         url: "https://www.hongrun1995.cn/products-hospital.html"
@@ -188,7 +251,7 @@
         vacuumMbar: -120,
         chairCapacity: "1 Dental Chair",
         separationType: "Two-stage Centrifugal Cyclone + Dynamic Fluid Separator",
-        noiseDba: 54,
+        noiseDba: 68,
         drainType: "Automatic Pressure Drainage Valve",
         url: "https://www.hongrun1995.cn/products-hvs.html"
       },
@@ -198,11 +261,11 @@
         series: "HVS Dental Dynamic High-Vacuum Suction Unit",
         powerKw: 1.5,
         powerHp: 2.0,
-        suctionFlowLpm: 900,
+        suctionFlowLpm: 1200,
         vacuumMbar: -160,
         chairCapacity: "2-3 Dental Chairs",
         separationType: "Two-stage Centrifugal Cyclone + Dynamic Fluid Separator",
-        noiseDba: 58,
+        noiseDba: 69,
         drainType: "Continuous Dynamic Negative-Pressure Drain",
         url: "https://www.hongrun1995.cn/products-hvs.html"
       },
@@ -212,11 +275,11 @@
         series: "HVS Multi-Surgery High-Vacuum Suction Plant",
         powerKw: 1.9,
         powerHp: 2.5,
-        suctionFlowLpm: 1500,
+        suctionFlowLpm: 1800,
         vacuumMbar: -180,
         chairCapacity: "4-5 Dental Chairs",
-        separationType: "Dual Centrifugal Dynamic Fluid Separation with Bacterial HEPA Filter",
-        noiseDba: 60,
+        separationType: "Dual dynamic fluid separation; exhaust filtration is configuration-specific",
+        noiseDba: 76,
         drainType: "Continuous Automated Drainage",
         url: "https://www.hongrun1995.cn/products-hvs.html"
       },
@@ -226,12 +289,12 @@
         series: "HVS Central Clinic / Hospital Vacuum Station",
         powerKw: 3.3,
         powerHp: 4.5,
-        suctionFlowLpm: 2800,
+        suctionFlowLpm: 3600,
         vacuumMbar: -220,
         chairCapacity: "8-10 Dental Chairs",
         separationType: "Dual Dynamic Separator + Inverter Variable Frequency Drive",
-        noiseDba: 62,
-        drainType: "Continuous Automated Drain with Medical Exhaust HEPA H14",
+        noiseDba: 76,
+        drainType: "Continuous automated drain; verify model-specific exhaust filtration",
         url: "https://www.hongrun1995.cn/products-hvs.html"
       },
       {
@@ -240,9 +303,9 @@
         series: "CSSD & Dental Purified Water Treatment System",
         powerKw: 0.75,
         flowLpmAt5Bar: 100,
-        conductivityUsCm: "< 1.0 μS/cm (Complies with YY/T 1244 & EN 285)",
+        conductivityUsCm: "Model-specific output target; validate against intended use and applicable water-quality requirements",
         tankVolumeL: 80,
-        filtrationStages: "5-Stage (Sediment + Dual Carbon + Dow Filmtec RO + EDI + UV Sterilizer)",
+        filtrationStages: "Configuration-specific sediment, carbon, RO, EDI and UV treatment stages",
         chairCapacity: "Central supply for 1-10 dental chairs & autoclaves",
         url: "https://www.hongrun1995.cn/products-water.html"
       }
@@ -256,9 +319,7 @@
         scope: "Complete Oil-Free Scroll Air Compressor Units (HW-200 to HW-3600), total oil purity Class 0 (Tested acc. ISO 8573-2:2018 & ISO 8573-5:2001)",
         holder: "Hongrun Compressor Technology Co., Ltd. (Direct Holder)",
         measuredOilContent: "<0.003 mg/m³ (Well below the 0.01 mg/m³ Class 0 threshold)",
-        particleClass: "Class 1 (Solid particles <= 0.1 - 0.5 μm <= 20,000 / m³)",
-        humidityClass: "Class 2 (Pressure dew point -40°C)",
-        significance: "Zero risk of lipid contamination in dental restorations, implants, or ICU patient airways."
+        significance: "Documents total-oil purity within the certified complete-HW scope; installation validation and model-specific documentation remain required."
       },
       {
         standard: "ISO 13485:2016 / GB/T 42061-2022",
@@ -289,7 +350,7 @@
         standard: "NMPA Class II Medical Device Registration (China)",
         category: "National Regulatory Approval",
         registrationNo: "鲁械注准 20182560199",
-        status: "Fully licensed for Class II medical device clinical supply"
+        status: "Class II registration within the listed device scope; verify the exact supplied model"
       }
     ]
   };
@@ -306,10 +367,23 @@
   }
 
   // 3. Register Hongrun Tool 1: search_products
+  function matchesChairCapacity(capacity, target) {
+    if (!Number.isInteger(target) || target < 1 || typeof capacity !== "string") return true;
+    const text = capacity.replace(/,/g, "");
+    if (/sizing required|engineering review|assembly/i.test(text) && !/\d/.test(text)) return true;
+    const range = text.match(/(\d+)\s*(?:-|–|to)\s*(\d+)/i);
+    if (range) return target >= Number(range[1]) && target <= Number(range[2]);
+    const plus = text.match(/(\d+)\s*\+/);
+    if (plus) return target >= Number(plus[1]);
+    const single = text.match(/(\d+)\s*(?:Dental\s*)?Chairs?/i);
+    if (single) return target === Number(single[1]);
+    return true;
+  }
+
   const toolSearchProducts = {
     name: "search_products",
     description:
-      "Search Hongrun's medical-grade Class 0 oil-free compressors, vacuum suction units, and pure water systems. Filter by category, chair count, power, or flow rate.",
+      "Search Hongrun's oil-free medical compressors, vacuum suction units, and pure water systems. Filter by category, chair count, power, or flow. TÜV total-oil Class 0 certification applies only to complete HW-200 through HW-3600 scroll units.",
     inputSchema: {
       type: "object",
       properties: {
@@ -339,6 +413,9 @@
       if (params.category && params.category !== "all") {
         results = results.filter(p => p.category === params.category);
       }
+      if (Number.isInteger(params.dentalChairs) && params.dentalChairs >= 1) {
+        results = results.filter(p => matchesChairCapacity(p.chairCapacity, params.dentalChairs));
+      }
       if (typeof params.maxPowerKw === "number") {
         results = results.filter(p => p.powerKw <= params.maxPowerKw);
       }
@@ -366,7 +443,7 @@
   const toolCalculateDentalSizing = {
     name: "calculate_dental_sizing",
     description:
-      "Calculate engineering sizing for dental clinics and hospitals. Input the chair count and simultaneous usage factor to get exact air flow (L/min), vacuum suction requirements, and recommended Hongrun models.",
+      "Calculate preliminary dental air and vacuum demand from chair count and a planning diversity factor, then return candidate catalogue models for engineering validation.",
     inputSchema: {
       type: "object",
       properties: {
@@ -376,7 +453,7 @@
         },
         simultaneousFactor: {
           type: "number",
-          description: "Simultaneous utilization factor (between 0.5 and 1.0, typical standard is 0.7)."
+          description: "Project planning factor (0.4 to 1.0); 0.70 is the default planning assumption, not an ISO or NFPA requirement."
         },
         includeSuction: {
           type: "boolean",
@@ -404,30 +481,36 @@
       let suctionModel = "";
       let redundancyAdvice = "";
 
-      if (n <= 3) {
-        compressorModel = "HY-200 (38L) or HY-300 (50L)";
-        recommendedCompressor = "HY-200 (0.75kW, 150 L/min, 38L tank) or HY-300 (1.1kW, 200 L/min, 50L slim tank) with Saint-Gobain diamond-coated PTFE rings";
-        suctionModel = "HVS-1 or HVS-2";
-        recommendedSuction = "HVS-1 / HVS-2 Single-Surgery Dynamic Vacuum Unit (0.75–1.3kW, 600 L/min, >85% intraoral aerosol capture)";
-        redundancyAdvice = "Single-unit configuration with 38L/50L antibacterial vessel is optimal for 1-3 chair practices.";
-      } else if (n <= 8) {
-        compressorModel = "HYTG-300 (90L Dual-Pump Redundant)";
-        recommendedCompressor = "HYTG-300 Twin Synchronized ZB300 Heads (2.2kW, 400 L/min @ 5 bar, 90L tank). Dual-pump parallel architecture ensures zero clinical downtime.";
+      if (n <= 2) {
+        compressorModel = "HY-100 (24L) or HY-200 (38L)";
+        recommendedCompressor = "HY-100 (0.55kW, 100 L/min, 24L) or HY-200 (0.75kW, 150 L/min, 38L); compare duty cycle, installed footprint, and model-specific documentation";
+        suctionModel = "HVS-1 or HVS-3";
+        recommendedSuction = "HVS-1 (0.75kW, ≥300 L/min) or HVS-3 (1.5kW, ≥1,200 L/min)";
+        redundancyAdvice = "Select from the project calculation and verify the maintenance configuration.";
+      } else if (n <= 5) {
+        compressorModel = "HY-300 (50L) or HYTG-300 (90L)";
+        recommendedCompressor = "HY-300 (1.1kW, 200 L/min, 50L) or HYTG-300 (2.2kW, 400 L/min, 90L, two ZB300 heads)";
         suctionModel = "HVS-3 or HVS-5";
-        recommendedSuction = "HVS-3 / HVS-5 Multi-Chair Dynamic Centrifugal Suction Plant (1.5kW, 1200 L/min)";
-        redundancyAdvice = "Dual-pump redundancy is essential: if one pump head requires maintenance, the second head maintains uninterrupted dental operatory flow.";
-      } else if (n <= 15) {
-        compressorModel = "HBG-800 or HBG-1200";
-        recommendedCompressor = "HBG-800 Dual 4V Medical Air Station (6.0kW, 1000 L/min) or HBG-1200 Triple 4V Station (9.0kW, 1500 L/min) with twin-tower desiccant -40°C dew point";
-        suctionModel = "HVS-7 or HVS-10";
-        recommendedSuction = "HVS-7 / HVS-10 Central Vacuum Station (2.5–3.3kW, 2500 L/min)";
-        redundancyAdvice = "N+1 Dual Group System Redundancy mandated by ISO 7396-1 / HTM 02-01 hospital standards.";
+        recommendedSuction = "HVS-3 (1.5kW, ≥1,200 L/min) or HVS-5 (1.9kW, ≥1,800 L/min)";
+        redundancyAdvice = "Evaluate multi-head maintenance capacity and project redundancy requirements; do not infer full-flow operation during maintenance.";
+      } else if (n <= 8) {
+        compressorModel = "HYTG-300 (90L) or HYT-400 (120L) where one-head capacity is required";
+        recommendedCompressor = "HYTG-300 provides 400 L/min total and about 200 L/min with one head unavailable; HYT-400 provides 600 L/min total and about 400 L/min with one head unavailable. The default eight-chair planning load is 280 L/min, so HYTG-300 does not cover that load in the one-head-out condition.";
+        suctionModel = "HVS-5 or HVS-10";
+        recommendedSuction = "HVS-5 (1.9kW, ≥1,800 L/min) or HVS-10 (3.3kW, ≥3,600 L/min)";
+        redundancyAdvice = "Validate simultaneous demand, terminal vacuum, pipe losses, controls and remaining capacity; redundancy does not guarantee zero downtime.";
+      } else if (n <= 16) {
+        compressorModel = "HYT-500 (200L) or engineered central plant";
+        recommendedCompressor = "HYT-500 (four 1.1kW ZB300 heads, 800 L/min, 200L) or an engineered HW central plant";
+        suctionModel = "HVS-10 or HVS-15";
+        recommendedSuction = "HVS-10 (3.3kW, ≥3,600 L/min) or HVS-15 (5.7kW, ≥5,100 L/min)";
+        redundancyAdvice = "Engineering must validate system pressure, receiver sizing, redundancy, and model-specific air-quality documentation.";
       } else {
-        compressorModel = "HW Series Multi-Scroll Hospital Central Gas Station (HW-220 to HW-3600)";
-        recommendedCompressor = "Custom Modular Scroll Air Station (Displacement up to 3,600 L/min with Siemens PLC and cloud IoT remote monitoring)";
-        suctionModel = "HVS-15 / HVS-30 Hospital Central Suction Plant";
-        recommendedSuction = "Modular Multi-Pump Vacuum Plant with dual H13 bacterial filtration and automatic alternation";
-        redundancyAdvice = "Full hospital-grade N+1 or N+2 redundancy with dual independent power changeover panels.";
+        compressorModel = "Engineered HW Series Hospital Central Gas Station (HW-200 to HW-3600 complete units)";
+        recommendedCompressor = "Custom modular scroll plant using complete certified HW units where specified; total-oil Class 0 certificate AK 50528335 0001 applies to the certified HW unit scope";
+        suctionModel = "HVS-20 to HVS-50 / engineered central plant";
+        recommendedSuction = "Select from HVS-20, HVS-25, HVS-30, HVS-40, or HVS-50 using the validated central vacuum calculation";
+        redundancyAdvice = "Design redundancy, controls, exhaust treatment, and power changeover to the project standard; a component certificate alone does not establish plant compliance.";
       }
 
       // Contextual Engineering Whitepaper Link
@@ -448,18 +531,18 @@
           calculatedFlowNeeded: `${requiredAirFlowLpm} L/min @ 5 bar (Q = N × 50 × ${factor})`,
           recommendedModel: compressorModel,
           recommendationDetails: recommendedCompressor,
-          qualityStandard: "ISO 8573-1:2010 Class 0 (100% Oil-Free, residual oil < 0.003 mg/m³)",
-          pressureDewPoint: "-40°C Class 2 (Zero pipeline condensation)"
+          qualityStandard: "Oil-free design with model-specific test documentation. TÜV ISO 8573-1 total-oil Class 0 certificate AK 50528335 0001 covers complete HW-200 through HW-3600 scroll units only.",
+          pressureDewPoint: "Confirm the selected model/configuration; -40°C is a design target where a desiccant dryer is specified."
         },
         suctionRequirements: includeSuction ? {
           calculatedSuctionFlowNeeded: `${requiredVacuumLpm} L/min @ -20 kPa (V = N × 250 × ${factor})`,
           recommendedModel: suctionModel,
           recommendationDetails: recommendedSuction,
-          aerosolSuppression: ">85% intraoral aerosol cloud capture rate"
+          aerosolSuppression: "Project-specific aerosol-control validation required; no fixed capture percentage is assumed"
         } : "Not requested",
         waterPurification: includeWater ? {
-          recommendedSystem: "HRC-60 to HRC-500 Medical Water Treatment Plant (RO + EDI + UV-C + Ozone)",
-          conductivity: "≤ 1.0 μS/cm (Prevents dental handpiece turbine scaling & autoclave staining)"
+          recommendedSystem: "HRC-60, HRC-100S, HRC-300, HRC-500, HRC-1000, or HRC-2000 selected from required water demand",
+          conductivity: "Model-specific output conductivity; confirm the selected configuration and applicable water-quality requirement."
         } : "Optional upon request",
         applicableRegulatoryStandards: [
           "ISO 22052 (Dental Air Purity)",
@@ -510,14 +593,14 @@
         dental_clinic: {
           sectorName: "Dental Clinics & Stomatology Centers (1 to 50 Chairs)",
           clinicalChallenges: [
-            "Oil aerosols (>0.05 mg/m³) contaminate etched dentin, cutting composite resin bond strength by 35%-60%",
-            "Trace moisture & carbonized particles cause premature failure of 400,000 RPM handpiece ceramic bearings",
-            "Intraoral aerosol plumes create severe cross-infection risks without high-vacuum evacuation"
+            "Oil contamination can compromise resin bonding and precision handpiece performance",
+            "Moisture and particles can damage pneumatic components and instruments",
+            "Intraoral aerosol plumes require project-specific evacuation and infection-control measures"
           ],
-          solutionArchitecture: "Turnkey Trio: ISO 8573-1 Class 0 oil-free air + HVS 2-stage cyclone vacuum + HRC purified water loop",
+          solutionArchitecture: "Turnkey trio: oil-free air with model-specific documentation, HVS cyclone vacuum, and HRC purified-water loop. TÜV total-oil Class 0 certification is limited to complete HW-200 through HW-3600 scroll units.",
           recommendedEquipment: [
             { model: "HY-200 (38L)", application: "1-2 Chairs Boutique Practice", url: "https://www.hongrun1995.cn/products-hy.html" },
-            { model: "HYTG-300 (90L)", application: "4-8 Chairs Dual-Pump Redundancy", url: "https://www.hongrun1995.cn/products-hy.html" },
+            { model: "HYTG-300 (90L)", application: "4-8 chair candidate; about 200 L/min with one head out requires load validation", url: "https://www.hongrun1995.cn/products-hy.html" },
             { model: "HVS-5 / HVS-10", application: "Dental Vacuum Fluid Separation", url: "https://www.hongrun1995.cn/products-hvs.html" },
             { model: "HRC-100S", application: "Dental Pure Water Treatment", url: "https://www.hongrun1995.cn/products-water.html" }
           ],
@@ -536,7 +619,7 @@
             "Pipeline condensation in 1,000m+ hospital loops creates bacterial biofilms (Pseudomonas / Legionella)",
             "Strict compliance required for government health tenders and international hospital accreditations"
           ],
-          solutionArchitecture: "Multi-scroll modular skids with N+1 automatic rotation, dual-tower PSA desiccant drying (-40°C PDP), 5-stage sterile filtration, and Siemens PLC IoT telemetry",
+          solutionArchitecture: "Project-configured compressor skids with validated N+1/N+2 capacity, model-specific desiccant drying and filtration, and optional monitoring; pressure dew point and microbial control require installation-specific validation.",
           recommendedEquipment: [
             { model: "HW Series (HW-200 to HW-3600)", application: "Silent Scroll Base Air Units", url: "https://www.hongrun1995.cn/products-hospital.html" },
             { model: "HBG-800 / HBG-1200", application: "Multi-4V Hospital Air Stations", url: "https://www.hongrun1995.cn/products-hospital.html" },
@@ -551,15 +634,15 @@
         analytical_lab: {
           sectorName: "Precision Analytical Laboratories & Cleanrooms",
           clinicalChallenges: [
-            "Trace hydrocarbon vapors elevate LC-MS / GC-MS baseline noise, obscuring ppm-level trace detection",
-            "Pneumatic moisture damages sensitive analytical actuators and optical sensors"
+            "Oil and volatile contaminants can elevate LC-MS / GC-MS baseline noise and interfere with trace detection",
+            "Pneumatic moisture can damage sensitive analytical actuators and optical sensors"
           ],
-          solutionArchitecture: "HYG Clean Compressed Air Stations delivering 0.003 mg/m³ hydrocarbon-free air with 13X synthetic molecular sieves (-40°C to -70°C dew point)",
+          solutionArchitecture: "HYG clean compressed-air stations with desiccant drying; residual-oil and dew-point performance must be confirmed from the selected model's test documentation.",
           recommendedEquipment: [
-            { model: "HYG-301 / HYG-302", application: "Analytical LC-MS Clean Air Station", url: "https://www.hongrun1995.cn/products-cleanair.html" },
-            { model: "HVTG-400 / HVTG-900", application: "Laboratory High-Purity Supply", url: "https://www.hongrun1995.cn/products-cleanair.html" }
+            { model: "HYG-301 / HYG-400 / HYG-1000", application: "Analytical clean-air stations", url: "https://www.hongrun1995.cn/products-cleanair.html" },
+            { model: "HVTG-900 / HVTG-1200 / HVTG-1600", application: "Laboratory high-volume supply", url: "https://www.hongrun1995.cn/products-cleanair.html" }
           ],
-          applicableStandards: ["ISO 8573-1 Class 0 (Residual Oil)", "ISO 8573-1 Class 2/1 (Pressure Dew Point)"],
+          applicableStandards: ["ISO 8573-1 (project-specific total-oil, particle and moisture classes)"],
           authoritativeWhitepapers: [
             "https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/",
             "https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/"
@@ -568,16 +651,16 @@
         oem_manufacturing: {
           sectorName: "Precision Industrial OEM & Global Component Supply",
           clinicalChallenges: [
-            "Global dental and medical equipment brands require reliable, long-life, certified bare compressor blocks",
-            "High temperature and continuous duty demands without lubrication oil"
+            "Global dental and medical equipment brands require reliable, documented bare compressor blocks",
+            "High-temperature and continuous-duty applications require model-specific validation without lubrication oil"
           ],
-          solutionArchitecture: "Direct factory OEM bare blocks: Saint-Gobain diamond-coated PTFE rings (20,000h wear life), DMG MORI 5-axis CNC drive shafts (Ra ≤ 0.2 μm), Sandvik flapper valves (>100M cycles)",
+          solutionArchitecture: "Direct-factory OEM bare blocks using self-lubricating PTFE components and precision CNC manufacturing. Component life depends on model, load, temperature, air quality and maintenance; certification applies to the complete supplied assembly, not to bare components.",
           recommendedEquipment: [
             { model: "ZB-100 / ZB-200 / ZB-300", application: "Wobble-Piston Bare Pump Heads", url: "https://www.hongrun1995.cn/products-core.html" },
             { model: "4V Cylinder Blocks (2.2-3.0kW)", application: "High-Capacity Compression Modules", url: "https://www.hongrun1995.cn/products-core.html" },
             { model: "PSA Twin Adsorption Towers", application: "Medical Desiccant Dryer Modules", url: "https://www.hongrun1995.cn/products-core.html" }
           ],
-          applicableStandards: ["ISO 13485:2016", "ISO 9001:2015", "CE MDR (EU 2017/745)", "NMPA Class II Medical Manufacturer License"],
+          applicableStandards: ["ISO 13485:2016", "ISO 9001:2015", "CE MDR (EU 2017/745) within supplied scope", "NMPA Class II registration within supplied device scope"],
           authoritativeWhitepapers: [
             "https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/",
             "https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/"
@@ -654,7 +737,7 @@
             type: "text",
             text: JSON.stringify({
               manufacturer: HONGRUN_DATABASE.company.name,
-              auditSummary: "100% genuine accredited compliance documentation. Hard copies with test curves available on request.",
+              auditSummary: "Certification data is provided for scope review; document copies and test curves are supplied after request verification.",
               officialContact: HONGRUN_DATABASE.company.officialEmail,
               certificates: matches
             }, null, 2)
@@ -704,64 +787,87 @@
       required: ["buyerName", "email", "country"]
     },
     execute: async function (params) {
-      if (!params || !params.email || !params.email.includes("@")) {
-        return {
-          content: [
-            {
-              type: "text",
-              text: JSON.stringify({
-                status: "error",
-                message: "A valid email address is required to dispatch formal quotation and technical submittals."
-              })
-            }
-          ]
-        };
+      const email = typeof params?.email === "string" ? params.email.trim() : "";
+      const buyerName = typeof params?.buyerName === "string" ? params.buyerName.trim() : "";
+      const country = typeof params?.country === "string" ? params.country.trim() : "";
+      const invalid = function(message) {
+        return { content: [{ type: "text", text: JSON.stringify({ status: "error", message, retryable: false }, null, 2) }] };
+      };
+      if (!buyerName || !country || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return invalid("A contact name, country, and valid email address are required.");
+      }
+      if (params.dentalChairs !== undefined && (!Number.isInteger(params.dentalChairs) || params.dentalChairs < 1 || params.dentalChairs > 1000)) {
+        return invalid("dentalChairs must be a whole number between 1 and 1000.");
       }
 
       const timestamp = new Date().toISOString();
       const randomSuffix = Math.floor(1000 + Math.random() * 9000);
       const trackingCode = `HR-RFQ-${new Date().getFullYear()}${String(new Date().getMonth() + 1).padStart(2, "0")}-${randomSuffix}`;
-
-      const confirmation = {
-        status: "success",
-        rfqReferenceCode: trackingCode,
-        submissionTimestamp: timestamp,
-        receivedData: {
-          buyerName: params.buyerName,
-          email: params.email,
-          country: params.country,
-          organization: params.organizationOrClinic || "Private Practice / Clinic",
-          targetEquipment: params.targetProducts || "Comprehensive Dental Gas Solution",
-          clinicScale: params.dentalChairs ? `${params.dentalChairs} Chairs` : "Not specified",
-          notes: params.notes || "None provided"
-        },
-        serviceCommitment: {
-          sla: "Formal response & preliminary engineering quotation dispatched within 12 business hours",
-          directEmail: HONGRUN_DATABASE.company.officialEmail,
-          whatsAppUrgentSupport: "+86 139 6441 6725",
-          headquarters: HONGRUN_DATABASE.company.headquarters
-        },
-        nextSteps: "Your RFQ parameters have been received. An export sales engineer will send the official proforma quotation and CAD dimensional drawings to " + params.email + "."
+      const payload = {
+        ticket_id: trackingCode,
+        buyer_name: buyerName,
+        email: email,
+        country: country,
+        organization: typeof params.organizationOrClinic === "string" ? params.organizationOrClinic.trim() : "Private Practice / Clinic",
+        target_products: typeof params.targetProducts === "string" ? params.targetProducts.trim() : "Comprehensive Dental Gas Solution",
+        dental_chairs: Number.isInteger(params.dentalChairs) ? params.dentalChairs : "",
+        notes: typeof params.notes === "string" ? params.notes.trim() : "",
+        submitted_at: timestamp,
+        source_page: typeof window !== "undefined" ? window.location.href : "WebMCP",
+        lead_source: "webmcp-agent",
+        _subject: "WebMCP Engineering RFQ " + trackingCode
       };
 
+      const controller = new AbortController();
+      const timeout = setTimeout(function() { controller.abort(); }, 20000);
       try {
-        if (typeof window !== "undefined" && window.localStorage) {
-          const pastInquiries = JSON.parse(localStorage.getItem("hongrun_rfq_log") || "[]");
-          pastInquiries.push({ code: trackingCode, time: timestamp, email: params.email });
-          localStorage.setItem("hongrun_rfq_log", JSON.stringify(pastInquiries));
-        }
-      } catch (e) {
-        // Storage restricted or unavailable
-      }
+        const response = await fetch("https://formspree.io/f/mqazkndr", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(payload),
+          signal: controller.signal
+        });
+        if (!response.ok) throw new Error("Form service returned HTTP " + response.status);
 
-      return {
-        content: [
-          {
+        const confirmation = {
+          status: "success",
+          rfqReferenceCode: trackingCode,
+          submissionTimestamp: timestamp,
+          receivedData: {
+            buyerName: buyerName,
+            email: email,
+            country: country,
+            organization: payload.organization,
+            targetEquipment: payload.target_products,
+            clinicScale: payload.dental_chairs ? `${payload.dental_chairs} Chairs` : "Not specified",
+            notes: payload.notes || "None provided"
+          },
+          directEmail: HONGRUN_DATABASE.company.officialEmail,
+          whatsAppSupport: "+86 139 6441 6725",
+          headquarters: HONGRUN_DATABASE.company.headquarters,
+          nextSteps: "The inquiry desk confirmed receipt and will review your requirements before following up at the email address provided."
+        };
+        return { content: [{ type: "text", text: JSON.stringify(confirmation, null, 2) }] };
+      } catch (err) {
+        console.error("[WebMCP] RFQ transmission failed:", err);
+        return {
+          content: [{
             type: "text",
-            text: JSON.stringify(confirmation, null, 2)
-          }
-        ]
-      };
+            text: JSON.stringify({
+              status: "error",
+              message: "The inquiry service did not confirm delivery. No success receipt was issued.",
+              retryable: true,
+              rfqAttemptReference: trackingCode,
+              fallback: {
+                email: HONGRUN_DATABASE.company.officialEmail,
+                whatsapp: "+86 139 6441 6725"
+              }
+            }, null, 2)
+          }]
+        };
+      } finally {
+        clearTimeout(timeout);
+      }
     }
   };
 
@@ -785,7 +891,7 @@
       try {
         const originalExecute = tool.execute;
         tool.execute = async function (params) {
-          if (typeof window !== "undefined" && typeof window.gtag === "function") {
+          if (typeof window !== "undefined" && window.hrCookieConsent && window.hrCookieConsent.getState() === "accepted" && typeof window.gtag === "function") {
             try {
               window.gtag("event", "webmcp_agent_invocation", {
                 event_category: "AI Agent Interaction",

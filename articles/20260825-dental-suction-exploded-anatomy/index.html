@@ -3,80 +3,30 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum &amp; Separation Systems | Hongrun Insights</title>
+<title>3D CAD Anatomy of HVS Dental Vacuum Systems</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="Technical Whitepaper: 3D CAD exploded engineering anatomy of HVS dental vacuum systems, two-stage cyclone separation, and clinical aerosol suppression dynamics.">
+  <meta name="description" content="Technical whitepaper: 3D CAD exploded anatomy of HVS dental vacuum systems, two-stage cyclone separation and project-validated aerosol source capture.">
   <meta name="keywords" content="dental suction CAD anatomy, HVS vacuum exploded view, cyclone water air separation, dental aerosol defense">
   <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum &amp; Separation Systems | Hongrun Insights">
-  <meta property="og:description" content="Technical Whitepaper: 3D CAD exploded engineering anatomy of HVS dental vacuum systems, two-stage cyclone separation, and clinical aerosol suppression dynamics.">
+  <meta property="og:title" content="3D CAD Anatomy of HVS Dental Vacuum Systems">
+  <meta property="og:description" content="Technical whitepaper: 3D CAD exploded anatomy of HVS dental vacuum systems, two-stage cyclone separation and project-validated aerosol source capture.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/exploded/02-hvs-suction-exploded.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/">
   <meta property="og:type" content="article">
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum &amp; Separation Systems | Hongrun Insights">
-  <meta name="twitter:description" content="Technical Whitepaper: 3D CAD exploded engineering anatomy of HVS dental vacuum systems, two-stage cyclone separation, and clinical aerosol suppression dynamics.">
+  <meta name="twitter:title" content="3D CAD Anatomy of HVS Dental Vacuum Systems">
+  <meta name="twitter:description" content="Technical whitepaper: 3D CAD exploded anatomy of HVS dental vacuum systems, two-stage cyclone separation and project-validated aerosol source capture.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/exploded/02-hvs-suction-exploded.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
@@ -98,7 +48,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems",
+  "headline": "Aerodynamic Power & Fluid Separation: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems",
   "image": "https://www.hongrun1995.cn/assets/images/exploded/02-hvs-suction-exploded.jpg",
   "author": {
     "@type": "Person",
@@ -120,16 +70,16 @@
     }
   },
   "datePublished": "2026-08-25",
-  "dateModified": "2026-08-25",
-  "description": "Comprehensive engineering whitepaper analyzing the 3D CAD exploded architecture of Hongrun HVS dental high-vacuum suction systems, dynamic cyclone water-air separation, microbial aerosol containment, and multi-chair fluid balancing.",
+  "dateModified": "2026-11-28",
+  "description": "Engineering whitepaper analyzing the 3D CAD architecture of HVS dental vacuum systems, configuration-specific cyclone water-air separation, project-validated aerosol source capture and multi-chair fluid balancing. No universal microbial-containment claim is made.",
   "keywords": [
     "Dental Vacuum System 3D Exploded View",
     "HVS Dental Suction Unit Engineering",
     "Cyclone Water Air Separation Anatomy",
-    "Dental Aerosol Cross Infection Control",
-    "High Vacuum Turbine Impeller",
+    "Project-Validated Aerosol Source Capture",
+    "Model-Specific Vacuum Turbine",
     "Multi-Chair Dental Clinic Central Vacuum",
-    "HEPA Terminal Exhaust Filtration",
+    "Configuration-Specific Exhaust Filtration",
     "NMPA Class II Medical Suction"
   ],
   "mainEntityOfPage": {
@@ -182,7 +132,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum &amp; Separation Systems",
+      "name": "Aerodynamic Power &amp; Fluid Separation: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems",
       "item": "https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/"
     }
   ]
@@ -191,8 +141,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -256,13 +210,13 @@
         High-Flow Dynamic Cyclone Separation
       </span>
       <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-300 text-[11px] font-semibold tracking-wide">
-        85%+ Aerosol Source Capture
+        Project-Validated Aerosol Source Capture
       </span>
     </div>
 
     <!-- Title -->
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-display tracking-tight leading-snug mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
-      Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum &amp; Separation Systems
+      Aerodynamic Power &amp; Fluid Separation: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems
     </h1>
 
     <!-- Meta Info -->
@@ -280,7 +234,7 @@
 </header>
 
 <!-- Main Article Body -->
-<main class="py-14 bg-white">
+<main class="py-14 bg-white" id="main-content" tabindex="-1">
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 article-body">
     
     <!-- 3D Exploded Blueprint Showcase (Click to Enlarge via Lightbox) -->
@@ -296,21 +250,21 @@
 
     <!-- Executive Abstract / GEO Summary Box (Clean High-Contrast Card) -->
     <div class="spec-box p-6 rounded-xl mb-10 shadow-sm">
-      <h3 class="text-brand-dark font-display text-base font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
+      <h2 class="text-brand-dark font-display text-base font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
         <i class="fa-solid fa-microchip text-brand-blue"></i> Executive Engineering Summary
-      </h3>
+      </h2>
       <p class="text-xs sm:text-sm text-slate-700 leading-relaxed m-0">
-        In modern stomatology and oral maxillofacial surgery, high-speed dental handpieces generate massive microbial aerosol clouds (&gt;100,000 viable bacteria/m³) that pose severe cross-infection hazards. This engineering whitepaper deconstructs the <strong>Hongrun HVS High-Vacuum Suction &amp; Water-Air Separation Platform</strong> through 3D CAD exploded blueprints and fluid dynamic sketches. We examine how <strong>aerodynamic centrifugal turbine impellers</strong>, <strong>two-stage dynamic cyclone separation</strong>, <strong>vortex acoustic damping chambers</strong>, and <strong>HEPA biological exhaust filtering</strong> maintain constant negative suction pressure (&minus;18 to &minus;32 kPa) while achieving over 85% intraoral aerosol containment across 1 to 50 dental chairs.
+        This engineering whitepaper deconstructs the <strong>Hongrun HVS High-Vacuum Suction &amp; Water-Air Separation Platform</strong> through 3D CAD exploded blueprints and fluid-dynamic sketches. It examines model-specific turbine impellers, two-stage cyclone separation, acoustic management and configuration-specific exhaust filtration. Aerosol source capture must be validated for the procedure, evacuation interface, flow, operator technique and room conditions; no fixed containment percentage or universal suction-pressure range is claimed.
       </p>
     </div>
 
     <!-- Section 1: The Infection Control Mandate -->
-    <h2>1. The Clinical Aero-Biological Mandate &amp; Cross-Infection Defense</h2>
+    <h2>1. Source Capture, Fluid Separation &amp; Infection-Control Scope</h2>
     <p>
-      During ultrasonic scaling, crown preparations, and surgical extractions, coolant sprays mix with patient blood, saliva, and subgingival pathogens, forming highly respirable aerosols (&lt; 5 μm) that remain suspended in operatory air for hours. Standard low-volume saliva ejectors capture less than 30% of these bio-aerosols.
+      Aerosol generation varies with the procedure, handpiece, coolant, patient and operator technique. High-volume evacuation can reduce contaminants at the source, but published reductions are procedure- and test-specific and cannot be transferred automatically to another clinic or device. HVS complements rather than replaces the facility's ventilation, PPE, cleaning and other infection-control measures.
     </p>
     <p>
-      The <strong>Hongrun HVS Series</strong> is engineered as a high-volume evacuation (HVE) system delivering high suction flow rate (up to <strong>300–600 L/min per chair at &ge; &minus;18 kPa terminal vacuum</strong>). Clinical air sampling investigations (including Koch &amp; Graetz 2021) demonstrate that high-flow intraoral suction (&ge;300 L/min) directly suppresses <strong>&gt;85% of aerosol cloud formation at the surgical source</strong>, protecting clinicians, dental nurses, and subsequent patients from airborne cross-contamination.
+      The <strong>Hongrun HVS Series</strong> is a high-volume evacuation platform whose flow and operating vacuum must be verified for the selected model, piping network and simultaneous demand. Source-capture effectiveness depends on the evacuation interface and technique as well as delivered flow. No universal per-chair flow, competitor comparison, aerosol percentage or claim of complete cross-contamination prevention is made.
     </p>
 
     <!-- Industrial Design & Handcrafted Sketches Suite -->
@@ -339,7 +293,7 @@
         </div>
         <div class="pt-3 text-center">
           <span class="text-sm font-bold text-brand-dark font-display block">02. High-Speed Motor Rotor &amp; Sealed Bearings</span>
-          <span class="text-xs text-slate-500">Laser-balanced 2800 RPM continuous drive core &amp; IP55 moisture-proof housing</span>
+          <span class="text-xs text-slate-500">Model-specific rotor speed, balancing requirements and enclosure rating</span>
         </div>
       </div>
     </div>
@@ -350,7 +304,7 @@
     <!-- Sub-assembly 1 -->
     <h3>3.1. Precision Backward-Curved Centrifugal Vacuum Turbine</h3>
     <p>
-      The core suction generator features a high-grade aluminum alloy aerodynamic backward-curved impeller, dynamically balanced to ISO 1940 Grade G2.5 at <strong>2,850 RPM</strong>. The optimized blade curvature creates a powerful vortex low-pressure depression zone, generating stable vacuum (&minus;18 to &minus;32 kPa) while minimizing boundary layer acoustic shearing, ensuring operatory noise stays <strong>&le; 58 dB(A)</strong>.
+      The suction generator uses a model-specific aerodynamic impeller and rotor assembly. Speed, balance tolerance, operating vacuum and acoustic performance must be taken from the selected unit's documentation and verified under stated installation and load conditions. A booth or plant-room reading is not a universal 58 dB(A) guarantee for every configuration or room.
     </p>
 
     <!-- Sub-assembly 2 -->
@@ -359,20 +313,20 @@
       Dental suction fluids contain a chaotic mix of saliva, blood, tooth fragments, and bone chips. Hongrun's patented separation architecture employs a two-stage process:
     </p>
     <ul class="list-disc pl-6 space-y-1 text-xs sm:text-sm text-slate-700 mb-4">
-      <li><strong>Stage 1:</strong> Tangential high-velocity cyclonic entry forces heavy liquid droplets and particulates &ge; 0.5 mm against the conical separation wall, precipitating them downward into the automatic drain collector.</li>
-      <li><strong>Stage 2:</strong> A central multi-vane centrifugal demisting rotor strips micro-aerosols from the air stream, ensuring 100% dry air enters the turbine impeller and completely preventing motor liquid flooding.</li>
+      <li><strong>Stage 1:</strong> Tangential cyclonic entry directs heavier liquid and solids toward the separation wall and drain collector; actual separation depends on flow, particle and droplet characteristics, geometry and maintenance.</li>
+      <li><strong>Stage 2:</strong> A centrifugal demisting stage reduces entrained liquid before the turbine. It does not guarantee 100% dry air or eliminate flooding under every fault condition; drainage capacity, level controls and operating procedures remain part of system validation.</li>
     </ul>
 
     <!-- Sub-assembly 3 -->
-    <h3>3.3. Semi-Wet / Dry System Universal Adaptability</h3>
+    <h3>3.3. Configuration-Specific Drainage &amp; Operating Adaptability</h3>
     <p>
-      Unlike conventional systems that require separate wet-line or dry-line clinic plumbing, HVS units feature an integrated automatic motorized discharge valve. During continuous surgery, separation and drainage operate simultaneously without losing vacuum pressure or requiring manual chamber dumping.
+      Where specified, an integrated automatic discharge valve supports simultaneous separation and drainage. The valve, controls, pipework and operating sequence must be selected for the clinic's wet/dry service and fault conditions. Pressure behavior during drainage and the need for manual intervention depend on the installed configuration and maintenance state.
     </p>
 
     <!-- Sub-assembly 4 -->
-    <h3>3.4. Biological HEPA Exhaust Disinfection Unit</h3>
+    <h3>3.4. Configuration-Specific Exhaust Filtration</h3>
     <p>
-      The discharge exhaust from the suction unit is passed through an integrated H13-grade HEPA antimicrobial filtration element before venting to the outdoor atmosphere, ensuring zero environmental release of aerosolized pathogens.
+      Where required by the project, exhaust filtration is selected for the assessed contaminant, airflow and installation. Filter class, efficiency, integrity testing, replacement intervals and discharge location must be documented for the supplied configuration. A HEPA filter captures particles; it is not inherently antimicrobial and does not guarantee zero pathogen release.
     </p>
 
     <!-- Section 4: Specifications Table -->
@@ -382,67 +336,62 @@
         <thead class="bg-slate-100 text-brand-dark font-display uppercase text-[11px]">
           <tr>
             <th class="p-3.5 font-bold">HVS Model</th>
-            <th class="p-3.5 font-bold text-brand-blue">Chair Capacity</th>
-            <th class="p-3.5 font-bold">Max Vacuum Level</th>
-            <th class="p-3.5 font-bold">Max Flow Rate</th>
+            <th class="p-3.5 font-bold text-brand-blue">Heads</th>
+            <th class="p-3.5 font-bold">Catalogue Minimum Air Delivery</th>
             <th class="p-3.5 font-bold">Power Rating</th>
-            <th class="p-3.5 font-bold">Noise Level</th>
+            <th class="p-3.5 font-bold">Documented Noise Limit</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 bg-white">
           <tr class="hover:bg-slate-50 transition">
-            <td class="p-3.5 font-bold text-brand-blue">HVS-300</td>
-            <td class="p-3.5 font-semibold text-slate-900">1 &ndash; 3 Chairs</td>
-            <td class="p-3.5">&minus;18 to &minus;22 kPa</td>
-            <td class="p-3.5">900 L/min</td>
-            <td class="p-3.5">0.75 kW / 220V</td>
-            <td class="p-3.5">&le; 55 dB(A)</td>
+            <td class="p-3.5 font-bold text-brand-blue">HVS-1</td>
+            <td class="p-3.5 font-semibold text-slate-900">1</td>
+            <td class="p-3.5">&ge; 300 L/min</td>
+            <td class="p-3.5">0.75 kW</td>
+            <td class="p-3.5">&le; 68 dB(A)</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
-            <td class="p-3.5 font-bold text-brand-blue">HVS-500</td>
-            <td class="p-3.5 font-semibold text-slate-900">3 &ndash; 5 Chairs</td>
-            <td class="p-3.5">&minus;20 to &minus;25 kPa</td>
-            <td class="p-3.5">1,500 L/min</td>
-            <td class="p-3.5">1.50 kW / 220V/380V</td>
-            <td class="p-3.5">&le; 58 dB(A)</td>
+            <td class="p-3.5 font-bold text-brand-blue">HVS-3</td>
+            <td class="p-3.5 font-semibold text-slate-900">1</td>
+            <td class="p-3.5">&ge; 1,200 L/min</td>
+            <td class="p-3.5">1.50 kW</td>
+            <td class="p-3.5">&le; 69 dB(A)</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
-            <td class="p-3.5 font-bold text-brand-blue">HVS-700</td>
-            <td class="p-3.5 font-semibold text-slate-900">5 &ndash; 8 Chairs</td>
-            <td class="p-3.5">&minus;22 to &minus;28 kPa</td>
-            <td class="p-3.5">2,200 L/min</td>
-            <td class="p-3.5">2.20 kW / 380V</td>
-            <td class="p-3.5">&le; 60 dB(A)</td>
+            <td class="p-3.5 font-bold text-brand-blue">HVS-5</td>
+            <td class="p-3.5 font-semibold text-slate-900">1</td>
+            <td class="p-3.5">&ge; 1,800 L/min</td>
+            <td class="p-3.5">1.90 kW</td>
+            <td class="p-3.5">&le; 76 dB(A)</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
-            <td class="p-3.5 font-bold text-brand-blue">HVS-1200</td>
-            <td class="p-3.5 font-semibold text-slate-900">10 &ndash; 15 Chairs</td>
-            <td class="p-3.5">&minus;25 to &minus;32 kPa</td>
-            <td class="p-3.5">3,600 L/min</td>
-            <td class="p-3.5">4.00 kW / 380V</td>
-            <td class="p-3.5">&le; 62 dB(A)</td>
+            <td class="p-3.5 font-bold text-brand-blue">HVS-10</td>
+            <td class="p-3.5 font-semibold text-slate-900">1</td>
+            <td class="p-3.5">&ge; 3,600 L/min</td>
+            <td class="p-3.5">3.30 kW</td>
+            <td class="p-3.5">&le; 76 dB(A)</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
-            <td class="p-3.5 font-bold text-brand-blue">HVS-Hospital Dual</td>
-            <td class="p-3.5 font-semibold text-slate-900">15 &ndash; 50 Chairs</td>
-            <td class="p-3.5">&minus;28 to &minus;35 kPa</td>
-            <td class="p-3.5">Up to 7,500 L/min</td>
-            <td class="p-3.5">Dual 4.0kW VFD Skid</td>
-            <td class="p-3.5">&le; 65 dB(A)</td>
+            <td class="p-3.5 font-bold text-brand-blue">HVS-15</td>
+            <td class="p-3.5 font-semibold text-slate-900">2</td>
+            <td class="p-3.5">&ge; 5,100 L/min</td>
+            <td class="p-3.5">5.70 kW</td>
+            <td class="p-3.5">&le; 79 dB(A)</td>
           </tr>
         </tbody>
       </table>
+      <p class="text-xs text-slate-500 mt-3">Catalogue values are model-specific minimum air delivery and documented maximum noise limits; confirm the applicable test conditions. Terminal vacuum and final chair capacity must be verified from the selected model's test report and project calculation. Installed noise also depends on the enclosure, room acoustics, vibration isolation and ventilation. The complete official range continues through HVS-20, HVS-25, HVS-30, HVS-40 and HVS-50.</p>
     </div>
 
     <!-- Section 5: Engineering Sizing Recommendations -->
     <h2>5. Clinic Vacuum Piping &amp; Pneumatic Balancing Rules</h2>
     <p>
-      To prevent vacuum decay across long clinic pipeline runs, Hongrun application engineers recommend:
+      Vacuum performance across a clinic network must be assessed rather than inferred from chair count alone:
     </p>
     <ul class="list-disc pl-6 space-y-2 text-xs sm:text-sm text-slate-700 mb-8">
-      <li><strong>Main Trunk Line Sizing:</strong> Use sanitary PVC-U or ABS piping with ID &ge; 50mm for up to 5 chairs, and ID &ge; 75mm for 10–15 chairs, maintaining a 1% downward slope toward the central plant room.</li>
-      <li><strong>Dual-Redundancy Hospital Skid:</strong> For clinics &gt;10 chairs, pair two HVS units in parallel with automatic PLC lead-lag switching to guarantee 100% surgical availability. <a href="../../products-hvs.html" class="text-brand-blue font-bold hover:underline">Explore HVS Series &rarr;</a></li>
-      <li><strong>Combined Air + Vacuum Plant Room:</strong> Pair with HYT series oil-free compressors for complete zero-oil air and high-flow suction integration. <a href="../../solutions.html" class="text-brand-blue font-bold hover:underline">View Clinic Solutions &rarr;</a></li>
+      <li><strong>Main Trunk Line Sizing:</strong> Determine pipe material and internal diameter from simultaneous demand, allowable pressure loss, equipment manufacturer requirements, drainage and applicable project standards. Slope and cleanout arrangements must suit the selected piping system and maintenance plan; no single chair-count diameter or 1% slope is universal.</li>
+      <li><strong>Continuity and Redundancy:</strong> Parallel HVS units with lead-lag control may be selected after a project risk assessment. Verify one-unit-out flow and suction against the required load; no arrangement guarantees 100% surgical availability under every fault. <a href="../../products-hvs.html" class="text-brand-blue font-bold hover:underline">Explore HVS Series &rarr;</a></li>
+      <li><strong>Combined Air + Vacuum Plant Room:</strong> Coordinate the documented compressed-air quality requirements with the dental vacuum design. Oil-free compressor technology alone does not establish a complete system's total-oil result or microbial performance. <a href="../../solutions.html" class="text-brand-blue font-bold hover:underline">View Clinic Solutions &rarr;</a></li>
     </ul>
 
     <!-- =========================================================================
@@ -454,7 +403,7 @@
       </div>
       <div class="flex-1 text-center sm:text-left">
         <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1.5">
-          <h4 class="text-lg font-bold font-display text-slate-900">Hongrun R&amp;D Vacuum &amp; Fluid Engineering Team</h4>
+          <h3 class="text-lg font-bold font-display text-slate-900">Hongrun R&amp;D Vacuum &amp; Fluid Engineering Team</h3>
           <span class="text-[11px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded-full">Suction &amp; Separation Specialist</span>
         </div>
         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
@@ -477,8 +426,8 @@
       <div class="grid sm:grid-cols-2 gap-4">
         <a href="/articles/20260820-compressor-exploded-anatomy/" class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-brand-blue/5 hover:border-brand-blue transition group">
           <span class="text-[11px] text-brand-blue font-bold uppercase">3D CAD Whitepaper</span>
-          <h4 class="text-sm font-bold text-brand-dark group-hover:text-brand-blue font-display mt-1 mb-1">Inside Zero-Oil Purity: 3D Exploded Anatomy of Air Compressors</h4>
-          <p class="text-xs text-slate-500 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA desiccant dryers.</p>
+          <h4 class="text-sm font-bold text-brand-dark group-hover:text-brand-blue font-display mt-1 mb-1">Inside Oil-Free Design: 3D Exploded Anatomy of Air Compressors</h4>
+          <p class="text-xs text-slate-500 line-clamp-2">Model-specific drive components, PTFE rings and project-validated air-treatment configurations.</p>
         </a>
         <a href="../../news.html#article-11" class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-brand-blue/5 hover:border-brand-blue transition group">
           <span class="text-[11px] text-brand-accent font-bold uppercase">Sizing Guide</span>
@@ -516,7 +465,7 @@
             <i class="fa-solid fa-tag text-[11px]"></i> Wobble Piston Kinematics (ZB Series)
           </a>
           <a href="../../products-hy.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> Nano-Coated Antibacterial Tank (38L)
+            <i class="fa-solid fa-tag text-[11px]"></i> Model-Specific Receiver Maintenance
           </a>
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> 1–50 Dental Chairs Sizing Equation
@@ -547,8 +496,8 @@
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[11px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
-              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA dryers.</p>
+              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Anatomy of Dental Compressors</h5>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Model-specific drive components, PTFE rings and project-validated air-treatment configurations.</p>
             </div>
             <span class="text-[11px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -566,7 +515,7 @@
             <div>
               <span class="text-[11px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">Aerodynamic Power: 3D Exploded Anatomy of HVS Dental Vacuum</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and 85%+ aerosol suppression.</p>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and project-validated aerosol source capture.</p>
             </div>
             <span class="text-[11px] font-bold text-teal-700 mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -593,12 +542,12 @@
           <span class="sr-only">Share on LinkedIn</span></a>
 
           <!-- WhatsApp -->
-          <a href="https://api.whatsapp.com/send?text=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems%3A%20https%3A//www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via WhatsApp">
+          <a href="https://api.whatsapp.com/send?text=HVS%20Dental%20Vacuum%3A%203D%20CAD%20Anatomy%20and%20Project-Validated%20Aerosol%20Source%20Capture%3A%20https%3A//www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via WhatsApp">
             <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
           <span class="sr-only">Share via WhatsApp</span></a>
 
           <!-- X / Twitter -->
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260825-dental-suction-exploded-anatomy%2F&text=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on X (Twitter)">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260825-dental-suction-exploded-anatomy%2F&text=HVS%20Dental%20Vacuum%3A%203D%20CAD%20Anatomy%20and%20Project-Validated%20Aerosol%20Source%20Capture" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on X (Twitter)">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           <span class="sr-only">Share on X (Twitter)</span></a>
 
@@ -618,12 +567,12 @@
           <span class="sr-only">Share on Facebook</span></a>
 
           <!-- Telegram -->
-          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260825-dental-suction-exploded-anatomy%2F&text=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on Telegram">
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260825-dental-suction-exploded-anatomy%2F&text=HVS%20Dental%20Vacuum%3A%203D%20CAD%20Anatomy%20and%20Project-Validated%20Aerosol%20Source%20Capture" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on Telegram">
             <i class="fa-brands fa-telegram text-base" aria-hidden="true"></i>
           <span class="sr-only">Share on Telegram</span></a>
 
           <!-- Email -->
-          <a href="mailto:?subject=Aerodynamic%20Power%20%26amp%3B%20Infection%20Defense%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20HVS%20Dental%20Vacuum%20%26amp%3B%20Separation%20Systems&body=Check%20out%20this%20article%3A%20https%3A//www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via Email">
+          <a href="mailto:?subject=HVS%20Dental%20Vacuum%3A%203D%20CAD%20Anatomy%20and%20Project-Validated%20Aerosol%20Source%20Capture&body=Check%20out%20this%20article%3A%20https%3A//www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via Email">
             <i class="fa-regular fa-envelope text-sm" aria-hidden="true"></i>
           <span class="sr-only">Share via Email</span></a>
 
@@ -666,11 +615,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV ISO 8573-1 Class 0 certified for complete HW-200–HW-3600 scroll units. Medical air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -719,7 +668,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; TÜV Class 0 (HW-200–HW-3600) &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
     </div>
   </div>
 </footer>

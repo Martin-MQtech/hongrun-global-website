@@ -3,80 +3,30 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors | Hongrun Insights</title>
+<title>3D CAD Anatomy of Oil-Free Medical Compressors</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="Technical Whitepaper: 3D CAD exploded engineering anatomy of Class 0 medical oil-free compressors, 5-axis CNC drive shafts, and PSA desiccant air drying dynamics.">
-  <meta name="keywords" content="medical compressor 3D CAD, compressor exploded view, Class 0 zero-oil mechanism, PTFE piston rings tribology">
+  <meta name="description" content="3D CAD exploded anatomy of oil-free medical compressors, model-specific purity documentation, CNC drive shafts, and PSA desiccant drying.">
+  <meta name="keywords" content="medical compressor 3D CAD, compressor exploded view, model-specific oil-free documentation, complete HW-200–HW-3600 total-oil Class 0 scope, PTFE piston rings tribology">
   <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors | Hongrun Insights">
-  <meta property="og:description" content="Technical Whitepaper: 3D CAD exploded engineering anatomy of Class 0 medical oil-free compressors, 5-axis CNC drive shafts, and PSA desiccant air drying dynamics.">
+  <meta property="og:title" content="3D CAD Anatomy of Oil-Free Medical Compressors">
+  <meta property="og:description" content="3D CAD exploded anatomy of oil-free medical compressors, model-specific purity documentation, CNC drive shafts, and PSA desiccant drying.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/exploded/01-hy-compressor-exploded.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/">
   <meta property="og:type" content="article">
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors | Hongrun Insights">
-  <meta name="twitter:description" content="Technical Whitepaper: 3D CAD exploded engineering anatomy of Class 0 medical oil-free compressors, 5-axis CNC drive shafts, and PSA desiccant air drying dynamics.">
+  <meta name="twitter:title" content="3D CAD Anatomy of Oil-Free Medical Compressors">
+  <meta name="twitter:description" content="3D CAD exploded anatomy of oil-free medical compressors, model-specific purity documentation, CNC drive shafts, and PSA desiccant drying.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/exploded/01-hy-compressor-exploded.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
@@ -98,7 +48,7 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy & Design Aesthetics of Class 0 Medical Air Compressors",
+  "headline": "Inside Oil-Free Design: 3D CAD Exploded Anatomy & Model-Specific Air-Quality Evidence",
   "image": "https://www.hongrun1995.cn/assets/images/exploded/01-hy-compressor-exploded.jpg",
   "author": {
     "@type": "Person",
@@ -121,14 +71,14 @@
   },
   "datePublished": "2026-08-24",
   "dateModified": "2026-08-24",
-  "description": "Authoritative engineering whitepaper analyzing the 3D CAD exploded anatomy, German industrial design aesthetics, and technical specifications of Hongrun ISO 8573-1 Class 0 medical oil-free compressors.",
+  "description": "Engineering whitepaper analyzing 3D CAD exploded anatomy, oil-free compressor design, and model-specific air-quality documentation, including the TÜV total-oil Class 0 scope for complete HW-200 through HW-3600 scroll units.",
   "keywords": [
     "Medical Air Compressor 3D Exploded View",
-    "ISO 8573-1 Class 0 Zero Oil Air",
+    "Complete HW-200–HW-3600 ISO 8573-1 Total-Oil Class 0",
     "German Industrial Design Aesthetics",
-    "PTFE Piston Rings Lifecycle",
-    "PSA Desiccant Air Dryer",
-    "NMPA Class II Medical Device",
+    "Model-Specific PTFE Piston Ring Maintenance",
+    "Project-Validated PSA Air Drying",
+    "Model-Specific Medical Device Registration",
     "5-Axis CNC Drive Shaft",
     "Dental Clinic Compressed Air Sizing"
   ],
@@ -182,7 +132,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Air Compressors",
+      "name": "Inside Oil-Free Design: 3D CAD Exploded Anatomy &amp; Model-Specific Air-Quality Evidence",
       "item": "https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/"
     }
   ]
@@ -191,8 +141,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -253,7 +207,7 @@
         Featured Whitepaper · Aug 24, 2026
       </span>
       <span class="px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 text-[11px] font-semibold tracking-wide">
-        ISO 8573-1 Class 0 Certified
+        Model-Specific Air Documentation
       </span>
       <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-300 text-[11px] font-semibold tracking-wide">
         NMPA Class II Medical Device
@@ -262,7 +216,7 @@
 
     <!-- Title -->
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-display tracking-tight leading-snug mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
-      Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy &amp; Industrial Aesthetics of Class 0 Medical Compressors
+      Inside Oil-Free Design: 3D CAD Exploded Anatomy &amp; Model-Specific Air-Quality Evidence
     </h1>
 
     <!-- Meta Info -->
@@ -280,7 +234,7 @@
 </header>
 
 <!-- Main Article Body -->
-<main class="py-14 bg-white">
+<main class="py-14 bg-white" id="main-content" tabindex="-1">
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 article-body">
     
     <!-- 3D Exploded Blueprint Showcase (Click to Enlarge via Lightbox) -->
@@ -290,32 +244,32 @@
         <i class="fa-solid fa-magnifying-glass-plus text-brand-sky"></i> Click to Zoom 3D CAD High-Precision Blueprint
       </div>
       <div class="p-3.5 bg-slate-900 text-slate-300 text-xs text-center border-t border-slate-800">
-        <strong>Figure 1.0:</strong> Official 3D CAD High-Precision Engineering Exploded Blueprint (HY Series) — German precision kinematics, Saint-Gobain PTFE composite rings, twin-tower PSA drying, and anti-microbial vessel.
+        <strong>Figure 1.0:</strong> Official 3D CAD Engineering Exploded Blueprint (HY Series) — precision kinematics, Saint-Gobain PTFE composite rings, configuration-specific desiccant drying, and model-specific receiver maintenance.
       </div>
     </div>
 
     <!-- Executive Abstract / GEO Summary Box (Clean High-Contrast Card) -->
     <div class="spec-box p-6 rounded-xl mb-10 shadow-sm">
-      <h3 class="text-brand-dark font-display text-base font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
+      <h2 class="text-brand-dark font-display text-base font-bold uppercase tracking-wider mb-2 flex items-center gap-2">
         <i class="fa-solid fa-microchip text-brand-blue"></i> Executive Engineering Summary
-      </h3>
+      </h2>
       <p class="text-xs sm:text-sm text-slate-700 leading-relaxed m-0">
-        Medical air purity in hospital surgical operating theaters and dental operatories cannot tolerate even trace hydrocarbons. This engineering whitepaper dissects the <strong>Hongrun 100% Oil-Free Compressor Platform</strong> through proprietary 3D CAD exploded models and handcrafted R&amp;D sketches. We explore how <strong>German-standard industrial design aesthetics</strong>, <strong>diamond-coated self-lubricating PTFE composite piston rings</strong>, <strong>5-axis CNC dynamically balanced crankshafts</strong>, <strong>integrated dual-tower PSA desiccant dryers (&minus;40°C dew point)</strong>, and <strong>0.01μm multi-stage sterile filtration</strong> achieve genuine <strong>ISO 8573-1 Class 0 zero-oil purity</strong> with over 30,000 hours of maintenance-free continuous duty.
+        Medical and dental compressed-air systems require defined contaminant limits appropriate to their application. This engineering whitepaper dissects the <strong>Hongrun oil-free compressor platform</strong> through 3D CAD exploded models and R&amp;D sketches. It explains model-specific drive components, PTFE composite piston rings, project-selected PSA drying and configuration-specific particulate filtration without treating any of these as universal performance guarantees. TÜV Rheinland certificate <strong>AK 50528335 0001</strong> / report <strong>CN21HFR2 001</strong> documents ISO 8573-1 <strong>total-oil Class 0</strong> and <strong>&lt;0.003 mg/m³</strong> only for complete <strong>HW-200 through HW-3600</strong> scroll units. It does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or unspecified OEM assemblies. Class 0 does not establish sterility or microbial control. Component life depends on the supplied model, load, temperature, air quality and maintenance; no fixed maintenance-free design life is implied.
       </p>
     </div>
 
     <!-- Section 1: The Clinical Zero-Oil Mandate -->
-    <h2>1. The Clinical Zero-Oil Mandate &amp; ISO 8573-1 Class 0 Standards</h2>
+    <h2>1. Clinical Air-Quality Requirements &amp; ISO 8573-1 Total-Oil Class 0</h2>
     <p>
-      In dental restorative procedures, oral surgeries, and hospital central medical gas pipeline systems (NFPA 99 &amp; ISO 7396-1 compliance), compressed air comes into direct contact with open surgical wounds, sterile instruments, and respiratory air circuits. Standard oil-flooded or oil-injected compressors equipped with coalescing filters still suffer from "filter bypass" during pressure surges, allowing carcinogenic oil aerosols and toxic hydrocarbon vapors to contaminate patient airways and destroy composite resin bonding surfaces.
+      Dental and hospital compressed-air specifications must reflect the intended use, equipment manufacturer requirements and applicable local standards. Oil aerosols, water and particulates are separate contaminant considerations; filter performance during transients depends on the selected equipment and operating conditions. No universal claim about competitor failure modes, patient exposure or clinical bonding outcomes is made here.
     </p>
     <p>
-      Hongrun's engineering philosophy fundamentally rejects lubricants within the compression chamber. Under <strong>ISO 8573-1 Class 0</strong> testing by TÜV Rheinland and national medical metrology institutes, our compressor platform demonstrates:
+      Oil-free compression removes liquid lubricant from the compression chamber, but it does not by itself establish every air-quality attribute. <strong>TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001</strong> documents <strong>ISO 8573-1 total-oil Class 0</strong> and <strong>&lt;0.003 mg/m³</strong> only for complete HW-200 through HW-3600 scroll compressor units. HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors and unspecified OEM assemblies are not covered and require their own model- and configuration-specific documentation:
     </p>
     <ul class="list-disc pl-6 space-y-1.5 text-xs sm:text-sm text-slate-700 mb-6">
-      <li><strong>Total Hydrocarbon Content (Aerosol, Vapor, Liquid):</strong> &lt; 0.003 mg/m³ (Well beyond the 0.01 mg/m³ Class 1 limit).</li>
-      <li><strong>Solid Particulate Classification:</strong> Class 1 (&le; 20,000 particles/m³ in 0.1–0.5 μm range).</li>
-      <li><strong>Pressure Dew Point (Moisture):</strong> Class 2 (&le; &minus;40°C), preventing internal condensation and bacterial colonization.</li>
+      <li><strong>Total Oil:</strong> The TÜV &lt;0.003 mg/m³ result applies only to complete HW-200 through HW-3600 units; piston and bare-assembly values must come from their own documentation.</li>
+      <li><strong>Solid Particulates:</strong> Classified separately under ISO 8573-1; a total-oil Class 0 result does not establish particulate Class 1.</li>
+      <li><strong>Pressure Dew Point:</strong> Classified and validated separately for the supplied model and drying configuration; it is not covered by the total-oil certificate.</li>
     </ul>
 
     <!-- Section 2: Industrial Design & Handcrafted Sketches Suite -->
@@ -344,7 +298,7 @@
         </div>
         <div class="pt-3 text-center">
           <span class="text-xs font-bold text-brand-dark font-display block">02. Dual PSA Dryer &amp; Micro-Filter</span>
-          <span class="text-[11px] text-slate-500">Twin-tower desiccant cycle &amp; 0.01μm sterile manifold</span>
+          <span class="text-[11px] text-slate-500">Twin-tower desiccant cycle &amp; configuration-specific filtration</span>
         </div>
       </div>
 
@@ -364,39 +318,39 @@
     <h2>3. Key Mechanical Sub-Assemblies: 3D CAD Engineering Dissection</h2>
 
     <!-- Sub-assembly 1 -->
-    <h3>3.1. 5-Axis CNC Helical Gears &amp; Dynamically Balanced Drive Shaft</h3>
+    <h3>3.1. Drive Shaft Machining &amp; Balance</h3>
     <p>
-      Vibration and acoustic noise are primary challenges for clinic-side air systems. Hongrun drive shafts are precision-ground from high-alloy carbon structural steel on German 5-axis CNC machining centers to a surface finish tolerance of <strong>Ra &le; 0.2 μm</strong>. Dual opposing eccentric counterweights undergo electronic dynamic balance balancing (ISO 1940 Grade G2.5 standard), reducing operating vibration to &lt; 1.2 mm/s and acoustic emission down to <strong>&le; 55 dB(A)</strong>.
+      Shaft material, machining, surface finish and balancing requirements are defined by the supplied model's manufacturing documentation. Vibration and acoustic emissions depend on the complete unit, speed, load, enclosure and installation; cite only results measured for the stated model, position and test conditions. No series-wide vibration or 55 dB(A) guarantee is implied.
     </p>
 
     <!-- Sub-assembly 2 -->
-    <h3>3.2. Diamond-Coated Composite Self-Lubricating PTFE Piston Rings</h3>
+    <h3>3.2. Model-Specific Self-Lubricating PTFE Composite Piston Rings</h3>
     <p>
-      In place of standard carbon or low-grade teflon, Hongrun utilizes high-molecular-weight <strong>Saint-Gobain PTFE matrix composite rings embedded with nano-scale diamond ceramics and graphite lubricity agents</strong>. During initial run-in, a microscopic transfer film forms on the hard-anodized cylinder bore (Hardness &ge; 450 HV), resulting in near-zero friction coefficient (&mu; &le; 0.04) and guaranteeing over <strong>30,000 operating hours</strong> without cylinder scoring or seal degradation.
+      Hongrun utilizes <strong>Saint-Gobain PTFE matrix composite rings</strong> to support self-lubricating operation. Cylinder finish, friction, wear and service life depend on the supplied model and operating conditions; maintenance follows the model documentation.
     </p>
 
     <!-- Sub-assembly 3 -->
-    <h3>3.3. High-Efficiency Pure Copper-Core Motor with 135°C Thermal Protection</h3>
+    <h3>3.3. Model-Specific Motor, Insulation &amp; Thermal Protection</h3>
     <p>
-      Each motor stator is precision-wound with 99.99% high-purity oxygen-free copper magnet wire (Class F insulation rated up to 155°C). An embedded bi-metallic thermostat automatically interrupts current at 135°C &plusmn; 5°C to protect against locked-rotor or low-voltage anomalies. The motor complies with <strong>National Grade-1 Energy Efficiency standards</strong>, consuming 28% less electrical power than conventional compressors over a 10-year lifecycle.
+      Motor winding material, insulation class, thermal protection and efficiency rating must be read from the selected unit's nameplate and motor documentation. Actual power input varies with pressure, flow, ambient conditions and control strategy. No fixed 28% energy-saving or 10-year lifecycle comparison is asserted without a defined baseline and project measurement.
     </p>
 
     <!-- Sub-assembly 4 -->
-    <h3>3.4. Integrated Dual-Tower PSA Desiccant Drying Module</h3>
+    <h3>3.4. Configuration-Specific PSA Desiccant Drying</h3>
     <p>
-      To eliminate water droplets that foul dental handpieces and encourage bacterial growth in piping, the compressor integrates an automated twin-tower Pressure Swing Adsorption (PSA) dryer. Packed with high-capacity synthetic 13X molecular sieves and activated alumina, it achieves a stable <strong>pressure dew point of &minus;40°C to &minus;70°C</strong> with an ultra-low regeneration purge loss of only <strong>&le; 3.5%</strong>.
+      A project-selected twin-tower pressure swing adsorption dryer can reduce moisture to a specified pressure dew point. Performance and purge demand depend on inlet temperature and pressure, flow, loading, desiccant condition and control settings. Where <strong>&minus;40°C pressure dew point</strong> is a project requirement or design target, acceptance must be validated under the stated operating conditions. Drying does not sterilize air, prevent every condensate event or establish microbial control.
     </p>
 
     <!-- Sub-assembly 5 -->
-    <h3>3.5. 0.01μm Sub-Micron Multi-Stage Borosilicate Sterile Filter</h3>
+    <h3>3.5. Configuration-Specific Coalescing &amp; Particulate Filtration</h3>
     <p>
-      The discharge line incorporates high-efficiency borosilicate micro-glass fiber coalescing and particulate filters. The multi-layer gradient pore structure achieves a <strong>99.999% retention rate for particles &ge; 0.01 μm</strong>, effectively trapping airborne dust, rust residues, and bacterial aerosols before entering the air receiver.
+      Filter elements, efficiency ratings, change intervals and pressure drop must be specified and validated for the supplied model, airflow and test method. Coalescing filters capture liquid aerosols; they should not be described as universally eliminating oil vapor or all particulates. Filtration does not by itself establish total-oil Class 0 certification, a specific ISO particle class or sterility.
     </p>
 
     <!-- Sub-assembly 6 -->
-    <h3>3.6. Anti-Microbial Nano-Coated Vessel &amp; Solid Brass Safety Valve</h3>
+    <h3>3.6. Receiver Maintenance &amp; Solid Brass Safety Valve</h3>
     <p>
-      The internal vessel surface is electrostatically lined with a 120 μm food-grade thermosetting anti-corrosive epoxy layer infused with nano-silver anti-microbial ions. This completely prevents internal rusting and sludge buildup, ensuring that stored air maintains zero odor and 100% biological cleanliness. Overpressure safety is backed by an ASME/CE-certified solid brass automatic relief valve.
+      Receiver drainage, inspection and corrosion protection follow the model manual and site conditions. Antibacterial or antimicrobial performance is not assumed without model-specific evidence. Overpressure safety is backed by the model-specified automatic relief valve and its applicable certification.
     </p>
 
     <!-- Section 4: Specifications Table -->
@@ -406,40 +360,40 @@
         <thead class="bg-slate-100 text-brand-dark font-display uppercase text-[11px]">
           <tr>
             <th class="p-3.5 font-bold">Engineering Parameter</th>
-            <th class="p-3.5 font-bold text-brand-blue">Hongrun Class 0 Platform</th>
-            <th class="p-3.5 font-bold text-slate-500">Standard Dental Compressor</th>
+            <th class="p-3.5 font-bold text-brand-blue">Selected Hongrun Configuration</th>
+            <th class="p-3.5 font-bold text-slate-500">Alternative System / Project Comparator</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 bg-white">
           <tr class="hover:bg-slate-50 transition">
-            <td class="p-3.5 font-semibold text-slate-900">Oil Purity Certification</td>
-            <td class="p-3.5 font-bold text-brand-blue">ISO 8573-1 Class 0 (Zero Trace)</td>
-            <td class="p-3.5 text-slate-500">Class 1 or Non-certified</td>
+            <td class="p-3.5 font-semibold text-slate-900">Total-Oil Purity Evidence</td>
+            <td class="p-3.5 font-bold text-brand-blue">Complete HW-200–HW-3600: TÜV ISO 8573-1 Class 0 (&lt;0.003 mg/m³); piston/bare assemblies: model-specific documents</td>
+            <td class="p-3.5 text-slate-500">Model-specific evidence required</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
             <td class="p-3.5 font-semibold text-slate-900">Piston Ring Material</td>
-            <td class="p-3.5 font-bold text-brand-blue">Diamond-Coated PTFE Composite</td>
-            <td class="p-3.5 text-slate-500">Standard Virgin PTFE</td>
+            <td class="p-3.5 font-bold text-brand-blue">Model-specific PTFE composite material and dimensions</td>
+            <td class="p-3.5 text-slate-500">Verify the comparator's material and test documentation</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
             <td class="p-3.5 font-semibold text-slate-900">Design Operating Life</td>
-            <td class="p-3.5 font-bold text-brand-blue">&ge; 30,000 Hours Standard</td>
-            <td class="p-3.5 text-slate-500">8,000 &ndash; 12,000 Hours</td>
+            <td class="p-3.5 font-bold text-brand-blue">Model- and duty-specific; confirm from maintenance documentation</td>
+            <td class="p-3.5 text-slate-500">Model-specific evidence required</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
             <td class="p-3.5 font-semibold text-slate-900">Pressure Dew Point</td>
-            <td class="p-3.5 font-bold text-brand-blue">&le; &minus;40°C (Integrated PSA)</td>
-            <td class="p-3.5 text-slate-500">+3°C to +10°C (Simple cooling)</td>
+            <td class="p-3.5 font-bold text-brand-blue">Project-specified pressure dew point; validate the selected dryer under stated inlet and load conditions</td>
+            <td class="p-3.5 text-slate-500">Compare only documented configurations under equivalent conditions</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
             <td class="p-3.5 font-semibold text-slate-900">Medical Qualification</td>
-            <td class="p-3.5 font-bold text-brand-blue">NMPA Class II Medical License</td>
-            <td class="p-3.5 text-slate-500">Class I or Industrial only</td>
+            <td class="p-3.5 font-bold text-brand-blue">Verify the registration scope of the exact supplied product</td>
+            <td class="p-3.5 text-slate-500">Verify the comparator's registration and intended use</td>
           </tr>
           <tr class="hover:bg-slate-50 transition">
             <td class="p-3.5 font-semibold text-slate-900">Vessel Anti-Corrosion</td>
-            <td class="p-3.5 font-bold text-brand-blue">Internal Nano-Silver Coating</td>
-            <td class="p-3.5 text-slate-500">Uncoated Raw Steel</td>
+            <td class="p-3.5 font-bold text-brand-blue">Model-specific receiver protection and maintenance</td>
+            <td class="p-3.5 text-slate-500">Compare documented materials, coatings and maintenance requirements</td>
           </tr>
         </tbody>
       </table>
@@ -448,12 +402,12 @@
     <!-- Section 5: Engineering Sizing Recommendations -->
     <h2>5. Clinical Sizing &amp; Compressor Selection Recommendations</h2>
     <p>
-      When specifying central air sources for modern healthcare facilities, pneumatic engineers must calculate peak simultaneous usage factors (k-factors) and include safety redundancy:
+      For preliminary dental planning, use <strong>Q = chairs &times; 50 L/min &times; k</strong> with <strong>k = 0.70</strong> as a project assumption, not an ISO/NFPA rule. Final selection must add verified pressure and treatment losses and assess continuity risk; redundancy is not automatically mandatory:
     </p>
     <ul class="list-disc pl-6 space-y-2 text-xs sm:text-sm text-slate-700 mb-8">
-      <li><strong>1 to 3 Dental Chairs:</strong> HY-100 / HY-200 series (Displacement 150–200 L/min, 0.8 MPa, 50L tank). <a href="../../products-hy.html" class="text-brand-blue font-bold hover:underline">Explore HY Series &rarr;</a></li>
-      <li><strong>4 to 10 Dental Chairs:</strong> Dual-redundant HYT-400 / HYT-500 series (Displacement 500–1350 L/min with dual independent pump heads). <a href="../../products-hy.html" class="text-brand-blue font-bold hover:underline">Explore HYT Series &rarr;</a></li>
-      <li><strong>Hospital Stomatology Wings &amp; Central ICU Supply:</strong> HBG / HW Series Quiet Scroll Multi-Module Central Stations (Displacement up to 3,600 L/min with PLC IoT cloud monitoring). <a href="../../products-hospital.html" class="text-brand-blue font-bold hover:underline">Explore Hospital Systems &rarr;</a></li>
+      <li><strong>1 to 3 Dental Chairs:</strong> Preliminary loads are 50, 70 and 105 L/min. Compare the selected HY model against calculated demand, pressure losses and duty. HY-200 has a 38L standard receiver; 24L and 32L are OEM-confirmed custom options, and 38L provides 58.3% more nominal storage than 24L. <a href="../../products-hy.html" class="text-brand-blue font-bold hover:underline">Explore HY Series &rarr;</a></li>
+      <li><strong>4 to 10 Dental Chairs:</strong> HYT-400 provides 600 L/min total and about 400 L/min with one head out; HYT-500 provides 800 L/min total, not 600 L/min. Verify the selected configuration's degraded-mode capacity against the project load before specifying redundancy. <a href="../../products-hy.html" class="text-brand-blue font-bold hover:underline">Explore HYT Series &rarr;</a></li>
+      <li><strong>Hospital Stomatology Wings &amp; Central ICU Supply:</strong> Compare HW/HBG scroll configurations by documented site-delivered flow, pressure, acoustic data, controls and required redundancy. <a href="../../products-hospital.html" class="text-brand-blue font-bold hover:underline">Explore Hospital Systems &rarr;</a></li>
       <li><strong>Cleanroom Analytical Labs &amp; LC-MS Instruments:</strong> HYG-IoT Series Clean Compressed Air Stations. <a href="../../products-cleanair.html" class="text-brand-blue font-bold hover:underline">Explore Clean Air Stations &rarr;</a></li>
     </ul>
 
@@ -467,7 +421,7 @@
       </div>
       <div class="flex-1 text-center sm:text-left">
         <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1.5">
-          <h4 class="text-lg font-bold font-display text-slate-900">Hongrun R&amp;D Engineering &amp; Application Team</h4>
+          <h3 class="text-lg font-bold font-display text-slate-900">Hongrun R&amp;D Engineering &amp; Application Team</h3>
           <span class="text-[11px] bg-brand-blue/10 text-brand-blue font-bold px-2.5 py-0.5 rounded-full">OEM / ODM Specialist</span>
         </div>
         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
@@ -523,13 +477,13 @@
         </h4>
         <div class="flex flex-wrap gap-2">
           <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="inline-flex items-center gap-1.5 text-xs bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white font-semibold px-3 py-1.5 rounded-lg border border-brand-blue/20 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> ISO 8573-1 Class 0 <span class="text-[11px] opacity-75 bg-white/40 px-1 rounded">Core</span>
+            <i class="fa-solid fa-tag text-[11px]"></i> Model-Specific Oil Purity <span class="text-[11px] opacity-75 bg-white/40 px-1 rounded">Core</span>
           </a>
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> Wobble Piston Kinematics (ZB Series)
           </a>
           <a href="../../products-hy.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> Nano-Coated Antibacterial Tank (38L)
+            <i class="fa-solid fa-tag text-[11px]"></i> Model-Specific Receiver Maintenance
           </a>
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> 1–50 Dental Chairs Sizing Equation
@@ -544,7 +498,7 @@
             <i class="fa-solid fa-tag text-[11px]"></i> Endoscopy Reprocessing (WS 507-2016)
           </a>
           <a href="../../solutions.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> Hospital CSSD Sterile Air (WS 310.2)
+            <i class="fa-solid fa-tag text-[11px]"></i> CSSD Air Drying &amp; Configuration Validation (WS 310.2)
           </a>
           <a href="../../about.html#certifications" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> CE MDR &amp; NMPA Class II Medical
@@ -560,8 +514,8 @@
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[11px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
-              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA dryers.</p>
+              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">Oil-Free Compressor Anatomy &amp; Class 0 Certificate Scope</h5>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Model-specific drive components, PTFE rings and project-validated air-treatment configurations.</p>
             </div>
             <span class="text-[11px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -579,7 +533,7 @@
             <div>
               <span class="text-[11px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">Aerodynamic Power: 3D Exploded Anatomy of HVS Dental Vacuum</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and 85%+ aerosol suppression.</p>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and project-validated aerosol source capture.</p>
             </div>
             <span class="text-[11px] font-bold text-teal-700 mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -606,12 +560,12 @@
           <span class="sr-only">Share on LinkedIn</span></a>
 
           <!-- WhatsApp -->
-          <a href="https://api.whatsapp.com/send?text=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors%3A%20https%3A//www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via WhatsApp">
+          <a href="https://api.whatsapp.com/send?text=Inside%20Oil-Free%20Design%3A%203D%20CAD%20Exploded%20Anatomy%20and%20Model-Specific%20Air%20Quality%20Evidence%3A%20https%3A//www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via WhatsApp">
             <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
           <span class="sr-only">Share via WhatsApp</span></a>
 
           <!-- X / Twitter -->
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260820-compressor-exploded-anatomy%2F&text=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on X (Twitter)">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260820-compressor-exploded-anatomy%2F&text=Inside%20Oil-Free%20Design%3A%203D%20CAD%20Exploded%20Anatomy%20and%20Model-Specific%20Air%20Quality%20Evidence" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on X (Twitter)">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           <span class="sr-only">Share on X (Twitter)</span></a>
 
@@ -631,12 +585,12 @@
           <span class="sr-only">Share on Facebook</span></a>
 
           <!-- Telegram -->
-          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260820-compressor-exploded-anatomy%2F&text=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on Telegram">
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260820-compressor-exploded-anatomy%2F&text=Inside%20Oil-Free%20Design%3A%203D%20CAD%20Exploded%20Anatomy%20and%20Model-Specific%20Air%20Quality%20Evidence" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on Telegram">
             <i class="fa-brands fa-telegram text-base" aria-hidden="true"></i>
           <span class="sr-only">Share on Telegram</span></a>
 
           <!-- Email -->
-          <a href="mailto:?subject=Inside%20Zero-Oil%20Purity%3A%203D%20CAD%20Exploded%20Engineering%20Anatomy%20of%20Class%200%20Medical%20Air%20Compressors&body=Check%20out%20this%20article%3A%20https%3A//www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via Email">
+          <a href="mailto:?subject=Inside%20Oil-Free%20Design%3A%203D%20CAD%20Exploded%20Anatomy%20and%20Model-Specific%20Air%20Quality%20Evidence&body=Check%20out%20this%20article%3A%20https%3A//www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via Email">
             <i class="fa-regular fa-envelope text-sm" aria-hidden="true"></i>
           <span class="sr-only">Share via Email</span></a>
 
@@ -679,11 +633,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV ISO 8573-1 Class 0 certified for complete HW-200–HW-3600 scroll units. Medical air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -732,7 +686,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; TÜV Total-Oil Class 0 (Complete HW-200–HW-3600) &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
     </div>
   </div>
 </footer>

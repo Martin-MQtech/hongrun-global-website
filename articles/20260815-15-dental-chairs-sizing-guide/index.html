@@ -3,79 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15 Dental Chairs | Hongrun</title>
+  <title>15 Dental Chairs: Compressor Selection &amp; Sizing Guide</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="Engineering Whitepaper: Complete selection & pneumatic sizing guide for 15-chair stomatology clinics, simultaneous usage coefficient (k=0.70), and central ring piping.">
+  <meta name="description" content="Preliminary compressor selection and pneumatic sizing guide for 15-chair dental clinics, using a project planning assumption of k=0.70.">
   <meta name="keywords" content="15 dental chairs sizing, dental clinic pneumatic calculation, HYT-500 sizing, dental ring main piping">
   <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15 Dental Chairs | Hongrun">
-  <meta property="og:description" content="Engineering Whitepaper: Complete selection & pneumatic sizing guide for 15-chair stomatology clinics, simultaneous usage coefficient (k=0.70), and central ring piping.">
+  <meta property="og:title" content="15 Dental Chairs: Compressor Selection &amp; Sizing Guide">
+  <meta property="og:description" content="Preliminary compressor selection and pneumatic sizing guide for 15-chair dental clinics, using a project planning assumption of k=0.70.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/news/news_11_15chairs_1.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/">
   <meta property="og:type" content="article">
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15 Dental Chairs | Hongrun">
-  <meta name="twitter:description" content="Engineering Whitepaper: Complete selection & pneumatic sizing guide for 15-chair stomatology clinics, simultaneous usage coefficient (k=0.70), and central ring piping.">
+  <meta name="twitter:title" content="15 Dental Chairs: Compressor Selection &amp; Sizing Guide">
+  <meta name="twitter:description" content="Preliminary compressor selection and pneumatic sizing guide for 15-chair dental clinics, using a project planning assumption of k=0.70.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/news/news_11_15chairs_1.jpg">
 <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/>
@@ -112,7 +62,7 @@
         "url": "https://www.hongrun1995.cn/assets/images/logo_transparent.png"
       }
     },
-    "keywords": ["15 Dental Chairs Sizing", "Simultaneous Usage Coefficient", "HYT Dual Redundant Compressor", "HVS-15 Vacuum Station", "Dental Clinic Gas EPC"]
+    "keywords": ["15 Dental Chairs Sizing", "Preliminary Dental Air Planning", "Project Simultaneous-Use Assumption", "HYT-500", "Dental Clinic Gas EPC"]
   }
   </script>
   <script src="/assets/js/webmcp-polyfill.min.js" defer></script>
@@ -168,8 +118,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- HEADER -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
@@ -237,14 +191,14 @@
   </section>
 
   <!-- MAIN BODY -->
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="main-content" tabindex="-1">
     <!-- Key Takeaway Card -->
     <div class="bg-gradient-to-br from-sky-50 to-blue-50 border-l-4 border-brand-blue p-6 rounded-r-xl shadow-sm mb-10">
       <h2 class="text-base font-bold text-brand-dark flex items-center gap-2 mb-2">
-        <i class="fa-solid fa-circle-check text-brand-blue"></i> Executive Engineering Summary: 15-Chair Pneumatics Standard
+        <i class="fa-solid fa-circle-check text-brand-blue"></i> Executive Engineering Summary: Preliminary 15-Chair Sizing
       </h2>
       <p class="text-sm text-slate-700 leading-relaxed">
-        For a modern 15-chair stomatological clinic or regional dental center, continuous chair downtime is unacceptable. Using standard international simultaneous utilization coefficient <strong>k = 0.70</strong>, the required compressed air supply is <strong>1,050 L/min @ 0.8 MPa</strong>, and central vacuum suction requirement is <strong>4,500 L/min air-flow with -18 to -32 kPa dynamic operating suction</strong>. A dual-redundant multi-head architecture is mandatory to eliminate single-point operational failures.
+        For preliminary planning of a 15-chair dental clinic, use <strong>Q = chairs &times; 50 L/min &times; k</strong> with a project assumption of <strong>k = 0.70</strong>, giving <strong>525 L/min</strong>. This is not an ISO/NFPA rule and must be checked against the instrument schedule, pressure, diversity, pipe losses, leakage and treatment losses. Vacuum flow and operating suction are project calculations rather than a universal chair-count value. Redundancy is a continuity and risk decision; if required, verify degraded-mode capacity against the actual load rather than assuming that it eliminates single-point failures.
       </p>
     </div>
 
@@ -260,17 +214,17 @@
     <!-- Section 1: Simultaneous Coefficient Calculation -->
     <section class="prose prose-slate max-w-none mb-10">
       <h2 class="text-2xl font-bold font-display text-slate-900 mb-4 border-b border-slate-200 pb-2">
-        1. Mathematical Formula for Flow Sizing (Simultaneous Coefficient k = 0.70)
+        1. Preliminary Flow-Sizing Assumption (k = 0.70)
       </h2>
       <p class="text-sm text-slate-700 leading-relaxed mb-4">
-        In clinic design, sizing pneumatic delivery by simple arithmetic multiplication (15 &times; 100 L/min = 1,500 L/min) results in oversized, inefficient equipment. Empirical hospital engineering applies the simultaneous utilization curve:
+        A transparent first-pass estimate starts with 50 L/min per chair and a simultaneous-use factor. The default <strong>k = 0.70</strong> below is a project planning assumption, not a universal standard, a guaranteed diversity factor or a substitute for equipment demand data:
       </p>
       <div class="bg-slate-900 text-slate-100 p-5 rounded-xl font-mono text-sm mb-6">
-        Q_total = N &times; q_single &times; k_simultaneous &times; S_safety<br />
-        Q_total = 15 chairs &times; 100 L/min &times; 0.70 &times; 1.0 = <strong>1,050 L/min @ 0.8 MPa (8.0 bar)</strong>
+        Q_planning = chairs &times; 50 L/min &times; k<br />
+        Q_planning = 15 &times; 50 &times; 0.70 = <strong>525 L/min</strong>
       </div>
       <p class="text-sm text-slate-700 leading-relaxed">
-        To deliver 1,050 L/min with 100% duty cycle stability, the clinic requires either a single <strong>HYT-1200 (1,200 L/min, 9.0 kW)</strong> unit or a dual-unit redundant skid consisting of two <strong>HYT-500 (600 L/min each)</strong> units.
+        The <strong>HYT-500 is rated at 800 L/min total, not 600 L/min</strong>. It exceeds the 525 L/min preliminary load on a nameplate-total basis, but final selection must verify site-delivered flow at the required pressure, operating limits, duty cycle, receiver sizing and treatment losses. Do not infer one-head-out capacity from total flow. A single unit, parallel units or an N+1 arrangement should follow the clinic's continuity risk assessment; a redundant design is acceptable only after one-unit-out performance is checked against the required load.
       </p>
     </section>
 
@@ -292,32 +246,32 @@
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-700">
             <tr class="hover:bg-slate-50">
-              <td class="p-3.5 font-bold text-brand-blue">100% Oil-Free Air Source</td>
-              <td class="p-3.5 font-semibold">HYT-1000 / Dual HYT-500</td>
-              <td class="p-3.5">1,050 ~ 1,200 L/min @ 0.8 MPa</td>
-              <td class="p-3.5">7.5 kW / 380V 3Ph 50/60Hz</td>
-              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">N+1 Redundancy</span></td>
+              <td class="p-3.5 font-bold text-brand-blue">Dental Compressed-Air Source</td>
+              <td class="p-3.5 font-semibold">HYT-500 example; configuration subject to project review</td>
+              <td class="p-3.5">800 L/min total; verify site-delivered flow and degraded mode</td>
+              <td class="p-3.5">Confirm voltage and installed load for the selected unit</td>
+              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold">Continuity design by risk assessment</span></td>
             </tr>
             <tr class="hover:bg-slate-50">
-              <td class="p-3.5 font-bold text-brand-blue">PSA Desiccant Air Dryer</td>
-              <td class="p-3.5 font-semibold">HD-1500 Modular Twin-Tower</td>
-              <td class="p-3.5">Dew point &le; -40&deg;C (ISO Class 2)</td>
-              <td class="p-3.5">0.05 kW / 220V</td>
-              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold">100% Sterile</span></td>
+              <td class="p-3.5 font-bold text-brand-blue">Compressed-Air Treatment</td>
+              <td class="p-3.5 font-semibold">Project-selected dryer and filtration train</td>
+              <td class="p-3.5">Pressure dew point and air-quality targets from the project specification; include purge and filter losses</td>
+              <td class="p-3.5">Confirm utilities for the selected configuration</td>
+              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold">Validate performance; no sterility inferred</span></td>
             </tr>
             <tr class="hover:bg-slate-50">
-              <td class="p-3.5 font-bold text-brand-blue">Central Vacuum Suction</td>
-              <td class="p-3.5 font-semibold">HVS-15 Multi-Stage Cyclone</td>
-              <td class="p-3.5">4,500 L/min air-flow (-28 kPa)</td>
-              <td class="p-3.5">5.5 kW / 380V</td>
-              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold">Continuous Cyclone</span></td>
+              <td class="p-3.5 font-bold text-brand-blue">Dental Vacuum Suction</td>
+              <td class="p-3.5 font-semibold">Project-selected HVS configuration</td>
+              <td class="p-3.5">Calculate from simultaneous suction demand, pipe losses and required operating suction</td>
+              <td class="p-3.5">Confirm utilities for the selected configuration</td>
+              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold">Redundancy subject to project risk review</span></td>
             </tr>
             <tr class="hover:bg-slate-50">
-              <td class="p-3.5 font-bold text-brand-blue">Sterilization Purified Water</td>
-              <td class="p-3.5 font-semibold">HRC-300 Dual RO + Ozone</td>
-              <td class="p-3.5">300 L/h permeate output</td>
-              <td class="p-3.5">1.5 kW / 220V</td>
-              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-bold">CSSD Loop Compliant</span></td>
+              <td class="p-3.5 font-bold text-brand-blue">Water Treatment</td>
+              <td class="p-3.5 font-semibold">Project-selected treatment train</td>
+              <td class="p-3.5">Capacity and quality targets from validated demand and the applicable water specification</td>
+              <td class="p-3.5">Confirm utilities for the selected configuration</td>
+              <td class="p-3.5"><span class="px-2 py-0.5 rounded bg-purple-100 text-purple-800 font-bold">Compliance requires project validation</span></td>
             </tr>
           </tbody>
         </table>
@@ -330,7 +284,7 @@
         <div>
           <span class="text-xs text-sky-400 font-bold uppercase tracking-wider">Direct Engineering Support</span>
           <h3 class="text-xl font-bold font-display mt-1 text-white">Need a Customized 15–50 Chair Pneumatic CAD Blueprint?</h3>
-          <p class="text-xs text-slate-300 mt-2 max-w-xl">Our senior biomedical application engineers provide comprehensive pipe sizing calculations, isometric plant room CAD drawings, and complete equipment schedules within 24 hours.</p>
+          <p class="text-xs text-slate-300 mt-2 max-w-xl">Share the chair count, instrument schedule and layout for pipe sizing, isometric CAD and equipment-schedule review. Scope and timing are confirmed after technical triage.</p>
         </div>
         <div class="flex flex-wrap gap-3">
           <a href="../../contact.html" class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-3 rounded-lg font-bold text-xs transition shadow-md">
@@ -391,7 +345,7 @@
             <i class="fa-solid fa-tag text-[11px]"></i> Wobble Piston Kinematics (ZB Series)
           </a>
           <a href="../../products-hy.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> Nano-Coated Antibacterial Tank (38L)
+            <i class="fa-solid fa-tag text-[11px]"></i> Model-Specific Receiver Maintenance
           </a>
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> 1–50 Dental Chairs Sizing Equation
@@ -422,8 +376,8 @@
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[11px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
-              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA dryers.</p>
+              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Anatomy of Dental Compressors</h5>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Model-specific compressor architecture, component functions and project air-treatment requirements.</p>
             </div>
             <span class="text-[11px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -441,7 +395,7 @@
             <div>
               <span class="text-[11px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">Aerodynamic Power: 3D Exploded Anatomy of HVS Dental Vacuum</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and 85%+ aerosol suppression.</p>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and project-validated aerosol source capture.</p>
             </div>
             <span class="text-[11px] font-bold text-teal-700 mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -462,7 +416,7 @@
             Designing a 15–50 Chair Hospital Dental Pneumatic Center?
           </h3>
           <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
-            Our biomedical engineering team calculates multi-stage flow redundancy, simultaneous factor curves (k=0.70–0.45), and delivers complete isometric plant room CAD drawings within 24 hours.
+            Our biomedical engineering team reviews multi-stage capacity, project-specific simultaneous-use assumptions, pipe losses and isometric plant room CAD. Deliverables and timing are confirmed after scope review.
           </p>
         </div>
 
@@ -544,7 +498,7 @@
   <!-- FOOTER -->
   <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 text-center">
-      <p>&copy; 2026 Shandong Hongrun Air Compressor Technology Co., Ltd. &middot; ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II</p>
+      <p>&copy; 2026 Shandong Hongrun Air Compressor Technology Co., Ltd. &middot; ISO 13485:2016 &middot; TÜV Class 0 (HW-200–HW-3600) &middot; CE MDR &middot; NMPA Class II</p>
     </div>
   </footer>
   <!-- PWA Service Worker Registration -->

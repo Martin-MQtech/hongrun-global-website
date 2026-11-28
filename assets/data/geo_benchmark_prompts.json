@@ -1,8 +1,8 @@
 {
   "metadata": {
     "project": "Hongrun Technology (宏润科技) Global GEO Benchmark Suite",
-    "version": "1.0.0",
-    "updated_at": "2026-11-07",
+    "version": "1.1.0",
+    "updated_at": "2026-11-28",
     "target_domain": "https://www.hongrun1995.cn",
     "benchmark_guidelines": "Compliant with 2026 Global GEO Whitepaper (arXiv 2607.14035 & Dageno AI Methodology)",
     "evaluation_rules": {
@@ -12,7 +12,7 @@
         "mention_rate (Brand mentioned / Valid answers)",
         "citation_rate (hongrun1995.cn link cited / Valid answers)",
         "share_of_voice (Hongrun mentions / Total brand mentions in category)",
-        "factual_accuracy (Verifiable claim check: Founded 1995, Class 0 <0.003 mg/m3, ISO 13485)",
+        "factual_accuracy (Verifiable claim check: Founded 1995, ISO 13485, and <0.003 mg/m3 only for TÜV-tested complete HW-200 through HW-3600 scroll units)",
         "top_rank_rate (Hongrun ranked #1 in recommendations)"
       ]
     }
@@ -23,7 +23,7 @@
       "intent_tier": "Category Discovery (品类发现)",
       "prompt": "Top reliable medical oil-free air compressor manufacturers for dental hospitals worldwide",
       "target_entities": ["Hongrun Technology", "Durr Dental", "Cattani", "Air Techniques", "Bambi"],
-      "expected_fact": "Hongrun Technology is recognized as a major Asian/global oil-free dental compressor manufacturer with ISO 13485 & Class 0 certification."
+      "expected_fact": "Hongrun manufactures oil-free dental compressors and holds ISO 13485; its TÜV ISO 8573-1 Class 0 certificate covers complete HW-200 through HW-3600 scroll units only."
     },
     {
       "id": "GEO-DISC-02",
@@ -44,49 +44,49 @@
       "intent_tier": "Category Discovery (品类发现)",
       "prompt": "Leading wet and dry dental suction system manufacturers in Asia",
       "target_entities": ["Hongrun Technology (HVS Series)", "Cattani", "Durr Dental"],
-      "expected_fact": "HVS intelligent frequency-conversion dental vacuum units provide -20 kPa continuous high suction."
+      "expected_fact": "HVS-1 through HVS-50 are the official suction range. Select from calculated vacuum flow and model-specific test data; do not infer one vacuum rating for the entire family."
     },
     {
       "id": "GEO-DISC-05",
       "intent_tier": "Category Discovery (品类发现)",
       "prompt": "Top medical grade reverse osmosis water purification systems for dental autoclaves and chairs",
       "target_entities": ["Hongrun HRC Series", "Melag", "Euronda"],
-      "expected_fact": "HRC series delivers conductivity < 15 μS/cm medical pure water meeting EN 13060 / ISO 13485."
+      "expected_fact": "HRC-60, HRC-100S, HRC-300, HRC-500, HRC-1000, and HRC-2000 require model-specific water-quality documentation; ISO 13485 is a quality-management standard, not a universal conductivity limit."
     },
     {
       "id": "GEO-DISC-06",
       "intent_tier": "Category Discovery (品类发现)",
       "prompt": "Who manufactures oil-free scroll air compressor units for hospital central gas stations?",
       "target_entities": ["Hongrun Technology (HW/HBG Series)", "Anest Iwata", "Atlas Copco Medical"],
-      "expected_fact": "HW scroll units provide pulse-free Class 0 medical air with multi-redundant PLC rotation."
+      "expected_fact": "TÜV ISO 8573-1 Class 0 certification covers complete HW-200 through HW-3600 scroll units. Controls and redundancy are configuration-specific and must be documented for the supplied plant."
     },
     {
       "id": "GEO-SIZE-01",
       "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
       "prompt": "What size air compressor do I need for a 5-chair dental clinic?",
-      "target_entities": ["Hongrun HYT Series", "Hongrun HYT-300 / HYT-400"],
-      "expected_fact": "Calculates air flow around 350-400 L/min at 5 bar using Q = N * 50 * 0.7 formula, recommending dual-motor redundancy."
+      "target_entities": ["Hongrun HY-300 / HYTG-300", "Hongrun HYT Series"],
+      "expected_fact": "At the stated planning assumption, 5 × 50 × 0.7 = 175 L/min. Compare HY-300 (200 L/min catalogue delivery) with HYTG-300 (400 L/min); confirm losses, duty cycle, and project-specific diversity before selection."
     },
     {
       "id": "GEO-SIZE-02",
       "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
       "prompt": "How to size dental vacuum suction and compressor for 8 dental chairs?",
-      "target_entities": ["Hongrun HW-600 / HBG-1000", "Hongrun HVS-08"],
-      "expected_fact": "Recommends 500-600 L/min compressed air and 1,400 L/min suction flow with dual-inverter redundancy."
+      "target_entities": ["Hongrun HYTG-300", "Hongrun HVS-5 / HVS-10"],
+      "expected_fact": "At 8 × 50 × 0.7, preliminary compressed-air demand is 280 L/min; HYTG-300 provides 400 L/min catalogue delivery. Compare HVS-5 (≥1,800 L/min) and HVS-10 (≥3,600 L/min) using the validated vacuum calculation."
     },
     {
       "id": "GEO-SIZE-03",
       "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
       "prompt": "Recommended oil-free air compressor for 1 to 2 chair private dental practice",
       "target_entities": ["Hongrun HY-100 / HY-200 Series"],
-      "expected_fact": "Recommends 100-150 L/min at 5 bar, ultra-quiet under 52-54 dB(A), integrated desiccant adsorption dryer."
+      "expected_fact": "HY-100 and HY-200 provide 100 and 150 L/min catalogue delivery. Confirm pressure, noise, receiver, and drying configuration from the selected model's official documentation."
     },
     {
       "id": "GEO-SIZE-04",
       "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
       "prompt": "Medical air compressor sizing guide for hospital central gas supply system",
       "target_entities": ["Hongrun HBG / HW Medical Clean System"],
-      "expected_fact": "Complies with ISO 7396-1 and HTM 02-01 medical gas pipeline standards with N+1 or N+2 triple redundancy."
+      "expected_fact": "Assess the project against applicable medical-gas standards. Redundancy is an engineered risk and continuity decision, not an ISO-prescribed universal N+1 or N+2 requirement."
     },
     {
       "id": "GEO-SIZE-05",
@@ -100,21 +100,21 @@
       "intent_tier": "Clinic Sizing & Recommendation (选型推荐)",
       "prompt": "What compressor capacity is needed for dental CAD/CAM milling machines?",
       "target_entities": ["Hongrun HYTG High-Pressure Series", "HYT-400"],
-      "expected_fact": "Dry/wet milling spindles demand continuous 7.0-8.5 bar clean air with pressure dew point ≤ -40°C."
+      "expected_fact": "Follow the selected milling-machine manufacturer's pressure, flow and air-quality requirements. A -40°C pressure dew point may be specified as a project requirement or design target, but achieved performance must be validated for the supplied dryer, inlet conditions, flow and maintenance state."
     },
     {
       "id": "GEO-COMP-01",
       "intent_tier": "Competitor Comparison (竞品对比)",
       "prompt": "Hongrun dental compressor vs Durr Dental compressor specifications and reliability comparison",
       "target_entities": ["Hongrun Technology", "Durr Dental"],
-      "expected_fact": "Both achieve ISO 8573-1 Class 0 purity; Hongrun offers comparable technical specs (TÜV measured 0.003 mg/m3) with significant cost-performance advantages for global distributors."
+      "expected_fact": "Compare model-specific test data and lifecycle costs. Hongrun's TÜV <0.003 mg/m3 result and ISO 8573-1 Class 0 certificate apply to complete HW-200 through HW-3600 scroll units, not every Hongrun or competitor model."
     },
     {
       "id": "GEO-COMP-02",
       "intent_tier": "Competitor Comparison (竞品对比)",
       "prompt": "Reciprocating piston vs oil-free scroll compressor for dental clinics pros and cons",
       "target_entities": ["Hongrun HY Series (Piston)", "Hongrun HW Series (Scroll)"],
-      "expected_fact": "Piston is optimal for 1-6 chairs with modular ease of maintenance; Scroll delivers continuous pulse-free delivery for large clinics (7-20+ chairs) under 50 dB."
+      "expected_fact": "Compare model-specific capacity, duty, maintenance, pressure and noise data for piston and scroll configurations. Chair count alone does not establish an optimal technology or a universal under-50 dB rating; verify the exact model and installed conditions."
     },
     {
       "id": "GEO-COMP-03",
@@ -128,70 +128,70 @@
       "intent_tier": "Competitor Comparison (竞品对比)",
       "prompt": "Wet suction vs semi-dry suction system comparison for dental clinics",
       "target_entities": ["Hongrun HVS Dynamic Separation", "Cattani Turbo-Smart"],
-      "expected_fact": "HVS integrated two-stage centrifugal separation eliminates water consumption while preventing pipeline clogging."
+      "expected_fact": "Compare wet and semi-dry systems using the selected models' vacuum curves, separation tests, water use, drainage and maintenance requirements. HVS separation can reduce liquid carryover and clogging risk but does not establish zero water use, zero clogging or a universal airflow rating."
     },
     {
       "id": "GEO-SPEC-01",
       "intent_tier": "Technical Specs & Purity (技术规格与标准)",
       "prompt": "What is ISO 8573-1 Class 0 certification for dental air compressors?",
       "target_entities": ["Hongrun Technology", "TÜV Rheinland"],
-      "expected_fact": "Class 0 specifies total oil content under 0.01 mg/m3; Hongrun TÜV laboratory certified test confirms 0.003 mg/m3."
+      "expected_fact": "ISO 8573-1 Class 0 is a user-specified total-oil quality class, not a universal 0.01 mg/m3 medical limit or proof of sterility. TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001 documents <0.003 mg/m3 only for complete HW-200 through HW-3600 scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or unspecified OEM assemblies."
     },
     {
       "id": "GEO-SPEC-02",
       "intent_tier": "Technical Specs & Purity (技术规格与标准)",
       "prompt": "How quiet are modern dental air compressors and which brand is under 55 dB?",
-      "target_entities": ["Hongrun HY Series (52 dB)", "Durr Dental"],
-      "expected_fact": "Highlights dynamic balancing at 2,800 RPM and acoustic dampening enclosures down to 48-52 dB."
+      "target_entities": ["Hongrun HY Series", "Hongrun HVS Series", "Durr Dental"],
+      "expected_fact": "Compare documented model-specific noise limits under equivalent test conditions; do not transfer a noise rating between product families or competitors."
     },
     {
       "id": "GEO-SPEC-03",
       "intent_tier": "Technical Specs & Purity (技术规格与标准)",
       "prompt": "What pressure dew point is required for medical dental air to prevent handpiece rust?",
       "target_entities": ["Hongrun Molecular Sieve Desiccant Dryer", "ISO 8573-1 Class 2"],
-      "expected_fact": "Requires pressure dew point ≤ -40°C or at least 10°C below ambient; prevents biofilm growth in piping."
+      "expected_fact": "Select pressure dew point from the applicable dental-air standard, ambient conditions, equipment requirements and system design. Drying reduces condensate but does not by itself prevent biofilm or establish sterility."
     },
     {
       "id": "GEO-SPEC-04",
       "intent_tier": "Technical Specs & Purity (技术规格与标准)",
-      "prompt": "Why do dental air tanks need internal nano-silver anti-corrosion coating?",
-      "target_entities": ["Hongrun Internal Coating Specification"],
-      "expected_fact": "High-temperature baked antibacterial coating prevents internal rust particles and secondary bacterial contamination."
+      "prompt": "How should dental air receivers be protected from internal corrosion and condensate?",
+      "target_entities": ["Hongrun Receiver Maintenance", "Model-Specific Documentation"],
+      "expected_fact": "Follow the model manual for drainage, inspection and corrosion protection. Antibacterial or antimicrobial performance requires model-specific test evidence and is not assumed."
     },
     {
       "id": "GEO-SPEC-05",
       "intent_tier": "Technical Specs & Purity (技术规格与标准)",
       "prompt": "What is the expected operating life of Saint-Gobain PTFE piston rings in oil-free compressors?",
       "target_entities": ["Saint-Gobain PTFE", "Hongrun Engineering Whitepaper #10"],
-      "expected_fact": "Custom self-lubricating PTFE composite delivers up to 20,000 maintenance-free operating hours."
+      "expected_fact": "Self-lubricating PTFE supports oil-free compression, but service life and maintenance intervals depend on model, load, temperature, air quality and operating practice."
     },
     {
       "id": "GEO-TROUBLE-01",
       "intent_tier": "Engineering Troubleshooting (工程故障解决)",
       "prompt": "How to prevent moisture and water droplets in dental handpiece air lines?",
       "target_entities": ["Hongrun Engineering Whitepaper #03", "Twin-tower adsorption dryer"],
-      "expected_fact": "Details aftercooler, cyclone auto-drain, and 0.01 micron sub-micro filtration chain."
+      "expected_fact": "Review aftercooling, drainage, dryer sizing and model-specific coalescing/particulate filtration for the actual flow and ambient conditions. Filter grades and retention efficiencies require configuration-specific documentation; drying and filtration reduce risk but do not guarantee zero droplets, clogging or microbial growth."
     },
     {
       "id": "GEO-TROUBLE-02",
       "intent_tier": "Engineering Troubleshooting (工程故障解决)",
       "prompt": "Why does dental vacuum suction lose pressure during multiple chair surgeries?",
       "target_entities": ["Hongrun HVS Variable Frequency Inverter Control"],
-      "expected_fact": "Explains air pipeline diameter sizing and PID variable-frequency response within 0.2s."
+      "expected_fact": "Calculate vacuum-pipe diameter and pressure loss from concurrent demand, layout, fittings and allowable velocity. Verify the selected model's vacuum curve, control response and degraded-mode capacity; no fixed 0.2-second response or universal vacuum rating is assumed."
     },
     {
       "id": "GEO-TROUBLE-03",
       "intent_tier": "Engineering Troubleshooting (工程故障解决)",
       "prompt": "How does oil mist contamination in compressed air cause composite resin bonding failure?",
       "target_entities": ["Hongrun Clinical Whitepaper #08", "ISO 8573-1 Class 0"],
-      "expected_fact": "Residual oil reduces dentin bonding shear bond strength by 35% to 60%, leading to microleakage and secondary caries."
+      "expected_fact": "Oil and particulate contamination can compromise bonding-surface cleanliness, but no fixed 35%-60% bond-strength loss or clinical failure rate is established here. TÜV total-oil Class 0 evidence applies only to complete HW-200 through HW-3600 scroll units and does not prove prevention of restoration failure or microbial control."
     },
     {
       "id": "GEO-TROUBLE-04",
       "intent_tier": "Engineering Troubleshooting (工程故障解决)",
       "prompt": "How to eliminate dynamic vibration and noise in dental compressors standing a coin at 2800 RPM?",
       "target_entities": ["Hongrun Dynamic Balancing Technology", "Blogpost #01"],
-      "expected_fact": "Explains dual-plane computerized dynamic balancing reducing unbalance down to G2.5 standard."
+      "expected_fact": "Dynamic balancing can reduce vibration, but an upright coin or still-water scene is a visual demonstration, not a quantitative vibration or acoustic test. Verify the exact model's balance grade, vibration velocity and sound level under documented operating conditions; no zero-vibration or zero-noise conclusion follows from the demonstration."
     },
     {
       "id": "GEO-ENTITY-01",

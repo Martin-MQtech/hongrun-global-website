@@ -3,71 +3,21 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>HVS Series Electric Dental Suction | Hongrun Technology</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="HVS dental electric suction units (HVS-1 to HVS-30) for 1–50 dental chairs. High-efficiency two-stage cyclone separation, 85%+ aerosol suppression, continuous suction.">
+  <meta name="description" content="HVS dental suction systems. Flow, vacuum, noise, separation and aerosol control are model- and project-specific; verify the exact model documentation.">
   <meta name="keywords" content="dental suction system, dental vacuum unit, HVS-1, HVS-2, HVS-10, aerosol control dental, central suction hospital">
   <link rel="canonical" href="https://www.hongrun1995.cn/products-hvs.html">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
   <meta property="og:title" content="HVS Series Electric Dental Suction | Hongrun Technology">
-  <meta property="og:description" content="HVS dental electric suction units (HVS-1 to HVS-30) for 1–50 dental chairs. High-efficiency two-stage cyclone separation, 85%+ aerosol suppression, continuous suction.">
+  <meta property="og:description" content="HVS dental suction systems. Flow, vacuum, noise, separation and aerosol control are model- and project-specific; verify the exact model documentation.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/intl/HVS-25.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/products-hvs.html">
   <meta property="og:type" content="product">
@@ -75,7 +25,7 @@
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HVS Series Electric Dental Suction | Hongrun Technology">
-  <meta name="twitter:description" content="HVS dental electric suction units (HVS-1 to HVS-30) for 1–50 dental chairs. High-efficiency two-stage cyclone separation, 85%+ aerosol suppression, continuous suction.">
+  <meta name="twitter:description" content="HVS dental suction systems. Flow, vacuum, noise, separation and aerosol control are model- and project-specific; verify the exact model documentation.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/products/intl/HVS-25.jpg"><link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -114,7 +64,7 @@
   "@type": "Product",
   "name": "HVS Series Dental High-Vacuum Electric Suction Systems",
   "image": "https://www.hongrun1995.cn/assets/images/products/hvs-family-portfolio.webp",
-  "description": "Electric high-vacuum dental suction system with two-stage cyclone separation and ≥85% aerosol evacuation for 1 to 50 dental chairs. Rated vacuum ≤ 12–20 kPa across the series with medical HEPA filtration.",
+  "description": "Electric high-vacuum dental suction systems. Flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.",
   "brand": {
     "@type": "Brand",
     "name": "Hongrun Technology"
@@ -124,7 +74,7 @@
     "name": "Hongrun Compressor Technology Co., Ltd."
   },
   "category": "Medical Devices > Dental Equipment > Dental Suction Systems",
-  "model": "HVS-1 / HVS-2 / HVS-3 / HVS-5 / HVS-7 / HVS-10 / HVS-15",
+  "model": "HVS-1 / HVS-2 / HVS-3 / HVS-5 / HVS-7 / HVS-10 / HVS-15 / HVS-20 / HVS-25 / HVS-30 / HVS-40 / HVS-50",
   "potentialAction": {
     "@type": "Action",
     "name": "Request a B2B Quotation",
@@ -138,18 +88,18 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "Aerosol Evacuation Rate",
-      "value": "≥85% Clinical Aerosol Defense"
+      "name": "Aerosol Source Capture",
+      "value": "Project-validated airflow, terminal capture and exhaust filtration"
     },
     {
       "@type": "PropertyValue",
-      "name": "Vacuum Level",
-      "value": "Rated Vacuum ≤ 12–20 kPa (per manufacturer type manual)"
+      "name": "Vacuum and Flow",
+      "value": "Verify exact model documentation and the calculated project design load"
     },
     {
       "@type": "PropertyValue",
-      "name": "Supported Chairs",
-      "value": "1 to 50 Dental Units"
+      "name": "Chair Capacity",
+      "value": "Project-validated; chair count alone does not determine capacity"
     }
   ]
 }
@@ -164,7 +114,7 @@
       "name": "What size high-vacuum suction unit do I need per dental chair?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dental high-vacuum suction sizing requires 250 to 300 L/min of air evacuation per treatment chair at ≤ 12–15 kPa rated vacuum (per manufacturer specification). For 1 chair, the HVS-1 (0.75 kW, 300 L/min) is optimal; for 2 to 3 chairs, the HVS-3 (1.5 kW, 900 L/min); and for 4 to 5 chairs, the HVS-5 (1.9 kW, 1500 L/min) provides strong, continuous aerosol evacuation."
+        "text": "Dental high-vacuum suction sizing requires a project calculation based on chair count, simultaneous procedures, terminal vacuum, and pipe losses. Verify exact model documentation and model-specific test conditions, then compare the calculated demand with the remaining capacity of the complete installation. Chair count alone does not establish unit capacity, and redundancy does not guarantee zero downtime."
       }
     },
     {
@@ -172,7 +122,7 @@
       "name": "How does Hongrun's two-stage centrifugal cyclone fluid separator protect the vacuum motor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hongrun HVS systems feature two-stage hydrodynamic separation: the first stage separates coarse blood, saliva, and amalgam particles via high-speed vortex cyclone; the second dynamic fluid separation chamber isolates micro-droplets and foam before air enters the side-channel vacuum blower. Separated fluids drain automatically without interrupting clinical suction."
+        "text": "Hongrun HVS systems use two-stage hydrodynamic separation to remove coarse fluid and particles before the vacuum blower. Drainage behavior, separation efficiency and maintenance access must be verified for the exact model and installation; uninterrupted clinical suction is not guaranteed."
       }
     },
     {
@@ -180,7 +130,7 @@
       "name": "How does high-volume evacuation (HVE) suppress dental aerosol cross-infection?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Clinical studies (Koch & Graetz 2021) demonstrate that high-volume evacuation at ≥300 L/min with intraoral suction capture reduces treatment-generated aerosol plumes and spatter by ≥85%. Hongrun HVS units incorporate terminal medical HEPA H14 exhaust filtration to neutralize pathogens before venting outside the building."
+        "text": "High-volume evacuation is a source-capture measure; its effectiveness depends on airflow, terminal placement, procedure and room conditions. Clinical-literature percentages are not a guaranteed Hongrun HVS capture rate. Verify the supplied exhaust filtration and system airflow, and do not treat suction or HEPA filtration as proof of pathogen neutralization."
       }
     },
     {
@@ -188,7 +138,7 @@
       "name": "Can Hongrun HVS dental suction systems run continuously all day?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Hongrun HVS series units are engineered with high-efficiency side-channel blowers, IP55 industrial-grade continuous duty motors, and automatic non-stop dynamic drainage that functions under vacuum, enabling 8-to-12 hour continuous clinical operation without thermal cutoff."
+        "text": "Operating limits depend on the exact model, ambient conditions, fluid load, drainage and exhaust configuration. Confirm the rated duty cycle and required maintenance in the model manual and site plan. Continuous or zero-downtime operation is not guaranteed."
       }
     }
   ]
@@ -221,8 +171,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -271,7 +225,7 @@
             <a href="/products-hy.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HY Dental Compressors (1–10 Chairs)</a>
             <a href="/products-hospital.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HW Hospital Scroll Systems</a>
             <a href="/products-hvs.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HVS Dental Suction Plants</a>
-            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (Model-Specific Dew Point)</a>
             <a href="/products-water.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HRC Pure Water &amp; Disinfection</a>
             <a href="/products-core.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">Core Pump Heads &amp; Spares</a>
           </div>
@@ -310,7 +264,7 @@
 
 
 <!-- ===================== PAGE HERO (CAROUSEL SLIDER) ===================== -->
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="relative pt-20 overflow-hidden bg-slate-900 group" id="hvs-hero-slider">
   <div class="relative h-[420px] lg:h-[480px]">
     <!-- Slides Container -->
@@ -365,13 +319,13 @@
           HVS Series<br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-teal-300">High-Vacuum Separation Systems</span>
         </h1>
         <p class="text-xs lg:text-sm text-slate-200 mb-4 font-normal leading-relaxed">
-          Protect the dentist. Care for the patient. Rated vacuum ≤ 12–20 kPa across the 1-to-50 chair range with two-stage cyclone separation — achieving &gt;85% aerosol cloud suppression (Koch &amp; Graetz 2021) across 1 to 50 chairs.
+          Flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee. Verify exact model documentation and validate the complete project installation.
         </p>
         <div class="flex flex-wrap gap-1.5 mb-4">
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Rated Vacuum (≤ 12–20 kPa)</span>
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Cyclone Separation</span>
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Auto-Drainage</span>
-          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">CE &amp; ISO 10637</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Model-Specific Vacuum</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Configured Separation</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Configuration-Specific Drainage</span>
+          <span class="px-2 py-0.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-medium text-[11px]">Verify Applicable Standards</span>
         </div>
         <div class="flex items-center gap-3">
           <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="contact.html">
@@ -392,38 +346,38 @@
     <div class="text-center mb-12">
       <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Protect. Extract. Filter.</div>
       <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">Why HVS Series?</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto">Engineered to handle liquid, gas and solid waste seamlessly, ensuring a dry, clear operative field.</p>
+      <p class="text-slate-500 max-w-2xl mx-auto">Liquid, gas and solid handling depends on the supplied configuration, operating conditions, drainage and maintenance. Validate the complete installation for the intended clinical procedures.</p>
     </div>
     <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-5">
       <div class="text-center p-6 bg-brand-light rounded-sm border border-slate-200 hover:border-brand-blue transition">
         <i class="fa-solid fa-lungs-virus text-brand-blue text-3xl mb-4"></i>
         <h3 class="font-bold text-brand-dark font-display text-sm uppercase">Aerosol Control</h3>
-        <p class="text-slate-500 text-xs mt-2">Dramatically cuts airborne pathogens in the operatory zone</p>
+        <p class="text-slate-500 text-xs mt-2">Aerosol control depends on source capture, airflow, terminal placement, procedure and room conditions; no pathogen-neutralization guarantee</p>
       </div>
       <div class="text-center p-6 bg-brand-light rounded-sm border border-slate-200 hover:border-brand-blue transition">
         <i class="fa-solid fa-filter text-brand-blue text-3xl mb-4"></i>
         <h3 class="font-bold text-brand-dark font-display text-sm uppercase">Multi-Stage Separation</h3>
-        <p class="text-slate-500 text-xs mt-2">Dynamic cyclone separation &amp; high-efficiency exhaust particle filtration</p>
+        <p class="text-slate-500 text-xs mt-2">Separation stages and exhaust filtration are configuration-specific and require model and installation validation</p>
       </div>
       <div class="text-center p-6 bg-brand-light rounded-sm border border-slate-200 hover:border-brand-blue transition">
         <i class="fa-solid fa-water text-brand-blue text-3xl mb-4"></i>
         <h3 class="font-bold text-brand-dark font-display text-sm uppercase">Auto-Drain System</h3>
-        <p class="text-slate-500 text-xs mt-2">Intelligent fluid management — automatic continuous drainage</p>
+        <p class="text-slate-500 text-xs mt-2">Verify the supplied drainage method, fluid load, discharge arrangement and maintenance requirements</p>
       </div>
       <div class="text-center p-6 bg-brand-light rounded-sm border border-slate-200 hover:border-brand-blue transition">
         <i class="fa-solid fa-gauge-high text-brand-blue text-3xl mb-4"></i>
         <h3 class="font-bold text-brand-dark font-display text-sm uppercase">Constant Vacuum</h3>
-        <p class="text-slate-500 text-xs mt-2">Rated ≤ 12–20 kPa vacuum across all dental chair configurations</p>
+        <p class="text-slate-500 text-xs mt-2">Vacuum and flow depend on the exact model, simultaneous demand, terminal conditions and pipe losses</p>
       </div>
       <div class="text-center p-6 bg-brand-light rounded-sm border border-slate-200 hover:border-brand-blue transition">
         <i class="fa-solid fa-microchip text-brand-blue text-3xl mb-4"></i>
         <h3 class="font-bold text-brand-dark font-display text-sm uppercase">VFD Intelligence</h3>
-        <p class="text-slate-500 text-xs mt-2">Self-adapting Variable Frequency Drive matching real-time suction demand</p>
+        <p class="text-slate-500 text-xs mt-2">Where VFD control is supplied, verify its configuration, set points and response at the project design load</p>
       </div>
       <div class="text-center p-6 bg-brand-light rounded-sm border border-slate-200 hover:border-brand-blue transition">
         <i class="fa-solid fa-shield-halved text-brand-blue text-3xl mb-4"></i>
         <h3 class="font-bold text-brand-dark font-display text-sm uppercase">Corrosion-Resistant</h3>
-        <p class="text-slate-500 text-xs mt-2">Engineered internal fluid pathways resistant to acidic clinical waste &amp; biofilm</p>
+        <p class="text-slate-500 text-xs mt-2">Verify wetted-material compatibility with the expected fluids; cleaning, disinfection and biofilm control remain installation-specific duties</p>
       </div>
     </div>
   </div>
@@ -432,26 +386,22 @@
 <!-- Clinic Series Showcase -->
 <section class="py-16 bg-brand-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-extrabold text-brand-dark mb-2 font-display tracking-tight uppercase">Clinic Systems (1–10 Chairs)</h2>
-    <p class="text-slate-500 mb-10 text-sm">Quiet, compact units built for standard clinical installations.</p>
+    <h2 class="text-2xl font-extrabold text-brand-dark mb-2 font-display tracking-tight uppercase">Clinic Suction Configurations</h2>
+    <p class="text-slate-500 mb-10 text-sm">Candidate configurations for project review. Noise, flow, vacuum and clinical capacity must be validated for the exact supplied model and installation.</p>
 
     <!-- HVS-1 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-1-2.webp" data-hd="assets/images/products/intl/HVS-1-2.webp" alt="HVS-1 single chair dental suction unit" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high" width="480" height="480" />
+        <img data-zoom src="assets/images/products/thumbs/HVS-1-2.webp" data-hd="assets/images/products/intl/HVS-1-2.webp" alt="HVS-1 dental suction unit" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-1</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 1 treatment chair · Dry suction system with integrated hydrodynamic separation</div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Candidate clinic configuration · Capacity and clinical use require project validation</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">0.75 kW (1 Pump)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥0.3 m³/min (18 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 12 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤68 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Dynamic Centrifugal</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">430 × 390 × 650</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">32 kg · 220V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Flow &amp; Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">Verify exact model documentation</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Electrical</span><strong class="text-brand-dark text-xs sm:text-sm">Verify power, phase and voltage</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation &amp; Drainage</span><strong class="text-brand-dark text-xs sm:text-sm">Verify supplied configuration</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise &amp; Installation</span><strong class="text-brand-dark text-xs sm:text-sm">Verify test conditions and manual</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -460,20 +410,16 @@
     <!-- HVS-3 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-3.webp" data-hd="assets/images/products/intl/HVS-3.webp" alt="HVS-3 multi-chair dental suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
+        <img data-zoom src="assets/images/products/thumbs/HVS-3.webp" data-hd="assets/images/products/intl/HVS-3.webp" alt="HVS-3 dental suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-3</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 2–3 treatment chairs · VFD frequency control</div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Candidate clinic configuration · Capacity and clinical use require project validation</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">1.5 kW (VFD Control)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥1.2 m³/min (72 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 14 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤69 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Dynamic Centrifugal</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">430 × 390 × 650</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">40 kg · 220V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Flow &amp; Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">Verify exact model documentation</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Electrical</span><strong class="text-brand-dark text-xs sm:text-sm">Verify power, phase and voltage</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation &amp; Drainage</span><strong class="text-brand-dark text-xs sm:text-sm">Verify supplied configuration</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise &amp; Installation</span><strong class="text-brand-dark text-xs sm:text-sm">Verify test conditions and manual</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-brand-blue transition bg-teal-50 px-2.5 py-1 rounded border border-teal-200">
@@ -487,20 +433,16 @@
     <!-- HVS-5 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-5.webp" data-hd="assets/images/products/intl/HVS-5.webp" alt="HVS-5 clinic suction system for 4-5 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
+        <img data-zoom src="assets/images/products/thumbs/HVS-5.webp" data-hd="assets/images/products/intl/HVS-5.webp" alt="HVS-5 clinic suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-5</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 4–5 treatment chairs · Heavy-duty 3-phase station</div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Candidate clinic configuration · Capacity and clinical use require project validation</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">1.9 kW (3-Phase)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥1.8 m³/min (108 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 15 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤76 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">Φ50 mm / Φ50 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Two-Stage Cyclone</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">800 × 600 × 970</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">90 kg · 380V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Flow &amp; Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">Verify exact model documentation</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Electrical</span><strong class="text-brand-dark text-xs sm:text-sm">Verify power, phase and voltage</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation &amp; Drainage</span><strong class="text-brand-dark text-xs sm:text-sm">Verify supplied configuration</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise &amp; Installation</span><strong class="text-brand-dark text-xs sm:text-sm">Verify test conditions and manual</strong></div>
         </div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260825-dental-suction-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs font-bold text-teal-700 hover:text-brand-blue transition bg-teal-50 px-2.5 py-1 rounded border border-teal-200">
@@ -514,20 +456,16 @@
     <!-- HVS-10 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom src="assets/images/products/thumbs/HVS-10.webp" data-hd="assets/images/products/intl/HVS-10.webp" alt="HVS-10 large clinic suction system 8-10 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
+        <img data-zoom src="assets/images/products/thumbs/HVS-10.webp" data-hd="assets/images/products/intl/HVS-10.webp" alt="HVS-10 large clinic suction system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS-10</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 8–10 treatment chairs · Clinic high-capacity station</div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Candidate clinic configuration · Capacity and clinical use require project validation</div>
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">3.3 kW (3-Phase)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction Flow</span><strong class="text-brand-dark text-xs sm:text-sm">≥3.6 m³/min (216 m³/h)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">≤ 16 kPa</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤76 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Suction / Port</span><strong class="text-brand-dark text-xs sm:text-sm">DN65 / DN65</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation</span><strong class="text-brand-dark text-xs sm:text-sm">Two-Stage Cyclone</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">800 × 600 × 970</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">105 kg · 380V</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Flow &amp; Vacuum</span><strong class="text-brand-dark text-xs sm:text-sm">Verify exact model documentation</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Electrical</span><strong class="text-brand-dark text-xs sm:text-sm">Verify power, phase and voltage</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Separation &amp; Drainage</span><strong class="text-brand-dark text-xs sm:text-sm">Verify supplied configuration</strong></div>
+          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise &amp; Installation</span><strong class="text-brand-dark text-xs sm:text-sm">Verify test conditions and manual</strong></div>
         </div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -538,8 +476,8 @@
 <!-- Hospital Series Showcase -->
 <section class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-extrabold text-brand-dark mb-2 font-display tracking-tight uppercase">Hospital Central Suction (15–50 Chairs)</h2>
-    <p class="text-slate-500 mb-10 text-sm">Industrial-grade negative pressure with VFD (Variable Frequency Drive) to handle massive simultaneous loads.</p>
+    <h2 class="text-2xl font-extrabold text-brand-dark mb-2 font-display tracking-tight uppercase">Central Suction Configurations</h2>
+    <p class="text-slate-500 mb-10 text-sm">Candidate configurations for central projects. Flow, vacuum, remaining capacity, controls and redundancy must be validated for simultaneous design loads; zero downtime is not guaranteed.</p>
 
     <!-- HVS-15 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
@@ -632,8 +570,8 @@
             <i class="fa-solid fa-chair text-lg"></i>
           </div>
           <div>
-            <h4 class="text-brand-dark font-bold text-sm">1–10 Chairs Clinic Suction</h4>
-            <p class="text-slate-500 text-xs mt-1">Compact point-of-use units with integrated drainage, direct operatory connection and ≤68 dB quiet operation.</p>
+            <h3 class="text-brand-dark font-bold text-sm">1–10 Chairs Clinic Suction</h3>
+            <p class="text-slate-500 text-xs mt-1">Compact point-of-use units with integrated drainage. Noise values are model-specific and must be verified for the installation.</p>
           </div>
         </div>
 
@@ -643,7 +581,7 @@
           </div>
           <div>
             <h4 class="text-brand-dark font-bold text-sm">Cyclone Dynamic Separation</h4>
-            <p class="text-slate-500 text-xs mt-1">Stainless steel two-stage gas-liquid separation tank capturing 85%+ aerosols and particulate matter.</p>
+            <p class="text-slate-500 text-xs mt-1">Two-stage gas-liquid separation supports fluid handling; aerosol source capture and exhaust filtration require project validation.</p>
           </div>
         </div>
 
@@ -653,7 +591,7 @@
           </div>
           <div>
             <h4 class="text-brand-dark font-bold text-sm">15–50 Chairs Hospital VFD Station</h4>
-            <p class="text-slate-500 text-xs mt-1">Multi-turbine central vacuum station with adaptive PLC inverter maintaining rated vacuum ≤ 17–20 kPa under peak clinic load.</p>
+            <p class="text-slate-500 text-xs mt-1">Multi-turbine central vacuum station with configured controls. Verify rated vacuum and airflow at the project design load.</p>
           </div>
         </div>
       </div>
@@ -700,12 +638,12 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-100">
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-15</td><td class="px-4 py-2.5">2</td><td class="px-4 py-2.5">5.7</td><td class="px-4 py-2.5">&lt;78</td><td class="px-4 py-2.5">245</td><td class="px-4 py-2.5">380V</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-20</td><td class="px-4 py-2.5">2</td><td class="px-4 py-2.5">6.5</td><td class="px-4 py-2.5">&lt;78</td><td class="px-4 py-2.5">248</td><td class="px-4 py-2.5">380V</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-25</td><td class="px-4 py-2.5">3</td><td class="px-4 py-2.5">8.7</td><td class="px-4 py-2.5">&lt;79</td><td class="px-4 py-2.5">280</td><td class="px-4 py-2.5">380V</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-30</td><td class="px-4 py-2.5">3</td><td class="px-4 py-2.5">9.5</td><td class="px-4 py-2.5">&lt;79</td><td class="px-4 py-2.5">300</td><td class="px-4 py-2.5">380V</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-40</td><td class="px-4 py-2.5">4</td><td class="px-4 py-2.5">15</td><td class="px-4 py-2.5">&lt;80</td><td class="px-4 py-2.5">350</td><td class="px-4 py-2.5">380V</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-50</td><td class="px-4 py-2.5">5</td><td class="px-4 py-2.5">17.5</td><td class="px-4 py-2.5">&lt;80</td><td class="px-4 py-2.5">380</td><td class="px-4 py-2.5">380V</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-15</td><td class="px-4 py-2.5">2</td><td class="px-4 py-2.5">5.7</td><td class="px-4 py-2.5">&le;79</td><td class="px-4 py-2.5">245</td><td class="px-4 py-2.5">380V</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-20</td><td class="px-4 py-2.5">2</td><td class="px-4 py-2.5">6.5</td><td class="px-4 py-2.5">&le;79</td><td class="px-4 py-2.5">248</td><td class="px-4 py-2.5">380V</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-25</td><td class="px-4 py-2.5">3</td><td class="px-4 py-2.5">8.7</td><td class="px-4 py-2.5">&le;79</td><td class="px-4 py-2.5">280</td><td class="px-4 py-2.5">380V</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-30</td><td class="px-4 py-2.5">3</td><td class="px-4 py-2.5">9.5</td><td class="px-4 py-2.5">&le;80</td><td class="px-4 py-2.5">300</td><td class="px-4 py-2.5">380V</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-40</td><td class="px-4 py-2.5">4</td><td class="px-4 py-2.5">15</td><td class="px-4 py-2.5">&le;80</td><td class="px-4 py-2.5">350</td><td class="px-4 py-2.5">380V</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HVS-50</td><td class="px-4 py-2.5">5</td><td class="px-4 py-2.5">17.5</td><td class="px-4 py-2.5">&le;80</td><td class="px-4 py-2.5">380</td><td class="px-4 py-2.5">380V</td></tr>
           </tbody>
         </table>
       </div>
@@ -730,7 +668,7 @@
           <span>What size high-vacuum suction unit do I need per dental chair?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          Dental high-vacuum suction sizing requires <strong>250 to 300 L/min</strong> of air evacuation per treatment chair at ≤ 12–15 kPa rated vacuum (per manufacturer specification). For 1 chair, the <strong>HVS-1</strong> (0.75 kW, 300 L/min) is optimal; for 2 to 3 chairs, the <strong>HVS-3</strong> (1.5 kW, 900 L/min); and for 4 to 5 chairs, the <strong>HVS-5</strong> (1.9 kW, 1500 L/min) provides strong, continuous aerosol evacuation.
+          Dental high-vacuum suction sizing requires a project calculation based on chair count, simultaneous procedures, terminal vacuum, and pipe losses. Verify exact model documentation and model-specific test conditions, then compare the calculated demand with the remaining capacity of the complete installation. Chair count alone does not establish unit capacity, and redundancy does not guarantee zero downtime.
         </p>
       </div>
 
@@ -741,7 +679,7 @@
           <span>How does Hongrun's two-stage centrifugal cyclone fluid separator protect the vacuum motor?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          Hongrun HVS systems feature <strong>two-stage hydrodynamic separation</strong>: the first stage separates coarse blood, saliva, and amalgam particles via high-speed vortex cyclone; the second dynamic fluid separation chamber isolates micro-droplets and foam before air enters the side-channel vacuum blower. Separated fluids drain automatically without interrupting clinical suction.
+          Hongrun HVS systems use <strong>two-stage hydrodynamic separation</strong> to remove coarse fluid and particles before the vacuum blower. Drainage behavior, separation efficiency and maintenance access must be verified for the exact model and installation; uninterrupted clinical suction is not guaranteed.
         </p>
       </div>
 
@@ -752,7 +690,7 @@
           <span>How does high-volume evacuation (HVE) suppress dental aerosol cross-infection?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          Clinical studies (such as Koch &amp; Graetz 2021) demonstrate that high-volume evacuation at ≥300 L/min with intraoral suction capture reduces treatment-generated aerosol plumes and spatter by <strong>≥85%</strong>. Hongrun HVS units incorporate terminal medical HEPA H14 exhaust filtration to neutralize pathogens before venting outside the building.
+          High-volume evacuation is a source-capture measure; its effectiveness depends on airflow, terminal placement, procedure and room conditions. Clinical-literature percentages are not a guaranteed Hongrun HVS capture rate. Verify the supplied exhaust filtration and system airflow, and do not treat suction or HEPA filtration as proof of pathogen neutralization.
         </p>
       </div>
 
@@ -763,7 +701,7 @@
           <span>Can Hongrun HVS dental suction systems run continuously all day?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          Yes. Hongrun HVS series units are engineered with high-efficiency side-channel blowers, IP55 industrial-grade continuous duty motors, and automatic non-stop dynamic drainage that functions under vacuum, enabling <strong>8-to-12 hour continuous clinical operation</strong> without thermal cutoff.
+          Operating limits depend on the exact model, ambient conditions, fluid load, drainage and exhaust configuration. Confirm the rated duty cycle and required maintenance in the model manual and site plan. Continuous or zero-downtime operation is not guaranteed.
         </p>
       </div>
     </div>
@@ -790,11 +728,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Medical air, dental suction, and pure water systems require model- and project-specific documentation.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -813,7 +751,7 @@
 
       <!-- Col 3: 6-Category Full Products Hub -->
       <div>
-        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
+        <h3 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h3>
         <ul class="space-y-3 text-sm">
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="products-hy.html">Piston Oil-Free Compressors (HY)</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="products-hospital.html">Scroll Compressors &amp; Hospital (HW/HBG)</a></li>
@@ -843,7 +781,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; CE MDR &middot; NMPA Class II Medical Qualification &middot; TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.</p>
     </div>
   </div>
 </footer>

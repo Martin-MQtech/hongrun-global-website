@@ -3,76 +3,26 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Global Expansion Operational Strategy: Replacing Fragmented Sales with Systemic Precision | Hongrun Technology</title>
+<title>Hongrun Global Expansion: Operations &amp; Engineering</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="Inside Hongrun Technology's global expansion roadmap: Discover how 30 years of medical-grade Class 0 oil-free air manufacturing unites with an enduring digital operations hub. Featuring official 68s 4K corporate film, Southeast Asia network roadmap, and bilingual engineering script.">
+  <meta name="description" content="Hongrun’s global expansion roadmap: model-documented medical air manufacturing, a bilingual corporate film, Southeast Asia networks, and digital operations.">
   <meta name="keywords" content="medical air compressor, dental air compressor, global expansion strategy, B2B export playbook, Southeast Asia medical equipment, ISO 8573-1 Class 0, Hongrun Technology, Martin Chen">
   <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Global Expansion Operational Strategy: Replacing Fragmented Sales with Systemic Precision | Hongrun Technology">
-  <meta property="og:description" content="Replacing fragmented sales with systemic precision: Inside Hongrun's 30-year medical Class 0 engineering foundation and global digital matrix. Includes official 68s 4K film.">
+  <meta property="og:title" content="Hongrun Global Expansion: Operations &amp; Engineering">
+  <meta property="og:description" content="Hongrun’s global expansion roadmap: model-documented medical air manufacturing, a bilingual corporate film, Southeast Asia networks, and digital operations.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/">
   <meta property="og:type" content="article">
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Global Expansion Operational Strategy: Replacing Fragmented Sales with Systemic Precision | Hongrun Technology">
-  <meta name="twitter:description" content="Replacing fragmented sales with systemic precision: Inside Hongrun's 30-year medical Class 0 engineering foundation and global digital matrix.">
+  <meta name="twitter:title" content="Hongrun Global Expansion: Operations &amp; Engineering">
+  <meta name="twitter:description" content="Hongrun’s global expansion roadmap: model-documented medical air manufacturing, a bilingual corporate film, Southeast Asia networks, and digital operations.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg">
 
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet"/>
@@ -92,11 +42,11 @@
           "@id": "https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/"
         },
         "headline": "Global Expansion Operational Strategy: Replacing Fragmented Sales with Systemic Precision in Medical Air Systems",
-        "description": "How 30 years of medical Class 0 oil-free air manufacturing unites with an enduring digital operations hub to replace scattered export attempts with systemic precision.",
+        "description": "How oil-free medical air engineering, including certificate-scoped HW-200–HW-3600 total-oil Class 0 evidence, connects with international digital operations.",
         "inLanguage": ["en", "zh-CN"],
         "image": "https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg?v=20260915",
         "datePublished": "2026-09-15T08:00:00+08:00",
-        "dateModified": "2026-09-15T12:00:00+08:00",
+        "dateModified": "2026-11-28T12:00:00+08:00",
         "author": {
           "@type": "Person",
           "name": "Martin Chen",
@@ -121,7 +71,7 @@
         "@type": "VideoObject",
         "@id": "https://www.hongrun1995.cn/articles/20260915-global-expansion-operational-strategy/#video",
         "name": "Hongrun Technology Global Expansion Strategy 2026 (Official Corporate Film)",
-        "description": "Defeating fragmentation with systemic precision. Inside Hongrun Technology's 30-year medical Class 0 engineering heritage and international digital operations hub.",
+        "description": "Hongrun's manufacturing capabilities, certificate-scoped HW total-oil Class 0 evidence and international digital operations hub.",
         "thumbnailUrl": "https://www.hongrun1995.cn/assets/images/news/video_cover_global_expansion.jpg?v=20260915",
         "uploadDate": "2026-09-15T08:00:00+08:00",
         "duration": "PT1M8S",
@@ -318,8 +268,14 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Global Navigation Bar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -381,7 +337,7 @@
       <span class="bg-red-600 text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm inline-flex items-center gap-1.5"><i class="fa-brands fa-youtube"></i> 4K Video Featured &middot; 01:08</span>
       <span class="bg-gradient-to-r from-brand-accent to-brand-gold text-white font-bold text-[11px] uppercase tracking-wider px-3 py-1 rounded shadow-sm">Global Strategy Playbook &middot; Article #11</span>
       <span class="bg-white/10 border border-white/20 text-sky-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded backdrop-blur">Systemic Precision &middot; Medical Air Systems</span>
-      <span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded">ISO 8573-1 Class 0 &middot; NMPA Class II</span>
+      <span class="bg-teal-500/20 border border-teal-400/30 text-teal-300 font-semibold text-[11px] uppercase tracking-wider px-3 py-1 rounded">HW-200–HW-3600 Class 0 &middot; NMPA Class II</span>
     </div>
 
     <!-- Main Headline -->
@@ -391,7 +347,7 @@
     </h1>
 
     <p class="text-sm sm:text-base text-slate-300 font-light leading-relaxed mb-6">
-      How Hongrun Technology combines a 30-year medical Class 0 pneumatic manufacturing heritage with an enduring digital operations hub to eliminate opportunistic export trading and build long-term international procurement trust.
+      How Hongrun Technology combines oil-free medical pneumatic engineering, including certificate-scoped HW-200–HW-3600 total-oil Class 0 evidence, with an enduring digital operations hub for international procurement.
     </p>
 
     <!-- Meta Info -->
@@ -412,7 +368,7 @@
 </header>
 
 <!-- Main Article Section -->
-<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="main-content" tabindex="-1">
   <article class="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 overflow-hidden">
 
   <!-- ========================================================= -->
@@ -457,7 +413,7 @@
             <span class="text-[11px] font-mono uppercase tracking-widest text-sky-400 block mb-1">Film Overview &amp; Specifications</span>
             <div class="text-sm font-bold text-white mb-2 font-display">68 Seconds Cinematic Technical Tour</div>
             <p class="text-xs text-slate-300 leading-relaxed">
-              Experience Hongrun Technology's automated 5-axis CNC machining, 100% oil-free ISO 8573-1 Class 0 assembly lines, Southeast Asia dual-hub expansion, and digital operations infrastructure in Ultra-High Definition.
+              Experience Hongrun Technology's automated 5-axis CNC machining, model-specific oil-free assembly, Southeast Asia expansion, and digital operations infrastructure. TÜV Class 0 evidence is limited to complete HW-200–HW-3600 scroll units.
             </p>
           </div>
 
@@ -623,7 +579,7 @@
       </figure>
 
       <p>
-        As Martin Chen, Chief Marketing Director (CMD) of Hongrun Technology, emphasized during our international operational review: <em>"Overseas procurement executives—particularly medical directors of European hospital groups, Southeast Asian healthcare chains, and Tier-1 dental distributors—are not looking for the cheapest pump head. What keeps them awake at night is <strong>operational uncertainty</strong>."</em> Small trading intermediaries cannot furnish accredited technical validation; they cannot prove a 20,000-hour maintenance-free service life; and they lack standardized bilingual engineering documentation and digital traceability.
+        As Martin Chen, Chief Marketing Director (CMD) of Hongrun Technology, emphasized during our international operational review: <em>"Overseas procurement executives—particularly medical directors of European hospital groups, Southeast Asian healthcare chains, and Tier-1 dental distributors—are not looking for the cheapest pump head. What keeps them awake at night is <strong>operational uncertainty</strong>."</em> Small trading intermediaries may lack model-specific test documentation, accredited validation, standardized bilingual engineering records and digital traceability; service life must be established for the selected model and duty rather than assumed from a generic hour rating.
       </p>
       
       <p>
@@ -669,7 +625,7 @@
         <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
           <i class="fa-solid fa-gem text-amber-500 mt-1 shrink-0"></i>
           <div>
-            <strong>Advanced Tribology &amp; Saint-Gobain Composite Seals</strong>: Piston rings are fabricated from proprietary French Saint-Gobain diamond-embedded PTFE composite. Operating without a single drop of lubricating oil, they achieve continuous wear resistance across a certified 20,000-hour service life.
+            <strong>Advanced Tribology &amp; Saint-Gobain Composite Seals</strong>: Self-lubricating PTFE composite piston rings support lubricant-free compression chambers. Service life and maintenance intervals depend on the selected model, duty and operating conditions.
           </div>
         </li>
         <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
@@ -681,7 +637,7 @@
         <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
           <i class="fa-solid fa-shield-virus text-emerald-600 mt-1 shrink-0"></i>
           <div>
-            <strong>Antibacterial Air Receiver Metallurgy</strong>: Pressure vessels are treated with an internal 220&deg;C thermoset nano-silver ion coating, halting internal rust and microbial colonization even during prolonged high-humidity shutdowns.
+            <strong>Receiver Inspection and Corrosion Protection</strong>: Drainage, inspection and corrosion protection follow the model manual and site humidity conditions. Antibacterial or antimicrobial performance is not assumed without model-specific evidence.
           </div>
         </li>
       </ul>
@@ -716,12 +672,12 @@
       </p>
 
       <div class="bg-sky-50/70 border-l-4 border-sky-600 p-5 rounded-r-xl my-6">
-        <h4 class="text-sm font-bold text-sky-900 uppercase font-display mb-2">Tropical Healthcare Engineering Protocol</h4>
+        <h3 class="text-sm font-bold text-sky-900 uppercase font-display mb-2">Tropical Healthcare Engineering Protocol</h3>
         <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-          <strong>1. Dual-Tower PSA Desiccant Drying (-40&deg;C PDP):</strong> Replacing ineffective refrigerated air dryers with high-adsorption 13X synthetic molecular sieve towers, guaranteeing ISO 8573-1 Class 2 moisture purity (-40&deg;C pressure dew point) regardless of exterior tropical humidity.
+          <strong>1. Project-Sized Desiccant Drying:</strong> Twin-tower PSA dryers using 13X synthetic molecular sieves can be configured for high-humidity service. Achieved pressure dew point depends on inlet temperature, humidity, flow and maintenance, and must be validated for the supplied installation.
         </p>
         <p class="text-xs sm:text-sm text-slate-700 leading-relaxed m-0">
-          <strong>2. N+1 Dual-Pump Redundancy Architecture:</strong> For 4-to-8 chair clinics in Bangkok and Kuala Lumpur, our flagship <strong>HYTG-300 (90L)</strong> dual-pump station provides alternating soft-start logic. If one pump enters routine maintenance, the secondary pump carries 100% of the surgical load without a second of clinic downtime.
+          <strong>2. N+1 Dual-Pump Redundancy Architecture:</strong> The <strong>HYTG-300 (90L)</strong> provides 400 L/min total and about 200 L/min with one head unavailable. That degraded capacity does not cover the default 8-chair planning load of 280 L/min. Compare remaining flow with actual clinical demand; redundancy does not guarantee uninterrupted service.
         </p>
       </div>
     </section>
@@ -739,13 +695,13 @@
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
           <img src="../../assets/images/news/video_frame_1550_brand_moat.webp" alt="Hongrun Certified Brand Moat and Global Compliance" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
-            <strong>05. Certified Quality Moat</strong>: ISO 8573-1 Class 0, CE MDR, and ISO 13485:2016 compliance.
+            <strong>05. Certified Quality Scope</strong>: HW-200–HW-3600 total-oil Class 0 evidence, plus model-specific CE and ISO 13485:2016 quality documentation.
           </figcaption>
         </figure>
         <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
           <img src="../../assets/images/news/video_frame_1950_finale.webp" alt="Hongrun Technology Advanced Industrial Manufacturing Campus" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
           <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
-            <strong>06. Advanced Campus</strong>: 20,000 m&sup2; production facilities delivering global certainty.
+            <strong>06. Advanced Campus</strong>: 20,000 m&sup2; production facilities; delivery terms are confirmed per order.
           </figcaption>
         </figure>
       </div>
@@ -759,7 +715,7 @@
           <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold mb-2">
             <i class="fa-solid fa-robot text-sm"></i>
           </div>
-          <h5 class="text-xs font-bold text-slate-900 uppercase font-display mb-1">WebMCP AI Protocol</h5>
+          <h3 class="text-xs font-bold text-slate-900 uppercase font-display mb-1">WebMCP AI Protocol</h3>
           <p class="text-[11px] text-slate-600 leading-relaxed">
             Registered with W3C WebMCP standards, enabling autonomous AI agents to query certified flow rates, acoustic curves, and CAD data directly.
           </p>
@@ -769,7 +725,7 @@
           <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold mb-2">
             <i class="fa-solid fa-calculator text-sm"></i>
           </div>
-          <h5 class="text-xs font-bold text-slate-900 uppercase font-display mb-1">Interactive Sizing Widget</h5>
+          <h4 class="text-xs font-bold text-slate-900 uppercase font-display mb-1">Interactive Sizing Widget</h4>
           <p class="text-[11px] text-slate-600 leading-relaxed">
             Our proprietary algorithm computes simultaneous flow (Q = N &times; 50 &times; f) and pipe friction loss in real time, preventing under-sizing.
           </p>
@@ -882,7 +838,7 @@
         <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
           <div>
             <div class="text-sky-700 font-mono font-bold text-xs uppercase tracking-wider mb-2">Tier 1: OEM Integration</div>
-            <h4 class="text-base font-bold text-slate-900 font-display mb-2">Bare Pump Heads &amp; Parts</h4>
+            <h3 class="text-base font-bold text-slate-900 font-display mb-2">Bare Pump Heads &amp; Parts</h3>
             <p class="text-xs text-slate-600 leading-relaxed mb-4">
               Direct supply of ZB-100, ZB-200, and 4V series bare pump units for equipment manufacturers integrating oil-free air into specialized dental treatment centers or mobile medical vehicles.
             </p>
@@ -939,14 +895,14 @@
           <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">以体系化精工替代零散销售破局全球医用供气市场</span>
         </h2>
         <p class="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-3xl mb-4">
-          宏润科技如何依托 30 年医用 Class 0 级无油硬件研发底蕴与持久运营的数字化技术矩阵，彻底终结机会主义式传统外贸试探，在全球医疗设备采购链中建立不可撼动的体系化确定性信任。
+          宏润科技依托医用无油硬件研发、完整的 HW-200 至 HW-3600 机组总含油 Class 0 证据，以及持久运营的数字化技术矩阵，为国际医疗设备采购提供可核验的工程资料。其他产品系列按型号和配置提供检测文件。
         </p>
         <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-3 border-t border-white/15">
           <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-sky-400"></i> 发布人：Martin &middot; 宏润科技 (Hongrun Technology)</span>
           <span class="text-slate-500">•</span>
           <span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月15日</span>
           <span class="text-slate-500">•</span>
-          <span><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 &middot; NMPA 二类医疗器械资质</span>
+          <span><i class="fa-solid fa-certificate text-teal-400"></i> HW-200–HW-3600 总含油 Class 0 &middot; NMPA 二类医疗器械资质</span>
         </div>
       </div>
     </div>
@@ -963,7 +919,7 @@
         </div>
         <div class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>30年物理制造护城河：</strong>中科院科研仪器配套血统，服务 200+ 顶尖高校。自研法国圣戈班金刚石复合 PTFE 密封皮碗（20,000小时无油寿命）与德国 DMG MORI 五轴联动数控产线（Ra &le; 0.2&mu;m）。</span>
+          <span><strong>30年物理制造护城河：</strong>中科院科研仪器配套血统，服务 200+ 顶尖高校。采用法国圣戈班复合 PTFE 密封皮碗与多轴数控加工产线；材料寿命与表面粗糙度须按具体型号图纸、工况和维护记录确认，不设统一的小时寿命或粗糙度承诺。</span>
         </div>
         <div class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
@@ -994,11 +950,11 @@
     </figure>
 
     <p>
-      正如宏润科技首席营销总监（CMD）Martin Chen 在全球业务拓展战略复盘中所强调的那样：<em>“欧美医疗集团工程处主管、东南亚大型连锁口腔医疗机构运营总监，以及各区域一线的专业医疗器械经销商，<strong>他们绝不是在全网寻找报价最低廉的廉价机头</strong>。在医疗领域，真正让决策者寝食难安的是——<strong>运行的不确定性（Operational Uncertainty）</strong>。”</em> 中小贸易型中间商既拿不出国际公认的三方独立全套认证检测报告，也无法在长达 20,000 小时的连续运转周期内保障活塞与气缸的物理寿命，更无法提供深度结构化的工程支持图纸与全生命周期数字溯源。
+      正如宏润科技首席营销总监（CMD）Martin Chen 在全球业务拓展战略复盘中所强调的那样：<em>“欧美医疗集团工程处主管、东南亚大型连锁口腔医疗机构运营总监，以及各区域一线的专业医疗器械经销商，<strong>他们绝不是在全网寻找报价最低廉的廉价机头</strong>。在医疗领域，真正让决策者寝食难安的是——<strong>运行的不确定性（Operational Uncertainty）</strong>。”</em> 中小贸易型中间商既拿不出国际公认的三方独立全套认证检测报告，也无法提供按型号、工况和维护记录核算的活塞与气缸寿命依据，更无法提供深度结构化的工程支持图纸与全生命周期数字溯源。
     </p>
 
     <p>
-      在现代临床医疗场景下，未经严格医用认证的传统工业空压机一旦向管网泄漏微量气态碳氢化合物或冷凝水分，所带来的连锁破坏是极其惊人的：高速气动涡轮牙科手机内部精密的陶瓷微型球轴承会在数十小时内因润滑脂乳化流失而迅速抱死烧结；在牙体光固化修复中，牙本质微管表面微量纳米级油膜沉积会导致复合树脂粘接剪切强度剧降 <strong>38% 至 60%</strong>，直接引发充填体早期脱落与边缘微渗漏继发龋；而在医院手术室，驱动气动开颅钻或骨钻的气源若发生压力突降或水分凝结，将直接导致手术中途停顿，引发灾难性医疗事故与巨额索赔。因此，彻底斩断机会主义的被动接单思维，全面转向<strong>以底层制造实力和数字化基座为核心的“体系化精工（Systemic Precision）”</strong>，是攻破全球中高端医疗设备供应链的唯一破局路径。
+      在现代临床医疗场景下，未经严格医用认证的传统工业空压机一旦向管网泄漏微量气态碳氢化合物或冷凝水分，所带来的连锁破坏是极其惊人的：高速气动涡轮牙科手机内部的精密轴承存在润滑与污染风险，具体失效时间须按设备厂商说明与检测确认；在牙体光固化修复中，牙本质微管表面微量纳米级油膜沉积会影响复合树脂粘接性能，具体影响须按材料、污染程度与临床验证评估，本文不引用统一的粘接强度下降百分比；而在医院手术室，驱动气动开颅钻或骨钻的气源若发生压力突降或水分凝结，将带来供气中断与设备停机风险，具体后果须按项目风险评估。因此，彻底斩断机会主义的被动接单思维，全面转向<strong>以底层制造实力和数字化基座为核心的“体系化精工（Systemic Precision）”</strong>，是攻破全球中高端医疗设备供应链的唯一破局路径。
     </p>
 
     <!-- Chapter 02 -->
@@ -1039,7 +995,7 @@
       <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
         <i class="fa-solid fa-gem text-amber-500 mt-1 shrink-0"></i>
         <div>
-          <strong>先进摩擦学研发与法国圣戈班金刚石复合 PTFE 密封</strong>：针对全干式无油活塞运动的极端磨损挑战，活塞环密封材料全面采用专属定制的法国圣戈班金刚石增强型复合配方。在严禁滴入哪怕一微升润滑油的严苛干摩擦工况下，仍能实现极低磨耗率，获得 20,000 小时连续无油耐磨寿命认证。
+          <strong>先进摩擦学研发与法国圣戈班金刚石复合 PTFE 密封</strong>：针对全干式无油活塞运动的极端磨损挑战，活塞环密封材料全面采用专属定制的法国圣戈班金刚石增强型复合配方。在无油干摩擦工况下，磨损速率取决于型号、负荷、温度、进气质量与维护；本文不引用统一的 20,000 小时寿命认证。
         </div>
       </li>
       <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
@@ -1051,7 +1007,7 @@
       <li class="flex items-start gap-3 bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
         <i class="fa-solid fa-shield-virus text-emerald-600 mt-1 shrink-0"></i>
         <div>
-          <strong>220℃ 高温固化纳米银离子复合抑菌储气罐内衬</strong>：压力容器内壁经过严苛喷丸除锈后，喷涂 220℃ 高温烘烤固化的纳米银离子高分子复合抑菌涂层，永久钝化金属内壁，彻底杜绝罐体氧化生锈产生的微米级粉尘，并在高湿度停机间隙有效扼杀次生细菌生物膜的滋生繁殖。
+          <strong>储气罐巡检与防腐管理</strong>：按型号维护手册进行排水、内壁检查与防腐处理，并结合现场湿度确定维护频率。未取得型号专项证据前，不宣称涂层具有杀菌、终身不锈或杜绝生物膜的性能。
         </div>
       </li>
     </ul>
@@ -1087,10 +1043,10 @@
     <div class="bg-sky-50/70 border-l-4 border-sky-600 p-5 rounded-r-xl my-6 not-prose">
       <h4 class="text-sm font-bold text-sky-900 uppercase font-display mb-2">热带高温高湿医疗供气工程专属技术规范</h4>
       <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3">
-        <strong>1. 双塔变压吸附分子筛深度除水（-40&deg;C 压力露点）：</strong>全面取缔耐热温差差、易积水的冷冻式干燥机，全标配采用高吸附容量 13X 医用合成沸石分子筛的双塔变压吸附干燥系统。无论外界环境相对湿度如何高达 90%RH，供气管网始终能输出稳定在 -40&deg;C 压力露点（PDP）的绝对干燥纯净空气，达到 ISO 8573-1 Class 2 级水蒸气控制标准。
+        <strong>1. 按项目选型双塔变压吸附干燥系统：</strong>采用 13X 合成沸石分子筛，可根据高湿工况进行选型。实际压力露点取决于进气温度、湿度、流量与维护状态，须对整套配置进行验证，不作脱离工况的固定露点保证。
       </p>
       <p class="text-xs sm:text-sm text-slate-700 leading-relaxed m-0">
-        <strong>2. N+1 智能双机头变频轮换与物理冗余架构：</strong>针对曼谷与吉隆坡等核心商圈拥有 4 至 8 张牙椅的繁忙门诊，宏润主力旗舰 <strong>HYTG-300 (90L)</strong> 标配微电脑智能联动控制单元与双路大排量主机。用气高峰期双机智能并联加压；低峰期自动交替单机运转以均摊机械磨损；当单侧机头需要进行例行耗材更换或保养时，备用机头无缝承接 100% 临床气量负荷，实现真正意义上的<strong>“临床供气零停机（Zero Downtime）”</strong>。
+        <strong>2. N+1 双机头冗余架构：</strong><strong>HYTG-300（90L）</strong>总流量为 400 L/min，单机头退出后约为 200 L/min，不能覆盖默认 8 椅初步负荷 280 L/min。选型须比较降级流量与实际临床负荷，并核算储气、管道损失和切换过程；冗余不等于临床供气零停机。
       </p>
     </div>
 
@@ -1107,13 +1063,13 @@
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
         <img src="../../assets/images/news/video_frame_1550_brand_moat.webp" alt="宏润科技权威质量认证与全球合规护城河" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
-          <strong>05. 权威认证护城河</strong>：德国莱茵 ISO 8573-1 Class 0、欧盟 CE MDR 与 ISO 13485:2016 医疗器械体系认证。
+          <strong>05. 权威认证范围</strong>：德国莱茵总含油 Class 0 仅覆盖完整 HW-200 至 HW-3600 涡旋机组；CE 与 ISO 13485:2016 按产品和体系证书范围执行。
         </figcaption>
       </figure>
       <figure class="rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
         <img src="../../assets/images/news/video_frame_1950_finale.webp" alt="宏润科技现代化智造产业园区全景" class="w-full h-auto object-cover" loading="lazy" decoding="async" width="1080" height="1920" />
         <figcaption class="p-3 text-xs text-slate-500 bg-slate-50 border-t border-slate-100">
-          <strong>06. 现代化智造产业园</strong>：20,000 m&sup2; 生产园区向全球客户提供确定性交付保障。
+          <strong>06. 现代化智造产业园</strong>：20,000 m&sup2; 生产园区；具体交付条件按订单确认。
         </figcaption>
       </figure>
     </div>
@@ -1127,7 +1083,7 @@
         <div class="w-8 h-8 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center font-bold mb-2">
           <i class="fa-solid fa-robot text-sm"></i>
         </div>
-        <h5 class="text-xs font-bold text-slate-900 uppercase font-display mb-1">W3C WebMCP AI 原生协议</h5>
+        <h4 class="text-xs font-bold text-slate-900 uppercase font-display mb-1">W3C WebMCP AI 原生协议</h4>
         <p class="text-[11px] text-slate-600 leading-relaxed">
           宏润在全球制造业中率先对接 WebMCP 标准，使国际买家的自主 AI Agent 可直接调取认证流量、噪音分贝曲线及官方检测报告等结构化底层数据。
         </p>
@@ -1288,7 +1244,7 @@
     </div>
 
     <p>
-      <strong>宏润工厂工程师极速响应承诺：</strong>无论您是需要为东南亚区域仓储中心进行成套机组选型，还是需要为牙科设备厂进行专属机头结构定制，亦或参与公立医院中央医用气体招标，宏润工厂技术工程专班均承诺在 <strong>24 小时之内</strong>完成气量核算、技术可行性论证并交付完整的 CAD 二维/三维安装图纸与合规投标资料。
+      <strong>项目工程协作：</strong>无论是东南亚区域仓储中心的成套机组选型、牙科设备厂专属机头结构定制，还是公立医院中央医用气体招标，均由工厂技术工程团队按确认的需求开展气量核算、可行性论证及 CAD 图纸准备；交付范围与时间在技术评审后确认。
     </p>
 
   </div>
@@ -1306,7 +1262,7 @@
           Accelerating Your Medical Pneumatic Strategy Worldwide
         </h3>
         <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
-          Whether sizing turnkey central systems for Southeast Asian regional distribution hubs, engineering custom OEM bare pump integrations, or preparing hospital central gas tender dossiers, our factory engineering group delivers complete technical validations and CAD blueprints within 24 hours.
+          Whether sizing turnkey central systems, engineering custom OEM pump integrations, or preparing hospital gas tender dossiers, our factory engineering group reviews the confirmed inputs and agrees the validation and CAD scope and timing before delivery.
         </p>
       </div>
 
@@ -1471,7 +1427,7 @@
         <div>
           <span class="text-[11px] font-mono text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Flagship Whitepaper #01</span>
           <h5 class="text-sm font-bold text-slate-900 mt-2 font-display leading-snug">
-            Engineering Zero-Oil Purity: ISO 8573-1 Class 0 Standards
+            Engineering Oil-Free Air Quality: Document Scope and Verification
           </h5>
           <p class="text-xs text-slate-500 mt-2 line-clamp-2">
             Comprehensive bilingual guide to medical oil-free compressor architectures, Saint-Gobain PTFE seals, and clinical airflow.
@@ -1491,11 +1447,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning & Direct Contact -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV ISO 8573-1 Class 0 certified for complete HW-200–HW-3600 scroll units. Medical air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>

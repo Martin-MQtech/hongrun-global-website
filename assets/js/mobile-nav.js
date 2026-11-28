@@ -102,7 +102,7 @@
             <a href="/products-hy.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HY Dental Compressors (1–10 Chairs)</a>
             <a href="/products-hospital.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HW Hospital Scroll Systems</a>
             <a href="/products-hvs.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HVS Dental Suction Plants</a>
-            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (Model-Specific Dew Point)</a>
             <a href="/products-water.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HRC Pure Water &amp; Disinfection</a>
             <a href="/products-core.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">Core Pump Heads &amp; Spares</a>
           </div>
@@ -242,15 +242,6 @@
         Chat with Engineering &middot; +86-13964416725
       </span>
     `;
-    btn.addEventListener("click", function() {
-      if (typeof gtag === "function") {
-        gtag("event", "whatsapp_click", {
-          event_category: "B2B Lead",
-          event_label: "Floating Widget Chat Initiation",
-          source_page: window.location.pathname
-        });
-      }
-    });
     document.body.appendChild(btn);
   }
 

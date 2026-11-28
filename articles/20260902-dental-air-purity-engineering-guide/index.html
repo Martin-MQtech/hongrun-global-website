@@ -3,80 +3,30 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <link rel="icon" type="image/png" href="../../assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="../../assets/images/favicon/apple-touch-icon.png"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors | Hongrun Insights</title>
+<title>Oil-Free Dental Air: Complete-HW Class 0 Scope &amp; Sizing</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="Flagship Whitepaper #01: Technical architecture of Class 0 oil-free dental compressors, ISO 8573-1 standards, PTFE tribology, and 1–50 dental chairs sizing formulas.">
-  <meta name="keywords" content="dental air purity guide, ISO 8573-1 Class 0, wobble piston kinematics, 1-50 chairs compressor sizing, HY series whitepaper">
+  <meta name="description" content="Oil-free dental compressor architecture, complete-HW TÜV total-oil Class 0 scope, PTFE tribology, and preliminary sizing formulas for 1–50 dental chairs.">
+  <meta name="keywords" content="dental air purity guide, complete HW-200–HW-3600 ISO 8573-1 total-oil Class 0 scope, wobble piston kinematics, 1-50 chairs compressor sizing, model-specific HY series documentation">
   <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors | Hongrun Insights">
-  <meta property="og:description" content="Flagship Whitepaper #01: Technical architecture of Class 0 oil-free dental compressors, ISO 8573-1 standards, PTFE tribology, and 1–50 dental chairs sizing formulas.">
+  <meta property="og:title" content="Oil-Free Dental Air: Complete-HW Class 0 Scope &amp; Sizing">
+  <meta property="og:description" content="Oil-free dental compressor architecture, complete-HW TÜV total-oil Class 0 scope, PTFE tribology, and preliminary sizing formulas for 1–50 dental chairs.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/">
   <meta property="og:type" content="article">
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors | Hongrun Insights">
-  <meta name="twitter:description" content="Flagship Whitepaper #01: Technical architecture of Class 0 oil-free dental compressors, ISO 8573-1 standards, PTFE tribology, and 1–50 dental chairs sizing formulas.">
+  <meta name="twitter:title" content="Oil-Free Dental Air: Complete-HW Class 0 Scope &amp; Sizing">
+  <meta name="twitter:description" content="Oil-free dental compressor architecture, complete-HW TÜV total-oil Class 0 scope, PTFE tribology, and preliminary sizing formulas for 1–50 dental chairs.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg">
 <meta name="geo.region" content="CN-SD; DE; US; AE; SA; BR; SG"/>
 <meta name="geo.placename" content="Zibo; Frankfurt; Houston; Dubai; Singapore"/>
@@ -147,7 +97,7 @@
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors",
+  "headline": "Engineering Oil-Free Air: Technical Architecture, Complete-HW Total-Oil Class 0 Scope, and Clinical Sizing of Medical Dental Air Compressors",
   "image": "https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg",
   "author": {
     "@type": "Person",
@@ -170,15 +120,15 @@
   },
   "datePublished": "2026-09-02",
   "dateModified": "2026-09-02",
-  "description": "A definitive global engineering study on wobble-piston kinematics, self-lubricating PTFE composite tribology, nano-antibacterial air receiver vessels, and multi-operatory pneumatic sizing calculations for 1 to 50 dental chairs.",
+  "description": "An engineering guide to wobble-piston kinematics, self-lubricating PTFE components, receiver condensate management, model-specific air-quality documentation, and multi-operatory pneumatic sizing.",
   "keywords": [
-    "Medical Dental Air Compressor ISO 8573-1 Class 0",
+    "Complete HW-200–HW-3600 ISO 8573-1 Total-Oil Class 0",
     "Oil-free Dental Compressor Manufacturer China",
     "Wobble Piston vs Reciprocating Compressor",
     "Dental Air Sizing Flow Rate Calculation",
-    "Nano-Antibacterial Air Receiver Tank",
+    "Model-Specific Receiver Maintenance",
     "WS 507-2016 Endoscope Drying",
-    "WS 310.2-2016 CSSD Sterile Air",
+    "WS 310.2-2016 CSSD Air Drying & Configuration Validation",
     "Hongrun Technology Dental Air Systems"
   ],
   "mainEntityOfPage": {
@@ -198,31 +148,31 @@
       "name": "What is the difference between ISO 8573-1 Class 0 and Class 1 medical compressed air?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "ISO 8573-1 Class 1 permits total residual oil concentrations up to 0.01 mg/m³. ISO 8573-1 Class 0 is the purest standard, requiring zero detectable oil specified by the manufacturer and verified by third-party testing. Certified by TÜV Rheinland, Hongrun medical oil-free compressors achieve residual hydrocarbon emissions below 0.003 mg/m³ (under instrument detection thresholds), ensuring zero risk of hydrocarbon aerosol contamination on dental composite bonding surfaces or respiratory mucosa."
+        "text": "ISO 8573-1 Class 1 permits total residual oil concentrations up to 0.01 mg/m³. Class 0 is a total-oil purity class whose limit is specified by the equipment manufacturer and verified by testing. TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001 documents total-oil Class 0 and <0.003 mg/m³ only for complete HW-200 through HW-3600 oil-free scroll compressor units. HY/HYTG piston and other families are not covered and require their own model-specific documentation. Total-oil Class 0 does not establish sterility or microbial control."
       }
     },
     {
       "@type": "Question",
-      "name": "How does Saint-Gobain PTFE diamond composite achieve 20,000+ hours wear life without oil?",
+      "name": "How do self-lubricating PTFE piston rings support oil-free compression?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hongrun compressors incorporate French Saint-Gobain diamond-impregnated PTFE composite piston rings operating in micro-honed aluminum cylinders (Ra ≤ 0.2 μm). The rocking piston kinematics deposit a microscopic self-healing PTFE transfer layer, dropping friction coefficients to μ < 0.08 and achieving 20,000 to 25,000 continuous operating hours without liquid oil or crankcase lubricants."
+        "text": "Self-lubricating PTFE composite rings reduce friction in lubricant-free compression chambers. Service life and maintenance intervals depend on the selected model, load, temperature, air quality and operating practice; no fixed-hour lifespan is assumed."
       }
     },
     {
       "@type": "Question",
-      "name": "Why is an internal nano-antibacterial coating critical for medical air receiver tanks?",
+      "name": "How should medical air receiver tanks manage condensate and microbial risk?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ambient humidity causes condensate pooling inside conventional steel tanks, creating bacterial and biofilm reservoirs. Hongrun air receiver vessels feature a proprietary 220°C high-temperature thermoset nano-silver ion antibacterial coating that inhibits 99.9% of microbial pathogens (including E. coli, S. aureus, and Pseudomonas) while preventing internal tank rust and particulate contamination."
+        "text": "Humidity can create condensate in a receiver, so drainage, inspection, corrosion protection and the selected drying/filtration train must follow the equipment manual and project air-quality plan. An antibacterial coating is not assumed here. Any antimicrobial performance claim requires model-specific test evidence, and total-oil Class 0 certification does not establish sterility or microbial control."
       }
     },
     {
       "@type": "Question",
-      "name": "What pressure dew point (PDP) is required to prevent waterline microbial growth in dental clinics?",
+      "name": "How should dental compressed-air pressure dew point be specified and validated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Under ISO 22052 and EN 1640, dental compressed air pressure dew point must remain at least 5°C below ambient temperature (typically ≤ -20°C to -40°C). Dual-tower pressure swing adsorption (PSA) desiccant drying with 13X synthetic molecular sieves reduces relative humidity below 1%, starving microorganisms of free water, halting bacterial biofilm propagation in dental unit waterlines (DUWL), and protecting handpiece ceramic ball bearings."
+        "text": "Pressure dew point is a project requirement derived from the applicable dental-air standard, equipment manufacturer requirements and lowest expected ambient conditions. A value such as -40°C may be specified as a design target, but the selected dryer must be validated at the stated inlet pressure, temperature, flow and load. Drying alone does not establish sterility, guarantee prevention of bacterial biofilm or replace dental-unit waterline maintenance."
       }
     }
   ]
@@ -272,7 +222,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors",
+      "name": "Engineering Oil-Free Air: Technical Architecture, Complete-HW Total-Oil Class 0 Scope, and Clinical Sizing of Medical Dental Air Compressors",
       "item": "https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/"
     }
   ]
@@ -281,8 +231,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Standard Global Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -343,16 +297,16 @@
         Featured Whitepaper · Sep 02, 2026
       </span>
       <span class="px-3 py-1 rounded-full bg-brand-sky/20 border border-brand-sky/40 text-sky-300 text-[11px] font-semibold tracking-wide">
-        ISO 8573-1 Class 0 Zero-Oil
+        Complete HW-200–HW-3600 · Total-Oil Class 0
       </span>
       <span class="px-3 py-1 rounded-full bg-teal-500/20 border border-teal-400/40 text-teal-300 text-[11px] font-semibold tracking-wide">
-        Nano-Antibacterial Tank · 38L Standard
+        Receiver Maintenance · Model-Specific
       </span>
     </div>
 
     <!-- Title -->
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-display tracking-tight leading-snug mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
-      Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors
+      Engineering Oil-Free Air: Technical Architecture, Complete-HW Total-Oil Class 0 Scope, and Clinical Sizing of Medical Dental Air Compressors
     </h1>
 
     <!-- Meta Info -->
@@ -373,7 +327,7 @@
 </header>
 
 <!-- Main Article Body -->
-<main class="py-14 bg-white">
+<main class="py-14 bg-white" id="main-content" tabindex="-1">
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 article-body">
 
     <!-- ==========================================
@@ -401,36 +355,36 @@
 
     <!-- Key Executive Takeaways Callout -->
     <div class="spec-box rounded-xl p-6 sm:p-8 mb-12 not-prose">
-      <h3 class="text-lg font-bold text-brand-dark font-display mb-4 flex items-center gap-2">
+      <h2 class="text-lg font-bold text-brand-dark font-display mb-4 flex items-center gap-2">
         <i class="fa-solid fa-microchip text-brand-blue"></i> Executive Summary &amp; Engineering Key Points
-      </h3>
+      </h2>
       <ul class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600 list-none pl-0 mb-0">
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Zero Hydrocarbon Purity:</strong> 100% oil-free compression eliminates volatile hydrocarbon vapor that causes up to <strong>38% loss in composite resin shear bond strength</strong> during restorative procedures.</span>
+          <span><strong>Oil-Free Compression Design:</strong> Lubricant-free compression chambers avoid introducing liquid lubricant; measured total-oil performance still requires model-specific documentation.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Wobble Piston Kinematics:</strong> Eliminates the gudgeon wrist-pin. Self-aligning single-piece rod reduces reciprocating mass by 42% and mechanical friction by 35% compared to traditional crosshead compressors.</span>
+          <span><strong>Wobble Piston Kinematics:</strong> The architecture avoids a conventional gudgeon wrist-pin, but mass, friction, wear and efficiency comparisons require model-specific drawings and tests; no fixed percentage reduction is assumed.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Nano-Antibacterial Receiver:</strong> Electrostatic composite polymer-ceramic inner lining permanently passivates the tank wall, eliminating rust flaking and secondary bacterial biofilm formation.</span>
+          <span><strong>Receiver Management:</strong> Condensate drainage, inspection and corrosion protection follow the model manual and site conditions. Antibacterial coatings and antimicrobial performance are not assumed without model-specific evidence.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Multi-Host Smart Redundancy:</strong> Intelligent alternating control (HYT / HYTG Series) guarantees N+1 hospital-grade continuous air supply with zero clinical downtime during single-pump maintenance.</span>
+          <span><strong>Multi-Head Capacity Check:</strong> Alternating control can balance runtime, but remaining capacity must cover the required load. HYTG-300 provides 400 L/min total and about 200 L/min with one head out, below the 280 L/min default planning load for eight chairs. HYT-400 provides 600 L/min total and about 400 L/min with one head out.</span>
         </li>
       </ul>
     </div>
 
     <!-- Section 1 -->
-    <h2>1. The Clinical Imperative: Why Medical Dental Air Demands ISO 8573-1 Class 0 Purity</h2>
+    <h2>1. The Clinical Imperative: Why Medical Dental Air Requires Model-Specific Purity Evidence</h2>
     <p>
-      In modern dental and medical operatory environments, compressed air is not merely a utility power source—it is an <strong>active pharmacological and medical instrument delivery medium</strong>. Dental turbines operating at rotational speeds exceeding 400,000 RPM, ultrasonic scalers, air abrasion sandblasting units, and sensitive 3-way syringes directly inject pressurized gas into open oral wounds, root canals, and prepared dentin tubules.
+      In dental and medical operatories, compressed air powers instruments and may contact the treatment field. The required quality therefore depends on the equipment manufacturer, application and applicable project specification; it cannot be inferred from a generic compressor label.
     </p>
     <p>
-      When conventional oil-lubricated compressors or low-grade compressors with failing filtration are used, microscopic oil aerosol droplets (0.01–5.0 μm) inevitably penetrate the pneumatic lines. This leads to three severe clinical consequences:
+      Contamination that exceeds the specified limits can affect equipment and clinical processes. Oil aerosols, liquid water, solid particles and microbial contamination require separate controls and verification; the following are risk considerations, not guaranteed outcomes:
     </p>
 
     <!-- 3 Clinical Impact Cards -->
@@ -439,27 +393,27 @@
         <div class="w-10 h-10 rounded-lg bg-red-50 border border-red-200 flex items-center justify-center text-red-600 mb-3">
           <i class="fa-solid fa-tooth text-lg"></i>
         </div>
-        <h4 class="font-bold text-sm text-brand-dark mb-1.5">Adhesion &amp; Bonding Failure</h4>
+        <h3 class="font-bold text-sm text-brand-dark mb-1.5">Adhesion &amp; Bonding Risk</h3>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Micro-droplets of oil deposited on etched enamel create a hydrophobic barrier, preventing bonding resin monomer penetration and causing premature restoration detachment.
+          Oil contamination can interfere with wetting and bonding. Follow the instrument and restorative-material manufacturer's air-quality requirements; no universal bond-strength-loss percentage is claimed.
         </p>
       </div>
       <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
         <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-3">
           <i class="fa-solid fa-gears text-lg"></i>
         </div>
-        <h4 class="font-bold text-sm text-brand-dark mb-1.5">Turbine Bearing Seizure</h4>
+        <h4 class="font-bold text-sm text-brand-dark mb-1.5">Turbine Reliability Risk</h4>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Hydrocarbon sludge mixes with moisture to form gummy varnishes on micro-ceramic bearings, increasing friction, elevating handpiece head temperatures, and causing premature turbine burnout.
+          Contaminants and inadequate drying can contribute to wear, corrosion or impaired lubrication. Maintenance and failure risk depend on the handpiece, air quality and operating conditions; instant seizure is not assumed.
         </p>
       </div>
       <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
         <div class="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-brand-blue mb-3">
           <i class="fa-solid fa-shield-virus text-lg"></i>
         </div>
-        <h4 class="font-bold text-sm text-brand-dark mb-1.5">Cross-Infection &amp; Biofilm</h4>
+        <h4 class="font-bold text-sm text-brand-dark mb-1.5">Moisture &amp; Microbial Risk</h4>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Uncoated iron tanks corrode under high-humidity conditions. Rust particulate and condensation sludge become breeding grounds for opportunistic pathogens such as <em>Legionella pneumophila</em>.
+          Condensate, corrosion products and poor maintenance can support microbial growth. Control requires receiver drainage, material compatibility, drying/filtration and a validated cleaning and waterline-management plan.
         </p>
       </div>
     </div>
@@ -467,49 +421,44 @@
     <!-- Section 2 -->
     <h2>2. International Regulatory Frameworks: Purity Thresholds &amp; Classification</h2>
     <p>
-      To eliminate medical risks, global medical device authorities mandate rigorous contamination ceilings across three core parameters: <strong>Total Oil Content</strong>, <strong>Solid Particulate Size</strong>, and <strong>Pressure Dew Point (Moisture)</strong>.
+      Compressed-air quality is assessed through separate attributes: <strong>total oil</strong>, <strong>solid particles</strong> and <strong>water / pressure dew point</strong>. ISO 8573-1 class designations are attribute-specific; a total-oil class does not automatically assign particle or water classes, and no single purity class eliminates all medical risk.
     </p>
 
-    <!-- Standards Comparison Table -->
+    <!-- Attribute-Specific Quality and Evidence Table -->
     <div class="overflow-x-auto not-prose mb-8">
       <table class="w-full text-xs text-left bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
         <thead class="bg-brand-dark text-white uppercase text-[11px] font-semibold">
           <tr>
-            <th class="p-3.5">Standard &amp; Jurisdiction</th>
-            <th class="p-3.5">Total Oil Limit (mg/m³)</th>
-            <th class="p-3.5">Solid Particles (μm)</th>
-            <th class="p-3.5">Pressure Dew Point (°C)</th>
-            <th class="p-3.5">Clinical Target Application</th>
+            <th class="p-3.5">Quality Attribute</th>
+            <th class="p-3.5">Classification / Evidence</th>
+            <th class="p-3.5">Limit or Project Target</th>
+            <th class="p-3.5">Verification Boundary</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-100 text-slate-700">
           <tr class="bg-sky-50/50 font-medium">
-            <td class="p-3.5 font-bold text-brand-blue">ISO 8573-1:2010 Class 0 (Hongrun)</td>
-            <td class="p-3.5 text-teal-700 font-bold">0.00 mg/m³ (Non-detectable)</td>
-            <td class="p-3.5">&le; 0.01 μm (99.999% HEPA)</td>
-            <td class="p-3.5">&le; -40°C (Dual-Tower PSA)</td>
-            <td class="p-3.5"><span class="bg-teal-100 text-teal-800 px-2 py-0.5 rounded font-bold">Highest Global Tier</span></td>
+            <td class="p-3.5 font-bold text-brand-blue">Total oil — complete HW-200–HW-3600</td>
+            <td class="p-3.5">TÜV AK 50528335 0001 / CN21HFR2 001</td>
+            <td class="p-3.5 text-teal-700 font-bold">&lt; 0.003 mg/m³; total-oil Class 0</td>
+            <td class="p-3.5">Complete scroll units only; not sterility or microbial control</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-bold">ISO 8573-1 Class 1</td>
-            <td class="p-3.5">&le; 0.01 mg/m³</td>
-            <td class="p-3.5">&le; 0.1 μm</td>
-            <td class="p-3.5">&le; -70°C to -40°C</td>
-            <td class="p-3.5">Critical Pharmaceutical / Precision</td>
+            <td class="p-3.5 font-bold">Total oil — other models / assemblies</td>
+            <td class="p-3.5">Model-specific documentation required</td>
+            <td class="p-3.5">From the applicable specification</td>
+            <td class="p-3.5">HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors and unspecified OEM assemblies are outside the cited certificate</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-bold">HTM 02-01 (UK NHS / Europe)</td>
-            <td class="p-3.5">&le; 0.1 mg/m³</td>
-            <td class="p-3.5">&le; 1.0 μm</td>
-            <td class="p-3.5">&le; -46°C @ atmospheric</td>
-            <td class="p-3.5">Hospital Medical Air / Surgical Pipeline</td>
+            <td class="p-3.5 font-bold">Solid particles</td>
+            <td class="p-3.5">Separate ISO 8573-1 particle class</td>
+            <td class="p-3.5">Specified independently of total oil</td>
+            <td class="p-3.5">Verify filter configuration, test method and sample point</td>
           </tr>
           <tr>
-            <td class="p-3.5 font-bold">GB 50751-2012 / WS 507-2016 (China)</td>
-            <td class="p-3.5">&le; 0.1 mg/m³</td>
-            <td class="p-3.5">&le; 0.5 μm</td>
-            <td class="p-3.5">&le; -20°C (Dental/Endoscopy)</td>
-            <td class="p-3.5">Hospital Central Gas &amp; Endoscope Drying</td>
+            <td class="p-3.5 font-bold">Water / pressure dew point</td>
+            <td class="p-3.5">Separate ISO 8573-1 water class or project requirement</td>
+            <td class="p-3.5">Derived from the application, ambient conditions and equipment requirements</td>
+            <td class="p-3.5">Validate the selected dryer at stated inlet conditions, flow and load; no sterility inference</td>
           </tr>
         </tbody>
       </table>
@@ -525,7 +474,7 @@
     <div class="not-prose bg-slate-950 rounded-2xl p-4 border border-slate-800 shadow-xl mb-8 text-center">
       <img data-zoom src="../../assets/images/exploded/01-hy-compressor-exploded.webp" alt="Hongrun HY Dental Compressor Engineering Teardown Architecture" class="w-full max-h-96 object-contain mx-auto rounded-lg cursor-pointer hover:opacity-95 transition" decoding="async" loading="lazy" width="1376" height="768" />
       <p class="text-xs text-slate-400 mt-3">
-        <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Figure 1.1: Precision Exploded Engineering Schematic of Hongrun HY Wobble-Piston Pump Head, Saint-Gobain Composite Piston Rings, Flapper Reed Valve, and Nano-Coated Vessel (Click to Zoom).
+        <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Figure 1.1: Precision Exploded Engineering Schematic of Hongrun HY Wobble-Piston Pump Head, Saint-Gobain Composite Piston Rings, Flapper Reed Valve, and Receiver (Click to Zoom).
       </p>
     </div>
 
@@ -540,8 +489,8 @@
             <span class="text-[11px] bg-brand-blue/10 text-brand-blue font-bold px-2 py-0.5 rounded uppercase">Core Power Unit</span>
             <span class="text-[11px] text-slate-400"><i class="fa-solid fa-magnifying-glass-plus text-brand-blue"></i> Click to Zoom</span>
           </div>
-          <h4 class="text-sm font-bold text-brand-dark">Figure 1.2: ZB-300 Proprietary Wobble-Piston Motor Head</h4>
-          <p class="text-xs text-slate-500 mt-1 leading-relaxed">1.1 kW / 200 L/min medical pump head with Saint-Gobain PTFE rings, Swedish flapper valves, and dynamic rotor balancing (≤65 dB).</p>
+          <h3 class="text-sm font-bold text-brand-dark">Figure 1.2: ZB-300 Proprietary Wobble-Piston Motor Head</h3>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">Model-specific wobble-piston head with PTFE composite rings and flapper valves. Confirm flow, power, balancing and acoustic data from the supplied unit's documentation and test conditions.</p>
         </div>
       </div>
 
@@ -555,7 +504,7 @@
             <span class="text-[11px] text-slate-400"><i class="fa-solid fa-magnifying-glass-plus text-teal-600"></i> Click to Zoom</span>
           </div>
           <h4 class="text-sm font-bold text-brand-dark">Figure 1.3: Modular Twin-Tower PSA Desiccant Air Dryer</h4>
-          <p class="text-xs text-slate-500 mt-1 leading-relaxed">Molecular sieve adsorption module delivering continuous -40°C pressure dew point and 0.01 μm medical-grade sterile filtration.</p>
+          <p class="text-xs text-slate-500 mt-1 leading-relaxed">Configuration-specific molecular-sieve drying and filtration. A -40°C pressure dew point may be a project design target, subject to validation at the stated inlet conditions and flow. A dryer/filter package alone does not create a certified complete machine or establish sterility.</p>
         </div>
       </div>
     </div>
@@ -568,22 +517,22 @@
         <span class="text-[11px] font-extrabold uppercase tracking-wider bg-brand-blue/10 text-brand-blue px-2.5 py-1 rounded">Tribology Architecture</span>
         <h3 class="text-base font-bold text-brand-dark mt-3 mb-2">Saint-Gobain PTFE Composite Ring</h3>
         <p class="text-xs text-slate-600 leading-relaxed mb-3">
-          Piston rings are engineered with high-temperature, wear-resistant self-lubricating PTFE composite polymers imported from Saint-Gobain France. The material maintains elasticity across -40°C to +220°C with an ultra-low dynamic friction coefficient (&mu; &le; 0.08), eliminating the need for crankcase lubricating oil.
+          Self-lubricating PTFE composite piston rings support lubricant-free compression chambers. Material properties, maintenance intervals and service life must be confirmed for the selected model and operating conditions.
         </p>
         <div class="text-[11px] font-semibold text-slate-700 bg-white p-2.5 rounded border border-slate-200">
-          <i class="fa-solid fa-hourglass-half text-amber-600 mr-1"></i> Rated Life: &gt; 10,000 Continuous Hours
+          <i class="fa-solid fa-hourglass-half text-amber-600 mr-1"></i> Service Life: Model- and Duty-Specific
         </div>
       </div>
 
       <!-- Pillar 2 -->
       <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
         <span class="text-[11px] font-extrabold uppercase tracking-wider bg-teal-500/10 text-teal-700 px-2.5 py-1 rounded">Vessel Integrity</span>
-        <h3 class="text-base font-bold text-brand-dark mt-3 mb-2">Nano-Coated Anti-Corrosion Tank</h3>
+        <h3 class="text-base font-bold text-brand-dark mt-3 mb-2">Receiver Inspection and Drainage</h3>
         <p class="text-xs text-slate-600 leading-relaxed mb-3">
-          The interior of the 24L–200L pressure vessels undergoes automated phosphating passivation followed by electrostatic spraying of high-density nano-ceramic polymer composite coatings. This forms an impermeable barrier against acidic moisture condensation, preventing internal oxidation and bacteriological colonization.
+          Receiver condition and internal corrosion protection are checked through the model-specific maintenance procedure. Condensate management and the drying/filtration train are selected for site humidity and duty; sterile or microbe-free air is not implied.
         </p>
         <div class="text-[11px] font-semibold text-slate-700 bg-white p-2.5 rounded border border-slate-200">
-          <i class="fa-solid fa-shield-halved text-teal-600 mr-1"></i> ISO Class 0 Anti-Rust &amp; Antibacterial
+          <i class="fa-solid fa-shield-halved text-teal-600 mr-1"></i> Maintenance and Site Validation Required
         </div>
       </div>
 
@@ -592,63 +541,63 @@
         <span class="text-[11px] font-extrabold uppercase tracking-wider bg-purple-500/10 text-purple-700 px-2.5 py-1 rounded">Control Logic</span>
         <h3 class="text-base font-bold text-brand-dark mt-3 mb-2">Intelligent Alternating Redundancy</h3>
         <p class="text-xs text-slate-600 leading-relaxed mb-3">
-          For multi-pump installations (HYT-200, HYTG-300, HYT-400, HYT-500), the smart controller dynamically balances runtime hours across pump heads and coordinates staggered zero-pressure electromagnetic unloader startups. In the event of a single-head anomaly, the backup units seamlessly carry full clinical loads.
+          Multi-head controls can balance runtime and coordinate staged starts. During one-head-out operation, compare remaining flow with the required load: HYTG-300 retains about 200 L/min; HYT-400 retains about 400 L/min. No uninterrupted-service guarantee is implied.
         </p>
         <div class="text-[11px] font-semibold text-slate-700 bg-white p-2.5 rounded border border-slate-200">
-          <i class="fa-solid fa-bolt text-purple-600 mr-1"></i> N+1 Hospital Failover Architecture
+          <i class="fa-solid fa-bolt text-purple-600 mr-1"></i> Project Risk and Remaining-Capacity Check
         </div>
       </div>
     </div>
 
     <!-- Section 4 -->
-    <h2>4. Comparative Engineering Benchmark: Hongrun vs. Generic Market Compressors</h2>
+    <h2>4. Comparative Engineering Review: Documentation Checklist</h2>
     
     <div class="overflow-x-auto not-prose mb-8">
       <table class="w-full text-xs text-left bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
         <thead class="bg-brand-dark text-white uppercase text-[11px] font-semibold">
           <tr>
             <th class="p-3.5">Engineering Dimension</th>
-            <th class="p-3.5 bg-brand-blue/30 text-white">Hongrun HY Series (Medical Tier)</th>
-            <th class="p-3.5">Generic Domestic Assembly</th>
-            <th class="p-3.5">Imported High-Cost Brands</th>
+            <th class="p-3.5 bg-brand-blue/30 text-white">Selected Hongrun Configuration</th>
+            <th class="p-3.5">Comparator A</th>
+            <th class="p-3.5">Comparator B</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-100 text-slate-700">
           <tr>
             <td class="p-3.5 font-bold">Core Pump R&amp;D</td>
-            <td class="p-3.5 bg-sky-50/50 font-bold text-brand-blue">Proprietary Wobble-Piston Patents (ZB Series)</td>
-            <td class="p-3.5 text-slate-500">Off-the-shelf OEM Public Castings</td>
-            <td class="p-3.5">Proprietary (High Premium)</td>
+            <td class="p-3.5 bg-sky-50/50 font-bold text-brand-blue">Review model drawings, design ownership and service documentation</td>
+            <td class="p-3.5 text-slate-500">Request equivalent design and service documentation</td>
+            <td class="p-3.5">Request equivalent design and service documentation</td>
           </tr>
           <tr>
             <td class="p-3.5 font-bold">Tank Internal Surface</td>
-            <td class="p-3.5 bg-sky-50/50 font-bold text-teal-700">Electrostatic Nano Composite Coating (Anti-Rust)</td>
-            <td class="p-3.5 text-red-600 font-medium">Raw Carbon Steel / Uncoated (Rust Risk)</td>
-            <td class="p-3.5">Coated or Stainless Steel</td>
+            <td class="p-3.5 bg-sky-50/50 font-bold text-teal-700">Confirm receiver material, protection and maintenance requirements</td>
+            <td class="p-3.5 text-slate-500">Compare documented material, coating and inspection plan</td>
+            <td class="p-3.5">Compare documented material, coating and inspection plan</td>
           </tr>
           <tr>
             <td class="p-3.5 font-bold">Piston Ring Friction Material</td>
-            <td class="p-3.5 bg-sky-50/50 font-semibold">Saint-Gobain High-Wear Self-Lubricating PTFE</td>
-            <td class="p-3.5 text-slate-500">Generic Virgin PTFE (Fast Wear &lt;2000 hrs)</td>
-            <td class="p-3.5">Proprietary PTFE</td>
+            <td class="p-3.5 bg-sky-50/50 font-semibold">Confirm model-specific PTFE material, dimensions and maintenance criteria</td>
+            <td class="p-3.5 text-slate-500">Compare material and validated life under equivalent conditions</td>
+            <td class="p-3.5">Compare material and validated life under equivalent conditions</td>
           </tr>
           <tr>
             <td class="p-3.5 font-bold">Acoustic Profile (@1m)</td>
-            <td class="p-3.5 bg-sky-50/50 font-bold text-brand-dark">&le; 65 dB(A) (Quiet Point-of-Use)</td>
-            <td class="p-3.5 text-slate-500">72–78 dB(A) (Vibration &amp; Resonance)</td>
-            <td class="p-3.5">&le; 62–66 dB(A)</td>
+            <td class="p-3.5 bg-sky-50/50 font-bold text-brand-dark">Use the exact model's documented acoustic data and test conditions</td>
+            <td class="p-3.5 text-slate-500">Compare measurements at equivalent distance, load and installation</td>
+            <td class="p-3.5">Compare measurements at equivalent distance, load and installation</td>
           </tr>
           <tr>
             <td class="p-3.5 font-bold">Regulatory Accreditation</td>
-            <td class="p-3.5 bg-sky-50/50 font-bold text-teal-700">ISO 13485:2016, CE MDR, NMPA Class II Medical</td>
-            <td class="p-3.5 text-red-600">Industrial Only / Non-Medical</td>
-            <td class="p-3.5">ISO 13485, CE, FDA</td>
+            <td class="p-3.5 bg-sky-50/50 font-bold text-teal-700">Verify registration and intended-use scope for the exact supplied product</td>
+            <td class="p-3.5 text-slate-500">Request current registration and intended-use documents</td>
+            <td class="p-3.5">Request current registration and intended-use documents</td>
           </tr>
           <tr>
             <td class="p-3.5 font-bold">5-Year Total Cost of Ownership (TCO)</td>
-            <td class="p-3.5 bg-sky-50/50 font-extrabold text-brand-blue">Optimal (High Efficiency + Low Spares Cost)</td>
-            <td class="p-3.5 text-slate-500">Unpredictable (Frequent Head Failures)</td>
-            <td class="p-3.5 text-slate-500">Excessive (300–500% Parts Markup)</td>
+            <td class="p-3.5 bg-sky-50/50 font-bold text-brand-blue">Build a project model from purchase price, energy, maintenance and documented service costs</td>
+            <td class="p-3.5 text-slate-500">Use the same assumptions, duty profile and time horizon</td>
+            <td class="p-3.5">Use the same assumptions, duty profile and time horizon</td>
           </tr>
         </tbody>
       </table>
@@ -658,7 +607,7 @@
         <!-- Section 5 -->
     <h2>5. Clinical Sizing Guide: Mathematical Flow Calculations for 1 to 50 Dental Chairs</h2>
     <p>
-      Proper pneumatic sizing requires calculating the <strong>Total Free Air Delivery (FAD)</strong> under peak simultaneous operational demand. Under international dental clinic engineering design guidelines (HTM 02-01 &amp; ISO 10637), the required compressor capacity is formulated as:
+      A preliminary dental planning estimate uses <strong>Q = chairs &times; 50 L/min &times; k</strong>, with <strong>k = 0.70</strong> as the default project assumption. This is not an ISO/NFPA rule. Final sizing must use the instrument schedule, required pressure, auxiliary demand, measured pipe and treatment losses, duty limits and continuity requirements:
     </p>
 
     <!-- High-Contrast Engineering Formula Card -->
@@ -670,14 +619,14 @@
             <i class="fa-solid fa-square-root-variable text-sky-400"></i> Pneumatic Flow Sizing Equation
           </span>
           <span class="text-[11px] text-slate-400 bg-slate-900 px-2.5 py-1 rounded border border-slate-800">
-            ISO 10637 &middot; HTM 02-01 Standard
+            Preliminary Project Assumption
           </span>
         </div>
 
         <!-- Formula Display -->
         <div class="bg-slate-900/90 rounded-xl p-5 border border-slate-800/80 mb-6 text-center sm:text-left">
           <div class="text-xl sm:text-2xl lg:text-3xl font-mono font-bold text-white tracking-wide">
-            Q<sub class="text-sky-400 text-lg sm:text-xl">req</sub> = <span class="text-sky-300">[</span> &sum;(N<sub class="text-slate-300 text-sm">chairs</sub> &times; q<sub class="text-slate-300 text-sm">chair</sub>) + Q<sub class="text-slate-300 text-sm">aux</sub> <span class="text-sky-300">]</span> &times; K<sub class="text-amber-400 text-sm">sim</sub> &times; K<sub class="text-teal-400 text-sm">safety</sub>
+            Q<sub class="text-sky-400 text-lg sm:text-xl">planning</sub> = chairs &times; 50 L/min &times; k &nbsp;&nbsp; (default k = 0.70)
           </div>
         </div>
 
@@ -685,34 +634,34 @@
         <div class="grid md:grid-cols-2 gap-4">
           <div class="bg-slate-900/60 rounded-xl p-4 border border-slate-800/80 space-y-2.5">
             <div class="flex items-start gap-2.5 text-xs text-slate-200">
-              <span class="text-sky-400 font-mono font-bold flex-shrink-0 bg-sky-950/60 border border-sky-800/50 px-2 py-0.5 rounded">q<sub>chair</sub></span>
+              <span class="text-sky-400 font-mono font-bold flex-shrink-0 bg-sky-950/60 border border-sky-800/50 px-2 py-0.5 rounded">50</span>
               <div>
-                <strong class="text-white block">Standard Flow Demand:</strong>
-                <span class="text-slate-300">50 L/min @ 0.5 MPa (High-Speed Turbine + 3-Way Syringe)</span>
+                <strong class="text-white block">Planning Basis:</strong>
+                <span class="text-slate-300">50 L/min per chair is a preliminary assumption, not a universal instrument demand.</span>
               </div>
             </div>
             <div class="flex items-start gap-2.5 text-xs text-slate-200">
-              <span class="text-sky-400 font-mono font-bold flex-shrink-0 bg-sky-950/60 border border-sky-800/50 px-2 py-0.5 rounded">q<sub>surg</sub></span>
+              <span class="text-sky-400 font-mono font-bold flex-shrink-0 bg-sky-950/60 border border-sky-800/50 px-2 py-0.5 rounded">Final</span>
               <div>
-                <strong class="text-white block">Surgical / Implant Demand:</strong>
-                <span class="text-slate-300">65–80 L/min @ 0.6 MPa (Implant Motor &amp; Sandblaster)</span>
+                <strong class="text-white block">Project Demand:</strong>
+                <span class="text-slate-300">Replace the assumption with instrument flow and pressure data, auxiliary loads and a verified diversity profile.</span>
               </div>
             </div>
           </div>
 
           <div class="bg-slate-900/60 rounded-xl p-4 border border-slate-800/80 space-y-2.5">
             <div class="flex items-start gap-2.5 text-xs text-slate-200">
-              <span class="text-amber-400 font-mono font-bold flex-shrink-0 bg-amber-950/60 border border-amber-800/50 px-2 py-0.5 rounded">K<sub>sim</sub></span>
+              <span class="text-amber-400 font-mono font-bold flex-shrink-0 bg-amber-950/60 border border-amber-800/50 px-2 py-0.5 rounded">k</span>
               <div>
-                <strong class="text-white block">Simultaneity Factor:</strong>
-                <span class="text-slate-300">1.0 (1 chair) &rarr; 0.70 (5 chairs) &rarr; 0.55 (15 chairs) &rarr; 0.40 (50 chairs)</span>
+                <strong class="text-white block">Simultaneous-Use Assumption:</strong>
+                <span class="text-slate-300">Default k = 0.70 for preliminary planning; validate against the clinic schedule. Eight chairs give 280 L/min and 15 chairs give 525 L/min.</span>
               </div>
             </div>
             <div class="flex items-start gap-2.5 text-xs text-slate-200">
-              <span class="text-teal-400 font-mono font-bold flex-shrink-0 bg-teal-950/60 border border-teal-800/50 px-2 py-0.5 rounded">K<sub>safety</sub></span>
+              <span class="text-teal-400 font-mono font-bold flex-shrink-0 bg-teal-950/60 border border-teal-800/50 px-2 py-0.5 rounded">Loss</span>
               <div>
-                <strong class="text-white block">Duty Cycle Reserve Factor:</strong>
-                <span class="text-slate-300">1.25 (Ensures &le; 65% motor on-cycle duty for maximum pump longevity)</span>
+                <strong class="text-white block">Losses and Margins:</strong>
+                <span class="text-slate-300">Calculate pipe, filter and dryer losses separately. A fixed 1.25 multiplier does not guarantee duty cycle or component life.</span>
               </div>
             </div>
           </div>
@@ -735,9 +684,9 @@
           <div class="p-4">
             <!-- Chair Tier Badge -->
             <span class="inline-block text-[11px] font-bold bg-slate-800 text-white px-2.5 py-1 rounded-md mb-2">
-              1 Treatment Chair
+              Preliminary 1-Chair Tier
             </span>
-            <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-brand-blue transition">HY-100 Point-of-Care</h4>
+            <h3 class="text-base font-extrabold text-brand-dark font-display group-hover:text-brand-blue transition">HY-100 Point-of-Care</h3>
             
             <!-- Specs Grid -->
             <div class="mt-3 pt-3 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs">
@@ -778,7 +727,7 @@
           <div class="p-4">
             <!-- Chair Tier Badge -->
             <span class="inline-block text-[11px] font-bold bg-teal-700 text-white px-2.5 py-1 rounded-md mb-2 shadow-sm">
-              1–2 Treatment Chairs
+              Preliminary 1–2-Chair Tier
             </span>
             <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-teal-700 transition">HY-200 Standard</h4>
             
@@ -793,7 +742,7 @@
                 <strong class="text-slate-800 font-bold">150 L/min</strong>
               </div>
               <div class="bg-teal-50/80 p-2 rounded border border-teal-200">
-                <span class="text-[11px] text-teal-800 block font-bold">Nano-Tank</span>
+                <span class="text-[11px] text-teal-800 block font-bold">Receiver Maintenance</span>
                 <strong class="text-teal-900 font-black">38 L</strong>
               </div>
               <div class="bg-slate-50 p-2 rounded border border-slate-100">
@@ -821,7 +770,7 @@
           <div class="p-4">
             <!-- Chair Tier Badge -->
             <span class="inline-block text-[11px] font-bold bg-brand-blue text-white px-2.5 py-1 rounded-md mb-2 shadow-sm">
-              2–3 Treatment Chairs
+              Preliminary 2–3-Chair Tier
             </span>
             <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-brand-blue transition">HY-300 High-Output</h4>
             
@@ -864,7 +813,7 @@
           <div class="p-4">
             <!-- Chair Tier Badge -->
             <span class="inline-block text-[11px] font-bold bg-purple-700 text-white px-2.5 py-1 rounded-md mb-2 shadow-sm">
-              3–5 Treatment Chairs
+              Preliminary 3–5-Chair Tier
             </span>
             <h4 class="text-base font-extrabold text-brand-dark font-display group-hover:text-purple-700 transition">HYTG-300 Twin Redundant</h4>
             
@@ -897,17 +846,21 @@
 
     </div>
 
+    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+      <strong>HY-200 receiver clarification:</strong> 38L is the standard receiver. The 24L and 32L options are OEM-confirmed custom configurations; 38L provides 58.3% more nominal storage than 24L. Receiver volume affects storage and cycling, but does not replace a flow and duty-cycle check.
+    </p>
+
     <!-- Master Sizing Table -->
     <div class="overflow-x-auto not-prose mb-8">
       <table class="w-full text-xs text-left bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
         <thead class="bg-brand-dark text-white uppercase text-[11px] font-semibold">
           <tr>
-            <th class="p-3">Recommended Model</th>
-            <th class="p-3">Chair Scale</th>
+            <th class="p-3">Candidate Model</th>
+            <th class="p-3">Indicative Planning Tier</th>
             <th class="p-3">Power (kW)</th>
-            <th class="p-3">Max Flow (L/min)</th>
-            <th class="p-3">Tank (L)</th>
-            <th class="p-3">Noise (dB)</th>
+            <th class="p-3">Documented Total Flow (L/min)</th>
+            <th class="p-3">Receiver (L)</th>
+            <th class="p-3">Documented Noise Limit (dB)</th>
             <th class="p-3">Voltage</th>
             <th class="p-3">Primary Facility Typology</th>
           </tr>
@@ -995,6 +948,7 @@
           </tr>
         </tbody>
       </table>
+      <p class="text-xs text-slate-500 mt-3">Chair tiers are indicative planning ranges, not automatic recommendations. Verify site-delivered flow, pressure, duty limits, receiver sizing, treatment losses and one-unit-out capacity. Noise limits apply only to the documented model and test conditions; installed noise also depends on enclosure, room acoustics, vibration isolation and ventilation.</p>
     </div>
 
     <!-- Section 6 -->
@@ -1011,7 +965,7 @@
           </div>
         </div>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Following automated high-level disinfection, endoscope lumens require immediate pressurized air purging (0.2–0.4 MPa). Even trace oil mist creates irreversible chemical residues inside flexible biopsy channels. Hongrun Class 0 air eliminates channel degradation and guarantees total moisture evacuation.
+          After automated high-level disinfection, endoscope channel drying pressure, flow and air quality must follow the reprocessor and endoscope manufacturer instructions and applicable project specification. For complete HW-200–HW-3600 units, the TÜV result documents total-oil Class 0 only; channel drying and microbial control still require configuration-specific validation.
         </p>
       </div>
 
@@ -1026,7 +980,7 @@
           </div>
         </div>
         <p class="text-xs text-slate-600 leading-relaxed">
-          Sterilizer chamber air purge, optical laparoscopic instrument internal channel blowdown, and robotic arm pneumatic seal operations strictly forbid oil hydrocarbons. Hongrun integrated stations deliver &le; -40°C dew point dry air to prevent autoclave staining and vacuum pack punctures.
+          Sterilizer purge, instrument-channel drying and pneumatic equipment require the air-quality and pressure-dew-point targets stated by their manufacturers and the project specification. A -40°C pressure dew point may be a project design target, but performance must be validated for the selected dryer and operating conditions. Drying does not guarantee prevention of autoclave staining, packaging damage or microbial contamination.
         </p>
       </div>
     </div>
@@ -1045,14 +999,14 @@
           </div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-sans tracking-tight leading-snug mb-3 [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
             医用无油压缩空气的工程精密度：<br class="hidden sm:inline"/>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">技术架构、ISO 8573-1 Class 0 认证与牙科中心供气选型全指南</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">技术架构、完整 HW-200–HW-3600 整机总含油 Class 0 文件与牙科中心供气选型全指南</span>
           </h2>
           <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-3 border-t border-white/15">
             <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-sky-400"></i> 发布人：Martin &middot; 宏润科技 (Hongrun Technology)</span>
             <span class="text-slate-500">•</span>
             <span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月02日</span>
             <span class="text-slate-500">•</span>
-            <span><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 &middot; NMPA 二类医疗器械资质</span>
+            <span><i class="fa-solid fa-certificate text-teal-400"></i> 完整 HW-200–HW-3600 总含油 Class 0 &middot; NMPA 二类医疗器械资质</span>
           </div>
         </div>
       </div>
@@ -1063,17 +1017,17 @@
           <i class="fa-solid fa-circle-info text-brand-blue"></i> 核心内容与技术要点导读
         </h3>
         <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0">
-          在现代口腔临床与医院手术中心，压缩空气不仅是驱动气动手机的动力源，更作为直接吹向开放创口与牙体微孔的<strong>医疗介质</strong>。本白皮书系统拆解 100% 纯无油摆动活塞机头（ZB 系列）的机械摩擦学设计、纳米复合抑菌储气罐的防锈工艺、多机头智能变频轮换逻辑，并给出 1 至 50 台牙椅的精准供气选型数学公式与实施方案。
+          在现代口腔临床与医院手术中心，压缩空气不仅是驱动气动手机的动力源，更作为直接吹向开放创口与牙体微孔的<strong>医疗介质</strong>。本白皮书系统拆解纯无油摆动活塞机头（ZB 系列）的机械摩擦学设计、储气罐维护与防腐检查、多机头剩余容量核算逻辑，并给出 1 至 50 台牙椅的初步供气选型方法与验证要求。
         </p>
       </div>
 
       <!-- Chapter 01 -->
       <div class="cn-section-header not-prose">
         <span class="cn-section-badge">01</span>
-        <h3 class="cn-section-title">临床严苛要求：为什么口腔诊疗必须达到 ISO 8573-1 Class 0 零级无油标准？</h3>
+        <h3 class="cn-section-title">临床严苛要求：为什么口腔诊疗必须按型号验证气源纯度？</h3>
       </div>
       <p>
-        口腔高速涡轮手机转速高达 350,000 至 450,000 rpm，其内部微型陶瓷轴承与气动涡轮对气体介质中的悬浮油雾与微量水分极为敏感。普通工业空压机排放的微量碳氢化合物在临床上会直接引发三大灾难性事故：
+        口腔高速涡轮手机的内部微型轴承与气动涡轮对气体介质中的污染较为敏感。气源质量应按手机厂商要求、临床应用和项目规范分别验证油雾、水分与颗粒指标；以下为潜在风险，不代表必然发生的临床后果：
       </p>
 
       <!-- 3 Clinical Hazard Cards -->
@@ -1083,7 +1037,7 @@
             <i class="fa-solid fa-tooth text-red-600"></i> 1. 树脂充填粘接失效
           </div>
           <p class="text-xs text-slate-700 leading-relaxed m-0">
-            微量油膜沉积在酸蚀后的牙本质小管表面形成疏水层，使粘接剪切强度大幅下降 <strong>38% 以上</strong>，引发术后敏感、微渗漏与充填体早期脱落。
+            油污染可能影响润湿与粘接。应按器械及修复材料厂商的气源要求控制质量，不预设统一的粘接强度下降百分比或修复体脱落结果。
           </p>
         </div>
 
@@ -1092,7 +1046,7 @@
             <i class="fa-solid fa-triangle-exclamation text-amber-600"></i> 2. 高速手机轴承抱死
           </div>
           <p class="text-xs text-slate-700 leading-relaxed m-0">
-            油雾与高温压缩空气结合在陶瓷轴承滚珠上碳化结焦，导致手机转速骤降、发热剧烈，严重时甚至在患者口内发生瞬间过热烫伤粘膜。
+            污染物与干燥不足可能加剧磨损、腐蚀或润滑问题。维护与故障风险取决于手机型号、气源质量和运行工况，不推定瞬间轴承抱死或必然烫伤。
           </p>
         </div>
 
@@ -1101,7 +1055,7 @@
             <i class="fa-solid fa-biohazard text-purple-600"></i> 3. 气路生物膜与交叉感染
           </div>
           <p class="text-xs text-slate-700 leading-relaxed m-0">
-            未防腐储气罐内壁锈蚀剥落的铁锈粉末，与冷凝水结合在管网内壁形成细菌生物膜，随三用喷枪吹射直接进入拔牙创口或根管内。
+            冷凝水、腐蚀产物与维护不足可能促进微生物生长。风险控制需要储气罐排水、材料兼容性、干燥过滤，以及经过验证的清洁和牙科水路管理方案。
           </p>
         </div>
       </div>
@@ -1112,49 +1066,44 @@
         <h3 class="cn-section-title">国际医疗法规与纯度分级：各项污染物理化指标硬核对比</h3>
       </div>
       <p>
-        国际标准化组织（ISO）通过 ISO 8573-1 标准严格定义了压缩空气的纯度等级。在医疗和牙科领域，宏润科技全系产品严格执行 <strong>Class 0 绝对零级无油标准</strong>（全面优于 Class 1 工业级标准）：
+        ISO 8573-1 对颗粒、水分和总含油量分别分级，不能把总含油等级直接套用于水分或颗粒。TÜV Rheinland 证书 AK 50528335 0001 / 报告 CN21HFR2 001 仅证明<strong>完整 HW-200 至 HW-3600 无油涡旋机组的总含油量达到 Class 0 且 &lt;0.003 mg/m³</strong>。HY/HYT/HYTG、HYG/HVTG、裸 ZB/4V 机头、HVS、HRC、竞品及未注明的 OEM 组装均不在该证书范围内，须按具体型号与配置提供独立文件；总含油 Class 0 不代表无菌或微生物控制：
       </p>
 
-      <!-- Purity Standards Table -->
+      <!-- Attribute-Specific Purity and Evidence Table -->
       <div class="overflow-x-auto not-prose my-8">
         <table class="w-full text-xs sm:text-sm text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-md">
           <thead>
             <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
-              <th class="py-3.5 px-4">ISO 8573-1 等级</th>
-              <th class="py-3.5 px-4">固体颗粒 (0.1–0.5 μm)</th>
-              <th class="py-3.5 px-4">压力露点 (水分含量)</th>
-              <th class="py-3.5 px-4">总含油量 (气溶胶+蒸气)</th>
-              <th class="py-3.5 px-4">典型应用场景与宏润合规性</th>
+              <th class="py-3.5 px-4">质量属性</th>
+              <th class="py-3.5 px-4">分级 / 证据</th>
+              <th class="py-3.5 px-4">限值或项目目标</th>
+              <th class="py-3.5 px-4">验证边界</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-700">
             <tr class="hover:bg-emerald-50/40 bg-emerald-50/20 transition">
-              <td class="py-3.5 px-4 font-bold text-emerald-800 font-mono">Class 0 (最高级)</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">0 颗粒残留 / m³</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-emerald-700">≤ -40°C (深冷干燥)</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">&lt; 0.003 mg/m³ (未检出)</td>
-              <td class="py-3.5 px-4 font-semibold text-emerald-900">宏润全系标配 · 口腔种植、CSSD、内镜洗消</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-800">总含油量 — 完整 HW-200–HW-3600</td>
+              <td class="py-3.5 px-4">TÜV AK 50528335 0001 / CN21HFR2 001</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-800">&lt; 0.003 mg/m³；总含油 Class 0</td>
+              <td class="py-3.5 px-4">仅完整涡旋机组；不代表无菌或微生物控制</td>
             </tr>
             <tr class="hover:bg-blue-50/40 transition">
-              <td class="py-3.5 px-4 font-mono text-slate-900 font-semibold">Class 1</td>
-              <td class="py-3.5 px-4 font-mono">≤ 20,000 / m³</td>
-              <td class="py-3.5 px-4 font-mono">≤ -70°C</td>
-              <td class="py-3.5 px-4 font-mono">≤ 0.01 mg/m³</td>
-              <td class="py-3.5 px-4 text-slate-600">高端半导体与医药包装通用基准</td>
+              <td class="py-3.5 px-4 font-bold">总含油量 — 其他型号 / 组装</td>
+              <td class="py-3.5 px-4">须提供型号专项文件</td>
+              <td class="py-3.5 px-4">按适用项目规范确定</td>
+              <td class="py-3.5 px-4">上述证书不覆盖其他系列、裸机头、HVS、HRC、竞品或未注明的 OEM 组装</td>
             </tr>
             <tr class="hover:bg-slate-50 transition">
-              <td class="py-3.5 px-4 font-mono text-slate-600">Class 2</td>
-              <td class="py-3.5 px-4 font-mono">≤ 400,000 / m³</td>
-              <td class="py-3.5 px-4 font-mono">≤ -40°C</td>
-              <td class="py-3.5 px-4 font-mono">≤ 0.10 mg/m³</td>
-              <td class="py-3.5 px-4 text-slate-600">食品加工与一般洁净工业气源</td>
+              <td class="py-3.5 px-4 font-bold">固体颗粒</td>
+              <td class="py-3.5 px-4">独立的 ISO 8573-1 颗粒等级</td>
+              <td class="py-3.5 px-4">与总含油等级分别规定</td>
+              <td class="py-3.5 px-4">按过滤器配置、测试方法与取样点验证</td>
             </tr>
             <tr class="hover:bg-slate-50 transition">
-              <td class="py-3.5 px-4 font-mono text-slate-400">Class 4</td>
-              <td class="py-3.5 px-4 font-mono">未受控</td>
-              <td class="py-3.5 px-4 font-mono">≤ +3°C (常规冷干)</td>
-              <td class="py-3.5 px-4 font-mono">≤ 5.00 mg/m³</td>
-              <td class="py-3.5 px-4 text-red-600 font-semibold">五金工业机 · 严禁接入任何医疗设备</td>
+              <td class="py-3.5 px-4 font-bold">水分 / 压力露点</td>
+              <td class="py-3.5 px-4">独立的 ISO 8573-1 水分等级或项目要求</td>
+              <td class="py-3.5 px-4">按应用、环境条件与设备要求确定</td>
+              <td class="py-3.5 px-4">按进气条件、流量与负荷验证干燥器；不推定无菌</td>
             </tr>
           </tbody>
         </table>
@@ -1180,7 +1129,7 @@
             <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">1. 完全自主知识产权 ZB 系列纯无油摆动活塞机头</h4>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
-            区别于市面贴牌组装厂商外购的通用公模机头，宏润自主研发制造 ZB 系列摆动活塞机头。采用法国圣戈班进口耐磨自润滑 PTFE 特氟龙复合材料皮碗，搭配瑞典山特维克进口高弹性不锈钢阀片，动摩擦系数 ≤ 0.08，曲轴箱内部 100% 绝对无油脂，连续无故障运行寿命突破 25,000 小时。
+            宏润 ZB 系列摆动活塞机头采用自润滑 PTFE 复合材料皮碗，压缩腔无需液体润滑油。实际磨损、维护周期和寿命取决于型号、负荷、温度、进气质量与保养情况，不预设固定运行小时数。
           </p>
         </div>
 
@@ -1189,10 +1138,10 @@
             <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">2. 纳米银离子抗菌涂层储气罐（全系升级 38L/50L/90L）</h4>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">2. 储气罐巡检、防腐与冷凝水管理</h4>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
-            储气罐内壁经过高精度酸洗磷化钝化与全自动静电旋风喷涂工艺，形成致密坚韧的纳米陶瓷高分子隔离层。耐酸性冷凝水浸泡与电化学腐蚀，杜绝内壁脱漆、生锈出黄水，从物理源头彻底切断细菌滋生环境。
+            储气罐按型号维护手册进行定期排水、内壁检查与防腐处理。现场湿度、冷凝水量和干燥过滤配置决定维护频率；未取得型号专项证据前，不宣称涂层具有杀菌或终身不锈性能。
           </p>
         </div>
 
@@ -1201,10 +1150,10 @@
             <div class="w-9 h-9 rounded-lg bg-teal-100 text-teal-700 flex items-center justify-center font-bold">
               <i class="fa-solid fa-volume-xmark"></i>
             </div>
-            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">3. 1400 转低速 4 极电机与极致静音工况（≤ 55–60 dB(A)）</h4>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">3. 按型号验证的电机、动平衡与声学配置</h4>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
-            拒绝工业机 2800 RPM 的高速高噪方案，全系采用 1400 RPM 医用 4 极低速纯铜电机。电机转子经过 G2.5 级高精动平衡校正，配合多腔体迷宫式进气消音器，整机运行噪音压制在 ≤ 55–60 dB(A)，可直接置于诊室内部点对点安静运行。
+            电机转速、绕组、绝缘、平衡等级和消声结构按具体型号文件确认。噪音数据只适用于规定的型号、负荷、测点与测试条件；现场噪声还受机房、隔振、通风和房间声学影响，不宣称全系固定的 55–60 dB(A) 或任意诊室静音保证。
           </p>
         </div>
 
@@ -1216,7 +1165,7 @@
             <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">4. HYTG 多机头智能变频轮换与无压分步启动系统</h4>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
-            针对 4 台牙椅以上的多机头机组（如 HYTG-300、HYT-500），配备智能微电脑控制器，按累计运行时长自动均衡各机头磨损；启动时采用 0 压力延时分步启停逻辑，消除大启动电流对诊所电网的冲击。当单台机头维护时其余机头自动无缝接管，确保供气零中断。
+            多机头机组按累计运行时长均衡各机头，并采用分步启动逻辑。单机头退出时必须核算剩余流量：HYTG-300 约为 200 L/min，HYT-400 约为 400 L/min。是否覆盖牙椅负荷需结合同时使用系数、管网损失和余量确认，不承诺供气零中断。
           </p>
         </div>
 
@@ -1225,10 +1174,10 @@
             <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
               <i class="fa-solid fa-snowflake"></i>
             </div>
-            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">5. 三级微米级深冷吸附干燥系统（露点 ≤ -40°C）</h4>
+            <h4 class="font-bold text-sm text-slate-900 m-0 font-sans">5. 按项目要求选型并验证的吸附干燥与过滤系统</h4>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0 pl-12">
-            集成高效风冷后部冷却器、自动电子排污阀、双塔无热再生吸附式干燥器及 0.01 μm 精密微滤芯，输出干燥度极高的医用洁净气体，彻底杜绝牙科手机管路喷水与冷凝积水。
+            后冷却器、排污、双塔吸附干燥器与过滤器按进气条件、流量和项目气源规范配置。若项目要求 -40°C 压力露点，应作为设计目标并在规定进气压力、温度、流量和负荷下验证。干燥不等于灭菌，也不能保证彻底杜绝冷凝水或生物膜。
           </p>
         </div>
 
@@ -1256,28 +1205,28 @@
           <tbody class="divide-y divide-slate-200 text-slate-700">
             <tr class="hover:bg-blue-50/40 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">核心泵头制造</td>
-              <td class="py-3.5 px-4 text-brand-blue font-bold">100% 自研制造 ZB 系列专用医用摆动活塞机头</td>
-              <td class="py-3.5 px-4 text-slate-500">外购通用公模工业机头贴牌组装</td>
+              <td class="py-3.5 px-4 text-brand-blue font-bold">按型号核对设计、图纸、制造与服务文件</td>
+              <td class="py-3.5 px-4 text-slate-500">要求提供同等设计与服务文件</td>
             </tr>
             <tr class="hover:bg-blue-50/40 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">活塞密封材料</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">法国圣戈班自润滑 PTFE 复合材料（寿命 &gt;25,000h）</td>
-              <td class="py-3.5 px-4 text-slate-500 font-mono">国产普通填料特氟龙（易磨损，易漏气）</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">自润滑 PTFE 复合材料（寿命按型号与工况确认）</td>
+              <td class="py-3.5 px-4 text-slate-500">在同等工况下比较材料与经验证寿命</td>
             </tr>
             <tr class="hover:bg-blue-50/40 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">储气罐内壁防腐</td>
-              <td class="py-3.5 px-4 font-bold text-emerald-800">纳米银离子静电防锈抑菌涂层（终身不锈）</td>
-              <td class="py-3.5 px-4 text-red-600 font-semibold">无任何涂层普通碳钢（3个月生锈出黄水）</td>
+              <td class="py-3.5 px-4 font-bold text-emerald-800">按型号手册进行防腐检查与维护（不推定抑菌性能）</td>
+              <td class="py-3.5 px-4 text-slate-500">比较文件化的材料、涂层与检查维护方案</td>
             </tr>
             <tr class="hover:bg-blue-50/40 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">电机转速与噪音</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">1400 RPM 低速 4 极铜芯电机 · ≤ 55–58 dB(A)</td>
-              <td class="py-3.5 px-4 text-slate-500 font-mono">2800 RPM 高速电机 · 噪音高达 75–82 dB(A)</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900">采用具体型号的声学数据，并注明测点、负荷和测试条件</td>
+              <td class="py-3.5 px-4 text-slate-500">在同等距离、负荷和安装条件下比较测量值</td>
             </tr>
             <tr class="hover:bg-blue-50/40 transition">
               <td class="py-3.5 px-4 font-semibold text-slate-900">医疗器械资质</td>
-              <td class="py-3.5 px-4 font-bold text-brand-blue">国家 NMPA 二类医疗器械注册证 · CE MDR · ISO 13485:2016</td>
-              <td class="py-3.5 px-4 text-red-600 font-semibold">仅有工业类认证，无医疗器械准入资质</td>
+              <td class="py-3.5 px-4 font-bold text-brand-blue">核对具体供应产品的注册证与适用范围</td>
+              <td class="py-3.5 px-4 text-slate-500">要求提供现行注册与预期用途文件</td>
             </tr>
           </tbody>
         </table>
@@ -1286,7 +1235,7 @@
       <!-- Chapter 05 -->
       <div class="cn-section-header not-prose">
         <span class="cn-section-badge">05</span>
-        <h3 class="cn-section-title">1~50台牙椅临床气量精准速算法与阶梯选型推荐表</h3>
+        <h3 class="cn-section-title">1~50台牙椅的初步供气估算与按工况选型</h3>
       </div>
       <p>
         在临床工程选型中，气源排量必须依据牙椅终端动态耗气量与同时使用系数科学核算：
@@ -1296,12 +1245,12 @@
       <div class="formula-card not-prose my-8 shadow-xl">
         <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">// 牙科中心供气系统排量核算公式</div>
         <div class="text-base sm:text-lg text-amber-300 font-bold mb-3 tracking-wide">
-          Q_总 = [ (q_单机基准 × N_牙椅台数) + q_辅助设备 ] × k_同时使用系数 × 1.25 (安全余量)
+          Q_初步 = 牙椅数 × 50 L/min × k（默认项目假设 k = 0.70）
         </div>
         <div class="text-xs text-slate-300 space-y-1.5 pt-3 border-t border-slate-700 leading-relaxed">
-          <div>• <strong>q_单机基准：</strong> 单台综合治疗台基准耗气量按 50 L/min (@ 0.5 MPa) 计算</div>
-          <div>• <strong>k_同时使用系数：</strong> 1台=1.00；2台=0.85；3台=0.72；4~6台=0.60；8~12台=0.45；15~50台=0.35</div>
-          <div>• <strong>安全冗余系数：</strong> 取 1.25，覆盖管路压降、滤芯阻力与高峰用气缓冲</div>
+          <div>• <strong>规划基准：</strong> 每椅 50 L/min 仅用于初步估算，不是所有器械的统一耗气量，也不是 ISO/NFPA 规则。</div>
+          <div>• <strong>同时使用假设：</strong> 默认 k = 0.70；8 椅为 280 L/min，15 椅为 525 L/min。最终值应按设备清单和诊疗排班验证。</div>
+          <div>• <strong>损失与余量：</strong> 管路、过滤和干燥损失另行计算；固定 1.25 系数不保证占空比或部件寿命。</div>
         </div>
       </div>
 
@@ -1310,12 +1259,12 @@
         <table class="w-full text-xs sm:text-sm text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-md">
           <thead>
             <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
-              <th class="py-3.5 px-3 sm:px-4">推荐机型</th>
-              <th class="py-3.5 px-3 sm:px-4">适配牙椅规模</th>
+              <th class="py-3.5 px-3 sm:px-4">候选机型</th>
+              <th class="py-3.5 px-3 sm:px-4">初步规划椅数</th>
               <th class="py-3.5 px-3 sm:px-4">额定总功率</th>
-              <th class="py-3.5 px-3 sm:px-4">理论排气量</th>
-              <th class="py-3.5 px-3 sm:px-4">标配储气罐</th>
-              <th class="py-3.5 px-3 sm:px-4">运行噪音</th>
+              <th class="py-3.5 px-3 sm:px-4">文件标注总流量</th>
+              <th class="py-3.5 px-3 sm:px-4">储气罐</th>
+              <th class="py-3.5 px-3 sm:px-4">文件标注噪声限值</th>
               <th class="py-3.5 px-3 sm:px-4">典型应用场景</th>
             </tr>
           </thead>
@@ -1334,7 +1283,7 @@
               <td class="py-3.5 px-3 sm:px-4 font-semibold text-slate-900">1 ～ 2 台牙椅</td>
               <td class="py-3.5 px-3 sm:px-4 font-mono">0.75 kW (1.0 HP)</td>
               <td class="py-3.5 px-3 sm:px-4 font-mono font-bold">150 L/min</td>
-              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold text-emerald-800">38L 升级卧式罐</td>
+              <td class="py-3.5 px-3 sm:px-4 font-mono font-bold text-emerald-800">38L 标准卧式罐</td>
               <td class="py-3.5 px-3 sm:px-4 font-mono font-bold text-teal-700">≤ 58 dB(A)</td>
               <td class="py-3.5 px-3 sm:px-4 text-emerald-950">标准双椅门诊 / 种植正畸专科</td>
             </tr>
@@ -1377,6 +1326,7 @@
           </tbody>
         </table>
       </div>
+      <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mt-4">HY-200 标配储气罐为 38L；24L 与 32L 为 OEM 确认的定制选项，38L 比 24L 的名义储气容积多 58.3%。椅数范围仅为初步规划参考，不替代现场供气量、压力、占空比、处理损失及单机头退出工况核算。噪声限值仅适用于相应型号和测试条件，现场噪声还受机房、隔振、通风与房间声学影响。</p>
 
       <!-- Chapter 06 -->
       <div class="cn-section-header not-prose">
@@ -1401,7 +1351,7 @@
             </div>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0">
-            胃肠镜、支气管镜在清洗消毒后，必须使用 0.2–0.4 MPa 洁净无油压缩空气进行内腔彻底吹干。宏润配置的深冷吸附干燥系统将压力露点降至 ≤ -40°C，三级精密微滤彻底拦截气溶胶微粒，杜绝内镜细长管腔内水汽残留与病原体二次滋生。
+            胃肠镜、支气管镜清洗消毒后的吹干压力、流量与气源质量，应按洗消机、内镜厂商说明及项目规范确定。若项目要求 -40°C 压力露点，应作为设计目标，在规定进气条件、流量与负荷下验证；实际干燥效果和微生物控制仍须按具体型号、过滤器及管网配置确认。
           </p>
         </div>
 
@@ -1416,7 +1366,7 @@
             </div>
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0">
-            用于高压蒸汽灭菌器真空抽吸后破真空复压、精密腹腔镜管腔器械吹干枪以及气动密封门。气体内严禁含有任何矿物油蒸气，防止在 134°C 高温高压灭菌舱内发生焦化变性，彻底杜绝无菌包发黑与化学污染风险。
+            用于高压蒸汽灭菌器真空抽吸后破真空复压、精密腹腔镜管腔器械吹干枪以及气动密封门。气源须按具体型号验证总含油量，并控制矿物油蒸气在 134°C 高温高压灭菌舱内焦化变性的风险；无菌效果仍须按独立消毒与配置验证结果确认。
           </p>
         </div>
 
@@ -1441,7 +1391,7 @@
             Need a Customized 1–50 Chair Pneumatic CAD Sizing Blueprint?
           </h3>
           <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
-            Our senior biomedical application engineers provide comprehensive pipe pressure loss calculations, isometric plant room CAD drawings, and complete Class 0 equipment schedules within 24 hours.
+            Share the confirmed instrument schedule and layout for pipe pressure-loss calculations, isometric plant room CAD, and model-specific equipment and air-quality review. Deliverables and timing are agreed after scope confirmation.
           </p>
         </div>
 
@@ -1478,13 +1428,13 @@
         </h4>
         <div class="flex flex-wrap gap-2">
           <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="inline-flex items-center gap-1.5 text-xs bg-brand-blue/10 text-brand-blue hover:bg-brand-blue hover:text-white font-semibold px-3 py-1.5 rounded-lg border border-brand-blue/20 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> ISO 8573-1 Class 0 <span class="text-[11px] opacity-75 bg-white/40 px-1 rounded">Core</span>
+            <i class="fa-solid fa-tag text-[11px]"></i> Complete HW-200–HW-3600 Total-Oil Class 0 <span class="text-[11px] opacity-75 bg-white/40 px-1 rounded">Scoped</span>
           </a>
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> Wobble Piston Kinematics (ZB Series)
           </a>
           <a href="../../products-hy.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> Nano-Coated Antibacterial Tank (38L)
+            <i class="fa-solid fa-tag text-[11px]"></i> Model-Specific Receiver Maintenance
           </a>
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> 1–50 Dental Chairs Sizing Equation
@@ -1499,7 +1449,7 @@
             <i class="fa-solid fa-tag text-[11px]"></i> Endoscopy Reprocessing (WS 507-2016)
           </a>
           <a href="../../solutions.html" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
-            <i class="fa-solid fa-tag text-[11px]"></i> Hospital CSSD Sterile Air (WS 310.2)
+            <i class="fa-solid fa-tag text-[11px]"></i> CSSD Air Drying &amp; Configuration Validation (WS 310.2)
           </a>
           <a href="../../about.html#certifications" class="inline-flex items-center gap-1.5 text-xs bg-white text-slate-700 hover:bg-brand-blue hover:text-white font-medium px-3 py-1.5 rounded-lg border border-slate-200 transition">
             <i class="fa-solid fa-tag text-[11px]"></i> CE MDR &amp; NMPA Class II Medical
@@ -1515,8 +1465,8 @@
           <a href="/articles/20260820-compressor-exploded-anatomy/" class="bg-white hover:border-brand-blue p-4 rounded-xl border border-slate-200 hover:shadow-md transition flex flex-col justify-between group">
             <div>
               <span class="text-[11px] bg-brand-blue text-white font-bold px-2 py-0.5 rounded uppercase">Anatomy &amp; CAD</span>
-              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">3D CAD Exploded Engineering Anatomy of Class 0 Compressors</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">5-axis CNC drive shafts, diamond-coated PTFE rings, and dual-tower PSA dryers.</p>
+              <h5 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue mt-2 line-clamp-2">Oil-Free Compressor Anatomy &amp; Class 0 Certificate Scope</h5>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Model-specific drive components, PTFE rings and project-validated air-treatment configurations.</p>
             </div>
             <span class="text-[11px] font-bold text-brand-blue mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -1534,7 +1484,7 @@
             <div>
               <span class="text-[11px] bg-teal-600 text-white font-bold px-2 py-0.5 rounded uppercase">Suction Dynamics</span>
               <h5 class="text-xs font-bold text-brand-dark group-hover:text-teal-600 mt-2 line-clamp-2">Aerodynamic Power: 3D Exploded Anatomy of HVS Dental Vacuum</h5>
-              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and 85%+ aerosol suppression.</p>
+              <p class="text-[11px] text-slate-500 mt-1 line-clamp-2">Turbine fluid dynamics, two-stage cyclone separation, and project-validated aerosol source capture.</p>
             </div>
             <span class="text-[11px] font-bold text-teal-700 mt-3 inline-flex items-center gap-1">Read Whitepaper &rarr;</span>
           </a>
@@ -1549,19 +1499,19 @@
       <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
         <div class="max-w-2xl">
           <div class="inline-flex items-center gap-2 bg-sky-500/20 border border-sky-400/40 text-sky-300 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
-            <i class="fa-solid fa-shield-halved text-sky-400"></i> ISO 8573-1 Class 0 Air Quality Audit
+            <i class="fa-solid fa-shield-halved text-sky-400"></i> Model-Specific Air Quality Documentation
           </div>
           <h3 class="text-2xl sm:text-3xl font-bold font-display text-white tracking-tight leading-snug" style="color: #FFFFFF !important;">
-            Upgrade your Clinic to Certified Class 0 Medical Air
+            Validate the Right Medical Air Configuration
           </h3>
           <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
-            Request our comprehensive 2026 ISO 8573-1 Class 0 Engineering Dossier, TÜV Rheinland third-party laboratory test reports, and factory OEM/ODM engineering integration submittal drawings.
+            Request model-specific air-quality documentation and OEM/ODM integration drawings. TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001 covers total-oil Class 0 and &lt;0.003 mg/m³ only for complete HW-200 through HW-3600 scroll units; other families require their own test reports.
           </p>
         </div>
 
         <div class="flex flex-col sm:flex-row lg:flex-col gap-3 flex-shrink-0">
           <a href="../../contact.html" class="bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition-all shadow-lg hover:shadow-orange-500/30 flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
-            <i class="fa-regular fa-paper-plane"></i> Request TÜV Test Reports
+            <i class="fa-regular fa-paper-plane"></i> Request Model Test Reports
           </a>
           <a href="../../products-hy.html" class="bg-white/10 hover:bg-white/20 text-white font-semibold text-sm px-6 py-3.5 rounded-xl border border-white/30 hover:border-white/60 transition-all flex items-center justify-center gap-2 text-center" style="color: #FFFFFF !important;">
             <i class="fa-solid fa-layer-group"></i> Explore Medical Compressors
@@ -1593,7 +1543,7 @@
               <span>What is the difference between ISO 8573-1 Class 0 and Class 1 medical compressed air?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              ISO 8573-1 Class 1 permits total residual oil concentrations up to <strong>0.01 mg/m³</strong>. ISO 8573-1 Class 0 is the purest standard, requiring zero detectable oil specified by the manufacturer and verified by third-party testing. Certified by <strong>TÜV Rheinland</strong>, Hongrun medical oil-free compressors achieve residual hydrocarbon emissions <strong>below 0.003 mg/m³</strong> (under instrument detection thresholds), ensuring zero risk of hydrocarbon aerosol contamination on dental composite bonding surfaces or respiratory mucosa.
+              ISO 8573-1 Class 1 permits total residual oil concentrations up to <strong>0.01 mg/m³</strong>. Class 0 is a total-oil purity class whose limit is specified by the equipment manufacturer and verified by testing. <strong>TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001</strong> documents total-oil Class 0 and <strong>&lt;0.003 mg/m³</strong> only for complete HW-200 through HW-3600 oil-free scroll compressor units. HY/HYTG piston and other families are not covered and require their own model-specific documentation. Total-oil Class 0 does not establish sterility or microbial control.
             </p>
           </div>
 
@@ -1601,10 +1551,10 @@
           <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
             <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
               <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q2</span>
-              <span>How does Saint-Gobain PTFE diamond composite achieve 20,000+ hours wear life without oil?</span>
+              <span>How do self-lubricating PTFE piston rings support oil-free compression?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              Hongrun compressors incorporate French <strong>Saint-Gobain diamond-impregnated PTFE composite piston rings</strong> operating in micro-honed aluminum cylinders (\(Ra \le 0.2\ \mu\text{m}\)). The rocking piston kinematics deposit a microscopic self-healing PTFE transfer layer, dropping friction coefficients to \(\mu < 0.08\) and achieving <strong>20,000 to 25,000 continuous operating hours</strong> without liquid oil or crankcase lubricants.
+              Self-lubricating PTFE composite rings reduce friction in lubricant-free compression chambers. Service life and maintenance intervals depend on the selected model, load, temperature, air quality and operating practice; no fixed-hour lifespan is assumed.
             </p>
           </div>
 
@@ -1612,10 +1562,10 @@
           <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
             <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
               <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q3</span>
-              <span>Why is an internal nano-antibacterial coating critical for medical air receiver tanks?</span>
+              <span>How should medical air receiver tanks manage condensate and microbial risk?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              Ambient humidity causes condensate pooling inside conventional steel tanks, creating bacterial and biofilm reservoirs. Hongrun air receiver vessels feature a proprietary <strong>220°C high-temperature thermoset nano-silver ion antibacterial coating</strong> that inhibits <strong>99.9% of microbial pathogens</strong> (including <em>E. coli</em>, <em>S. aureus</em>, and <em>Pseudomonas</em>) while preventing internal tank rust and particulate contamination.
+              Humidity can create condensate in a receiver, so drainage, inspection, corrosion protection and the drying/filtration train must follow the equipment manual and project air-quality plan. An antibacterial coating is not assumed here. Any antimicrobial claim requires model-specific test evidence, and total-oil Class 0 certification does not establish sterility or microbial control.
             </p>
           </div>
 
@@ -1623,10 +1573,10 @@
           <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
             <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
               <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q4</span>
-              <span>What pressure dew point (PDP) is required to prevent waterline microbial growth in dental clinics?</span>
+              <span>How should dental compressed-air pressure dew point be specified and validated?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              Under ISO 22052 and EN 1640, dental compressed air pressure dew point must remain at least 5°C below ambient temperature (typically <strong>\(\le -20^\circ\text{C}\) to \(-40^\circ\text{C}\)</strong>). Dual-tower pressure swing adsorption (PSA) desiccant drying with 13X synthetic molecular sieves reduces relative humidity below 1%, starving microorganisms of free water, halting bacterial biofilm propagation in dental unit waterlines (DUWL), and protecting handpiece ceramic ball bearings.
+              Pressure dew point is a project requirement derived from the applicable dental-air standard, equipment manufacturer requirements and lowest expected ambient conditions. A value such as <strong>&minus;40°C</strong> may be specified as a design target, but the selected dryer must be validated at the stated inlet pressure, temperature, flow and load. Drying alone does not establish sterility, guarantee prevention of bacterial biofilm or replace dental-unit waterline maintenance.
             </p>
           </div>
         </div>
@@ -1652,12 +1602,12 @@
           <span class="sr-only">Share on LinkedIn</span></a>
 
           <!-- WhatsApp -->
-          <a href="https://api.whatsapp.com/send?text=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors%3A%20https%3A//www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via WhatsApp">
+          <a href="https://api.whatsapp.com/send?text=Oil-Free%20Dental%20Air%3A%20Complete-HW%20Total-Oil%20Class%200%20Scope%20and%20Preliminary%20Sizing%3A%20https%3A//www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/" target="_blank" rel="noopener noreferrer" title="Share via WhatsApp" class="w-9 h-9 rounded-lg bg-[#25D366] hover:bg-[#1eb757] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via WhatsApp">
             <i class="fa-brands fa-whatsapp text-base" aria-hidden="true"></i>
           <span class="sr-only">Share via WhatsApp</span></a>
 
           <!-- X / Twitter -->
-          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260902-dental-air-purity-engineering-guide%2F&text=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on X (Twitter)">
+          <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260902-dental-air-purity-engineering-guide%2F&text=Oil-Free%20Dental%20Air%3A%20Complete-HW%20Total-Oil%20Class%200%20Scope%20and%20Preliminary%20Sizing" target="_blank" rel="noopener noreferrer" title="Share on X (Twitter)" class="w-9 h-9 rounded-lg bg-black hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on X (Twitter)">
             <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           <span class="sr-only">Share on X (Twitter)</span></a>
 
@@ -1677,12 +1627,12 @@
           <span class="sr-only">Share on Facebook</span></a>
 
           <!-- Telegram -->
-          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260902-dental-air-purity-engineering-guide%2F&text=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on Telegram">
+          <a href="https://t.me/share/url?url=https%3A%2F%2Fwww.hongrun1995.cn%2Farticles%2F20260902-dental-air-purity-engineering-guide%2F&text=Oil-Free%20Dental%20Air%3A%20Complete-HW%20Total-Oil%20Class%200%20Scope%20and%20Preliminary%20Sizing" target="_blank" rel="noopener noreferrer" title="Share on Telegram" class="w-9 h-9 rounded-lg bg-[#229ED9] hover:bg-[#1a85b8] text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share on Telegram">
             <i class="fa-brands fa-telegram text-base" aria-hidden="true"></i>
           <span class="sr-only">Share on Telegram</span></a>
 
           <!-- Email -->
-          <a href="mailto:?subject=Engineering%20Zero-Oil%20Purity%3A%20Technical%20Architecture%2C%20ISO%208573-1%20Class%200%20Standards%2C%20and%20Clinical%20Sizing%20of%20Medical%20Dental%20Air%20Compressors&body=Check%20out%20this%20article%3A%20https%3A//www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via Email">
+          <a href="mailto:?subject=Oil-Free%20Dental%20Air%3A%20Complete-HW%20Total-Oil%20Class%200%20Scope%20and%20Preliminary%20Sizing&body=Check%20out%20this%20article%3A%20https%3A//www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/" title="Share via Email" class="w-9 h-9 rounded-lg bg-slate-700 hover:bg-slate-800 text-white flex items-center justify-center transition-all duration-200 shadow-sm hover:scale-105" aria-label="Share via Email">
             <i class="fa-regular fa-envelope text-sm" aria-hidden="true"></i>
           <span class="sr-only">Share via Email</span></a>
 
@@ -1704,11 +1654,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV ISO 8573-1 Class 0 certified for complete HW-200–HW-3600 scroll units. Medical air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -1757,7 +1707,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; TÜV Total-Oil Class 0 (Complete HW-200–HW-3600) &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
     </div>
   </div>
 </footer>

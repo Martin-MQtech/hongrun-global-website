@@ -4,78 +4,28 @@
 <head>
 <meta charset="utf-8"/>
 <!-- Google tag (gtag.js) - Google Analytics 4 -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
 <meta content="e998580dfb4c996e" name="yandex-verification"/>
 <meta content="6CB32A6B15E1111CA13C138053971828" name="msvalidate.01"/>
 <meta content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8" name="google-site-verification"/>
 <link href="/assets/images/favicon/favicon-32.png" rel="icon" type="image/png"/>
 <link href="/assets/images/favicon/apple-touch-icon.png" rel="apple-touch-icon"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Oil-Free Compressors, Suction &amp; Clean Air Systems | Hongrun Catalog</title>
+<title>Medical Compressors, Suction &amp; Clean Air | Hongrun</title>
 <!-- Technical SEO & GEO Meta Hierarchy -->
-<meta content="Complete product portfolio of Hongrun medical equipment: HY dental compressors, HVS suction units, HW scroll systems, HYG clean air stations, and HRC pure water." name="description"/>
+<meta name="description" content="Hongrun’s medical equipment portfolio: HY dental compressors, HVS suction units, HW scroll systems, HYG clean air stations, and HRC water systems.">
 <meta content="dental clinic compressor, central suction system, hospital scroll compressor, dental air plant, medical water purification, dental spares" name="keywords"/>
 <link href="https://www.hongrun1995.cn/products.html" rel="canonical"/>
 <!-- OpenGraph Protocol -->
 <meta content="Hongrun Technology" property="og:site_name"/>
-<meta content="Oil-Free Compressors, Suction &amp; Clean Air Systems | Hongrun Catalog" property="og:title"/>
-<meta content="Complete product portfolio of Hongrun medical equipment: HY dental compressors, HVS suction units, HW scroll systems, HYG clean air stations, and HRC pure water." property="og:description"/>
+<meta property="og:title" content="Medical Compressors, Suction &amp; Clean Air | Hongrun">
+<meta property="og:description" content="Hongrun’s medical equipment portfolio: HY dental compressors, HVS suction units, HW scroll systems, HYG clean air stations, and HRC water systems.">
 <meta content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg" property="og:image"/>
 <meta content="https://www.hongrun1995.cn/products.html" property="og:url"/>
 <meta content="website" property="og:type"/>
 <!-- Twitter / X Card Hierarchy -->
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Oil-Free Compressors, Suction &amp; Clean Air Systems | Hongrun Catalog" name="twitter:title"/>
-<meta content="Complete product portfolio of Hongrun medical equipment: HY dental compressors, HVS suction units, HW scroll systems, HYG clean air stations, and HRC pure water." name="twitter:description"/>
+<meta name="twitter:title" content="Medical Compressors, Suction &amp; Clean Air | Hongrun">
+<meta name="twitter:description" content="Hongrun’s medical equipment portfolio: HY dental compressors, HVS suction units, HW scroll systems, HYG clean air stations, and HRC water systems.">
 <meta content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg" name="twitter:image"/>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
@@ -134,7 +84,7 @@
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "HYG / HVTG Clean Medical Compressed Air Stations (-40°C PDP)",
+          "name": "HYG / HVTG Clean Medical Compressed Air Stations (Model-Specific Dew Point)",
           "url": "https://www.hongrun1995.cn/products-cleanair.html"
         },
         {
@@ -163,7 +113,7 @@
         "name": "Hongrun Compressor Technology Co., Ltd.",
         "url": "https://www.hongrun1995.cn/"
       },
-      "description": "ISO 8573-1 Class 0 certified zero-oil medical compressors, dental chair vacuum systems, and hospital central air stations.",
+      "description": "Oil-free medical compressors, dental chair vacuum systems, and hospital central air stations. TÜV ISO 8573-1 total-oil Class 0 certification covers complete HW-200 through HW-3600 scroll units only.",
       "image": [
         "https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg",
         "https://www.hongrun1995.cn/assets/images/banners/products_hero_compressor.jpg"
@@ -211,8 +161,12 @@
 <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js"></script>
 <script defer="" src="/assets/js/webmcp-tools.js"></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
@@ -259,7 +213,7 @@
 <a class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded" href="/products-hy.html">HY Dental Compressors (1–10 Chairs)</a>
 <a class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded" href="/products-hospital.html">HW Hospital Scroll Systems</a>
 <a class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded" href="/products-hvs.html">HVS Dental Suction Plants</a>
-<a class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded" href="/products-cleanair.html">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+<a class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded" href="/products-cleanair.html">HYG/HVTG Clean Air (Model-Specific Dew Point)</a>
 <a class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded" href="/products-water.html">HRC Pure Water &amp; Disinfection</a>
 <a class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded" href="/products-core.html">Core Pump Heads &amp; Spares</a>
 </div>
@@ -296,7 +250,7 @@
 </div>
 </div>
 <!-- ===================== PAGE HERO: 3-SLIDE CAROUSEL (V3.0 LOCKED) ===================== -->
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="relative pt-20 overflow-hidden bg-slate-900">
 <div class="relative h-[380px] lg:h-[440px]">
 <!-- Slide 1: 3D CAD Exploded Engineering Architecture -->
@@ -306,11 +260,11 @@
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
-<div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
+<div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-0 sm:ml-2 lg:ml-4">
 <p class="text-white/70 text-[11px] uppercase tracking-widest mb-3"><a class="hover:text-sky-300 transition" href="/">Home</a> <span class="mx-1">/</span> <a class="hover:text-sky-300 transition" href="products.html">Products</a> <span class="mx-1">/</span> <span class="text-sky-300">Engineering Anatomy</span></p>
-<div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">5-Axis CNC · Diamond-Coated Rings · Dual-Tower PSA</div>
-<h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Precision Anatomy &amp;<br/><span class="text-sky-300">Zero-Oil Purity</span></h1>
-<p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Inside Hongrun engineering: Class 0 antimicrobial vessels, dual-tower PSA desiccant drying, and mirror-finished cylinders.</p>
+<div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">5-Axis CNC · PTFE Seals · Configuration-Specific Drying</div>
+<h1 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Precision Anatomy &amp;<br/><span class="text-sky-300">Oil-Free Design</span></h1>
+<p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Inside Hongrun engineering: protected receivers, configuration-specific drying, and precision-manufactured cylinders.</p>
 <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="#section-hy">Explore Products <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
@@ -320,11 +274,11 @@
 <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/products_hero_compressor.webp')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
-<div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
+<div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-0 sm:ml-2 lg:ml-4">
 <p class="text-white/70 text-[11px] uppercase tracking-widest mb-3"><a class="hover:text-sky-300 transition" href="/">Home</a> <span class="mx-1">/</span> <a class="hover:text-sky-300 transition" href="products.html">Products</a> <span class="mx-1">/</span> <span class="text-sky-300">Flagship Systems</span></p>
-<div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">ISO 8573-1 Class 0 · Class II Medical Device · CE Certified</div>
+<div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">Oil-Free Designs · NMPA Licensed Manufacturing</div>
 <h2 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Complete Air &amp; Suction<br/><span class="text-sky-300">Ecosystem</span></h2>
-<p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">From single dental chairs to 50-chair hospital centers. Engineered for zero-oil purity and clinical safety.</p>
+<p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">From dental clinics to hospital projects. Oil-free design; residual oil, particles and moisture are verified by model-specific test documents and project requirements.</p>
 <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="#section-hy">Explore Products <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
@@ -334,11 +288,11 @@
 <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/banners/products_hero_motor.webp')"></div>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-8">
-<div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
+<div class="max-w-sm p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-0 sm:ml-2 lg:ml-4">
 <p class="text-white/70 text-[11px] uppercase tracking-widest mb-3"><a class="hover:text-sky-300 transition" href="/">Home</a> <span class="mx-1">/</span> <a class="hover:text-sky-300 transition" href="products.html">Products</a> <span class="mx-1">/</span> <span class="text-sky-300">Core Engineering</span></p>
-<div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">Precision Engineering · 30,000h+ Lifespan</div>
+<div class="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] tracking-wide uppercase whitespace-nowrap mb-4">Precision Engineering · Model-Specific Duty</div>
 <h2 class="text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Core Pump Units &amp;<br/><span class="text-sky-300">Precision Motors</span></h2>
-<p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">High-durability Swedish valve plates and Saint-Gobain PTFE rings for ultra-silent, continuous duty cycles.</p>
+<p class="text-sm lg:text-base text-blue-50 mb-5 font-light leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Valve plates and PTFE seals are selected for the exact model. Verify noise, duty cycle and maintenance requirements in the model documentation.</p>
 <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="products-core.html">View Core Components <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 </div>
@@ -375,7 +329,7 @@
 <a class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-brand-blue transition duration-300" href="products-hy.html">
 <div class="p-3 pb-2 text-center">
 <h3 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue font-display tracking-tight mb-0.5 transition">Piston Compressors</h3>
-<p class="text-slate-400 text-[11px]">1–10 chairs · ≤60 dB</p>
+<p class="text-slate-400 text-[11px]">Model-specific noise &amp; duty</p>
 </div>
 <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
 <img alt="Piston Oil-Free Compressors" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HY-200.webp" decoding="async" fetchpriority="high" height="480" src="assets/images/products/thumbs/HY-200.webp" width="480"/>
@@ -385,7 +339,7 @@
 <a class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-brand-blue transition duration-300" href="products-hvs.html">
 <div class="p-3 pb-2 text-center">
 <h3 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue font-display tracking-tight mb-0.5 transition">Dental Vacuum</h3>
-<p class="text-slate-400 text-[11px]">1–50 chairs · HEPA</p>
+<p class="text-slate-400 text-[11px]">Model-specific separation</p>
 </div>
 <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
 <img alt="Dental Vacuum Systems" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HVS-5-7-10.webp" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HVS-5-7-10.webp" width="480"/>
@@ -395,7 +349,7 @@
 <a class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-brand-blue transition duration-300" href="products-cleanair.html">
 <div class="p-3 pb-2 text-center">
 <h3 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue font-display tracking-tight mb-0.5 transition">Clean Air Source</h3>
-<p class="text-slate-400 text-[11px]">Dew point ≤ −40°C</p>
+<p class="text-slate-400 text-[11px]">Model-Specific Dew Point</p>
 </div>
 <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
 <img alt="Clean Air Source Station" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HVTG-900.webp" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HVTG-900.webp" width="480"/>
@@ -405,7 +359,7 @@
 <a class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-brand-blue transition duration-300" href="products-hospital.html">
 <div class="p-3 pb-2 text-center">
 <h3 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue font-display tracking-tight mb-0.5 transition">Hospital &amp; Scroll</h3>
-<p class="text-slate-400 text-[11px]">Class II · Central gas</p>
+<p class="text-slate-400 text-[11px]">Model-specific registration</p>
 </div>
 <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
 <img alt="Hospital &amp; Scroll Compressors" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-1200.webp" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HW-1200.webp" width="480"/>
@@ -415,7 +369,7 @@
 <a class="group block bg-white rounded-lg border border-slate-200 shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:border-brand-blue transition duration-300" href="products-water.html">
 <div class="p-3 pb-2 text-center">
 <h3 class="text-xs font-bold text-brand-dark group-hover:text-brand-blue font-display tracking-tight mb-0.5 transition">Water Treatment</h3>
-<p class="text-slate-400 text-[11px]">Ozone + UV · Sterile</p>
+<p class="text-slate-400 text-[11px]">Validated Water Quality</p>
 </div>
 <div class="p-2 pt-1 flex items-center justify-center h-32 overflow-hidden">
 <img alt="Water Treatment Systems" class="max-h-28 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/product-water.webp" decoding="async" height="340" loading="lazy" src="assets/images/products/thumbs/product-water.webp" width="480"/>
@@ -434,8 +388,8 @@
 </div>
 <div class="text-center mt-10">
 <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Product Families</div>
-<h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Six Systems. One Standard of Purity.</h2>
-<p class="text-slate-500 max-w-2xl mx-auto">Choose a family to explore the full product line — every system engineered around zero-oil purity and clinical safety.</p>
+<h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Six Systems. Model-Specific Validation.</h2>
+<p class="text-slate-500 max-w-2xl mx-auto">Explore each family using exact model documents, test conditions and project requirements rather than series-wide performance claims.</p>
 </div>
 </div>
 </section>
@@ -446,7 +400,7 @@
 <div>
 <div class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">Section 01</div>
 <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Dental Oil-Free Compressors — HY Series</h2>
-<p class="text-slate-500 max-w-xl">Swedish spring plates, Saint-Gobain PTFE rings, nano-antibacterial tank. ≤60 dB. The backbone of the clean dental operatory.</p>
+<p class="text-slate-500 max-w-xl">Swedish spring plates, Saint-Gobain PTFE rings, model-specific receiver documentation, and published noise data for each HY configuration.</p>
 </div>
 <a class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm transition shadow-md" href="products-hy.html">View Full HY Specs <i class="fa-solid fa-arrow-right"></i></a>
 </div>
@@ -468,10 +422,7 @@
 <span class="bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">3–4 Chairs</span>
 </div>
 <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-4">
-<div><span class="font-bold text-slate-800">Motors:</span> 0.75 kW×2</div>
-<div><span class="font-bold text-slate-800">Flow:</span> 300 L/min</div>
-<div><span class="font-bold text-slate-800">Tank:</span> 60 L</div>
-<div><span class="font-bold text-slate-800">Noise:</span> ≤65 dB</div>
+<div class="col-span-2">Verify exact model documentation for power, FAD, receiver, noise and duty cycle.</div>
 </div>
 <div class="mt-auto flex gap-2">
 <a class="flex-1 text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition" href="products-hy.html">Full Specs</a>
@@ -490,10 +441,7 @@
 <span class="bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">4–5 Chairs</span>
 </div>
 <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-4">
-<div><span class="font-bold text-slate-800">Motors:</span> 1.1 kW×2</div>
-<div><span class="font-bold text-slate-800">Flow:</span> 400 L/min</div>
-<div><span class="font-bold text-slate-800">Tank:</span> 90 L</div>
-<div><span class="font-bold text-slate-800">Noise:</span> ≤65 dB</div>
+<div class="col-span-2">Verify exact model documentation for power, FAD, receiver, noise and duty cycle.</div>
 </div>
 <div class="mt-auto flex gap-2">
 <a class="flex-1 text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition" href="products-hy.html">Full Specs</a>
@@ -508,14 +456,11 @@
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="flex items-center justify-between mb-3">
-<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight">HYT-400 <span class="text-xs font-semibold text-slate-400 font-sans ml-1">(HV400 / HY-400)</span></h3>
+<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight">HYT-400</h3>
 <span class="bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">6–8 Chairs</span>
 </div>
 <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-4">
-<div><span class="font-bold text-slate-800">Motors:</span> 1.1 kW×3</div>
-<div><span class="font-bold text-slate-800">Flow:</span> 600 L/min</div>
-<div><span class="font-bold text-slate-800">Tank:</span> 120 L</div>
-<div><span class="font-bold text-slate-800">Noise:</span> ≤65 dB</div>
+<div class="col-span-2">Verify exact model documentation for power, FAD, receiver, noise and duty cycle.</div>
 </div>
 <div class="mt-auto flex gap-2">
 <a class="flex-1 text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition" href="products-hy.html">Full Specs</a>
@@ -530,14 +475,11 @@
 </div>
 <div class="p-6 flex-1 flex flex-col">
 <div class="flex items-center justify-between mb-3">
-<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight">HYT-500 <span class="text-xs font-semibold text-slate-400 font-sans ml-1">(HV500 / HY-500)</span></h3>
+<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight">HYT-500</h3>
 <span class="bg-brand-blue/10 border border-brand-blue/30 text-brand-blue text-xs font-bold px-3 py-1 rounded-full">10 Chairs</span>
 </div>
 <div class="grid grid-cols-2 gap-2 text-xs text-slate-600 mb-4">
-<div><span class="font-bold text-slate-800">Motors:</span> 1.1 kW×4</div>
-<div><span class="font-bold text-slate-800">Flow:</span> 800 L/min</div>
-<div><span class="font-bold text-slate-800">Tank:</span> 200 L</div>
-<div><span class="font-bold text-slate-800">Noise:</span> ≤65 dB</div>
+<div class="col-span-2">Verify exact model documentation for power, FAD, receiver, noise and duty cycle.</div>
 </div>
 <div class="mt-auto flex gap-2">
 <a class="flex-1 text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-4 py-2 rounded-sm text-xs font-bold transition" href="products-hy.html">Full Specs</a>
@@ -555,7 +497,7 @@
 <div>
 <div class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">Section 02</div>
 <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Electric Suction Systems — HVS Series</h2>
-<p class="text-slate-500 max-w-xl">Protect the dentist, care for the patient. 80%+ aerosol reduction. Full-spectrum clinical suction from 1 to 50 chairs.</p>
+<p class="text-slate-500 max-w-xl">Flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.</p>
 </div>
 <a class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm transition shadow-md" href="products-hvs.html">View Full HVS Specs <i class="fa-solid fa-arrow-right"></i></a>
 </div>
@@ -573,7 +515,7 @@
 </div>
 <div class="p-4 flex-1 flex flex-col">
 <h3 class="font-bold text-brand-dark font-display mb-1">HVS-1</h3>
-<p class="text-xs text-slate-500 mb-3">1 Chair · 0.75 kW · Clinic</p>
+<p class="text-xs text-slate-500 mb-3">Clinic configuration · verify model documentation</p>
 <a class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hvs.html">Full Specs</a>
 </div>
 </div>
@@ -584,7 +526,7 @@
 </div>
 <div class="p-4 flex-1 flex flex-col">
 <h3 class="font-bold text-brand-dark font-display mb-1">HVS-2</h3>
-<p class="text-xs text-slate-500 mb-3">2 Chairs · 1.1 kW · Clinic</p>
+<p class="text-xs text-slate-500 mb-3">Clinic configuration · verify model documentation</p>
 <a class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hvs.html">Full Specs</a>
 </div>
 </div>
@@ -595,7 +537,7 @@
 </div>
 <div class="p-4 flex-1 flex flex-col">
 <h3 class="font-bold text-brand-dark font-display mb-1">HVS-3</h3>
-<p class="text-xs text-slate-500 mb-3">3 Chairs · 1.5 kW · Clinic</p>
+<p class="text-xs text-slate-500 mb-3">Clinic configuration · verify model documentation</p>
 <a class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hvs.html">Full Specs</a>
 </div>
 </div>
@@ -606,7 +548,7 @@
 </div>
 <div class="p-4 flex-1 flex flex-col">
 <h3 class="font-bold text-brand-dark font-display mb-1">HVS-5 &amp; 7</h3>
-<p class="text-xs text-slate-500 mb-3">5–7 Chairs · 3–4 kW · Clinic</p>
+<p class="text-xs text-slate-500 mb-3">Clinic configuration · verify model documentation</p>
 <a class="mt-auto text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hvs.html">Full Specs</a>
 </div>
 </div>
@@ -646,8 +588,8 @@
 <!-- Quote CTA card -->
 <div class="bg-gradient-to-br from-brand-blue to-brand-deep border border-blue-400/30 rounded-sm flex flex-col items-center justify-center p-6 text-center">
 <i class="fa-solid fa-hospital text-blue-200 text-3xl mb-4"></i>
-<p class="text-white font-bold font-display text-lg mb-2">Up to 50 Chairs</p>
-<p class="text-blue-200 text-xs mb-4">Custom hospital configurations available</p>
+<p class="text-white font-bold font-display text-lg mb-2">Hospital Suction</p>
+<p class="text-blue-200 text-xs mb-4">Configuration and capacity validated by project</p>
 <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-5 py-2 rounded-sm font-bold text-xs transition shadow-md" href="contact.html">Request Quote</a>
 </div>
 </div>
@@ -660,7 +602,7 @@
 <div>
 <div class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">Section 03</div>
 <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Medical Clean Air Source — HYG / HVTG Series</h2>
-<p class="text-slate-500 max-w-xl">Dew point ≤ −40°C. 0.01 μm filtration. Serving endoscopy, sterilization, ICU, and dental sterilization rooms.</p>
+<p class="text-slate-500 max-w-xl">Oil-free design; pressure dew point depends on exact model, configuration, inlet conditions, flow, dryer selection and maintenance. Residual oil, particles and moisture are verified by model-specific test documents and project requirements.</p>
 </div>
 <a class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm transition shadow-md" href="products-cleanair.html">View Full Specs <i class="fa-solid fa-arrow-right"></i></a>
 </div>
@@ -673,25 +615,25 @@
 <div class="grid md:grid-cols-5 gap-6">
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
 <div class="h-56 bg-white flex items-center justify-center p-4"><img alt="HYG-301" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HYG-301.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HYG-301.webp" width="480"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-301</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dew −40°C</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-301</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
 </div>
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
-<div class="h-56 bg-white flex items-center justify-center p-4"><img alt="HYG-302" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HYG-302.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HYG-302.webp" width="480"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-302</h3><p class="text-xs text-slate-500 mb-3">300 L/min · Dual-head</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
+<div class="h-56 bg-white flex items-center justify-center p-4"><img alt="HYG-400" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HYG-400.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HYG-400.webp" width="480"/></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HYG-400</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
 </div>
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
 <div class="h-56 bg-white flex items-center justify-center p-4"><img alt="HVTG-900" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HVTG-900.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HVTG-900.webp" width="480"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-900</h3><p class="text-xs text-slate-500 mb-3">900 L/min · Hospital</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-900</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
 </div>
 <!-- [IMG-TODO] HVTG-1200 借用的国内版图(国际站暂无此型号图) -->
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
 <div class="h-56 bg-white flex items-center justify-center p-4"><img alt="HVTG-1200" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HVTG-1200.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HVTG-1200.webp" width="1920"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · Hospital</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1200</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
 </div>
 <!-- [IMG-TODO] HVTG-1600 借用的国内版图(国际站暂无此型号图) -->
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
 <div class="h-56 bg-white flex items-center justify-center p-4"><img alt="HVTG-1600" class="max-h-44 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HVTG-1600.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HVTG-1600.webp" width="1920"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1600</h3><p class="text-xs text-slate-500 mb-3">1600 L/min · Central Gas</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HVTG-1600</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-cleanair.html">Specs</a></div>
 </div>
 </div>
 </div>
@@ -703,12 +645,12 @@
 <div>
 <div class="text-xs font-bold text-brand-blue uppercase tracking-widest mb-2">Section 04</div>
 <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Scroll Compressors &amp; Hospital Systems — HW / HWG / HBG</h2>
-<p class="text-slate-500 max-w-xl">Hitachi scroll technology. 10,000-hour maintenance-free. Class II Medical Device EPC packages for ICUs and operating theaters.</p>
+<p class="text-slate-500 max-w-xl">Oil-free scroll and modular piston configurations for hospital projects. Maintenance intervals, duty ratings and medical registration scope are verified for the exact model and supplied configuration.</p>
 </div>
 <a class="mt-6 md:mt-0 inline-flex items-center gap-2 bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-3 rounded-sm font-semibold text-sm transition shadow-md" href="products-hospital.html">View Full Specs <i class="fa-solid fa-arrow-right"></i></a>
 </div>
 <!-- HBG Medical Compressors -->
-<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HBG Medical Compressors (Class II)</h3>
+<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HBG Medical Compressors (Model-Specific Registration)</h3>
 <div class="mb-10 rounded-xl overflow-hidden shadow-lg border border-slate-200 group relative">
 <img alt="Hospital-grade scroll compressor systems" class="w-full max-h-72 object-contain bg-white py-6 transition-opacity duration-500 hover:opacity-90" data-hd="assets/images/products/branded/scroll-compressor.webp" data-zoom="" decoding="async" height="709" loading="lazy" src="assets/images/products/branded/scroll-compressor.webp" width="1000"/>
 <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/70 to-transparent p-4">
@@ -718,33 +660,33 @@
 <div class="grid md:grid-cols-3 gap-6 mb-12">
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
 <div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HBG-400" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HBG-400.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HBG-400.webp" width="480"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Class II</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-400</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div>
 </div>
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
 <div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HBG-800" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HBG-800.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HBG-800.webp" width="480"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-800</h3><p class="text-xs text-slate-500 mb-3">800 L/min · 4.4 kW · Class II</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-800</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div>
 </div>
 <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col">
 <div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HBG-1200" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HBG-1200.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HBG-1200.webp" width="480"/></div>
-<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-1200</h3><p class="text-xs text-slate-500 mb-3">1200 L/min · 6.6 kW · Class II</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div>
+<div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HBG-1200</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div>
 </div>
 </div>
 <!-- HW Scroll Systems -->
-<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HW Silent Scroll Systems (Hospital Central)</h3>
+<h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HW Oil-Free Scroll Systems (Hospital Projects)</h3>
 <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
-<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-600.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-600.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-600</h3><p class="text-xs text-slate-500">600 L/min</p></div></div>
-<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-800.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HW-800.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-800</h3><p class="text-xs text-slate-500">800 L/min</p></div></div>
-<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-1200" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-1200.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HW-1200.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1200</h3><p class="text-xs text-slate-500">1200 L/min</p></div></div>
-<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-1800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-1800.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-1800.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1800</h3><p class="text-xs text-slate-500">1800 L/min</p></div></div>
-<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-2400" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-2400.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-2400.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-2400</h3><p class="text-xs text-slate-500">2400 L/min</p></div></div>
-<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-3600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-3600.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-3600.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-3600</h3><p class="text-xs text-slate-500">3600 L/min</p></div></div>
+<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-600.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-600.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-600</h3><p class="text-xs text-slate-500">Verify exact model documentation</p></div></div>
+<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-800.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HW-800.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-800</h3><p class="text-xs text-slate-500">Verify exact model documentation</p></div></div>
+<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-1200" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-1200.webp" data-zoom="" decoding="async" height="480" loading="lazy" src="assets/images/products/thumbs/HW-1200.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1200</h3><p class="text-xs text-slate-500">Verify exact model documentation</p></div></div>
+<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-1800" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-1800.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-1800.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-1800</h3><p class="text-xs text-slate-500">Verify exact model documentation</p></div></div>
+<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-2400" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-2400.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-2400.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-2400</h3><p class="text-xs text-slate-500">Verify exact model documentation</p></div></div>
+<div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-48 bg-white flex items-center justify-center p-3"><img alt="HW-3600" class="max-h-40 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/intl/HW-3600.webp" data-zoom="" decoding="async" height="384" loading="lazy" src="assets/images/products/thumbs/HW-3600.webp" width="480"/></div><div class="p-3"><h3 class="font-bold text-brand-dark font-display text-sm mb-1">HW-3600</h3><p class="text-xs text-slate-500">Verify exact model documentation</p></div></div>
 </div>
 <!-- HWG Tank Scroll -->
 <h3 class="text-lg font-bold text-brand-dark font-display tracking-tight mb-6 uppercase">HWG Tank Scroll Compressors</h3>
 <div class="grid md:grid-cols-3 gap-6">
-<!-- [IMG-TODO] HWG-200 借用的国内版图(国际站暂无此型号图) --> <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HWG-200" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HWG-200.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HWG-200.webp" width="1920"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-200</h3><p class="text-xs text-slate-500 mb-3">200 L/min · 1.1 kW · Tank</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div></div>
-<!-- [IMG-TODO] HWG-400 借用的国内版图(国际站暂无此型号图) --> <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HWG-400" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HWG-400.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HWG-400.webp" width="1920"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-400</h3><p class="text-xs text-slate-500 mb-3">400 L/min · 2.2 kW · Tank</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div></div>
-<!-- [IMG-TODO] HWG-600 借用的国内版图(国际站暂无此型号图) --> <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HWG-600" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HWG-600.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HWG-600.webp" width="1920"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-600</h3><p class="text-xs text-slate-500 mb-3">600 L/min · 3.3 kW · Tank</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div></div>
+<!-- [IMG-TODO] HWG-200 借用的国内版图(国际站暂无此型号图) --> <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HWG-200" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HWG-200.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HWG-200.webp" width="1920"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-200</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div></div>
+<!-- [IMG-TODO] HWG-400 借用的国内版图(国际站暂无此型号图) --> <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HWG-400" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HWG-400.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HWG-400.webp" width="1920"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-400</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div></div>
+<!-- [IMG-TODO] HWG-600 借用的国内版图(国际站暂无此型号图) --> <div class="product-card bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"><div class="h-44 bg-white flex items-center justify-center p-4"><img alt="HWG-600" class="max-h-36 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" data-hd="assets/images/products/hd/HWG-600.webp" data-zoom="" decoding="async" height="1534" loading="lazy" src="assets/images/products/hd/HWG-600.webp" width="1920"/></div><div class="p-4"><h3 class="font-bold text-brand-dark font-display mb-1">HWG-600</h3><p class="text-xs text-slate-500 mb-3">Verify exact model documentation</p><a class="block text-center border border-brand-deep text-brand-deep hover:bg-brand-deep hover:text-white px-3 py-1.5 rounded-sm text-xs font-bold transition" href="products-hospital.html">Full Specs</a></div></div>
 </div>
 </div>
 </section>
@@ -755,11 +697,11 @@
 <div class="grid md:grid-cols-4 gap-10 mb-12">
 <!-- Col 1 & 2: Brand & Positioning -->
 <div class="md:col-span-2">
-<div class="flex items-end gap-5 mb-4">
+<div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
 <img alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" height="139" loading="lazy" src="assets/images/logo_transparent.webp" width="640"/>
 <img alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" height="61" loading="lazy" src="assets/images/banners/logo_cn_orange.webp" width="200"/>
 </div>
-<p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+<p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Medical air, dental suction, and pure water systems require model- and project-specific documentation.</p>
 <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
 <p><i aria-hidden="true" class="fa-solid fa-location-dot text-brand-blue mr-1.5"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
 <p><i aria-hidden="true" class="fa-solid fa-phone text-brand-blue mr-1.5"></i> Hotline / WhatsApp: <a class="hover:text-white transition" href="https://wa.me/8613964416725">+86-13964416725</a> · Tel: +86-533-3580000</p>
@@ -805,7 +747,7 @@
 <!-- Bottom Copyright & Certifications Baseline -->
 <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
 <p class="text-xs text-slate-500">© 2026 Hongrun Compressor Technology Co., Ltd. · Zibo, Shandong, China · All Rights Reserved.</p>
-<p class="text-xs text-slate-500">ISO 13485:2016 · ISO 8573-1 Class 0 · CE MDR · NMPA Class II Medical Qualification</p>
+<p class="text-xs text-slate-500">ISO 13485:2016 · CE MDR · NMPA Class II · TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.</p>
 </div>
 </div>
 </footer>
@@ -875,13 +817,16 @@ setInterval(() => {
           <div class="flex items-center gap-3">
             <i class="fa-solid fa-magnifying-glass text-brand-blue text-lg"></i>
             <div>
-              <h4 class="text-xs font-bold text-slate-800">Search Results for: <span class="text-brand-blue font-mono font-bold">"${q}"</span></h4>
-              <p class="text-[11px] text-slate-500">Found ${matchCount} matching medical pneumatic systems. Showing filtered results.</p>
+              <h4 class="text-xs font-bold text-slate-800">Search Results for: <span class="text-brand-blue font-mono font-bold"></span></h4>
+              <p class="text-[11px] text-slate-500"></p>
             </div>
           </div>
           <a href="products.html" class="px-3 py-1.5 bg-white border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg transition shadow-sm">Reset Filter</a>
         </div>
       `;
+      // User-controlled search text must never be interpreted as HTML.
+      banner.querySelector("h4 span").textContent = '"' + q + '"';
+      banner.querySelector("p").textContent = "Found " + matchCount + " matching medical pneumatic systems. Showing filtered results.";
       targetSection.parentNode.insertBefore(banner, targetSection);
       if (firstMatch) {
         setTimeout(() => {

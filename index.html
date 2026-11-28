@@ -3,71 +3,21 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Hongrun Technology | Medical-Grade Oil-Free Air & Suction Systems</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="Hongrun Technology (Est. 1995) is a premier manufacturer of Class 0 oil-free medical dental air compressors, central hospital suction systems, and CSSD pure water units.">
-  <meta name="keywords" content="medical air compressor, dental air compressor, oil free compressor, dental suction unit, hospital medical gas, ISO 8573-1 Class 0, Hongrun Technology">
+  <meta name="description" content="Oil-free medical air, dental suction and CSSD water systems. TÜV total-oil Class 0 applies only to complete HW-200–HW-3600 units, not sterility.">
+  <meta name="keywords" content="medical air compressor, dental air compressor, oil free compressor, dental suction unit, hospital medical gas, ISO 8573-1 total-oil Class 0 complete HW-200–HW-3600 only, Hongrun Technology">
   <link rel="canonical" href="https://www.hongrun1995.cn/">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
   <meta property="og:title" content="Hongrun Technology | Medical-Grade Oil-Free Air & Suction Systems">
-  <meta property="og:description" content="Hongrun Technology (Est. 1995) is a premier manufacturer of Class 0 oil-free medical dental air compressors, central hospital suction systems, and CSSD pure water units.">
+  <meta property="og:description" content="Oil-free medical air, dental suction and CSSD water systems. TÜV total-oil Class 0 applies only to complete HW-200–HW-3600 units, not sterility.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/">
   <meta property="og:type" content="website">
@@ -75,7 +25,7 @@
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Hongrun Technology | Medical-Grade Oil-Free Air & Suction Systems">
-  <meta name="twitter:description" content="Hongrun Technology (Est. 1995) is a premier manufacturer of Class 0 oil-free medical dental air compressors, central hospital suction systems, and CSSD pure water units.">
+  <meta name="twitter:description" content="Oil-free medical air, dental suction and CSSD water systems. TÜV total-oil Class 0 applies only to complete HW-200–HW-3600 units, not sterility.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg"><link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -119,9 +69,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-brand-blue focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ===================== NAVBAR ===================== -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -170,7 +123,7 @@
             <a href="/products-hy.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HY Dental Compressors (1–10 Chairs)</a>
             <a href="/products-hospital.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HW Hospital Scroll Systems</a>
             <a href="/products-hvs.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HVS Dental Suction Plants</a>
-            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (Model-Specific Dew Point)</a>
             <a href="/products-water.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HRC Pure Water &amp; Disinfection</a>
             <a href="/products-core.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">Core Pump Heads &amp; Spares</a>
           </div>
@@ -208,7 +161,7 @@
 </div>
 
 <!-- ===================== HERO: 3-BANNER CAROUSEL ===================== -->
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="relative pt-20 overflow-hidden bg-slate-900">
   <div class="relative h-[320px] sm:h-[380px] lg:h-[440px]">
     <!-- Slide 1 -->
@@ -219,7 +172,7 @@
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-5 sm:pb-8">
         <div class="max-w-sm p-3.5 sm:p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] sm:text-[11px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">ISO 8573-1 Class 0 &middot; NMPA Class II Medical Device</div>
+          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] sm:text-[11px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">Oil-Free Designs &middot; NMPA Licensed Manufacturing</div>
           <h1 class="text-xl sm:text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-1 sm:mb-1.5 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">
             Medical &amp; Dental Oil-Free Air Compressors | Hongrun Technology
           </h1>
@@ -235,9 +188,9 @@
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-end pb-5 sm:pb-8">
         <div class="max-w-sm p-3.5 sm:p-4 lg:p-5 rounded-xl bg-slate-800/25 backdrop-blur-sm border border-white/10 shadow-xl ml-2 lg:ml-4">
-          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] sm:text-[11px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">Zero-Oil Purity &middot; Absolute Filtration</div>
-          <h2 class="text-xl sm:text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-2 sm:mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Zero Oil.<br/><span class="text-sky-300">Zero Compromise.</span></h2>
-          <p class="text-xs sm:text-sm lg:text-base text-blue-50 mb-3 sm:mb-5 font-light leading-relaxed line-clamp-2 sm:line-clamp-none [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Oil-free compression with Saint-Gobain PTFE rings and nano-antibacterial tanks. Air purity at Class 0, every single cycle.</p>
+          <div class="inline-block px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/15 backdrop-blur border border-white/30 text-white font-semibold text-[11px] sm:text-[11px] tracking-wide uppercase whitespace-nowrap mb-2 sm:mb-4">Oil-Free Design &middot; Model-Specific Air Quality</div>
+          <h2 class="text-xl sm:text-2xl lg:text-4xl font-extrabold text-white leading-tight mb-2 sm:mb-3 font-display tracking-tight [text-shadow:0_2px_16px_rgba(0,0,0,0.5)]">Oil-Free Design.<br/><span class="text-sky-300">Verified by Model.</span></h2>
+          <p class="text-xs sm:text-sm lg:text-base text-blue-50 mb-3 sm:mb-5 font-light leading-relaxed line-clamp-2 sm:line-clamp-none [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">Oil-free compression with Saint-Gobain PTFE rings and protected receivers. Air-quality performance is documented by model and configuration.</p>
           <a class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-4 sm:px-5 py-1.5 sm:py-2 rounded-sm font-bold text-xs transition shadow-md inline-flex items-center gap-2" href="products-hy.html">Discover HY Series <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
@@ -261,7 +214,7 @@
     <!-- Dots -->
     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2" role="tablist" aria-label="Hero Slide Navigation">
       <button onclick="slideTo(0)" aria-label="Go to Slide 1: Medical Air Systems" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="0"></button>
-      <button onclick="slideTo(1)" aria-label="Go to Slide 2: Zero Oil Purity" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="1"></button>
+      <button onclick="slideTo(1)" aria-label="Go to Slide 2: Oil-Free Design and Model-Specific Air Quality" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="1"></button>
       <button onclick="slideTo(2)" aria-label="Go to Slide 3: OEM Global Partner" class="hero-dot w-8 h-1.5 rounded-full bg-slate-400/50 hover:bg-brand-blue transition" data-dot="2"></button>
     </div>
   </div>
@@ -274,7 +227,7 @@
       <a href="about.html" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="Discover Hongrun 30-Year Medical Engineering Heritage"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">30+</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Years of Engineering</div></a>
       <a href="about.html#scale" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="View 65,000+ Clinics Worldwide Reach"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">65,000+</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Clinics Trusted</div></a>
       <a href="about.html#manufacturing" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="Explore 160K Unit Annual Smart Megafactory"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">160K</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Units / Year Capacity</div></a>
-      <a href="about.html#certifications" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="Inspect TÜV Verified ISO 8573-1 Class 0 Certification"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">CLASS 0</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">ISO 8573-1 Certified</div></a>
+      <a href="about.html#certifications" class="stat-cell block text-center px-4 py-3 cursor-pointer group" title="Inspect TÜV Rheinland total-oil Class 0 certificate scope for complete HW-200 through HW-3600 units"><div class="stat-num text-3xl font-extrabold text-white mb-1 tracking-tight group-hover:text-sky-300 transition">HW ONLY</div><div class="text-xs font-semibold uppercase tracking-widest text-sky-300">Total-Oil Class 0</div></a>
     </div>
   </div>
 </div>
@@ -292,7 +245,7 @@
     <i class="fa-solid fa-shield-virus text-brand-blue text-[11px]"></i> HVS Dental Suction
   </a>
   <a href="products-cleanair.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-300 shadow-xs hover:border-brand-blue hover:text-brand-blue shrink-0">
-    <i class="fa-solid fa-wind text-brand-blue text-[11px]"></i> Clean Air (-40°C)
+    <i class="fa-solid fa-wind text-brand-blue text-[11px]"></i> Clean Air (Model-Specific Dew Point)
   </a>
   <a href="solutions.html" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-300 shadow-xs hover:border-brand-blue hover:text-brand-blue shrink-0">
     <i class="fa-solid fa-calculator text-brand-blue text-[11px]"></i> Sizing Sizer
@@ -313,7 +266,7 @@
         <div class="p-6 pb-3 text-center">
           <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Oil-Free Compressors</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HY / HYT Series</h3>
-          <p class="text-slate-500 text-xs">1–10 chairs &middot; ≤60 dB &middot; Class 0</p>
+          <p class="text-slate-500 text-xs">1–10 chairs &middot; Oil-free piston &middot; Model-specific data</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
           <img src="assets/images/products/thumbs/HYT-500.webp" data-hd="assets/images/products/intl/HYT-500.webp" alt="HYT-500 Twin-Head Oil-Free Dental Compressor" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" fetchpriority="high" width="480" height="480" />
@@ -325,7 +278,7 @@
         <div class="p-6 pb-3 text-center">
           <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Electric Suction</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HVS Series</h3>
-          <p class="text-slate-500 text-xs">1–50 chairs &middot; ≤ 12–20 kPa &middot; HEPA</p>
+          <p class="text-slate-500 text-xs">Model-specific flow, vacuum, separation and aerosol control</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
           <img src="assets/images/products/thumbs/HVS-5-7-10.webp" data-hd="assets/images/products/intl/HVS-5-7-10.webp" alt="HVS Hospital-Grade Suction System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
@@ -337,7 +290,7 @@
         <div class="p-6 pb-3 text-center">
           <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Clean Air Source</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HYG / HVTG Series</h3>
-          <p class="text-slate-500 text-xs">Dew point ≤ -40&deg;C &middot; 0.01&mu;m</p>
+          <p class="text-slate-500 text-xs">Model-specific dew point, filtration and test conditions</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
           <img src="assets/images/products/thumbs/HVTG-900.webp" data-hd="assets/images/products/intl/HVTG-900.webp" alt="HVTG Medical Clean Air Source" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
@@ -361,7 +314,7 @@
         <div class="p-6 pb-3 text-center">
           <div class="inline-block bg-brand-blue/10 text-brand-blue text-[11px] font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Water Treatment</div>
           <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">Purified Water System</h3>
-          <p class="text-slate-500 text-xs">Ozone + UV &middot; Dental &middot; Sterile Supply</p>
+          <p class="text-slate-500 text-xs">RO/EDI &middot; Optional UV/Ozone &middot; Validated Water Quality</p>
         </div>
         <div class="p-5 pt-2 flex items-center justify-center h-56 overflow-hidden">
           <img src="assets/images/products/thumbs/product-water.webp" data-hd="assets/images/products/intl/product-water.webp" alt="Purified Water Treatment System" class="max-h-48 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="340" />
@@ -383,8 +336,8 @@
 
     <div class="text-center mt-16">
       <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Our Product Families</div>
-      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Six Systems. One Standard of Purity.</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto mb-8">From a single dental chair to a full hospital gas network — engineered around a single promise: air you can trust with life.</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Six Systems. Model-Specific Validation.</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto mb-8">From a single dental chair to a full hospital gas network — each air, suction and water configuration is documented and validated against its model records and project requirements.</p>
       <a href="products.html" class="bg-slate-900 hover:bg-brand-blue text-white px-10 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center gap-2">View Full Product Catalog <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
@@ -404,8 +357,8 @@
       <div class="bg-white p-10 rounded-sm border border-slate-200 hover:border-brand-blue transition relative overflow-hidden group">
         <div class="absolute top-0 right-0 p-8 opacity-5 text-brand-blue group-hover:scale-115 transition duration-500"><i class="fa-solid fa-droplet-slash text-9xl"></i></div>
         <div class="w-14 h-14 bg-gradient-to-br from-brand-blue to-brand-sky text-white rounded flex items-center justify-center text-2xl mb-6 shadow-md"><i class="fa-solid fa-award"></i></div>
-        <h3 class="text-2xl font-bold text-brand-dark mb-3 font-display tracking-tight">ISO 8573-1 Class 0 Air</h3>
-        <p class="text-slate-600 mb-6 leading-relaxed">The highest international purity standard for compressed air — oil, particles and moisture at near-zero. Certified by TÜV Rheinland for complete oil-free scroll compressor units (Cert: AK 50528335 0001).</p>
+        <h3 class="text-2xl font-bold text-brand-dark mb-3 font-display tracking-tight">Total-Oil Class 0 &middot; Complete HW Units</h3>
+        <p class="text-slate-600 mb-6 leading-relaxed">TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.</p>
         <a class="text-brand-blue font-bold hover:text-brand-sky transition flex items-center gap-2" href="about.html#certifications">Explore Technology <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -469,11 +422,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Medical air, dental suction, and pure water systems require model- and project-specific documentation.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -524,7 +477,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; CE MDR &middot; NMPA Class II Medical Qualification &middot; TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.</p>
     </div>
   </div>
 </footer>
@@ -577,7 +530,7 @@ document.addEventListener('keydown', (e) => {
       "url": "https://www.hongrun1995.cn/",
       "logo": "https://www.hongrun1995.cn/assets/images/logo_transparent.png",
       "foundingDate": "1995-11",
-      "description": "China's leading manufacturer of Class II medical oil-free air compressors, quiet scroll hospital gas systems, dental vacuum suction, and purified water treatment with ISO 8573-1 Class 0 certification.",
+      "description": "Manufacturer of Class II medical oil-free air compressors, scroll hospital gas systems, dental vacuum suction, and purified water treatment. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.",
       "sameAs": [
         "https://www.linkedin.com/company/125624035/",
         "https://www.facebook.com/profile.php?id=61595981005259",
@@ -612,7 +565,7 @@ document.addEventListener('keydown', (e) => {
         "addressCountry": "CN"
       },
       "knowsAbout": [
-        "ISO 8573-1 Class 0 Oil-Free Air",
+        "ISO 8573-1 total-oil Class 0 for complete HW-200 through HW-3600 oil-free scroll units only",
         "NMPA Class II Medical Gas Systems",
         "Dental High-Vacuum Suction & Cyclone Separation",
         "Hospital Central Gas Pipeline Engineering",
@@ -633,7 +586,7 @@ document.addEventListener('keydown', (e) => {
       "@id": "https://www.hongrun1995.cn/#product-hy",
       "name": "HY & HYT Series Medical Oil-Free Dental Air Compressors",
       "image": "https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.webp",
-      "description": "ISO 8573-1 Class 0 certified rocking piston oil-free air compressors for 1 to 10 dental chairs with Saint-Gobain PTFE seals, dual-pump redundancy, and ultra-quiet noise levels (≤52-60 dB).",
+      "description": "Oil-free rocking-piston air compressors with model-specific test documentation and project requirements for residual oil, particles and moisture. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Redundancy can reduce single-point failure risk; remaining capacity, receiver, controls and complete installation must be validated. Zero downtime is not guaranteed.",
       "brand": {
         "@type": "Brand",
         "name": "Hongrun Technology"
@@ -650,8 +603,8 @@ document.addEventListener('keydown', (e) => {
       "additionalProperty": [
         {
           "@type": "PropertyValue",
-          "name": "Air Purity Standard",
-          "value": "ISO 8573-1 Class 0 100% Oil-Free"
+          "name": "Air Quality Documentation",
+          "value": "Oil-free design; residual oil, particles and moisture are verified by model-specific test documents and project requirements. The TÜV certificate does not cover HY/HYT/HYTG or other non-HW families."
         },
         {
           "@type": "PropertyValue",
@@ -670,7 +623,7 @@ document.addEventListener('keydown', (e) => {
       "@id": "https://www.hongrun1995.cn/#product-hvs",
       "name": "HVS Series Dental High-Vacuum Electric Suction Systems",
       "image": "https://www.hongrun1995.cn/assets/images/products/hvs-family-portfolio.webp",
-      "description": "High-vacuum electric suction system with two-stage cyclone separation and ≥85% aerosol evacuation for 1 to 50 dental chairs, with rated vacuum ≤ 12–20 kPa (per manufacturer type manual).",
+      "description": "High-vacuum electric suction systems with model-specific flow, vacuum, noise, separation and aerosol-control documentation. Flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.",
       "brand": {
         "@type": "Brand",
         "name": "Hongrun Technology"
@@ -691,10 +644,10 @@ document.addEventListener('keydown', (e) => {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Are Hongrun medical air compressors certified 100% oil-free?",
+          "name": "Which Hongrun compressor families have TÜV ISO 8573-1 Class 0 certification?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. All Hongrun medical compressors hold ISO 8573-1 Class 0 zero-oil purity certification and China NMPA Class II medical device registration, delivering 100% oil-free air for dental chairs, clinical laboratories, and surgical suites."
+            "text": "Hongrun supplies oil-free compressor families and holds NMPA Class II medical device registration within the licensed scope. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control."
           }
         },
         {
@@ -702,7 +655,7 @@ document.addEventListener('keydown', (e) => {
           "name": "How to size oil-free air compressors and suction units for dental clinics?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For 1-3 chairs, the HY-100 or HY-200 series provides 100-200 L/min at 5 bar. For 4-8 chairs, the HYT-300 or HYT-500 dual-pump redundant system with simultaneous coefficient k=0.70 is recommended. For central suction, HVS-300 to HVS-1500 systems support 1 to 50 chairs."
+            "text": "Q = chairs × 50 L/min × 0.70 is a preliminary planning assumption; 0.70 is not an ISO/NFPA requirement. Confirm diversity, duty cycle, receiver capacity and exact model documentation before selection. HVS flow, vacuum, separation and aerosol control are model/configuration/installation-specific and require project validation; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee is made."
           }
         },
         {

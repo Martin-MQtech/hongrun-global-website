@@ -4,52 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <!-- Google tag (gtag.js) - Google Analytics 4 -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-    });
-  </script>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -120,27 +75,27 @@
     }
   </style>
 <script defer="" src="../../assets/js/mobile-nav.js"></script>
-<title>Inside the Machine: 3D CAD Deconstruction &amp; 1,420 RPM Kinematics of Medical Oil-Free Compressors | Hongrun Technology</title>
-<meta content="Interactive 3D mechanical breakdown: 17 core clinical components, 1,420 RPM wobble-piston kinematics, centrifugal cyclone moisture separation, and dual-tower PSA cryogenic drying." name="description"/>
+<title>3D Medical Compressor Simulator: CAD &amp; 1,420 RPM</title>
+<meta name="description" content="Interactive 3D breakdown of 17 clinical components, 1,420 RPM wobble-piston kinematics, cyclone moisture separation, and dual-tower PSA drying.">
 <link href="https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/" rel="canonical"/>
-<meta content="Inside the Machine: 3D CAD Deconstruction &amp; 1,420 RPM Kinematics of Medical Oil-Free Compressors" property="og:title"/>
-<meta content="Explore Hongrun's 3D CAD simulator deconstructing medical oil-free compressor kinematics and -40°C desiccant drying." property="og:description"/>
+<meta property="og:title" content="3D Medical Compressor Simulator: CAD &amp; 1,420 RPM">
+<meta property="og:description" content="Interactive 3D breakdown of 17 clinical components, 1,420 RPM wobble-piston kinematics, cyclone moisture separation, and dual-tower PSA drying.">
 <meta content="https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/card_cover.webp" property="og:image"/>
 <meta content="https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/" property="og:url"/>
 <meta content="article" property="og:type"/>
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Inside the Machine: 3D CAD Deconstruction &amp; 1,420 RPM Kinematics of Medical Oil-Free Compressors"/>
-<meta name="twitter:description" content="Explore Hongrun's 3D CAD simulator deconstructing medical oil-free compressor kinematics and -40°C desiccant drying."/>
+<meta name="twitter:title" content="3D Medical Compressor Simulator: CAD &amp; 1,420 RPM">
+<meta name="twitter:description" content="Interactive 3D breakdown of 17 clinical components, 1,420 RPM wobble-piston kinematics, cyclone moisture separation, and dual-tower PSA drying.">
 <meta name="twitter:image" content="https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/card_cover.webp"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
   "headline": "Inside the Machine: 3D CAD Deconstruction & 1,420 RPM Kinematics of Medical Oil-Free Compressors",
-  "description": "Explore Hongrun’s 3D CAD simulator deconstructing medical oil-free compressor kinematics and -40°C desiccant drying.",
+  "description": "Explore Hongrun’s 3D CAD simulator deconstructing medical oil-free compressor kinematics, moisture separation and configuration-specific desiccant drying.",
   "image": "https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/card_cover.webp",
   "datePublished": "2026-09-25T08:00:00+08:00",
-  "dateModified": "2026-11-07T12:00:00+08:00",
+  "dateModified": "2026-11-28T12:00:00+08:00",
   "author": {
     "@type": "Organization",
     "name": "Hongrun Technology Engineering Team",
@@ -189,8 +144,15 @@
 <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
 <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js"></script>
 <script defer="" src="/assets/js/webmcp-tools.js"></script>
+  <script src="/assets/js/cookie-consent.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 <!-- Global Navigation Bar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
@@ -270,7 +232,7 @@
 </div>
 </header>
 <!-- Main Article Section -->
-<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="main-content" tabindex="-1">
 <article class="bg-white rounded-2xl border border-slate-200 shadow-xl p-6 sm:p-10 lg:p-12 overflow-hidden">
 <!-- Video Showcase & Engineering Highlights (Muqi-style 2-Column Responsive Layout) -->
 <section class="mb-14 not-prose">
@@ -368,26 +330,26 @@
 </div>
 <h3 class="text-base font-bold text-slate-900 mb-1.5">Direct-Drive Flexible Guide Rod Architecture</h3>
 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
-              One-piece self-aligning connecting rod physically eliminates gudgeon pin play and piston slap, ensuring exceptional operational durability and whisper-quiet operatory stability.
+              One-piece self-aligning connecting rod physically eliminates gudgeon pin play and piston slap, with service life and installed acoustic performance confirmed for the selected model, load and site conditions.
             </p>
 </div>
 <!-- Card 2 -->
 <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200">
 <div class="flex items-center justify-between gap-3 mb-2">
-<div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">≤52 dB(A)</div>
+<div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">Model Data</div>
 <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200/60">
                 Dynamic Equilibrium
               </span>
 </div>
 <h3 class="text-base font-bold text-slate-900 mb-1.5">Dual Harmonic Balancing Counterweights</h3>
 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed m-0 p-0">
-              Opposed eccentric counterweights balance harmonic vibration vectors to ISO 1940 Grade G2.5 rotor standards, completely isolating mechanical vibration from sensitive clinical environments.
+              Opposed eccentric counterweights balance harmonic vibration vectors; the applicable balance grade, measured vibration and acoustic data are stated for the selected model and test conditions.
             </p>
 </div>
 <!-- Card 3 (With Distinctive Left Border Highlight Matching Reference) -->
 <div class="bg-slate-50/90 hover:bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm hover:shadow-md transition duration-200" style="border-left: 4px solid #0F4C81;">
 <div class="flex items-center justify-between gap-3 mb-2">
-<div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">-40°C PDP</div>
+<div class="text-2xl sm:text-3xl font-extrabold font-display text-[#0F4C81] tracking-tight">Model-Specific</div>
 <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">
                 Cryogenic Desiccant Drying
               </span>
@@ -428,17 +390,17 @@
           • Piston Radial Clearance: ≤ 0.008 mm with Self-Lubricating Saint-Gobain Rulon PTFE Seals
         </div>
 </div>
-<h2>3. The Dual Moisture Barrier: Centrifugal Cyclone Separation &amp; -40°C Desiccant Drying</h2>
+<h2>3. The Dual Moisture Barrier: Cyclone Separation &amp; Configuration-Specific Desiccant Drying</h2>
 <p>
         Pipeline moisture is the primary incubator for microbial biofilm and the leading cause of premature failure in high-speed dental handpiece ceramic bearings. In the simulator’s dynamic airflow window, compressed air travels through a two-stage thermodynamic extraction cycle:
       </p>
 <ul class="list-disc pl-6 text-slate-700 text-sm space-y-2 mb-6">
-<li><strong>Stage 1 (Centrifugal Cyclone Pre-Separation):</strong> High-velocity vortex spinning strips over 92% of bulk liquid water droplets and cooling aerosols prior to reaching the air receiver.</li>
-<li><strong>Stage 2 (Dual-Tower PSA Regenerative Drying):</strong> Twin adsorption towers packed with high-capacity 13X synthetic zeolite molecular sieves purge moisture down to a verified <strong>-40°C pressure dew point</strong> (ISO 8573-1 Class 2 water vapor limit).</li>
+<li><strong>Stage 1 (Centrifugal Cyclone Pre-Separation):</strong> A high-velocity vortex separates bulk liquid droplets before the receiver; actual separation performance is verified for the selected model and operating condition.</li>
+<li><strong>Stage 2 (Dual-Tower PSA Regenerative Drying):</strong> Twin adsorption towers use 13X synthetic zeolite molecular sieves. The achieved pressure dew point depends on inlet conditions, flow, dryer sizing and maintenance; the supplied configuration is validated against the project requirement.</li>
 </ul>
 <h2>4. Thirty Years of Dedicated Precision: Verified Production Architecture (1995–2025)</h2>
 <p>
-        Every single bolt, spring-loaded reed valve, and capacitor displayed in this 3D simulator mirrors Hongrun’s live manufacturing line in Zibo, Shandong. Backed by 30 years of continuous research, NMPA Class II medical licensure, and TÜV Rheinland ISO 8573-1 Class 0 validation, Hongrun delivers uncompromised pneumatic safety to dental practices, surgical suites, and scientific laboratories worldwide.
+        The 3D simulator illustrates model-specific components and kinematics from Hongrun’s manufacturing documentation. NMPA Class II licensing applies to registered products. TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001 documents total-oil Class 0 and &lt;0.003 mg/m³ only for complete HW-200 through HW-3600 scroll units; this simulator does not extend that certification to piston units or bare heads.
       </p>
 </div>
 <!-- =========================================================================
@@ -459,14 +421,14 @@
 </div>
 <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-sans tracking-tight leading-snug mb-3 [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
             撕开金属外壳：全透明 3D 模拟器拆解 1,420 RPM 摆动活塞与物理极限<br class="hidden sm:inline"/>
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">（为什么一张交互蓝图胜过十次物理拆机？17个精密子部件与 -40°C 深度脱水数字孪生）</span>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-teal-200 to-amber-200">（为什么一张交互蓝图胜过十次物理拆机？17个精密子部件与按配置验证的脱水数字孪生）</span>
 </h2>
 <div class="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-3 border-t border-white/15">
 <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-pen text-sky-400"></i> 发布人：Martin · 宏润科技 (Hongrun Technology)</span>
 <span class="text-slate-500">•</span>
 <span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月25日</span>
 <span class="text-slate-500">•</span>
-<span><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 · NMPA 二类医疗器械资质</span>
+<span><i class="fa-solid fa-certificate text-teal-400"></i> HW-200–HW-3600 总含油 Class 0 · NMPA 二类医疗器械资质</span>
 </div>
 </div>
 </div>
@@ -495,14 +457,14 @@
 <!-- Section 03 -->
 <div class="cn-section-header not-prose">
 <span class="cn-section-badge">03</span>
-<h3 class="cn-section-title">双重阻水防线：旋流离心初级析水与 -40°C 深度吸附除水机制</h3>
+<h3 class="cn-section-title">双重阻水防线：旋流初级析水与按配置验证的吸附除湿机制</h3>
 </div>
 <p>
         压缩气体中的冷凝液是细菌生物膜滋生与昂贵牙科手机轴承结垢卡死的头号元凶。在 3D 气路动态追踪视窗中，气流经历两道重磅阻水关卡：
       </p>
 <ul class="list-disc pl-6 space-y-2 mb-6">
-<li><strong>第一道防线（高效旋风分离器）：</strong> 压缩气体以切线方向高速切入旋风腔体，在离心力作用下析出 92% 以上的大颗粒液态冷凝水；</li>
-<li><strong>第二道防线（双塔自再生吸附干燥器）：</strong> 气流进入充填高性能合成沸石分子筛的吸附塔，深度剥离气相水分，将压力露点深度拉低至 <strong>-40°C</strong>（符合 ISO 8573-1 Class 2 湿度标准）。</li>
+<li><strong>第一道防线（旋风分离器）：</strong> 压缩气体以切线方向高速进入旋风腔体，在离心力作用下分离大颗粒液态冷凝水；实际效果按型号与工况验证。</li>
+<li><strong>第二道防线（双塔自再生吸附干燥器）：</strong> 气流进入装填 13X 合成沸石分子筛的吸附塔。实际压力露点取决于进气条件、流量、干燥器选型与维护，应按项目要求对整套配置进行验证。</li>
 </ul>
 <!-- Section 04 -->
 <div class="cn-section-header not-prose">
@@ -510,7 +472,7 @@
 <h3 class="cn-section-title">三十载专精智造：从 CAD 原厂蓝图到临床级生命气源 (1995–2025)</h3>
 </div>
 <p>
-        3D 模拟器中所展示的每一颗螺栓与气阀，均凝聚着山东宏润空压机科技自 1995 年以来整整三十年的专精智造积淀。持有二类医疗器械注册备案与 TÜV Rheinland ISO 8573-1 Class 0 零级无油认证，宏润科技始终为全球口腔医学界与医疗综合体守护这口纯净气源。
+        3D 模拟器中所展示的每一颗螺栓与气阀，均凝聚着山东宏润空压机科技自 1995 年以来整整三十年的专精智造积淀。NMPA 二类医疗器械资质仅适用于注册范围内产品；TÜV Rheinland 证书 AK 50528335 0001、报告 CN21HFR2 001 所记录的总含油 Class 0 与 &lt;0.003 mg/m³，仅适用于完整的 HW-200 至 HW-3600 涡旋机组，不能扩展到活塞机组或裸机头。
       </p>
 </div>
 <!-- =========================================================================
@@ -654,11 +616,11 @@
 <div class="grid md:grid-cols-4 gap-10 mb-12">
 <!-- Col 1 & 2: Brand & Positioning -->
 <div class="md:col-span-2">
-<div class="flex items-end gap-5 mb-4">
+<div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
 <img alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" height="139" loading="lazy" src="../../assets/images/logo_transparent.webp" width="640"/>
 <img alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" height="61" loading="lazy" src="../../assets/images/banners/logo_cn_orange.webp" width="200"/>
 </div>
-<p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+<p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV ISO 8573-1 Class 0 certified for complete HW-200–HW-3600 scroll units. Medical air, dental suction, and pure water systems.</p>
 <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
 <p><i aria-hidden="true" class="fa-solid fa-location-dot text-brand-blue mr-1.5"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
 <p><i aria-hidden="true" class="fa-solid fa-phone text-brand-blue mr-1.5"></i> Hotline / WhatsApp: <a class="hover:text-white transition" href="https://wa.me/8613964416725">+86-13964416725</a> · Tel: +86-533-3580000</p>
@@ -709,7 +671,7 @@
 <a class="hover:text-slate-300 transition" href="../../warranty-policy.html">Warranty &amp; Terms</a>
 </div>
 <div class="flex items-center space-x-6 text-slate-400">
-<span class="flex items-center gap-1.5"><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 Certified</span>
+<span class="flex items-center gap-1.5"><i class="fa-solid fa-certificate text-teal-400"></i> Model-Specific Air Documentation</span>
 <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-sky-400"></i> NMPA Class II Medical</span>
 <span class="flex items-center gap-1.5"><i class="fa-solid fa-award text-amber-400"></i> CE MDR Ready</span>
 </div>

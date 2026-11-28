@@ -3,79 +3,29 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Hospital-Grade Compressors | Class II Medical | Hongrun Technology</title>
+<title>Hospital-Grade Medical Compressors | Hongrun</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="HW & HBG medical oil-free scroll air compressor stations for hospital central gas supply. NMPA Class II licensed, 100% continuous duty, multi-redundant controller.">
+  <meta name="description" content="HW and HBG hospital air configurations. Verify model registration, duty, noise and redundancy; TÜV total-oil Class 0 covers complete HW-200–HW-3600 only.">
   <meta name="keywords" content="hospital air compressor, medical scroll compressor, central medical gas station, HW-200, HBG-400, NMPA Class II medical compressor">
   <link rel="canonical" href="https://www.hongrun1995.cn/products-hospital.html">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Hospital-Grade Compressors | Class II Medical | Hongrun Technology">
-  <meta property="og:description" content="HW & HBG medical oil-free scroll air compressor stations for hospital central gas supply. NMPA Class II licensed, 100% continuous duty, multi-redundant controller.">
+  <meta property="og:title" content="Hospital-Grade Medical Compressors | Hongrun">
+  <meta property="og:description" content="HW and HBG hospital air configurations. Verify model registration, duty, noise and redundancy; TÜV total-oil Class 0 covers complete HW-200–HW-3600 only.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/intl/HW-600.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/products-hospital.html">
   <meta property="og:type" content="product">
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Hospital-Grade Compressors | Class II Medical | Hongrun Technology">
-  <meta name="twitter:description" content="HW & HBG medical oil-free scroll air compressor stations for hospital central gas supply. NMPA Class II licensed, 100% continuous duty, multi-redundant controller.">
+  <meta name="twitter:title" content="Hospital-Grade Medical Compressors | Hongrun">
+  <meta name="twitter:description" content="HW and HBG hospital air configurations. Verify model registration, duty, noise and redundancy; TÜV total-oil Class 0 covers complete HW-200–HW-3600 only.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/products/intl/HW-600.jpg"><link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/><link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
@@ -112,9 +62,9 @@
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "HW & HBG Series Silent Medical Scroll Air Compressor Stations",
+  "name": "HW & HBG Medical Air Compressor Configurations",
   "image": "https://www.hongrun1995.cn/assets/images/products/HW-1200.webp",
-  "description": "Continuous-duty medical scroll air compressor system with China NMPA Class II medical certification, ultra-silent vibration damping, dew point monitoring, and multi-unit intelligent PLC sequencing.",
+  "description": "Medical air compressor configurations with model-specific duty, noise, pressure dew point and PLC sequencing. Medical registration and air-quality claims require exact complete-unit documentation; redundancy does not guarantee zero downtime.",
   "brand": {
     "@type": "Brand",
     "name": "Hongrun Technology"
@@ -124,7 +74,7 @@
     "name": "Hongrun Compressor Technology Co., Ltd."
   },
   "category": "Medical Devices > Hospital Gas Systems > Medical Air Compressors",
-  "model": "HW-200 / HW-600 / HW-1200 / HBG-3600",
+  "model": "Exact model and configuration confirmed by project documentation",
   "potentialAction": {
     "@type": "Action",
     "name": "Request a B2B Quotation",
@@ -134,17 +84,17 @@
     {
       "@type": "PropertyValue",
       "name": "Air Purity Standard",
-      "value": "ISO 8573-1:2010 Class 0 100% Oil-Free — TÜV Rheinland certified complete units HW-200 to HW-3600 (Cert: AK 50528335 0001)"
+      "value": "TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control."
     },
     {
       "@type": "PropertyValue",
       "name": "Medical Device Class",
-      "value": "NMPA Class II Registered"
+      "value": "Verify exact-model NMPA registration and supplied configuration"
     },
     {
       "@type": "PropertyValue",
       "name": "Operation Mode",
-      "value": "100% Continuous Duty Cycle"
+      "value": "Verify exact-model duty rating; remaining capacity and complete installation must be validated for redundant operation"
     }
   ]
 }
@@ -159,7 +109,7 @@
       "name": "What regulatory standards apply to hospital central medical air compressor stations?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hospital central medical air systems must comply with ISO 7396-1 (Medical gas pipeline systems), UK NHS HTM 02-01, US NFPA 99, and China GB 50751. Hongrun HBG and HW series are licensed under China NMPA Class II Medical Device Registration (鲁械注准), ISO 13485:2016 Medical Device Quality Management System, and ISO 9001:2015 for critical hospital gas pipelines."
+        "text": "Applicable requirements depend on jurisdiction and project, including ISO 7396-1, UK NHS HTM 02-01, US NFPA 99 and China GB 50751 where specified. Verify the exact supplied model's NMPA registration scope and the applicable quality-system certificates; a component or compressor alone does not establish compliance of the complete medical gas pipeline."
       }
     },
     {
@@ -167,15 +117,15 @@
       "name": "What is the difference between medical scroll (HW) and multi-piston (HBG) hospital stations?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "HW scroll series compressors deliver 100% continuous duty cycle with minimal vibration and near-silent operation (≤59-69 dB(A)), ideal for indoor plant rooms near operating theaters. HBG multi-4V piston stations utilize high-capacity modular piston assemblies (up to 9,000 L/min displacement) with individual cylinder shutoff for large-scale general hospital wards and regional medical centers."
+        "text": "HW uses scroll elements while HBG configurations use piston assemblies. Exact architecture, capacity, power, pressure, noise, controls, duty and medical registration scope must be verified in the supplied model documentation and project design. Published HBG/HWG and HW figures conflict across pages and must not be used as selection data without verification."
       }
     },
     {
       "@type": "Question",
-      "name": "How does Hongrun ensure a -40°C pressure dew point in hospital pipelines?",
+      "name": "How is pressure dew point validated for a hospital air project?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every Hongrun hospital medical air station incorporates dual heatless desiccant drying towers filled with 13X synthetic molecular sieves operating in automated alternating adsorption and regeneration cycles. This guarantees a stable -40°C pressure dew point (ISO 8573-1 Class 2 water vapor), preventing pipeline condensation and bacterial biofilm propagation."
+        "text": "A project may specify -40°C as a pressure dew point target. Actual performance depends on exact model, configuration, inlet conditions, flow, dryer selection and maintenance and must be validated for the installation. Drying reduces condensation risk but does not by itself establish microbial control."
       }
     },
     {
@@ -183,7 +133,7 @@
       "name": "How does PLC sequencing maintain N+1 redundancy in hospital medical gas delivery?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hongrun medical air stations utilize Siemens or Schneider PLC intelligent controllers that monitor real-time system pressure and run-time hours. If the primary compressor unit flags a maintenance alert, standby units engage within milliseconds. The system balances running hours across all compressor heads to ensure equal duty cycles and zero downtime."
+        "text": "Configured hospital stations use PLC controllers to sequence compressors, monitor pressure and balance run time. N+1 or N+2 arrangements can improve availability only when remaining capacity, receiver storage, switching sequence and complete installation are validated against clinical demand; zero downtime is not guaranteed."
       }
     }
   ]
@@ -216,8 +166,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -266,7 +220,7 @@
             <a href="/products-hy.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HY Dental Compressors (1–10 Chairs)</a>
             <a href="/products-hospital.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HW Hospital Scroll Systems</a>
             <a href="/products-hvs.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HVS Dental Suction Plants</a>
-            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (Model-Specific Dew Point)</a>
             <a href="/products-water.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HRC Pure Water &amp; Disinfection</a>
             <a href="/products-core.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">Core Pump Heads &amp; Spares</a>
           </div>
@@ -305,7 +259,7 @@
 
 
 <!-- ===================== PAGE HERO (Optimized Dual-Column Layout: Full Machine View & Visible Top Logo) ===================== -->
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="relative pt-20 overflow-hidden bg-slate-950 text-white border-b border-slate-800">
   <!-- Dynamic Ambient Glows -->
   <div class="absolute top-10 left-1/4 w-96 h-96 bg-brand-blue/20 rounded-full blur-3xl pointer-events-none"></div>
@@ -327,7 +281,7 @@
 
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sky/15 border border-brand-sky/35 text-brand-sky text-xs font-bold uppercase tracking-widest backdrop-blur-md">
           <span class="w-2 h-2 rounded-full bg-brand-sky animate-ping"></span>
-          NMPA Class II Medical Device Licensed · Hospital Central Gas
+          Model-Specific Medical Registration · Hospital Projects
         </div>
 
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight font-display tracking-tight">
@@ -336,22 +290,22 @@
         </h1>
 
         <p class="text-sm lg:text-base text-slate-300 font-light leading-relaxed max-w-xl">
-          Central compressed air engineered for hospital surgical suites, ICUs, and multi-chair stomatology centers — carrying official NMPA Class II Medical Registration, oil-free scroll / redundant piston elements, and central IoT telemetry that keeps every department supplied 24/7.
+          Central compressed air configurations for surgical suites, ICUs and stomatology projects. Verify exact-model medical registration, air-quality documents, duty ratings, controls and complete installation. Redundancy can reduce single-point failure risk; zero downtime is not guaranteed.
         </p>
 
         <!-- Feature Badges Matrix -->
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
           <div class="p-3 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md">
             <span class="text-[11px] text-slate-400 block font-medium">Medical Credential</span>
-            <span class="text-sm font-bold text-white font-display">NMPA Class II License</span>
+            <span class="text-sm font-bold text-white font-display">Verify Model Registration</span>
           </div>
           <div class="p-3 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md">
             <span class="text-[11px] text-slate-400 block font-medium">System Architecture</span>
-            <span class="text-sm font-bold text-brand-sky font-display">Scroll &amp; Redundant Piston</span>
+            <span class="text-sm font-bold text-brand-sky font-display">Model-Specific Architecture</span>
           </div>
           <div class="p-3 rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-md col-span-2 sm:col-span-1">
             <span class="text-[11px] text-slate-400 block font-medium">Duty Cycle</span>
-            <span class="text-sm font-bold text-teal-300 font-display">100% Zero-Downtime ICU</span>
+            <span class="text-sm font-bold text-teal-300 font-display">Validated Redundancy</span>
           </div>
         </div>
 
@@ -381,7 +335,7 @@
             </div>
             <div class="flex items-center justify-between text-xs px-1">
               <span class="font-bold text-white font-display tracking-wide">HW / HBG Central Station</span>
-              <span class="text-[11px] text-brand-sky font-semibold bg-brand-sky/10 border border-brand-sky/30 px-2 py-0.5 rounded-full">Class II Medical Certified</span>
+              <span class="text-[11px] text-brand-sky font-semibold bg-brand-sky/10 border border-brand-sky/30 px-2 py-0.5 rounded-full">Verify Registration Scope</span>
             </div>
           </div>
         </div>
@@ -395,19 +349,19 @@
 <section id="hbg-section" class="py-16 bg-brand-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-6">
-      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Medical Device Certified</div>
-      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HBG Series — Class II Medical Certified</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Central air systems registered as medical devices — the reference standard for hospital dental departments, operating suites and ICU gas distribution.</p>
+      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Model-Specific Documentation</div>
+      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HBG Series — Model-Specific Medical Registration</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Hospital air configurations require verification of exact-model medical registration, project design codes and complete-installation documentation.</p>
     </div>
 
     <div class="flex items-start gap-4 bg-brand-blue/10 border border-brand-blue/30 rounded-sm p-5 mb-12 max-w-4xl mx-auto">
       <i class="fa-solid fa-certificate text-brand-blue text-3xl mt-1"></i>
       <div>
-        <h4 class="font-bold text-brand-dark font-display uppercase text-sm">NMPA Class II Medical Device License</h4>
-        <p class="text-slate-600 text-sm mt-1 leading-relaxed">A rare qualification for life-support gas systems. HBG units are registered medical devices — not adapted industrial compressors — giving hospital engineering departments the compliance documentation their projects require.</p>
+        <h3 class="font-bold text-brand-dark font-display uppercase text-sm">Verify Exact-Model Medical Registration</h3>
+        <p class="text-slate-600 text-sm mt-1 leading-relaxed">Request the exact supplied model's NMPA registration and approved configuration. Registration of a component or bare assembly does not establish compliance of the complete hospital gas system.</p>
         <div class="mt-3 pt-3 border-t border-brand-blue/20 flex flex-wrap gap-2 text-xs">
           <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
-            <i class="fa-solid fa-file-shield text-teal-600"></i> Whitepaper #07: ISO 8573-1 Class 0 Medical Air Architecture &rarr;
+            <i class="fa-solid fa-file-shield text-teal-600"></i> Engineering Guide: Dental Air Purity &rarr;
           </a>
           <span class="text-slate-400">&middot;</span>
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
@@ -420,21 +374,12 @@
     <!-- HBG-400 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HBG-400.webp" src="assets/images/products/thumbs/HBG-400.webp" alt="HBG-400 Class II medical central air compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
+        <img data-zoom data-hd="assets/images/products/intl/HBG-400.webp" src="assets/images/products/thumbs/HBG-400.webp" alt="HBG-400 medical air compressor configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-400</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 6–10 chairs · NMPA Class II Medical Certified</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motor</span><strong class="text-brand-dark text-xs sm:text-sm">3.0 kW (4V×1)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">500 L/min</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">100 L</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Outlet</span><strong class="text-brand-dark text-xs sm:text-sm">Φ8 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1030 × 470 × 840</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">100 kg · 380V</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Hospital configuration · verify exact-model documentation</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for power, FAD, pressure, receiver, speed, outlet, dimensions, weight, voltage, registration and test conditions. Published HBG figures conflict with the product hub.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -442,21 +387,12 @@
     <!-- HBG-800 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HBG-800.webp" src="assets/images/products/thumbs/HBG-800.webp" alt="HBG-800 Class II medical central air compressor" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
+        <img data-zoom data-hd="assets/images/products/intl/HBG-800.webp" src="assets/images/products/thumbs/HBG-800.webp" alt="HBG-800 medical air compressor configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-800</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 10–16 chairs · Dual 4V Redundant Groups</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">6.0 kW (4V×2)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">1000 L/min</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">150 L</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Outlet</span><strong class="text-brand-dark text-xs sm:text-sm">Φ10 mm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1300 × 550 × 870</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">150 kg · 380V</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Multi-group configuration · validate degraded capacity and controls</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for power, FAD, pressure, receiver, speed, outlet, dimensions, weight, voltage, registration and test conditions. Validate remaining capacity, controls and complete installation for redundant operation; zero downtime is not guaranteed.</div>
         <div class="mt-3 pt-3 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2">
           <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="inline-flex items-center gap-1.5 text-xs font-bold text-sky-700 hover:text-brand-blue transition bg-sky-50 px-2.5 py-1 rounded border border-sky-200">
             <i class="fa-solid fa-hospital-user"></i> Hospital Central Gas Whitepaper #04 &rarr;
@@ -469,21 +405,12 @@
     <!-- HBG-1200 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HBG-1200.webp" src="assets/images/products/thumbs/HBG-1200.webp" alt="HBG-1200 flagship Class II medical central air system" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
+        <img data-zoom data-hd="assets/images/products/intl/HBG-1200.webp" src="assets/images/products/thumbs/HBG-1200.webp" alt="HBG-1200 medical air compressor configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="480" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HBG-1200</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 16–25 chairs · Triple 4V Hospital Station</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Power / Motors</span><strong class="text-brand-dark text-xs sm:text-sm">9.0 kW (4V×3)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">1500 L/min</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Max Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa / 116 Psi</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">300 L (400L opt)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Outlet</span><strong class="text-brand-dark text-xs sm:text-sm">1" (DN25)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">5000 × 900 × 2000</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">400 kg · 380V</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Hospital project configuration · verify exact supplied architecture</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for power, FAD, pressure, receiver, speed, outlet, dimensions, weight, voltage, registration and test conditions. Published HBG figures conflict with the product hub.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -494,29 +421,20 @@
 <section class="py-16 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12">
-      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Silent Scroll Technology</div>
-      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HW Series — Silent Scroll Base Units</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Scroll-element base units with class-leading efficiency and whisper-quiet operation. The workhorses behind multi-department hospital air networks.</p>
+      <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Oil-Free Scroll Design</div>
+      <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HW Series — Oil-Free Scroll Configurations</h2>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Scroll-element configurations for hospital air projects. Verify exact-model capacity, power, noise, duty, registration and complete-installation requirements. Published HW figures conflict across cards and tables.</p>
     </div>
 
     <!-- HW-600 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HW-600.webp" src="assets/images/products/thumbs/HW-600.webp" alt="HW-600 silent scroll base unit for 10-13 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
+        <img data-zoom data-hd="assets/images/products/intl/HW-600.webp" src="assets/images/products/thumbs/HW-600.webp" alt="HW-600 oil-free scroll air configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HW-600</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 10–13 chairs · Silent Scroll Element</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">5.5 kW (Scroll)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">600 L/min</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Working Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa (8.0 bar)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤60 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Outlet</span><strong class="text-brand-dark text-xs sm:text-sm">G 1/2" (DN15)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">750 × 650 × 1100</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">130 kg · 380V</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Scroll configuration · verify exact-model documentation</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for power, FAD, pressure, noise, speed, outlet, dimensions, weight, voltage, registration and test conditions. Published HW-600 noise and dimensions conflict with the range table.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -524,21 +442,12 @@
     <!-- HW-1200 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HW-1200.webp" src="assets/images/products/intl/HW-1200.webp" alt="HW-1200 silent scroll base unit for 20-25 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1000" height="1000" />
+        <img data-zoom data-hd="assets/images/products/intl/HW-1200.webp" src="assets/images/products/intl/HW-1200.webp" alt="HW-1200 oil-free scroll air configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1000" height="1000" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HW-1200</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 20–25 chairs · Twin Silent Scroll Elements</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">11.0 kW (Scroll×2)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">1200 L/min</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Working Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa (8.0 bar)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤62 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Outlet</span><strong class="text-brand-dark text-xs sm:text-sm">G 3/4" (DN20)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1200 × 850 × 1400</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">260 kg · 380V</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Multi-scroll configuration · verify exact supplied architecture</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for power, FAD, pressure, noise, speed, outlet, dimensions, weight, voltage, registration and test conditions. Published HW-1200 noise and dimensions conflict with the range table.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -546,21 +455,12 @@
     <!-- HW-3600 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/intl/HW-3600.webp" src="assets/images/products/thumbs/HW-3600.webp" alt="HW-3600 flagship silent scroll base unit for 60-80 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
+        <img data-zoom data-hd="assets/images/products/intl/HW-3600.webp" src="assets/images/products/thumbs/HW-3600.webp" alt="HW-3600 oil-free scroll air configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="480" height="384" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HW-3600</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 60–80 chairs · Multi-Scroll Hospital Flagship</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">33.0 kW (Scroll×6)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">3600 L/min</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Working Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa (8.0 bar)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤68 dB(A)</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rotation Speed</span><strong class="text-brand-dark text-xs sm:text-sm">1450 rpm</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Outlet</span><strong class="text-brand-dark text-xs sm:text-sm">DN40 Flange</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">2200 × 1100 × 1750</strong></div>
-          <div class="bg-white rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">680 kg · 380V</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Hospital project configuration · verify capacity and redundancy</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for power, FAD, pressure, noise, speed, outlet, dimensions, weight, voltage, registration and test conditions. Published HW-3600 noise and dimensions conflict with the range table.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -573,28 +473,19 @@
     <div class="text-center mb-12">
       <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Tank-Mounted Scroll</div>
       <h2 class="text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight uppercase">HWG Series — Tank Scroll Systems</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Scroll technology married to an integral storage tank — a self-contained air plant for wings, departments and satellite clinics that cannot spare a machine room.</p>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Tank-mounted configurations may suit departments or satellite plants. Verify installation space, receiver, ventilation, drainage, noise, electrical supply and exact-model documentation.</p>
     </div>
 
     <!-- [IMG-TODO] HWG-200 借用的国内版图(国际站暂无此型号图) -->
     <!-- HWG-200 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/hd/HWG-200.webp" src="assets/images/products/hd/HWG-200.webp" alt="HWG-200 tank mounted scroll air system for 4-6 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="1534" />
+        <img data-zoom data-hd="assets/images/products/hd/HWG-200.webp" src="assets/images/products/hd/HWG-200.webp" alt="HWG-200 tank-mounted scroll air configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="1534" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-200</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 4–6 chairs · Integral Storage Tank</div>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs mb-4">
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Rated Power</span><strong class="text-brand-dark text-xs sm:text-sm">2.2 kW</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Flow Rate</span><strong class="text-brand-dark text-xs sm:text-sm">240 L/min</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Working Pressure</span><strong class="text-brand-dark text-xs sm:text-sm">0.8 MPa (8.0 bar)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Tank Capacity</span><strong class="text-brand-dark text-xs sm:text-sm">100 L</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Noise Level</span><strong class="text-brand-dark text-xs sm:text-sm">≤58 dB(A)</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Air Outlet</span><strong class="text-brand-dark text-xs sm:text-sm">Φ8 mm</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Dimensions (mm)</span><strong class="text-brand-dark text-xs sm:text-sm">1050 × 500 × 910</strong></div>
-          <div class="bg-brand-light rounded p-2.5"><span class="block text-slate-500 text-[11px] uppercase font-semibold">Weight &amp; Voltage</span><strong class="text-brand-dark text-xs sm:text-sm">110 kg · 220V/380V</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Tank-mounted configuration · verify exact-model documentation</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for power, FAD, pressure, receiver, noise, outlet, dimensions, weight, voltage and test conditions. Published HWG power and flow figures conflict with the product hub.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -603,17 +494,12 @@
     <!-- HWG-400 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center mb-8">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/hd/HWG-400.webp" src="assets/images/products/hd/HWG-400.webp" alt="HWG-400 tank mounted scroll air system for 8-10 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="1534" />
+        <img data-zoom data-hd="assets/images/products/hd/HWG-400.webp" src="assets/images/products/hd/HWG-400.webp" alt="HWG-400 tank-mounted scroll air configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="1534" />
       </div>
       <div class="bg-brand-light p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-400</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 8–10 chairs · Integral storage tank</div>
-        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
-          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>400 L/min</strong></div>
-          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>4.0 kW</strong></div>
-          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤62 dB</strong></div>
-          <div class="bg-white rounded p-3"><span class="block text-slate-500 text-xs uppercase">Start-Stop</span><strong>Automatic</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Tank-mounted configuration · verify exact-model documentation</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for flow, power, pressure, receiver, noise, control logic and test conditions. Published HWG power and flow figures conflict with the product hub.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -622,17 +508,12 @@
     <!-- HWG-600 -->
     <div class="grid lg:grid-cols-2 gap-6 items-center">
       <div class="bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden group flex items-center justify-center p-6 h-72">
-        <img data-zoom data-hd="assets/images/products/hd/HWG-600.webp" src="assets/images/products/hd/HWG-600.webp" alt="HWG-600 tank mounted scroll air system for 12-16 chairs" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="1534" />
+        <img data-zoom data-hd="assets/images/products/hd/HWG-600.webp" src="assets/images/products/hd/HWG-600.webp" alt="HWG-600 tank-mounted scroll air configuration" class="max-h-56 w-auto object-contain mix-blend-multiply group-hover:scale-115 transition-transform duration-500" decoding="async" loading="lazy" width="1920" height="1534" />
       </div>
       <div class="bg-white p-8 rounded-sm border border-slate-200">
         <h3 class="text-xl font-extrabold text-brand-dark font-display tracking-tight mb-1">HWG-600</h3>
-        <div class="text-brand-sky text-sm font-semibold mb-3">For 12–16 chairs · Integral storage tank</div>
-        <div class="grid grid-cols-2 gap-3 text-sm mb-4">
-          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Flow</span><strong>600 L/min</strong></div>
-          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Power</span><strong>5.5 kW</strong></div>
-          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Noise</span><strong>≤62 dB</strong></div>
-          <div class="bg-brand-light rounded p-3"><span class="block text-slate-500 text-xs uppercase">Start-Stop</span><strong>Automatic</strong></div>
-        </div>
+        <div class="text-brand-sky text-sm font-semibold mb-3">Tank-mounted configuration · verify exact-model documentation</div>
+        <div class="text-xs text-slate-600 mb-4">Verify exact model documentation for flow, power, pressure, receiver, noise, control logic and test conditions. Published HWG power and flow figures conflict with the product hub.</div>
         <a href="contact.html" class="inline-flex items-center gap-2 text-brand-blue font-bold hover:text-brand-sky transition text-sm">Inquire <i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
@@ -645,23 +526,23 @@
     <div class="text-center mb-12">
       <div class="inline-block bg-white/10 border border-white/30 text-white text-xs font-bold px-3 py-1 rounded-full mb-5 uppercase tracking-widest">Turnkey Medical Gas Engineering</div>
       <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-3 font-display tracking-tight uppercase">Two Supplies, One Suction</h2>
-      <p class="text-blue-100 max-w-3xl mx-auto">A hospital breathing system is three networks engineered as one. Hongrun designs, supplies and commissions all of them — so air, oxygen and vacuum arrive at the bedhead from a single accountable partner.</p>
+      <p class="text-blue-100 max-w-3xl mx-auto">Hospital air, oxygen and vacuum are separate networks requiring coordinated project engineering, applicable approvals and commissioning. Supplied scope and interface responsibilities are defined by the project contract.</p>
     </div>
     <div class="grid md:grid-cols-3 gap-6 mb-12">
       <div class="p-8 bg-white/10 border border-white/20 rounded-sm backdrop-blur">
         <i class="fa-solid fa-wind text-sky-300 text-3xl mb-4"></i>
         <h3 class="text-white font-display font-bold uppercase mb-3">Central Air Supply</h3>
-        <p class="text-blue-100 text-sm leading-relaxed">HBG / HW / HWG scroll plants with Class 0 oil-free output — complete units TÜV Rheinland certified (ISO 8573-1, Cert: AK 50528335 0001) — plus desiccant drying and redundant duty/standby configuration for uninterrupted instrument air.</p>
+        <p class="text-blue-100 text-sm leading-relaxed">HBG / HW / HWG central air plants require exact-model and project documentation. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.</p>
       </div>
       <div class="p-8 bg-white/10 border border-white/20 rounded-sm backdrop-blur">
         <i class="fa-solid fa-circle-dot text-sky-300 text-3xl mb-4"></i>
         <h3 class="text-white font-display font-bold uppercase mb-3">Central Oxygen</h3>
-        <p class="text-blue-100 text-sm leading-relaxed">Medical oxygen manifolds, terminal units and pipeline distribution engineered to national medical gas standards — sized to your bed count and critical care profile.</p>
+        <p class="text-blue-100 text-sm leading-relaxed">Medical oxygen manifolds, terminal units and distribution require project-specific sizing, applicable jurisdictional standards, approved components and installation validation.</p>
       </div>
       <div class="p-8 bg-white/10 border border-white/20 rounded-sm backdrop-blur">
         <i class="fa-solid fa-syringe text-sky-300 text-3xl mb-4"></i>
         <h3 class="text-white font-display font-bold uppercase mb-3">Vacuum Negative Pressure</h3>
-        <p class="text-blue-100 text-sm leading-relaxed">Central suction plants with bacterial filtration and compliant negative-pressure control — protecting patients, staff and isolation rooms alike.</p>
+        <p class="text-blue-100 text-sm leading-relaxed">Central suction flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.</p>
       </div>
     </div>
     <div class="flex flex-wrap justify-center gap-3">
@@ -676,28 +557,28 @@
         <i class="fa-solid fa-shield-halved text-sky-300 text-xl mt-0.5"></i>
         <div>
           <h4 class="text-white font-display font-semibold uppercase text-sm">Single-Point Responsibility</h4>
-          <p class="text-blue-100 text-sm mt-1">One engineering contract for air, oxygen and vacuum — no interface disputes between separate subcontractors.</p>
+          <p class="text-blue-100 text-sm mt-1">A coordinated engineering scope can define air, oxygen and vacuum interfaces, deliverables and validation responsibilities.</p>
         </div>
       </div>
       <div class="flex items-start gap-3 bg-white/10 border border-white/20 rounded-sm p-4">
         <i class="fa-solid fa-gauge-high text-sky-300 text-xl mt-0.5"></i>
         <div>
           <h4 class="text-white font-display font-semibold uppercase text-sm">Central Monitoring</h4>
-          <p class="text-blue-100 text-sm mt-1">One control panel supervises all three networks with pressure, alarm and duty-cycling status at a glance.</p>
+          <p class="text-blue-100 text-sm mt-1">Control architecture, pressure monitoring, alarms and duty sequencing are specified and validated for the complete project.</p>
         </div>
       </div>
       <div class="flex items-start gap-3 bg-white/10 border border-white/20 rounded-sm p-4">
         <i class="fa-solid fa-boxes-stacked text-sky-300 text-xl mt-0.5"></i>
         <div>
           <h4 class="text-white font-display font-semibold uppercase text-sm">Redundancy Built In</h4>
-          <p class="text-blue-100 text-sm mt-1">Duty/standby compressor pairs and vacuum pump pairs keep critical supplies online during maintenance.</p>
+          <p class="text-blue-100 text-sm mt-1">Redundancy can reduce single-point failure risk; remaining capacity, receiver, controls and complete installation must be validated. Zero downtime is not guaranteed.</p>
         </div>
       </div>
       <div class="flex items-start gap-3 bg-white/10 border border-white/20 rounded-sm p-4">
         <i class="fa-solid fa-clipboard-check text-sky-300 text-xl mt-0.5"></i>
         <div>
           <h4 class="text-white font-display font-semibold uppercase text-sm">Documented Compliance</h4>
-          <p class="text-blue-100 text-sm mt-1">Validation dossiers, material certificates and test reports handed over with the plant — including the TÜV Rheinland Class 0 complete-unit certificate (AK 50528335 0001) for your regulatory file.</p>
+          <p class="text-blue-100 text-sm mt-1">Validation dossiers, material certificates and test reports are supplied according to the contracted scope. The TÜV Rheinland ISO 8573-1 total-oil Class 0 certificate AK 50528335 0001 / report CN21HFR2 001 is included only when the supplied scope contains certified complete HW-200 through HW-3600 oil-free scroll units; it excludes HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors and incomplete OEM assemblies, and does not prove sterility or microbial control.</p>
         </div>
       </div>
     </div>
@@ -712,19 +593,19 @@
       <a href="products-cleanair.html" class="group block p-6 bg-brand-light border border-slate-200 rounded-sm hover:border-brand-blue transition">
         <i class="fa-solid fa-fill-drip text-brand-blue text-2xl mb-3"></i>
         <h3 class="font-bold text-brand-dark font-display uppercase mb-2 group-hover:text-brand-blue transition">Clean Air &amp; Medical Gas</h3>
-        <p class="text-slate-500 text-sm">HYG / HVTG integrated generation, drying and 0.01μm filtration — dew point ≤ -40°C in a single certified package.</p>
+        <p class="text-slate-500 text-sm">HYG / HVTG configurations require exact-model documentation for generation, drying, filtration and pressure dew point; project targets must be validated.</p>
         <span class="text-brand-blue text-sm font-bold mt-3 inline-flex items-center gap-1">View Clean Air Systems <i class="fa-solid fa-chevron-right text-xs"></i></span>
       </a>
       <a href="products-hy.html" class="group block p-6 bg-brand-light border border-slate-200 rounded-sm hover:border-brand-blue transition">
         <i class="fa-solid fa-tooth text-brand-blue text-2xl mb-3"></i>
         <h3 class="font-bold text-brand-dark font-display uppercase mb-2 group-hover:text-brand-blue transition">HY Dental Compressors</h3>
-        <p class="text-slate-500 text-sm">Zero-oil, Class 0 certified dental compressors from HY-100 to HYT-500 for standalone and satellite clinic installations.</p>
+        <p class="text-slate-500 text-sm">Oil-free piston dental compressors from HY-100 to HYT-500 for standalone and satellite clinics, with model-specific air-purity documentation available for project review.</p>
         <span class="text-brand-blue text-sm font-bold mt-3 inline-flex items-center gap-1">View HY Series <i class="fa-solid fa-chevron-right text-xs"></i></span>
       </a>
       <a href="products-hvs.html" class="group block p-6 bg-brand-light border border-slate-200 rounded-sm hover:border-brand-blue transition">
         <i class="fa-solid fa-wind text-brand-blue text-2xl mb-3"></i>
         <h3 class="font-bold text-brand-dark font-display uppercase mb-2 group-hover:text-brand-blue transition">HVS Suction Systems</h3>
-        <p class="text-slate-500 text-sm">Central and chairside suction to match your air plant — complete the hospital network with vacuum negative pressure.</p>
+        <p class="text-slate-500 text-sm">Central and chairside suction require separate model/configuration/installation validation; no fixed aerosol or infection-control performance is implied.</p>
         <span class="text-brand-blue text-sm font-bold mt-3 inline-flex items-center gap-1">View HVS Series <i class="fa-solid fa-chevron-right text-xs"></i></span>
       </a>
     </div>
@@ -737,7 +618,7 @@
     <div class="text-center mb-12">
       <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-widest">Hospital Gas Engineering FAQ</div>
       <h2 class="text-2xl lg:text-3xl font-extrabold text-brand-dark font-display tracking-tight">Frequently Asked Questions — Hospital Central Air Stations</h2>
-      <p class="text-slate-500 text-xs sm:text-sm mt-2 max-w-2xl mx-auto">Design codes, N+1 redundancy architectures, and -40°C dew point compliance for healthcare MEP engineering consultants.</p>
+      <p class="text-slate-500 text-xs sm:text-sm mt-2 max-w-2xl mx-auto">Applicable design codes, redundancy validation, and model-specific pressure dew point requirements for healthcare MEP engineering consultants.</p>
     </div>
 
     <div class="space-y-4">
@@ -748,7 +629,7 @@
           <span>What regulatory standards apply to hospital central medical air compressor stations?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          Hospital central medical air systems must comply with <strong>ISO 7396-1</strong> (Medical gas pipeline systems), UK NHS <strong>HTM 02-01</strong>, US <strong>NFPA 99</strong>, and China <strong>GB 50751</strong>. Hongrun HBG and HW series are licensed under China NMPA Class II Medical Device Registration (鲁械注准), <strong>ISO 13485:2016</strong> Medical Device Quality Management System, and ISO 9001:2015 for critical hospital gas pipelines.
+          Applicable requirements depend on jurisdiction and project, including <strong>ISO 7396-1</strong>, UK NHS <strong>HTM 02-01</strong>, US <strong>NFPA 99</strong> and China <strong>GB 50751</strong> where specified. Verify the exact supplied model's NMPA registration scope and applicable quality-system certificates; a component or compressor alone does not establish compliance of the complete medical gas pipeline.
         </p>
       </div>
 
@@ -759,7 +640,7 @@
           <span>What is the difference between medical scroll (HW) and multi-piston (HBG) hospital stations?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          <strong>HW scroll series</strong> compressors deliver a 100% continuous duty cycle with minimal vibration and near-silent operation (≤59-69 dB(A)), ideal for indoor plant rooms near operating theaters. <strong>HBG multi-4V piston stations</strong> utilize high-capacity modular piston assemblies (up to 9,000 L/min displacement) with individual cylinder shutoff for large-scale general hospital wards and regional medical centers.
+          <strong>HW</strong> uses scroll elements while <strong>HBG</strong> configurations use piston assemblies. Exact architecture, capacity, power, pressure, noise, controls, duty and medical registration scope must be verified in the supplied model documentation and project design. Published HBG/HWG and HW figures conflict across pages and must not be used as selection data without verification.
         </p>
       </div>
 
@@ -767,10 +648,10 @@
       <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
         <h3 class="text-base font-bold text-brand-dark flex items-start gap-3">
           <span class="w-6 h-6 rounded-full bg-brand-blue/10 text-brand-blue flex items-center justify-center shrink-0 text-xs font-mono font-bold mt-0.5">3</span>
-          <span>How does Hongrun ensure a -40°C pressure dew point in hospital pipelines?</span>
+          <span>How is pressure dew point validated for a hospital air project?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          Every Hongrun hospital medical air station incorporates dual heatless desiccant drying towers filled with 13X synthetic molecular sieves operating in automated alternating adsorption and regeneration cycles. This guarantees a stable <strong>-40°C pressure dew point</strong> (ISO 8573-1 Class 2 water vapor), preventing pipeline condensation and bacterial biofilm propagation.
+          A project may specify -40°C as a pressure dew point target. Actual performance depends on exact model, configuration, inlet conditions, flow, dryer selection and maintenance and must be validated for the installation. Drying reduces condensation risk but does not by itself establish microbial control.
         </p>
       </div>
 
@@ -781,7 +662,7 @@
           <span>How does PLC sequencing maintain N+1 redundancy in hospital medical gas delivery?</span>
         </h3>
         <p class="text-slate-600 text-xs sm:text-sm mt-2 pl-9 leading-relaxed">
-          Hongrun medical air stations utilize Siemens or Schneider PLC intelligent controllers that monitor real-time system pressure and run-time hours. If the primary compressor unit flags a maintenance alert, standby units engage within milliseconds. The system balances running hours across all compressor heads to ensure equal duty cycles and zero downtime.
+          Configured hospital stations use PLC controllers to sequence compressors, monitor pressure and balance run time. N+1 or N+2 arrangements can improve availability only when remaining capacity, receiver storage, switching sequence and complete installation are validated against clinical demand; zero downtime is not guaranteed.
         </p>
       </div>
     </div>
@@ -792,7 +673,7 @@
 <section class="py-16 bg-white">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl font-extrabold text-brand-dark mb-4 font-display tracking-tight uppercase">Plan Your Hospital Air Plant</h2>
-    <p class="text-slate-500 mb-8 text-lg">Send us your floor plan and bed count. Our engineers will return a full equipment schedule, layout drawing and budget within five working days.</p>
+    <p class="text-slate-500 mb-8 text-lg">Send us your floor plan and bed count. Our engineers will review the scope, required design inputs and quotation schedule before preparing the equipment schedule and budget.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="contact.html" class="bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-10 py-4 rounded-sm font-bold text-base transition shadow-lg inline-flex items-center justify-center gap-2">Request a Quote <i class="fa-solid fa-arrow-right"></i></a>
       <a href="solutions.html" class="border border-brand-blue text-brand-blue hover:bg-brand-light px-10 py-4 rounded-sm font-semibold text-base transition inline-flex items-center justify-center gap-2">View Solutions <i class="fa-solid fa-building"></i></a>
@@ -804,64 +685,45 @@
 <section class="py-16 bg-slate-50 border-t border-slate-200">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-2xl font-extrabold text-brand-dark mb-2 font-display tracking-tight uppercase">Medical Gas &amp; Scroll Series Range Overview</h2>
-    <p class="text-slate-500 mb-8 text-sm">The complete HBG central air and silent scroll compressor range, matched to hospital ward and operatory loads. Specifications per official catalogue.</p>
+    <p class="text-slate-500 mb-8 text-sm">HBG, HW and HWG configurations require exact-model documentation before selection. Published figures conflict across cards and tables; verify the supplied model, registration scope and test conditions.</p>
 
     <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden mb-8">
-      <div class="bg-brand-deep px-6 py-3 text-white font-display font-bold tracking-tight uppercase text-sm">HBG Medical Gas Series (Class II · 380V)</div>
+      <div class="bg-brand-deep px-6 py-3 text-white font-display font-bold tracking-tight uppercase text-sm">HBG Configurations (Verify Registration &amp; Electrical Supply)</div>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
-          <thead class="bg-brand-light text-left text-brand-dark">
-            <tr>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Model</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Power (kW)</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Heads</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Max Pressure (MPa)</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Air Flow (L/min)</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Tank (L)</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Weight (kg)</th>
-            </tr>
-          </thead>
+          <thead class="bg-brand-light text-left text-brand-dark"><tr><th class="px-4 py-2.5 font-bold">Model</th><th class="px-4 py-2.5 font-bold">Specification Status</th></tr></thead>
           <tbody class="divide-y divide-slate-100">
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-400</td><td class="px-4 py-2.5">3</td><td class="px-4 py-2.5">4V×1</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">500</td><td class="px-4 py-2.5">100</td><td class="px-4 py-2.5">100</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-800</td><td class="px-4 py-2.5">6</td><td class="px-4 py-2.5">4V×2</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">1000</td><td class="px-4 py-2.5">150</td><td class="px-4 py-2.5">150</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-1200</td><td class="px-4 py-2.5">9</td><td class="px-4 py-2.5">4V×3</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">1500</td><td class="px-4 py-2.5">300</td><td class="px-4 py-2.5">400</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-1600</td><td class="px-4 py-2.5">12</td><td class="px-4 py-2.5">4V×4</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">2000</td><td class="px-4 py-2.5">400</td><td class="px-4 py-2.5">480</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-2400</td><td class="px-4 py-2.5">18</td><td class="px-4 py-2.5">4V×6</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">3000</td><td class="px-4 py-2.5">580</td><td class="px-4 py-2.5">650</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-3600</td><td class="px-4 py-2.5">27</td><td class="px-4 py-2.5">4V×9</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">4500</td><td class="px-4 py-2.5">400×2</td><td class="px-4 py-2.5">950</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-3800</td><td class="px-4 py-2.5">36</td><td class="px-4 py-2.5">4V×12</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">6000</td><td class="px-4 py-2.5">580×2</td><td class="px-4 py-2.5">1250</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-4800</td><td class="px-4 py-2.5">54</td><td class="px-4 py-2.5">4V×18</td><td class="px-4 py-2.5">0.8</td><td class="px-4 py-2.5">9000</td><td class="px-4 py-2.5">580×3</td><td class="px-4 py-2.5">1850</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-400</td><td class="px-4 py-2.5">Verify exact model documentation; published figures conflict with the product hub.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-800</td><td class="px-4 py-2.5">Verify exact model documentation, registration and degraded-capacity validation.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-1200</td><td class="px-4 py-2.5">Verify exact model documentation; published figures conflict with the product hub.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-1600</td><td class="px-4 py-2.5">Verify exact model documentation and stated test conditions.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-2400</td><td class="px-4 py-2.5">Verify exact model documentation and stated test conditions.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-3600</td><td class="px-4 py-2.5">Verify exact model documentation and stated test conditions.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-3800</td><td class="px-4 py-2.5">Verify exact model documentation and stated test conditions.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HBG-4800</td><td class="px-4 py-2.5">Verify exact model documentation and stated test conditions.</td></tr>
           </tbody>
         </table>
       </div>
     </div>
 
     <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
-      <div class="bg-brand-deep px-6 py-3 text-white font-display font-bold tracking-tight uppercase text-sm">HW Silent Scroll Series (Oil-free)</div>
+      <div class="bg-brand-deep px-6 py-3 text-white font-display font-bold tracking-tight uppercase text-sm">HW Oil-Free Scroll Configurations</div>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
-          <thead class="bg-brand-light text-left text-brand-dark">
-            <tr>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Model</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Power (kW)</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Air Flow (L/min)</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Voltage</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Noise (dB)</th>
-              <th class="px-4 py-2.5 font-bold whitespace-nowrap">Dimensions (mm)</th>
-            </tr>
-          </thead>
+          <thead class="bg-brand-light text-left text-brand-dark"><tr><th class="px-4 py-2.5 font-bold">Model</th><th class="px-4 py-2.5 font-bold">Specification Status</th></tr></thead>
           <tbody class="divide-y divide-slate-100">
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-200</td><td class="px-4 py-2.5">2.2</td><td class="px-4 py-2.5">240</td><td class="px-4 py-2.5">220V</td><td class="px-4 py-2.5">&lt;69</td><td class="px-4 py-2.5">540×600×1200</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-400</td><td class="px-4 py-2.5">4</td><td class="px-4 py-2.5">400</td><td class="px-4 py-2.5">380V</td><td class="px-4 py-2.5">&lt;69</td><td class="px-4 py-2.5">750×715×1150</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-600</td><td class="px-4 py-2.5">5.5</td><td class="px-4 py-2.5">600</td><td class="px-4 py-2.5">380V</td><td class="px-4 py-2.5">&lt;69</td><td class="px-4 py-2.5">750×715×1150</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-1200</td><td class="px-4 py-2.5">11</td><td class="px-4 py-2.5">1200</td><td class="px-4 py-2.5">380V</td><td class="px-4 py-2.5">&lt;69</td><td class="px-4 py-2.5">1010×690×1250</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-1800</td><td class="px-4 py-2.5">16.5</td><td class="px-4 py-2.5">1800</td><td class="px-4 py-2.5">380V</td><td class="px-4 py-2.5">&lt;69</td><td class="px-4 py-2.5">1330×880×1500</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-2400</td><td class="px-4 py-2.5">22</td><td class="px-4 py-2.5">2400</td><td class="px-4 py-2.5">380V</td><td class="px-4 py-2.5">&lt;69</td><td class="px-4 py-2.5">1330×880×1970</td></tr>
-            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-3600</td><td class="px-4 py-2.5">33</td><td class="px-4 py-2.5">3600</td><td class="px-4 py-2.5">380V</td><td class="px-4 py-2.5">&lt;69</td><td class="px-4 py-2.5">1360×1030×1710</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-200</td><td class="px-4 py-2.5">Verify exact model documentation and complete-unit Class 0 scope.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-400</td><td class="px-4 py-2.5">Verify exact model documentation and complete-unit Class 0 scope.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-600</td><td class="px-4 py-2.5">Verify exact model documentation; published noise and dimensions conflict.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-1200</td><td class="px-4 py-2.5">Verify exact model documentation; published noise and dimensions conflict.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-1800</td><td class="px-4 py-2.5">Verify exact model documentation and complete-unit Class 0 scope.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-2400</td><td class="px-4 py-2.5">Verify exact model documentation and complete-unit Class 0 scope.</td></tr>
+            <tr><td class="px-4 py-2.5 font-semibold text-brand-dark">HW-3600</td><td class="px-4 py-2.5">Verify exact model documentation; published noise and dimensions conflict.</td></tr>
           </tbody>
         </table>
       </div>
     </div>
-    <p class="text-slate-400 text-xs mt-4">Data source: official Hongrun product catalogue. HWG series not listed in this catalogue version — contact sales for those specifications.</p>
+    <p class="text-slate-400 text-xs mt-4">No series-level values are presented because local authoritative catalog data are unavailable and published figures conflict. Request exact model documentation for HBG, HW and HWG specifications, registration scope and test conditions.</p>
   </div>
 </section>
 
@@ -873,11 +735,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Medical air, dental suction, and pure water systems require model- and project-specific documentation.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -896,7 +758,7 @@
 
       <!-- Col 3: 6-Category Full Products Hub -->
       <div>
-        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
+        <h3 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h3>
         <ul class="space-y-3 text-sm">
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="products-hy.html">Piston Oil-Free Compressors (HY)</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="products-hospital.html">Scroll Compressors &amp; Hospital (HW/HBG)</a></li>
@@ -926,7 +788,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; CE MDR &middot; NMPA Class II Medical Qualification &middot; TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.</p>
     </div>
   </div>
 </footer>

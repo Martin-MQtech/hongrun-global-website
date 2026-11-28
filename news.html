@@ -3,57 +3,7 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
@@ -61,14 +11,14 @@
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>News &amp; Technical Insights | Hongrun Technology</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
-  <meta name="description" content="Hongrun Technology News & Technical Insights: Engineering whitepapers, dental pneumatic sizing guides, 30th-anniversary quality tours, and international medical expo chronicles.">
+  <meta name="description" content="Hongrun news and technical insights: dental air sizing guides, quality tours, manufacturing updates, and international medical expo chronicles.">
   <meta name="keywords" content="dental engineering blog, medical compressor whitepaper, dental clinic sizing guide, Dental South China Expo, Hongrun news">
   <link rel="canonical" href="https://www.hongrun1995.cn/news.html">
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
   <meta property="og:title" content="News &amp; Technical Insights | Hongrun Technology">
-  <meta property="og:description" content="Hongrun Technology News & Technical Insights: Engineering whitepapers, dental pneumatic sizing guides, 30th-anniversary quality tours, and international medical expo chronicles.">
+  <meta property="og:description" content="Hongrun news and technical insights: dental air sizing guides, quality tours, manufacturing updates, and international medical expo chronicles.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/news.html">
   <meta property="og:type" content="website">
@@ -76,7 +26,7 @@
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="News &amp; Technical Insights | Hongrun Technology">
-  <meta name="twitter:description" content="Hongrun Technology News & Technical Insights: Engineering whitepapers, dental pneumatic sizing guides, 30th-anniversary quality tours, and international medical expo chronicles.">
+  <meta name="twitter:description" content="Hongrun news and technical insights: dental air sizing guides, quality tours, manufacturing updates, and international medical expo chronicles.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/products/hy-family-portfolio.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
@@ -147,8 +97,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -197,7 +151,7 @@
             <a href="/products-hy.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HY Dental Compressors (1–10 Chairs)</a>
             <a href="/products-hospital.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HW Hospital Scroll Systems</a>
             <a href="/products-hvs.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HVS Dental Suction Plants</a>
-            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (Model-Specific Dew Point)</a>
             <a href="/products-water.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HRC Pure Water &amp; Disinfection</a>
             <a href="/products-core.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">Core Pump Heads &amp; Spares</a>
           </div>
@@ -236,7 +190,7 @@
 
 
 <!-- High-Tech Advanced Industrial Manufacturing Hero Banner (Sleek Compact Height & Building-Aligned View) -->
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="relative pt-20 overflow-hidden bg-slate-950">
   <div class="relative h-[320px] sm:h-[350px] lg:h-[370px]">
     <!-- High-Definition Industrial Scene with background-position shifted down to bring the building top right to the banner upper edge -->
@@ -321,7 +275,7 @@
 
       <!-- Category Filter Pills -->
       <div class="flex flex-wrap items-center gap-2">
-        <button class="filter-btn active text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 transition">All Articles (13)</button>
+        <button class="filter-btn active text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 transition">All Articles (14)</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Corporate Films</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Engineering Whitepapers</button>
         <button class="filter-btn text-xs font-semibold px-3.5 py-1.5 rounded-full border border-slate-300 text-slate-600 hover:border-brand-blue hover:text-brand-blue transition">Clinical Sizing</button>
@@ -332,12 +286,58 @@
     <!-- Compact 3-Column Blog Grid (Lightweight, High Information Density) -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- ==================== Article (2026-11-11): 2026 Global Brand Film ==================== -->
+      <!-- ==================== Article (2026-11-28): Marketing × Engineering Market Sync ==================== -->
       <article class="blog-card bg-white rounded-xl border-2 border-brand-blue shadow-lg hover:shadow-xl transition overflow-hidden flex flex-col justify-between group relative ring-2 ring-blue-500/20">
         <div>
           <!-- Thumbnail with Standard h-44 Height -->
+          <a href="/articles/20261128-sales-engineering-global-market-sync/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
+            <img src="/assets/images/news/20261128-news-market-sync.webp" alt="One Team, Many Markets: Hongrun Marketing × Engineering Global Market Sync" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="720" height="405" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+            <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-slate-900/85 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5 border border-white/10">
+              <i class="fa-solid fa-people-group text-sky-400 text-[10px]"></i> Team Dynamics · 43s Video Inside
+            </span>
+          </a>
+
+          <!-- Content -->
+          <div class="p-5">
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-brand-blue font-bold text-[11px]"><i class="fa-regular fa-calendar-check text-brand-blue"></i> Nov 28, 2026</span>
+              <span class="bg-sky-50 text-sky-900 text-[11px] font-semibold px-2 py-0.5 rounded border border-sky-100"><i class="fa-solid fa-globe mr-1"></i> EN / 中文双语</span>
+            </div>
+
+            <h3 class="text-base font-bold text-brand-dark mb-2 group-hover:text-brand-blue transition font-display leading-snug">
+              <a href="/articles/20261128-sales-engineering-global-market-sync/">
+                One Team, Many Markets: Hongrun Marketing × Engineering Global Market Sync
+              </a>
+            </h3>
+
+            <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
+              Inside Hongrun's cross-functional market review: marketing and engineering jointly study regional requirements, so every answer reaches global partners with certified evidence. 43s session highlights video inside.
+            </p>
+
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#TeamDynamics</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#GlobalMarkets</span>
+              <span class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded">#BuiltOnIntegrity</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Row -->
+        <div class="p-5 pt-0 border-t border-slate-100 mt-auto flex items-center justify-between text-xs">
+          <a href="/articles/20261128-sales-engineering-global-market-sync/" class="text-brand-blue font-bold hover:underline inline-flex items-center gap-1">
+            Read Team Story <i class="fa-solid fa-arrow-right text-[11px]"></i>
+          </a>
+          <span class="text-slate-600 text-[11px]">43s Video · 官网直连</span>
+        </div>
+      </article>
+
+      <!-- ==================== Article (2026-11-11): 2026 Global Brand Film ==================== -->
+      <article class="blog-card bg-white rounded-xl border border-slate-200 hover:border-brand-blue shadow-sm hover:shadow-md transition overflow-hidden flex flex-col justify-between group relative">
+        <div>
+          <!-- Thumbnail with Standard h-44 Height -->
           <a href="/articles/20261111-brand-film-2026/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20261111-brand-film-2026/card_cover.jpg" alt="Hongrun Technology 2026 Flagship Brand Film" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1200" height="630" />
+            <img src="/assets/images/news/20261128-news-brand-film.webp" alt="Hongrun Technology 2026 Flagship Brand Film" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="720" height="405" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-slate-900/85 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5 border border-white/10">
               <i class="fa-solid fa-play text-sky-400 text-[10px]"></i> Brand Film · CN 2:36 / EN 2:03
@@ -383,7 +383,7 @@
         <div>
           <!-- Thumbnail with Standard h-44 Height -->
           <a href="/articles/20261021-dentech-china-2026/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20261021-dentech-china-2026/card_cover.webp" alt="DenTech China 2026: Hongrun Technology Booth M47-48, M69-70" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1200" height="630" />
+            <img src="/assets/images/news/20261128-news-dentech.webp" alt="DenTech China 2026: Hongrun Technology Booth M47-48, M69-70" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="720" height="378" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-rose-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5">
               <i class="fa-solid fa-fire text-amber-300 text-[11px]"></i> Oct 22–25 &middot; Booth M47-70
@@ -404,7 +404,7 @@
             </h3>
 
             <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
-              Asia-Pacific benchmark dental expo opens tomorrow in Shanghai. Explore 8 core dental equipment room subsystems, ISO 8573-1 Class 0 pure air, 58 dB(A) whisper-quiet acoustic canopy units, and complete transit guide.
+              Asia-Pacific benchmark dental expo opens tomorrow in Shanghai. Explore 8 core dental equipment room subsystems, certificate-scoped HW-200–HW-3600 total-oil Class 0 evidence, model-specific acoustic canopy data, and complete transit guide.
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
@@ -428,7 +428,7 @@
         <div>
           <!-- Thumbnail with Standard h-44 Height -->
           <a href="/articles/20260926-silence-and-purity-stress-tests/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20260926-silence-and-purity-stress-tests/card_cover.webp" alt="Silence & Purity: The Ultimate Stress Tests" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1920" height="1080" />
+            <img src="/assets/images/news/20261128-news-stress-tests.webp" alt="Silence & Purity: The Ultimate Stress Tests" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="720" height="405" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-play text-white text-[11px]"></i> 93s Film &middot; Stress Tests</span>
           </a>
@@ -447,7 +447,7 @@
             </h3>
 
             <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
-              Dynamic vibration neutralization, 60-minute white silk blast, and -40°C cryogenic dew point stripping: Deconstructing the engineering science behind medical-grade ISO 8573-1 Class 0 oil-free air and whisper-quiet operatory dynamics.
+              Visual vibration and white-silk demonstrations, configuration-specific drying tests, and the laboratory evidence required for model-specific air-quality claims.
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
@@ -470,7 +470,7 @@
       <article class="blog-card bg-white rounded-xl border border-slate-200 hover:border-brand-blue shadow-sm hover:shadow-md transition overflow-hidden flex flex-col justify-between group relative">
         <div>
           <a href="/articles/20260925-3d-medical-air-simulator/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20260925-3d-medical-air-simulator/card_cover.webp" alt="3D CAD Simulator: 1,420 RPM Kinematics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1920" height="1080" />
+            <img src="/assets/images/news/20261128-news-simulator.webp" alt="3D CAD Simulator: 1,420 RPM Kinematics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="720" height="405" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-emerald-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-cube text-white text-[11px]"></i> 110s 3D CAD &middot; Kinematics</span>
           </a>
@@ -510,7 +510,7 @@
       <article class="blog-card bg-white rounded-xl border border-slate-200 hover:border-brand-blue shadow-sm hover:shadow-md transition overflow-hidden flex flex-col justify-between group relative">
         <div>
           <a href="/articles/20260916-world-class-manufacturing-profile/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img src="/articles/20260916-world-class-manufacturing-profile/card_cover.webp" alt="Thirty Years of Dedicated Precision: Inside Hongrun's Manufacturing Base" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1920" height="1080" />
+            <img src="/assets/images/news/20261128-news-manufacturing.webp" alt="Thirty Years of Dedicated Precision: Inside Hongrun's Manufacturing Base" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="720" height="405" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-blue-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-building text-white text-[11px]"></i> 90s Brand Film &middot; Plant Tour</span>
           </a>
@@ -528,7 +528,7 @@
             </h3>
 
             <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
-              160,000 annual smart capacity, NMPA Class II medical qualification, ISO 8573-1 Class 0 certified zero-oil purity, and National Grade-I Energy Efficiency across hospital &amp; dental applications.
+              160,000 annual smart capacity, NMPA Class II medical qualification, oil-free compressor designs, and TÜV ISO 8573-1 Class 0 certification for complete HW-200 through HW-3600 scroll units.
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
@@ -551,7 +551,7 @@
         <div>
           <!-- Thumbnail with Standard h-44 Height -->
           <a href="/articles/20260915-global-expansion-operational-strategy/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img data-zoom data-hd="assets/images/news/hongrun_global_expansion_cover.webp?v=20260915" src="assets/images/news/hongrun_global_expansion_cover.webp?v=20260915" alt="Hongrun Technology Global Expansion Operational Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1024" height="653" />
+            <img data-zoom data-hd="assets/images/news/20261128-news-global-expansion.webp" src="assets/images/news/20261128-news-global-expansion.webp" alt="Hongrun Technology Global Expansion Operational Strategy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="720" height="459" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-red-600/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-play text-white text-[11px]"></i> 4K Video &middot; Strategy</span>
           </a>
@@ -570,7 +570,7 @@
             </h3>
 
             <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
-              Replacing fragmented sales with systemic precision: How Hongrun Technology unites 30 years of medical Class 0 engineering heritage with an enduring digital operations matrix to eliminate opportunistic export trading and build long-term international procurement trust.
+              How oil-free medical engineering, including certificate-scoped HW-200–HW-3600 total-oil Class 0 evidence, connects with international digital operations and procurement support.
             </p>
 
             <div class="flex flex-wrap gap-1.5 mb-4">
@@ -594,7 +594,7 @@
         <div>
           <!-- Thumbnail -->
           <a href="/articles/20260910-precision-manufacturing-meets-agentic-web/" class="block h-44 bg-slate-900 relative overflow-hidden cursor-pointer border-b border-slate-100">
-            <img data-zoom data-hd="assets/images/news/hongrun_smart_plant_cover.webp" src="assets/images/news/hongrun_smart_plant_cover.webp" alt="Hongrun Intelligent Hospital Medical Air Plant Room with Digital Twin Telemetry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" fetchpriority="high" width="1376" height="768" />
+            <img data-zoom data-hd="assets/images/news/20261128-news-agentic-web.webp" src="assets/images/news/20261128-news-agentic-web.webp" alt="Hongrun Intelligent Hospital Medical Air Plant Room with Digital Twin Telemetry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" decoding="async" loading="lazy" width="720" height="402" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
             <span class="absolute bottom-2.5 right-3 text-white text-[11px] font-bold bg-brand-blue/90 backdrop-blur px-2.5 py-1 rounded shadow-md flex items-center gap-1.5"><i class="fa-solid fa-microchip text-sky-300"></i> AI &amp; Agentic Web</span>
           </a>
@@ -613,7 +613,7 @@
             </h3>
 
             <p class="text-slate-600 text-xs leading-relaxed mb-4 line-clamp-3">
-              In manufacturing, true technology lives in the metal, tribology, and 0.003 mg/m³ Class 0 purity. But in global export, internet and AI protocols are our ultimate marketing engines. How Hongrun embraces WebMCP and zero-latency tools.
+              Model-specific oil-free engineering and certificate-scoped HW-200–HW-3600 total-oil Class 0 evidence meet WebMCP tools, interactive sizing and AI-ready technical content.
             </p>
 
             <!-- 3 Keyword Tags -->
@@ -660,7 +660,7 @@
 
             <!-- Excerpt -->
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-              Eliminate catastrophic mid-procedure clinical air loss. Multi-pump parallel N+1 failover logic, simultaneous flow diversity math (k = 0.60–0.45), and closed-loop ring manifold design.
+              Compare multi-head redundancy against real chair loads: preliminary k=0.70 planning, degraded-capacity checks, and hydraulically verified ring distribution.
             </p>
 
             <!-- Topic Chips / Keywords -->
@@ -744,18 +744,18 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-blue transition line-clamp-2">
-              <a href="/articles/20260902-dental-air-purity-engineering-guide/">Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0, and Sizing of HY Series</a>
+              <a href="/articles/20260902-dental-air-purity-engineering-guide/">Engineering Oil-Free Air Quality: Technical Architecture, Certificate Scope, and Sizing of HY Series</a>
             </h3>
 
             <!-- Excerpt -->
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-              Comprehensive global engineering whitepaper on wobble-piston kinematics, Saint-Gobain PTFE rings, nano-antibacterial tanks, and multi-operatory sizing formulas for 1 to 50 dental chairs.
+              Comprehensive engineering whitepaper on wobble-piston kinematics, Saint-Gobain PTFE rings, receiver condensate management, and multi-operatory sizing for 1 to 50 dental chairs.
             </p>
 
             <!-- Topic Chips -->
             <div class="flex flex-wrap gap-1.5 pt-2 border-t border-slate-100">
               <a href="products-hy.html" class="text-[11px] bg-brand-blue/10 text-brand-blue font-semibold px-2 py-0.5 rounded hover:bg-brand-blue hover:text-white transition">HY Series</a>
-              <a href="products-hy.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">Nano-Tank 38L</a>
+              <a href="products-hy.html" class="text-[11px] bg-slate-100 text-slate-600 font-medium px-2 py-0.5 rounded hover:bg-slate-200 transition">38L Receiver</a>
               <span class="text-[11px] bg-teal-50 text-teal-700 font-medium px-2 py-0.5 rounded">WS 507/310.2</span>
             </div>
           </div>
@@ -790,12 +790,12 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-teal-600 transition line-clamp-2">
-              <a href="/articles/20260825-dental-suction-exploded-anatomy/">Aerodynamic Power &amp; Infection Defense: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems</a>
+              <a href="/articles/20260825-dental-suction-exploded-anatomy/">Aerodynamic Power &amp; Fluid Separation: 3D CAD Exploded Anatomy of HVS Dental Vacuum Systems</a>
             </h3>
 
             <!-- 2-line Clean Excerpt -->
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-              Analyzing fluid dynamic turbine impellers, two-stage cyclone water-air separation chambers, and 85%+ aerosol suppression across 1–50 dental chairs.
+              Analyzing turbine impellers, two-stage cyclone separation and project-validated aerosol source capture across 1–50 dental chairs.
             </p>
 
             <!-- Topic Chips -->
@@ -835,12 +835,12 @@
 
             <!-- Title -->
             <h3 class="text-base font-bold text-brand-dark font-display leading-snug mb-2 group-hover:text-brand-blue transition line-clamp-2">
-              <a href="/articles/20260820-compressor-exploded-anatomy/">Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors</a>
+              <a href="/articles/20260820-compressor-exploded-anatomy/">Inside Zero-Oil Purity: 3D CAD Anatomy of Oil-Free Medical Compressors</a>
             </h3>
 
             <!-- 2-line Clean Excerpt -->
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-              Dissecting the mechanical precision of 100% oil-free compressors: 5-axis CNC drive shafts, diamond-coated PTFE rings, dual-tower PSA dryers, and 0.01μm sterile filtration.
+              Model-specific oil-free kinematics, PTFE wear components, receiver maintenance, drying and filtration. TÜV total-oil Class 0 evidence is limited to complete HW-200–HW-3600 units.
             </p>
 
             <!-- Topic Chips -->
@@ -1021,7 +1021,7 @@
 
             <!-- 2-line Clean Excerpt -->
             <p class="text-xs text-slate-600 leading-relaxed line-clamp-3 mb-4">
-              Inspecting centralized medical gas installations with partners like Shinva Medical, verifying 20,000-hour continuous zero-oil performance on ZB wobble pump heads.
+              Inspecting centralized medical gas installations with partners like Shinva Medical and reviewing model-specific oil-free pump documentation.
             </p>
 
             <!-- Topic Chips -->
@@ -1073,11 +1073,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV ISO 8573-1 Class 0 certified for complete HW-200–HW-3600 scroll units. Medical air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -1096,7 +1096,7 @@
 
       <!-- Col 3: 6-Category Full Products Hub -->
       <div>
-        <h4 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h4>
+        <h3 class="text-white font-display font-semibold uppercase tracking-wider mb-5 text-sm">Products</h3>
         <ul class="space-y-3 text-sm">
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="products-hy.html">Piston Oil-Free Compressors (HY)</a></li>
           <li><a class="text-slate-400 hover:text-sky-400 transition" href="products-hospital.html">Scroll Compressors &amp; Hospital (HW/HBG)</a></li>
@@ -1128,7 +1128,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; TÜV Class 0 (HW-200–HW-3600) &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
     </div>
   </div>
 </footer>

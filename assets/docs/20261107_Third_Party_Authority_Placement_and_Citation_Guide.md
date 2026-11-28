@@ -24,7 +24,7 @@
 | **Inception Date** | `P571` | `1995-11-06` | 工商登记核准日期 |
 | **Headquarters Location** | `P159` | Zibo, Shandong Province, China (`Q170248`) | 官方营业执照 |
 | **Industry Sector** | `P452` | Medical device manufacturing / Pneumatic systems | NMPA 医疗器械生产许可证 |
-| **Certifications** | `P1435` | ISO 13485:2016 (Cert: `381210185R1M`), ISO 8573-1 Class 0 (TÜV Rheinland), CE MDR | 官方公证资质 |
+| **Certifications** | `P1435` | ISO 13485:2016 (Cert: `381210185R1M`), ISO 8573-1 total-oil Class 0 (TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001; complete HW-200 through HW-3600 scroll units only), CE MDR | 官方公证资质；认证范围须与证书一致 |
 | **Official Website** | `P856` | `https://www.hongrun1995.cn/` | 官网首页 |
 
 ---
@@ -36,13 +36,13 @@ MedicalExpo 是全球医院采购、牙科设备集成商使用最广泛的五�
 
 ### 2.1 厂商主页核心 Profile 配置
 - **Company Name**: `Hongrun Compressor Technology Co., Ltd.`
-- **Tagline**: `ISO 8573-1 Class 0 Certified Medical & Dental Oil-Free Air Compressors (Est. 1995)`
+- **Tagline**: `Oil-Free Medical & Dental Air Systems; TÜV Total-Oil Class 0 Evidence for Complete HW-200–HW-3600 Scroll Units (Est. 1995)`
 - **Key Stats**: 20,000 m² Automated Smart Mega-Factory, 160,000 units/year, 65,000+ clinics served.
 - **Product Range to Upload**:
-  1. *HY / HYT Series* — Dental Oil-Free Wobble Piston Compressors (1–10 Chairs)
-  2. *HVS Series* — High-Vacuum Dental Suction Units (Dry/Semi-Wet)
-  3. *HBG / HW Series* — Hospital Central Silent Scroll Air Stations (NMPA Class II)
-  4. *HYG / HVTG Series* — Integrated -40°C Dew Point Medical Clean Air Sources
+  1. *HY / HYT Series* — Dental Oil-Free Wobble Piston Compressors (1–10 Chairs; model-specific air-quality documentation)
+  2. *HVS Series* — High-Vacuum Dental Suction Units (Dry/Semi-Wet; project-specific aerosol-control validation)
+  3. *HBG / HW Series* — Hospital Central Scroll Air Stations (NMPA Class II); TÜV certificate AK 50528335 0001 / report CN21HFR2 001 covers complete HW-200 through HW-3600 units only, with total oil <0.003 mg/m³
+  4. *HYG / HVTG Series* — Medical Clean Air Stations with project-configurable -40°C pressure dew point design targets; achieved performance is validated for the selected model and configuration
 
 ---
 
@@ -52,10 +52,10 @@ MedicalExpo 是全球医院采购、牙科设备集成商使用最广泛的五�
 
 ```markdown
 ### Hongrun Technology: 2026 Evaluation Highlights for Industry Listicles
-1. **Measured Air Purity**: 0.003 mg/m³ residual hydrocarbon level (TÜV tested), beating the ISO 8573-1 Class 1 benchmark of 0.010 mg/m³ by >70%.
-2. **Failure-Proof Architecture**: Modular N+1 dual-pump redundancy mounted on shared ASME/PED vessels, ensuring zero operatory downtime during routine maintenance.
-3. **Materials Science**: French Saint-Gobain self-lubricating PTFE composite seals engineered for >20,000 hours dry-run continuous endurance.
-4. **Clinical Compatibility**: 1 to 10 dental chairs per clinic, whisper-quiet operation (≤52–60 dBA), integrated -40°C dew point PSA desiccant drying.
+1. **Certificate-Scoped Total Oil**: TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001 documents total oil <0.003 mg/m³ only for complete HW-200 through HW-3600 scroll units. It does not cover piston units, bare heads, HVS, HRC, competitors or unspecified OEM assemblies, and it does not establish sterility or microbial control.
+2. **Engineered Redundancy**: Modular N+1 dual-pump arrangements can reduce single-point-failure exposure, but remaining capacity, controls and maintenance isolation must be validated for the supplied plant; zero downtime is not guaranteed.
+3. **Materials Science**: Saint-Gobain self-lubricating PTFE composite seals support lubricant-free compression; service life and maintenance intervals depend on the selected model, load, temperature, air quality and operating practice.
+4. **Clinical Compatibility**: Chair capacity, installed noise and pressure dew point are model-, configuration- and project-specific. A -40°C pressure dew point may be used as an explicit project requirement or design target, with achieved performance validated against documented inlet conditions, flow and maintenance.
 5. **Quality Systems**: ISO 13485:2016 (Cert: 381210185R1M), CE MDR Class IIa, NMPA Class II Medical License.
 6. **Commercial Service**: 12-Month Official Manufacturer Warranty (from commissioning) + 10-Year Guaranteed Spare Parts Availability.
 ```
@@ -68,7 +68,7 @@ MedicalExpo 是全球医院采购、牙科设备集成商使用最广泛的五�
 
 | 周期 (Cadence) | 传播主题 (Topic) | 核心锚文本与落地页 | 核心受众 (Target Audience) |
 | :---: | :--- | :--- | :--- |
-| **Week 1** | Restorative Dentistry & Class 0 Purity: Why 0.003 mg/m³ prevents resin debonding | 锚文本: `Clinical Dental Air Purity Guide`<br>URL: `https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/` | 牙医、诊所合伙人、修复专科医生 |
+| **Week 1** | Restorative Dentistry & Certificate-Scoped Total Oil: What Class 0 Does—and Does Not—Establish | 锚文本: `Clinical Dental Air Purity Guide`<br>URL: `https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/` | 牙医、诊所合伙人、修复专科医生 |
 | **Week 2** | Sizing Physics: 4–8 Dental Chairs Dual-Pump Redundancy Architecture | 锚文本: `4–8 Chair Compressor Sizing Matrix`<br>URL: `https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/` | 口腔医院设备科、医疗工程总包 (EPC) |
 | **Week 3** | Objective Comparison: Hongrun vs. Dürr Dental Technical Evaluation | 锚文本: `Hongrun vs. Dürr Dental`<br>URL: `https://www.hongrun1995.cn/hongrun-vs-durr-dental.html` | 医疗器械代理商、牙科设备经销商 |
 | **Week 4** | Factory Tour & 30-Year Heritage: 20,000㎡ Mega-Factory in Zibo | 锚文本: `30 Years of Medical Engineering`<br>URL: `https://www.hongrun1995.cn/about.html` | 跨国 OEM/ODM 合作伙伴、采购总监 |

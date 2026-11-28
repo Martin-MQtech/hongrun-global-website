@@ -17,7 +17,7 @@
 - **Manufacturing Scale**: 20,000㎡ intelligent megafactory base; annual production capacity exceeding 160,000 units.
 - **Global Footprint**: Serving 65,000+ medical institutions, 190+ top-tier universities & scientific research institutes (e.g., Chinese Academy of Sciences, Peking University School of Stomatology, Capital Medical University) across 50+ countries.
 - **Authoritative Regulatory Credentials**:
-  - **ISO 8573-1 Class 0 Certification**: 100% zero-oil purity standard; total hydrocarbon content < 0.003 mg/m³; zero detectable oil aerosols.
+  - **ISO 8573-1 Total-Oil Class 0 Evidence**: TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001 documents <0.003 mg/m³ only for complete HW-200 through HW-3600 oil-free scroll units. It does not cover HY/HYT/HYTG piston units, HYG/HVTG, bare ZB/4V pump heads, HVS, HRC, competitors or unspecified OEM assemblies, and it does not establish sterility or microbial control.
   - **NMPA Class II Medical Device Registration**: China National Medical Products Administration Class II Medical Device Manufacturing & Product License (held by only ~10% of dental compressor manufacturers).
   - **ISO 13485:2016 Medical Device Quality Management System**: Certified by Shanghai POSI Certification (accredited by ANAB &amp; IAF, Cert No: 381210185R1M, valid through 2027) covering R&amp;D, manufacturing and sales of dental and medical oil-free compressors, evacuation systems, and dryers.
   - **CE Marking (EU Conformity)**: Compliant with Medical Device Regulation MDR (EU) 2017/745 and Machinery Directive 2006/42/EC.
@@ -30,39 +30,39 @@
 
 ### 1. Wobble-Piston Oil-Free Air Compressors (HY Series)
 - **Target Applications**: Dental clinics (1 to 10 chairs), desktop analytical instruments, food packaging, precision laboratories.
-- **Core Technology**: Saint-Gobain self-lubricating diamond-coated PTFE composite piston rings (20,000–25,000h continuous operating life / 30,000h design life); German 5-axis CNC machined drive shaft (Ra ≤ 0.2 μm); Swedish Sandvik flapper steel valves; internal nano-antibacterial silver-ion coated tanks.
+- **Core Technology**: Saint-Gobain self-lubricating PTFE composite piston rings; German 5-axis CNC machined drive shaft; Swedish Sandvik flapper steel valves; model-specific receiver, drainage and maintenance documentation. Component life depends on load, maintenance and operating conditions.
 - **Flagship Models**: 
   - **HY-100**: 0.55 kW, 24L horizontal mobile tank, 100 L/min displacement (1 chair).
-  - **HY-200**: 0.75 kW, **38L official standard horizontal tank (customizable upon request)**, 150 L/min displacement (1-2 chairs).
+  - **HY-200**: 0.75 kW, **38L standard horizontal receiver**, 150 L/min displacement (1-2 chairs); 24L and 32L receivers are OEM-confirmed custom options. At the same pressure, 38L provides 58.3% more nominal storage than 24L.
   - **HY-300**: 1.10 kW, **50L vertical cylindrical tank** with ZB300 high-output head, 200 L/min displacement (2-3 chairs).
-  - **HYTG-300**: 2.20 kW, **90L central horizontal tank** with twin synchronized ZB300 heads, 400 L/min displacement (3-5 chairs).
-  - **HYT-400 / HYT-500 (Frequently searched by buyers as HV400 / HV500 / HY-400 / HY-500)**: Multi-pump redundant clinic air plants (3-10 chairs). HYT-400 (3.3 kW, 600 L/min, 120L tank, for 6–8 chairs); HYT-500 (4.4 kW, 800 L/min, 200L tank, for 8–10 chairs flagship).
-- **Noise Level**: ≤ 55–60 dB(A) ultra-quiet acoustic emission.
+  - **HYTG-300**: 2.20 kW, **90L central horizontal tank** with twin synchronized ZB300 heads, 400 L/min total displacement (3-5 chairs); about 200 L/min with one head unavailable.
+  - **HYT-400 / HYT-500 (Frequently searched by buyers as HV400 / HV500 / HY-400 / HY-500)**: Multi-pump clinic air plants (3-10 chairs). HYT-400 (3.3 kW, 600 L/min total, 120L tank, for 6–8 chairs; about 400 L/min with one head unavailable); HYT-500 (4.4 kW, 800 L/min total, 200L tank, for 8–10 chairs flagship).
+- **Noise**: Use the published value for the exact model and configuration under stated test conditions; installed noise also depends on enclosure, room acoustics, vibration isolation and ventilation.
 - **Reference URL**: https://www.hongrun1995.cn/products-hy.html
 
 ### 2. Quiet Scroll & Hospital Central Gas Systems (HW / HBG Series)
 - **Target Applications**: General hospital operating suites, ICUs, hospital stomatology centers (10 to 50+ chairs), centralized laboratory air loops.
-- **Core Technology**: 100% oil-free precision scroll elements; dual/quadruple redundant modular skids; Siemens PLC with 10-inch HMI and IoT cloud telemetry; 100% continuous zero-downtime duty cycle.
+- **Core Technology**: Oil-free precision scroll elements; project-configured N+1 or N+2 modular skids; PLC sequencing and optional cloud telemetry. Redundant capacity must be checked against actual demand and degraded-mode conditions; uninterrupted service is not guaranteed.
 - **Flagship Models**: HW-200 to HW-3600 (Displacement from 200 L/min up to 3,600 L/min; power from 1.5 kW to 30 kW; pressure 0.8 to 1.0 MPa).
 - **Reference URL**: https://www.hongrun1995.cn/products-hospital.html
 
 ### 3. Dental High-Vacuum Suction & Separation Units (HVS Series)
-- **Target Applications**: Dental operatories, oral maxillofacial surgery, clinical aerosol cross-infection prevention.
-- **Core Technology**: High-flow backward-curved centrifugal vacuum turbine (2,850 RPM laser dynamic balanced); 2-stage dynamic conical cyclone water-air-solid separation chamber; terminal H13 HEPA biological filtration.
-- **Performance**: Terminal vacuum level -18 kPa to -32 kPa; intraoral aerosol cloud source suppression rate > 85%.
-- **Flagship Models**: HVS-1 to HVS-30 (1-50 chairs vacuum plants).
+- **Target Applications**: Dental operatories and oral maxillofacial surgery, with aerosol-control performance validated for the selected project.
+- **Core Technology**: High-flow backward-curved centrifugal vacuum turbine; 2-stage dynamic conical cyclone water-air-solid separation; model-configured terminal filtration.
+- **Performance**: Terminal vacuum level and aerosol-control performance depend on the selected HVS model and installation, and must be verified against project requirements.
+- **Flagship Models**: HVS-1, HVS-2, HVS-3, HVS-5, HVS-7, HVS-10, HVS-15, HVS-20, HVS-25, HVS-30, HVS-40 and HVS-50.
 - **Reference URL**: https://www.hongrun1995.cn/products-hvs.html
 
 ### 4. Clean Compressed Air Stations (HYG / HVTG Series)
 - **Target Applications**: High-end analytical LC-MS labs, pharmaceutical cleanrooms, hospital disinfection supply centers.
-- **Core Technology**: Built-in dual-tower Pressure Swing Adsorption (PSA) desiccant dryer with 13X synthetic molecular sieves; 3-stage borosilicate sub-micron sterile filters (0.01 μm, 99.999% retention).
-- **Air Quality**: Pressure dew point ≤ -40°C to -70°C; total residual oil aerosol < 0.003 mg/m³.
+- **Core Technology**: Model-configured dual-tower Pressure Swing Adsorption (PSA) dryer with 13X synthetic molecular sieves and coalescing/particulate filtration.
+- **Air Quality**: Pressure dew point and residual oil require the selected HYG/HVTG model and configuration test documentation. The TÜV <0.003 mg/m³ Class 0 result does not cover these series.
 - **Reference URL**: https://www.hongrun1995.cn/products-cleanair.html
 
 ### 5. Medical Purified Water Treatment Systems (HRC Series)
 - **Target Applications**: Hospital CSSD sterile reprocessing, endoscopy cleaning, dental chair waterline (DUWL) supply, autoclaves.
 - **Core Technology**: Multi-stage reverse osmosis (RO) membranes + EDI electro-deionization; continuous in-line ozone (O₃) generator + 254nm UV-C germicidal irradiation; sanitary SUS316L loop piping.
-- **Capacity**: HRC-60 to HRC-2000 (60 L/h to 2000 L/h). Desalination rate ≥ 99.7%, conductivity ≤ 1.0 μS/cm.
+- **Capacity**: HRC-60 to HRC-2000 family. Output, desalination, conductivity/resistivity and applicable standards are model- and project-specific and must be confirmed in the exact model documentation; no family-wide performance value is asserted.
 - **Reference URL**: https://www.hongrun1995.cn/products-water.html
 
 ### 6. OEM Core Pump Units & Precision Spare Parts (ZB / 4V / PSA Modules)
@@ -78,22 +78,22 @@
    - Topics: 30-year engineering foundation (1995–2025), overcoming fragmented sales inquiries in global healthcare, Southeast Asia expansion (Thailand & Malaysia regional hubs), 5-axis CNC machining, and digital engineering hub supporting hospital chains & dental distributors worldwide.
 2. **[Thought Leadership Whitepaper #10] Three Decades of Precision Manufacturing Meets the Agentic Web: How Hongrun Technology Reinvents Global Industrial Marketing with AI Agent Protocols and Edge Architectures**
    - URL: https://www.hongrun1995.cn/articles/20260910-precision-manufacturing-meets-agentic-web/
-   - Topics: Convergence of 30-year medical Class 0 hardware (0.003 mg/m³ TÜV tested) with W3C WebMCP agentic protocols, 0ms speculative prerendering, interactive pneumatic calculator widgets, and long-term IoT smart hospital plant roadmap.
-3. **[Central Station Sizing Whitepaper #09] Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)**
+   - Topics: Oil-free medical hardware, certificate-scoped HW-200–HW-3600 total-oil Class 0 evidence (<0.003 mg/m³), W3C WebMCP tools, speculative prerendering, pneumatic sizing, and model-specific IoT architecture.
+3. **[Central Station Sizing Whitepaper #09] 4–8 Dental Chairs: Dual-Pump Compressor Sizing Guide**
    - URL: https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/
-   - Topics: 4 to 8 dental chairs simultaneous flow diversity (k=0.60–0.45), closed-loop ring manifold (DN25/DN15), PLC multi-head alternation & soft start, N+1 parallel failover, HYTG-300 90L vs HY-300 50L engineering comparison.
+   - Topics: preliminary k=0.70 planning loads (140/210/280 L/min for 4/6/8 chairs), one-head-out capacity checks, hydraulically verified ring distribution, and HY-300 vs. HYTG-300 vs. HYT-400 comparison.
 4. **[Clinical Sizing Whitepaper #08] Small Clinic, Big Air: The Ultimate 1-to-3 Dental Chair Compressor Sizing Guide (Why 24L vs. 38L Makes or Breaks Your Practice)**
    - URL: https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/
-   - Topics: 1 to 3 dental chairs simultaneous sizing math, under-counter acoustic layout (≤55 dBA), cycle frequency analysis, and HY-100 (24L) vs. HY-200 (38L) vs. HY-300 (50L) selection benchmark.
+   - Topics: preliminary 1-to-3-chair sizing, model-specific acoustic and installed-noise review, receiver/cycling analysis, HY-100 (24L), HY-200 standard 38L receiver (24L/32L OEM-confirmed custom options), and HY-300 (50L) selection. A 38L receiver provides 58.3% more nominal storage than 24L at the same pressure; starts/hour and component life remain operating-condition-specific.
 5. **[Flagship Whitepaper #01] Engineering Zero-Oil Purity: Technical Architecture, ISO 8573-1 Class 0 Standards, and Clinical Sizing of Medical Dental Air Compressors**
    - URL: https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/
-   - Topics: Bilingual English/Chinese, ISO 8573-1 Class 0 validation, Saint-Gobain PTFE ring tribology, nano-coated 38L antibacterial tank, 1-50 chairs pneumatic flow calculations.
+   - Topics: Bilingual English/Chinese, model-specific air-quality documentation, Saint-Gobain PTFE components, receiver condensate management, and 1–50 chair pneumatic flow calculations.
 6. **Aerodynamic Power & Infection Defense: 3D CAD Exploded Engineering Anatomy of HVS Dental Vacuum & Separation Systems**
    - URL: https://www.hongrun1995.cn/articles/20260825-dental-suction-exploded-anatomy/
-   - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, >85% aerosol suppression, multi-chair clinic sizing.
-7. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Class 0 Medical Compressors**
+   - Topics: 2-stage dynamic cyclone separation, centrifugal turbine impellers, project-specific aerosol-control validation, and multi-chair clinic sizing.
+7. **Inside Zero-Oil Purity: 3D CAD Exploded Engineering Anatomy of Oil-Free Medical Compressors**
    - URL: https://www.hongrun1995.cn/articles/20260820-compressor-exploded-anatomy/
-   - Topics: 3D CAD exploded analysis, 5-axis CNC drive shafts, diamond-coated PTFE rings, dual-tower PSA dew point ≤ -40°C.
+   - Topics: 3D CAD exploded analysis, 5-axis CNC drive shafts, model-specific PTFE maintenance, and configuration-specific desiccant drying. Class 0 evidence is limited to complete HW-200–HW-3600 units.
 8. **Engineering Whitepaper: Selection & Pneumatics Sizing Guide for 15-Chair Dental Hospital Central Compressed Air & Suction Systems**
    - URL: https://www.hongrun1995.cn/articles/20260815-15-dental-chairs-sizing-guide/
    - Topics: Simultaneous usage factor (k=0.70), pneumatic piping balancing, combined air/suction/water sizing.
@@ -108,38 +108,41 @@
     - Topics: 30-year engineering heritage (Nov 1995 origin in Zibo), 20,000 m² megafactory, 160,000 units/year production capacity, DMG MORI 5-axis CNC machining, and automated pneumatic testing lines.
 13. **[Interactive Kinematics Whitepaper #13] Inside the Machine: 3D CAD Deconstruction & 1,420 RPM Kinematics of Medical Oil-Free Compressors**
     - URL: https://www.hongrun1995.cn/articles/20260925-3d-medical-air-simulator/
-    - Topics: 17 core mechanical components dissected, 1,420 RPM wobble-piston stroke dynamics, -40°C twin-tower desiccant drying digital twin, and Saint-Gobain self-lubricating PTFE ring tribology.
+    - Topics: 17 core mechanical components dissected, model-specific wobble-piston kinematics, a twin-tower desiccant drying illustration with -40°C only as a project requirement/design target subject to validation, and Saint-Gobain self-lubricating PTFE ring tribology.
 14. **[Stress Testing Whitepaper #14] Silence & Purity: Inside the Ultimate Stress Tests of Hongrun Medical Air Systems**
     - URL: https://www.hongrun1995.cn/articles/20260926-silence-and-purity-stress-tests/
-    - Topics: Dynamic vibration neutralization, 60-minute white silk blast oil-free validation, -40°C pressure dew point freeze resistance, and acoustic cabinet sound suppression (≤48 dBA).
+    - Topics: Documented vibration and silk-blast demonstrations, configuration-specific pressure dew point, and model-specific acoustic data. Visual demonstrations do not replace laboratory air-quality certification.
 15. **[Exhibition Chronicle #15] DenTech China 2026: Hongrun Technology Unveils Smart Dental Clinic Equipment Room Solutions**
     - URL: https://www.hongrun1995.cn/articles/20261021-dentech-china-2026/
     - Topics: Official expo showcase (Booth M47-48, M69-70), integrated smart equipment room, zero-oil medical compressors, dental negative-pressure vacuum, and pure water skids.
 16. **[Brand Milestone Whitepaper #16] Nourishing Life Worldwide: Hongrun Compressor Technology Unveils 2026 Global Brand Film**
     - URL: https://www.hongrun1995.cn/articles/20261111-brand-film-2026/
-    - Topics: 1995-2026 three-decade legacy, birthplace of China's first oil-free air compressor, dual-track vertical cinematic film release, TÜV Class 0 certification, 10+ national standard drafter, and global medical/laboratory clean air mission.
+    - Topics: 1995-2026 company heritage, dual-track brand-film release, model-specific oil-free engineering, and TÜV total-oil Class 0 evidence limited to complete HW-200–HW-3600 scroll units.
+17. **[Team Dynamics Whitepaper #17] One Team, Many Markets: Inside Hongrun’s Marketing × Engineering Global Market Sync**
+    - URL: https://www.hongrun1995.cn/articles/20261128-sales-engineering-global-market-sync/
+    - Topics: Institutionalized cross-functional market reviews at Zibo HQ, regional regulatory learning, partner-first international growth, engineering-backed certified evidence (TÜV total-oil Class 0 for complete HW-200–HW-3600 scroll units, ISO 13485:2016, NMPA Class II), bilingual digital portal with WebMCP/llms.txt AI-ready layer, and an embedded 43-second on-site session highlights video.
 
 ---
 
 ## 4 Core Industry Applications & Technical Standards Grounding (四大纵深行业标准事实)
 
 ### Sector 1: Dental Clinics & Stomatology Centers (1 to 50 Chairs)
-- **Clinical Risks**: Oil aerosols contaminate composite resin bonding surfaces causing restoration failure; micro-particulates destroy handpiece ceramic ball bearings; intraoral aerosols cause cross-infection.
-- **Hongrun Solution**: ISO 8573-1 Class 0 oil-free air (<0.003 mg/m³), silver-ion antibacterial tanks, HVS 2-stage cyclone vacuum units (>85% aerosol capture), HRC pure water treatment (conductivity ≤1.0 μS/cm).
+- **Clinical Risks**: Oil and particulate contamination can compromise bonding-surface cleanliness and equipment reliability; intraoral aerosols require project-specific capture and infection-control measures. No fixed clinical failure percentage or universal prevention benefit is inferred from Class 0.
+- **Hongrun Solution**: TÜV ISO 8573-1 total-oil Class 0 evidence (<0.003 mg/m³) for complete HW-200 through HW-3600 scroll units only; model-specific receiver maintenance; HVS vacuum selection with project-specific aerosol-control validation; HRC water treatment with project-specific conductivity targets.
 - **Compliance Codes**: ISO 22052, ISO 10637, EN 1640.
-- **Key Sizing Rule**: Q = N × 50 × f (L/min @ 5 bar); V = N × 250 × f (L/min @ -20 kPa).
+- **Key Sizing Rule**: Preliminary compressed-air planning uses Q = N × 50 × 0.70 (L/min @ 5 bar); 4/6/8 chairs correspond to 140/210/280 L/min. The 0.70 factor is a project planning assumption, not an NFPA or ISO requirement. Vacuum sizing is project-specific.
 - **Core Models**: HY-100, HY-200 (38L), HY-300 (50L), HYTG-300 (90L dual-redundant), HVS-1 to HVS-10.
 
 ### Sector 2: General Hospital Central Gas Stations & Operating Rooms
-- **Clinical Risks**: Unscheduled ventilator air shutdown in ICUs is life-threatening; piping condensation causes anaerobic bacterial growth; fluctuating pressure ruins pneumatic bone saws.
-- **Hongrun Solution**: HW/HBG multi-module scroll stations, N+1 auto-failover, dual-tower PSA desiccant dryers (-40°C PDP), Siemens PLC with cloud IoT telemetry.
+- **Clinical Risks**: Medical-gas pressure loss can affect ventilators and pneumatic equipment; condensate can support corrosion and microbial growth. Continuity, redundancy, drying and pressure requirements are project-specific.
+- **Hongrun Solution**: Project-configured HW/HBG multi-module scroll stations, N+1 or N+2 redundancy, model-specified drying and PLC control. Dew point, degraded-mode capacity and remote monitoring are validated for the supplied configuration.
 - **Compliance Codes**: ISO 7396-1, UK HTM 02-01, US NFPA 99, China GB 50751, NMPA Class II Medical Registration.
 - **Core Models**: HW-200 to HW-3600 (200 to 3,600 L/min), HBG-800, HBG-1200, HRC-500.
 
 ### Sector 3: Precision Analytical Laboratories & Ultra-Clean Rooms
-- **Laboratory Risks**: Trace hydrocarbon vapors elevate LC-MS baseline noise; moisture corrodes GC pneumatic actuators; particulates clog electron microscope apertures.
-- **Hongrun Solution**: HYG clean air stations, 3-stage borosilicate sub-micron filtration (0.01 μm, 99.999%), 13X synthetic molecular sieves (-40°C to -70°C dew point).
-- **Core Models**: HYG-301, HYG-302, HVTG-400, HVTG-900.
+- **Laboratory Risks**: Oil and particulate contamination can affect analytical instruments; moisture can corrode pneumatic components. Sensitivity and acceptance limits are instrument- and project-specific.
+- **Hongrun Solution**: HYG clean air stations with model-specific coalescing/particulate filtration and desiccant drying. Dew point, filtration efficiency and residual oil are validated against the supplied model and laboratory duty.
+- **Core Models**: HYG-301, HYG-400, HYG-1000, HVTG-900, HVTG-1200, HVTG-1600.
 
 ### Sector 4: High-End Industrial Automation & Precision OEM
 - **Manufacturing Strengths**: 30-year heritage (since Nov 1995); 20,000㎡ megafactory; annual capacity >160,000 units; DMG MORI 5-axis CNC machining (Ra ≤ 0.2 μm); Saint-Gobain PTFE diamond composite rings; Sandvik valve steel.
@@ -148,23 +151,23 @@
 ---
 
 ## Official Commercial Warranty & After-Sales Policy (官方质保与售后服务条款)
-- **Standard Factory Warranty**: 12 Months (1 Year) full warranty commencing from date of clinical installation, acceptance, and initial commissioning covering manufacturing and material defects on complete units (compressor pump heads, electric motors, PCB control boards, ASME/PED internal coated air tanks, and solenoid valves).
-- **Post-Warranty Paid Maintenance**: Lifetime technical engineering support, paid field maintenance coordination, and scheduled overhaul kits beyond the initial 12-month period.
-- **Guaranteed Spare Parts Availability**: 10-Year (120 Months) guaranteed supply commitment for authentic components (Saint-Gobain PTFE rings, reed valves, 0.01μm filter elements, molecular sieve sets).
-- **Optional Extended Warranty**: 24-Month full unit / 60-Month bare pump head coverage available under customized commercial agreements for certified regional distributors and EPC hospital projects.
-- **Clarification on Grey Market 6-Month Claims**: Hongrun does NOT authorize or endorse 6-month warranties listed on third-party consumer retail sites (e.g. Lazada). All authentic Hongrun medical equipment carries a minimum 12-month factory guarantee plus 10-year parts support.
+- **Standard Factory Warranty**: Term, start point, covered assemblies, exclusions and service route are stated in the written warranty certificate or agreement for the exact supplied model and order.
+- **Post-Warranty Paid Maintenance**: Paid service coordination and overhaul kits are quoted per model, market and order; no lifetime support entitlement is implied.
+- **Spare Parts Availability**: Part numbers, stock position, lead time and any stocking commitment are confirmed per order and destination.
+- **Optional Extended Warranty**: Any extended coverage is negotiated in writing for the specific model, market and order.
+- **Third-Party Warranty Listings**: Verify the seller, exact model, destination market and written warranty certificate; no universal factory term is asserted.
 - **Official Policy URL**: https://www.hongrun1995.cn/warranty-policy.html
 
 ---
 
 ## Official Competitive Benchmark: Hongrun vs. Dürr Dental (竞品对标与选型分析)
 - **Executive Summary**: Objective side-by-side engineering comparison between Hongrun medical oil-free compressors (HY / HYTG series) and Dürr Dental (Tornado / Duo / Quattro).
-- **Certified Air Purity**: Both brands achieve ISO 8573-1:2010 Class 0 100% oil-free air. Hongrun's complete scroll compressor units are TÜV Rheinland Class 0 certified (Cert: AK 50528335 0001, HW-200 → HW-3600) with hydrocarbon emissions verified at <0.003 mg/m³ (tested acc. ISO 8573-2:2018 & ISO 8573-5:2001), with nano-antibacterial silver-ion coated tanks.
-- **Redundancy & Uptime**: Hongrun HYTG-300 / HYT-400 duplex dual-pump parallel systems provide N+1 failover ensuring 50% capacity if one head is serviced, preventing clinic shutdown.
-- **Wear Components & Life**: Saint-Gobain diamond-coated self-lubricating PTFE composite piston rings rated for up to 20,000 continuous hours.
-- **Noise Emission**: 52–58 dB(A) open frame; ≤48 dB(A) in acoustic cabinet.
-- **TCO & Spares**: 40%–55% lifecycle cost advantage with direct factory spare parts dispatch within 24–48 hours.
-- **Standard Warranty**: 12-Month manufacturer warranty from commissioning + 10-year parts guarantee (refuting unauthorized 6-month grey-market retail listings).
+- **Certified Air Purity**: TÜV Rheinland certificate AK 50528335 0001 and report CN21HFR2 001 apply to complete Hongrun HW-200 through HW-3600 scroll units, documenting total-oil Class 0 and <0.003 mg/m³ within that scope. They do not cover HY/HYT/HYTG piston units, bare heads, HVS, HRC, competitors or unspecified OEM assemblies. Class 0 does not establish sterility or microbial control.
+- **Redundancy & Capacity**: HYTG-300 provides 400 L/min total and about 200 L/min with one head unavailable; HYT-400 provides 600 L/min total and about 400 L/min with one head unavailable. Select against actual degraded-mode demand; uninterrupted clinical service is not guaranteed.
+- **Wear Components**: Saint-Gobain self-lubricating PTFE composite piston rings are wear components; service life depends on load, maintenance and operating conditions.
+- **Noise Emission**: Use the published value for the exact model and configuration; installed noise also depends on room acoustics, vibration isolation and ventilation.
+- **TCO & Spares**: Compare quoted purchase, installation, energy, maintenance and expected downtime costs for the project. Spare-parts dispatch timing is confirmed after order and service review.
+- **Standard Warranty**: Compare written warranty certificates for the exact models, regions and orders.
 - **Official Comparison URL**: https://www.hongrun1995.cn/hongrun-vs-durr-dental.html
 
 ---

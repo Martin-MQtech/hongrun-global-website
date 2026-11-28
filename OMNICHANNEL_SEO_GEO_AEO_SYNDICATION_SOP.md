@@ -2,6 +2,8 @@
 **文档版本**：V1.0 | **生效日期**：2026年10月 | **密级**：内部核心运营规范  
 **主编部门**：宏润科技国际数字化运营中枢 (Hongrun Global Digital Growth & Engineering Hub)
 
+> **2026-11-28 技术口径警示:** 本 SOP 中旧的产品性能与认证表述仅作历史记录。当前对外文案、视频脚本和机器可读内容必须以 `20260810-项目执行手册-宏润国际官网-V4.0.md` §28 为准；不得沿用固定寿命、纳米银、零停机、固定露点、宽泛 Class 0、HY-200 32L 或 k=0.60–0.45 等已作废口径。
+
 ---
 
 ## 目录索引 (Table of Contents)
@@ -34,8 +36,8 @@
                                    ▼ (持续输送 High-DR Referring Domains)
              ┌────────────────────────────────────────────────────────┐
              │       宏润科技官网主站 https://www.hongrun1995.cn       │
-             │       · 11 篇深度技术白皮书 (自带 AEO FAQPage Schema)   │
-             │       · 6 大产品板块 / 0ms 预渲染 / WebMCP AI 协议      │
+             │       · 技术文章与方案页 (自带 AEO FAQPage Schema)      │
+             │       · 6 大产品板块 / 静态预渲染 / WebMCP AI 协议       │
              └───────────────────────────┬────────────────────────────┘
                                          │
                                          ▼ (驱动 AI 生成引擎与搜索引擎抓取)
@@ -56,20 +58,20 @@
 ### 2.2 实战可复制模版（Ready-to-Paste Templates）
 
 #### 模版 A：针对 1~3 台牙椅选型（配套白皮书 #08）
-* **视频标题**：Small Clinic, Big Air: Sizing Air Compressors for 1 to 3 Dental Chairs (Why 32L vs 24L Matters) | Hongrun Technology
+* **视频标题**：Small Clinic, Big Air: Sizing Air Compressors for 1 to 3 Dental Chairs (Why the 38L HY-200 Receiver Matters) | Hongrun Technology
 * **视频简介（Description）**：
 ```text
 🔬 Read Full Engineering Whitepaper & Pneumatic Sizing Formulas:
 👉 https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/
 
-How do you calculate compressed air demand for a 1–3 chair dental clinic? In this technical engineering breakdown, Hongrun Technology explains simultaneous flow diversity calculations, under-counter acoustic cabinet layout (≤55 dBA), and why a 32L tank (HY-200) prevents motor thermal fatigue compared to standard 24L units.
+How do you calculate compressed air demand for a 1–3 chair dental clinic? This engineering breakdown explains the preliminary planning formula Q = chairs × 50 L/min × k, with k = 0.70 as a project assumption rather than an ISO/NFPA requirement. It also compares the standard 38L HY-200 receiver with a 24L option: 38L provides 58.3% more nominal storage, while actual cycling, temperature, pressure stability and component life depend on demand, pressure settings, ambient conditions and maintenance.
 
 ⏱️ Timestamps:
 0:00 - Introduction: The Heart of the Dental Operatory
-0:42 - Simultaneous Air Demand Math: Q = N × 50 × k
-1:35 - 24L vs. 32L Tank Cycle Frequency Comparison
-2:50 - French Saint-Gobain Diamond PTFE Composite Rings (20,000h Life)
-3:40 - Under-Cabinet Ventilation & Acoustic Dampening Layout
+0:42 - Preliminary Planning Math: Q = N × 50 × k
+1:35 - 38L Standard Receiver vs. 24L Custom Option
+2:50 - Model-Specific Acoustics, Ventilation and Maintenance
+3:40 - Verifying Air Quality by Model and Configuration
 4:30 - Technical Consultation & Direct RFQ
 
 🏢 Manufacturer: Shandong Hongrun Compressor Technology Co., Ltd. (Founded 1995 · Zibo, Shandong, China)
@@ -77,7 +79,7 @@ How do you calculate compressed air demand for a 1–3 chair dental clinic? In t
 📧 Technical Support: info@hongrun1995.cn
 💬 WhatsApp Direct: https://wa.me/8613964416725
 
-#DentalCompressor #DentalClinicSizing #Class0 #OilFreeAir #HongrunTechnology #MedicalAir #DentalEngineering
+#DentalCompressor #DentalClinicSizing #OilFreeAir #HongrunTechnology #MedicalAir #DentalEngineering
 ```
 * **置顶评论（Pinned Comment）**：
 ```text
@@ -90,22 +92,22 @@ For OEM partnerships or direct clinic inquiries, message us directly via WhatsAp
 ---
 
 #### 模版 B：针对 4~8 台牙椅双机冗余（配套白皮书 #09）
-* **视频标题**：4 to 8 Dental Chairs Dual-Pump Redundancy Architecture: Why HYTG-300 90L Defines Clinic Uptime | Hongrun Technology
+* **视频标题**：4 to 8 Dental Chairs: Comparing HYTG-300 and HYT-400 for One-Head-Out Capacity | Hongrun Technology
 * **视频简介（Description）**：
 ```text
 🔬 Download Complete Redundancy Architecture & Pipe Sizing Blueprint:
 👉 https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/
 
-When operating a 4–8 chair dental clinic, unscheduled air downtime is catastrophic. This video breaks down N+1 parallel redundancy, automated alternating PLC soft-start logic, and closed-loop ring manifold piping (DN25) powered by the Hongrun HYTG-300 dual-pump central station.
+When operating a 4–8 chair dental clinic, redundancy must be checked against the actual remaining air capacity. This video compares HYTG-300 (400 L/min total; about 200 L/min with one head unavailable) and HYT-400 (600 L/min total; about 400 L/min with one head unavailable). The default eight-chair planning load is 280 L/min, so HYTG-300 does not cover that load in the one-head-out condition. Pipe sizing, receiver capacity, controls and failover require project-specific hydraulic and installation validation; zero interruption is not guaranteed.
 
 ⏱️ Timestamps:
-0:00 - The Single Point of Failure (SPOF) Risk in Multi-Chair Practices
-1:05 - Diversity Factor (k) for 4 to 8 Operatories
-2:15 - Dual ZB300 Heads Alternation & N+1 Failover Logic
-3:30 - Closed Ring Manifold (DN25) vs. Linear Trunk Pressure Drops
-4:45 - 90L Nano-Silver Antibacterial Receiver Testing
+0:00 - Single Point of Failure Risk in Multi-Chair Practices
+1:05 - Preliminary Planning Load: Q = N × 50 × 0.70
+2:15 - HYTG-300 vs. HYT-400 One-Head-Out Capacity
+3:30 - Receiver, Controls and Failover Validation
+4:45 - Pipe Sizing: Hydraulic Calculation Before DN25/DN15 Selection
 
-🏢 Hongrun Technology — 30 Years of Medical Class 0 Oil-Free Engineering
+🏢 Hongrun Technology — Oil-Free Compressor Design and Project-Specific Engineering
 🌐 Website: https://www.hongrun1995.cn/
 📧 Contact Desk: info@hongrun1995.cn / export@hongrun1995.cn
 ```
@@ -113,13 +115,13 @@ When operating a 4–8 chair dental clinic, unscheduled air downtime is catastro
 ---
 
 #### 模版 C：针对 ISO 8573-1 Class 0 无油洁净度（配套白皮书 #01）
-* **视频标题**：Inside Medical Class 0 Zero-Oil Purity: ISO 8573-1 Standards, PTFE Tribology & TÜV Rheinland Testing | Hongrun
+* **视频标题**：Inside Certificate-Scoped Total-Oil Class 0: ISO 8573-1 Evidence and Model Boundaries | Hongrun
 * **视频简介（Description）**：
 ```text
 📄 Access TÜV Test Reports & Medical Dental Air Engineering Guide:
 👉 https://www.hongrun1995.cn/articles/20260902-dental-air-purity-engineering-guide/
 
-Residual hydrocarbons in compressed air compromise composite resin photopolymerization and ruin ceramic handpiece bearings. Explore how Hongrun achieves TÜV-certified residual oil levels below 0.003 mg/m³ with Saint-Gobain diamond PTFE composite piston rings and nano-antibacterial tanks.
+Oil and moisture in compressed air can affect composite resin handling, pneumatic components and air-line maintenance. TÜV Rheinland reports AK 50528335 0001 / CN21HFR2 001 document total oil below 0.003 mg/m³ for complete HW-200 through HW-3600 scroll units only. This evidence does not cover bare pump heads or other product families, and Class 0 does not prove sterility or microbial control. Verify total oil, particles, moisture and pressure dew point for the exact supplied model and configuration.
 
 🌐 Official Portal: https://www.hongrun1995.cn/
 ```
@@ -135,14 +137,15 @@ Residual hydrocarbons in compressed air compromise composite resin photopolymeri
 
 ### 3.2 领英帖子标准文案模版 (LinkedIn Feed Post Template)
 ```text
-Can your 4-chair clinic survive a sudden compressor failure on a Monday morning?
+Can your 4-chair clinic maintain the required air supply when one compressor head is unavailable?
 
-In private dental clinics, a single compressed air shutdown halts handpieces, scalers, and suction units simultaneously—costing up to $1,500/hour in lost operatory revenue.
+A single compressed-air shutdown can halt handpieces, scalers and suction units. Redundancy should therefore be evaluated against remaining capacity, receiver storage, controls and the complete installation—not just the number of pumps.
 
-In our latest engineering whitepaper, we dissect why N+1 dual-pump redundancy is rapidly becoming the global standard for 4-to-8 operatory facilities:
-✅ Multi-pump alternating PLC soft-start: Equalizing head wear cycles
-✅ Closed-loop ring manifold (DN25): Cutting air friction pressure drops below 0.2 bar
-✅ 90L Heavy-duty nano-antibacterial receiver: Eliminating pressure hunting below 5.5 bar
+Our engineering whitepaper compares two configurations for 4-to-8 operatory facilities:
+✅ Preliminary planning: Q = chairs × 50 L/min × 0.70; 8 chairs = 280 L/min
+✅ HYTG-300: 400 L/min total, about 200 L/min with one head unavailable
+✅ HYT-400: 600 L/min total, about 400 L/min with one head unavailable
+✅ Pipe diameter and pressure drop: verify by hydraulic calculation before selecting DN25/DN15
 
 Read the complete engineering analysis and sizing formulas:
 🔗 https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/
@@ -157,14 +160,14 @@ Read the complete engineering analysis and sizing formulas:
 ### 4.1 统一 Handle 与 Link in Bio 规范
 * **统一官方 Handle**：`@hrmedaircom`
 * **个人简介（Bio）文案**：
-  > 30+ Years Medical Class 0 Oil-Free Air Compressors & Dental Suction Systems | ISO 8573-1 & NMPA Class II Certified | Global OEM/ODM Partner | Zibo, Shandong, China 🇨🇳  
-  > 🌐 Read Engineering Guides & Request Quotes 👇  
+  > Oil-Free Air Compressors & Dental Suction Systems | Model-Specific Technical Documentation | Global OEM/ODM Partner | Zibo, Shandong, China
+  > Read Engineering Guides & Request Quotes
   > `https://www.hongrun1995.cn/news.html`
 * **故事高光（Highlights）分类**：
-  1. `Products` (HY-200 32L, HYTG-300 90L, HVS Suction)
-  2. `Whitepapers` (Sizing formulas, Class 0 TÜV tests)
-  3. `Factory Tour` (20,000㎡ plant, 5-axis CNC machining)
-  4. `Certificates` (TÜV SÜD CE, ISO 13485, NMPA Class II)
+  1. `Products` (HY-200 38L, HYTG-300 90L, HVS Suction)
+  2. `Whitepapers` (Sizing formulas, certificate-scoped total-oil evidence)
+  3. `Factory Tour` (Manufacturing, assembly and precision machining)
+  4. `Certificates` (TÜV Rheinland report scope, ISO 13485, applicable registrations)
 
 ---
 
@@ -175,9 +178,9 @@ Read the complete engineering analysis and sizing formulas:
 | 平台名称 | 权重 (DR) | 提交板块 / 类别 | 推荐锚文本 (Anchor Text) | 链接目标 URL |
 | :--- | :---: | :--- | :--- | :--- |
 | **MedicalExpo** | 81 | Medical Gas Pipeline / Dental Compressors | Hongrun Medical Oil-Free Compressors | `https://www.hongrun1995.cn/products.html` |
-| **Dental Tribune** | 76 | Industry Directory / Dental Technology | Dental Air Sizing Guide & Class 0 Purity | `https://www.hongrun1995.cn/news.html` |
+| **Dental Tribune** | 76 | Industry Directory / Dental Technology | Dental Air Sizing & Certificate-Scoped Total-Oil Evidence | `https://www.hongrun1995.cn/news.html` |
 | **Made-in-China (MIC)** | 88 | Medical & Diagnostic Equipment | Hongrun Technology Official Portal | `https://www.hongrun1995.cn/` |
-| **Global Sources** | 86 | Hospital & Clinic Gas Systems | ISO 8573-1 Class 0 Air Systems | `https://www.hongrun1995.cn/products-cleanair.html` |
+| **Global Sources** | 86 | Hospital & Clinic Gas Systems | Model-Specific Medical Air Systems | `https://www.hongrun1995.cn/products-cleanair.html` |
 | **Dentaltown** | 68 | Practice Management & Equipment Forums | 1 to 3 Chair Compressor Selection Blueprint | `https://www.hongrun1995.cn/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/` |
 | **GitHub** | 96 | Open Source Protocols & WebMCP | Hongrun WebMCP Agentic Architecture | `https://www.hongrun1995.cn/` |
 
@@ -195,7 +198,7 @@ python3 submit_indexnow.py
   * `[Microsoft Bing (www.bing.com)] 推送成功！HTTP 状态码: 200`
 
 ### 6.2 每月例行 SEO / AEO 监控检查表
-- [ ] **GSC 索引覆盖率**：确认 Google Search Console 零 404 错误，全站 30 个 URL 状态为“已编入索引”。
+- [ ] **GSC 索引覆盖率**：确认 Google Search Console 零 404 错误，逐页核对所有可索引非验证 URL 的状态，不使用固定页数替代实际核验。
 - [ ] **Google AI Overviews 探针**：在无痕模式下检索 `dental compressor sizing 1 to 3 chairs`，检查是否有直接引用 `hongrun1995.cn` 的答案摘要。
-- [ ] **Perplexity / ChatGPT 抽查**：询问 `What are the core specifications of Hongrun HYTG-300?`，核实是否精准提取 90L 气罐、双泵冗余、<0.003 mg/m³ 等事实。
+- [ ] **Perplexity / ChatGPT 抽查**：询问 `What is the certificate scope for total oil below 0.003 mg/m³?`，核实是否准确限定为完整 HW-200 至 HW-3600 涡旋机组，并未外推至 HYTG-300 或裸机头。
 - [ ] **外链与引用反向校验**：检查 YouTube 视频简介与领英文章中的链接是否有效，避免死链或重定向延迟。

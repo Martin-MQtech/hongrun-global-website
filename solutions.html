@@ -3,63 +3,13 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Turnkey Engineering Solutions &amp; Application Areas | Hongrun Technology</title>
+<title>Turnkey Medical Air &amp; Water Solutions | Hongrun</title>
   <!-- Technical SEO & GEO Meta Hierarchy -->
   <meta name="description" content="Turnkey medical gas & pneumatic engineering solutions for private dental clinics, stomatology hospitals, clinical labs, and hospital central pipeline networks.">
   <meta name="keywords" content="dental clinic engineering, dental piping design, hospital medical gas turnkey, 15 chair clinic sizing, IoT pneumatic monitoring">
@@ -67,7 +17,7 @@
 
   <!-- OpenGraph Protocol -->
   <meta property="og:site_name" content="Hongrun Technology">
-  <meta property="og:title" content="Turnkey Engineering Solutions &amp; Application Areas | Hongrun Technology">
+  <meta property="og:title" content="Turnkey Medical Air &amp; Water Solutions | Hongrun">
   <meta property="og:description" content="Turnkey medical gas & pneumatic engineering solutions for private dental clinics, stomatology hospitals, clinical labs, and hospital central pipeline networks.">
   <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/solutions/diagram-hospital-system.jpg">
   <meta property="og:url" content="https://www.hongrun1995.cn/solutions.html">
@@ -75,7 +25,7 @@
 
   <!-- Twitter / X Card Hierarchy -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Turnkey Engineering Solutions &amp; Application Areas | Hongrun Technology">
+  <meta name="twitter:title" content="Turnkey Medical Air &amp; Water Solutions | Hongrun">
   <meta name="twitter:description" content="Turnkey medical gas & pneumatic engineering solutions for private dental clinics, stomatology hospitals, clinical labs, and hospital central pipeline networks.">
   <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/solutions/diagram-hospital-system.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
@@ -136,7 +86,7 @@
       "name": "How to calculate medical air compressor capacity for a dental clinic?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The required compressed air volume is calculated by Q = N × 50 × f (L/min @ 5 bar), where N is the total number of dental treatment chairs, 50 L/min is the baseline air consumption per chair (handpiece + syringe), and f is the simultaneous diversity factor (0.70 for 3–5 chairs, 0.60 for 6–10 chairs). For 4–8 chairs, Hongrun recommends the HYTG-300 dual-pump redundant station (400 L/min, 90L tank)."
+        "text": "Q = chairs × 50 L/min × 0.70 is a preliminary planning assumption; 0.70 is not an ISO/NFPA requirement. Confirm chair diversity, instrument demand, duty cycle, receiver capacity, system losses and exact model documentation before selection. Redundancy can reduce single-point failure risk; remaining capacity, receiver, controls and complete installation must be validated. Zero downtime is not guaranteed."
       }
     },
     {
@@ -144,23 +94,23 @@
       "name": "What international standards govern hospital medical compressed air pipeline systems?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hospital central compressed air systems are governed by ISO 7396-1 (Medical gas pipeline systems), UK NHS HTM 02-01, US NFPA 99, and China GB 50751. Air purity must meet ISO 8573-1 Class 0 (Hongrun measures total hydrocarbon residual oil at 0.003 mg/m³) with a pressure dew point of -40°C to prevent bacterial biofilm formation in hospital distribution loops."
+        "text": "Hospital central compressed air systems are assessed against applicable requirements such as ISO 7396-1, UK NHS HTM 02-01, US NFPA 99, and China GB 50751. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Dew point, filtration and installation air quality require configuration-specific validation."
       }
     },
     {
       "@type": "Question",
-      "name": "Why is certified Class 0 oil-free air required for LC-MS and GC analytical laboratories?",
+      "name": "What should laboratories verify when selecting compressed air for LC-MS and GC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Trace hydrocarbon vapors and volatile organic compounds (VOCs) elevate mass spectrometer (LC-MS) baseline noise and produce phantom ion peaks, destroying trace detection sensitivity. Hongrun HYG series clean air stations feature sub-micron 0.01 μm borosilicate filtration and dual-tower 13X synthetic molecular sieves (-40°C to -70°C dew point) to ensure zero hydrocarbon contamination."
+        "text": "Laboratories should compare the instrument manufacturer's requirements with model-specific documentation for total oil, particles, moisture, pressure dew point and relevant contaminants. HYG/HVTG purification performance depends on exact model, configuration, inlet conditions, flow, dryer and filter selection, and maintenance. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control."
       }
     },
     {
       "@type": "Question",
-      "name": "Why is dual-pump redundancy essential for 4 to 8 dental chair clinics?",
+      "name": "How can dual-pump redundancy support 4 to 8 dental chair clinics?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In a 4 to 8 chair clinic, a single compressor failure stops multiple operatory procedures simultaneously. Hongrun HYTG-300 features two independent synchronized ZB300 pump heads on a single 90L tank with automatic PLC alternation. If one pump head requires routine maintenance, the second head maintains continuous clinical air supply without downtime."
+        "text": "Redundancy can reduce single-point failure risk; remaining capacity, receiver, controls and complete installation must be validated. Zero downtime is not guaranteed. Verify exact model documentation for head configuration, flow, receiver and degraded-mode capacity against the project's preliminary demand and applicable requirements."
       }
     }
   ]
@@ -213,8 +163,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -263,7 +217,7 @@
             <a href="/products-hy.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HY Dental Compressors (1–10 Chairs)</a>
             <a href="/products-hospital.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HW Hospital Scroll Systems</a>
             <a href="/products-hvs.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HVS Dental Suction Plants</a>
-            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (-40°C Dew Point)</a>
+            <a href="/products-cleanair.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HYG/HVTG Clean Air (Configuration-Specific Drying)</a>
             <a href="/products-water.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">HRC Pure Water &amp; Disinfection</a>
             <a href="/products-core.html" class="block px-3 py-1.5 text-xs text-slate-600 hover:text-brand-blue hover:bg-slate-50 rounded">Core Pump Heads &amp; Spares</a>
           </div>
@@ -302,7 +256,7 @@
 
 
 <!-- Hero -->
-<main id="main-content">
+<main id="main-content" tabindex="-1">
 <section class="relative pt-20 overflow-hidden bg-slate-900">
   <div class="relative h-[380px] lg:h-[440px]">
     <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('assets/images/solutions/app-dental-clinic.webp')"></div>
@@ -325,7 +279,7 @@
     <div class="text-center mb-16">
       <div class="inline-block text-brand-blue text-xs font-bold uppercase tracking-widest mb-3">Core Application Sectors</div>
       <h2 class="text-3xl font-extrabold text-brand-dark mb-4 font-display tracking-tight">Four Specialised Field Applications</h2>
-      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Meeting strict sterile medical standards, precision instrument analytics, and clean manufacturing requirements.</p>
+      <p class="text-slate-500 max-w-2xl mx-auto text-sm">Supporting project-specific medical, analytical and clean-manufacturing requirements; air and water quality are verified for the complete supplied system.</p>
     </div>
 
     <!-- Application 01: Dental Clinics -->
@@ -337,12 +291,12 @@
         </div>
         <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Dental Clinics &amp; Stomatology Centers (1 to 50 Chairs)</h3>
         <p class="text-slate-600 mb-5 leading-relaxed text-sm">
-          Complete clinical ecosystem covering compressed air, dynamic fluid separation, and sterile waterline loops. Eliminating oil aerosols (<0.003 mg/m³) prevents composite restoration bonding failures, while HVS high-vacuum suction suppresses over 85% of intraoral biohazard aerosol plumes.
+          Complete clinical ecosystem covering model-documented oil-free air, dynamic fluid separation, and treated waterline loops. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.
         </p>
 
         <!-- Purity & Standards Badges -->
         <div class="flex flex-wrap items-center gap-2 mb-5">
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-shield-halved mr-1"></i> ISO 8573-1 Class 0</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-shield-halved mr-1"></i> Model-Specific Air Quality</span>
           <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-wind mr-1"></i> ISO 22052 Dental Air</span>
           <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-lungs mr-1"></i> ISO 10637 Suction</span>
           <span class="text-[11px] font-bold px-2.5 py-1 bg-amber-50 text-amber-700 rounded border border-amber-200"><i class="fa-solid fa-certificate mr-1"></i> NMPA Class II</span>
@@ -358,7 +312,7 @@
             </a>
             <a href="products-hy.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HYTG-300 (90L)</span>
-              <span class="text-[11px] text-slate-500">4-8 Chairs Dual-Pump</span>
+              <span class="text-[11px] text-slate-500">4-Chair Redundancy Example</span>
             </a>
             <a href="products-hvs.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HVS-5 / HVS-10</span>
@@ -413,14 +367,14 @@
         </div>
         <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Hospital &amp; Central Gas Pipeline Engineering</h3>
         <p class="text-slate-600 mb-5 leading-relaxed text-sm">
-          Certified NMPA Class II Medical Device central compressor and vacuum skids (HW / HBG series). Engineered to deliver continuous, zero-interruption medical breathing air and surgical drive air to intensive care units (ICUs), operating theatres, and central sterilization (CSSD).
+          HW / HBG central compressor and vacuum skids are supplied within their applicable medical-device certification scope. N+1 or N+2 arrangements can improve availability only when remaining capacity, receiver storage, controls and the complete installation are validated against clinical demand; zero interruption is not guaranteed.
         </p>
 
         <!-- Purity & Standards Badges -->
         <div class="flex flex-wrap items-center gap-2 mb-5">
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-hospital-user mr-1"></i> ISO 7396-1 Pipeline System</span>
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-temperature-arrow-down mr-1"></i> -40°C Pressure Dew Point</span>
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-clipboard-check mr-1"></i> UK HTM 02-01 / NFPA 99</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-hospital-user mr-1"></i> ISO 7396-1 Design Review</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-temperature-arrow-down mr-1"></i> Configuration-Specific Pressure Dew Point</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-clipboard-check mr-1"></i> Applicable UK HTM 02-01 / NFPA 99</span>
           <span class="text-[11px] font-bold px-2.5 py-1 bg-amber-50 text-amber-700 rounded border border-amber-200"><i class="fa-solid fa-network-wired mr-1"></i> N+1 / N+2 Redundancy</span>
         </div>
 
@@ -448,7 +402,7 @@
           <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Hospital Engineering Whitepapers:</span>
           <div class="flex flex-wrap gap-2 text-xs">
             <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
-              <i class="fa-solid fa-certificate text-teal-500"></i> Whitepaper #07: ISO 8573-1 Class 0 Medical Air Architecture &rarr;
+              <i class="fa-solid fa-certificate text-teal-500"></i> Whitepaper #07: Dental Air Purity Engineering Guide &rarr;
             </a>
             <a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
               <i class="fa-solid fa-diagram-project text-sky-500"></i> Whitepaper #04: 15+ Chair Hospital Pneumatic Center CAD &rarr;
@@ -471,14 +425,14 @@
         </div>
         <h3 class="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-3 font-display tracking-tight">Analytical &amp; Scientific Research Laboratories</h3>
         <p class="text-slate-600 mb-5 leading-relaxed text-sm">
-          Ultra-pure, continuous carrier gas supplies for mass spectrometry (LC-MS / LC-MS/MS), gas chromatography (GC / GC-MS), and nuclear magnetic resonance (NMR). Total hydrocarbon removal prevents analytical baseline drift, protecting sensitive detector filaments.
+          Application-specific air supplies for mass spectrometry (LC-MS / LC-MS/MS), gas chromatography (GC / GC-MS), and nuclear magnetic resonance (NMR). Required purity, hydrocarbon limits, pressure dew point, flow, and redundancy must be validated against the selected instrument manufacturer’s specification and the delivered configuration.
         </p>
 
         <!-- Purity & Standards Badges -->
         <div class="flex flex-wrap items-center gap-2 mb-5">
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-filter mr-1"></i> 0.01 μm Sub-Micron Filtration</span>
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-droplet-slash mr-1"></i> -40°C to -70°C Dew Point</span>
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-microscope mr-1"></i> Zero Hydrocarbon Noise</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-filter mr-1"></i> Configuration-Specific Filtration</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-droplet-slash mr-1"></i> Documented Pressure Dew Point</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-microscope mr-1"></i> Model-Specific Hydrocarbon Data</span>
         </div>
 
         <!-- Mesh Interconnection: Recommended Products Matrix -->
@@ -486,11 +440,11 @@
           <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Recommended Analytical Supply Units:</span>
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
             <a href="products-cleanair.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
-              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HYG-301 / HYG-302</span>
-              <span class="text-[11px] text-slate-500">LC-MS Clean Air Station</span>
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HYG-1000</span>
+              <span class="text-[11px] text-slate-500">Configuration-Dependent Clean Air</span>
             </a>
             <a href="products-cleanair.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
-              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HVTG-400 / HVTG-900</span>
+              <span class="block font-bold text-brand-dark group-hover:text-brand-blue">HVTG-900 / HVTG-1200</span>
               <span class="text-[11px] text-slate-500">High-Purity Laboratory Units</span>
             </a>
             <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
@@ -505,10 +459,10 @@
           <span class="block text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">Technical Laboratory References:</span>
           <div class="flex flex-wrap gap-2 text-xs">
             <a href="/articles/20260902-dental-air-purity-engineering-guide/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
-              <i class="fa-solid fa-file-contract text-sky-500"></i> Zero-Oil Class 0 Testing Dossier &rarr;
+              <i class="fa-solid fa-file-contract text-sky-500"></i> Whitepaper #01: Complete-HW Total-Oil Class 0 Scope &rarr;
             </a>
             <a href="/articles/20260820-compressor-exploded-anatomy/" class="text-brand-blue hover:underline font-semibold flex items-center gap-1 bg-white px-2.5 py-1 rounded border border-slate-200">
-              <i class="fa-solid fa-cube text-teal-500"></i> Whitepaper #05: 3D CAD Anatomy of Class 0 Compressors &rarr;
+              <i class="fa-solid fa-cube text-teal-500"></i> Whitepaper #05: 3D CAD Anatomy &amp; Model-Specific Air Quality &rarr;
             </a>
           </div>
         </div>
@@ -538,8 +492,8 @@
 
         <!-- Purity & Standards Badges -->
         <div class="flex flex-wrap items-center gap-2 mb-5">
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-microchip mr-1"></i> DMG MORI 5-Axis CNC (Ra ≤ 0.2 μm)</span>
-          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-ring mr-1"></i> Saint-Gobain PTFE (20,000h)</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-sky-50 text-brand-blue rounded border border-sky-200"><i class="fa-solid fa-microchip mr-1"></i> DMG MORI 5-Axis CNC · Model-Specific Tolerances</span>
+          <span class="text-[11px] font-bold px-2.5 py-1 bg-teal-50 text-teal-700 rounded border border-teal-200"><i class="fa-solid fa-ring mr-1"></i> Saint-Gobain PTFE · Model-Specific Service Life</span>
           <span class="text-[11px] font-bold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded border border-indigo-200"><i class="fa-solid fa-industry mr-1"></i> 160,000 Units Annual Capacity</span>
         </div>
 
@@ -553,11 +507,11 @@
             </a>
             <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">4V Cylinder Blocks</span>
-              <span class="text-[11px] text-slate-500">2.2kW – 3.0kW Bare Assemblies</span>
+              <span class="text-[11px] text-slate-500">Verify exact model documentation</span>
             </a>
             <a href="products-core.html" class="p-2 bg-white rounded border border-slate-200 hover:border-brand-blue hover:shadow-sm transition block group">
               <span class="block font-bold text-brand-dark group-hover:text-brand-blue">Saint-Gobain Rings</span>
-              <span class="text-[11px] text-slate-500">Diamond-Coated PTFE Seals</span>
+              <span class="text-[11px] text-slate-500">PTFE Seals · Verify Exact Model Documentation</span>
             </a>
           </div>
         </div>
@@ -600,7 +554,7 @@
         Dental Operatory <span class="text-sky-400">Pneumatic Sizing Calculator</span>
       </h2>
       <p class="text-slate-300 text-sm max-w-2xl mx-auto mt-2 font-light">
-        Instant dynamic calculation for Class 0 oil-free air flow (Q = N × 50 × f) and high-vacuum suction demand. 
+        Preliminary air-flow calculation (Q = N × 50 × f) and high-vacuum suction demand, subject to engineering validation.
         Engineered for clinic owners, dental architects, and automated AI browser agents.
       </p>
     </div>
@@ -629,12 +583,12 @@
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Simultaneous Usage Factor (f)</label>
           <div class="grid grid-cols-3 gap-2" id="factor-buttons">
-            <button type="button" data-factor="0.6" class="factor-btn py-2 text-xs font-semibold rounded border border-slate-600 bg-slate-700 text-slate-200 hover:border-sky-400 transition">0.60 (Conservative)</button>
-            <button type="button" data-factor="0.7" class="factor-btn active py-2 text-xs font-semibold rounded border border-sky-400 bg-sky-500/20 text-white transition">0.70 (Standard)</button>
-            <button type="button" data-factor="0.8" class="factor-btn py-2 text-xs font-semibold rounded border border-slate-600 bg-slate-700 text-slate-200 hover:border-sky-400 transition">0.80 (Intensive)</button>
+            <button type="button" data-factor="0.6" class="factor-btn py-2 text-xs font-semibold rounded border border-slate-600 bg-slate-700 text-slate-200 hover:border-sky-400 transition">0.60 (Lower Scenario)</button>
+            <button type="button" data-factor="0.7" class="factor-btn active py-2 text-xs font-semibold rounded border border-sky-400 bg-sky-500/20 text-white transition">0.70 (Planning Default)</button>
+            <button type="button" data-factor="0.8" class="factor-btn py-2 text-xs font-semibold rounded border border-slate-600 bg-slate-700 text-slate-200 hover:border-sky-400 transition">0.80 (Higher Scenario)</button>
           </div>
           <p class="text-[11px] text-slate-400 mt-1.5 leading-relaxed">
-            *ISO 7396-1 recommends 0.70 for commercial dental practices with shared peak procedure hours.
+            Q = chairs × 50 L/min × 0.70 is a preliminary planning assumption; 0.70 is not an ISO/NFPA requirement.
           </p>
         </div>
 
@@ -653,13 +607,13 @@
         <div class="grid grid-cols-2 gap-4 pb-5 border-b border-slate-800">
           <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1"><i class="fa-solid fa-wind text-sky-400 mr-1"></i> Compressed Air Required</span>
-            <div id="air-flow-out" class="font-display font-extrabold text-2xl text-white">210 <span class="text-xs text-sky-300 font-sans">L/min @ 5 bar</span></div>
-            <span class="text-[11px] text-slate-400 font-mono">ISO 8573-1 Class 0 (Zero-Oil)</span>
+            <div id="air-flow-out" class="font-display font-extrabold text-2xl text-white">210 <span class="text-xs text-sky-300 font-sans">L/min preliminary</span></div>
+            <span class="text-[11px] text-slate-400 font-mono">Oil-Free Design · Model-Specific Data</span>
           </div>
           <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700">
             <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1"><i class="fa-solid fa-arrows-to-circle text-amber-400 mr-1"></i> Vacuum Suction Required</span>
-            <div id="suction-flow-out" class="font-display font-extrabold text-2xl text-white">1050 <span class="text-xs text-amber-300 font-sans">L/min @ -20 kPa</span></div>
-            <span class="text-[11px] text-slate-400 font-mono">2-Stage Cyclone Separation</span>
+            <div id="suction-flow-out" class="font-display font-extrabold text-2xl text-white">Project-specific <span class="text-xs text-amber-300 font-sans">flow &amp; vacuum</span></div>
+            <span class="text-[11px] text-slate-400 font-mono">Verify exact model documentation</span>
           </div>
         </div>
 
@@ -669,8 +623,8 @@
             <div class="w-8 h-8 rounded bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 text-sm mt-0.5"><i class="fa-solid fa-compressor"></i></div>
             <div class="flex-1">
               <span class="text-[11px] font-bold uppercase text-slate-400 tracking-wider">Recommended Medical Compressor</span>
-              <div id="rec-compressor" class="font-bold text-sm text-sky-300">HYTG-300 (2.2kW Dual ZB300 Heads, 90L Tank, 400 L/min)</div>
-              <p id="rec-comp-note" class="text-xs text-slate-400 mt-0.5">Dual-head redundancy allows continuous operation during scheduled maintenance.</p>
+              <div id="rec-compressor" class="font-bold text-sm text-sky-300">Evaluate HYT-400 / Engineered Multi-Head Plant; Verify Exact Model Documentation</div>
+              <p id="rec-comp-note" class="text-xs text-slate-400 mt-0.5">Confirm project demand, losses, receiver, controls and degraded-mode capacity. Redundancy can reduce single-point failure risk; zero downtime is not guaranteed.</p>
             </div>
           </div>
 
@@ -678,16 +632,16 @@
             <div class="w-8 h-8 rounded bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 text-sm mt-0.5"><i class="fa-solid fa-fan"></i></div>
             <div class="flex-1">
               <span class="text-[11px] font-bold uppercase text-slate-400 tracking-wider">Recommended Dental Suction Unit</span>
-              <div id="rec-suction" class="font-bold text-sm text-amber-300">HVS-600 High-Vacuum Suction Unit (1.5kW, 1200 L/min)</div>
-              <p id="rec-suct-note" class="text-xs text-slate-400 mt-0.5">Eliminates &gt;85% aerosol spray cross-infection at the operatory boundary (Koch &amp; Graetz 2021).</p>
+              <div id="rec-suction" class="font-bold text-sm text-amber-300">Evaluate HVS-5 / HVS-10 / Engineered Plant; Verify Exact Model Documentation</div>
+              <p id="rec-suct-note" class="text-xs text-slate-400 mt-0.5">Flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.</p>
             </div>
           </div>
         </div>
 
         <!-- Action CTAs -->
         <div class="pt-2 flex flex-col sm:flex-row gap-3 items-center justify-between">
-          <a id="quote-with-config" href="contact.html?chairs=6&compressor=HYTG-300&suction=HVS-600" class="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-2.5 rounded-sm font-bold text-xs uppercase tracking-wider transition shadow-lg inline-flex items-center justify-center gap-2">
-            <span>Lock Config &amp; Request Engineering Quotation</span>
+          <a id="quote-with-config" href="contact.html?chairs=6&compressor=model-specific-review&suction=model-specific-review" class="w-full sm:w-auto bg-gradient-to-r from-brand-accent to-brand-gold hover:from-brand-blue hover:to-brand-deep text-white px-6 py-2.5 rounded-sm font-bold text-xs uppercase tracking-wider transition shadow-lg inline-flex items-center justify-center gap-2">
+            <span>Review Planning Scenario &amp; Request Engineering Quotation</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
           <a href="/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/" class="text-xs text-sky-300 hover:text-white underline underline-offset-4 transition font-medium">
@@ -720,10 +674,9 @@
     display.textContent = n + (n === 1 ? ' Chair' : ' Chairs');
 
     var airFlow = Math.round(n * 50 * currentFactor);
-    var suctionFlow = Math.round(n * 250 * currentFactor);
 
-    airOut.innerHTML = airFlow + ' <span class="text-xs text-sky-300 font-sans">L/min @ 5 bar</span>';
-    suctionOut.innerHTML = suctionFlow + ' <span class="text-xs text-amber-300 font-sans">L/min @ -20 kPa</span>';
+    airOut.innerHTML = airFlow + ' <span class="text-xs text-sky-300 font-sans">L/min preliminary</span>';
+    suctionOut.innerHTML = 'Project-specific <span class="text-xs text-amber-300 font-sans">flow &amp; vacuum</span>';
 
     var compModel = "";
     var compDesc = "";
@@ -733,40 +686,40 @@
     var suctNote = "";
 
     if (n <= 2) {
-      compModel = "HY-1.5";
-      compDesc = "HY-1.5 Silent Cabinet Dental Compressor (1.1kW, 120 L/min, 50L Tank)";
-      compNote = "Quiet acoustic enclosure (52 dBA) fits under clinic operatory counter.";
-      suctModel = "HVS-300";
-      suctDesc = "HVS-1 Dry Vacuum Suction Unit (0.75kW, 600 L/min)";
-      suctNote = "Automatic float drainage with compact footprint.";
+      compModel = "HY Series / Engineered Plant";
+      compDesc = "Evaluate HY-100 / HY-200; verify exact model documentation";
+      compNote = "Confirm model flow, power, receiver, duty cycle, electrical supply and air-quality documents against project requirements.";
+      suctModel = "HVS Series / Engineered Plant";
+      suctDesc = "Evaluate HVS-1 / HVS-3; verify exact model documentation";
+      suctNote = "Flow, vacuum, noise, separation and aerosol control are model/configuration/installation-specific; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.";
     } else if (n <= 5) {
-      compModel = "HY-2.2 / HYTG-300";
-      compDesc = "HY-2.2 (2.2kW, 240 L/min, 90L) or HYTG-300 Dual-Pump Station";
-      compNote = "Twin head redundancy ensures uninterrupted patient flow.";
-      suctModel = "HVS-600";
-      suctDesc = "HVS-600 High-Vacuum Suction Unit (1.5kW, 1200 L/min)";
-      suctNote = "Dual-stage cyclone fluid separation with continuous drain.";
+      compModel = "HY / HYTG Series / Engineered Plant";
+      compDesc = "Evaluate HY-300 / HYTG-300; verify exact model documentation";
+      compNote = "Confirm controls, maintenance access, receiver and degraded-mode capacity. Redundancy can reduce single-point failure risk; zero downtime is not guaranteed.";
+      suctModel = "HVS Series / Engineered Plant";
+      suctDesc = "Evaluate HVS-3 / HVS-5; verify exact model documentation";
+      suctNote = "Validate simultaneous procedures, terminal vacuum, pipe losses, separation and aerosol control for the selected model and installation.";
     } else if (n <= 8) {
-      compModel = "HYTG-300 Dual Station";
-      compDesc = "HYTG-300 Dual-Head Redundancy Station (2x 1.1kW, 400 L/min, 90L)";
-      compNote = "Automated PLC alternation balances motor run-hours.";
-      suctModel = "HVS-1200";
-      suctDesc = "HVS-1200 Central Vacuum System (3.0kW, 2500 L/min)";
-      suctNote = "Central suction plant supporting multiple simultaneous procedures.";
+      compModel = "HYT Series / Engineered Multi-Head Plant";
+      compDesc = "Evaluate HYT-400 / engineered multi-head plant; verify exact model documentation";
+      compNote = "Confirm pressure, losses, duty cycle, receiver, controls and degraded-mode reserve. Redundancy can reduce single-point failure risk; zero downtime is not guaranteed.";
+      suctModel = "HVS Series / Engineered Plant";
+      suctDesc = "Evaluate HVS-5 / HVS-10; verify exact model documentation";
+      suctNote = "Use the project suction calculation and selected model test documents; no fixed aerosol reduction, pathogen neutralization or infection-control guarantee.";
     } else if (n <= 16) {
-      compModel = "HR-600W Quad-Head";
-      compDesc = "HR-600W Quad-Head Medical Air Station (6.0kW, 750 L/min, 300L 304SS)";
-      compNote = "Hospital-grade N+1 redundancy; ISO 8573-1 Class 0 certified purity.";
-      suctModel = "HVS-1200 Duplex";
-      suctDesc = "HVS-1200 Dual-Pump Central Vacuum Plant (2x 3.0kW, 5000 L/min)";
-      suctNote = "Twin inverter pumps adjust dynamically to instantaneous suction demand.";
+      compModel = "HYT / HW Series / Engineered Central Plant";
+      compDesc = "Evaluate HYT-500 / engineered central plant; verify exact model documentation";
+      compNote = "Validate system pressure, receiver capacity, controls, redundancy and model-specific air-quality documentation. Zero downtime is not guaranteed.";
+      suctModel = "HVS Series / Engineered Plant";
+      suctDesc = "Evaluate HVS-10 / HVS-15; verify exact model documentation";
+      suctNote = "Final plant capacity and redundancy depend on simultaneous demand, selected model documents and installation design.";
     } else {
       compModel = "Hongrun Custom Hospital Gas Skid EPC";
-      compDesc = "Central Modular Medical Gas Station Skid (Multi-compressor parallel + -40°C desiccant)";
-      compNote = "Full compliance with HTM 02-01 & ISO 7396-1 hospital gas codes.";
-      suctModel = "Hospital Surgical Vacuum Plant";
-      suctDesc = "Triple-Pump Surgical Vacuum Skid with Dual Bacterial Exhaust Filters";
-      suctNote = "Touchscreen PLC telemetry with BMS / IoT remote cloud connection.";
+      compDesc = "Engineered modular medical gas station; verify exact model and certificate-scope documentation";
+      compNote = "Design the complete plant to the project standard; do not infer compliance from a single component certificate. Zero downtime is not guaranteed.";
+      suctModel = "HVS Series / Engineered Plant";
+      suctDesc = "Engineered central suction plant; verify exact model documentation";
+      suctNote = "Hospital suction plant layout, exhaust treatment, controls and redundancy require engineering validation; no fixed aerosol reduction or infection-control guarantee.";
     }
 
     recComp.textContent = compDesc;
@@ -778,7 +731,7 @@
   }
 
   quoteBtn.addEventListener('click', function() {
-    if (typeof gtag === 'function') {
+    if (window.hrCookieConsent && window.hrCookieConsent.getState() === "accepted" && typeof gtag === 'function') {
       var n = parseInt(slider.value, 10) || 1;
       gtag('event', 'calculator_quote_click', {
         event_category: 'B2B Sizing Tool',
@@ -826,7 +779,7 @@
           <img data-zoom data-hd="assets/images/solutions/case-hospital-epc.webp" src="assets/images/solutions/case-hospital-epc.webp" alt="Hospital Central Gas Station" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy" width="500" height="313" />
         </div>
         <div class="p-4">
-          <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Central Gas Station</h4>
+          <h3 class="font-bold text-brand-dark font-display text-sm mb-1">Central Gas Station</h3>
           <p class="text-xs text-slate-500">Provincial Stomatological Hospital · 80 Chairs</p>
         </div>
       </div>
@@ -844,7 +797,7 @@
           <img data-zoom data-hd="assets/images/solutions/case-clean-pipeline.webp" src="assets/images/solutions/case-clean-pipeline.webp" alt="Clean Stainless Pipeline Grid" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy" width="500" height="313" />
         </div>
         <div class="p-4">
-          <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Sterile Pipeline Network</h4>
+          <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Project-Validated Air Pipeline Network</h4>
           <p class="text-xs text-slate-500">Food-Grade Stainless Steel Loop System</p>
         </div>
       </div>
@@ -853,7 +806,7 @@
           <img data-zoom data-hd="assets/images/solutions/case-sterile-room.webp" src="assets/images/solutions/case-sterile-room.webp" alt="Sterilization Room Clean Air" class="w-full h-full object-cover group-hover:scale-115 transition duration-500" decoding="async" loading="lazy" width="500" height="313" />
         </div>
         <div class="p-4">
-          <h4 class="font-bold text-brand-dark font-display text-sm mb-1">Sterile CSSD Supply</h4>
+          <h4 class="font-bold text-brand-dark font-display text-sm mb-1">CSSD Air &amp; Water Supply</h4>
           <p class="text-xs text-slate-500">Purified Water &amp; Dry Air Integration</p>
         </div>
       </div>
@@ -864,7 +817,7 @@
       <div class="text-center mb-10">
         <div class="inline-block bg-brand-blue/10 text-brand-blue text-xs font-bold px-3 py-1 rounded-full mb-2 uppercase tracking-widest">Digital Smart Topology</div>
         <h3 class="text-2xl lg:text-3xl font-extrabold text-brand-dark font-display tracking-tight">Integrated Pipeline Architecture &amp; IoT Monitoring</h3>
-        <p class="text-slate-500 text-sm max-w-2xl mx-auto mt-2">Clean Class 0 Compressed Air Supply + Purified Water Loop + High-Vacuum Aerosol Extraction with Real-Time Smart Telemetry</p>
+        <p class="text-slate-500 text-sm max-w-2xl mx-auto mt-2">Model-Documented Clean Air + Purified Water Loop + High-Vacuum Aerosol Extraction with Real-Time Smart Telemetry</p>
       </div>
       
       <div class="grid md:grid-cols-2 gap-8 mb-8">
@@ -877,11 +830,11 @@
           </div>
           <div class="p-6 bg-white flex-1 flex flex-col justify-between">
             <div>
-              <h4 class="text-lg font-bold text-brand-dark font-display mb-2">Sterile Operatory "Two Supplies, One Suction"</h4>
-              <p class="text-xs text-slate-600 leading-relaxed mb-4">Under-floor stainless ducting connects chairside delivery units, air-driven surgical handpieces, and ultra-high suction nozzles with zero cross-contamination.</p>
+              <h4 class="text-lg font-bold text-brand-dark font-display mb-2">Clinical Operatory: Air, Water &amp; Suction</h4>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">Under-floor distribution connects chairside delivery units, air-driven handpieces and suction. Separation, backflow control and infection-control performance depend on the validated installation and operating procedures.</p>
             </div>
             <div class="flex items-center gap-2 text-xs font-semibold text-brand-blue">
-              <i class="fa-solid fa-circle-check text-emerald-500"></i> ISO 8573-1 Class 0 Air &middot; 0.01 &mu;m HEPA Filtered
+              <i class="fa-solid fa-circle-check text-emerald-500"></i> Model-Specific Air Quality &middot; Configuration-Dependent Filtration
             </div>
           </div>
         </div>
@@ -891,7 +844,7 @@
           <div class="h-64 overflow-hidden relative">
             <img data-zoom data-hd="assets/images/solutions/smart-iot-telemetry.webp" src="assets/images/solutions/smart-iot-telemetry.webp" alt="Smart IoT Telemetry & Central Monitoring System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" decoding="async" loading="lazy" width="1920" height="1280" />
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
-            <span class="absolute bottom-3 left-4 text-xs font-bold text-sky-300 uppercase tracking-wider">24/7 Real-Time Telemetry</span>
+            <span class="absolute bottom-3 left-4 text-xs font-bold text-sky-300 uppercase tracking-wider">Optional Real-Time Telemetry</span>
           </div>
           <div class="p-6 bg-white flex-1 flex flex-col justify-between">
             <div>
@@ -899,7 +852,7 @@
               <p class="text-xs text-slate-600 leading-relaxed mb-4">Cloud-connected central gateway constantly tracks pipeline dynamic pressure, temperature, dew point status, and maintenance alerts across all operational chairs.</p>
             </div>
             <div class="flex items-center gap-2 text-xs font-semibold text-brand-blue">
-              <i class="fa-solid fa-microchip text-brand-sky"></i> Predictive Maintenance &middot; Automated VFD Modulation
+              <i class="fa-solid fa-microchip text-brand-sky"></i> Optional Alerts &middot; Configuration-Specific Controls
             </div>
           </div>
         </div>
@@ -908,16 +861,16 @@
       <!-- Feature highlight row -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-slate-100 text-center">
         <div class="p-3 bg-brand-light rounded-lg border border-slate-200">
-          <span class="block text-xs font-bold text-brand-dark font-display">Zero-Oil Clean Supply</span>
-          <span class="text-[11px] text-slate-500">Pure compressed air safe for precision handpieces</span>
+          <span class="block text-xs font-bold text-brand-dark font-display">Oil-Free Compressor Design</span>
+          <span class="text-[11px] text-slate-500">Finished air quality verified for the supplied model and system</span>
         </div>
         <div class="p-3 bg-brand-light rounded-lg border border-slate-200">
-          <span class="block text-xs font-bold text-brand-dark font-display">85%+ Aerosol Containment</span>
-          <span class="text-[11px] text-slate-500">High-vacuum negative pressure prevents pathogen spread</span>
+          <span class="block text-xs font-bold text-brand-dark font-display">Project-Validated Aerosol Control</span>
+          <span class="text-[11px] text-slate-500">Vacuum performance and infection control depend on the complete installation and operation</span>
         </div>
         <div class="p-3 bg-brand-light rounded-lg border border-slate-200">
-          <span class="block text-xs font-bold text-brand-dark font-display">Sterile Pure Water Loop</span>
-          <span class="text-[11px] text-slate-500">Ozone + UV dual barrier against biofilm formation</span>
+          <span class="block text-xs font-bold text-brand-dark font-display">Project-Validated Water Quality</span>
+          <span class="text-[11px] text-slate-500">Selected treatment and monitoring target project water-quality requirements</span>
         </div>
       </div>
     </div>
@@ -932,11 +885,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control. Medical air, dental suction, and pure water systems require model- and project-specific documentation.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -985,7 +938,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; CE MDR &middot; NMPA Class II Medical Qualification &middot; TÜV Rheinland ISO 8573-1 total-oil Class 0, certificate AK 50528335 0001 / report CN21HFR2 001, applies only to complete HW-200 through HW-3600 oil-free scroll units; it does not cover HY/HYT/HYTG, HYG/HVTG, bare ZB/4V heads, HVS, HRC, competitors or incomplete OEM assemblies. Class 0 does not prove sterility or microbial control.</p>
     </div>
   </div>
 </footer>

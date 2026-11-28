@@ -1,117 +1,78 @@
 #!/usr/bin/env python3
-"""
-Hongrun Technology (hongrun1995.cn) - Google Analytics 4 (GA4) Injection Script
-Measurement ID: G-25BF91Y6Q1
-Injects official gtag.js and B2B conversion tracking into all production HTML pages.
+"""Ensure consent-gated analytics on every production HTML page.
+
+Legacy direct gtag blocks are removed. The shared cookie-consent.js module is
+solely responsible for setting Consent Mode defaults and requesting GA4 after
+an affirmative analytics choice.
 """
 
 import os
 import re
 
-GA_SNIPPET = """  <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
-
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-    });
-  </script>"""
-
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+CONSENT_SCRIPT = '  <script src="/assets/js/cookie-consent.js" defer></script>'
+
 
 def process_file(filepath):
     rel = os.path.relpath(filepath, ROOT_DIR)
-    # Skip yandex verification files
     if os.path.basename(filepath).startswith("yandex_"):
         return False, "Skipped (Yandex verification file)"
 
-    with open(filepath, "r", encoding="utf-8") as f:
-        content = f.read()
+    with open(filepath, "r", encoding="utf-8") as handle:
+        content = handle.read()
+    original = content
 
-    if "G-25BF91Y6Q1" in content:
-        return False, "Already injected"
+    content = re.sub(
+        r'[ \t]*<script\b[^>]*src=["\']https://www\.googletagmanager\.com/gtag/js\?id=G-25BF91Y6Q1["\'][^>]*>\s*</script>\s*\n?',
+        "",
+        content,
+        flags=re.IGNORECASE,
+    )
 
-    # Search insertion point right after <meta charset="...">
-    pattern = r"(<meta\s+charset=[\"'][^\"']+[\"']\s*\/?>)"
-    match = re.search(pattern, content, re.IGNORECASE)
-    
-    if match:
-        idx = match.end()
-        new_content = content[:idx] + "\n" + GA_SNIPPET + content[idx:]
-    else:
-        # Fallback to after <head>
-        head_match = re.search(r"(<head[^>]*>)", content, re.IGNORECASE)
-        if head_match:
-            idx = head_match.end()
-            new_content = content[:idx] + "\n" + GA_SNIPPET + content[idx:]
-        else:
-            return False, "No <head> tag found"
+    def strip_legacy_inline(match):
+        attrs, body = match.group(1), match.group(2)
+        if "G-25BF91Y6Q1" in body and re.search(r"gtag\s*\(\s*[\"']config[\"']", body):
+            return ""
+        return match.group(0)
 
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(new_content)
+    content = re.sub(
+        r"<script\b([^>]*)>([\s\S]*?)</script>",
+        strip_legacy_inline,
+        content,
+        flags=re.IGNORECASE,
+    )
 
-    return True, "Injected successfully"
+    if "/assets/js/cookie-consent.js" in content:
+        if content == original:
+            return False, "Already consent-gated"
+        with open(filepath, "w", encoding="utf-8") as handle:
+            handle.write(content)
+        return True, "Removed legacy analytics block"
+
+    head = re.search(r"</head\s*>", content, re.IGNORECASE)
+    if not head:
+        return False, "No </head> tag found"
+    content = content[: head.start()] + CONSENT_SCRIPT + "\n" + content[head.start() :]
+    with open(filepath, "w", encoding="utf-8") as handle:
+        handle.write(content)
+    return True, "Consent module enabled"
+
 
 def main():
-    target_files = []
-    for root, dirs, files in os.walk(ROOT_DIR):
-        for file in files:
-            if file.endswith(".html"):
-                target_files.append(os.path.join(root, file))
+    targets = []
+    for root, _dirs, files in os.walk(ROOT_DIR):
+        targets.extend(os.path.join(root, name) for name in files if name.endswith(".html"))
+    targets.sort()
 
-    target_files.sort()
-    injected_count = 0
+    changed = 0
+    print(f"Checking {len(targets)} HTML pages for consent-gated analytics...")
+    for filepath in targets:
+        success, message = process_file(filepath)
+        rel = os.path.relpath(filepath, ROOT_DIR)
+        print(f" [{'OK' if success else '-'}] {rel} -> {message}")
+        changed += int(success)
+    print(f"Completed: {changed} pages updated.")
 
-    print(f"Scanning {len(target_files)} HTML files for Google Analytics 4 integration...")
-    for fp in target_files:
-        rel = os.path.relpath(fp, ROOT_DIR)
-        success, msg = process_file(fp)
-        if success:
-            injected_count += 1
-            print(f" [OK] {rel} -> {msg}")
-        else:
-            print(f" [-] {rel} -> {msg}")
-
-    print(f"\nCompleted: {injected_count} files injected with Google Analytics (G-25BF91Y6Q1).")
 
 if __name__ == "__main__":
     main()

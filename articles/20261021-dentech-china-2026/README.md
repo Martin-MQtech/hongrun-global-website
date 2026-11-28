@@ -29,20 +29,18 @@
 
 ## 2. Technical Parameter Verification (Double-Check Protocol)
 
-- **Air Purity:** ISO 8573-1 Class 0 Certified (0.00 mg/m³ residual hydrocarbons)
-- **Pressure Dew Point:** Cryogenic adsorption drying delivering ≤ -40°C pressure dew point
-- **Noise Levels:**
-  - Standard open bare scroll units: `≤65 dB(A)`
-  - Acoustic Canopy (声学降噪箱款): `58 dB(A)` whisper-quiet operatory level
+- **Air Purity:** TÜV Rheinland certificate AK 50528335 0001 / report CN21HFR2 001 documents total oil `<0.003 mg/m³` for complete HW-200 through HW-3600 oil-free scroll units only. Other exhibited equipment requires model-specific air-quality documentation.
+- **Pressure Dew Point:** Model- and configuration-specific; verify inlet conditions, flow, dryer selection and maintenance.
+- **Noise Levels:** State the exact model, acoustic enclosure, measurement position and operating conditions for every acoustic claim; no family-wide fixed value is assumed.
 - **Regulatory Compliance:** GB 50751-2012 (Medical Gas Engineering Technical Specifications) & T/CCGA 50008-2021
 - **Subsystems Exhibited:**
   1. Dental Electric Oil-Free Air Compressor (Pure Clean Air Source)
-  2. Dental Electric Oil-Free Scroll Air Compressor (Ultra-Quiet 58 dB(A))
+  2. Dental Electric Oil-Free Scroll Air Compressor (Model-Specific Acoustic Data)
   3. Dental Electric Oil-Free Compressor (Compact Clinic Series)
   4. Dental Central Electric Suction System (Dry/Semi-Dry VFD)
   5. Medical Dental Wastewater Treatment System (Ozone + Chlorine)
   6. Central Medical Purified Water Treatment Station (Dual RO + EDI)
-  7. High-Efficiency Air Purification & Sterilization System (Plasma + HEPA)
+  7. Project-Configured Air Purification System (Plasma + HEPA)
   8. Quaternary Ammonium Salt Pipeline Disinfection Solution
 
 ---
@@ -62,9 +60,9 @@ From October 22 to 25, join Hongrun Technology at Hall 2, Booth M47-48, M69-70.
 
 With 30 years of medical compressor engineering since 1995, Hongrun Technology is proud to introduce our next-generation Digital Intelligence Dental Equipment Room Integrated Solutions at @DenTech China:
 
-🔹 8 Core Integrated Subsystems: Certified ISO 8573-1 Class 0 oil-free air, 58 dB(A) whisper-quiet acoustic canopy units, central high-vacuum dental suction, dual RO+EDI purified water, wastewater disinfection, and in-room plasma air sterilization.
-🔹 Medical Grade Engineering: Strict compliance with GB 50751-2012 and -40°C cryogenic pressure dew point desiccant drying.
-🔹 360° Turnkey Lifecycle Service: From clinic CAD fluid sizing to 24/7 IoT smart telemetry.
+🔹 8 Core Integrated Subsystems: Model-specific oil-free air, acoustic canopy units, central high-vacuum dental suction, dual RO+EDI purified water, wastewater disinfection, and project-configured room air treatment.
+🔹 Medical Grade Engineering: Project review against applicable requirements, with drying, acoustic and air-quality values verified for the selected configuration.
+🔹 360° Turnkey Lifecycle Service: From clinic CAD fluid sizing to optional connected monitoring.
 
 📍 Location: Shanghai World Expo Exhibition Center (Hall 2, Booth M47-48, M69-70)
 📅 Dates: October 22–25, 2026
@@ -91,8 +89,8 @@ The setup is complete, and we are ready for tomorrow! 🚀
 As @DenTech China 2026 kicks off in Shanghai, our engineering and application teams have assembled our complete 8-subsystem smart dental equipment room right here at Hall 2, Booth M47-48, M69-70.
 
 If you are a dental clinic owner, hospital engineering director, or medical device distributor looking for:
-✅ 58 dB(A) whisper-quiet operatory environments (no loud compressor hums)
-✅ 100% oil-free ISO Class 0 air purity protecting high-speed ceramic handpieces
+✅ Model-specific acoustic data for the supplied compressor and enclosure configuration
+✅ Oil-free compressor designs with model-specific air-quality documentation
 ✅ A single, unified engineering partner for air, suction, pure water, and wastewater compliance
 
 Come by our island booth for a warm tea and an on-the-spot CAD clinic sizing review. I look forward to meeting our global partners in person over the next 4 days!
@@ -133,8 +131,8 @@ Direct WhatsApp meeting booking: https://wa.me/8613964416725
 Come visit the Hongrun Technology team at Hall 2, Booth M47-48, M69-70!
 
 We’re demonstrating our complete Smart Dental Plant Room Infrastructure:
-⚡ Live decibel comparison: Standard bare scroll (≤65 dB(A)) vs. Acoustic Canopy (58 dB(A))
-⚡ ISO 8573-1 Class 0 100% oil-free purity tests
+⚡ Model-specific acoustic demonstration with measurement conditions stated
+⚡ Certificate-scope display: total-oil Class 0 evidence for complete HW-200–HW-3600 scroll units; other models use their own documentation
 ⚡ Interactive cutaway of HW scroll pump kinematics
 ⚡ 8 integrated subsystems: Air, Suction, Pure Water, Wastewater Disinfection & Plasma Air Purification
 
@@ -159,9 +157,9 @@ Step into the future of dental clinic engineering at Hongrun Technology’s isla
 
 Discover how 30 years of medical compressor innovation powers modern dentistry:
 ✨ 8-Subsystem Centralized Dental Plant Room
-✨ Whisper-Quiet 58 dB(A) Acoustic Canopy Compressors
-✨ 100% Oil-Free ISO 8573-1 Class 0 Certified Pure Air
-✨ -40°C Dew Point Medical Dry Air
+✨ Model-Specific Acoustic Canopy Compressors
+✨ Oil-Free Designs with Model-Specific Air-Quality Documentation
+✨ Configuration-Specific Medical Air Drying
 
 Swipe left ⬅️ to check out our 3D booth rendering, Hall 2 navigation map, and Shanghai metro route guide!
 
@@ -188,7 +186,7 @@ We warmly invite you to visit Hongrun Technology at DenTech China 2026 (The 29th
 🚇 Metro: Line 7 (Yaohua Rd Station, Exit 4) / Line 8 (China Art Museum Station, Exit 3)
 
 Highlights at our booth:
-1. Live demo of our 58 dB(A) Whisper-Quiet Acoustic Canopy Medical Compressor.
+1. Live demonstration of a model-specific acoustic-canopy compressor, with measurement conditions stated.
 2. Complete 8-Subsystem Smart Dental Equipment Room (Air, Suction, Pure Water, Wastewater Treatment).
 3. On-site CAD clinic sizing and piping engineering consultations.
 

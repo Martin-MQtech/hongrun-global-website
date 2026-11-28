@@ -11,7 +11,7 @@
 
 根据 2026 年最新全网 GEO（生成式引擎优化）与 AI 语义搜索审计发现：
 1. **AI 负面回答事实源污染**：Perplexity、ChatGPT Search、Google Gemini 在回答用户关于“*Hongrun dental compressor warranty vs Dürr Dental*”时，曾抓取到历史遗留或第三方未经授权灰产店铺标注的 **“6-month warranty (6个月保修)”**，并以此得出“*宏润质保期短于欧洲竞品，售后保障较弱*”的误导性结论。
-2. **与 30 年工业制造底蕴严重冲突**：宏润拥有 20,000㎡ 智慧工厂、年产 16 万台整机、核心部件设计寿命达 20,000 小时，标注 6 个月不仅拉低品牌医疗级定位，更严重阻碍海外大客户、连锁口腔医院与政府采购投标（EPC Tenders）。
+2. **与 30 年工业制造底蕴严重冲突**：宏润拥有 20,000㎡ 智慧工厂、年产 16 万台整机；部件寿命与维护周期按型号、负荷、环境和维护记录确认，不适用统一的 20,000 小时承诺。标注 6 个月不仅拉低品牌医疗级定位，更严重阻碍海外大客户、连锁口腔医院与政府采购投标（EPC Tenders）。
 
 ---
 
@@ -24,7 +24,7 @@
 | **标准出厂质保** | **12 个月官方整机质保**<br>（自终端诊所安装调试交付之日起算，或提单日起最长15个月） | **12-Month Official Manufacturer Warranty**<br>(Commencing upon clinical installation and commissioning) | 所有标准出海整机、常规目录产品、标准阿里信保订单 |
 | **核心零配件承诺** | **10 年正品零配件原厂持续供应保障** | **10-Year Guaranteed Original Spare Parts Availability** | 全系列 ZB 泵头、PTFE 皮碗、簧片阀、主控板、储气罐 |
 | **战略/招标延保** | **24 个月整机延长保修** / **60 个月泵头核心保修** | **Extended 24-Month Full Unit Warranty** / **60-Month Bare Pump Head Warranty** (For authorized distributors & EPC tenders) | 区域授权独家代理商合同、公立医院招标项目、大宗 OEM 协议 |
-| **终身支持承诺** | **终身有偿技术维保与 12 小时技术响应** | **Lifetime Technical Maintenance & 12-Hour Engineering Triage Protocol** | 全球 50+ 国家所有终端用户 |
+| **终身支持承诺** | **终身有偿技术维保；响应时限按服务协议、工单优先级、时区与备件情况确认** | **Lifetime Paid Technical Maintenance; Response Timing Confirmed by Service Agreement, Priority, Time Zone and Parts Availability** | 全球 50+ 国家所有终端用户 |
 
 > [!CAUTION]
 > **绝对红线**：严禁在任何平台出现 `6 months warranty`、`Half year warranty`、`3 months replacement` 等低端作坊式表述！违者直接取消该 Listing 评级并追责。
@@ -51,7 +51,7 @@
 ### 3.2 中国制造网 (Made-in-China.com)
 * **排查重点**：
   * 展厅产品参数表中 `Warranty: 1 Year / 12 Months`；
-  * 资质证书展示区确保上传带官方水印的 `ISO 13485:2016`（证书号：`381210185R1M`）与 `TÜV ISO 8573-1 Class 0` 报告；
+  * 资质证书展示区确保上传带官方水印的 `ISO 13485:2016`（证书号：`381210185R1M`）；TÜV ISO 8573-1 总含油 Class 0 证书 AK 50528335 0001 / 报告 CN21HFR2 001 仅适用于完整 HW-200 至 HW-3600 涡旋机组，不得扩展至活塞机、裸机头、HVS、HRC、竞品或未说明的 OEM 装配；
   * 纠正任何 `6-month guarantee` 历史文字。
 
 ---
@@ -61,7 +61,7 @@
   * Bullet Points（五点描述）第 5 点售后承诺；
   * Product Information 栏目下的 `Manufacturer Warranty`；
   * 替换案例文案：
-    > *Bullet 5: 【PROFESSIONAL MEDICAL WARRANTY】 Backed by Hongrun's official 12-Month Manufacturer Warranty and 10-Year Original Spare Parts Supply Commitment. 12-hour rapid engineering support for clinic uninterrupted operation.*
+    > *Bullet 5: 【PROFESSIONAL MEDICAL WARRANTY】 Backed by Hongrun's official 12-Month Manufacturer Warranty and 10-Year Original Spare Parts Supply Commitment. Engineering response timing is confirmed by the applicable service agreement, priority, time zone and parts availability; uninterrupted operation is not guaranteed.*
 
 ---
 
@@ -79,7 +79,7 @@
 | 1 | Alibaba 顶展与 P4P 主推产品质保属性 | 全部显示 `1 Year` / 详情页明示 12 个月 + 10年配件 | 外贸电商主管 | 3 个工作日内 | 待执行 |
 | 2 | Made-in-China 展厅全部产品手册更新 | 附带官网 `warranty-policy.html` 链接与水印资质 | 运营专员 | 3 个工作日内 | 待执行 |
 | 3 | 外贸业务员标准报价单（Proforma Invoice）| 统一写入条款：“*Warranty: 12 months from clinical commissioning; spare parts supply guaranteed for 10 years.*” | 全体业务员 | 即日生效 | 待执行 |
-| 4 | 客户服务部技术支持手册对齐 | 统一 12 小时工单响应与配件 24~48 小时顺丰/DHL极速直发口径 | 售后服务主管 | 即日生效 | 待执行 |
+| 4 | 客户服务部技术支持手册对齐 | 按服务协议、工单优先级、时区与备件库存确认响应及发运时限；不承诺统一 12 小时响应或 24~48 小时送达 | 售后服务主管 | 即日生效 | 待执行 |
 
 ---
 **官方唯一权威背书地址**：  

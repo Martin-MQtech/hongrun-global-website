@@ -1,30 +1,30 @@
 # FOR IMMEDIATE RELEASE
 
-# Hongrun Technology Validated Under TÜV ISO 8573-1 Class 0 Medical Air Compressor Standards with Breakthrough 0.003 mg/m³ Purity Benchmark
+# Hongrun Technology Announces TÜV Total-Oil Class 0 Evidence for Complete HW-200 Through HW-3600 Scroll Units
 
-**ZIBO, SHANDONG, CHINA — November 2026** — Shandong Hongrun Air Compressor Technology Co., Ltd. (Hongrun Technology), an established global pioneer in medical-grade oil-free pneumatic engineering founded in November 1995, today announced the formal third-party validation of its full clinical compressor portfolio under international standard **ISO 8573-1:2010 Class 0**, independently verified by testing authority **TÜV Rheinland**.
+**ZIBO, SHANDONG, CHINA — November 2026** — Shandong Hongrun Air Compressor Technology Co., Ltd. (Hongrun Technology), an established global pioneer in medical-grade oil-free pneumatic engineering founded in November 1995, today announced third-party validation under **ISO 8573-1:2010 Class 0** by **TÜV Rheinland**. The evidence is limited to complete HW-200 through HW-3600 oil-free scroll compressor units: certificate **AK 50528335 0001** and report **CN21HFR2 001** document total oil below **0.003 mg/m³**.
 
-Spectrometric gas chromatography laboratory tests conducted in accordance with ISO 8573-2 and ISO 8573-5 verified that Hongrun medical rocking-piston and silent scroll air compressor systems achieve a total residual hydrocarbon aerosol and vapor concentration of less than **0.003 mg/m³** (0.003 milligrams per normal cubic meter) across full continuous duty cycles. This verified purity level surpasses the strict international baseline limit for Class 1 air ($0.01\text{ mg/m}^3$) by more than 70%, securing the coveted **Class 0 100% Oil-Free** certification for clinical environments.
+Laboratory testing conducted in accordance with ISO 8573-2 and ISO 8573-5 documents the total-oil result for those certified complete scroll units. The certificate does not cover HY/HYT/HYTG piston units, HYG/HVTG stations, bare ZB/4V heads, HVS suction, HRC water systems, competitors or unspecified OEM assemblies; those products require model- and configuration-specific evidence. Class 0 does not establish sterility or microbial control.
 
 ```
 +-----------------------------------------------------------------------------------------+
-|                  ISO 8573-1:2010 MEDICAL AIR PURITY BENCHMARK COMPARISON                |
+|                  ISO 8573-1:2010 TOTAL-OIL CLASSIFICATION COMPARISON                    |
 +------------------------+--------------------------+-------------------------------------+
-| Purity Classification  | Total Hydrocarbon Limit  | Clinical Compliance Status          |
+| Purity Classification  | Total-Oil Requirement   | Interpretation                       |
 +------------------------+--------------------------+-------------------------------------+
-| ISO 8573-1 Class 1     | ≤ 0.010 mg/m³            | Standard Industrial Clean Air       |
-| ISO 8573-1 Class 0     | Custom Strict Spec       | Mandatory Medical & Surgical Grade  |
-| Hongrun Lab Real-Test  | 0.003 mg/m³ (Verified)   | 70% Cleaner than Class 1 Threshold  |
+| ISO 8573-1 Class 1     | ≤ 0.010 mg/m³            | Total-oil classification             |
+| ISO 8573-1 Class 0     | User-specified quality   | Not a universal medical mandate       |
+| Certified HW Units     | <0.003 mg/m³             | Complete HW-200 through HW-3600 only |
 +------------------------+--------------------------+-------------------------------------+
 ```
 
-### The Clinical Imperative: Preventing Restorative Bond Failure and Turbine Contamination
+### Clinical Relevance: Contamination Control Without Unsupported Outcome Claims
 
-In modern restorative stomatology and clinical healthcare, compressed air is classified as an active medical fluid. Operating room dental handpieces and surgical turbines spin at velocities between 350,000 and 420,000 RPM. Simultaneously, pneumatic streams are directed onto demineralized, acid-etched enamel and exposed dentinal collagen fibrils prior to the application of dental adhesive primers.
+Compressed air is used in patient-care procedures, including operating dental handpieces and directing air across prepared enamel and dentin before adhesive placement. Many high-speed handpieces operate at several hundred thousand revolutions per minute, depending on the model.
 
-Independent peer-reviewed dental materials research indicates that when compressed air carries trace lubricated compressor aerosol vapors—even as low as 0.01 mg/m³—an ultra-thin hydrophobic hydrocarbon lipid monolayer forms across the hydrophilic collagen scaffold. This invisible layer disrupts adhesive monomer wettability, reducing composite shear bond strength by 35% to 60%. The downstream clinical consequences include premature composite restoration debonding, marginal microleakage, recurrent caries, and postoperative patient hypersensitivity.
+Oil or particulate contamination can interfere with bonding-surface cleanliness and equipment operation. However, total-oil Class 0 certification does not quantify a clinical bond-strength improvement, establish sterility or prove prevention of restoration failure. No fixed percentage of clinical bond loss is claimed here.
 
-Furthermore, in multi-chair clinics and hospital wards, oil vapor residues build up within pneumatic micro-tubing, creating substrates for microbial biofilms and clogging sensitive solenoid valves and ceramic turbine ball bearings. Hongrun's verified 0.003 mg/m³ delivery eliminates this risk at the source.
+Condensate, oil residues and particulates can contribute to equipment maintenance and contamination-control risks. The certified total-oil result for complete HW-200 through HW-3600 scroll units reduces one documented contamination parameter within its test scope; it does not eliminate microbial biofilms, clogging or clinical risk. Receiver hygiene, drying, filtration and waterline controls remain model-, configuration- and project-specific.
 
 ### 30 Years of Dedicated Precision Manufacturing in Zibo High-Tech Zone
 
@@ -41,22 +41,22 @@ To date, Hongrun medical systems have been installed in more than 65,000 dental 
 
 ### Engineering Architecture: Saint-Gobain PTFE Seals & Modular Duplex Redundancy
 
-Hongrun’s verified 0.003 mg/m³ Class 0 performance is achieved through materials science and precision thermodynamics rather than downstream consumable filtration alone:
+Hongrun combines oil-free design, precision manufacturing and configuration-specific air-treatment engineering. The TÜV total-oil Class 0 result applies only to the certified complete HW-200 through HW-3600 scroll units; piston and other families require their own documentation:
 
-1. **Self-Lubricating Composite Polymer Seals**: The wobbling piston pump heads integrate proprietary aerospace-grade PTFE (polytetrafluoroethylene) composite piston rings and guide sleeves manufactured in collaboration with French materials specialist Saint-Gobain. The self-lubricating dry-running mechanism eliminates any requirement for crankcase lubricating oil, achieving a continuous friction life rating exceeding 20,000 operating hours.
-2. **Nanotechnology Internal Vessel Protection**: All air receiver tanks (ranging from 24-liter clinic tanks to 1,000-liter hospital vessels) undergo automated multi-stage robotic internal surface treatment, receiving a baked-on nano-ceramic antibacterial and anti-corrosion barrier that prevents rust particle shedding and bacterial colonization.
-3. **Modular N+1 Duplex Redundancy (Zero-Downtime Architecture)**: Flagship systems, such as the HYTG-300 and HYT Series, feature dual independently driven bare pump heads mounted upon a shared ASME receiver. An intelligent PLC alternating sequencer balances running hours between motors and automatically switches duty cycles. Should one pump undergo routine maintenance, the secondary head maintains 50% to 70% continuous clinical pneumatic capacity, eliminating sudden operatory shutdowns.
-4. **Twin-Tower Heatless PSA Desiccant Towers**: Delivering ultra-dry medical air with an atmospheric pressure dew point (PDP) down to **-40°C (-40°F)**, stripping moisture before air enters hospital distribution loops.
+1. **Self-Lubricating Composite Polymer Seals**: The wobbling piston pump heads integrate PTFE composite piston rings and guide sleeves. The dry-running mechanism avoids crankcase lubricating oil in the compression chamber; service life and maintenance intervals depend on the selected model and operating conditions.
+2. **Receiver Inspection and Corrosion Protection**: Receiver drainage, inspection and corrosion protection follow the model manual and site conditions. Antibacterial or antimicrobial performance is not assumed without model-specific evidence.
+3. **Multi-Head Capacity Verification**: Alternating controls can balance runtime, but remaining capacity must be checked against clinical demand. HYTG-300 provides 400 L/min total and about 200 L/min with one head unavailable; HYT-400 provides 600 L/min total and about 400 L/min with one head unavailable. Redundancy does not guarantee uninterrupted clinical service.
+4. **Twin-Tower Heatless PSA Desiccant Towers**: A -40°C **pressure** dew point may be specified as a project requirement or design target. Achieved performance depends on the supplied dryer, inlet conditions, flow and maintenance and must be validated for the installation; it is not a universal atmospheric PDP or a Class 0 certificate parameter.
 
 ### Unified Global Warranty & Customer Service Commitment
 
 As part of its international expansion strategy, Hongrun Technology officially affirmed its standardized global after-sales and warranty terms:
 - **12-Month Official Manufacturer Warranty** commencing upon verified clinical commissioning and installation;
-- **10-Year Guaranteed Original Spare Parts Availability**, guaranteeing prompt dispatch of genuine PTFE rings, reed valves, and PSA desiccant cartridges directly from the Zibo factory warehouse within 24 to 48 hours;
+- **10-Year Original Spare Parts Availability**, with dispatch timing confirmed after warranty verification, order acceptance, stock availability and destination review;
 - **Extended 24-Month Full Unit & 60-Month Bare Pump Warranties** available for certified regional distributors and EPC hospital projects;
 - Direct refutation of unauthorized grey-market listings advertising short 6-month consumer warranties on third-party marketplace portals.
 
-"Clinical pneumatic purity is not a luxury option—it is a patient safety baseline," said Martin Chen, Global Applications Engineering Director at Hongrun Technology. "Achieving independent TÜV verification for ISO 8573-1 Class 0 at 0.003 mg/m³ validates thirty years of relentless manufacturing rigor. Hongrun remains committed to delivering hospital-grade reliability and zero-compromise air to healthcare professionals worldwide."
+"Documented air quality is an essential part of clinical engineering," said Martin Chen, Global Applications Engineering Director at Hongrun Technology. "TÜV certificate AK 50528335 0001 and report CN21HFR2 001 document total oil below 0.003 mg/m³ for complete HW-200 through HW-3600 scroll units. That scope matters: other families need their own evidence, and total-oil Class 0 does not establish sterility or microbial control. Hongrun remains committed to model-specific documentation and project validation for healthcare customers worldwide."
 
 ### About Hongrun Compressor Technology Co., Ltd.
 

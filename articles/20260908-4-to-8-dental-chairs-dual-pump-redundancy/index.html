@@ -3,81 +3,31 @@
 <head>
 <meta charset="utf-8"/>
   <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-25BF91Y6Q1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-25BF91Y6Q1', {
-      send_page_view: true
-    });
 
-    // Global B2B Conversion Event Tracking for Hongrun Overseas Inquiries
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1. Email clicks
-      document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'contact_email_click', {
-              event_category: 'B2B Lead',
-              event_label: el.getAttribute('href')
-            });
-          }
-        });
-      });
-      // 2. WhatsApp clicks
-      document.querySelectorAll('a[href*="wa.me"], a[href*="whatsapp"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            gtag('event', 'whatsapp_click', {
-              event_category: 'B2B Lead',
-              event_label: 'WhatsApp Chat Initiation'
-            });
-          }
-        });
-      });
-      // 3. RFQ / Inquiry button clicks (Granular CTA Source Attribution)
-      document.querySelectorAll('a[href*="contact.html"]').forEach(function(el) {
-        el.addEventListener('click', function() {
-          if (typeof gtag === 'function') {
-            var ctaSource = el.getAttribute("data-cta-source") ||
-                            (el.closest("nav") ? "navbar" :
-                            (el.closest("footer") ? "footer" :
-                            (el.closest("#hero, .hero-slide, header") ? "hero_cta" : "product_content")));
-            gtag('event', 'inquire_button_click', {
-              event_category: 'B2B Engagement',
-              event_label: el.getAttribute('href'),
-              cta_source: ctaSource
-            });
-          }
-        });
-      });
-    });
-  </script>
   <meta name="yandex-verification" content="e998580dfb4c996e">
   <meta name="msvalidate.01" content="6CB32A6B15E1111CA13C138053971828">
   <meta name="google-site-verification" content="6jSfneuss2ZWdiFsCAH0cTCQnOGi_gYVczNariqLqo8">
 <link rel="icon" type="image/png" href="../../assets/images/favicon/favicon-32.png"/>
 <link rel="apple-touch-icon" href="../../assets/images/favicon/apple-touch-icon.png"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime) | Hongrun Insights</title>
+<title>4–8 Dental Chairs: Dual-Pump Compressor Sizing Guide</title>
 
 <!-- Technical SEO & GEO Meta Hierarchy -->
-<meta name="description" content="Flagship Whitepaper #09: Engineering guide to 4-to-8 dental chair central medical compressed air systems. Multi-pump parallel N+1 redundancy logic, simultaneous flow diversity math (k=0.60–0.45), pipe sizing (DN25/DN15), and HYTG-300 90L vs HY-300 50L comparative engineering.">
-<meta name="keywords" content="4 to 8 dental chairs compressor sizing, dual pump dental compressor redundancy, HYTG-300 90L dental compressor, HY-300 50L vertical compressor, dental clinic medical air central station, N+1 parallel compressor failover, ISO 8573-1 Class 0 medical air, Hongrun Technology">
+<meta name="description" content="Guide to 4–8 chair dental air systems: k=0.70 planning flow, degraded-capacity checks, piping verification, and HY-300, HYTG-300 and HYT-400 comparison.">
+<meta name="keywords" content="4 to 8 dental chairs compressor sizing, dual pump dental compressor redundancy, HYTG-300 90L dental compressor, HY-300 50L vertical compressor, dental clinic medical air central station, N+1 parallel compressor failover, HYTG-300 model-specific air documentation, ISO 8573-1 total-oil Class 0 scope, Hongrun Technology">
 <link rel="canonical" href="https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/">
 
 <!-- OpenGraph Protocol -->
 <meta property="og:site_name" content="Hongrun Technology">
-<meta property="og:title" content="Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)">
-<meta property="og:description" content="Engineering guide to 4-to-8 dental chair central medical air systems. Multi-pump parallel N+1 redundancy logic, simultaneous flow diversity math, pipe sizing, and HYTG-300 90L vs HY-300 50L comparative analysis.">
+<meta property="og:title" content="4–8 Dental Chairs: Dual-Pump Compressor Sizing Guide">
+<meta property="og:description" content="Guide to 4–8 chair dental air systems: k=0.70 planning flow, degraded-capacity checks, piping verification, and HY-300, HYTG-300 and HYT-400 comparison.">
 <meta property="og:image" content="https://www.hongrun1995.cn/assets/images/news/news_13_4to8chairs_redundancy.jpg">
 <meta property="og:url" content="https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/">
 <meta property="og:type" content="article">
 
 <!-- Twitter / X Card Hierarchy -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide">
-<meta name="twitter:description" content="Engineering guide to 4-to-8 dental chair central medical air systems. Multi-pump parallel N+1 redundancy logic, simultaneous flow diversity math, and HYTG-300 90L vs HY-300 50L comparison.">
+<meta name="twitter:title" content="4–8 Dental Chairs: Dual-Pump Compressor Sizing Guide">
+<meta name="twitter:description" content="Guide to 4–8 chair dental air systems: k=0.70 planning flow, degraded-capacity checks, piping verification, and HY-300, HYTG-300 and HYT-400 comparison.">
 <meta name="twitter:image" content="https://www.hongrun1995.cn/assets/images/news/news_13_4to8chairs_redundancy.jpg">
 
 <meta name="geo.region" content="CN-SD; DE; US; AE; SA; BR; SG"/>
@@ -151,7 +101,7 @@
 {
   "@context": "https://schema.org",
   "@type": "TechArticle",
-  "headline": "Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)",
+  "headline": "4–8 Dental Chairs: Dual-Pump Compressor Sizing Guide",
   "image": "https://www.hongrun1995.cn/assets/images/news/news_13_4to8chairs_redundancy.jpg",
   "author": {
     "@type": "Person",
@@ -173,8 +123,8 @@
     }
   },
   "datePublished": "2026-09-08",
-  "dateModified": "2026-09-08",
-  "description": "Definitive engineering whitepaper on 4-to-8 dental chair central medical compressed air systems. Multi-pump parallel N+1 redundancy logic, simultaneous flow diversity math (k=0.60–0.45), pipe sizing (DN25/DN15), and HYTG-300 90L vs HY-300 50L comparative engineering.",
+  "dateModified": "2026-11-28",
+  "description": "Engineering guide to 4-to-8 dental chair medical compressed-air systems: preliminary 50 L/min per-chair planning with k=0.70, model-specific capacities, degraded-mode checks, and distribution-pipe verification.",
   "keywords": [
     "4 to 8 Dental Chairs Compressor Sizing",
     "Dual Pump Dental Compressor Redundancy",
@@ -182,7 +132,7 @@
     "HY-300 50L Vertical Dental Compressor",
     "N+1 Parallel Redundancy Medical Air",
     "Dental Clinic Compressed Air Pipe Sizing",
-    "ISO 8573-1 Class 0 Oil-Free Medical Air",
+    "Model-Specific Oil-Free Medical Air Documentation",
     "Hongrun Technology Dental Air Systems"
   ],
   "mainEntityOfPage": {
@@ -202,7 +152,7 @@
       "name": "Why do 4 to 8 chair dental clinics require dual-pump redundancy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A single compressor represents a single point of failure (SPOF) for multi-chair practices; if the motor stops, all 4–8 operatories must shut down immediately. A dual-pump system like the Hongrun HYTG-300 features two independent ZB300 rocking piston heads on a 90L tank with automated alternating PLC control. If one head undergoes servicing, the secondary head sustains 50% capacity (200 L/min), enabling the clinic to continue priority surgical and routine treatments without clinic closure."
+        "text": "A single compressor represents a single point of failure for a multi-chair practice. The HYTG-300 has two ZB300 heads, 400 L/min total air delivery and a 90L receiver. With one head unavailable, the remaining head provides approximately 200 L/min. That degraded capacity is below the preliminary eight-chair planning load of 280 L/min, so an eight-chair N+1 design requires a larger multi-head system such as HYT-400, whose remaining two heads provide approximately 400 L/min."
       }
     },
     {
@@ -210,7 +160,7 @@
       "name": "How does the diversity factor (k) calculate air flow for 4 to 8 dental chairs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dental operatory air consumption is intermittent. As chair count grows, the statistical probability of simultaneous peak demand drops: for 4 chairs (k=0.60), required airflow Q = 4 × 50 × 0.60 = 120 L/min (recommended FAD ≥ 200–300 L/min); for 6 chairs (k=0.50), Q = 6 × 50 × 0.50 = 150 L/min (recommended FAD ≥ 300–400 L/min); for 8 chairs (k=0.45), Q = 8 × 50 × 0.45 = 180 L/min (recommended FAD ≥ 400 L/min, fully satisfied by Hongrun HYTG-300 providing 400 L/min)."
+        "text": "For preliminary planning, this guide uses the same transparent assumption as the site calculator: Q = chairs × 50 L/min × k, with k=0.70. This gives 4 chairs = 140 L/min (about 4.9 CFM), 6 chairs = 210 L/min (about 7.4 CFM), and 8 chairs = 280 L/min (about 9.9 CFM). The factor is a project-specific planning assumption, not an NFPA-prescribed value. Final sizing must use measured or manufacturer-rated instrument demand, duty cycle, pressure, pipe losses, dryer/filter losses and the required operating reserve."
       }
     },
     {
@@ -218,15 +168,15 @@
       "name": "What is the recommended piping diameter and loop configuration for 4 to 8 dental chairs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A closed-loop ring manifold with a main internal diameter of at least 25 mm (DN25) is strongly recommended over a linear trunk line. A ring circuit delivers air from dual directions, cutting flow velocity in half, preventing terminal operatory pressure drops, and maintaining overall line pressure loss below 0.2 bar across 50–100 meters of clinical distribution."
+        "text": "A closed-loop ring can improve pressure uniformity and provide two feed paths, but it does not guarantee a fixed pressure drop or halve velocity. DN25 is only a preliminary header assumption for this 4–8-chair example. Confirm pipe size using the actual simultaneous flow, internal diameter, length, fittings, allowable velocity and calculated pressure loss; verify terminal pressure under peak and degraded operating conditions."
       }
     },
     {
       "@type": "Question",
-      "name": "Why is a 90L receiver tank essential for the HYTG-300 rather than a 50L tank?",
+      "name": "Is a 90L receiver required for the HYTG-300 rather than a 50L tank?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A 50L tank has insufficient buffer volume when 4 or more chairs operate simultaneous high-speed handpieces, ultrasonic scalers, and suction turbine assists, inducing rapid pressure fluctuations below 5.0 bar and causing motor hunting. The 90L nano-antibacterial silver-ion coated vessel on the HYTG-300 dampens cyclic pressure drops, reduces motor thermal cycles, and ensures steady 5.5–7.0 bar clinical air delivery."
+        "text": "The HYTG-300 uses a 90L receiver; receiver size should be selected from compressor control strategy, actual demand profile, allowable pressure swing and cycling limits. A larger receiver can reduce cycling frequency and pressure fluctuation, but 90L is not universally essential and does not guarantee terminal pressure. Any antibacterial, coating or antimicrobial performance claim requires model-specific evidence; none is assumed here."
       }
     },
     {
@@ -234,7 +184,7 @@
       "name": "What size air compressor is needed for an 8-chair dental clinic in CFM?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For an 8-chair dental clinic, standard clinical sizing rules specify 1.5 to 2.0 CFM per active chair at 80–100 PSI (5.5–7.0 bar). Applying the statistical diversity coefficient k=0.45 to 0.48, peak simultaneous consumption is 10.6 to 12.4 CFM (300 to 350 L/min). To prevent single-point downtime, a duplex redundant system such as the Hongrun HYTG-300 or HYT-400 (4.5 to 6.0 HP / 3.3 to 4.4 kW, 14.1 to 17.7 CFM displacement with a 90L to 150L ASME/PED tank) is recommended."
+        "text": "Using this guide's preliminary 50 L/min per-chair baseline and k=0.70, eight chairs require 280 L/min, approximately 9.9 CFM. HYTG-300 provides 400 L/min in normal operation but only about 200 L/min with one head unavailable, so it cannot preserve the full eight-chair planning load in that condition. HYT-400 provides 600 L/min total with three ZB300 heads and a 120L receiver; two remaining heads provide about 400 L/min, above the preliminary 280 L/min load. Final redundancy and equipment selection require project-specific engineering validation."
       }
     }
   ]
@@ -284,7 +234,7 @@
     {
       "@type": "ListItem",
       "position": 3,
-      "name": "Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)",
+      "name": "4–8 Dental Chairs: Dual-Pump Compressor Sizing Guide",
       "item": "https://www.hongrun1995.cn/articles/20260908-4-to-8-dental-chairs-dual-pump-redundancy/"
     }
   ]
@@ -313,14 +263,14 @@
       {
         "@type": "HowToStep",
         "position": 3,
-        "name": "Apply Simultaneous Utilization Diversity Factor (k = 0.45 to 0.60)",
-        "text": "Calculate simultaneous continuous flow: 4 chairs (k=0.60, 4.9–6.0 CFM / 140–170 L/min), 6 chairs (k=0.50, 7.8–9.2 CFM / 220–260 L/min), and 8 chairs (k=0.45, 10.6–12.4 CFM / 300–350 L/min)."
+        "name": "Apply a Project-Specific Simultaneous Utilization Factor (k = 0.70 for preliminary planning)",
+        "text": "Calculate preliminary demand as chairs × 50 L/min × 0.70: 4 chairs = 140 L/min (about 4.9 CFM), 6 chairs = 210 L/min (about 7.4 CFM), and 8 chairs = 280 L/min (about 9.9 CFM). This is a transparent planning assumption, not a mandated code factor."
       },
       {
         "@type": "HowToStep",
         "position": 4,
         "name": "Select Duplex Modular Redundant Configuration",
-        "text": "Select a Hongrun duplex twin-pump redundant skid: HYTG-300 (4.5 HP, 14.1 CFM, 90L tank) or HYT-400 (6.0 HP, 17.7 CFM, 150L ASME tank), ensuring single pump head servicing without clinic operatory downtime."
+        "text": "Compare normal and one-head-out capacities against the calculated load. HYTG-300 provides 400 L/min total and about 200 L/min degraded, with a 90L receiver. HYT-400 provides 600 L/min total and about 400 L/min degraded, with a 120L receiver. Confirm the operating reserve and full installation before selecting equipment; redundancy does not guarantee uninterrupted clinical service."
       }
     ]
   }
@@ -328,8 +278,12 @@
   <!-- WebMCP AI Agent Protocol (W3C webmachinelearning/webmcp) -->
   <script src="https://cdn.jsdelivr.net/npm/@mcp-b/webmcp-polyfill@3.0.0/dist/index.iife.js" crossorigin="anonymous"></script>
   <script src="/assets/js/webmcp-tools.js" defer></script>
+
+  <!-- Privacy and site icons -->
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
 <body class="font-sans text-slate-800 bg-white antialiased">
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Standard Global Navbar -->
 <nav class="fixed w-full z-50 bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 border-b border-slate-400 shadow-md">
@@ -402,12 +356,12 @@
 
     <!-- Title -->
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-display tracking-tight leading-snug mb-4 [text-shadow:0_2px_12px_rgba(0,0,0,0.9)]">
-      Dual-Pump Redundancy Architecture: The Definitive 4-to-8 Dental Chair Central Air Sizing Guide (Why HYTG-300 90L vs. HY-300 50L Defines Clinic Uptime)
+      4–8 Dental Chairs: Dual-Pump Compressor Sizing Guide
     </h1>
 
     <!-- Subtitle Hook -->
     <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-6 font-light max-w-3xl">
-      How mid-scale dental polyclinics eliminate catastrophic mid-procedure air loss, balance multi-head wear cycles, and architect a continuous-duty N+1 compressed air plant room.
+      How mid-scale dental polyclinics can reduce single-point failure exposure, balance multi-head runtime, and verify a resilient compressed-air plant room against actual chair loads.
     </p>
 
     <!-- Meta Info -->
@@ -428,7 +382,7 @@
 </header>
 
 <!-- Main Article Body -->
-<main class="py-14 bg-white">
+<main class="py-14 bg-white" id="main-content" tabindex="-1">
   <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 article-body">
 
     <!-- ==========================================
@@ -455,17 +409,17 @@
 
     <!-- Executive Engineering Summary -->
     <div class="spec-box rounded-xl p-6 sm:p-8 mb-12 not-prose">
-      <h3 class="text-lg font-bold text-brand-dark font-display mb-4 flex items-center gap-2">
+      <h2 class="text-lg font-bold text-brand-dark font-display mb-4 flex items-center gap-2">
         <i class="fa-solid fa-server text-brand-blue"></i> Executive Engineering Summary: Central Station Architecture
-      </h3>
+      </h2>
       <ul class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-600 list-none pl-0 mb-0">
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Mid-Scale Diversity (k Factors):</strong> 4 chairs (k = 0.60) require approx. 160–180 L/min; 6 chairs (k = 0.52) require approx. 220–250 L/min; 8 chairs (k = 0.45) require approx. 300–340 L/min at 5.5 bar.</span>
+          <span><strong>Preliminary Demand:</strong> Using 50 L/min per chair and k = 0.70, the planning loads are 4 chairs = 140 L/min (4.9 CFM), 6 chairs = 210 L/min (7.4 CFM), and 8 chairs = 280 L/min (9.9 CFM). The factor is an assumption, not a code value.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>N+1 Dual-Pump Redundancy:</strong> HYTG-300 combines dual 1.1 kW ZB300 pump heads on a single 90L horizontal tank. If one head undergoes servicing, the secondary head seamlessly maintains 100% of essential clinical supply.</span>
+          <span><strong>Degraded Capacity Check:</strong> HYTG-300 combines two 1.1 kW ZB300 heads on a 90L receiver: 400 L/min total, approximately 200 L/min with one head unavailable. That is below the eight-chair planning load; HYT-400 retains approximately 400 L/min with one of three heads unavailable.</span>
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
@@ -473,7 +427,7 @@
         </li>
         <li class="flex items-start gap-2.5">
           <i class="fa-solid fa-circle-check text-teal-600 mt-1 flex-shrink-0"></i>
-          <span><strong>Piping Loop Hydraulics (DN25 / DN15):</strong> Sizing the main header at DN25 (1") and operatory drops at DN15 (1/2") keeps air flow velocity ≤ 6 m/s, restricting total system pressure drop to ≤ 0.02 MPa.</span>
+          <span><strong>Piping Hydraulics:</strong> DN25 headers and DN15 drops are preliminary examples only. Verify velocity, fitting losses and terminal pressure using actual pipe dimensions, flow and equipment data in both normal and degraded operation.</span>
         </li>
       </ul>
     </div>
@@ -483,7 +437,7 @@
       <i class="fa-solid fa-quote-left text-brand-blue text-lg mr-2"></i>
       When a solo dental chair loses air pressure, one patient appointment is delayed. But when a <strong>4-to-8 chair dental polyclinic or surgical center</strong> suffers sudden compressor failure, 6 to 8 clinicians grind to an immediate halt simultaneously. Anesthetic wears off mid-procedure, surgeries are aborted, sterilized instruments cannot be dried, and the clinic incurs thousands of dollars in lost billing per hour.
       <br/><br/>
-      For mid-scale practices, the single-pump compressor model is a high-stakes gamble. This technical whitepaper outlines the engineering and economic rationale for transitioning to a <strong>dual-pump parallel redundancy architecture (HYTG-300 90L vs. HY-300 50L)</strong> to guarantee 100% operational uptime.
+      For mid-scale practices, a single-pump compressor is a single point of failure. A multi-head arrangement can reduce some downtime exposure, but only if its remaining capacity covers the required load and the complete installation is validated. This guide compares <strong>HYTG-300 90L, HY-300 50L and HYT-400 120L</strong> without promising uninterrupted clinical service.
     </p>
 
     <!-- Section 1 -->
@@ -501,7 +455,7 @@
         <div class="w-9 h-9 rounded-lg bg-red-50 border border-red-200 flex items-center justify-center text-red-600 mb-2.5">
           <i class="fa-solid fa-skull-crossbones text-base"></i>
         </div>
-        <h4 class="font-bold text-xs text-brand-dark mb-1">Single Point of Failure</h4>
+        <h3 class="font-bold text-xs text-brand-dark mb-1">Single Point of Failure</h3>
         <p class="text-[11px] text-slate-600 leading-relaxed">
           A single blown valve reed, capacitor breakdown, or thermal cut-out instantly shuts down all 8 operatories simultaneously.
         </p>
@@ -513,7 +467,7 @@
         </div>
         <h4 class="font-bold text-xs text-brand-dark mb-1">Thermal Fatigue &amp; Continuous Duty</h4>
         <p class="text-[11px] text-slate-600 leading-relaxed">
-          Peak concurrent demand forces a single pump into &gt;85% continuous duty cycles, drastically overheating motor windings.
+          Excess concurrent demand can push a single pump toward its rated limit. Confirm the permitted duty cycle, cooling conditions and remaining capacity before relying on one train.
         </p>
       </div>
 
@@ -521,9 +475,9 @@
         <div class="w-9 h-9 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center text-brand-blue mb-2.5">
           <i class="fa-solid fa-screwdriver-wrench text-base"></i>
         </div>
-        <h4 class="font-bold text-xs text-brand-dark mb-1">Zero Maintenance Window</h4>
+        <h4 class="font-bold text-xs text-brand-dark mb-1">Planned Maintenance Access</h4>
         <p class="text-[11px] text-slate-600 leading-relaxed">
-          Routine HEPA intake filter or valve maintenance requires complete clinic closure or expensive after-hours technician overtime.
+          Filter, dryer and valve service follows the exact model manual and site plan. Isolation arrangements and service time must be assessed before promising uninterrupted operation.
         </p>
       </div>
 
@@ -541,21 +495,20 @@
     <!-- Section 2 -->
     <h2>2. The Flow &amp; Diversity Math: Simultaneous Load Calculations for 4 to 8 Chairs</h2>
     <p>
-      As operatory counts rise, the statistical probability of all instruments operating at the exact same millisecond decreases. Medical pneumatic design accounts for this through the <strong>Simultaneous Diversity Factor (k)</strong> combined with total pipe network volumetric friction:
+      For a transparent first pass, use the same planning assumption as the on-site calculator: <strong>50 L/min per chair</strong> and a <strong>simultaneous-use factor k = 0.70</strong>. These are preliminary assumptions, not values prescribed by NFPA 99 or another universal code. Replace them with an instrument schedule and measured or manufacturer-rated demand at the project pressure before equipment selection.
     </p>
 
     <!-- Formula Box -->
     <div class="formula-card not-prose mb-6 shadow-lg">
-      <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">// 4 TO 8 CHAIR CENTRAL STATION SIZING EQUATION</div>
+      <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">// PRELIMINARY 4 TO 8 CHAIR PLANNING EQUATION</div>
       <div class="text-sm sm:text-base text-amber-300 font-bold mb-2">
-        Q_total = [ &sum;(q_instrument &times; &eta;_active) &times; N_chairs + q_cad_cam ] &times; k_simultaneous &times; S_safety
+        Q_planning = N_chairs &times; 50 L/min &times; k
       </div>
       <div class="text-xs text-slate-300 space-y-1 pt-2 border-t border-slate-700">
-        <div>• <strong>q_turbine:</strong> 45 L/min @ 0.25 MPa working pressure (&eta; = 0.50 active cycle)</div>
-        <div>• <strong>q_scaler / sandblaster:</strong> 35 L/min @ 0.35 MPa continuous (&eta; = 0.70 active cycle)</div>
-        <div>• <strong>q_cad_cam (Chairside Milling Purge):</strong> 40 &ndash; 60 L/min intermittent demand</div>
-        <div>• <strong>k_simultaneous:</strong> 4 chairs = 0.60; 6 chairs = 0.52; 8 chairs = 0.45</div>
-        <div>• <strong>S_safety:</strong> 1.25 (incorporates filter &Delta;P loss and line resistance)</div>
+        <div>• <strong>N_chairs:</strong> 4, 6 or 8 treatment chairs</div>
+        <div>• <strong>Baseline:</strong> 50 L/min per chair for preliminary planning only</div>
+        <div>• <strong>k:</strong> 0.70 project-specific planning assumption</div>
+        <div>• <strong>Final validation:</strong> instrument data, duty cycle, pressure, dryer/filter losses, pipe losses and operating reserve</div>
       </div>
     </div>
 
@@ -563,80 +516,80 @@
     <div class="my-6 p-5 bg-sky-50/70 border border-sky-200 rounded-xl not-prose">
       <div class="flex items-center gap-2 text-brand-blue font-bold font-display text-sm mb-2">
         <i class="fa-solid fa-calculator text-brand-sky"></i>
-        <span>Global Clinical Engineering Standard: CFM ↔ L/min &amp; HP Sizing Rules</span>
+        <span>Preliminary Flow Conversion: CFM ↔ L/min</span>
       </div>
       <p class="text-xs text-slate-700 leading-relaxed mb-3">
-        In international clinical engineering practice (US NFPA 99 / EU dental guidelines), operatory pneumatic consumption follows <strong>1.5 to 2.0 CFM per dental chair at 80–100 PSI (5.5–7.0 bar)</strong>, or approximately <strong>0.5 to 0.75 HP per active operatory</strong>. 
-        Using Hongrun's empirical formula \(Q = [\sum (q_i \times \eta_i) \times N + q_{\text{milling}}] \times k \times S\):
+        Using \(1\text{ CFM} \approx 28.3168\text{ L/min}\), the preliminary loads are:
       </p>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
         <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
           <div class="text-slate-500 font-sans text-[11px]">4-Chair Operatory</div>
-          <div class="text-brand-blue font-bold text-sm mt-0.5">4.9 &ndash; 6.0 CFM <span class="text-xs text-slate-500 font-normal">(140&ndash;170 L/min)</span></div>
-          <div class="text-slate-600 font-sans text-[11px] mt-1">Recommended: 1.5–3.0 HP duplex</div>
+          <div class="text-brand-blue font-bold text-sm mt-0.5">140 L/min <span class="text-xs text-slate-500 font-normal">(about 4.9 CFM)</span></div>
+          <div class="text-slate-600 font-sans text-[11px] mt-1">Verify normal and degraded capacity</div>
         </div>
         <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
           <div class="text-slate-500 font-sans text-[11px]">6-Chair Polyclinic</div>
-          <div class="text-brand-blue font-bold text-sm mt-0.5">7.8 &ndash; 9.2 CFM <span class="text-xs text-slate-500 font-normal">(220&ndash;260 L/min)</span></div>
-          <div class="text-slate-600 font-sans text-[11px] mt-1">Recommended: 3.0 HP duplex (HYTG-300)</div>
+          <div class="text-brand-blue font-bold text-sm mt-0.5">210 L/min <span class="text-xs text-slate-500 font-normal">(about 7.4 CFM)</span></div>
+          <div class="text-slate-600 font-sans text-[11px] mt-1">HYTG-300: 200 L/min with one head out</div>
         </div>
         <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
           <div class="text-slate-500 font-sans text-[11px]">8-Chair Clinic / Surgicenter</div>
-          <div class="text-brand-blue font-bold text-sm mt-0.5">10.6 &ndash; 12.4 CFM <span class="text-xs text-slate-500 font-normal">(300&ndash;350 L/min)</span></div>
-          <div class="text-slate-600 font-sans text-[11px] mt-1">Recommended: 4.5–6.0 HP duplex (HYT-400/500)</div>
+          <div class="text-brand-blue font-bold text-sm mt-0.5">280 L/min <span class="text-xs text-slate-500 font-normal">(about 9.9 CFM)</span></div>
+          <div class="text-slate-600 font-sans text-[11px] mt-1">HYT-400: about 400 L/min with one head out</div>
         </div>
       </div>
     </div>
 
     <!-- Simultaneous Load Table -->
-    <h3 class="text-base font-bold text-brand-dark mt-6 mb-3">Table 1.0: 4–8 Chair Sizing Matrix (Dual Units: L/min ↔ CFM, kW ↔ HP)</h3>
+    <h3 class="text-base font-bold text-brand-dark mt-6 mb-3">Table 1.0: Preliminary 4–8 Chair Planning Matrix</h3>
     <div class="overflow-x-auto not-prose mb-8">
       <table class="w-full text-xs text-left border-collapse bg-white rounded-xl border border-slate-200 shadow-sm">
         <thead>
           <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
             <th class="p-3">Clinic Scale</th>
             <th class="p-3">Active Chairs</th>
-            <th class="p-3">Diversity Factor (k)</th>
-            <th class="p-3">Peak Clinical Flow (@ 5.0 bar / 72.5 PSI)</th>
-            <th class="p-3">Main Header / Branch Pipe</th>
-            <th class="p-3">Recommended Hongrun Solution</th>
+            <th class="p-3">Planning Factor (k)</th>
+            <th class="p-3">Preliminary Demand</th>
+            <th class="p-3">Pipe Sizing</th>
+            <th class="p-3">Capacity Comparison</th>
           </tr>
         </thead>
         <tbody class="divide-y divide-slate-200 text-slate-700">
           <tr class="hover:bg-blue-50/50">
-            <td class="p-3 font-semibold text-brand-dark">Compact 3–4 Chair Clinic</td>
-            <td class="p-3 font-mono">3 &ndash; 4 Chairs</td>
-            <td class="p-3 font-mono text-brand-blue font-bold">0.60 &ndash; 0.65</td>
-            <td class="p-3 font-mono font-bold text-slate-900">140 &ndash; 170 L/min <span class="text-brand-sky font-normal font-sans">(4.9 &ndash; 6.0 CFM)</span></td>
-            <td class="p-3 font-mono text-slate-600">DN20 (3/4") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-blue-100 text-brand-blue font-bold px-2 py-0.5 rounded">HY-300 (1.1 kW / 1.5 HP) or HYTG-300</span></td>
+            <td class="p-3 font-semibold text-brand-dark">4-Chair Clinic</td>
+            <td class="p-3 font-mono">4</td>
+            <td class="p-3 font-mono text-brand-blue font-bold">0.70</td>
+            <td class="p-3 font-mono font-bold text-slate-900">140 L/min <span class="text-brand-sky font-normal font-sans">(about 4.9 CFM)</span></td>
+            <td class="p-3 text-slate-600">Hydraulic calculation required</td>
+            <td class="p-3"><span class="bg-blue-100 text-brand-blue font-bold px-2 py-0.5 rounded">HYT-200: 300 total / 150 L/min one head out</span></td>
           </tr>
           <tr class="hover:bg-emerald-50/50 bg-emerald-50/20">
-            <td class="p-3 font-semibold text-brand-dark">Standard 4–6 Chair Polyclinic</td>
-            <td class="p-3 font-mono">4 &ndash; 6 Chairs</td>
-            <td class="p-3 font-mono text-emerald-700 font-bold">0.50 &ndash; 0.55</td>
-            <td class="p-3 font-mono font-bold text-emerald-800">220 &ndash; 260 L/min <span class="text-emerald-700 font-normal font-sans">(7.8 &ndash; 9.2 CFM)</span></td>
-            <td class="p-3 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">HYTG-300 (2.2 kW / 3.0 HP · 90L)</span></td>
+            <td class="p-3 font-semibold text-brand-dark">6-Chair Polyclinic</td>
+            <td class="p-3 font-mono">6</td>
+            <td class="p-3 font-mono text-emerald-700 font-bold">0.70</td>
+            <td class="p-3 font-mono font-bold text-emerald-800">210 L/min <span class="text-emerald-700 font-normal font-sans">(about 7.4 CFM)</span></td>
+            <td class="p-3 text-slate-600">Hydraulic calculation required</td>
+            <td class="p-3"><span class="bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">HYT-400: 600 total / 400 L/min one head out</span></td>
           </tr>
           <tr class="hover:bg-amber-50/50">
-            <td class="p-3 font-semibold text-brand-dark">High-Volume 6–8 Chair Center</td>
-            <td class="p-3 font-mono">6 &ndash; 8 Chairs</td>
-            <td class="p-3 font-mono text-amber-700 font-bold">0.45 &ndash; 0.48</td>
-            <td class="p-3 font-mono font-bold text-slate-900">300 &ndash; 350 L/min <span class="text-amber-700 font-normal font-sans">(10.6 &ndash; 12.4 CFM)</span></td>
-            <td class="p-3 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">HYT-400 / HYT-500 (3.3–4.4 kW / 4.5–6.0 HP)</span></td>
+            <td class="p-3 font-semibold text-brand-dark">8-Chair Clinic</td>
+            <td class="p-3 font-mono">8</td>
+            <td class="p-3 font-mono text-amber-700 font-bold">0.70</td>
+            <td class="p-3 font-mono font-bold text-slate-900">280 L/min <span class="text-amber-700 font-normal font-sans">(about 9.9 CFM)</span></td>
+            <td class="p-3 text-slate-600">Hydraulic calculation required</td>
+            <td class="p-3"><span class="bg-amber-100 text-amber-800 font-bold px-2 py-0.5 rounded">HYT-400: 600 total / 400 L/min one head out</span></td>
           </tr>
           <tr class="hover:bg-purple-50/50">
-            <td class="p-3 font-semibold text-brand-dark">8–12 Chair Surgical Hospital</td>
-            <td class="p-3 font-mono">8 &ndash; 12 Chairs</td>
-            <td class="p-3 font-mono text-purple-700 font-bold">0.40 &ndash; 0.45</td>
-            <td class="p-3 font-mono font-bold text-slate-900">420 &ndash; 520 L/min <span class="text-purple-700 font-normal font-sans">(14.8 &ndash; 18.4 CFM)</span></td>
-            <td class="p-3 font-mono text-slate-600">DN32 (1-1/4") / DN15 (1/2")</td>
-            <td class="p-3"><span class="bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">HYT-500 (4.4 kW / 6.0 HP · 200L)</span></td>
+            <td class="p-3 font-semibold text-brand-dark">8-Chair Higher Reserve</td>
+            <td class="p-3 font-mono">8</td>
+            <td class="p-3 font-mono text-purple-700 font-bold">0.70</td>
+            <td class="p-3 font-mono font-bold text-slate-900">280 L/min <span class="text-purple-700 font-normal font-sans">(about 9.9 CFM)</span></td>
+            <td class="p-3 text-slate-600">Hydraulic calculation required</td>
+            <td class="p-3"><span class="bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">HYT-500: 800 total / 600 L/min one head out</span></td>
           </tr>
         </tbody>
       </table>
+      <p class="text-xs text-slate-500 mt-3">Normal and degraded capacities are nominal catalogue totals divided by head count. Confirm actual delivered capacity at the project pressure and the required reserve before selection.</p>
     </div>
 
     <!-- Technical CAD Schematic Blueprint In-Article Diagram -->
@@ -650,7 +603,7 @@
         <div class="bg-slate-900/95 backdrop-blur border-t border-slate-800 p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-white">
           <div>
             <span class="text-[11px] uppercase font-bold tracking-wider bg-brand-sky text-slate-950 px-2.5 py-0.5 rounded font-mono font-bold">Figure 1.0 · Engineering CAD Schematic</span>
-            <p class="text-xs text-slate-300 font-medium mt-1">4–8 Chair Closed-Loop Ring Manifold (DN25 Main / DN15 Drops), Desiccant Dryer Station, and N+1 Redundancy Failover Loop</p>
+            <p class="text-xs text-slate-300 font-medium mt-1">Illustrative 4–8 Chair Ring Layout and Multi-Head Control; Pipe Sizes Require Hydraulic Verification</p>
           </div>
           <span class="text-xs text-sky-400 font-semibold flex items-center gap-1.5 flex-shrink-0 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
             <i class="fa-solid fa-magnifying-glass-plus"></i> Zoom CAD Blueprint
@@ -675,12 +628,12 @@
             <img data-zoom data-hd="../../assets/images/products/hd/HY-300.webp" src="../../assets/images/products/hd/HY-300.webp" alt="Hongrun HY-300 1.1kW 50L Vertical Cylinder Dental Compressor" class="max-h-full max-w-full object-contain cursor-pointer hover:scale-105 transition duration-300" decoding="async" loading="lazy" width="1600" height="1600" />
             <span class="absolute top-3 left-3 bg-brand-blue text-white text-[11px] font-bold px-2 py-0.5 rounded uppercase">Compact Vertical Footprint</span>
           </div>
-          <h4 class="font-display font-bold text-lg text-brand-dark mb-1">Hongrun HY-300 (1.1 kW / 1.5 HP)</h4>
+          <h3 class="font-display font-bold text-lg text-brand-dark mb-1">Hongrun HY-300 (1.1 kW / 1.5 HP)</h3>
           <p class="text-xs text-brand-blue font-semibold mb-3">50L Vertical Slim Cylinder · Single ZB300 High-Power Head</p>
           <ul class="text-xs text-slate-600 space-y-2 mb-4">
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
-              <span>Displacement / FAD @ 5 bar:</span>
-              <strong class="text-slate-900 font-mono">200 L/min (FAD ~145 L/min)</strong>
+              <span>Catalogue Air Delivery:</span>
+              <strong class="text-slate-900 font-mono">200 L/min</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Receiver Volume:</span>
@@ -688,15 +641,15 @@
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Running Sound Level:</span>
-              <strong class="text-teal-700 font-mono font-bold">&le; 60 dB(A) (Quiet)</strong>
+              <strong class="text-teal-700 font-mono font-bold">&le; 65 dB(A)</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Dimensions (L × W × H):</span>
-              <strong class="text-slate-900 font-mono">450 &times; 450 &times; 780 mm</strong>
+              <strong class="text-slate-900 font-mono">450 &times; 450 &times; 880 mm</strong>
             </li>
             <li class="flex items-center justify-between">
               <span>Net Weight / Floor Space:</span>
-              <strong class="text-slate-900 font-mono">38.0 kg · Footprint &lt;0.25 m²</strong>
+              <strong class="text-slate-900 font-mono">45.0 kg</strong>
             </li>
           </ul>
         </div>
@@ -716,8 +669,8 @@
           <p class="text-xs text-emerald-700 font-semibold mb-3">90L Large Horizontal Buffer Tank · Dual ZB300 Parallel Heads</p>
           <ul class="text-xs text-slate-600 space-y-2 mb-4">
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
-              <span>Displacement / FAD @ 5 bar:</span>
-              <strong class="text-emerald-800 font-mono font-bold">400 L/min (FAD ~290 L/min)</strong>
+              <span>Catalogue Air Delivery:</span>
+              <strong class="text-emerald-800 font-mono font-bold">400 L/min total · 200 L/min one head out</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Receiver Volume:</span>
@@ -725,20 +678,20 @@
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Running Sound Level:</span>
-              <strong class="text-teal-700 font-mono font-bold">&le; 62 dB(A) (Low Frequency)</strong>
+              <strong class="text-teal-700 font-mono font-bold">&le; 65 dB(A)</strong>
             </li>
             <li class="flex items-center justify-between border-b border-slate-100 pb-1">
               <span>Dimensions (L × W × H):</span>
-              <strong class="text-slate-900 font-mono">1050 &times; 420 &times; 720 mm</strong>
+              <strong class="text-slate-900 font-mono">860 &times; 420 &times; 780 mm</strong>
             </li>
             <li class="flex items-center justify-between">
               <span>Net Weight / Redundancy:</span>
-              <strong class="text-slate-900 font-mono">72.0 kg · N+1 Dual Circuit</strong>
+              <strong class="text-slate-900 font-mono">77.0 kg · Two-Head Arrangement</strong>
             </li>
           </ul>
         </div>
         <div class="bg-emerald-50/80 p-3 rounded-xl text-[11px] text-emerald-950 border border-emerald-200">
-          <strong>Best For:</strong> 3–6 Treatment Chairs, implant/ortho practices with continuous high demand, and clinics requiring 100% zero-downtime N+1 failover.
+          <strong>Best For:</strong> Projects where 200 L/min of remaining capacity is sufficient during one-head maintenance, including the preliminary four-chair example. Validate instrument demand and reserve before selection.
         </div>
       </div>
 
@@ -757,7 +710,7 @@
           <i class="fa-solid fa-scale-balanced text-brand-blue"></i> 1. Runtime-Balanced Rotation
         </div>
         <p class="text-xs text-slate-600 leading-relaxed m-0">
-          The controller tracks accumulated operating hours for Pump Head A and Head B. When demand is moderate (1–3 chairs active), the lead pump alternates every cycle, balancing thermal fatigue and ensuring identical PTFE ring wear.
+          The controller is intended to alternate lead/lag duty to balance accumulated runtime. Actual wear also depends on load, maintenance and operating conditions, so runtime balancing does not guarantee identical component life.
         </p>
       </div>
 
@@ -766,7 +719,7 @@
           <i class="fa-solid fa-stairs text-emerald-600"></i> 2. Staggered Soft Start
         </div>
         <p class="text-xs text-slate-600 leading-relaxed m-0">
-          When line pressure drops during peak load (4–6 chairs simultaneous), both pump heads activate with a 3-second staggered time delay and 0-pressure solenoid unloading, completely preventing electrical breaker tripping.
+          Staggered starting and unloading can reduce simultaneous starting current. Electrical supply capacity, protection settings and starting sequence must still be verified by the project engineer; they do not guarantee against breaker trips.
         </p>
       </div>
 
@@ -775,7 +728,7 @@
           <i class="fa-solid fa-shield-halved text-purple-600"></i> 3. Automatic Fault Failover
         </div>
         <p class="text-xs text-slate-600 leading-relaxed m-0">
-          If Pump Head A experiences a thermal overload, sensor trip, or pressure discrepancy, the PLC immediately locks out Head A, triggers an alert indicator, and commands Head B to assume 100% duty cycle with zero clinic air interruption.
+          On a detected head fault, the controller should isolate the affected head and operate the available head at its remaining capacity. Clinical impact depends on whether that capacity covers the live load; HYTG-300 leaves about 200 L/min, not the full 400 L/min total.
         </p>
       </div>
     </div>
@@ -797,14 +750,14 @@
         <i class="fa-solid fa-circle-nodes text-brand-blue text-lg mt-0.5 flex-shrink-0"></i>
         <div>
           <strong class="text-slate-900">Closed-Loop Ring Main Piping (DN25):</strong>
-          Install a continuous closed-loop distribution header using medical-grade stainless steel or PPR pipe (DN25 / 1" ID). Ring main piping eliminates dead legs, equalizes pressure across all 8 operatories, and reduces pressure drop by 40% compared to dead-end tree layouts.
+          A closed-loop ring can offer two feed paths and improve pressure uniformity, but it does not eliminate dead legs or guarantee a pressure-drop reduction. DN25 is an illustrative assumption only; select pipe material, internal diameter and routing from applicable standards and a hydraulic calculation.
         </div>
       </li>
       <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-start gap-3">
         <i class="fa-solid fa-snowflake text-brand-blue text-lg mt-0.5 flex-shrink-0"></i>
         <div>
           <strong class="text-slate-900">Desiccant Drying &amp; Micro-Filtration Loop:</strong>
-          Pair the HYTG-300 with an integrated twin-tower heatless desiccant dryer and 3-stage filtration (5 μm water separator &rarr; 0.01 μm particulate filter &rarr; 0.003 ppm active carbon vapor trap) to guarantee ISO 8573-1 Class 0 sterile air with ≤ -40°C pressure dew point.
+          Pair the HYTG-300 with an integrated twin-tower heatless desiccant dryer and 3-stage filtration (5 μm water separator &rarr; 0.01 μm particulate filter &rarr; 0.003 ppm active carbon vapor trap) to support moisture, particulate, and odor control. The HYTG-300 requires its own model-specific total-oil documentation and installed-configuration validation; it is not covered by TÜV certificate AK 50528335 0001. ISO 8573-1 Class 0 addresses total oil only and does not certify sterility or microbial control.
         </div>
       </li>
     </ul>
@@ -821,15 +774,15 @@
         <div class="flex items-center gap-2 text-brand-blue font-bold text-xs uppercase tracking-wider mb-2">
           <span class="bg-brand-blue text-white px-2 py-0.5 rounded text-[11px]">Commercial Objection 01</span>
         </div>
-        <h4 class="text-sm font-bold text-slate-900 mb-2 font-sans">
+        <h3 class="text-sm font-bold text-slate-900 mb-2 font-sans">
           "Can I just buy two separate small 24L compressors and connect them together to save money?"
-        </h4>
+        </h3>
         <div class="text-xs text-slate-600 space-y-2 border-l-2 border-brand-blue pl-4 ml-1">
           <p>
-            <strong>Engineering Reality:</strong> Two uncoordinated standalone compressors have independent pressure switches that fight each other. One unit will always start first and shoulder 90% of the wear, quickly failing from thermal overload. Furthermore, two separate tanks require dual drain lines, dual maintenance schedules, double the floor space, and generate chaotic acoustic resonance (> 68 dB(A)).
+            <strong>Engineering Reality:</strong> Two standalone compressors are not automatically a coordinated redundant system. Independent pressure switches can produce uneven loading, while shared receivers, controls, isolation, drainage and electrical protection require engineered integration and commissioning.
           </p>
           <p>
-            <strong>Sales Closing Script:</strong> "The HYTG-300 features a single consolidated 90L certified receiver with unified microcomputer PLC synchronization. It balances running hours evenly across both heads and occupies half the floor space with whisper-quiet 62 dB(A) operation."
+            <strong>Selection Point:</strong> HYTG-300 integrates two ZB300 heads, a 90L receiver and alternating control in one catalogue configuration. Its published noise level is ≤65 dB(A); actual installed noise depends on room acoustics, vibration isolation and ventilation.
           </p>
         </div>
       </div>
@@ -846,10 +799,10 @@
             <strong>The Financial ROI Calculation:</strong>
           </p>
           <ul class="list-disc pl-4 space-y-1">
-            <li>A 6-chair dental clinic generates an average of <strong>$1,200 to $2,500 per hour</strong> in gross clinical production.</li>
-            <li>A single compressor breakdown requiring 4 hours for technician dispatch and replacement parts results in a direct loss of <strong>$4,800 to $10,000</strong> in billable clinical revenue.</li>
-            <li>The price delta between a single HY-300 and a redundant HYTG-300 is less than <strong>$800–$1,200</strong>.</li>
-            <li><strong>Conclusion:</strong> The HYTG-300 pays for itself in the very first 45 minutes of prevented downtime, acting as an indispensable business insurance policy.</li>
+            <li>Use the clinic's own contribution margin per affected chair-hour, not gross billings, as the starting point.</li>
+            <li>Estimate plausible outage duration from service coverage, parts availability and the installed redundancy strategy.</li>
+            <li>Compare the expected interruption cost with the quoted equipment, installation and maintenance cost difference.</li>
+            <li><strong>Conclusion:</strong> Payback is project-specific. A multi-head system is justified when its verified degraded capacity and service plan reduce an interruption risk the clinic considers material.</li>
           </ul>
         </div>
       </div>
@@ -863,13 +816,13 @@
         </h4>
         <div class="text-xs text-slate-600 space-y-2 border-l-2 border-purple-600 pl-4 ml-1">
           <p>
-            <strong>Tool-Free Maintenance Schedule:</strong>
+            <strong>Model-Specific Maintenance Checklist:</strong>
           </p>
           <ul class="list-disc pl-4 space-y-1">
-            <li><strong>Daily:</strong> Electronic timed auto-drain releases tank condensate automatically (zero manual intervention).</li>
-            <li><strong>Monthly:</strong> Visual check of differential pressure indicators on pre/post filters.</li>
-            <li><strong>Every 12 Months:</strong> Replace dual intake HEPA filters and desiccant dryer cartridges during routine operatory lunch break (takes &lt;10 minutes, tool-free).</li>
-            <li><strong>Zero Lubricant:</strong> 100% oil-free design requires zero oil changes, eliminating hazardous waste disposal costs.</li>
+            <li><strong>Each operating day:</strong> Check drains and condensate handling according to the installed configuration and site procedure.</li>
+            <li><strong>Routine inspection:</strong> Check filter indicators, leaks, alarms and abnormal noise; record trends where required by the service plan.</li>
+            <li><strong>Replacement intervals:</strong> Follow the exact model manual and element/dryer instructions, adjusted for ambient conditions and differential pressure. No fixed 12-month or 10-minute promise applies.</li>
+            <li><strong>Lubrication:</strong> Applicable oil-free designs avoid crankcase oil changes, but delivered-air quality and wear parts still require model-specific verification and maintenance.</li>
           </ul>
         </div>
       </div>
@@ -896,7 +849,7 @@
             <span class="text-slate-500">•</span>
             <span><i class="fa-regular fa-calendar-check text-sky-400"></i> 发布日期：2026年09月08日</span>
             <span class="text-slate-500">•</span>
-            <span><i class="fa-solid fa-certificate text-teal-400"></i> ISO 8573-1 Class 0 &middot; NMPA 二类医疗器械资质</span>
+            <span><i class="fa-solid fa-certificate text-teal-400"></i> HYTG-300 型号文件 &middot; NMPA 二类医疗器械资质</span>
           </div>
         </div>
       </div>
@@ -931,7 +884,7 @@
           </div>
           <h4 class="font-bold text-sm text-slate-900 mb-1.5 font-sans">高负荷运转引发热衰竭</h4>
           <p class="text-xs text-slate-600 leading-relaxed m-0">
-            高峰期用气迫使单泵进入 &gt;85% 的超长连续运转状态，机头温度突破 90°C，特氟龙皮碗加速老化，排气量急剧衰减。
+            高峰期用气可能迫使单泵进入长时间连续运转状态，机头温度和特氟龙皮碗磨损取决于型号、负荷、环境温度与维护；本文不引用统一的占空比或温度阈值。
           </p>
         </div>
 
@@ -962,52 +915,48 @@
         <h3 class="cn-section-title">流量与并发数学核算：4~8台牙椅同时使用系数（k）与管网压降计算</h3>
       </div>
       <p>
-        随着牙椅台数增加，所有终端器械在同一秒同时开启的概率显著降低。在医用气动工程学中，必须引入 <strong>同时使用系数（Simultaneous Diversity Factor, k 值）</strong> 与 <strong>管网水力摩阻计算</strong> 进行科学核定：
+        初步估算沿用网站计算器的透明假设：<strong>每台牙椅 50 L/min</strong>，<strong>同时使用系数 k = 0.70</strong>。该系数是项目初步规划假设，并非 NFPA 99 或其他通用规范强制值。设备定型前必须用实际器械清单、厂家耗气数据、使用率、项目压力及管网损失替换。
       </p>
 
       <!-- Formula Box (Clean Chinese Edition) -->
       <div class="formula-card not-prose my-8 shadow-xl">
-        <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">// 4~8 台牙椅中心气源排量核算公式</div>
+        <div class="text-xs text-sky-400 font-bold uppercase tracking-wider mb-2">// 4~8 台牙椅初步规划公式</div>
         <div class="text-base sm:text-lg text-amber-300 font-bold mb-3 tracking-wide">
-          Q_总 = [ Σ(q_单机工具 × η_使用率) × N_牙椅台数 + q_CAD/CAM ] × k_同时使用系数 × S_安全余量
+          Q_初步 = N_牙椅台数 × 50 L/min × k
         </div>
         <div class="text-xs text-slate-300 space-y-1.5 pt-3 border-t border-slate-700 leading-relaxed">
-          <div>• <strong>q_高速手机：</strong> 45 L/min @ 0.25 MPa 动态工作气压（η = 0.50 典型稼动率）</div>
-          <div>• <strong>q_洁牙机/喷砂枪：</strong> 35 L/min @ 0.35 MPa 连续大负荷耗气（η = 0.70 稼动率）</div>
-          <div>• <strong>q_CAD/CAM 研磨机：</strong> 40 ～ 60 L/min 脉冲吹扫气量</div>
-          <div>• <strong>k_同时使用系数：</strong> 4台牙椅 k = 0.60；6台牙椅 k = 0.52；8台牙椅 k = 0.45</div>
-          <div>• <strong>S_安全余量：</strong> 推荐取 1.25，覆盖三级过滤器压降（ΔP ≤ 0.03 MPa）与管路阻力</div>
+          <div>• <strong>N_牙椅台数：</strong> 4、6 或 8 台</div>
+          <div>• <strong>单椅基准：</strong> 50 L/min，仅用于初步规划</div>
+          <div>• <strong>k_同时使用系数：</strong> 0.70，项目初步规划假设</div>
+          <div>• <strong>最终复核：</strong> 器械数据、使用率、压力、干燥/过滤损失、管损与运行余量</div>
         </div>
       </div>
 
       <p>
-        基于上述公式，4 至 8 台牙椅门诊的管径规格与选型推荐如下表所示：
+        按 \(1\text{ CFM} \approx 28.3168\text{ L/min}\) 换算，4 至 8 台牙椅的初步负荷及单机头退出后的能力对比如下：
       </p>
 
       <!-- CFM & HP Dual Unit Reference Box CN -->
       <div class="my-6 p-5 bg-sky-50/70 border border-sky-200 rounded-xl not-prose">
         <div class="flex items-center gap-2 text-brand-blue font-bold font-display text-sm mb-2">
           <i class="fa-solid fa-calculator text-brand-sky"></i>
-          <span>国际临床工程双单位对照：L/min ↔ CFM 流量换算与马力（HP）配比基准</span>
+          <span>初步流量换算：L/min ↔ CFM</span>
         </div>
-        <p class="text-xs text-slate-700 leading-relaxed mb-3">
-          国际工程与欧美牙科规范（如 US NFPA 99）通常以 <strong>每台牙椅 1.5 ～ 2.0 CFM（@ 80–100 PSI / 5.5–7.0 bar）</strong> 或 <strong>每台椅 0.5 ～ 0.75 HP</strong> 作为选型基准。根据宏润临床实测公式：
-        </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono">
           <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
-            <div class="text-slate-500 font-sans text-[11px]">紧凑 3~4 椅诊所</div>
-            <div class="text-brand-blue font-bold text-sm mt-0.5">140 ～ 170 L/min <span class="text-xs text-slate-500 font-normal">(4.9 ～ 6.0 CFM)</span></div>
-            <div class="text-slate-600 font-sans text-[11px] mt-1">推荐功率：1.5 ～ 3.0 HP (1.1~2.2 kW)</div>
+            <div class="text-slate-500 font-sans text-[11px]">4 椅诊所</div>
+            <div class="text-brand-blue font-bold text-sm mt-0.5">140 L/min <span class="text-xs text-slate-500 font-normal">(约 4.9 CFM)</span></div>
+            <div class="text-slate-600 font-sans text-[11px] mt-1">HYT-200 单机头退出约 150 L/min</div>
           </div>
           <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
-            <div class="text-slate-500 font-sans text-[11px]">标准 4~6 椅门诊部</div>
-            <div class="text-brand-blue font-bold text-sm mt-0.5">220 ～ 260 L/min <span class="text-xs text-slate-500 font-normal">(7.8 ～ 9.2 CFM)</span></div>
-            <div class="text-slate-600 font-sans text-[11px] mt-1">推荐功率：3.0 HP 双泵 (HYTG-300)</div>
+            <div class="text-slate-500 font-sans text-[11px]">6 椅门诊部</div>
+            <div class="text-brand-blue font-bold text-sm mt-0.5">210 L/min <span class="text-xs text-slate-500 font-normal">(约 7.4 CFM)</span></div>
+            <div class="text-slate-600 font-sans text-[11px] mt-1">HYT-400 单机头退出约 400 L/min</div>
           </div>
           <div class="p-3 bg-white rounded-lg border border-sky-100 shadow-xs">
-            <div class="text-slate-500 font-sans text-[11px]">高负荷 6~8 椅专科中心</div>
-            <div class="text-brand-blue font-bold text-sm mt-0.5">300 ～ 350 L/min <span class="text-xs text-slate-500 font-normal">(10.6 ～ 12.4 CFM)</span></div>
-            <div class="text-slate-600 font-sans text-[11px] mt-1">推荐功率：4.5 ～ 6.0 HP 双泵 (HYT-400/500)</div>
+            <div class="text-slate-500 font-sans text-[11px]">8 椅诊所</div>
+            <div class="text-brand-blue font-bold text-sm mt-0.5">280 L/min <span class="text-xs text-slate-500 font-normal">(约 9.9 CFM)</span></div>
+            <div class="text-slate-600 font-sans text-[11px] mt-1">HYT-400 单机头退出约 400 L/min</div>
           </div>
         </div>
       </div>
@@ -1019,47 +968,48 @@
             <tr class="bg-slate-100 text-slate-800 font-bold border-b border-slate-200">
               <th class="py-3.5 px-4">门诊规模</th>
               <th class="py-3.5 px-4">牙椅数量</th>
-              <th class="py-3.5 px-4">同时使用系数 (k)</th>
-              <th class="py-3.5 px-4">高峰气量需求 (@ 0.5 MPa / 72.5 PSI)</th>
-              <th class="py-3.5 px-4">主干管 / 分支管推荐管径</th>
-              <th class="py-3.5 px-4">推荐宏润主力机型（功率与马力）</th>
+              <th class="py-3.5 px-4">规划系数 (k)</th>
+              <th class="py-3.5 px-4">初步需求</th>
+              <th class="py-3.5 px-4">管径</th>
+              <th class="py-3.5 px-4">额定总流量 / 单机头退出后约值</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-200 text-slate-700">
             <tr class="hover:bg-blue-50/40 transition">
-              <td class="py-3.5 px-4 font-semibold text-slate-900">紧凑型 3~4 椅门诊</td>
-              <td class="py-3.5 px-4 font-mono">3 ～ 4 台</td>
-              <td class="py-3.5 px-4 font-mono text-brand-blue font-bold">0.60 ～ 0.65</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">140 ～ 170 L/min <span class="text-brand-sky font-normal text-xs">(4.9 ～ 6.0 CFM)</span></td>
-              <td class="py-3.5 px-4 font-mono text-slate-600">DN20 (3/4") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-blue-100 text-brand-blue font-bold px-2.5 py-1 rounded">HY-300 (1.1 kW / 1.5 HP) 或 HYTG-300</span></td>
+              <td class="py-3.5 px-4 font-semibold text-slate-900">4 椅门诊</td>
+              <td class="py-3.5 px-4 font-mono">4</td>
+              <td class="py-3.5 px-4 font-mono text-brand-blue font-bold">0.70</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">140 L/min <span class="text-brand-sky font-normal text-xs">(约 4.9 CFM)</span></td>
+              <td class="py-3.5 px-4 text-slate-600">需水力计算</td>
+              <td class="py-3.5 px-4"><span class="bg-blue-100 text-brand-blue font-bold px-2.5 py-1 rounded">HYT-200：总额 300 / 单机头约 150 L/min</span></td>
             </tr>
             <tr class="hover:bg-emerald-50/40 bg-emerald-50/20 transition">
-              <td class="py-3.5 px-4 font-semibold text-slate-900">标准 4~6 椅口腔门诊部</td>
-              <td class="py-3.5 px-4 font-mono">4 ～ 6 台</td>
-              <td class="py-3.5 px-4 font-mono text-emerald-700 font-bold">0.50 ～ 0.55</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">220 ～ 260 L/min <span class="text-emerald-700 font-normal text-xs">(7.8 ～ 9.2 CFM)</span></td>
-              <td class="py-3.5 px-4 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded">HYTG-300 (2.2 kW / 3.0 HP · 90L大罐)</span></td>
+              <td class="py-3.5 px-4 font-semibold text-slate-900">6 椅口腔门诊部</td>
+              <td class="py-3.5 px-4 font-mono">6</td>
+              <td class="py-3.5 px-4 font-mono text-emerald-700 font-bold">0.70</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-emerald-800">210 L/min <span class="text-emerald-700 font-normal text-xs">(约 7.4 CFM)</span></td>
+              <td class="py-3.5 px-4 text-slate-600">需水力计算</td>
+              <td class="py-3.5 px-4"><span class="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded">HYT-400：总额 600 / 单机头约 400 L/min</span></td>
             </tr>
             <tr class="hover:bg-amber-50/40 transition">
-              <td class="py-3.5 px-4 font-semibold text-slate-900">高负荷 6~8 椅专科门诊</td>
-              <td class="py-3.5 px-4 font-mono">6 ～ 8 台</td>
-              <td class="py-3.5 px-4 font-mono text-amber-700 font-bold">0.45 ～ 0.48</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">300 ～ 350 L/min <span class="text-amber-700 font-normal text-xs">(10.6 ～ 12.4 CFM)</span></td>
-              <td class="py-3.5 px-4 font-mono text-slate-600">DN25 (1") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">HYT-400 / HYT-500 (3.3~4.4 kW / 4.5~6.0 HP)</span></td>
+              <td class="py-3.5 px-4 font-semibold text-slate-900">8 椅口腔门诊</td>
+              <td class="py-3.5 px-4 font-mono">8</td>
+              <td class="py-3.5 px-4 font-mono text-amber-700 font-bold">0.70</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">280 L/min <span class="text-amber-700 font-normal text-xs">(约 9.9 CFM)</span></td>
+              <td class="py-3.5 px-4 text-slate-600">需水力计算</td>
+              <td class="py-3.5 px-4"><span class="bg-amber-100 text-amber-800 font-bold px-2.5 py-1 rounded">HYT-400：总额 600 / 单机头约 400 L/min</span></td>
             </tr>
             <tr class="hover:bg-purple-50/40 transition">
-              <td class="py-3.5 px-4 font-semibold text-slate-900">8~12 椅口腔专科医院</td>
-              <td class="py-3.5 px-4 font-mono">8 ～ 12 台</td>
-              <td class="py-3.5 px-4 font-mono text-purple-700 font-bold">0.40 ～ 0.45</td>
-              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">420 ～ 520 L/min <span class="text-purple-700 font-normal text-xs">(14.8 ～ 18.4 CFM)</span></td>
-              <td class="py-3.5 px-4 font-mono text-slate-600">DN32 (1-1/4") / DN15 (1/2")</td>
-              <td class="py-3.5 px-4"><span class="bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded">HYT-500 (4.4 kW / 6.0 HP · 200L机组)</span></td>
+              <td class="py-3.5 px-4 font-semibold text-slate-900">8 椅较高余量方案</td>
+              <td class="py-3.5 px-4 font-mono">8</td>
+              <td class="py-3.5 px-4 font-mono text-purple-700 font-bold">0.70</td>
+              <td class="py-3.5 px-4 font-mono font-bold text-slate-900">280 L/min <span class="text-purple-700 font-normal text-xs">(约 9.9 CFM)</span></td>
+              <td class="py-3.5 px-4 text-slate-600">需水力计算</td>
+              <td class="py-3.5 px-4"><span class="bg-purple-100 text-purple-800 font-bold px-2.5 py-1 rounded">HYT-500：总额 800 / 单机头约 600 L/min</span></td>
             </tr>
           </tbody>
         </table>
+        <p class="text-xs text-slate-500 mt-3">总额与单机头退出后的约值按图册总额及机头数折算；实际项目须核对项目压力下的供气能力与运行余量。</p>
       </div>
 
       <!-- Technical CAD Schematic Blueprint In-Article Diagram (CN) -->
@@ -1073,7 +1023,7 @@
           <div class="bg-slate-900/95 backdrop-blur border-t border-slate-800 p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-white">
             <div>
               <span class="text-[11px] uppercase font-bold tracking-wider bg-brand-sky text-slate-950 px-2.5 py-0.5 rounded font-mono font-bold">图 1.0 · 诊所管网 CAD 工程拓扑图</span>
-              <p class="text-xs text-slate-300 font-medium mt-1">4~8 台牙椅闭环环形管网（DN25 主干 / DN15 支管）、深冷干燥净化机组与 N+1 冗余双机头控制回路</p>
+              <p class="text-xs text-slate-300 font-medium mt-1">4~8 台牙椅环形管网与多机头控制示意；具体管径须经水力计算确认</p>
             </div>
             <span class="text-xs text-sky-400 font-semibold flex items-center gap-1.5 flex-shrink-0 bg-white/10 px-3 py-1.5 rounded-lg border border-white/10">
               <i class="fa-solid fa-magnifying-glass-plus"></i> 点击查看高清 CAD 原图
@@ -1105,8 +1055,8 @@
             <p class="text-xs text-brand-blue font-semibold mb-3">占地面积 &lt;0.25 m² · 强化单 ZB300 高功率机头</p>
             <ul class="text-xs text-slate-600 space-y-2 mb-4">
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
-                <span>理论排气量：</span>
-                <strong class="text-slate-900 font-mono">200 L/min (有效供气 ~145 L/min)</strong>
+                <span>图册额定流量：</span>
+                <strong class="text-slate-900 font-mono">200 L/min</strong>
               </li>
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
                 <span>储气罐容积：</span>
@@ -1114,15 +1064,15 @@
               </li>
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
                 <span>运行噪音：</span>
-                <strong class="text-teal-700 font-mono font-bold">≤ 60 dB(A) (低噪平稳)</strong>
+                <strong class="text-teal-700 font-mono font-bold">≤ 65 dB(A)</strong>
               </li>
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
                 <span>外形尺寸 (长×宽×高)：</span>
-                <strong class="text-slate-900 font-mono">450 × 450 × 780 mm</strong>
+                <strong class="text-slate-900 font-mono">450 × 450 × 880 mm</strong>
               </li>
               <li class="flex items-center justify-between">
                 <span>整机净重：</span>
-                <strong class="text-slate-900 font-mono">38.0 kg</strong>
+                <strong class="text-slate-900 font-mono">45.0 kg</strong>
               </li>
             </ul>
           </div>
@@ -1142,29 +1092,29 @@
             <p class="text-xs text-emerald-700 font-semibold mb-3">双机头并联 · 90L 超大缓冲罐 · 微电脑智能轮换控制</p>
             <ul class="text-xs text-slate-600 space-y-2 mb-4">
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
-                <span>理论排气量：</span>
-                <strong class="text-emerald-800 font-mono font-bold">400 L/min (有效供气 ~290 L/min)</strong>
+                <span>图册额定流量：</span>
+                <strong class="text-emerald-800 font-mono font-bold">400 L/min 总额 · 单机头约 200 L/min</strong>
               </li>
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
                 <span>储气罐容积：</span>
-                <strong class="text-emerald-800 font-mono font-bold">90 升 重型卧式纳米防锈罐</strong>
+                <strong class="text-emerald-800 font-mono font-bold">90 升 卧式储气罐</strong>
               </li>
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
                 <span>运行噪音：</span>
-                <strong class="text-teal-700 font-mono font-bold">≤ 62 dB(A) (低频静音)</strong>
+                <strong class="text-teal-700 font-mono font-bold">≤ 65 dB(A)</strong>
               </li>
               <li class="flex items-center justify-between border-b border-slate-100 pb-1.5">
                 <span>外形尺寸 (长×宽×高)：</span>
-                <strong class="text-slate-900 font-mono">1050 × 420 × 720 mm</strong>
+                <strong class="text-slate-900 font-mono">860 × 420 × 780 mm</strong>
               </li>
               <li class="flex items-center justify-between">
                 <span>整机净重：</span>
-                <strong class="text-slate-900 font-mono">72.0 kg</strong>
+                <strong class="text-slate-900 font-mono">77.0 kg</strong>
               </li>
             </ul>
           </div>
           <div class="bg-emerald-50/80 p-3 rounded-xl text-xs text-emerald-950 border border-emerald-200">
-            <strong>适用场景：</strong> 3~6 台牙椅主力气源、种植正畸中心、追求 100% 零停机冗余保障的中型门诊部。
+            <strong>适用场景：</strong> 单机头退出后剩余约 200 L/min 能覆盖项目负荷的工况，包括本文 4 椅初步算例；选型前须按实际器械需求与余量复核。
           </div>
         </div>
 
@@ -1173,7 +1123,7 @@
       <!-- Section 04 -->
       <div class="cn-section-header not-prose">
         <span class="cn-section-badge">04</span>
-        <h3 class="cn-section-title">智能微电脑双机头轮换与 N+1 冗余控制逻辑（零停机维护保障）</h3>
+        <h3 class="cn-section-title">双机头轮换与冗余控制逻辑（按剩余供气能力复核）</h3>
       </div>
       <p>
         <strong>HYTG-300</strong> 之所以成为中型门诊部的首选，其核心精髓在于宏润定制开发的微电脑智能控制系统。区别于传统的“双泵盲目同时运转”或“人工手动倒换”，该控制系统内嵌三大智能算法：
@@ -1186,7 +1136,7 @@
             <i class="fa-solid fa-scale-balanced text-brand-blue"></i> 1. 运行时长均衡轮换
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0">
-            控制器实时记录机头 A 和机头 B 的累计运转小时数。在常规用气（1~3 台牙椅活跃）时，主泵在每次启动时自动轮流切换，使两台机头的活塞皮碗磨损保持完全一致。
+            控制器按设计轮换主/辅泵，以均衡累计运行时长。实际磨损还取决于负荷、维护与运行条件，因此运行时长均衡不代表部件寿命完全一致。
           </p>
         </div>
 
@@ -1195,7 +1145,7 @@
             <i class="fa-solid fa-stairs text-emerald-600"></i> 2. 梯级无压延时软启
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0">
-            在多台牙椅并发用气导致气压快速跌落时，系统自动启动第二台辅泵，并采用 3 秒延时错峰启动与电磁阀无压卸荷，彻底消除双电机同时启动对诊所配电箱的跳闸冲击。
+            错峰启动与无压卸荷可降低同时启动电流，但配电容量、保护定值与启动时序仍须由项目工程师核算，不能据此保证不发生跳闸。
           </p>
         </div>
 
@@ -1204,7 +1154,7 @@
             <i class="fa-solid fa-shield-halved text-purple-600"></i> 3. 故障自动隔离与接管
           </div>
           <p class="text-xs text-slate-600 leading-relaxed m-0">
-            当某台泵头出现热保护跳闸或传感器异常时，控制板立即将其自动锁闭并发出声光报警，同时命令另一台完好泵头接管 100% 负荷运行，临床供气完全零中断。
+            检测到机头故障时，控制板应隔离故障机头并让完好机头按剩余能力运行。临床影响取决于剩余能力能否覆盖实时负荷；HYTG-300 单机头剩余约 200 L/min，并非总额 400 L/min。
           </p>
         </div>
       </div>
@@ -1229,14 +1179,14 @@
           <i class="fa-solid fa-circle-nodes text-brand-blue text-lg mt-0.5 flex-shrink-0"></i>
           <div>
             <strong class="text-slate-900">闭环环形主管道设计（DN25 管径）：</strong>
-            供气主管路推荐采用 DN25 (1") 医用级不锈钢管或 PPR 环形闭合回路铺设，消除管路死水段，压降比传统枝状死端布局减少 40%，确保 8 台牙椅气压完全均等。
+            环形闭环可提供双向供电路径并改善压力均匀性，但不能消除死水段或保证固定压降。DN25 仅为示意假设，管材、内径与路由须按适用标准及水力计算确定。
           </div>
         </li>
         <li class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex items-start gap-3">
           <i class="fa-solid fa-snowflake text-brand-blue text-lg mt-0.5 flex-shrink-0"></i>
           <div>
-            <strong class="text-slate-900">双塔吸附干燥与三级精密除菌微滤：</strong>
-            HYTG-300 标配深冷冷干系统与双塔吸附干燥器，输出压力露点 ≤ -40°C，配合 0.01 μm 精密微滤芯，满足 ISO 8573-1 Class 0 无油无菌标准。
+            <strong class="text-slate-900">双塔吸附干燥与三级精密微滤：</strong>
+            HYTG-300 可配置深冷冷干系统、双塔吸附干燥器与 0.01 μm 精密微滤芯，以支持 ≤ -40°C 压力露点等设计目标。其总含油等级须以 HYTG-300 专属测试文件及现场配置验证结果为准，不适用 TÜV Rheinland 证书 AK 50528335 0001。ISO 8573-1 Class 0 仅规定总含油量，不代表无菌或微生物控制。
           </div>
         </li>
       </ul>
@@ -1260,10 +1210,10 @@
           </h4>
           <div class="text-xs text-slate-600 space-y-2 border-l-2 border-brand-blue pl-4 ml-1">
             <p>
-              <strong>工程真相：</strong> 两台独立空压机由于机械压力开关精度存在细微公差，实际工作中必然有一台总是先启动并承担 90% 的重负荷，另一台长期闲置，导致主用机在数月内因热疲劳迅速报废；且两台机各自占用机房空间、产生双倍噪音振动叠加（&gt;68 dB(A)），维护保养极其繁琐。
+              <strong>工程真相：</strong> 两台独立空压机不会自动组成协调的冗余系统。独立压力开关可能造成负荷不均，共用储罐、控制、隔离、排水与电气保护必须经过系统集成和调试。
             </p>
             <p>
-              <strong>销售说辞：</strong> “HYTG-300 拥有统一的 90L 大储气罐和微电脑 PLC 智能轮换主控，两台泵头负载均衡、无压错峰启动，占地面积节省 50%，整机低频噪音仅 62 分贝，是专业门诊最规范可靠的系统工程方案。”
+              <strong>选型要点：</strong> HYTG-300 将两台 ZB300 机头、90L 储气罐与轮换控制集成为图册配置，公布噪音值为 ≤65 dB(A)。现场噪音还取决于机房声学、减振与通风。
             </p>
           </div>
         </div>
@@ -1281,10 +1231,10 @@
               <strong>ROI 商业投资回报率硬核算账：</strong>
             </p>
             <ul class="list-disc pl-4 space-y-1">
-              <li>一家 6 台牙椅的中型门诊，平均每小时的综合临床接诊营收为 <strong>8,000 至 20,000 元</strong>；</li>
-              <li>如果空压机突发故障停机半天（4小时），等待售后维修造成的直接营业额损失高达 <strong>30,000 至 80,000 元</strong>，更面临患者投诉与品牌声誉受损；</li>
-              <li>HYTG-300 相比单泵系统的差价仅数千元，<strong>只要成功预防一次 45 分钟的停机事故，这笔投资就已经全额收回</strong>；</li>
-              <li>这不仅是买设备，更是为整个门诊的核心业务购买了一份“永不停机”的商业运营保险。</li>
+              <li>以诊所自身每个受影响牙椅小时的边际贡献测算，不直接把营业额等同于损失；</li>
+              <li>按服务覆盖、配件供应与已配置的冗余策略估算可信的中断时长；</li>
+              <li>将预期中断成本与设备、安装、维护的成本差额比较；</li>
+              <li><strong>结论：</strong> 回收期因项目而异。只有剩余能力经过验证、服务计划明确且中断风险确实重大时，多机头方案才有充分投资依据。</li>
             </ul>
           </div>
         </div>
@@ -1299,13 +1249,13 @@
           </h4>
           <div class="text-xs text-slate-600 space-y-2 border-l-2 border-purple-600 pl-4 ml-1">
             <p>
-              <strong>免工具简易维护规范：</strong>
+              <strong>按型号确认的维护清单：</strong>
             </p>
             <ul class="list-disc pl-4 space-y-1">
-              <li><strong>每日：</strong> 标配微电脑定时电子排水阀全自动排出冷凝水，彻底告别人工弯腰排污；</li>
-              <li><strong>每月：</strong> 巡视观察各级过滤器压差指示窗（绿/红指示）；</li>
-              <li><strong>每 12 个月：</strong> 旋转拆换双机头进气滤芯与干燥剂滤筒（免工具，诊所护士或行政 10 分钟即可独立完成）；</li>
-              <li><strong>终身免机油：</strong> 100% 绝对无油设计，终身无机油废液产生，绿色环保合规。</li>
+              <li><strong>每个运行日：</strong> 按实际配置与现场规程检查排水阀和冷凝水排放；</li>
+              <li><strong>定期巡检：</strong> 检查过滤器指示、泄漏、报警和异常噪声，并按服务计划记录趋势；</li>
+              <li><strong>更换周期：</strong> 按具体型号手册及滤芯/干燥器说明，结合环境条件和压差调整；不预设固定 12 个月或 10 分钟完工承诺；</li>
+              <li><strong>润滑：</strong> 适用的无油设计可免除曲轴箱换油，但供气质量与易损件仍须按型号验证和维护。</li>
             </ul>
           </div>
         </div>
@@ -1341,7 +1291,7 @@
             <ul class="space-y-2 text-xs text-slate-600">
               <li><a href="/articles/20260905-1-to-3-dental-chairs-compressor-selection-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Whitepaper #08: 1–3 Chairs (HY-100 vs. HY-200)</a></li>
               <li><a href="/articles/20260815-15-dental-chairs-sizing-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Whitepaper #04: 15–50 Chairs Hospital Central Station</a></li>
-              <li><a href="/articles/20260902-dental-air-purity-engineering-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Whitepaper #01: ISO 8573-1 Class 0 Flagship Guide</a></li>
+              <li><a href="/articles/20260902-dental-air-purity-engineering-guide/" class="hover:text-brand-blue transition flex items-center gap-1"><i class="fa-solid fa-angle-right text-[11px] text-slate-400"></i> Whitepaper #01: Complete-HW Total-Oil Class 0 Guide</a></li>
             </ul>
           </div>
 
@@ -1387,7 +1337,7 @@
             Planning a 4–8 Chair Dental Polyclinic Plant Room?
           </h3>
           <p class="text-sm text-slate-200 mt-3 leading-relaxed" style="color: #E2E8F0 !important;">
-            Our biomedical pneumatic engineering team will calculate your simultaneous flow requirements, determine pipe friction losses, and deliver a customized isometric plant room CAD blueprint within 24 hours.
+            Share your chair count, instrument list and layout so the engineering team can assess simultaneous flow, pipe losses, equipment capacity and redundancy requirements. CAD scope and timing are confirmed after technical review.
           </p>
         </div>
 
@@ -1425,7 +1375,7 @@
               <span>Why do 4 to 8 chair dental clinics require dual-pump redundancy?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              A single compressor represents a single point of failure (SPOF) for multi-chair practices; if the motor stops, all 4–8 operatories must shut down immediately. A dual-pump system like the <strong>Hongrun HYTG-300</strong> features two independent ZB300 rocking piston heads on a 90L tank with automated alternating PLC control. If one head undergoes servicing, the secondary head sustains <strong>50% capacity (200 L/min)</strong>, enabling the clinic to continue priority surgical and routine treatments without clinic closure.
+              A single compressor is a single point of failure for a multi-chair practice. <strong>Hongrun HYTG-300</strong> has two ZB300 heads, 400 L/min total air delivery and a 90L receiver. With one head unavailable, the remaining head provides about <strong>200 L/min</strong>. That is below the preliminary eight-chair load of 280 L/min, so eight-chair N+1 planning calls for a larger system such as HYT-400, which retains about 400 L/min with one of three heads unavailable.
             </p>
           </div>
 
@@ -1436,10 +1386,10 @@
               <span>How does the diversity factor (k) calculate air flow for 4 to 8 dental chairs?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              Dental operatory air consumption is intermittent. As chair count grows, the statistical probability of simultaneous peak demand drops:
-              <br/><span class="block mt-1.5"><strong class="text-slate-800">· 4 Chairs (k=0.60):</strong> \(Q = 4 \times 50 \times 0.60 = 120\text{ L/min}\) (Recommended compressor FAD: \(\ge 200\text{–}300\text{ L/min}\)).</span>
-              <span class="block mt-1"><strong class="text-slate-800">· 6 Chairs (k=0.50):</strong> \(Q = 6 \times 50 \times 0.50 = 150\text{ L/min}\) (Recommended compressor FAD: \(\ge 300\text{–}400\text{ L/min}\)).</span>
-              <span class="block mt-1"><strong class="text-slate-800">· 8 Chairs (k=0.45):</strong> \(Q = 8 \times 50 \times 0.45 = 180\text{ L/min}\) (Recommended compressor FAD: \(\ge 400\text{ L/min}\), fully satisfied by <strong>Hongrun HYTG-300</strong> delivering 400 L/min).</span>
+              This guide uses a transparent preliminary assumption: 50 L/min per chair and k = 0.70. It is not a universal code factor; final sizing must use actual instrument demand, duty cycle, pressure and system losses:
+              <br/><span class="block mt-1.5"><strong class="text-slate-800">· 4 Chairs:</strong> \(Q = 4 \times 50 \times 0.70 = 140\text{ L/min}\), about 4.9 CFM.</span>
+              <span class="block mt-1"><strong class="text-slate-800">· 6 Chairs:</strong> \(Q = 6 \times 50 \times 0.70 = 210\text{ L/min}\), about 7.4 CFM.</span>
+              <span class="block mt-1"><strong class="text-slate-800">· 8 Chairs:</strong> \(Q = 8 \times 50 \times 0.70 = 280\text{ L/min}\), about 9.9 CFM. HYTG-300 has 400 L/min total but only 200 L/min with one head out; HYT-400 retains about 400 L/min with one head out.</span>
             </p>
           </div>
 
@@ -1450,7 +1400,7 @@
               <span>What is the recommended piping diameter and loop configuration for 4 to 8 dental chairs?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              A <strong>closed-loop ring manifold with a main internal diameter of at least 25 mm (DN25)</strong> is strongly recommended over a linear trunk line. A ring circuit delivers air from dual directions, cutting flow velocity in half, preventing terminal operatory pressure drops, and maintaining overall line pressure loss <strong>below 0.2 bar</strong> across 50–100 meters of clinical distribution.
+              A <strong>closed-loop ring manifold</strong> can improve pressure uniformity and provide two feed paths. DN25 is a preliminary example, not a universal minimum. Pipe size and routing must be calculated from actual flow, internal diameter, length, fittings, allowable velocity and pressure loss, then verified at the terminal under peak and degraded operation.
             </p>
           </div>
 
@@ -1458,10 +1408,10 @@
           <div class="bg-white border border-slate-200/90 rounded-xl p-5 sm:p-6 shadow-xs hover:border-brand-blue/40 transition-all">
             <h3 class="text-base sm:text-lg font-bold text-slate-900 font-display flex items-start gap-3">
               <span class="text-brand-blue font-mono font-bold text-sm bg-blue-50 px-2 py-0.5 rounded flex-shrink-0 mt-0.5">Q4</span>
-              <span>Why is a 90L receiver tank essential for the HYTG-300 rather than a 50L tank?</span>
+              <span>Is a 90L receiver required for the HYTG-300 rather than a 50L tank?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              A 50L tank has insufficient buffer volume when 4 or more chairs operate simultaneous high-speed handpieces, ultrasonic scalers, and suction turbine assists, inducing rapid pressure fluctuations below 5.0 bar and causing motor hunting. The <strong>90L nano-antibacterial silver-ion coated vessel</strong> on the HYTG-300 dampens cyclic pressure drops, reduces motor thermal cycles, and ensures steady 5.5–7.0 bar clinical air delivery.
+              HYTG-300 uses a 90L receiver, but 90L is not universally essential. Receiver sizing depends on control strategy, demand profile, allowable pressure swing and cycling limits. A larger receiver can reduce cycling and pressure fluctuation but cannot guarantee terminal pressure. Antibacterial or coating performance requires model-specific evidence and is not assumed here.
             </p>
           </div>
 
@@ -1472,7 +1422,7 @@
               <span>What size compressor is needed for an 8-chair dental clinic in CFM and HP?</span>
             </h3>
             <p class="text-sm text-slate-600 mt-3 pl-0 sm:pl-9 leading-relaxed">
-              For an 8-chair dental clinic, clinical engineering standards recommend <strong>1.5 to 2.0 CFM per dental chair at 80–100 PSI (5.5–7.0 bar)</strong>. Applying the simultaneous diversity coefficient (k = 0.45), the required peak continuous flow is <strong>10.6 to 12.4 CFM (300 to 350 L/min)</strong>. To eliminate single-point downtime, an 8-chair clinic should install a duplex redundant unit such as the <strong>Hongrun HYTG-300 or HYT-400 (4.5 to 6.0 HP total / 3.3 to 4.4 kW)</strong> delivering <strong>14.1 to 17.7 CFM (400 to 500 L/min)</strong> backed by a 90L to 150L air receiver tank.
+              With the preliminary 50 L/min per-chair baseline and k = 0.70, eight chairs require <strong>280 L/min (about 9.9 CFM)</strong>. HYTG-300 delivers 400 L/min normally but about 200 L/min with one head out, so it cannot retain the full eight-chair planning load in degraded mode. HYT-400 delivers <strong>600 L/min total</strong> with three ZB300 heads and a <strong>120L receiver</strong>; two remaining heads provide about 400 L/min. Final selection must validate the project pressure, losses, reserve and operating strategy.
             </p>
           </div>
         </div>
@@ -1550,11 +1500,11 @@
     <div class="grid md:grid-cols-4 gap-10 mb-12">
       <!-- Col 1 & 2: Brand & Positioning -->
       <div class="md:col-span-2">
-        <div class="flex items-end gap-5 mb-4">
+        <div class="flex flex-wrap items-end gap-3 sm:gap-5 mb-4">
           <img src="../../assets/images/logo_transparent.webp" alt="Hongrun Technology — International" class="h-14 brightness-0 invert opacity-95" decoding="async" loading="lazy" width="640" height="139" />
           <img src="../../assets/images/banners/logo_cn_orange.webp" alt="宏润科技 — China" class="h-14 bg-white/95 rounded-lg px-2 py-1 shadow-md" decoding="async" loading="lazy" width="200" height="61" />
         </div>
-        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. ISO 8573-1 Class 0 certified. China's leading manufacturer of medical-grade oil-free air, dental suction, and pure water systems.</p>
+        <p class="text-sm leading-relaxed max-w-sm text-slate-400">30+ years of precision engineering. TÜV ISO 8573-1 Class 0 certified for complete HW-200–HW-3600 scroll units. Medical air, dental suction, and pure water systems.</p>
         <div class="mt-4 text-xs text-slate-400 space-y-1.5 border-t border-slate-800/80 pt-3">
           <p><i class="fa-solid fa-location-dot text-brand-blue mr-1.5" aria-hidden="true"></i> National High-Tech Industrial Development Zone, Zibo, Shandong 255000, China</p>
           <p><i class="fa-solid fa-phone text-brand-blue mr-1.5" aria-hidden="true"></i> Hotline / WhatsApp: <a href="https://wa.me/8613964416725" class="hover:text-white transition">+86-13964416725</a> &middot; Tel: +86-533-3580000</p>
@@ -1603,7 +1553,7 @@
     <!-- Bottom Copyright & Certifications Baseline -->
     <div class="border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-xs text-slate-500">&copy; 2026 Hongrun Compressor Technology Co., Ltd. &middot; Zibo, Shandong, China &middot; All Rights Reserved.</p>
-      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; ISO 8573-1 Class 0 &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
+      <p class="text-xs text-slate-500">ISO 13485:2016 &middot; TÜV Total-Oil Class 0 (Complete HW-200–HW-3600) &middot; CE MDR &middot; NMPA Class II Medical Qualification</p>
     </div>
   </div>
 </footer>
